@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { dict } from '@/lib/i18n'
 
 export const metadata: Metadata = {
-  title: 'Pira Labs — Creative Business Turnaround',
+  title: 'PIRA LABS | Creative Business Turnaround',
   description:
     'Brazilian boutique for Creative Business Turnaround. We unlock the next level of businesses with untapped potential.',
   alternates: {

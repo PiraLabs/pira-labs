@@ -28,7 +28,7 @@ export default async function RootLayout({
 }) {
   const headersList = await headers()
   const pathname = headersList.get('x-pathname') ?? ''
-  const lang = pathname.startsWith('/en') ? 'en' : 'pt-BR'
+  const lang = pathname.startsWith('/en') ? 'en' : pathname.startsWith('/es') ? 'es' : 'pt-BR'
 
   return (
     <html

@@ -1,21 +1,23 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { dict } from '@/lib/i18n'
+import { dictEs } from '@/lib/i18n'
 
 export const metadata: Metadata = {
   title: 'PIRA LABS | Creative Business Turnaround',
   description:
-    'Boutique brasileira de Creative Business Turnaround. Liberamos o próximo nível de negócios com potencial represado.',
+    'Boutique brasileña de Creative Business Turnaround. Liberamos el próximo nivel de negocios con potencial reprimido.',
   alternates: {
-    canonical: 'https://piralabs.com.br',
-    languages: { 'en': 'https://piralabs.com.br/en' },
+    canonical: 'https://piralabs.com.br/es',
+    languages: {
+      'pt-BR': 'https://piralabs.com.br',
+      'en': 'https://piralabs.com.br/en',
+    },
   },
 }
 
-const t = dict.pt
+const h = dictEs.home
 
-export default function Home() {
-  const h = t.home
+export default function EsHome() {
   return (
     <>
       {/* HERO */}
@@ -44,13 +46,13 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 fade-up fade-up-delay-3">
               <Link
-                href="/contato"
+                href="/es/contato"
                 className="px-8 py-4 bg-amber text-navy font-body font-medium tracking-wide uppercase text-sm hover:bg-amber-light transition-colors duration-200 text-center"
               >
                 {h.hero.ctaPrimary}
               </Link>
               <Link
-                href="/cases"
+                href="/es/cases"
                 className="px-8 py-4 border border-off-white/30 text-off-white font-body text-sm tracking-wide uppercase hover:border-amber hover:text-amber transition-colors duration-200 text-center"
               >
                 {h.hero.ctaSecondary}
@@ -128,7 +130,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PARA QUEM */}
+      {/* PARA QUIÉN */}
       <section className="bg-cream py-24">
         <div className="max-w-container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
@@ -173,7 +175,6 @@ export default function Home() {
             {h.founders.h2[1]}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Gabriela */}
             <div className="bg-navy p-10">
               <p className="font-body text-xs tracking-widest uppercase text-amber mb-6">
                 {h.founders.gabriela.role}
@@ -186,7 +187,6 @@ export default function Home() {
               </p>
               <p className="font-body text-amber text-sm italic">{h.founders.gabriela.quote}</p>
             </div>
-            {/* Celso */}
             <div className="bg-cream border border-amber/20 p-10">
               <p className="font-body text-xs tracking-widest uppercase text-amber mb-6">
                 {h.founders.celso.role}
@@ -203,7 +203,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA FINAL */}
+      {/* CTA */}
       <section className="bg-amber py-20">
         <div className="max-w-container mx-auto px-6 text-center">
           <h2
@@ -214,7 +214,7 @@ export default function Home() {
           </h2>
           <p className="font-body text-navy/70 text-lg mb-10 max-w-xl mx-auto">{h.cta.body}</p>
           <Link
-            href="/contato"
+            href="/es/contato"
             className="inline-block px-10 py-4 bg-navy text-off-white font-body text-sm tracking-wide uppercase hover:bg-navy-mid transition-colors duration-200"
           >
             {h.cta.btn}

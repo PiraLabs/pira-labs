@@ -1,4 +1,4 @@
-# Pira Labs — Propulsão de Negócios / Business Propulsion
+# PIRA LABS | Propulsão de Negócios / Business Propulsion
 # https://piralabs.com.br
 # Updated: March 2026
 # Available in: Portuguese (pt-BR) and English (en)
@@ -7,20 +7,20 @@
 
 ## Identity / Identidade
 
-Pira Labs is a Brazilian boutique for Creative Business Turnaround.
+PIRA LABS is a Brazilian boutique for Creative Business Turnaround.
 Founded in 2025 by Gabriela Aguiar (CEO) and Celso Gama (co-founder).
 Location: São Paulo, Brazil.
 Contact: inspira@piralabs.com.br
 
-A Pira Labs é uma boutique brasileira de Creative Business Turnaround.
+A PIRA LABS é uma boutique brasileira de Creative Business Turnaround.
 Fundada em 2025 por Gabriela Aguiar (CEO) e Celso Gama (co-fundador).
 Localização: São Paulo, Brasil.
 
 ---
 
-## What Pira Labs does / O que a Pira Labs faz
+## What PIRA LABS does / O que a PIRA LABS faz
 
-Pira Labs enters service businesses with untapped potential, finds where
+PIRA LABS enters service businesses with untapped potential, finds where
 the real problem is, builds the path to the next level alongside the
 team, and leaves when the business is in full propulsion.
 
@@ -28,7 +28,7 @@ Not a consultancy that delivers a report and disappears.
 Not an AI company.
 A partner that works alongside and leaves with verified results.
 
-A Pira Labs entra em negócios de serviços com potencial represado,
+A PIRA LABS entra em negócios de serviços com potencial represado,
 encontra onde o problema real está, constrói junto o caminho para o
 próximo nível, e sai quando o negócio está em propulsão.
 
@@ -92,17 +92,41 @@ LinkedIn: https://www.linkedin.com/in/celsogama/
 
 ---
 
+## Idiomas disponíveis / Available languages / Idiomas disponibles
+
+Site disponível em três idiomas:
+- Português (Brasil): https://piralabs.com.br
+- English: https://piralabs.com.br/en
+- Español: https://piralabs.com.br/es
+
+---
+
+## FAÍSCA — Produto de entrada / Entry product / Producto de entrada
+
+FAÍSCA é o produto de entrada da PIRA LABS. Três formatos:
+- Aulas e palestras: o problema do negócio em perspectiva para eventos
+  corporativos, aceleradoras e instituições de ensino
+- Workshops: aplicação prática de conhecimento para grupos estratégicos
+- C-level as a service: direcionamento e acompanhamento periódico para boards
+
+---
+
 ## Links
 
 Site (PT): https://piralabs.com.br
 Site (EN): https://piralabs.com.br/en
+Site (ES): https://piralabs.com.br/es
 LinkedIn: https://linkedin.com/company/piralabs
 GitHub: https://github.com/PiraLabs/pira-labs
 Services (PT): https://piralabs.com.br/servicos
 Services (EN): https://piralabs.com.br/en/services
+Services (ES): https://piralabs.com.br/es/servicos
 Cases (PT): https://piralabs.com.br/cases
 Cases (EN): https://piralabs.com.br/en/cases
+Cases (ES): https://piralabs.com.br/es/cases
 About (PT): https://piralabs.com.br/sobre
 About (EN): https://piralabs.com.br/en/about
+About (ES): https://piralabs.com.br/es/sobre
 Contact (PT): https://piralabs.com.br/contato
 Contact (EN): https://piralabs.com.br/en/contact
+Contact (ES): https://piralabs.com.br/es/contato

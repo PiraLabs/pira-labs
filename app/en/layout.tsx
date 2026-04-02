@@ -4,8 +4,8 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Pira Labs — Creative Business Turnaround',
-    template: '%s | Pira Labs',
+    default: 'PIRA LABS | Creative Business Turnaround',
+    template: '%s | PIRA LABS',
   },
   description:
     'Brazilian boutique for Creative Business Turnaround. We enter businesses with untapped potential, find the real problem, and build the path to the next level.',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'business turnaround Brazil',
     'business consulting growth services',
     'business propulsion',
-    'Pira Labs',
+    'PIRA LABS',
     'Gabriela Aguiar',
     'Celso Gama',
   ],
@@ -22,20 +22,20 @@ export const metadata: Metadata = {
     { name: 'Gabriela Aguiar', url: 'https://piralabs.com.br/en/about' },
     { name: 'Celso Gama', url: 'https://piralabs.com.br/en/about' },
   ],
-  creator: 'Pira Labs',
+  creator: 'PIRA LABS',
   metadataBase: new URL('https://piralabs.com.br'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://piralabs.com.br/en',
-    siteName: 'Pira Labs',
-    title: 'Pira Labs — Creative Business Turnaround',
+    siteName: 'PIRA LABS',
+    title: 'PIRA LABS | Creative Business Turnaround',
     description: 'Brazilian boutique for Creative Business Turnaround. We unlock the next level.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Pira Labs — Business Propulsion' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'PIRA LABS, Business Propulsion' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pira Labs — Creative Business Turnaround',
+    title: 'PIRA LABS | Creative Business Turnaround',
     description: 'Brazilian boutique for Creative Business Turnaround.',
     images: ['/og-image.png'],
   },
@@ -56,8 +56,8 @@ const jsonLd = {
     {
       '@type': 'Organization',
       '@id': 'https://piralabs.com.br/#organization',
-      name: 'Pira Labs',
-      alternateName: 'Pira Labs — Business Propulsion',
+      name: 'PIRA LABS',
+      alternateName: 'PIRA LABS | Business Propulsion',
       url: 'https://piralabs.com.br',
       description:
         'Brazilian boutique for Creative Business Turnaround. We enter service businesses with untapped potential, find the real problem, build the path to the next level, and leave when the business is in full propulsion.',
@@ -80,7 +80,7 @@ const jsonLd = {
           name: 'Gabriela Aguiar',
           jobTitle: 'CEO',
           description:
-            'CEO of Pira Labs. Nearly a decade in innovation and venture capital in Brazil, the US, and the Nordics. MBA professor at FIAP, mentor at FGV Ventures, studying AI at MIT.',
+            'CEO of PIRA LABS. Nearly a decade in innovation and venture capital in Brazil, the US, and the Nordics. MBA professor at FIAP, mentor at FGV Ventures, studying AI at MIT.',
           sameAs: ['https://www.linkedin.com/in/gabrielaaguiarvs/'],
         },
         {
@@ -89,13 +89,13 @@ const jsonLd = {
           name: 'Celso Gama',
           jobTitle: 'Co-founder and COO',
           description:
-            'Co-founder of Pira Labs. Operational turnaround specialist. Scaled revenue from R$16M to R$163M in 24 months. Turned margin from -64% to +15% in 6 months without increasing revenue.',
+            'Co-founder of PIRA LABS. Operational turnaround specialist. Scaled revenue from R$16M to R$163M in 24 months. Turned margin from -64% to +15% in 6 months without increasing revenue.',
           sameAs: ['https://www.linkedin.com/in/celsogama/'],
         },
       ],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
-        name: 'Pira Labs Services',
+        name: 'PIRA LABS Services',
         itemListElement: [
           {
             '@type': 'Offer',
@@ -122,7 +122,7 @@ const jsonLd = {
       '@type': 'WebSite',
       '@id': 'https://piralabs.com.br/#website-en',
       url: 'https://piralabs.com.br/en',
-      name: 'Pira Labs',
+      name: 'PIRA LABS',
       inLanguage: 'en',
       publisher: { '@id': 'https://piralabs.com.br/#organization' },
     },
@@ -135,15 +135,15 @@ const jsonLd = {
           name: 'What is Creative Business Turnaround?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Creative Business Turnaround is the service category that combines strategic diagnosis, operational execution, and technology curation to unlock the next growth level in service businesses with untapped potential. Pira Labs is the first Brazilian boutique in this category.',
+            text: 'Creative Business Turnaround is the service category that combines strategic diagnosis, operational execution, and technology curation to unlock the next growth level in service businesses with untapped potential. PIRA LABS is the first Brazilian boutique in this category.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What type of company does Pira Labs work with?',
+          name: 'What type of company does PIRA LABS work with?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Pira Labs works with decision-makers at high-value service companies with untapped potential. Three typical situations: the founder has become the bottleneck of every decision, the business grows but the structure can\'t keep up, or the company has data but nobody has turned it into clarity.',
+            text: 'PIRA LABS works with decision-makers at high-value service companies with untapped potential. Three typical situations: the founder has become the bottleneck of every decision, the business grows but the structure can\'t keep up, or the company has data but nobody has turned it into clarity.',
           },
         },
         {

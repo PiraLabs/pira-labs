@@ -1,20 +1,23 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { dict } from '@/lib/i18n'
+import { dictEs } from '@/lib/i18n'
 
 export const metadata: Metadata = {
-  title: 'Sobre os Fundadores',
+  title: 'Sobre los Fundadores',
   description:
-    'Gabriela Aguiar e Celso Gama, fundadores da PIRA LABS. Boutique brasileira de Creative Business Turnaround.',
+    'Gabriela Aguiar y Celso Gama, fundadores de PIRA LABS. Boutique brasileña de Creative Business Turnaround.',
   alternates: {
-    canonical: 'https://piralabs.com.br/sobre',
-    languages: { 'en': 'https://piralabs.com.br/en/about' },
+    canonical: 'https://piralabs.com.br/es/sobre',
+    languages: {
+      'pt-BR': 'https://piralabs.com.br/sobre',
+      'en': 'https://piralabs.com.br/en/about',
+    },
   },
 }
 
-const t = dict.pt.sobre
+const t = dictEs.sobre
 
-export default function Sobre() {
+export default function EsSobre() {
   return (
     <>
       <section className="bg-navy pt-32 pb-16">
@@ -45,7 +48,7 @@ export default function Sobre() {
               <div className="relative w-full h-80 mb-8 overflow-hidden">
                 <Image
                   src="/gabriela-aguiar.jpg"
-                  alt="Gabriela Aguiar, CEO da PIRA LABS"
+                  alt="Gabriela Aguiar, CEO de PIRA LABS"
                   fill
                   className="object-cover object-top"
                 />
@@ -100,7 +103,7 @@ export default function Sobre() {
               <div className="relative w-full h-96 mb-8 overflow-hidden">
                 <Image
                   src="/celso-gama.jpg"
-                  alt="Celso Gama, co-fundador da PIRA LABS"
+                  alt="Celso Gama, co-fundador de PIRA LABS"
                   fill
                   className="object-cover"
                   style={{ objectPosition: '50% 15%' }}

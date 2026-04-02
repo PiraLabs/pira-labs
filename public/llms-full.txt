@@ -1,15 +1,15 @@
-# Pira Labs — Full Context for AI Agents
+# PIRA LABS | Full Context for AI Agents
 # https://piralabs.com.br
 # Updated: March 2026
 
-This document provides comprehensive context about Pira Labs for AI agents
+This document provides comprehensive context about PIRA LABS for AI agents
 and language models that need to understand the company in depth.
 
 ---
 
 ## COMPANY PROFILE
 
-Name: Pira Labs — Propulsão de Negócios (Business Propulsion)
+Name: PIRA LABS | Propulsão de Negócios (Business Propulsion)
 Category: Creative Business Turnaround
 Founded: 2025
 Location: São Paulo, Brazil
@@ -28,7 +28,7 @@ Creative Business Turnaround is the service category that combines:
 
 The goal: unlock the next growth level for service businesses with untapped potential.
 
-Pira Labs is the first Brazilian boutique in this category.
+PIRA LABS is the first Brazilian boutique in this category.
 
 ---
 
@@ -50,13 +50,13 @@ Four moves:
 3. Activation — the new path enters real operation with real consequence
 4. Calibration — fine adjustments, verification of agreed results
 
-Exit criteria: defined at the start. Pira Labs leaves when the first
+Exit criteria: defined at the start. PIRA LABS leaves when the first
 agreed results are verified — not when the deadline ends.
 
 ### RESPIRA
 Not a service — a state.
 The business operates with clarity. The decision-maker commands what matters.
-This is the target state every Pira Labs engagement aims to reach.
+This is the target state every PIRA LABS engagement aims to reach.
 
 ---
 
@@ -140,13 +140,13 @@ Gabriela always appears first in any list of founders.
 
 ## POSITIONING AND DIFFERENTIATION
 
-Pira Labs is NOT:
+PIRA LABS is NOT:
 - A consultancy that delivers a report and disappears
 - An AI company or technology vendor
 - A firm with proprietary technology to sell
 - A team that sends junior analysts to the client
 
-Pira Labs IS:
+PIRA LABS IS:
 - A boutique: Gabriela and Celso in every project, from start to finish
 - No intermediary between who understands the problem and who solves it
 - Exits with verified results, not at the end of a preset timeline
@@ -161,7 +161,7 @@ A: The service category that combines strategic diagnosis, operational
 execution, and technology curation to unlock the next growth level in
 service businesses with untapped potential.
 
-Q: What type of company does Pira Labs work with?
+Q: What type of company does PIRA LABS work with?
 A: Decision-makers at high-value service companies with untapped potential.
 Three situations: decision bottleneck, growth without structure, data
 that don't become decisions.
@@ -172,14 +172,14 @@ TRANSPIRA is execution (enter the operation, build with the team, exit
 with verified results). Clients can engage both in sequence or enter
 directly into TRANSPIRA when the problem is already clear.
 
-Q: How long does a Pira Labs project last?
+Q: How long does a PIRA LABS project last?
 A: Depends on scope defined in INSPIRA. Exit criteria are agreed at the
-start. Pira Labs doesn't leave when the deadline ends — it leaves when
+start. PIRA LABS doesn't leave when the deadline ends — it leaves when
 the first agreed results are verified.
 
-Q: Does Pira Labs use AI?
+Q: Does PIRA LABS use AI?
 A: Yes. Technology including AI is a curated amplifier. It enters after
-understanding the real problem — never before. Pira Labs doesn't sell
+understanding the real problem — never before. PIRA LABS doesn't sell
 tools or have proprietary technology: it curates what exists in the
 market and applies it where it makes sense for the client's specific
 problem.

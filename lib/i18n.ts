@@ -17,6 +17,36 @@ export const ROUTE_MAP_EN_TO_PT: Record<string, string> = {
   '/en/contact': '/contato',
 }
 
+export const ROUTE_MAP_PT_TO_ES: Record<string, string> = {
+  '/': '/es',
+  '/sobre': '/es/sobre',
+  '/servicos': '/es/servicos',
+  '/cases': '/es/cases',
+  '/contato': '/es/contato',
+}
+
+export const ROUTE_MAP_ES_TO_PT: Record<string, string> = {
+  '/es': '/',
+  '/es/sobre': '/sobre',
+  '/es/servicos': '/servicos',
+  '/es/cases': '/cases',
+  '/es/contato': '/contato',
+}
+
+function toPtPath(pathname: string): string {
+  if (pathname.startsWith('/en')) return ROUTE_MAP_EN_TO_PT[pathname] ?? '/'
+  if (pathname.startsWith('/es')) return ROUTE_MAP_ES_TO_PT[pathname] ?? '/'
+  return pathname
+}
+
+export function getPathInLocale(pathname: string, targetLocale: 'pt' | 'en' | 'es'): string {
+  const pt = toPtPath(pathname)
+  if (targetLocale === 'pt') return pt
+  if (targetLocale === 'en') return ROUTE_MAP_PT_TO_EN[pt] ?? '/en'
+  return ROUTE_MAP_PT_TO_ES[pt] ?? '/es'
+}
+
+/** @deprecated use getPathInLocale */
 export function getAlternatePath(pathname: string): string {
   if (pathname.startsWith('/en')) {
     return ROUTE_MAP_EN_TO_PT[pathname] ?? '/'
@@ -54,14 +84,14 @@ export const dict = {
     },
     home: {
       meta: {
-        title: 'Pira Labs — Creative Business Turnaround',
+        title: 'PIRA LABS | Creative Business Turnaround',
         description:
           'Boutique brasileira de Creative Business Turnaround. Liberamos o próximo nível de negócios com potencial represado.',
       },
       hero: {
         eyebrow: 'Creative Business Turnaround',
         h1: ['Todo negócio tem', 'um próximo nível.'],
-        body: 'O que a Pira Labs encontra é o que está entre você e ele. Entramos, diagnosticamos o problema real, construímos junto e saímos quando o negócio está em propulsão.',
+        body: 'O que a PIRA LABS encontra é o que está entre você e ele. Entramos, diagnosticamos o problema real, construímos junto e saímos quando o negócio está em propulsão.',
         ctaPrimary: 'Solicitar diagnóstico',
         ctaSecondary: 'Ver case',
       },
@@ -97,14 +127,14 @@ export const dict = {
             color: '#1F5C35',
             sub: 'O resultado, não um produto',
             h3: 'Negócio em propulsão',
-            body: 'O negócio opera com clareza. O decisor está no comando do que importa. Esse é o estado que cada entrega da Pira Labs busca alcançar. Não ficamos para sempre. Não saímos antes de entregar.',
+            body: 'O negócio opera com clareza. O decisor está no comando do que importa. Esse é o estado que cada entrega da PIRA LABS busca alcançar. Não ficamos para sempre. Não saímos antes de entregar.',
           },
         ],
       },
       forWhom: {
         eyebrow: 'Para quem',
         h2: ['Negócios de serviços', 'com potencial represado.'],
-        body: 'O cliente da Pira Labs é o decisor que reconhece que o que existe hoje não leva ao próximo nível. A condição necessária não é o tamanho da empresa. É a disposição genuína de ver o problema de novo.',
+        body: 'O cliente da PIRA LABS é o decisor que reconhece que o que existe hoje não leva ao próximo nível. A condição necessária não é o tamanho da empresa. É a disposição genuína de ver o problema de novo.',
         items: [
           { title: 'Gargalo de decisão', desc: 'Tudo passa por você. Cada decisão depende de você. Não por fraqueza — por ausência de clareza sobre o que pode ser delegado e como.' },
           { title: 'Crescimento sem estrutura', desc: 'O negócio cresce mas o que funcionava antes já não sustenta o próximo nível. Crescer sem reconstruir vai quebrar o que está funcionando.' },
@@ -118,13 +148,13 @@ export const dict = {
           role: 'CEO · INSPIRA',
           name: 'Gabriela Aguiar',
           body: 'Quase uma década construindo ecossistemas de inovação e venture capital no Brasil, EUA e países nórdicos. Professora de MBA na FIAP, mentora na FGV Ventures, em formação em IA no MIT. Chega com o repertório global que o cliente sozinho não alcançaria em anos.',
-          quote: '"Não chegamos com solução pronta. Chegamos com a pergunta que muda o enquadramento do problema."',
+          quote: '"Não chego com solução pronta. Chego com a pergunta que muda o enquadramento do problema."',
         },
         celso: {
           role: 'Co-fundador · TRANSPIRA',
           name: 'Celso Gama',
           body: 'Escalou R$16M para R$163M em 24 meses. Virou margem de -64% para +15% em 6 meses na Diageo, sem aumentar receita. 79 pontos percentuais, parando onde ela vazava. Esses resultados são pré-IA — construídos com julgamento calibrado por consequência real.',
-          quote: '"Sabe onde colocar tecnologia e onde colocar gente porque já errou nos dois."',
+          quote: '"Sei onde colocar tecnologia e onde colocar gente porque já errei nos dois."',
         },
       },
       cta: {
@@ -137,7 +167,7 @@ export const dict = {
       meta: {
         title: 'Sobre os Fundadores',
         description:
-          'Gabriela Aguiar e Celso Gama, fundadores da Pira Labs. Boutique brasileira de Creative Business Turnaround.',
+          'Gabriela Aguiar e Celso Gama, fundadores da PIRA LABS. Boutique brasileira de Creative Business Turnaround.',
       },
       hero: {
         eyebrow: 'Os fundadores',
@@ -157,8 +187,8 @@ export const dict = {
         role: 'Co-fundador · TRANSPIRA',
         name: 'Celso Gama',
         p1: 'Celso entra quando a operação precisa de alguém que já viu isso antes. Os resultados abaixo são cicatriz de execução real, não currículo de consultor.',
-        p2: 'Sabe onde colocar tecnologia e onde colocar gente porque já errou nos dois. Esses resultados vieram de julgamento calibrado por consequência real. A tecnologia entrou depois como amplificador.',
-        p3: 'A especificidade é a credibilidade. Não "melhoramos a margem". Virou -64% para +15% em seis meses na Diageo, sem aumentar receita, parando onde ela vazava.',
+        p2: 'Sei onde colocar tecnologia e onde colocar gente porque já errei nos dois. Esses resultados vieram de julgamento calibrado por consequência real. A tecnologia entrou depois como amplificador.',
+        p3: 'A especificidade é a credibilidade. Não "melhoramos a margem". Virou -64% para +15% em seis meses em multinacional do setor de bebidas, sem aumentar receita, parando onde ela vazava.',
         linkedin: 'LinkedIn →',
         badge: 'TRANSPIRA',
         results: [
@@ -200,7 +230,7 @@ export const dict = {
         badge: 'TRANSPIRA',
         h2: 'Execução com resultado verificado',
         p1: 'Tem um momento em que o decisor percebe que o que existe hoje não leva ao próximo nível. Isso não é falha de liderança. É ausência de clareza sobre o que precisa mudar — e clareza se constrói, não se inspira.',
-        p2: 'A Pira Labs não sai quando o prazo acaba. Os critérios de encerramento são definidos no início do projeto. Saímos quando os primeiros resultados acordados são verificados.',
+        p2: 'A PIRA LABS não sai quando o prazo acaba. Os critérios de encerramento são definidos no início do projeto. Saímos quando os primeiros resultados acordados são verificados.',
         cta: 'Solicitar TRANSPIRA →',
         moves: {
           title: 'Os quatro movimentos',
@@ -257,7 +287,7 @@ export const dict = {
       meta: {
         title: 'Contato — Solicitar diagnóstico',
         description:
-          'Entre em contato com a Pira Labs para solicitar um diagnóstico. A primeira conversa é gratuita e sem compromisso.',
+          'Entre em contato com a PIRA LABS para solicitar um diagnóstico. A primeira conversa é gratuita e sem compromisso.',
       },
       hero: {
         eyebrow: 'Contato',
@@ -314,14 +344,14 @@ export const dict = {
     },
     home: {
       meta: {
-        title: 'Pira Labs — Creative Business Turnaround',
+        title: 'PIRA LABS | Creative Business Turnaround',
         description:
           'Brazilian boutique for Creative Business Turnaround. We unlock the next level of businesses with untapped potential.',
       },
       hero: {
         eyebrow: 'Creative Business Turnaround',
         h1: ['Every business has', 'a next level.'],
-        body: "What Pira Labs finds is what stands between you and it. We enter, diagnose the real problem, build together, and leave when the business is in full propulsion.",
+        body: "What PIRA LABS finds is what stands between you and it. We enter, diagnose the real problem, build together, and leave when the business is in full propulsion.",
         ctaPrimary: 'Request diagnosis',
         ctaSecondary: 'See case',
       },
@@ -357,14 +387,14 @@ export const dict = {
             color: '#1F5C35',
             sub: 'The result, not a product',
             h3: 'Business in propulsion',
-            body: "The business runs with clarity. The decision-maker commands what matters. That is the state every Pira Labs engagement aims to reach. We don't stay forever. We don't leave before delivering.",
+            body: "The business runs with clarity. The decision-maker commands what matters. That is the state every PIRA LABS engagement aims to reach. We don't stay forever. We don't leave before delivering.",
           },
         ],
       },
       forWhom: {
         eyebrow: 'For whom',
         h2: ['High-value service businesses', 'with untapped potential.'],
-        body: "Pira Labs' client is the decision-maker who recognizes that what exists today won't reach the next level. The prerequisite isn't the size of the company. It's the genuine willingness to look at the problem again.",
+        body: "PIRA LABS' client is the decision-maker who recognizes that what exists today won't reach the next level. The prerequisite isn't the size of the company. It's the genuine willingness to look at the problem again.",
         items: [
           { title: 'Decision bottleneck', desc: "Everything goes through you. Every decision depends on you. Not from weakness — from lack of clarity about what can be delegated and how." },
           { title: 'Growth without structure', desc: "The business grows but what used to work no longer sustains the next level. Growing without rebuilding will break what's working." },
@@ -397,7 +427,7 @@ export const dict = {
       meta: {
         title: 'About the Founders',
         description:
-          'Gabriela Aguiar and Celso Gama, founders of Pira Labs. Brazilian boutique for Creative Business Turnaround.',
+          'Gabriela Aguiar and Celso Gama, founders of PIRA LABS. Brazilian boutique for Creative Business Turnaround.',
       },
       hero: {
         eyebrow: 'The founders',
@@ -417,8 +447,8 @@ export const dict = {
         role: 'Co-founder · TRANSPIRA',
         name: 'Celso Gama',
         p1: 'Celso enters when the operation needs someone who has seen this before. The results below are scars of real execution, not a consultant\'s resume.',
-        p2: 'He knows where to put technology and where to put people because he has made mistakes in both. These results came from judgment calibrated by real consequence. Technology came in later as an amplifier.',
-        p3: 'Specificity is credibility. Not "we improved the margin" — it went from -64% to +15% in six months at Diageo, without increasing revenue, plugging where it was leaking.',
+        p2: 'I know where to put technology and where to put people because I have made mistakes in both. These results came from judgment calibrated by real consequence. Technology came in later as an amplifier.',
+        p3: 'Specificity is credibility. Not "we improved the margin". It went from -64% to +15% in six months at a multinational in the beverages sector, without increasing revenue, plugging where it was leaking.',
         linkedin: 'LinkedIn →',
         badge: 'TRANSPIRA',
         results: [
@@ -460,7 +490,7 @@ export const dict = {
         badge: 'TRANSPIRA',
         h2: 'Execution with verified results',
         p1: "There comes a moment when the decision-maker realizes what exists today won't reach the next level. That is not a leadership failure. It's an absence of clarity about what needs to change — and clarity is built, not inspired.",
-        p2: "Pira Labs doesn't leave when the deadline ends. Closing criteria are defined at the start of the project. We leave when the first agreed results are verified.",
+        p2: "PIRA LABS doesn't leave when the deadline ends. Closing criteria are defined at the start of the project. We leave when the first agreed results are verified.",
         cta: 'Request TRANSPIRA →',
         moves: {
           title: 'The four moves',
@@ -517,7 +547,7 @@ export const dict = {
       meta: {
         title: 'Contact — Request diagnosis',
         description:
-          'Get in touch with Pira Labs to request a diagnosis. The first conversation is free and without commitment.',
+          'Get in touch with PIRA LABS to request a diagnosis. The first conversation is free and without commitment.',
       },
       hero: {
         eyebrow: 'Contact',
@@ -548,5 +578,197 @@ export const dict = {
   },
 } as const
 
-export type Locale = 'pt' | 'en'
+export const dictEs = {
+  nav: {
+    services: 'Servicios',
+    cases: 'Casos',
+    about: 'Sobre',
+    contact: 'Contacto',
+    cta: 'Solicitar diagnóstico',
+  },
+  footer: {
+    tagline: 'Propulsión de Negocios.',
+    category: 'Creative Business Turnaround.',
+    slogan: 'Liberamos el próximo nivel.',
+    nav: 'Navegación',
+    contact: 'Contacto',
+    location: 'São Paulo, Brasil',
+    rights: 'Todos los derechos reservados.',
+    closing: 'Seguimos en propulsión.',
+    links: [
+      ['/es', 'Inicio'],
+      ['/es/servicos', 'Servicios'],
+      ['/es/cases', 'Casos'],
+      ['/es/sobre', 'Sobre'],
+      ['/es/contato', 'Contacto'],
+    ] as [string, string][],
+  },
+  home: {
+    hero: {
+      eyebrow: 'Creative Business Turnaround',
+      h1: ['Todo negocio tiene', 'un próximo nivel.'],
+      body: 'Lo que PIRA LABS encuentra es lo que está entre usted y él. Entramos, diagnosticamos el problema real, construimos juntos y salimos cuando el negocio está en propulsión.',
+      ctaPrimary: 'Solicitar diagnóstico',
+      ctaSecondary: 'Ver caso',
+    },
+    proof: {
+      eyebrow: 'Resultado verificado · Caso jurídico anonimizado',
+      items: [
+        { num: '1.500+', label: 'Páginas analizadas', desc: 'Leyes, jurisprudencias y doctrina cruzadas' },
+        { num: '400h → 36h', label: 'Esfuerzo equivalente', desc: '10 profesionales por una semana. Entregamos el equivalente en 36 horas.' },
+        { num: 'R$160K/mes', label: 'Potencial de ingresos', desc: 'Capacidad operativa liberada para nuevos contratos' },
+      ],
+      disclaimer: 'Caso anonimizado. Identidad disponible bajo NDA.',
+    },
+    method: {
+      eyebrow: 'El método',
+      h2: ['Tres momentos.', 'Un proceso.'],
+      cards: [
+        {
+          badge: 'INSPIRA',
+          color: '#2A6B8A',
+          sub: 'Gabriela lidera',
+          h3: 'Diagnóstico del problema real',
+          body: 'No llegamos con una solución lista. Llegamos con las preguntas que nadie hizo antes. Mapeamos el problema real y diseñamos la ruta.',
+        },
+        {
+          badge: 'TRANSPIRA',
+          color: '#BA7517',
+          sub: 'Celso lidera',
+          h3: 'Ejecución con resultado verificado',
+          body: 'Entramos en la operación. Construimos junto con el equipo. Integramos tecnología curada donde amplifica. Salimos con resultado verificado.',
+        },
+        {
+          badge: 'RESPIRA',
+          color: '#1F5C35',
+          sub: 'El resultado, no un producto',
+          h3: 'Negocio en propulsión',
+          body: 'El negocio opera con claridad. El decisor está al mando de lo que importa. Ese es el estado que cada entrega de PIRA LABS busca alcanzar.',
+        },
+      ],
+    },
+    forWhom: {
+      eyebrow: 'Para quién',
+      h2: ['Negocios de servicios', 'con potencial reprimido.'],
+      body: 'El cliente de PIRA LABS es el decisor que reconoce que lo que existe hoy no lleva al próximo nivel. La condición necesaria no es el tamaño de la empresa. Es la disposición genuina de ver el problema de nuevo.',
+      items: [
+        { title: 'Cuello de botella en decisiones', desc: 'Todo pasa por usted. Cada decisión depende de usted. No por debilidad, sino por ausencia de claridad sobre qué puede delegarse y cómo.' },
+        { title: 'Crecimiento sin estructura', desc: 'El negocio crece pero lo que funcionaba antes ya no sostiene el próximo nivel. Crecer sin reconstruir romperá lo que está funcionando.' },
+        { title: 'Datos que no se convierten en decisiones', desc: 'La empresa tiene información. Pero nadie se detuvo a convertirla en claridad. El problema está a la vista, falta la mirada externa para nombrarlo.' },
+      ],
+    },
+    founders: {
+      eyebrow: 'Los fundadores',
+      h2: ['Dos fundadores.', 'Nosotros operamos.'],
+      gabriela: {
+        role: 'CEO · INSPIRA',
+        name: 'Gabriela Aguiar',
+        body: 'Casi una década construyendo ecosistemas de innovación y venture capital en Brasil, EE.UU. y los países nórdicos. Profesora de MBA en FIAP, mentora en FGV Ventures, en formación en IA en el MIT.',
+        quote: '"No llego con una solución lista. Llego con la pregunta que cambia el encuadre del problema."',
+      },
+      celso: {
+        role: 'Co-fundador · TRANSPIRA',
+        name: 'Celso Gama',
+        body: 'Escaló R$16M a R$163M en 24 meses. Pasó el margen de -64% a +15% en 6 meses, sin aumentar ingresos. Resultados pre-IA construidos con juicio calibrado por consecuencia real.',
+        quote: '"Sé dónde poner tecnología y dónde poner personas porque ya me equivoqué en los dos."',
+      },
+    },
+    cta: {
+      h2: 'Vale una conversación.',
+      body: 'Si reconoció su negocio en algún punto de esta página, la primera conversación es gratuita y sin compromiso.',
+      btn: 'Solicitar diagnóstico →',
+    },
+  },
+  sobre: {
+    hero: {
+      eyebrow: 'Los fundadores',
+      h1: ['Sin intermediario entre', 'quien entiende y quien resuelve.'],
+    },
+    gabriela: {
+      role: 'CEO · INSPIRA',
+      name: 'Gabriela Aguiar',
+      p1: 'Gabriela abre caminos que aún no estaban en el mapa. Casi una década construyendo ecosistemas activos dentro y fuera de Brasil: Plug and Play, German Accelerator, Web Summit, South Summit.',
+      p2: 'Profesora de MBA en FIAP, mentora de startups en FGV Ventures, miembro del Angel Investor Club. En formación en IA en el MIT.',
+      p3: 'Llega con repertorio real: sabe lo que funciona en el ecosistema global, lo que aún no llegó a Brasil, dónde están las conexiones que el cliente solo no alcanzaría en años.',
+      linkedin: 'LinkedIn →',
+      badge: 'INSPIRA',
+      quote: '"No llego con una solución lista. Llego con la pregunta que cambia el encuadre del problema y con la visión de lo que está llegando al ecosistema global antes de llegar al cliente."',
+    },
+    celso: {
+      role: 'Co-fundador · TRANSPIRA',
+      name: 'Celso Gama',
+      p1: 'Celso entra cuando la operación necesita a alguien que ya vio esto antes. Los resultados abajo son cicatrices de ejecución real, no currículum de consultor.',
+      p2: 'Sé dónde poner tecnología y dónde poner personas porque ya me equivoqué en los dos. Estos resultados vinieron de juicio calibrado por consecuencia real. La tecnología entró después como amplificador.',
+      p3: 'La especificidad es la credibilidad. No "mejoramos el margen". Pasó de -64% a +15% en seis meses en una multinacional del sector de bebidas, sin aumentar ingresos, parando donde se filtraba.',
+      linkedin: 'LinkedIn →',
+      badge: 'TRANSPIRA',
+      results: [
+        'R$16M a R$163M en 24 meses',
+        'Margen de -64% a +15% en 6 meses, sin aumentar ingresos (79 pp)',
+        '600 personas y 100 proveedores coordinados',
+        'Sector jurídico: semana de 10 personas reemplazada por 4 ciclos de 8 horas',
+      ],
+      disclaimer: 'Todos los resultados son pre-IA.',
+    },
+  },
+  cases: {
+    hero: {
+      eyebrow: 'Casos',
+      h1: 'Resultados verificados.',
+    },
+    case1: {
+      sector: 'Sector jurídico · Boutique · Derecho Civil',
+      h2: ['Más capacidad.', 'Sin necesidad de contratar.'],
+      badge: 'Caso anonimizado',
+      body: 'Estudio boutique de Derecho Civil con alta demanda y equipo al límite. Contratar no era opción. Tercerizar, un riesgo. El trabajo debía entregarse con calidad de socio, en el plazo de un cliente impaciente.',
+      metrics: [
+        { num: '1.500+', label: 'Páginas analizadas', desc: 'Leyes, jurisprudencias y doctrina' },
+        { num: '400h → 36h', label: 'Esfuerzo equivalente', desc: '10 profesionales × 1 semana = 36 horas' },
+        { num: 'R$160K/mes', label: 'Ingreso potencial', desc: 'Capacidad liberada para nuevos contratos' },
+      ],
+      method: [
+        { badge: 'INSPIRA', color: '#2A6B8A', title: 'Diagnóstico del problema real', desc: 'No empezamos con herramientas. Mapeamos el flujo real de trabajo para identificar dónde se filtraba la energía.' },
+        { badge: 'TRANSPIRA', color: '#BA7517', title: 'Co-creación y calibración', desc: 'Construimos un equipo de agentes calibrados para el contexto jurídico, con juicio humano activo en cada etapa.' },
+        { badge: 'RESPIRA', color: '#1F5C35', title: 'Negocio en propulsión', desc: 'Base de datos organizada como activo. Capacidad para nuevos contratos. Claridad sobre estrategia de crecimiento.' },
+      ],
+      quote: '"Hicimos lo que un equipo de 10 personas tardaría una semana en hacer."',
+      quoteAuthor: 'Socio de estudio boutique de Derecho Civil, tras revisar el trabajo entregado',
+      disclaimer: 'Caso anonimizado. Identidad disponible bajo NDA. · inspira@piralabs.com.br',
+    },
+    cta: {
+      h2: 'Su negocio tiene un próximo nivel esperando.',
+      body: 'La primera conversación es gratuita y sin compromiso.',
+      btn: 'Solicitar diagnóstico →',
+    },
+  },
+  contato: {
+    hero: {
+      eyebrow: 'Contacto',
+      h1: 'Vale una conversación.',
+      body: 'La primera conversación es gratuita y sin compromiso. Si reconoció su negocio, eso es suficiente para empezar.',
+    },
+    form: {
+      h2: 'Solicitar diagnóstico',
+      name: { label: 'Nombre *', placeholder: 'Su nombre' },
+      email: { label: 'Email *', placeholder: 'su@email.com' },
+      company: { label: 'Empresa', placeholder: 'Nombre de la empresa' },
+      message: { label: '¿Qué está pasando en el negocio?', placeholder: 'Describa brevemente qué está bloqueando el crecimiento o qué quiere lograr.' },
+      submit: 'Enviar mensaje →',
+      subject: 'Nuevo contacto — piralabs.com.br/es',
+    },
+    info: {
+      emailLabel: 'Email directo',
+      locationLabel: 'Ubicación',
+      location: 'São Paulo, Brasil',
+      linkedinLabel: 'LinkedIn',
+      linkedinText: 'linkedin.com/company/piralabs →',
+      card: {
+        title: 'Boutique por elección.',
+        body: 'Celso y Gabriela en cada proyecto, del diagnóstico al cierre. Sin intermediario entre quien entiende el problema y quien lo resuelve.',
+      },
+    },
+  },
+}
+
+export type Locale = 'pt' | 'en' | 'es'
 export type Dict = typeof dict.pt

@@ -4,7 +4,7 @@ import { dict } from '@/lib/i18n'
 export const metadata: Metadata = {
   title: 'About the Founders',
   description:
-    'Gabriela Aguiar and Celso Gama, founders of Pira Labs. Brazilian boutique for Creative Business Turnaround.',
+    'Gabriela Aguiar and Celso Gama, founders of PIRA LABS. Brazilian boutique for Creative Business Turnaround.',
   alternates: {
     canonical: 'https://piralabs.com.br/en/about',
     languages: { 'pt-BR': 'https://piralabs.com.br/sobre' },

@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { dict } from '@/lib/i18n'
 
 export const metadata: Metadata = {
-  title: 'Cases — Resultados verificados',
+  title: 'Cases: Resultados verificados',
   description:
-    'Case jurídico: 1.500+ páginas analisadas, equivalente a 400 horas de esforço entregue em 36 horas. Resultados verificados da Pira Labs.',
+    'Case jurídico: 1.500+ páginas analisadas, equivalente a 400 horas de esforço entregue em 36 horas. Resultados verificados da PIRA LABS.',
   alternates: {
     canonical: 'https://piralabs.com.br/cases',
     languages: { 'en': 'https://piralabs.com.br/en/cases' },

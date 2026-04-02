@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { dict } from '@/lib/i18n'
 
 export const metadata: Metadata = {
-  title: 'Contato — Solicitar diagnóstico',
+  title: 'Contato: Solicitar diagnóstico',
   description:
-    'Entre em contato com a Pira Labs para solicitar um diagnóstico. A primeira conversa é gratuita e sem compromisso.',
+    'Entre em contato com a PIRA LABS para solicitar um diagnóstico. A primeira conversa é gratuita e sem compromisso.',
   alternates: {
     canonical: 'https://piralabs.com.br/contato',
     languages: { 'en': 'https://piralabs.com.br/en/contact' },

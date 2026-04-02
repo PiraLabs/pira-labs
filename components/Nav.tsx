@@ -2,16 +2,15 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { getAlternatePath } from '@/lib/i18n'
+import { getPathInLocale } from '@/lib/i18n'
 
 interface NavProps {
-  locale: 'pt' | 'en'
+  locale: 'pt' | 'en' | 'es'
 }
 
 export default function Nav({ locale }: NavProps) {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
-  const alternatePath = getAlternatePath(pathname)
 
   const links =
     locale === 'pt'
@@ -21,16 +20,35 @@ export default function Nav({ locale }: NavProps) {
           { href: '/sobre', label: 'Sobre' },
           { href: '/contato', label: 'Contato' },
         ]
-      : [
+      : locale === 'en'
+      ? [
           { href: '/en/services', label: 'Services' },
           { href: '/en/cases', label: 'Cases' },
           { href: '/en/about', label: 'About' },
           { href: '/en/contact', label: 'Contact' },
         ]
+      : [
+          { href: '/es/servicos', label: 'Servicios' },
+          { href: '/es/cases', label: 'Casos' },
+          { href: '/es/sobre', label: 'Sobre' },
+          { href: '/es/contato', label: 'Contacto' },
+        ]
 
-  const ctaHref = locale === 'pt' ? '/contato' : '/en/contact'
-  const ctaLabel = locale === 'pt' ? 'Solicitar diagnóstico' : 'Request diagnosis'
-  const logoHref = locale === 'pt' ? '/' : '/en'
+  const ctaHref =
+    locale === 'pt' ? '/contato' : locale === 'en' ? '/en/contact' : '/es/contato'
+  const ctaLabel =
+    locale === 'pt'
+      ? 'Solicitar diagnóstico'
+      : locale === 'en'
+      ? 'Request diagnosis'
+      : 'Solicitar diagnóstico'
+  const logoHref = locale === 'pt' ? '/' : locale === 'en' ? '/en' : '/es'
+
+  const langOptions: { label: string; locale: 'pt' | 'en' | 'es' }[] = [
+    { label: 'PT', locale: 'pt' },
+    { label: 'EN', locale: 'en' },
+    { label: 'ES', locale: 'es' },
+  ]
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-sm border-b border-amber/20">
@@ -61,24 +79,39 @@ export default function Nav({ locale }: NavProps) {
             {ctaLabel}
           </Link>
           {/* Seletor de idioma */}
-          <Link
-            href={alternatePath}
-            className="ml-1 px-3 py-1 border border-navy/30 text-navy/60 font-body text-xs tracking-widest uppercase hover:border-amber hover:text-amber transition-colors duration-200"
-            aria-label={locale === 'pt' ? 'Switch to English' : 'Mudar para Português'}
-          >
-            {locale === 'pt' ? 'EN' : 'PT'}
-          </Link>
+          <div className="ml-1 flex items-center gap-1">
+            {langOptions.map(({ label, locale: l }) => (
+              <Link
+                key={l}
+                href={getPathInLocale(pathname, l)}
+                className={`px-2 py-1 font-body text-xs tracking-widest uppercase transition-colors duration-200 ${
+                  locale === l
+                    ? 'border border-amber text-amber'
+                    : 'border border-navy/30 text-navy/60 hover:border-amber hover:text-amber'
+                }`}
+                aria-current={locale === l ? 'true' : undefined}
+              >
+                {label}
+              </Link>
+            ))}
+          </div>
         </nav>
 
         {/* Mobile: idioma + hamburger */}
         <div className="md:hidden flex items-center gap-3">
-          <Link
-            href={alternatePath}
-            className="px-2 py-1 border border-navy/30 text-navy/60 font-body text-xs tracking-widest uppercase"
-            aria-label={locale === 'pt' ? 'Switch to English' : 'Mudar para Português'}
-          >
-            {locale === 'pt' ? 'EN' : 'PT'}
-          </Link>
+          <div className="flex items-center gap-1">
+            {langOptions.map(({ label, locale: l }) => (
+              <Link
+                key={l}
+                href={getPathInLocale(pathname, l)}
+                className={`px-2 py-1 font-body text-xs tracking-widest uppercase ${
+                  locale === l ? 'border border-amber text-amber' : 'border border-navy/30 text-navy/60'
+                }`}
+              >
+                {label}
+              </Link>
+            ))}
+          </div>
           <button
             className="text-navy"
             onClick={() => setOpen(!open)}

@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import { dict } from '@/lib/i18n'
+import { dict, dictEs } from '@/lib/i18n'
 
 interface FooterProps {
-  locale: 'pt' | 'en'
+  locale: 'pt' | 'en' | 'es'
 }
 
 export default function Footer({ locale }: FooterProps) {
-  const t = dict[locale].footer
+  const t = locale === 'es' ? dictEs.footer : dict[locale].footer
 
   return (
     <footer className="bg-navy text-off-white/70">
@@ -63,7 +63,7 @@ export default function Footer({ locale }: FooterProps) {
 
         <div className="border-t border-off-white/10 pt-6 flex flex-col md:flex-row justify-between gap-3">
           <p className="font-body text-xs text-off-white/30">
-            © {new Date().getFullYear()} Pira Labs. {t.rights}
+            © {new Date().getFullYear()} PIRA LABS. {t.rights}
           </p>
           <p className="font-body text-xs text-off-white/30">{t.closing}</p>
         </div>

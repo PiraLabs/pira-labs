@@ -1,19 +1,22 @@
 import type { Metadata } from 'next'
-import { dict } from '@/lib/i18n'
+import { dictEs } from '@/lib/i18n'
 
 export const metadata: Metadata = {
-  title: 'Contact: Request diagnosis',
+  title: 'Contacto: Solicitar diagnóstico',
   description:
-    'Get in touch with PIRA LABS to request a diagnosis. The first conversation is free and without commitment.',
+    'Contáctenos con PIRA LABS para solicitar un diagnóstico. La primera conversación es gratuita y sin compromiso.',
   alternates: {
-    canonical: 'https://piralabs.com.br/en/contact',
-    languages: { 'pt-BR': 'https://piralabs.com.br/contato' },
+    canonical: 'https://piralabs.com.br/es/contato',
+    languages: {
+      'pt-BR': 'https://piralabs.com.br/contato',
+      'en': 'https://piralabs.com.br/en/contact',
+    },
   },
 }
 
-const t = dict.en.contato
+const t = dictEs.contato
 
-export default function ContactEn() {
+export default function EsContato() {
   return (
     <>
       <section className="bg-navy pt-32 pb-16">
@@ -34,7 +37,6 @@ export default function ContactEn() {
       <section className="bg-cream py-24">
         <div className="max-w-container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            {/* Form */}
             <div>
               <h2 className="font-display text-navy text-3xl mb-8">{t.form.h2}</h2>
               <form
@@ -47,7 +49,7 @@ export default function ContactEn() {
                 <input
                   type="hidden"
                   name="_next"
-                  value="https://piralabs.com.br/en/contact?sent=true"
+                  value="https://piralabs.com.br/es/contato?enviado=true"
                 />
 
                 <div>
@@ -56,7 +58,7 @@ export default function ContactEn() {
                   </label>
                   <input
                     type="text"
-                    name="name"
+                    name="nome"
                     required
                     className="w-full border border-navy/20 bg-transparent px-4 py-3 font-body text-sm text-navy placeholder-gray-text/50 focus:outline-none focus:border-amber transition-colors duration-200"
                     placeholder={t.form.name.placeholder}
@@ -82,7 +84,7 @@ export default function ContactEn() {
                   </label>
                   <input
                     type="text"
-                    name="company"
+                    name="empresa"
                     className="w-full border border-navy/20 bg-transparent px-4 py-3 font-body text-sm text-navy placeholder-gray-text/50 focus:outline-none focus:border-amber transition-colors duration-200"
                     placeholder={t.form.company.placeholder}
                   />
@@ -93,7 +95,7 @@ export default function ContactEn() {
                     {t.form.message.label}
                   </label>
                   <textarea
-                    name="message"
+                    name="mensagem"
                     rows={5}
                     className="w-full border border-navy/20 bg-transparent px-4 py-3 font-body text-sm text-navy placeholder-gray-text/50 focus:outline-none focus:border-amber transition-colors duration-200 resize-none"
                     placeholder={t.form.message.placeholder}
@@ -109,7 +111,6 @@ export default function ContactEn() {
               </form>
             </div>
 
-            {/* Info */}
             <div className="space-y-12">
               <div>
                 <p className="font-body text-xs uppercase tracking-widest text-amber mb-4">

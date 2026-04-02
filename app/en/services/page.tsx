@@ -3,9 +3,9 @@ import type { Metadata } from 'next'
 import { dict } from '@/lib/i18n'
 
 export const metadata: Metadata = {
-  title: 'Services — INSPIRA and TRANSPIRA',
+  title: 'Services: INSPIRA and TRANSPIRA',
   description:
-    'INSPIRA: real problem diagnosis. TRANSPIRA: execution with verified results. Pira Labs services for service businesses with untapped potential.',
+    'INSPIRA: real problem diagnosis. TRANSPIRA: execution with verified results. PIRA LABS services for service businesses with untapped potential.',
   alternates: {
     canonical: 'https://piralabs.com.br/en/services',
     languages: { 'pt-BR': 'https://piralabs.com.br/servicos' },
