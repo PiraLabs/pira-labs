@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npm --version)",
+      "Bash(npx --version)",
+      "Bash(where node:*)",
+      "Bash(where npm:*)",
+      "Bash(cmd /c \"node -v && npm -v\" 2>&1)",
+      "Bash(echo $PATH)",
+      "Bash(echo $SHELL)",
+      "Read(//usr/local/**)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(node -e \"require\\(''child_process''\\).execSync\\(''npm run build'', {stdio:''inherit''}\\)\")",
+      "Bash(npx next:*)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(node -e \"const {execSync} = require\\(''child_process''\\); try { execSync\\(''npx next build'', {stdio: ''pipe'', encoding: ''utf8''}\\); } catch\\(e\\) { console.log\\(e.stdout\\); console.log\\(e.stderr\\); }\")",
+      "Bash(npx tsc:*)",
+      "Bash(cmd /c \"cd C:\\\\Users\\\\Lenovo\\\\PiraLabs\\\\piralabs-site && npm run build 2>&1\")",
+      "Bash(/c/Users/Lenovo/PiraLabs/piralabs-site)",
+      "Bash(dir:*)"
+    ]
+  }
+}
