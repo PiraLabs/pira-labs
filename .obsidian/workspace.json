@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "4e29644e3647d319",
+    "type": "split",
+    "children": [
+      {
+        "id": "83eaa8bf0395655a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fb6a07dba06e5f71",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CC/almapbbdo-synths-dados-sinteticos-processo-criativo.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "almapbbdo-synths-dados-sinteticos-processo-criativo"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "afd208ff796f3c65",
+    "type": "split",
+    "children": [
+      {
+        "id": "33848fd2d12daed8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "75114d655f6131e9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "0df5be8b41903908",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "7defbabd935844c4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e814bb6ec211edfa",
+    "type": "split",
+    "children": [
+      {
+        "id": "851f9809c707d287",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ac0b24848f8172da",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CC/almapbbdo-synths-dados-sinteticos-processo-criativo.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para almapbbdo-synths-dados-sinteticos-processo-criativo"
+            }
+          },
+          {
+            "id": "a2e24a4d9e2c5ed0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CC/almapbbdo-synths-dados-sinteticos-processo-criativo.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para almapbbdo-synths-dados-sinteticos-processo-criativo"
+            }
+          },
+          {
+            "id": "de0d3aa0af06d2fa",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "34811037b2e0e7aa",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas as propriedades"
+            }
+          },
+          {
+            "id": "1306d522f4b73c8a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CC/almapbbdo-synths-dados-sinteticos-processo-criativo.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de almapbbdo-synths-dados-sinteticos-processo-criativo"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "fb6a07dba06e5f71",
+  "lastOpenFiles": [
+    "BM/island-of-knowledge-benchmark-premium-internacional.md",
+    "INDEX.md",
+    "CC/dove-the-code-governanca-criativa-como-diferencial.md",
+    "CC/almapbbdo-synths-dados-sinteticos-processo-criativo.md",
+    "CC/heinz-rethink-draw-ketchup-fator-humano-em-publicidade.md",
+    "CC/smarter-ecommerce-ppc-manager-2026-orquestracao-estrategica.md",
+    "CC/forbes-geo-generative-engine-optimization-visibilidade-em-ia.md",
+    "CC/content-marketing-institute-42-experts-trends-2026-voz-humana-vs-volume-ia.md",
+    "CC/vml-have-my-agent-call-your-agent-marca-na-era-dos-agentes.md",
+    "CC/sxsw-2026-insights-ctr-caiu-agentes-vao-superar-trafego-humano.md",
+    "CC/think-with-google-top-digital-marketing-trends-2026.md",
+    "CC/jeito-disney-vs-jeito-brasileiro-experiencia-do-cliente.md",
+    "CC/google-shopping-universal-cart-ia-personalizacao-mudanca-estrutural.md",
+    "CC",
+    "BM/kes-plataforma-global-de-conhecimento-benchmark-premium-brasil.md",
+    "BM",
+    "IA/gartner-10-tendencias-tecnologicas-estrategicas-2026.md",
+    "IA/openai-duke-harvard-como-pessoas-usam-chatgpt-73pct-nao-trabalho.md",
+    "IA/dora-google-cloud-state-of-ai-assisted-software-2025-ilusao-de-produtividade.md",
+    "IA/vml-from-data-to-dominance-change-management-como-causa-de-falha.md",
+    "IA/gartner-ia-agentica-software-empresarial-2028-taxa-de-fracasso.md",
+    "IA/bcg-widening-ai-value-gap-redesenho-de-processo-vs-produtividade-incremental.md",
+    "IA/meta-fdc-ia-estrategia-brasil-gap-discurso-execucao.md",
+    "IA/ai-maturity-executive-benchmark-brasil-media-095.md",
+    "IA/google-cloud-ai-agent-trends-2026-roi-e-adocao.md",
+    "IA/gartner-30pct-projetos-genai-abandonados-apos-poc.md",
+    "IA/mit-consent-in-crisis-dados-proprietarios-como-ativo-estrategico.md",
+    "IA/armadilhas-ia-corporativa-delegacao-de-criterio.md",
+    "IA",
+    "TM",
+    "CC (contexto setorial)",
+    "Nova pasta",
+    "BM (benchmarks)",
+    "IA (IA e inovação)",
+    "TM (tendencia mercado)"
+  ]
+}
