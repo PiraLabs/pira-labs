@@ -74,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "e814bb6ec211edfa",
@@ -182,6 +182,11 @@
   },
   "active": "fb6a07dba06e5f71",
   "lastOpenFiles": [
+    "dora-google-cloud-state-of-ai-2025.md",
+    "IA/meta-fdc-ia-estrategia-brasil-gap-discurso-execucao.md",
+    "CLAUDE.md",
+    "INDEX.md",
+    "IA/bcg-widening-ai-value-gap-redesenho-de-processo-vs-produtividade-incremental.md",
     "TM/wef-future-of-jobs-2025-competencias-em-obsolescencia.md",
     "CC/almapbbdo-synths-dados-sinteticos-processo-criativo.md",
     "tsconfig.tsbuildinfo",
@@ -198,7 +203,6 @@
     "package.json",
     "package-lock.json",
     "BM/island-of-knowledge-benchmark-premium-internacional.md",
-    "INDEX.md",
     "CC/dove-the-code-governanca-criativa-como-diferencial.md",
     "CC/heinz-rethink-draw-ketchup-fator-humano-em-publicidade.md",
     "CC/smarter-ecommerce-ppc-manager-2026-orquestracao-estrategica.md",
@@ -215,10 +219,6 @@
     "IA/dora-google-cloud-state-of-ai-assisted-software-2025-ilusao-de-produtividade.md",
     "IA/vml-from-data-to-dominance-change-management-como-causa-de-falha.md",
     "IA/gartner-ia-agentica-software-empresarial-2028-taxa-de-fracasso.md",
-    "IA/bcg-widening-ai-value-gap-redesenho-de-processo-vs-produtividade-incremental.md",
-    "IA/meta-fdc-ia-estrategia-brasil-gap-discurso-execucao.md",
-    "IA/ai-maturity-executive-benchmark-brasil-media-095.md",
-    "IA/google-cloud-ai-agent-trends-2026-roi-e-adocao.md",
-    "IA/gartner-30pct-projetos-genai-abandonados-apos-poc.md"
+    "IA/ai-maturity-executive-benchmark-brasil-media-095.md"
   ]
 }
