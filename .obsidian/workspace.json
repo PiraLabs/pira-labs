@@ -178,6 +178,7 @@
   },
   "active": "37ad29933a6788c8",
   "lastOpenFiles": [
+    "Playbook/Referência rápida — ferramenta por situação.md",
     "Playbook/Sistematização Operacional de Cliente — Workflow INSPIRA_TRANSPIRA.md",
     "Playbook/Bugs de Cache Claude Code — Workarounds Operacionais.md",
     "Ferramentas/YAML frontmatter minimo e regras de campo.md",
@@ -203,7 +204,6 @@
     "Playbook/Quando Adicionar Think Step by Step.md",
     "Playbook/Prompt Claude.md",
     "Playbook/Produção de Conteúdo LinkedIn.md",
-    "Playbook/Posicionamento de skill por outcome.md",
     "LICENSE"
   ]
 }
