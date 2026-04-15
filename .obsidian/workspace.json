@@ -176,6 +176,34 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "31bf0b365712a8c6",
-  "lastOpenFiles": []
+  "active": "37ad29933a6788c8",
+  "lastOpenFiles": [
+    "Playbook/Sistematização Operacional de Cliente — Workflow INSPIRA_TRANSPIRA.md",
+    "Playbook/Bugs de Cache Claude Code — Workarounds Operacionais.md",
+    "Ferramentas/YAML frontmatter minimo e regras de campo.md",
+    "Ferramentas/settings json mínimo.md",
+    "Ferramentas/Recursos e referencias para construir skills.md",
+    "Ferramentas/Publicacao e instalacao de skill em GitHub e MCP repo.md",
+    "Ferramentas/Organização  claude Padrão de Qualidade.md",
+    "Ferramentas/Estrutura recomendada do SKILL md.md",
+    "Ferramentas/Especificacao tecnica minima de skill.md",
+    "Ferramentas/Distribuicao e superficies de uso de skills.md",
+    "Playbook/ manifesto.md",
+    "Playbook/Uso do skill-creator para criar e refinar skills.md",
+    "Playbook/Troubleshooting de upload de skill.md",
+    "Playbook/Troubleshooting de triggering de skill.md",
+    "Playbook/Troubleshooting de large context em skills.md",
+    "Playbook/Troubleshooting de instrucoes nao seguidas.md",
+    "Playbook/Troubleshooting de conexao MCP em skills.md",
+    "Playbook/Triangulação de Pesquisa.md",
+    "Playbook/Template de Prompt Padrao.md",
+    "Playbook/Sistematização Operacional de Cliente — Workflow INSPIRA TRANSPIRA.md",
+    "Playbook/Revisão de Proposta ou Entregável.md",
+    "Playbook/Referência rápida   ferramenta por situação.md",
+    "Playbook/Quando Adicionar Think Step by Step.md",
+    "Playbook/Prompt Claude.md",
+    "Playbook/Produção de Conteúdo LinkedIn.md",
+    "Playbook/Posicionamento de skill por outcome.md",
+    "LICENSE"
+  ]
 }
