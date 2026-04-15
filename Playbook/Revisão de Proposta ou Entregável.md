@@ -1,7 +1,7 @@
 ---
 tipo: prompt
-tags: [revisão-texto, auditoria-oferta, vendas]
-uso: [proposta]
+tags: [revisão-texto, auditoria-oferta, estratégia, vendas]
+uso: [proposta, diagnóstico-cliente]
 destino: A
 ---
 

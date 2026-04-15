@@ -1,6 +1,6 @@
 ---
 tipo: prompt
-tags: [conteúdo-linkedin, marca-pessoal, escrita-autoral]
+tags: [conteúdo-linkedin, marca-pessoal, posicionamento, escrita-autoral, voz-celso]
 uso: [conteúdo-linkedin, marca-pessoal]
 destino: A
 ---

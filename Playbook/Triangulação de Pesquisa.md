@@ -1,7 +1,7 @@
 ---
 tipo: prompt
-tags: [framework, raciocínio, estratégia]
-uso: [proposta, conteúdo-linkedin]
+tags: [framework, raciocínio, estratégia, revisão-texto]
+uso: [proposta, conteúdo-linkedin, análise-setor]
 destino: A
 ---
 
