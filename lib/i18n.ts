@@ -186,9 +186,9 @@ export const dict = {
       celso: {
         role: 'Co-fundador · TRANSPIRA',
         name: 'Celso Gama',
-        p1: 'Celso entra quando a operação precisa de alguém que já viu isso antes. Os resultados abaixo são cicatriz de execução real, não currículo de consultor.',
-        p2: 'Sei onde colocar tecnologia e onde colocar gente porque já errei nos dois. Esses resultados vieram de julgamento calibrado por consequência real. A tecnologia entrou depois como amplificador.',
-        p3: 'A especificidade é a credibilidade. Não "melhoramos a margem". Virou -64% para +15% em seis meses em multinacional do setor de bebidas, sem aumentar receita, parando onde ela vazava.',
+        p1: 'Celso entra quando a operação precisa de alguém que já viu isso antes. Virou margem de -64% para +15% em 6 meses atendendo uma multinacional do setor de bebidas, sem aumentar receita nem cortar equipe. Escalou receita de R$16M para R$163M em 24 meses em unidade que dirigiu. Coordenou mais de 600 pessoas e 100 fornecedores em tempo real nas Olimpíadas do Rio em 2016.',
+        p2: 'MBA pelo Insper, pós-graduação em Marketing pela ESPM, graduações em Direito pelo Mackenzie e Publicidade pela FAAP. Em formação em IA no MIT.',
+        p3: 'Aprendeu no pré-IA. Sabe julgar o que a tecnologia resolve e o que só gente resolve.',
         linkedin: 'LinkedIn →',
         badge: 'TRANSPIRA',
         results: [
@@ -266,7 +266,7 @@ export const dict = {
         metrics: [
           { num: '1.500+', label: 'Páginas analisadas', desc: 'Leis, jurisprudências e doutrina' },
           { num: '400h → 36h', label: 'Esforço equivalente', desc: '10 profissionais × 1 semana = 36 horas' },
-          { num: 'R$160K/mês', label: 'Receita potencial', desc: 'Capacidade liberada para novos contratos' },
+          { num: 'R$160K/mês', label: 'Receita potencial', desc: 'Receita mensal liberada para o cliente' },
         ],
         method: [
           { badge: 'INSPIRA', color: '#2A6B8A', title: 'Diagnóstico do problema real', desc: 'Não começamos com ferramentas. Mapeamos o fluxo real de trabalho para identificar onde a energia vazava.' },
@@ -446,9 +446,9 @@ export const dict = {
       celso: {
         role: 'Co-founder · TRANSPIRA',
         name: 'Celso Gama',
-        p1: 'Celso enters when the operation needs someone who has seen this before. The results below are scars of real execution, not a consultant\'s resume.',
-        p2: 'I know where to put technology and where to put people because I have made mistakes in both. These results came from judgment calibrated by real consequence. Technology came in later as an amplifier.',
-        p3: 'Specificity is credibility. Not "we improved the margin". It went from -64% to +15% in six months at a multinational in the beverages sector, without increasing revenue, plugging where it was leaking.',
+        p1: 'Celso enters when the operation needs someone who has seen this before. He turned margin from -64% to +15% in 6 months at a multinational in the beverages sector, without increasing revenue or cutting staff. He scaled revenue from R$16M to R$163M in 24 months in a unit he led. He coordinated more than 600 people and 100 suppliers in real time at the Rio 2016 Olympics.',
+        p2: 'MBA from Insper, postgraduate degree in Marketing from ESPM, undergraduate degrees in Law from Mackenzie and Advertising from FAAP. Currently studying AI at MIT.',
+        p3: 'He learned pre-AI. He knows how to judge what technology solves and what only people can solve.',
         linkedin: 'LinkedIn →',
         badge: 'TRANSPIRA',
         results: [
@@ -526,7 +526,7 @@ export const dict = {
         metrics: [
           { num: '1,500+', label: 'Pages analyzed', desc: 'Laws, case law and doctrine' },
           { num: '400h → 36h', label: 'Equivalent effort', desc: '10 professionals × 1 week = 36 hours' },
-          { num: 'R$160K/mo', label: 'Revenue potential', desc: 'Capacity freed for new contracts' },
+          { num: 'R$160K/mo', label: 'Revenue potential', desc: 'Monthly revenue freed for the client' },
         ],
         method: [
           { badge: 'INSPIRA', color: '#2A6B8A', title: 'Real problem diagnosis', desc: "We didn't start with tools. We mapped the real workflow to identify where the energy was leaking." },
@@ -697,9 +697,9 @@ export const dictEs = {
     celso: {
       role: 'Co-fundador · TRANSPIRA',
       name: 'Celso Gama',
-      p1: 'Celso entra cuando la operación necesita a alguien que ya vio esto antes. Los resultados abajo son cicatrices de ejecución real, no currículum de consultor.',
-      p2: 'Sé dónde poner tecnología y dónde poner personas porque ya me equivoqué en los dos. Estos resultados vinieron de juicio calibrado por consecuencia real. La tecnología entró después como amplificador.',
-      p3: 'La especificidad es la credibilidad. No "mejoramos el margen". Pasó de -64% a +15% en seis meses en una multinacional del sector de bebidas, sin aumentar ingresos, parando donde se filtraba.',
+      p1: 'Celso entra cuando la operación necesita a alguien que ya vio esto antes. Pasó el margen de -64% a +15% en 6 meses atendiendo a una multinacional del sector de bebidas, sin aumentar ingresos ni recortar equipo. Escaló ingresos de R$16M a R$163M en 24 meses en una unidad que dirigió. Coordinó más de 600 personas y 100 proveedores en tiempo real en los Juegos Olímpicos de Río 2016.',
+      p2: 'MBA por el Insper, posgrado en Marketing por la ESPM, grados en Derecho por Mackenzie y Publicidad por la FAAP. En formación en IA en el MIT.',
+      p3: 'Aprendió en el pre-IA. Sabe juzgar qué resuelve la tecnología y qué solo resuelve la gente.',
       linkedin: 'LinkedIn →',
       badge: 'TRANSPIRA',
       results: [
@@ -724,7 +724,7 @@ export const dictEs = {
       metrics: [
         { num: '1.500+', label: 'Páginas analizadas', desc: 'Leyes, jurisprudencias y doctrina' },
         { num: '400h → 36h', label: 'Esfuerzo equivalente', desc: '10 profesionales × 1 semana = 36 horas' },
-        { num: 'R$160K/mes', label: 'Ingreso potencial', desc: 'Capacidad liberada para nuevos contratos' },
+        { num: 'R$160K/mes', label: 'Ingreso potencial', desc: 'Ingresos mensuales liberados para el cliente' },
       ],
       method: [
         { badge: 'INSPIRA', color: '#2A6B8A', title: 'Diagnóstico del problema real', desc: 'No empezamos con herramientas. Mapeamos el flujo real de trabajo para identificar dónde se filtraba la energía.' },
