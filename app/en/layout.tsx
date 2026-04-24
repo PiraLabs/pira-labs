@@ -72,6 +72,7 @@ const jsonLd = {
       sameAs: [
         'https://linkedin.com/company/piralabs',
         'https://github.com/PiraLabs/pira-labs',
+        'https://www.wikidata.org/wiki/Q138846707',
       ],
       founder: [
         {
@@ -81,7 +82,10 @@ const jsonLd = {
           jobTitle: 'CEO',
           description:
             'CEO of PIRA LABS. Nearly a decade in innovation and venture capital in Brazil, the US, and the Nordics. MBA professor at FIAP, mentor at FGV Ventures, studying AI at MIT.',
-          sameAs: ['https://www.linkedin.com/in/gabrielaaguiarvs/'],
+          sameAs: [
+            'https://www.linkedin.com/in/gabrielaaguiarvs/',
+            'https://www.wikidata.org/wiki/Q138846653',
+          ],
         },
         {
           '@type': 'Person',
@@ -90,7 +94,10 @@ const jsonLd = {
           jobTitle: 'Co-founder and COO',
           description:
             'Co-founder of PIRA LABS. Operational turnaround specialist. Scaled revenue from R$16M to R$163M in 24 months. Turned margin from -64% to +15% in 6 months without increasing revenue.',
-          sameAs: ['https://www.linkedin.com/in/celsogama/'],
+          sameAs: [
+            'https://www.linkedin.com/in/celsogama/',
+            'https://www.wikidata.org/wiki/Q138846692',
+          ],
         },
       ],
       hasOfferCatalog: {
@@ -103,7 +110,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'INSPIRA',
               description:
-                'Real problem diagnosis. Sector reading. Curation of available technologies. The problem named, the route drawn.',
+                'Diagnosis of the real problem limiting business potential. Sector reading, trend and risk identification, curation of available technologies. Output: the problem named, the route drawn, in a document or presentation agreed at the start.',
             },
           },
           {
@@ -112,7 +119,16 @@ const jsonLd = {
               '@type': 'Service',
               name: 'TRANSPIRA',
               description:
-                'Execution. We enter the operation, work alongside the team, integrate curated technology, and leave with verified results.',
+                'Execution of the path designed in the diagnosis. We enter the operation, work alongside the team, build the missing systems, and integrate curated technology where it amplifies. We leave when the first agreed results are verified.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'FAÍSCA',
+              description:
+                'Content, talks, workshops and mentoring where the PIRA LABS method is experienced before any larger commitment. Punctual format, applied to strategic groups or individual decision-makers.',
             },
           },
         ],

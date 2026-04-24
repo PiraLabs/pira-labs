@@ -72,6 +72,7 @@ const jsonLd = {
       sameAs: [
         'https://linkedin.com/company/piralabs',
         'https://github.com/PiraLabs/pira-labs',
+        'https://www.wikidata.org/wiki/Q138846707',
       ],
       founder: [
         {
@@ -81,7 +82,10 @@ const jsonLd = {
           jobTitle: 'CEO',
           description:
             'CEO da PIRA LABS. Quase uma década em inovação e venture capital no Brasil, EUA e países nórdicos. Professora de MBA na FIAP, mentora na FGV Ventures, em formação em IA no MIT.',
-          sameAs: ['https://www.linkedin.com/in/gabrielaaguiarvs/'],
+          sameAs: [
+            'https://www.linkedin.com/in/gabrielaaguiarvs/',
+            'https://www.wikidata.org/wiki/Q138846653',
+          ],
         },
         {
           '@type': 'Person',
@@ -90,7 +94,10 @@ const jsonLd = {
           jobTitle: 'Co-fundador e COO',
           description:
             'Co-fundador da PIRA LABS. Especialista em turnaround operacional. Escalou receita de R$16M para R$163M em 24 meses. Virou margem de -64% para +15% em 6 meses sem aumentar receita.',
-          sameAs: ['https://www.linkedin.com/in/celsogama/'],
+          sameAs: [
+            'https://www.linkedin.com/in/celsogama/',
+            'https://www.wikidata.org/wiki/Q138846692',
+          ],
         },
       ],
       hasOfferCatalog: {
@@ -103,7 +110,7 @@ const jsonLd = {
               '@type': 'Service',
               name: 'INSPIRA',
               description:
-                'Diagnóstico do problema real. Leitura do setor. Curadoria de tecnologias disponíveis. O problema nomeado, a rota desenhada.',
+                'Diagnóstico do problema real que está limitando o potencial do negócio. Leitura do setor, identificação de tendências e riscos, curadoria de tecnologias disponíveis. Entrega: o problema nomeado, a rota desenhada, em documento ou apresentação acordado no início.',
             },
           },
           {
@@ -112,7 +119,16 @@ const jsonLd = {
               '@type': 'Service',
               name: 'TRANSPIRA',
               description:
-                'Execução. Entramos na operação, trabalhamos junto com o time, integramos tecnologia curada e saímos com resultado verificado.',
+                'Execução do caminho desenhado no diagnóstico. Entramos na operação, trabalhamos junto com o time, construímos os sistemas que faltam e integramos tecnologia curada onde ela amplifica. Saímos quando os primeiros resultados acordados são verificados.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'FAÍSCA',
+              description:
+                'Conteúdo, palestras, workshops e mentorias onde o método da PIRA LABS é experimentado antes de qualquer compromisso maior. Formato pontual, aplicado a grupos estratégicos ou decisores individuais.',
             },
           },
         ],
