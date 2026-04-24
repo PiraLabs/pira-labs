@@ -607,7 +607,7 @@ export const dictEs = {
     hero: {
       eyebrow: 'Creative Business Turnaround',
       h1: ['Todo negocio tiene', 'un próximo nivel.'],
-      body: 'Lo que PIRA LABS encuentra es lo que está entre usted y él. Entramos, diagnosticamos el problema real, construimos juntos y salimos cuando el negocio está en propulsión.',
+      body: 'Lo que PIRA LABS encuentra es lo que está entre tu negocio y el próximo nivel. Entramos, diagnosticamos el problema real, construimos juntos y salimos cuando el negocio está en propulsión.',
       ctaPrimary: 'Solicitar diagnóstico',
       ctaSecondary: 'Ver caso',
     },
