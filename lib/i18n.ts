@@ -744,8 +744,8 @@ export const dictEs = {
   contato: {
     hero: {
       eyebrow: 'Contacto',
-      h1: 'Vale una conversación.',
-      body: 'La primera conversación es gratuita y sin compromiso. Si reconoció su negocio, eso es suficiente para empezar.',
+      h1: 'Vale la pena conversar sobre esto.',
+      body: 'La primera conversación es gratuita y sin compromiso. Si reconocen su empresa en este escenario, eso ya es suficiente para empezar.',
     },
     form: {
       h2: 'Solicitar diagnóstico',
@@ -757,7 +757,7 @@ export const dictEs = {
       subject: 'Nuevo contacto — piralabs.com.br/es',
     },
     info: {
-      emailLabel: 'Email directo',
+      emailLabel: 'Correo directo',
       locationLabel: 'Ubicación',
       location: 'São Paulo, Brasil',
       linkedinLabel: 'LinkedIn',

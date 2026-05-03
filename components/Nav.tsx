@@ -84,7 +84,7 @@ export default function Nav({ locale }: NavProps) {
               <Link
                 key={l}
                 href={getPathInLocale(pathname, l)}
-                className={`px-2 py-1 font-body text-xs tracking-widest uppercase transition-colors duration-200 ${
+                className={`px-2 py-1 font-body text-xs tracking-wide uppercase transition-colors duration-200 ${
                   locale === l
                     ? 'border border-amber text-amber'
                     : 'border border-navy/30 text-navy/60 hover:border-amber hover:text-amber'
@@ -104,7 +104,7 @@ export default function Nav({ locale }: NavProps) {
               <Link
                 key={l}
                 href={getPathInLocale(pathname, l)}
-                className={`px-2 py-1 font-body text-xs tracking-widest uppercase ${
+                className={`px-2 py-1 font-body text-xs tracking-wide uppercase ${
                   locale === l ? 'border border-amber text-amber' : 'border border-navy/30 text-navy/60'
                 }`}
               >
