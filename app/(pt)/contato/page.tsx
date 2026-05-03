@@ -51,7 +51,7 @@ export default function Contato() {
                 <input
                   type="hidden"
                   name="_next"
-                  value="https://piralabs.com.br/obrigado"
+                  value="https://www.piralabs.com.br/obrigado"
                 />
 
                 <div>

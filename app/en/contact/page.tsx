@@ -51,7 +51,7 @@ export default function ContactEn() {
                 <input
                   type="hidden"
                   name="_next"
-                  value="https://piralabs.com.br/en/thank-you"
+                  value="https://www.piralabs.com.br/en/thank-you"
                 />
 
                 <div>

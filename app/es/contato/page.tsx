@@ -50,7 +50,7 @@ export default function EsContato() {
                 <input
                   type="hidden"
                   name="_next"
-                  value="https://piralabs.com.br/es/gracias"
+                  value="https://www.piralabs.com.br/es/gracias"
                 />
 
                 <div>
