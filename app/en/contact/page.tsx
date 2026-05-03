@@ -7,7 +7,11 @@ export const metadata: Metadata = {
     'Get in touch with PIRA LABS to request a diagnosis. The first conversation is free and without commitment.',
   alternates: {
     canonical: 'https://piralabs.com.br/en/contact',
-    languages: { 'pt-BR': 'https://piralabs.com.br/contato' },
+    languages: {
+      'pt-BR': 'https://piralabs.com.br/contato',
+      'en': 'https://piralabs.com.br/en/contact',
+      'es': 'https://piralabs.com.br/es/contato',
+    },
   },
 }
 
@@ -47,7 +51,7 @@ export default function ContactEn() {
                 <input
                   type="hidden"
                   name="_next"
-                  value="https://piralabs.com.br/en/contact?sent=true"
+                  value="https://piralabs.com.br/en/thank-you"
                 />
 
                 <div>

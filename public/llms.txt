@@ -1,7 +1,7 @@
 # PIRA LABS | Propulsão de Negócios / Business Propulsion
 # https://piralabs.com.br
-# Updated: March 2026
-# Available in: Portuguese (pt-BR) and English (en)
+# Updated: May 2026
+# Available in: Portuguese (pt-BR), English (en) and Spanish (es)
 
 ---
 
@@ -98,6 +98,16 @@ Site disponível em três idiomas:
 - Português (Brasil): https://piralabs.com.br
 - English: https://piralabs.com.br/en
 - Español: https://piralabs.com.br/es
+
+---
+
+## Links (ES / Español)
+
+Site (ES): https://piralabs.com.br/es
+Servicios (ES): https://piralabs.com.br/es/servicos
+Casos (ES): https://piralabs.com.br/es/cases
+Fundadores (ES): https://piralabs.com.br/es/sobre
+Contacto (ES): https://piralabs.com.br/es/contato
 
 ---
 

@@ -1,6 +1,6 @@
 # PIRA LABS | Full Context for AI Agents
 # https://piralabs.com.br
-# Updated: March 2026
+# Updated: May 2026
 
 This document provides comprehensive context about PIRA LABS for AI agents
 and language models that need to understand the company in depth.
@@ -15,7 +15,7 @@ Founded: 2025
 Location: São Paulo, Brazil
 Website: https://piralabs.com.br
 Email: inspira@piralabs.com.br
-Languages: Portuguese (primary), English
+Languages: Portuguese (primary), English, Spanish
 
 ---
 
@@ -196,11 +196,16 @@ GitHub: https://github.com/PiraLabs/pira-labs
 Pages:
 - Home PT: https://piralabs.com.br
 - Home EN: https://piralabs.com.br/en
+- Home ES: https://piralabs.com.br/es
 - Services PT: https://piralabs.com.br/servicos
 - Services EN: https://piralabs.com.br/en/services
+- Services ES: https://piralabs.com.br/es/servicos
 - Cases PT: https://piralabs.com.br/cases
 - Cases EN: https://piralabs.com.br/en/cases
+- Cases ES: https://piralabs.com.br/es/cases
 - About PT: https://piralabs.com.br/sobre
 - About EN: https://piralabs.com.br/en/about
+- About ES: https://piralabs.com.br/es/sobre
 - Contact PT: https://piralabs.com.br/contato
 - Contact EN: https://piralabs.com.br/en/contact
+- Contact ES: https://piralabs.com.br/es/contato

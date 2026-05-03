@@ -8,7 +8,11 @@ export const metadata: Metadata = {
     'INSPIRA: real problem diagnosis. TRANSPIRA: execution with verified results. PIRA LABS services for service businesses with untapped potential.',
   alternates: {
     canonical: 'https://piralabs.com.br/en/services',
-    languages: { 'pt-BR': 'https://piralabs.com.br/servicos' },
+    languages: {
+      'pt-BR': 'https://piralabs.com.br/servicos',
+      'en': 'https://piralabs.com.br/en/services',
+      'es': 'https://piralabs.com.br/es/servicos',
+    },
   },
 }
 

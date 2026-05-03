@@ -8,7 +8,11 @@ export const metadata: Metadata = {
     'Boutique brasileira de Creative Business Turnaround. Liberamos o próximo nível de negócios com potencial represado.',
   alternates: {
     canonical: 'https://piralabs.com.br',
-    languages: { 'en': 'https://piralabs.com.br/en' },
+    languages: {
+      'pt-BR': 'https://piralabs.com.br',
+      'en': 'https://piralabs.com.br/en',
+      'es': 'https://piralabs.com.br/es',
+    },
   },
 }
 

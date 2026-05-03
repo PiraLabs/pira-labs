@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     languages: {
       'pt-BR': 'https://piralabs.com.br/contato',
       'en': 'https://piralabs.com.br/en/contact',
+      'es': 'https://piralabs.com.br/es/contato',
     },
   },
 }
@@ -49,7 +50,7 @@ export default function EsContato() {
                 <input
                   type="hidden"
                   name="_next"
-                  value="https://piralabs.com.br/es/contato?enviado=true"
+                  value="https://piralabs.com.br/es/gracias"
                 />
 
                 <div>

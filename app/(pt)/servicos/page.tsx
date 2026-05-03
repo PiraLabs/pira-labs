@@ -7,7 +7,11 @@ export const metadata: Metadata = {
     'FAÍSCA, INSPIRA, TRANSPIRA e RESPIRA. Quatro produtos da PIRA LABS em sequência natural, do primeiro contato ao negócio em propulsão.',
   alternates: {
     canonical: 'https://piralabs.com.br/servicos',
-    languages: { 'en': 'https://piralabs.com.br/en/services' },
+    languages: {
+      'pt-BR': 'https://piralabs.com.br/servicos',
+      'en': 'https://piralabs.com.br/en/services',
+      'es': 'https://piralabs.com.br/es/servicos',
+    },
   },
 }
 

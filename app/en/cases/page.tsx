@@ -8,7 +8,11 @@ export const metadata: Metadata = {
     'Legal case: 1,500+ pages analyzed, equivalent to 400 hours of effort delivered in 36 hours. Verified results from PIRA LABS.',
   alternates: {
     canonical: 'https://piralabs.com.br/en/cases',
-    languages: { 'pt-BR': 'https://piralabs.com.br/cases' },
+    languages: {
+      'pt-BR': 'https://piralabs.com.br/cases',
+      'en': 'https://piralabs.com.br/en/cases',
+      'es': 'https://piralabs.com.br/es/cases',
+    },
   },
 }
 

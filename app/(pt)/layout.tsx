@@ -45,6 +45,7 @@ export const metadata: Metadata = {
     languages: {
       'pt-BR': 'https://piralabs.com.br',
       'en': 'https://piralabs.com.br/en',
+      'es': 'https://piralabs.com.br/es',
     },
   },
 }

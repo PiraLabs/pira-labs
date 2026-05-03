@@ -8,7 +8,11 @@ export const metadata: Metadata = {
     'Case jurídico: 1.500+ páginas analisadas, equivalente a 400 horas de esforço entregue em 36 horas. Resultados verificados da PIRA LABS.',
   alternates: {
     canonical: 'https://piralabs.com.br/cases',
-    languages: { 'en': 'https://piralabs.com.br/en/cases' },
+    languages: {
+      'pt-BR': 'https://piralabs.com.br/cases',
+      'en': 'https://piralabs.com.br/en/cases',
+      'es': 'https://piralabs.com.br/es/cases',
+    },
   },
 }
 

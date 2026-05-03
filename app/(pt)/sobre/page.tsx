@@ -8,7 +8,11 @@ export const metadata: Metadata = {
     'Gabriela Aguiar e Celso Gama, fundadores da PIRA LABS. Boutique brasileira de Creative Business Turnaround.',
   alternates: {
     canonical: 'https://piralabs.com.br/sobre',
-    languages: { 'en': 'https://piralabs.com.br/en/about' },
+    languages: {
+      'pt-BR': 'https://piralabs.com.br/sobre',
+      'en': 'https://piralabs.com.br/en/about',
+      'es': 'https://piralabs.com.br/es/sobre',
+    },
   },
 }
 
