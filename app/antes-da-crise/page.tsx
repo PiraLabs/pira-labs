@@ -4,6 +4,7 @@ import { PageHeader } from "@/components/shared/PageHeader";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { SOCIAL } from "@/lib/constants";
 import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
+import { buscarPostsSubstack } from "@/lib/substack-rss";
 
 const breadcrumb = breadcrumbSchema([
   { name: "Home", url: "https://piralabs.com.br/" },
@@ -32,13 +33,9 @@ const breadcrumbs = [
   { label: "Antes da Crise" },
 ];
 
-// Edições mais recentes — lista manual até integração com API do Substack.
-// Atualizar quando houver novo post. Cada item: título, data, prévia, link externo.
-const edicoes: { titulo: string; data: string; previa: string; href: string }[] = [
-  // Placeholder — substituir pelos posts reais quando disponíveis.
-];
+export default async function AntesdaCrisePage() {
+  const edicoes = await buscarPostsSubstack(5);
 
-export default function AntesdaCrisePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -113,14 +110,18 @@ export default function AntesdaCrisePage() {
             ))}
           </div>
         ) : (
-          <div className="border border-dashed border-off-white/20 rounded-lg p-10 max-w-2xl">
-            <p className="text-off-white/40 font-body text-sm text-center">
-              [PLACEHOLDER] Edições serão listadas aqui. Atualizar o array{" "}
-              <code className="text-off-white/60">edicoes</code> em{" "}
-              <code className="text-off-white/60">
-                app/antes-da-crise/page.tsx
-              </code>{" "}
-              com os posts do Substack.
+          <div className="max-w-2xl">
+            <p className="text-off-white/40 font-body text-sm">
+              Edições disponíveis no{" "}
+              <a
+                href={SOCIAL.SUBSTACK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange hover:text-peach transition-colors"
+              >
+                Substack
+              </a>
+              .
             </p>
           </div>
         )}
