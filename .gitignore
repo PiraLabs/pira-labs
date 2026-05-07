@@ -10,3 +10,4 @@ build-output.txt
 .claude/
 
 tasks/
+.vercel
