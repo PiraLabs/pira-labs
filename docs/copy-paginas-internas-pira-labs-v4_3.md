@@ -43,13 +43,13 @@
 - "Avanços acordados" ou "critérios acordados", nunca "resultados garantidos"
 - "Respondemos em até dois dias úteis." em todas as páginas com CTA
 - MIT: "Universal AI Foundational Modules" para Gabriela, "Applied AI Certificate Program" para Celso
-- Celso: "último ano de Direito na Mackenzie", nunca "advogado" ou "bacharel"
+- Celso: "cursando último ano de Direito no Mackenzie", nunca "advogado" ou "bacharel"
 - Gabriela: sem ITA na credencial
 - Caso jurídico marcado como **pós-IA** com supervisão humana (corrige propagação de erro)
 
 **Regras específicas da vertical jurídica (v4.2):**
 - Aviso obrigatório em todas as páginas jurídicas: "A PIRA LABS não presta consultoria jurídica, não define estratégia de caso e não substitui advogados habilitados pela OAB."
-- Celso descrito como "cursando último ano de Direito na Mackenzie" nas páginas onde sua qualificação jurídica é relevante. Nunca "advogado" ou "bacharel".
+- Celso descrito como "cursando último ano de Direito no Mackenzie" nas páginas onde sua qualificação jurídica é relevante. Nunca "advogado" ou "bacharel".
 - Modelo B do TRANSPIRA Jurídico: descrito como "assistant as a service" ou "capacidade de produção jurídica sob demanda". Nunca "consultoria jurídica". Todo material produzido passa pelo advogado habilitado do escritório contratante. Posicionamento: a atividade jurídica está sendo cada vez mais executada por ferramentas de IA, mas o serviço jurídico segue humano, olho no olho, com o papel insubstituível do advogado. A PIRA LABS entra para ajudar o advogado a entregar o seu melhor serviço, cuidando da atividade para que ele foque no que só ele pode fazer.
 - Prova de R$160 mil/mês e 400h para 36h: restrita à página `/transpira/juridico`. Não usar em FAÍSCA Jurídica nem INSPIRA Jurídico.
 - LGPD: nunca prometer "adequação LGPD completa" ou "compliance jurídico". Usar "governança operacional" e "redução de exposição a risco".
@@ -127,7 +127,7 @@
 
 **Bio:**
 
-> Mais de 20 anos de operação em empresas de serviços, agências e projetos de grande escala. MBA Insper, pós-graduação em Marketing pela ESPM e Publicidade pela FAAP. Último ano de Direito na Mackenzie. Applied AI Certificate Program (MIT).
+> Mais de 20 anos de operação em empresas de serviços, agências e projetos de grande escala. MBA Insper, pós-graduação em Marketing pela ESPM e Publicidade pela FAAP. Último ano de Direito no Mackenzie. Applied AI Certificate Program (MIT).
 >
 > Não é currículo de consultor. É cicatriz de execução real. Sabe onde colocar tecnologia e onde colocar gente porque já errou nos dois. Conduz o TRANSPIRA. Lidera os gates de validação de governança, contratos e estratégia do diagnóstico.
 
@@ -438,7 +438,7 @@
 
 **Texto:**
 
-> Gabriela Aguiar conduz a leitura institucional. Celso Gama, cursando último ano de Direito na Mackenzie com Applied AI Certificate Program pelo MIT, conduz a leitura de governança e exposição operacional.
+> Gabriela Aguiar conduz a leitura institucional. Celso Gama, cursando último ano de Direito no Mackenzie com Applied AI Certificate Program pelo MIT, conduz a leitura de governança e exposição operacional.
 >
 > Os dois juntos, como em todo diagnóstico da PIRA LABS. Sem equipe júnior entre o dado e a interpretação.
 
@@ -707,7 +707,7 @@
 - Rascunhos para revisão e validação do advogado
 - Organização e sistematização de documentação interna
 
-**Regra inviolável:** todo material produzido pela PIRA LABS no Modelo B passa pelo advogado habilitado do próprio escritório antes de qualquer uso. A PIRA LABS não assina peça, não representa cliente e não presta consultoria jurídica. Celso Gama, cursando último ano de Direito na Mackenzie, conduz o trabalho operacional com supervisão jurídica do escritório contratante.
+**Regra inviolável:** todo material produzido pela PIRA LABS no Modelo B passa pelo advogado habilitado do próprio escritório antes de qualquer uso. A PIRA LABS não assina peça, não representa cliente e não presta consultoria jurídica. Celso Gama, cursando último ano de Direito no Mackenzie, conduz o trabalho operacional com supervisão jurídica do escritório contratante.
 
 **Para quem:** escritórios com volume alto de atividade mecânica repetitiva e sem banda para ciclo de implementação longa. Escopo definido por projeto.
 
@@ -744,7 +744,7 @@
 **Resposta:** Sempre via NDA. Acordo de confidencialidade assinado antes de qualquer coleta de informação ou acesso a documentos. Acordo é base canônica de todo trabalho da PIRA LABS, independente do modelo contratado. Quando há uso de ferramentas de IA, trabalhamos exclusivamente com soluções que oferecem garantias contratuais de não treinamento sobre dados do cliente. Cada protocolo de uso é validado pelo decisor jurídico do cliente antes de operar.
 
 **Pergunta 3:** Qual a qualificação de quem executa o trabalho jurídico operacional?
-**Resposta:** Celso Gama, COO da PIRA LABS, está cursando o último ano de Direito na Mackenzie e tem o Applied AI Certificate Program pelo MIT. Atua na condução operacional de legal ops com método e IA aplicada, sempre com supervisão, revisão, validação e assinatura do advogado habilitado do escritório contratante em cada entrega.
+**Resposta:** Celso Gama, COO da PIRA LABS, está cursando o último ano de Direito no Mackenzie e tem o Applied AI Certificate Program pelo MIT. Atua na condução operacional de legal ops com método e IA aplicada, sempre com supervisão, revisão, validação e assinatura do advogado habilitado do escritório contratante em cada entrega.
 
 **Pergunta 4:** Como começa um projeto?
 **Resposta:** Conversa inicial para entender o contexto e definir o modelo mais adequado (A ou B). Proposta com escopo, prazo e investimento. Início após aceite e assinatura do acordo de confidencialidade.
@@ -976,9 +976,9 @@
 
 **Texto:**
 
-> Gabriela Aguiar, CEO e cofundadora da PIRA LABS. Docente em programas de MBA na USP, FIAP e Instituto Cidades Responsivas. Universal AI Foundational Modules (MIT). Uma década dentro dos ecossistemas globais de inovação.
+> Gabriela Aguiar, CEO e cofundadora da PIRA LABS. Docente em programas de MBA na FIA, FIAP e Instituto Cidades Responsivas. Universal AI Foundational Modules (MIT). Uma década dentro dos ecossistemas globais de inovação.
 >
-> O Celso Gama, COO e cofundador, cursando último ano de Direito na Mackenzie com Applied AI Certificate Program pelo MIT, contribui com o conteúdo técnico-jurídico que fundamenta o workshop.
+> O Celso Gama, COO e cofundador, cursando último ano de Direito no Mackenzie com Applied AI Certificate Program pelo MIT, contribui com o conteúdo técnico-jurídico que fundamenta o workshop.
 
 ---
 
@@ -1190,7 +1190,7 @@ Se o repasse automático de origem para o Fillout não for possível na primeira
 - [x] Caso jurídico explicitamente como pós-IA com supervisão humana em `/transpira/juridico`
 - [x] "Respondemos em até dois dias úteis." em todas as páginas com CTA
 - [x] MIT com nome do programa (Universal AI Foundational Modules para Gabriela, Applied AI Certificate Program para Celso)
-- [x] Celso descrito como "último ano de Direito na Mackenzie", nunca "advogado"
+- [x] Celso descrito como "cursando último ano de Direito no Mackenzie", nunca "advogado"
 - [x] Gabriela sem ITA, com Universal AI Foundational Modules
 - [x] "Avanços acordados" usado em `/transpira/juridico` (FAQ pergunta 7) ao invés de "resultado garantido"
 

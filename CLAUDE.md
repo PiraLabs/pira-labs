@@ -3,7 +3,7 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 **Ler este arquivo inteiro antes de qualquer ação.**
-**Versão:** 1.1 · Maio 2026
+**Versão:** 1.2 · Maio 2026
 **Comando de inicialização:** `/init` no início de cada sessão
 
 ---
@@ -203,9 +203,28 @@ Todas as flags e constantes lidas de env estão centralizadas em `lib/constants.
 
 ## ARQUITETURA ATUAL (o que já está construído)
 
-### Estado — Fase 1 completa (07/05/2026)
+### Estado — Fases 1 a 4 completas (07/05/2026)
 
-Fase 1 está entregue e funcional. O ponto de entrada é `app/page.tsx` (home). As fases 2 a 7 ainda não foram implementadas — ver `tasks/STATUS.md` para estado exato.
+Fases 1 a 4 entregues e commitadas. Próxima: Fase 5 (vertical jurídica). Ver `tasks/STATUS.md` para estado exato.
+
+**Páginas implementadas:**
+- `app/page.tsx` — home (7 blocos, `id="provas"` obrigatório)
+- `app/sobre/page.tsx` — 6 blocos, fotos dos fundadores, quotes em Cormorant
+- `app/creative-business-turnaround/page.tsx` — 9 blocos, schema DefinedTerm+WebPage+FAQPage
+- `app/contato/page.tsx` — FilloutEmbed com Suspense boundary
+- `app/inspira/page.tsx` — 8 blocos, ProcessSteps, FAQ, Oxigênio box
+- `app/transpira/page.tsx` — 7 blocos, 4 frentes, card vertical jurídica
+- `app/faisca/page.tsx` — 4 blocos, 4 frentes editoriais, 3 cards de trilhas
+- `app/antes-da-crise/page.tsx` — 4 blocos, array `edicoes` vazio (preencher com posts reais)
+- `app/inspira/oxigenio/page.tsx` — 11 blocos, Service schema, 3 feature flags, âncoras `#aplicar` e `#metodo`
+
+**Decisões técnicas registradas:**
+- Shell Bash inoperante no Windows: usar `! comando` no prompt do Claude Code
+- FilloutEmbed requer Suspense boundary (useSearchParams no App Router)
+- FilloutEmbed lê `?origem=` internamente — `/contato` não precisa passar searchParams
+- Quotes dos fundadores renderizadas fora do `FounderProfile` como `<blockquote>`
+- `title: { absolute: "..." }` em páginas internas (evita duplicação com template do root layout)
+- `LegalNotice` tem variante específica para cada página jurídica
 
 ### Estrutura de componentes
 
@@ -276,5 +295,5 @@ Manter atualizado ao longo de cada sessão:
 
 ---
 
-*CLAUDE.md · PIRA LABS v3.5 · Maio 2026*
+*CLAUDE.md · PIRA LABS v3.5 · v1.2 · Maio 2026*
 *Atualizar quando houver decisão técnica nova que afete o build*

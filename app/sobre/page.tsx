@@ -98,7 +98,7 @@ export default function SobrePage() {
           photoSrc="/celso-gama.jpg"
           photoAlt="Celso Gama, COO e cofundador da PIRA LABS"
           bio={[
-            "Mais de 20 anos de operação em empresas de serviços, agências e projetos de grande escala. MBA Insper, pós-graduação em Marketing pela ESPM e Publicidade pela FAAP. Último ano de Direito na Mackenzie. Applied AI Certificate Program (MIT).",
+            "Mais de 20 anos de operação em empresas de serviços, agências e projetos de grande escala. MBA Insper, pós-graduação em Marketing pela ESPM e Publicidade pela FAAP. Último ano de Direito no Mackenzie. Applied AI Certificate Program (MIT).",
             "Não é currículo de consultor. É cicatriz de execução real. Sabe onde colocar tecnologia e onde colocar gente porque já errou nos dois. Conduz o TRANSPIRA. Lidera os gates de validação de governança, contratos e estratégia do diagnóstico.",
           ]}
           credentials={[
