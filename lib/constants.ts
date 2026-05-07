@@ -1,0 +1,50 @@
+// Variável do Fillout — prefixo NEXT_PUBLIC_ obrigatório para disponibilidade no client side.
+// Configurar também no painel da Vercel: Project Settings > Environment Variables.
+export const FILL_OUT_FORM_URL =
+  process.env.NEXT_PUBLIC_FILLOUT_URL || "[INSERIR_URL_FILLOUT_QUANDO_DISPONIVEL]";
+
+// 13 origens oficiais do sistema de rastreamento de CTAs.
+// Todos os CTAs que apontam para /contato incluem ?origem=[valor].
+// Nota: /antes-da-crise usa origem "faisca" (não tem origem própria).
+export const ORIGINS = {
+  HOME: "home",
+  SOBRE: "sobre",
+  INSPIRA: "inspira",
+  INSPIRA_JURIDICO: "inspira_juridico",
+  OXIGENIO: "oxigenio",
+  TRANSPIRA: "transpira",
+  TRANSPIRA_JURIDICO: "transpira_juridico",
+  FAISCA: "faisca",
+  FAISCA_JURIDICA: "faisca_juridica",
+  CREATIVE_BUSINESS_TURNAROUND: "creative_business_turnaround",
+  HEADER_GLOBAL: "header_global",
+  NOT_FOUND: "404",
+  DIRETO: "direto",
+} as const;
+
+export type Origin = (typeof ORIGINS)[keyof typeof ORIGINS];
+
+export const SOCIAL = {
+  PIRA_LINKEDIN: "https://www.linkedin.com/company/piralabs",
+  GABRIELA_LINKEDIN: "https://www.linkedin.com/in/gabrielaaguiarvs/",
+  CELSO_LINKEDIN: "https://www.linkedin.com/in/celsogama/",
+  EMAIL: "inspira@piralabs.com.br",
+  SUBSTACK: "https://piralabs.substack.com",
+} as const;
+
+// Feature flags — controlados via variáveis de ambiente.
+// D1: achados da auto-aplicação do Celso (bloco OXIGENIO-8). Default false até 10/mai.
+// D4: vídeo de método da Gabriela (bloco OXIGENIO-4). Default false até 10/mai.
+// PULSO: bloco Pulso Pocket no Oxigênio (OXIGENIO-10). Default false.
+export const FLAGS = {
+  D1_ATIVO: process.env.NEXT_PUBLIC_FLAG_D1 === "true",
+  D4_ATIVO: process.env.NEXT_PUBLIC_FLAG_D4 === "true",
+  PULSO_ATIVO: process.env.NEXT_PUBLIC_FLAG_PULSO === "true",
+} as const;
+
+// Vagas disponíveis na primeira rodada do Oxigênio IA Search.
+// Controla o número exibido na página /inspira/oxigenio.
+export const VAGAS_OXIGENIO = parseInt(
+  process.env.NEXT_PUBLIC_VAGAS_OXIGENIO || "5",
+  10
+);

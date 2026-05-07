@@ -4,91 +4,123 @@
 
 @layer base {
   :root {
-    --color-navy: #0D1B2A;
-    --color-navy-mid: #1A2B3C;
-    --color-amber: #BA7517;
-    --color-amber-light: #D4891F;
-    --color-cream: #F5F0E8;
-    --color-cream-dark: #EDE8DF;
-    --color-white: #FAFAF8;
-    --color-gray-text: #6B7280;
-    --color-green-respira: #1F5C35;
-    --color-blue-inspira: #2A6B8A;
-
-    --font-display: 'Cormorant Garamond', Georgia, serif;
-    --font-body: 'DM Sans', system-ui, sans-serif;
-
-    --text-hero: clamp(2.5rem, 6vw, 5rem);
-    --text-h2: clamp(1.8rem, 4vw, 3rem);
-    --text-h3: clamp(1.2rem, 2.5vw, 1.75rem);
-    --text-body: 1rem;
-    --text-small: 0.875rem;
-
-    --section-padding: clamp(4rem, 8vw, 8rem);
-    --container-max: 1200px;
-    --container-padding: clamp(1.5rem, 4vw, 3rem);
+    --color-ink: #0C0F16;
+    --color-deep-teal: #05262D;
+    --color-teal: #004756;
+    --color-orange: #EA6335;
+    --color-peach: #F2A85E;
+    --color-off-white: #E8E0D6;
   }
 
   html {
     scroll-behavior: smooth;
   }
 
+  /* Space Grotesk como substituta de Groteske até licenciamento final (sistema Caminho C).
+     Quando chegar: trocar por next/font/local + arquivos .woff2 da Groteske.
+     Manter o nome --font-grotesk para não refatorar. */
   body {
-    font-family: var(--font-dm-sans), system-ui, sans-serif;
-    background-color: var(--color-cream);
-    color: var(--color-navy);
+    background-color: var(--color-deep-teal);
+    color: var(--color-off-white);
+    font-family: var(--font-grotesk), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  h1,
-  h2,
-  h3 {
-    font-family: var(--font-cormorant), Georgia, serif;
-    font-weight: 400;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+  /* Todos os headers usam Space Grotesk (Groteske). Cormorant NÃO entra aqui. */
+  h1, h2, h3, h4 {
+    font-family: var(--font-grotesk), system-ui, sans-serif;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+
+  /* Skip link para acessibilidade WCAG 2.1 AA */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-orange);
+    color: var(--color-ink);
+    padding: 8px 16px;
+    z-index: 100;
+    font-family: var(--font-grotesk), system-ui, sans-serif;
+    font-weight: 500;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Foco visível — WCAG 2.1 AA */
+  :focus-visible {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 2px;
   }
 }
 
-@layer utilities {
-  .text-amber { color: var(--color-amber); }
-  .text-navy { color: var(--color-navy); }
-  .text-cream { color: var(--color-cream); }
-  .bg-navy { background-color: var(--color-navy); }
-  .bg-navy-mid { background-color: var(--color-navy-mid); }
-  .bg-amber { background-color: var(--color-amber); }
-  .bg-cream { background-color: var(--color-cream); }
-  .bg-cream-dark { background-color: var(--color-cream-dark); }
-  .font-display { font-family: var(--font-cormorant), Georgia, serif; }
-  .font-body { font-family: var(--font-dm-sans), system-ui, sans-serif; }
-  .border-amber { border-color: var(--color-amber); }
-
-  /* Animação de entrada */
-  .fade-up {
-    opacity: 0;
-    transform: translateY(24px);
-    animation: fadeUp 0.7s ease forwards;
+@layer components {
+  /* Cormorant Garamond apenas em frases canônicas, citações dos fundadores e números de destaque.
+     NÃO usar em headers de seção, navegação, body, UI, botões ou formulários. */
+  .emphasis-italic {
+    font-style: italic;
+    font-weight: 500;
+    font-family: var(--font-cormorant), Georgia, serif;
   }
 
-  @keyframes fadeUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .font-display {
+    font-family: var(--font-cormorant), Georgia, serif;
   }
 
-  .fade-up-delay-1 { animation-delay: 0.1s; }
-  .fade-up-delay-2 { animation-delay: 0.2s; }
-  .fade-up-delay-3 { animation-delay: 0.35s; }
-  .fade-up-delay-4 { animation-delay: 0.5s; }
+  /* ATENÇÃO: botão primário usa ink (#0C0F16) como texto.
+     off-white sobre orange falha WCAG AA (contraste ~2.54:1).
+     ink sobre orange passa WCAG AA (contraste ~4.7:1). */
+  .btn-primary {
+    background-color: var(--color-orange);
+    color: var(--color-ink);
+    font-family: var(--font-grotesk), system-ui, sans-serif;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+    min-height: 44px;
+  }
 
-  /* Linha âmbar decorativa */
-  .amber-line::before {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 2px;
-    background-color: var(--color-amber);
-    margin-bottom: 1rem;
+  .btn-primary:hover {
+    opacity: 0.9;
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--color-off-white);
+    color: var(--color-off-white);
+    font-family: var(--font-grotesk), system-ui, sans-serif;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    min-height: 44px;
+  }
+
+  .btn-secondary:hover {
+    background-color: rgba(232, 224, 214, 0.1);
+  }
+
+  /* Container padrão */
+  .container-site {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1.5rem, 4vw, 3rem);
+    padding-right: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  /* Seção padrão */
+  .section-padding {
+    padding-top: clamp(4rem, 8vw, 8rem);
+    padding-bottom: clamp(4rem, 8vw, 8rem);
   }
 }
