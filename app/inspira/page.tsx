@@ -6,6 +6,22 @@ import { FAQ } from "@/components/shared/FAQ";
 import { FinalCTA } from "@/components/shared/FinalCTA";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { ORIGINS, VAGAS_OXIGENIO } from "@/lib/constants";
+import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
+import { serviceSchema } from "@/lib/schemas/service";
+
+const schemas = {
+  breadcrumb: breadcrumbSchema([
+    { name: "Home", url: "https://piralabs.com.br/" },
+    { name: "INSPIRA", url: "https://piralabs.com.br/inspira" },
+  ]),
+  service: serviceSchema({
+    name: "INSPIRA · Diagnóstico de Creative Business Turnaround",
+    description:
+      "Diagnóstico da PIRA LABS para empresas de serviços de alto valor. Cinco leituras coordenadas do negócio com aprovação humana em cada gate, entregando o problema real nomeado, a rota desenhada e o próximo passo definido.",
+    url: "https://piralabs.com.br/inspira",
+    serviceType: "Diagnóstico empresarial",
+  }),
+};
 
 export const metadata: Metadata = {
   title: {
@@ -137,6 +153,9 @@ const faqItems = [
 export default function InspiraPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.service) }} />
+
       {/* INSPIRA-1 · Header */}
       <div className="bg-ink">
         <PageHeader

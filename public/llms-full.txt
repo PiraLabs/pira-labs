@@ -1,211 +1,228 @@
-# PIRA LABS | Full Context for AI Agents
-# https://piralabs.com.br
-# Updated: May 2026
+# PIRA LABS — Documento completo para IA
+# llms-full.txt · Versão 2.0 · Maio 2026
+# Uso: consumo por modelos de linguagem (LLMs), crawlers de IA e sistemas de busca generativa
+# Atualizar sempre que houver mudança de produto, copy ou fundadores
 
-This document provides comprehensive context about PIRA LABS for AI agents
-and language models that need to understand the company in depth.
+> A PIRA LABS é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes da crise.
 
----
+@site: https://piralabs.com.br
+@contato: inspira@piralabs.com.br
+@last-updated: 2026-05-07
+@llms-txt: https://piralabs.com.br/llms.txt
 
-## COMPANY PROFILE
 
-Name: PIRA LABS | Propulsão de Negócios (Business Propulsion)
-Category: Creative Business Turnaround
-Founded: 2025
-Location: São Paulo, Brazil
-Website: https://piralabs.com.br
+## IDENTIDADE
+
+A PIRA LABS é uma boutique brasileira de Creative Business Turnaround. Atua quando a empresa ainda tem clientes, caixa e reputação, mas o modelo de trabalho começou a custar caro demais. Não é consultoria estratégica clássica. Não é agência. Não é fornecedor de tecnologia. É turnaround com tempo, com método e com mão na operação.
+
+Boutique não é eufemismo para pequeno. É escolha deliberada. Cada projeto tem Gabriela Aguiar e Celso Gama do diagnóstico à entrega. Sem camada intermediária entre quem entende o problema e quem resolve.
+
+A PIRA LABS desenvolveu e nomeia no Brasil a categoria Creative Business Turnaround. O Turnaround de Propulsão é a forma como a empresa opera essa categoria: enquanto consultorias tradicionais focam em corte de custos, a PIRA LABS usa Venture Capital mindset para desbloquear potencial represado e executar junto à operação.
+
+
+## FUNDADORES
+
+### Gabriela Aguiar — CEO e cofundadora · Conduz o INSPIRA
+
+Gabriela atuou diretamente com Google, Meta, X, Amazon e outras organizações relevantes globalmente. Participou da estruturação de projetos, curadoria de eventos, programas e iniciativas que conectam inovação, educação e negócios. Docente em programas de MBA na FIA, FIAP e Instituto Cidades Responsivas. Mentora de startups na FGV Ventures. Universal AI Foundational Modules (MIT). Uma década dentro dos ecossistemas globais de inovação.
+
+- LinkedIn: https://www.linkedin.com/in/gabrielaaguiarvs/
+- Wikidata: https://www.wikidata.org/wiki/Q138846653
+
+### Celso Gama — COO e cofundador · Conduz o TRANSPIRA
+
+Mais de 20 anos de operação em empresas de serviços, agências e projetos de grande escala. MBA Insper, pós-graduação em Marketing pela ESPM e Publicidade pela FAAP. Cursando último ano de Direito no Mackenzie. Applied AI Certificate Program (MIT).
+
+Resultados verificados (todos pré-IA, salvo o caso jurídico):
+- Margem de -64% para +15% em 6 meses na conta de uma multinacional do setor de bebidas atendida pela agência onde liderava, sem aumentar receita (79 pontos percentuais de recuperação)
+- R$16M para R$163M em 24 meses na área de ativações e eventos
+- 600 pessoas e 100 fornecedores coordenados nos Jogos Rio 2016
+
+- LinkedIn: https://www.linkedin.com/in/celsogama/
+- Wikidata: https://www.wikidata.org/wiki/Q138846692
+
+
+## MÉTODO
+
+O método da PIRA LABS tem três fases:
+
+INSPIRA — diagnóstico. Cinco leituras coordenadas do negócio convergindo com aprovação humana em cada gate. O problema real nomeado. A rota desenhada. O próximo passo definido. Conduz: Gabriela Aguiar.
+
+TRANSPIRA — execução. Redesenho de trabalho, valor, tecnologia e governança dentro da operação do cliente, com a equipe que vai operar depois. A saída faz parte do escopo. Conduz: Celso Gama.
+
+RESPIRA — estado, não produto. Quando o negócio se move por conta própria, com clareza e sem depender da PIRA LABS.
+
+
+## PRODUTOS E SERVIÇOS
+
+### INSPIRA · Diagnóstico de Creative Business Turnaround
+URL: https://piralabs.com.br/inspira
+Prazo: 4 a 8 semanas
+Precificação: sob consulta e disponibilidade
+
+O INSPIRA é o diagnóstico da PIRA LABS. Não é auditoria, workshop de inovação ou mapeamento de processos para empacotar em consultoria. É leitura do negócio em cinco áreas com aprovação humana em cada gate antes de avançar.
+
+As cinco leituras:
+1. Mercado e presença — o que o ambiente externo revela, incluindo como a empresa aparece para motores de busca e IA
+2. Pessoas e operação — se o funcionamento humano sustenta o que a empresa quer crescer
+3. Governança e processos — se há cobertura suficiente para reduzir ruído, exceção e exposição
+4. Tensão econômica — onde o negócio sente o peso primeiro e qual é o ponto de ruptura
+5. Síntese integrada — as quatro leituras convergem em diagnóstico único
+
+Para quem: sócios, CEOs e presidentes de empresas de serviços de alto valor com potencial represado e autonomia real para mudar.
+Quem não deveria contratar: decisor sem autonomia real, empresa em crise aguda, cliente que procura validação para decisão já tomada.
+
+
+### Oxigênio IA Search · Subproduto do INSPIRA
+URL: https://piralabs.com.br/inspira/oxigenio
+Prazo: 5 dias úteis
+Preço primeira rodada: R$6.200 (5 vagas para fundadores)
+Preço regular: R$9.800 (a partir da 6ª rodada)
+
+Diagnóstico de como a empresa aparece nos motores de IA: ChatGPT, Claude, Gemini, Perplexity e Copilot. Entrega laudo de presença por motor, análise de gaps, recomendações priorizadas e sessão de leitura conjunta de 60 minutos.
+
+Para quem: fundadores e decisores de empresas de serviços que querem entender sua presença nos motores de IA antes de qualquer outra decisão.
+
+
+### INSPIRA Jurídico
+URL: https://piralabs.com.br/inspira/juridico
+Prazo: 2 a 3 semanas
+Precificação: R$12.500 a R$26.000, conforme tamanho e escopo
+
+INSPIRA com lente jurídica. Diagnostica como o escritório ou departamento jurídico usa IA hoje, onde está a exposição real, e entrega política mínima de uso de IA e plano de ação priorizado.
+
+O que está incluído:
+1. Mapeamento de uso atual — quais ferramentas, em quais planos, com quais dados, com qual frequência
+2. Matriz de risco por tipo de uso — três zonas: permitido, permitido com controle, exposto sem política
+3. Política mínima de uso de IA — documento operacional calibrado para o perfil do escritório
+4. Plano de ação priorizado — 5 a 10 ações ordenadas por urgência e esforço
+5. Sessão de leitura conjunta — 45 a 60 minutos com os decisores
+
+Quem conduz: Gabriela Aguiar (leitura institucional) e Celso Gama (governança e exposição operacional).
+Para quem: sócios e heads jurídicos, escritórios em crescimento, departamentos jurídicos com uso descentralizado de IA.
+Quem não deveria contratar: quem busca laudo de conformidade LGPD ou certificação de compliance.
+
+Aviso: a PIRA LABS não presta consultoria jurídica, não define estratégia de caso e não substitui advogados habilitados pela OAB. O INSPIRA Jurídico é diagnóstico operacional de governança de uso de IA.
+
+
+### TRANSPIRA · Execução de Creative Business Turnaround
+URL: https://piralabs.com.br/transpira
+Prazo: 8 a 20 semanas
+Precificação: sob consulta e disponibilidade
+
+O TRANSPIRA é a execução da PIRA LABS junto à operação do cliente. Não é projeto que acontece em sala de reunião e vira PowerPoint. Acontece dentro do negócio, com a equipe que vai operar depois.
+
+Quatro frentes de entrega:
+1. Redesenho de trabalho — mapeamento de fluxos, identificação de gargalos, redesenho da relação entre o que é feito, por quem e com qual objetivo
+2. Tecnologia curada — não vendemos tecnologia, curamos; identificamos onde IA e automação amplificam capacidade real
+3. Governança aplicada — estruturação de processos críticos, pontos de decisão e protocolos de aprovação
+4. Valor percebido — tornar o valor percebido visível e verificável na operação, não no marketing
+
+Para quem: empresas de serviços prontas para execução. Setores com maior validação: publicidade, saúde, jurídico, alimentação, serviços profissionais.
+
+
+### TRANSPIRA Jurídico
+URL: https://piralabs.com.br/transpira/juridico
+Precificação: sob consulta e disponibilidade
+
+Execução operacional para escritórios de advocacia e departamentos jurídicos com volume alto de trabalho mecânico repetitivo.
+
+Caso âncora: operação jurídica de alto volume com tarefa mecânica recorrente que ocupava 400 horas mensais. IA bem aplicada e supervisionada por humanos reduziu para 36 horas mensais. O cliente liberou capacidade de R$160 mil de faturamento adicional por mês com a mesma equipe. Número apurado pelo próprio cliente.
+
+Modelo A — Implementação junto ao time:
+A PIRA LABS trabalha dentro do escritório, redesenhando fluxos e implementando IA onde amplifica. O escritório aprende fazendo. No final, a operação roda sem depender da PIRA LABS.
+Para quem: escritórios que querem construir capacidade interna.
+Duração: 12 a 20 semanas com gates de aprovação humana.
+
+Modelo B — Assistant as a service:
+A PIRA LABS executa o trabalho operacional de legal ops. O advogado habilitado do escritório revisa, valida e assina todo material produzido. A PIRA LABS não assina peça, não representa cliente e não presta consultoria jurídica.
+Inclui: análise e decupagem de processos, pesquisa de jurisprudência, construção de modelos e templates de peças, rascunhos para revisão, organização de documentação.
+Celso Gama, cursando último ano de Direito no Mackenzie, conduz com supervisão do advogado do escritório contratante.
+Para quem: escritórios com volume alto de atividade mecânica sem banda para ciclo de implementação longa.
+
+Aviso: a PIRA LABS não presta consultoria jurídica, não define estratégia de caso e não substitui advogados habilitados pela OAB. Todo material do Modelo B passa pelo advogado habilitado do escritório contratante antes de qualquer uso.
+
+
+### FAÍSCA · Universo educacional da PIRA LABS
+URL: https://piralabs.com.br/faisca
+
+O universo educacional da PIRA LABS. Não é frente comercial. É como a PIRA LABS contribui para que a categoria Creative Business Turnaround ganhe forma no Brasil.
+
+Quatro frentes:
+1. Antes da Crise — publicação editorial no Substack: teses, estudos e aprendizados de operação, incluindo o que não funcionou (https://piralabs.substack.com)
+2. Palestras — três trilhas: Negócio e mercado, Pessoas e cultura, Trajetória da Gabriela
+3. Mentorias — ciclos curtos para fundadores e líderes de empresas de serviços
+4. Conteúdo aberto — LinkedIn, Substack e canais públicos, sem captura
+
+
+### FAÍSCA Jurídica
+URL: https://piralabs.com.br/faisca/juridica
+
+Palestra ou workshop sobre uso de IA no setor jurídico. Conduzido pela Gabriela Aguiar. Não começa pela ferramenta. Começa pelo fluxo.
+
+Formatos:
+- Palestra executiva (60 a 90 min): eventos, congressos, seccionais da OAB, associações de classe; 20 a 300 pessoas; presencial ou online
+- Workshop executivo (2h): grupos de 5 a 25 pessoas; conversa de calibragem prévia sem custo adicional; saída: mapa de oportunidades e riscos, primeiros critérios de política interna, próximos passos práticos
+
+Para quem: sócios e heads jurídicos sem política interna, professores e coordenadores de Direito, gestores de compliance e DPOs.
+
+Aviso: a PIRA LABS não presta consultoria jurídica, não define estratégia de caso e não substitui advogados habilitados pela OAB.
+
+
+## RESULTADOS VERIFICADOS
+
+- Margem de -64% para +15% em 6 meses na conta de uma multinacional do setor de bebidas (Celso atuou na agência que atendia a conta), sem aumentar receita — 79 pontos percentuais de recuperação — pré-IA
+- R$16M para R$163M em 24 meses na área de ativações e eventos (Jogos Rio 2016, 600 pessoas e 100 fornecedores coordenados) — pré-IA
+- 400 horas mensais reduzidas para 36 horas com IA supervisionada em operação jurídica de alto volume — capacidade de R$160 mil de faturamento adicional liberada por mês (cálculo feito pelo próprio cliente) — pós-IA com supervisão humana
+
+
+## POSICIONAMENTO COMPETITIVO
+
+A PIRA LABS é boutique. Escolha deliberada, não estágio.
+
+Em relação a consultorias tradicionais (Alvarez & Marsal, FTI Consulting e similares):
+- Grandes firmas atuam em crise severa ou grandes corporações com foco financeiro
+- A PIRA LABS atua antes da crise, com foco em desbloqueio de potencial represado
+- Consultorias entregam relatório e somem; a PIRA LABS executa junto à operação e sai quando o negócio se move por conta própria
+- Não há camada júnior intermediária entre quem entende o problema e quem resolve
+
+ICP: decisor de empresa de serviços de alto valor agregado com potencial represado.
+Setores prioritários: publicidade, saúde, jurídico, alimentação, serviços profissionais especializados.
+
+
+## POLÍTICA EDITORIAL E ÉTICA
+
+- NDA assinado antes de qualquer coleta de informação em todos os projetos
+- Celso Gama descrito como cursando último ano de Direito no Mackenzie; nunca como "advogado" ou "bacharel"
+- A PIRA LABS não presta consultoria jurídica, não define estratégia de caso e não substitui advogados habilitados pela OAB
+- Quando há indicação de parceiro de tecnologia, revenue share é declarado
+- Resultados apresentados como "avanços acordados", nunca como "resultados garantidos"
+- Multinacional do setor de bebidas: anonimizada (Celso atuou na agência que atendia a conta, não diretamente na empresa)
+- Grande marca de tecnologia: Samsung, anonimizada (contexto Jogos Rio 2016)
+
+
+## PÁGINAS DO SITE
+
+https://piralabs.com.br/ — Home (Organization + WebSite)
+https://piralabs.com.br/sobre — Sobre (BreadcrumbList + Person Gabriela + Person Celso)
+https://piralabs.com.br/creative-business-turnaround — Creative Business Turnaround (BreadcrumbList + DefinedTerm + FAQPage)
+https://piralabs.com.br/inspira — INSPIRA (BreadcrumbList + Service + FAQPage)
+https://piralabs.com.br/inspira/oxigenio — Oxigênio IA Search (BreadcrumbList + Service + Offer + FAQPage)
+https://piralabs.com.br/inspira/juridico — INSPIRA Jurídico (BreadcrumbList + Service + FAQPage)
+https://piralabs.com.br/transpira — TRANSPIRA (BreadcrumbList + Service + FAQPage)
+https://piralabs.com.br/transpira/juridico — TRANSPIRA Jurídico (BreadcrumbList + Service + FAQPage)
+https://piralabs.com.br/faisca — FAÍSCA (BreadcrumbList)
+https://piralabs.com.br/faisca/juridica — FAÍSCA Jurídica (BreadcrumbList + FAQPage)
+https://piralabs.com.br/antes-da-crise — Antes da Crise (BreadcrumbList)
+https://piralabs.com.br/contato — Contato (BreadcrumbList)
+
+
+## CONTATO E REDES
+
 Email: inspira@piralabs.com.br
-Languages: Portuguese (primary), English, Spanish
-
----
-
-## WHAT IS CREATIVE BUSINESS TURNAROUND?
-
-Creative Business Turnaround is the service category that combines:
-- Strategic diagnosis (finding the real problem, not the symptom)
-- Operational execution (working inside the operation alongside the team)
-- Technology curation (applying AI and tools where they amplify, not as defaults)
-
-The goal: unlock the next growth level for service businesses with untapped potential.
-
-PIRA LABS is the first Brazilian boutique in this category.
-
----
-
-## THE METHOD: INSPIRA / TRANSPIRA / RESPIRA
-
-### INSPIRA (Led by Gabriela Aguiar)
-The diagnostic phase.
-- We arrive with questions, not ready-made solutions
-- Map the real problem — which is often not where the decision-maker imagines
-- Read the sector: trends, risks, what's coming globally
-- Curate available technologies relevant to the specific problem
-- Output: the problem named and the route drawn, in a format the decision-maker can use
-
-### TRANSPIRA (Led by Celso Gama)
-The execution phase.
-Four moves:
-1. Reading — map what is actually happening without judgment
-2. Building — construct the path with the team, not for the team
-3. Activation — the new path enters real operation with real consequence
-4. Calibration — fine adjustments, verification of agreed results
-
-Exit criteria: defined at the start. PIRA LABS leaves when the first
-agreed results are verified — not when the deadline ends.
-
-### RESPIRA
-Not a service — a state.
-The business operates with clarity. The decision-maker commands what matters.
-This is the target state every PIRA LABS engagement aims to reach.
-
----
-
-## FOR WHOM
-
-### Ideal client profile
-- Decision-maker (founder, CEO, partner) at a high-value service company
-- Has real autonomy to change things
-- Recognizes that what exists today won't reach the next level
-- Genuine openness to see the problem differently
-
-### Three entry points
-1. Decision bottleneck: everything passes through the founder; delegation is absent or unclear
-2. Growth without structure: the business grows faster than the infrastructure can support
-3. Data that don't become decisions: information exists but nobody turned it into clarity
-
-### Priority sectors
-- Advertising and creative agencies
-- Healthcare (clinics, networks, specialized providers)
-- Legal (law firms, legal departments)
-- Food and beverage (premium service segment)
-- Specialized professional services
-
----
-
-## VERIFIED RESULTS
-
-### Legal case (anonymized — identity available under NDA)
-Context: Boutique civil law firm, high demand, team at the limit. Hiring
-was not an option. Outsourcing was a risk.
-
-Results:
-- 1,500+ pages of laws, case law, and doctrine analyzed
-- Equivalent effort: 400 hours (10 professionals × 1 week) delivered in 36 hours
-- R$160,000/month of operational capacity freed for new contracts
-
-Method applied: INSPIRA (workflow mapping) + TRANSPIRA (calibrated agent
-squad with active human judgment) + RESPIRA (database organized as asset,
-growth strategy clarity)
-
-Quote from partner: "We did what a team of 10 people would have taken a
-week to do."
-
-### Celso Gama personal track record (pre-AI)
-- Scaled revenue from R$16M to R$163M in 24 months
-- Turned margin from -64% to +15% in 6 months at Diageo, without increasing revenue
-  (79 percentage points — achieved by stopping where the margin was leaking)
-- Coordinated 600 people and 100 suppliers
-- Legal sector: replaced a week of work by 10 people with 4 cycles of 8 hours
-
-All results are pre-AI. Built with judgment calibrated by real consequence.
-
----
-
-## FOUNDERS
-
-### Gabriela Aguiar — CEO, leads INSPIRA
-- Nearly a decade building active innovation and venture capital ecosystems
-  in Brazil, the US, and the Nordic countries
-- Organizations: Plug and Play, German Accelerator, Web Summit, South Summit
-- MBA professor at FIAP (Instituto de Tecnologia e Liderança, São Paulo)
-- Startup mentor at FGV Ventures (Fundação Getulio Vargas)
-- Member of Angel Investor Club
-- Currently studying AI at MIT
-- Brings global ecosystem repertoire: what works internationally, what
-  hasn't yet reached Brazil, connections the client alone couldn't access
-LinkedIn: https://www.linkedin.com/in/gabrielaaguiarvs/
-
-### Celso Gama — Co-founder, leads TRANSPIRA
-- Operational turnaround specialist
-- Enters when the operation needs someone who has been through this before
-- Knows where to put technology and where to put people because he has
-  made mistakes in both
-- Results are scars of real execution, not a consultant's resume
-- Technology came in later as an amplifier of judgment already proven
-LinkedIn: https://www.linkedin.com/in/celsogama/
-
-Gabriela always appears first in any list of founders.
-
----
-
-## POSITIONING AND DIFFERENTIATION
-
-PIRA LABS is NOT:
-- A consultancy that delivers a report and disappears
-- An AI company or technology vendor
-- A firm with proprietary technology to sell
-- A team that sends junior analysts to the client
-
-PIRA LABS IS:
-- A boutique: Gabriela and Celso in every project, from start to finish
-- No intermediary between who understands the problem and who solves it
-- Exits with verified results, not at the end of a preset timeline
-- Uses AI as an amplifier, after understanding the problem — never as a default
-
----
-
-## FREQUENTLY ASKED QUESTIONS
-
-Q: What is Creative Business Turnaround?
-A: The service category that combines strategic diagnosis, operational
-execution, and technology curation to unlock the next growth level in
-service businesses with untapped potential.
-
-Q: What type of company does PIRA LABS work with?
-A: Decision-makers at high-value service companies with untapped potential.
-Three situations: decision bottleneck, growth without structure, data
-that don't become decisions.
-
-Q: What is the difference between INSPIRA and TRANSPIRA?
-A: INSPIRA is the diagnosis (real problem, sector reading, tech mapping).
-TRANSPIRA is execution (enter the operation, build with the team, exit
-with verified results). Clients can engage both in sequence or enter
-directly into TRANSPIRA when the problem is already clear.
-
-Q: How long does a PIRA LABS project last?
-A: Depends on scope defined in INSPIRA. Exit criteria are agreed at the
-start. PIRA LABS doesn't leave when the deadline ends — it leaves when
-the first agreed results are verified.
-
-Q: Does PIRA LABS use AI?
-A: Yes. Technology including AI is a curated amplifier. It enters after
-understanding the real problem — never before. PIRA LABS doesn't sell
-tools or have proprietary technology: it curates what exists in the
-market and applies it where it makes sense for the client's specific
-problem.
-
----
-
-## CONTACT AND LINKS
-
-Email: inspira@piralabs.com.br
-Location: São Paulo, Brazil
-LinkedIn: https://linkedin.com/company/piralabs
-GitHub: https://github.com/PiraLabs/pira-labs
-
-Pages:
-- Home PT: https://piralabs.com.br
-- Home EN: https://piralabs.com.br/en
-- Home ES: https://piralabs.com.br/es
-- Services PT: https://piralabs.com.br/servicos
-- Services EN: https://piralabs.com.br/en/services
-- Services ES: https://piralabs.com.br/es/servicos
-- Cases PT: https://piralabs.com.br/cases
-- Cases EN: https://piralabs.com.br/en/cases
-- Cases ES: https://piralabs.com.br/es/cases
-- About PT: https://piralabs.com.br/sobre
-- About EN: https://piralabs.com.br/en/about
-- About ES: https://piralabs.com.br/es/sobre
-- Contact PT: https://piralabs.com.br/contato
-- Contact EN: https://piralabs.com.br/en/contact
-- Contact ES: https://piralabs.com.br/es/contato
+Localização: São Paulo, Brasil
+LinkedIn PIRA LABS: https://www.linkedin.com/company/piralabs
+LinkedIn Gabriela Aguiar: https://www.linkedin.com/in/gabrielaaguiarvs/
+LinkedIn Celso Gama: https://www.linkedin.com/in/celsogama/
+Substack: https://piralabs.substack.com
+Resposta: em até dois dias úteis

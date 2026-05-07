@@ -6,6 +6,23 @@ import { FAQ } from "@/components/shared/FAQ";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { LegalNotice } from "@/components/shared/LegalNotice";
 import { ORIGINS } from "@/lib/constants";
+import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
+import { serviceSchema } from "@/lib/schemas/service";
+
+const schemas = {
+  breadcrumb: breadcrumbSchema([
+    { name: "Home", url: "https://piralabs.com.br/" },
+    { name: "INSPIRA", url: "https://piralabs.com.br/inspira" },
+    { name: "Jurídico", url: "https://piralabs.com.br/inspira/juridico" },
+  ]),
+  service: serviceSchema({
+    name: "INSPIRA Jurídico",
+    description:
+      "Diagnóstico operacional de como o escritório ou departamento jurídico usa IA, onde está a exposição real e o que fazer primeiro. Entrega mapeamento de uso atual, matriz de risco, política mínima de uso de IA e plano de ação priorizado.",
+    url: "https://piralabs.com.br/inspira/juridico",
+    serviceType: "Diagnóstico de governança de IA para o setor jurídico",
+  }),
+};
 
 export const metadata: Metadata = {
   title: {
@@ -97,6 +114,9 @@ const faqItems = [
 export default function InspiraJuridicoPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.service) }} />
+
       {/* INSPIRA-JUR-1 · Header */}
       <div className="bg-ink">
         <PageHeader

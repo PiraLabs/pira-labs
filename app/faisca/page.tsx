@@ -3,6 +3,12 @@ import { Section } from "@/components/shared/Section";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { ORIGINS, SOCIAL } from "@/lib/constants";
+import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://piralabs.com.br/" },
+  { name: "FAÍSCA", url: "https://piralabs.com.br/faisca" },
+]);
 
 export const metadata: Metadata = {
   title: {
@@ -42,6 +48,8 @@ const trilhaGabriela = ["Desafios e Protagonismo Feminino", "Maternidade como Li
 export default function FaiscaPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+
       {/* FAISCA-1 · Header */}
       <div className="bg-ink">
         <PageHeader

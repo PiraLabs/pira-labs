@@ -6,6 +6,22 @@ import { FAQ } from "@/components/shared/FAQ";
 import { FinalCTA } from "@/components/shared/FinalCTA";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { ORIGINS } from "@/lib/constants";
+import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
+import { serviceSchema } from "@/lib/schemas/service";
+
+const schemas = {
+  breadcrumb: breadcrumbSchema([
+    { name: "Home", url: "https://piralabs.com.br/" },
+    { name: "TRANSPIRA", url: "https://piralabs.com.br/transpira" },
+  ]),
+  service: serviceSchema({
+    name: "TRANSPIRA · Execução de Creative Business Turnaround",
+    description:
+      "Execução de Creative Business Turnaround da PIRA LABS junto à operação do cliente. Redesenho de trabalho, valor, tecnologia e governança em empresas de serviços de alto valor.",
+    url: "https://piralabs.com.br/transpira",
+    serviceType: "Execução operacional",
+  }),
+};
 
 export const metadata: Metadata = {
   title: {
@@ -113,6 +129,9 @@ const faqItems = [
 export default function TranspiraPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.service) }} />
+
       {/* TRANSPIRA-1 · Header */}
       <div className="bg-ink">
         <PageHeader

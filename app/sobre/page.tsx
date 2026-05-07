@@ -4,6 +4,79 @@ import { PageHeader } from "@/components/shared/PageHeader";
 import { FounderProfile } from "@/components/shared/FounderProfile";
 import { FinalCTA } from "@/components/shared/FinalCTA";
 import { ORIGINS, SOCIAL } from "@/lib/constants";
+import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
+
+const schemas = {
+  breadcrumb: breadcrumbSchema([
+    { name: "Home", url: "https://piralabs.com.br/" },
+    { name: "Sobre", url: "https://piralabs.com.br/sobre" },
+  ]),
+  gabriela: {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://piralabs.com.br/sobre#gabriela-aguiar",
+    name: "Gabriela Aguiar",
+    jobTitle: "CEO e Cofundadora",
+    worksFor: { "@id": "https://piralabs.com.br/#organization" },
+    sameAs: [
+      "https://www.linkedin.com/in/gabrielaaguiarvs/",
+      "https://www.wikidata.org/wiki/Q138846653",
+    ],
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Universal AI Foundational Modules",
+        credentialCategory: "certificate",
+        recognizedBy: { "@type": "Organization", name: "MIT" },
+      },
+    ],
+    knowsAbout: [
+      "Creative Business Turnaround",
+      "diagnóstico empresarial",
+      "ecossistemas de inovação",
+      "Venture Capital mindset",
+      "IA aplicada à operação",
+      "potencial represado",
+      "Turnaround de Propulsão",
+    ],
+  },
+  celso: {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://piralabs.com.br/sobre#celso-gama",
+    name: "Celso Gama",
+    jobTitle: "COO e Cofundador",
+    worksFor: { "@id": "https://piralabs.com.br/#organization" },
+    sameAs: [
+      "https://www.linkedin.com/in/celsogama/",
+      "https://www.wikidata.org/wiki/Q138846692",
+    ],
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Applied AI Certificate Program",
+        credentialCategory: "certificate",
+        recognizedBy: { "@type": "Organization", name: "MIT" },
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "MBA",
+        name: "MBA",
+        recognizedBy: { "@type": "EducationalOrganization", name: "Insper" },
+      },
+    ],
+    knowsAbout: [
+      "execução operacional",
+      "execução mão na massa",
+      "redesenho de processos",
+      "legal ops com IA",
+      "governança de uso de IA",
+      "Creative Business Turnaround",
+      "potencial represado",
+      "Turnaround de Propulsão",
+    ],
+  },
+};
 
 export const metadata: Metadata = {
   title: {
@@ -30,6 +103,10 @@ const breadcrumbs = [
 export default function SobrePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.gabriela) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.celso) }} />
+
       {/* SOBRE-1 · Header da página */}
       <div className="bg-ink">
         <PageHeader

@@ -3,6 +3,12 @@ import { Section } from "@/components/shared/Section";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { SOCIAL } from "@/lib/constants";
+import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://piralabs.com.br/" },
+  { name: "Antes da Crise", url: "https://piralabs.com.br/antes-da-crise" },
+]);
 
 export const metadata: Metadata = {
   title: {
@@ -35,6 +41,8 @@ const edicoes: { titulo: string; data: string; previa: string; href: string }[] 
 export default function AntesdaCrisePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+
       {/* ADC-1 · Header */}
       <div className="bg-ink">
         <PageHeader

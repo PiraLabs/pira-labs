@@ -5,6 +5,13 @@ import { FAQ } from "@/components/shared/FAQ";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { LegalNotice } from "@/components/shared/LegalNotice";
 import { ORIGINS } from "@/lib/constants";
+import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://piralabs.com.br/" },
+  { name: "FAÍSCA", url: "https://piralabs.com.br/faisca" },
+  { name: "Jurídica", url: "https://piralabs.com.br/faisca/juridica" },
+]);
 
 export const metadata: Metadata = {
   title: {
@@ -63,6 +70,8 @@ const faqItems = [
 export default function FaiscaJuridicaPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+
       {/* FAISCA-JUR-1 · Header */}
       <div className="bg-ink">
         <PageHeader

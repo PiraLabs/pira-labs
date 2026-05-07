@@ -4,6 +4,12 @@ import { Section } from "@/components/shared/Section";
 import { PageHeader } from "@/components/shared/PageHeader";
 import FilloutEmbed from "@/components/shared/FilloutEmbed";
 import { SOCIAL } from "@/lib/constants";
+import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://piralabs.com.br/" },
+  { name: "Contato", url: "https://piralabs.com.br/contato" },
+]);
 
 export const metadata: Metadata = {
   title: {
@@ -29,6 +35,8 @@ const breadcrumbs = [
 export default function ContatoPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+
       {/* CONTATO-1 · Header da página */}
       <div className="bg-ink">
         <PageHeader

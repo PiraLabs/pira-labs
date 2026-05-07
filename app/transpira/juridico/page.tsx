@@ -5,6 +5,23 @@ import { FAQ } from "@/components/shared/FAQ";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { LegalNotice } from "@/components/shared/LegalNotice";
 import { ORIGINS } from "@/lib/constants";
+import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
+import { serviceSchema } from "@/lib/schemas/service";
+
+const schemas = {
+  breadcrumb: breadcrumbSchema([
+    { name: "Home", url: "https://piralabs.com.br/" },
+    { name: "TRANSPIRA", url: "https://piralabs.com.br/transpira" },
+    { name: "Jurídico", url: "https://piralabs.com.br/transpira/juridico" },
+  ]),
+  service: serviceSchema({
+    name: "TRANSPIRA Jurídico",
+    description:
+      "Execução operacional para escritórios de advocacia e departamentos jurídicos. Redesenho de fluxos de trabalho jurídico e implementação de legal ops com IA sob supervisão humana. Dois modelos: implementação junto ao time (Modelo A) e capacidade de produção jurídica sob demanda (Modelo B).",
+    url: "https://piralabs.com.br/transpira/juridico",
+    serviceType: "Execução de legal ops com IA",
+  }),
+};
 
 export const metadata: Metadata = {
   title: {
@@ -69,6 +86,9 @@ const faqItems = [
 export default function TranspiraJuridicoPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.service) }} />
+
       {/* JURIDICO-1 · Header */}
       <div className="bg-ink">
         <PageHeader
