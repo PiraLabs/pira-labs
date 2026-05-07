@@ -11,4 +11,9 @@ build-output.txt
 
 tasks/
 .vercel
-benchmark-screenshots/ 
+benchmark-screenshots/
+
+# Artefatos indevidos gerados por npm run / deploy.bat
+next
+npm
+piralabs-site@0.1.0
