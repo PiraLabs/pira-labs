@@ -3,7 +3,7 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 **Ler este arquivo inteiro antes de qualquer ação.**
-**Versão:** 1.2 · Maio 2026
+**Versão:** 1.3 · Maio 2026
 **Comando de inicialização:** `/init` no início de cada sessão
 
 ---
@@ -17,7 +17,7 @@ npm run lint      # ESLint — resolver antes de commitar
 npm run capture   # captura screenshots de benchmark via Playwright
 ```
 
-> O shell Bash pode estar inoperante no ambiente Windows. Se `npm run dev` não rodar via tool, pedir ao Celso via `! npm run dev`.
+> **O shell Bash é PERMANENTEMENTE inoperante neste ambiente Windows.** Nunca usar a Bash tool para nenhum comando. Todos os comandos de terminal (npm, git) rodam em CMD separado pelo Celso, ou via `! comando` no prompt do Claude Code.
 
 ---
 
@@ -38,6 +38,7 @@ O pacote completo já foi validado (6 camadas de validação GPT, C=0,96). Não 
 5. **Fonte de verdade do formulário:** `docs/prompt-fillout-notion-v2.md`. Não criar campos manualmente na página `/contato`.
 6. **Sem inventar copy.** Se um bloco não tiver conteúdo definido nos arquivos `docs/`, criar placeholder explícito e registrar em `tasks/lessons.md`.
 7. **Plano antes de executar.** Para cada fase ou tarefa complexa: propor o plano, aguardar confirmação, então executar.
+8. **Escopo explícito de copy.** Só alterar o texto que foi pedido. Nunca propagar correção de copy para outras páginas sem confirmação do Celso.
 
 ---
 
@@ -203,9 +204,9 @@ Todas as flags e constantes lidas de env estão centralizadas em `lib/constants.
 
 ## ARQUITETURA ATUAL (o que já está construído)
 
-### Estado — Fases 1 a 4 completas (07/05/2026)
+### Estado — Fases 1 a 5 completas (07/05/2026)
 
-Fases 1 a 4 entregues e commitadas. Próxima: Fase 5 (vertical jurídica). Ver `tasks/STATUS.md` para estado exato.
+Fases 1 a 5 entregues e commitadas. Próxima: Fase 6 (schemas JSON-LD nas páginas jurídicas + llms-full.txt). Ver `tasks/STATUS.md` para estado exato.
 
 **Páginas implementadas:**
 - `app/page.tsx` — home (7 blocos, `id="provas"` obrigatório)
@@ -215,16 +216,23 @@ Fases 1 a 4 entregues e commitadas. Próxima: Fase 5 (vertical jurídica). Ver `
 - `app/inspira/page.tsx` — 8 blocos, ProcessSteps, FAQ, Oxigênio box
 - `app/transpira/page.tsx` — 7 blocos, 4 frentes, card vertical jurídica
 - `app/faisca/page.tsx` — 4 blocos, 4 frentes editoriais, 3 cards de trilhas
-- `app/antes-da-crise/page.tsx` — 4 blocos, array `edicoes` vazio (preencher com posts reais)
+- `app/antes-da-crise/page.tsx` — 4 blocos, busca posts via `lib/substack-rss.ts` (Server Component, ISR 3600s)
 - `app/inspira/oxigenio/page.tsx` — 11 blocos, Service schema, 3 feature flags, âncoras `#aplicar` e `#metodo`
+- `app/inspira/juridico/page.tsx` — 8 blocos, ProcessSteps (5 entregas), FAQ, LegalNotice variant="inspira_juridico"
+- `app/transpira/juridico/page.tsx` — 7 blocos, caso âncora "400h para 36h" (EXCLUSIVO desta página), 2 cards Modelo A/B, LegalNotice variant="transpira_juridico"
+- `app/faisca/juridica/page.tsx` — 8 blocos, 2 cards de formato (palestra/workshop), LegalNotice variant="faisca_juridica"
 
 **Decisões técnicas registradas:**
-- Shell Bash inoperante no Windows: usar `! comando` no prompt do Claude Code
+- Shell Bash PERMANENTEMENTE inoperante: nunca usar Bash tool, tudo via `! comando`
 - FilloutEmbed requer Suspense boundary (useSearchParams no App Router)
 - FilloutEmbed lê `?origem=` internamente — `/contato` não precisa passar searchParams
 - Quotes dos fundadores renderizadas fora do `FounderProfile` como `<blockquote>`
 - `title: { absolute: "..." }` em páginas internas (evita duplicação com template do root layout)
 - `LegalNotice` tem variante específica para cada página jurídica
+- `FinalCTA` não suporta CTA secundário — páginas com dois CTAs constroem a seção final inline com `bg-ink` + `container-site`, sem usar o componente
+- Blocos condicionais por flag: usar `{FLAGS.X_ATIVO ? <Componente /> : null}` — não usar `&&` com booleano (pode renderizar `false`)
+- Métricas de destaque (ex: 400h/36h): `font-display text-5xl md:text-6xl text-peach` ou `text-orange`
+- Caso âncora "400h para 36h": RESTRITO à página `/transpira/juridico`. Nunca replicar em outras páginas.
 
 ### Estrutura de componentes
 
@@ -295,5 +303,5 @@ Manter atualizado ao longo de cada sessão:
 
 ---
 
-*CLAUDE.md · PIRA LABS v3.5 · v1.2 · Maio 2026*
+*CLAUDE.md · PIRA LABS v3.5 · v1.3 · Maio 2026*
 *Atualizar quando houver decisão técnica nova que afete o build*

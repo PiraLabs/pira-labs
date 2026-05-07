@@ -3,8 +3,8 @@ import { Cormorant_Garamond, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import { Header } from "@/components/shared/Header";
 import { Footer } from "@/components/shared/Footer";
-import { CookieBanner } from "@/components/shared/CookieBanner";
 import { SkipLink } from "@/components/shared/SkipLink";
+import { CookieBannerLoader } from "@/components/CookieBannerLoader";
 import "./globals.css";
 
 /* Sistema Caminho C:
@@ -68,7 +68,7 @@ export default function RootLayout({
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
-        <CookieBanner />
+        <CookieBannerLoader />
       </body>
 
       {/* Google Analytics G-Q9W3V4GPQ8 */}
