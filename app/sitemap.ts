@@ -1,27 +1,22 @@
-import type { MetadataRoute } from 'next'
+import type { MetadataRoute } from "next";
 
+// 12 rotas indexáveis do site PIRA LABS v3.5.
+// Rotas antigas (/servicos, /cases, /en/*, /es/*) estão cobertas por
+// redirects 301 no next.config.js — não entram no sitemap novo.
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://piralabs.com.br'
-  const now = new Date()
-
+  const base = "https://piralabs.com.br";
   return [
-    // Português (raiz)
-    { url: `${base}/`, lastModified: now, changeFrequency: 'monthly', priority: 1.0 },
-    { url: `${base}/sobre`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/servicos`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/cases`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/contato`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    // English
-    { url: `${base}/en`, lastModified: now, changeFrequency: 'monthly', priority: 1.0 },
-    { url: `${base}/en/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/en/services`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/en/cases`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/en/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    // Español
-    { url: `${base}/es`, lastModified: now, changeFrequency: 'monthly', priority: 1.0 },
-    { url: `${base}/es/sobre`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/es/servicos`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/es/cases`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/es/contato`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-  ]
+    { url: `${base}/`,                               changeFrequency: "weekly",  priority: 1.0 },
+    { url: `${base}/sobre`,                          changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/inspira`,                        changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/inspira/oxigenio`,               changeFrequency: "weekly",  priority: 0.9 },
+    { url: `${base}/transpira`,                      changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/transpira/juridico`,             changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/inspira/juridico`,               changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/faisca`,                         changeFrequency: "weekly",  priority: 0.7 },
+    { url: `${base}/faisca/juridica`,                changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/creative-business-turnaround`,   changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/antes-da-crise`,                 changeFrequency: "weekly",  priority: 0.6 },
+    { url: `${base}/contato`,                        changeFrequency: "yearly",  priority: 0.5 },
+  ];
 }

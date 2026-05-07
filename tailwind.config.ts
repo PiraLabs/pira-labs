@@ -1,35 +1,31 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        navy: '#0D1B2A',
-        'navy-mid': '#1A2B3C',
-        amber: '#BA7517',
-        'amber-light': '#D4891F',
-        cream: '#F5F0E8',
-        'cream-dark': '#EDE8DF',
-        'off-white': '#FAFAF8',
-        'gray-text': '#6B7280',
-        'green-respira': '#1F5C35',
-        'blue-inspira': '#2A6B8A',
+        ink: "#0C0F16",
+        "deep-teal": "#05262D",
+        teal: "#004756",
+        orange: "#EA6335",
+        peach: "#F2A85E",
+        "off-white": "#E8E0D6",
       },
       fontFamily: {
-        display: ['var(--font-cormorant)', 'Georgia', 'serif'],
-        body: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
-      },
-      maxWidth: {
-        container: '1200px',
+        /* Sistema Caminho C:
+           Space Grotesk (font-body) para tudo: body, UI, headers de página, navegação, botões, footer.
+           Cormorant Garamond (font-display) APENAS em frases canônicas, citações dos fundadores
+           e números de destaque. NÃO usar em headers de seção, body, navegação ou UI. */
+        display: ["var(--font-cormorant)", "Georgia", "serif"],
+        body: ["var(--font-grotesk)", "system-ui", "sans-serif"],
       },
     },
   },
   plugins: [],
-}
+};
 
-export default config
+export default config;

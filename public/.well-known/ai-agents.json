@@ -1,18 +1,29 @@
 {
-  "name": "PIRA LABS",
-  "description": "Brazilian boutique for Creative Business Turnaround, operational restructuring and business diagnosis for service companies before crisis.",
+  "version": "0.1",
+  "service": "PIRA LABS",
+  "description": "Boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes da crise.",
   "url": "https://piralabs.com.br",
+  "contact": {
+    "email": "inspira@piralabs.com.br",
+    "url": "https://piralabs.com.br/contato"
+  },
+  "capabilities": [
+    "diagnostic",
+    "operational-redesign",
+    "ai-search-analysis",
+    "speaking-engagement",
+    "mentorship"
+  ],
   "llms_txt": "https://piralabs.com.br/llms.txt",
   "llms_full_txt": "https://piralabs.com.br/llms-full.txt",
-  "contact": "inspira@piralabs.com.br",
-  "languages": ["pt-BR", "en", "es"],
+  "language": "pt-BR",
   "topics": [
     "Creative Business Turnaround",
-    "business diagnosis",
-    "operational restructuring",
-    "service companies",
-    "founder bottleneck",
-    "margin erosion",
-    "AI applied to operations"
+    "diagnóstico empresarial",
+    "redesenho operacional",
+    "empresas de serviços de alto valor",
+    "potencial represado",
+    "governança de IA",
+    "Oxigênio IA Search"
   ]
 }
