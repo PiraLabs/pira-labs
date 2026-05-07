@@ -11,3 +11,4 @@ build-output.txt
 
 tasks/
 .vercel
+benchmark-screenshots/ 
