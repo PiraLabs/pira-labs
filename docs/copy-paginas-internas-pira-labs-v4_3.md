@@ -105,7 +105,7 @@
 
 **Bio:**
 
-> Gabriela atuou diretamente com algumas das organizações mais relevantes do mundo: Google, Meta, X, Amazon, entre outras. Participou da estruturação de projetos, curadoria de eventos, programas e iniciativas que conectam inovação, educação e negócios. Hoje atua como docente dentro da academia, como USP, FIAP, Instituto Cidades Responsivas (curso de MBA executivo), e ambientes internacionais.
+> Gabriela atuou diretamente com algumas das organizações mais relevantes do mundo: Google, Meta, X, Amazon, entre outras. Participou da estruturação de projetos, curadoria de eventos, programas e iniciativas que conectam inovação, educação e negócios. Hoje atua como docente dentro da academia, como FIAP, Instituto Cidades Responsivas (curso de MBA executivo), e ambientes internacionais.
 >
 > Uma década dentro dos ecossistemas globais de inovação. Mentora de startups na FGV Ventures. Universal AI Foundational Modules (MIT).
 
