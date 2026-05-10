@@ -12,6 +12,8 @@ export const organizationSchema = {
   sameAs: [
     "https://www.linkedin.com/company/piralabs",
     "https://www.wikidata.org/wiki/Q138846707",
+    "https://piralabs.substack.com",
+    "https://github.com/PiraLabs/pira-labs",
   ],
   address: {
     "@type": "PostalAddress",
