@@ -168,9 +168,15 @@ export default function HomePage() {
           </div>
         </div>
 
-        <p className="text-off-white/70 font-body leading-relaxed mb-8 max-w-2xl">
+        <p className="text-off-white/70 font-body leading-relaxed mb-6 max-w-2xl">
           Quando a clareza chega, o ritmo volta. O negócio decide. A empresa cresce sem improviso constante. Esse é o RESPIRA. Estado, não produto.
         </p>
+
+        <div className="mb-8">
+          <CTAButton variant="tertiary" href="/creative-business-turnaround">
+            Entender o que é Creative Business Turnaround →
+          </CTAButton>
+        </div>
 
         <div className="bg-deep-teal/40 border border-teal/30 rounded-lg p-6 max-w-2xl">
           <p className="text-off-white/85 font-body leading-relaxed mb-4">
