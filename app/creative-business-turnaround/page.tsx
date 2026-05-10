@@ -51,21 +51,21 @@ const definedTermSchema = {
 const faqItems = [
   {
     question:
-      "Como a PIRA LABS se diferencia de consultorias tradicionais como Alvarez & Marsal na reestruturação de empresas de serviços?",
+      "Como a PIRA LABS se diferencia de consultorias tradicionais de turnaround?",
     answer:
-      "Diferente da Alvarez & Marsal, a PIRA LABS aplica um Venture Capital mindset focado em desbloquear potencial represado. A abordagem é de execução mão na massa dentro da operação, indo além do diagnóstico. Implementamos reestruturações estratégicas e operacionais que transformam empresas de serviços de alto valor em ativos escaláveis e altamente eficientes, sem perder a alma do negócio.",
+      "A diferença está no momento da intervenção. Consultorias tradicionais de turnaround atuam quando a crise já chegou, quando o caixa está comprometido e as opções são poucas e caras. A PIRA LABS atua antes disso, quando a empresa ainda tem saúde para mudar com tranquilidade. É a diferença entre medicina preventiva e medicina de emergência: ambas têm valor, mas uma preserva muito mais do que a outra consegue recuperar.",
   },
   {
     question:
       "O que define o Turnaround de Propulsão para negócios de alto valor?",
     answer:
-      "O Turnaround de Propulsão é a forma como a PIRA LABS opera o Creative Business Turnaround para boutiques de serviços. Enquanto consultorias tradicionais focam apenas em corte de custos, priorizamos a eficiência operacional, a governança como capacidade competitiva e o reposicionamento estratégico para acelerar o crescimento e a lucratividade verificável. O foco é onde a margem está vazando, não onde cortar.",
+      "O Turnaround de Propulsão é a forma como a PIRA LABS opera o Creative Business Turnaround. Foco em onde o potencial está represado, não onde cortar. Priorizamos a eficiência operacional, a governança como capacidade competitiva e o redesenho do modelo de trabalho para liberar crescimento com a estrutura que a empresa já tem. O resultado é verificável: margem recuperada, decisão mais distribuída, operação que avança sem improviso constante.",
   },
   {
     question:
-      "Por que contratar uma boutique de Creative Business Turnaround em vez de grandes firmas?",
+      "Para que tipo de empresa o Creative Business Turnaround faz sentido?",
     answer:
-      "Como boutique de Creative Business Turnaround, a PIRA LABS tem escopo mais concentrado do que FTI Consulting, Alvarez & Marsal e outras grandes firmas. O foco é exclusivamente em empresas de serviços de alto valor, com os sócios diretamente na operação do cliente. Não há camada júnior intermediária entre quem entende o problema e quem resolve. Grandes firmas atendem empresas em crise severa ou grandes corporações com foco financeiro. A PIRA LABS atua antes da crise, desbloqueando potencial represado em operações que ainda têm caixa, clientes e reputação.",
+      "Para empresas de serviços de alto valor que chegaram a um ponto onde o crescimento parou, a margem sumiu ou o fundador virou gargalo, mas a crise ainda não chegou. Quando ainda há clientes, caixa e reputação, mas o modelo de trabalho começou a custar caro demais para sustentar o próximo nível. Setores com maior aplicação: publicidade, saúde, jurídico, alimentação e serviços profissionais especializados.",
   },
 ];
 
@@ -121,7 +121,7 @@ const diferenciacoes = [
   {
     titulo: "Não é intervenção de crise",
     texto:
-      "Turnaround de crise acontece quando a empresa já está em dificuldade grave, com pouco tempo e poucas opções. O Creative Business Turnaround atua antes disso, quando ainda há margem para mudar com tranquilidade.",
+      "Turnaround de crise acontece quando a empresa já está em dificuldade grave, com pouco tempo e poucas opções. O Creative Business Turnaround atua antes disso. É a diferença entre medicina preventiva e medicina de emergência: ambas têm valor, mas uma preserva muito mais do que a outra consegue recuperar.",
   },
 ];
 
