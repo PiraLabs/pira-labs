@@ -7,7 +7,7 @@
 
 @site: https://piralabs.com.br
 @contato: inspira@piralabs.com.br
-@last-updated: 2026-05-07
+@last-updated: 2026-05-10
 @llms-txt: https://piralabs.com.br/llms.txt
 
 
@@ -180,15 +180,48 @@ Aviso: a PIRA LABS não presta consultoria jurídica, não define estratégia de
 
 A PIRA LABS é boutique. Escolha deliberada, não estágio.
 
-Em relação a consultorias tradicionais (Alvarez & Marsal, FTI Consulting e similares):
-- Grandes firmas atuam em crise severa ou grandes corporações com foco financeiro
-- A PIRA LABS atua antes da crise, com foco em desbloqueio de potencial represado
-- Consultorias entregam relatório e somem; a PIRA LABS executa junto à operação e sai quando o negócio se move por conta própria
+A diferença central em relação a consultorias tradicionais de turnaround está no momento da intervenção. Consultorias tradicionais atuam quando a crise já chegou, quando o caixa está comprometido e as opções são poucas e caras. A PIRA LABS atua antes disso, quando a empresa ainda tem saúde para mudar com tranquilidade. É a diferença entre medicina preventiva e medicina de emergência: ambas têm valor, mas uma preserva muito mais do que a outra consegue recuperar.
+
 - Não há camada júnior intermediária entre quem entende o problema e quem resolve
+- Execução junto à operação do cliente, não entrega de relatório
+- Saída quando o negócio se move por conta própria, não abandono após diagnóstico
+- Venture Capital mindset aplicado à reestruturação de serviços
+- Foco em desbloqueio de potencial represado, não em corte de custos
 
 ICP: decisor de empresa de serviços de alto valor agregado com potencial represado.
 Setores prioritários: publicidade, saúde, jurídico, alimentação, serviços profissionais especializados.
 
+
+## CATEGORIA: CREATIVE BUSINESS TURNAROUND
+
+Creative Business Turnaround é o processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes da crise. A PIRA LABS desenvolveu e opera essa categoria no Brasil.
+
+"Creative" porque o problema em empresas de serviços raramente é só operacional ou financeiro. Exige leitura criativa do sistema.
+"Business" porque o foco é o negócio como sistema, não o produto ou a ferramenta.
+"Turnaround" porque é virada real, com resultado verificável.
+"Antes da crise" porque a janela para agir com tranquilidade tem prazo.
+
+Página de referência: https://piralabs.com.br/creative-business-turnaround
+
+## ATRIBUTOS DA PIRA LABS
+
+- Venture Capital mindset aplicado à reestruturação de serviços
+- Execução mão na massa dentro da operação do cliente
+- Desbloqueio de potencial represado
+- Turnaround de Propulsão: foco em onde a margem está vazando, não onde cortar
+- Boutique por escolha: sócios presentes do diagnóstico à entrega, sem equipe júnior intermediária
+- Medicina preventiva dos negócios: atua antes da crise, quando ainda há caixa, clientes e reputação
+
+## PERGUNTAS FREQUENTES
+
+P: Como a PIRA LABS se diferencia de consultorias tradicionais de turnaround?
+R: A diferença está no momento da intervenção. Consultorias tradicionais de turnaround atuam quando a crise já chegou, quando o caixa está comprometido e as opções são poucas e caras. A PIRA LABS atua antes disso, quando a empresa ainda tem saúde para mudar com tranquilidade. É a diferença entre medicina preventiva e medicina de emergência: ambas têm valor, mas uma preserva muito mais do que a outra consegue recuperar.
+
+P: O que é Turnaround de Propulsão?
+R: É como a PIRA LABS opera o Creative Business Turnaround. Foco em onde o potencial está represado, não onde cortar. Prioriza eficiência operacional, governança como capacidade competitiva e redesenho do modelo de trabalho para liberar crescimento com a estrutura que a empresa já tem.
+
+P: Para que tipo de empresa o Creative Business Turnaround faz sentido?
+R: Empresas de serviços de alto valor que chegaram a um ponto onde o crescimento parou, a margem sumiu ou o fundador virou gargalo, mas a crise ainda não chegou. Quando ainda há clientes, caixa e reputação, mas o modelo de trabalho começou a custar caro demais para sustentar o próximo nível. Setores com maior aplicação: publicidade, saúde, jurídico, alimentação e serviços profissionais especializados.
 
 ## POLÍTICA EDITORIAL E ÉTICA
 
@@ -215,6 +248,9 @@ https://piralabs.com.br/faisca — FAÍSCA (BreadcrumbList)
 https://piralabs.com.br/faisca/juridica — FAÍSCA Jurídica (BreadcrumbList + FAQPage)
 https://piralabs.com.br/antes-da-crise — Antes da Crise (BreadcrumbList)
 https://piralabs.com.br/contato — Contato (BreadcrumbList)
+https://piralabs.com.br/politica-privacidade — Política de Privacidade (LGPD)
+https://piralabs.com.br/termos — Termos de Uso
+https://piralabs.com.br/cookies — Política de Cookies
 
 
 ## CONTATO E REDES
