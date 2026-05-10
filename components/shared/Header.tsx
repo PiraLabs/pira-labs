@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ORIGINS } from "@/lib/constants";
+import { FILLOUT_URL_HEADER } from "@/lib/constants";
 
 type ChildItem = { label: string; href: string };
 
@@ -14,7 +14,14 @@ type MenuItem = {
 };
 
 const menuItems: MenuItem[] = [
-  { label: "Sobre", href: "/sobre" },
+  {
+    label: "Sobre",
+    href: "/sobre",
+    children: [
+      { label: "Sobre a PIRA LABS", href: "/sobre" },
+      { label: "Creative Business Turnaround", href: "/creative-business-turnaround" },
+    ],
+  },
   {
     label: "Inspira",
     href: "/inspira",
@@ -154,14 +161,14 @@ export function Header() {
     dropdownTimeout.current = setTimeout(() => setOpenDropdown(null), 300);
   }
 
-  const ctaHref = `/contato?origem=${ORIGINS.HEADER_GLOBAL}`;
+  const ctaHref = FILLOUT_URL_HEADER;
 
   return (
     <header
       role="banner"
       className={`sticky top-0 z-50 transition-all duration-200 ${
         scrolled
-          ? "bg-ink/90 backdrop-blur-sm border-b border-off-white/5"
+          ? "bg-ink/90 backdrop-blur-sm"
           : "bg-ink"
       }`}
     >

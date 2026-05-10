@@ -51,7 +51,6 @@ export default function ContatoPage() {
         <p className="text-off-white/70 font-body mb-8 max-w-xl">
           Quanto mais contexto você compartilhar agora, mais útil é a resposta.
         </p>
-        {/* Suspense obrigatório: FilloutEmbed usa useSearchParams */}
         <Suspense
           fallback={
             <div className="border border-dashed border-off-white/20 rounded-lg p-10 text-center">

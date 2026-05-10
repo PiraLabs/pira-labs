@@ -3,6 +3,17 @@
 export const FILL_OUT_FORM_URL =
   process.env.NEXT_PUBLIC_FILLOUT_URL || "[INSERIR_URL_FILLOUT_QUANDO_DISPONIVEL]";
 
+// URLs completas com origem + UTMs para cada ponto de entrada do formulário.
+// Não concatenar UTMs fora deste arquivo.
+const UTM_BASE =
+  "utm_source=site_pira&utm_medium=owned&utm_campaign=site_institucional";
+
+export const FILLOUT_URL_HEADER =
+  `${FILL_OUT_FORM_URL}?origem=header_global&${UTM_BASE}&utm_content=header_falar_com_a_pira`;
+
+export const FILLOUT_URL_CONTATO =
+  `${FILL_OUT_FORM_URL}?origem=contato&${UTM_BASE}&utm_content=pagina_contato`;
+
 // 13 origens oficiais do sistema de rastreamento de CTAs.
 // Todos os CTAs que apontam para /contato incluem ?origem=[valor].
 // Nota: /antes-da-crise usa origem "faisca" (não tem origem própria).

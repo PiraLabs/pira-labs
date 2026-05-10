@@ -19,5 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/antes-da-crise`,                 changeFrequency: "weekly",  priority: 0.6 },
     { url: `${base}/contato`,                        changeFrequency: "yearly",  priority: 0.5 },
     { url: `${base}/cookies`,                        changeFrequency: "yearly",  priority: 0.3 },
+    { url: `${base}/politica-privacidade`,           changeFrequency: "yearly",  priority: 0.3 },
+    { url: `${base}/termos`,                         changeFrequency: "yearly",  priority: 0.3 },
   ];
 }

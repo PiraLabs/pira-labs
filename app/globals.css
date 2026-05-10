@@ -123,4 +123,16 @@
     padding-top: clamp(4rem, 8vw, 8rem);
     padding-bottom: clamp(4rem, 8vw, 8rem);
   }
+
+  /* <details>/<summary> — garantir comportamento nativo em todos os browsers.
+     list-style: revert restaura o triângulo de disclosure que Tailwind preflight
+     pode suprimir em certos contextos. display: block garante que o conteúdo
+     interno apareça corretamente ao abrir, inclusive no mobile. */
+  details > summary {
+    list-style: revert;
+  }
+
+  details[open] {
+    display: block;
+  }
 }

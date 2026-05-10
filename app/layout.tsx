@@ -62,6 +62,7 @@ export default function RootLayout({
     <html
       lang="pt-BR"
       className={`${cormorant.variable} ${grotesk.variable}`}
+      suppressHydrationWarning
     >
       <body className="font-body bg-deep-teal text-off-white antialiased">
         <SkipLink />

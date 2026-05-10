@@ -3,7 +3,7 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 **Ler este arquivo inteiro antes de qualquer ação.**
-**Versão:** 1.3 · Maio 2026
+**Versão:** 1.4 · Maio 2026
 **Comando de inicialização:** `/init` no início de cada sessão
 
 ---
@@ -139,6 +139,8 @@ Todos os arquivos estão em `docs/`.
 | `copy-inspira-oxigenio-v1.md` | Antes de implementar `/inspira/oxigenio` |
 | `copy-creative-business-turnaround-v1_1.md` | Antes de implementar `/creative-business-turnaround` |
 | `copy-paginas-legais-v1.md` | Antes de implementar `/politica-privacidade`, `/termos`, `/cookies` |
+| `politica-privacidade-pira-labs-v1.md` | Antes de implementar `/politica-privacidade` (conteúdo jurídico real) |
+| `termos-de-uso-pira-labs-v1.md` | Antes de implementar `/termos` (conteúdo jurídico real) |
 | `schemas-json-ld.ts` | Antes de adicionar schemas em qualquer página |
 | `next.config.js` | Fonte de verdade de redirects e headers |
 | `prompt-fillout-notion-v2.md` | Antes de implementar qualquer formulário |
@@ -204,9 +206,9 @@ Todas as flags e constantes lidas de env estão centralizadas em `lib/constants.
 
 ## ARQUITETURA ATUAL (o que já está construído)
 
-### Estado — Fases 1 a 5 completas (07/05/2026)
+### Estado — Fases 1 a 5 completas + início Fase 7 (09/05/2026)
 
-Fases 1 a 5 entregues e commitadas. Próxima: Fase 6 (schemas JSON-LD nas páginas jurídicas + llms-full.txt). Ver `tasks/STATUS.md` para estado exato.
+Fases 1 a 5 entregues e commitadas. Fase 7 iniciada: páginas legais criadas (não commitadas ainda). Próxima: Fase 6 (schemas JSON-LD nas páginas jurídicas + llms-full.txt). Ver `tasks/STATUS.md` para estado exato.
 
 **Páginas implementadas:**
 - `app/page.tsx` — home (7 blocos, `id="provas"` obrigatório)
@@ -221,6 +223,11 @@ Fases 1 a 5 entregues e commitadas. Próxima: Fase 6 (schemas JSON-LD nas págin
 - `app/inspira/juridico/page.tsx` — 8 blocos, ProcessSteps (5 entregas), FAQ, LegalNotice variant="inspira_juridico"
 - `app/transpira/juridico/page.tsx` — 7 blocos, caso âncora "400h para 36h" (EXCLUSIVO desta página), 2 cards Modelo A/B, LegalNotice variant="transpira_juridico"
 - `app/faisca/juridica/page.tsx` — 8 blocos, 2 cards de formato (palestra/workshop), LegalNotice variant="faisca_juridica"
+- `app/politica-privacidade/page.tsx` — 13 seções LGPD, breadcrumb JSON-LD (não commitada)
+- `app/termos/page.tsx` — 13 seções, breadcrumb JSON-LD (não commitada)
+
+**Página pendente (Fase 7):**
+- `app/cookies/page.tsx` — já existe (criada na Fase 1)
 
 **Decisões técnicas registradas:**
 - Shell Bash PERMANENTEMENTE inoperante: nunca usar Bash tool, tudo via `! comando`
@@ -303,5 +310,5 @@ Manter atualizado ao longo de cada sessão:
 
 ---
 
-*CLAUDE.md · PIRA LABS v3.5 · v1.3 · Maio 2026*
+*CLAUDE.md · PIRA LABS v3.5 · v1.4 · Maio 2026*
 *Atualizar quando houver decisão técnica nova que afete o build*

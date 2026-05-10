@@ -70,19 +70,43 @@ export default function HomePage() {
           Não é falha de gestão. É um modelo de trabalho que envelheceu enquanto a empresa crescia. Cinco sinais que aparecem antes da crise:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* Sinais 1-2: split em duas frases. Sinais 3-5: frase única no summary. */}
           {[
-            "A empresa cresce, mas a margem some. O esforço aumenta, o resultado fica igual.",
-            "Decisões importantes passam todas pelo fundador. O resto do time espera.",
-            "A operação só funciona porque algumas pessoas fazem o que não é papel delas.",
-            "Você implementou tecnologia, incluindo IA, e o resultado foi acelerar o ruído que já existia.",
-            "Em IA Search e em pitches automatizados, sua empresa não aparece, ou aparece errado.",
+            {
+              summary: "A empresa cresce, mas a margem some.",
+              detail: "O esforço aumenta, o resultado fica igual.",
+            },
+            {
+              summary: "Decisões importantes passam todas pelo fundador.",
+              detail: "O resto do time espera.",
+            },
+            {
+              summary: "A operação só funciona porque algumas pessoas fazem o que não é papel delas.",
+              detail: null,
+            },
+            {
+              summary: "Você implementou tecnologia, incluindo IA, e o resultado foi acelerar o ruído que já existia.",
+              detail: null,
+            },
+            {
+              summary: "Em IA Search e em pitches automatizados, sua empresa não aparece, ou aparece errado.",
+              detail: null,
+            },
           ].map((sinal, i) => (
-            <div
+            <details
               key={i}
               className="bg-teal/20 border border-teal/40 rounded-lg p-6"
+              suppressHydrationWarning
             >
-              <p className="text-off-white/90 font-body leading-relaxed">{sinal}</p>
-            </div>
+              <summary className="text-off-white/90 font-body leading-relaxed cursor-pointer marker:text-orange/60">
+                {sinal.summary}
+              </summary>
+              {sinal.detail && (
+                <p className="mt-3 text-off-white/70 font-body leading-relaxed text-sm">
+                  {sinal.detail}
+                </p>
+              )}
+            </details>
           ))}
         </div>
         <p className="mt-8 text-off-white/60 font-body italic">
@@ -106,9 +130,15 @@ export default function HomePage() {
             <p className="text-off-white font-body font-medium text-lg mb-4">
               Quando você para de resolver o problema errado.
             </p>
-            <p className="text-off-white/80 font-body leading-relaxed mb-6">
-              O diagnóstico é onde você pausa, respira fundo e olha para o negócio com lente que de dentro não dá. A PIRA LABS lê cinco áreas antes de nomear qualquer problema. Mercado, pessoas, governança, tensão econômica e síntese integrada. Cada leitura passa por aprovação humana antes de avançar. O resultado é um relatório único, com o problema real nomeado e a rota desenhada.
-            </p>
+            {/* Duas primeiras frases no summary; restante colapsado */}
+            <details className="mb-6" suppressHydrationWarning>
+              <summary className="text-off-white/80 font-body leading-relaxed cursor-pointer marker:text-orange/60">
+                O diagnóstico é onde você pausa, respira fundo e olha para o negócio com lente que de dentro não dá. A PIRA LABS lê cinco áreas antes de nomear qualquer problema.
+              </summary>
+              <p className="mt-3 text-off-white/80 font-body leading-relaxed">
+                Mercado, pessoas, governança, tensão econômica e síntese integrada. Cada leitura passa por aprovação humana antes de avançar. O resultado é um relatório único, com o problema real nomeado e a rota desenhada.
+              </p>
+            </details>
             <p className="text-xs text-off-white/50 font-body mb-4">Conduz: Gabriela Aguiar.</p>
             <CTAButton variant="tertiary" href="/inspira">
               Ver INSPIRA →
@@ -122,9 +152,15 @@ export default function HomePage() {
               {/* "trabalho certo" e "trabalho muito" em itálico via CSS — sem aspas */}
               Quando o <em className="emphasis-italic">trabalho certo</em> substitui o <em className="emphasis-italic">trabalho muito</em>.
             </p>
-            <p className="text-off-white/80 font-body leading-relaxed mb-6">
-              A execução acontece junto com a operação do cliente, não em uma sala de reunião. Redesenhamos a relação entre trabalho, valor, tecnologia e governança. Tecnologia entra onde amplifica, nunca antes de entender o problema. A IA não corrige bagunça. Sem método, ela escala bagunça.
-            </p>
+            {/* Duas primeiras frases no summary; restante colapsado */}
+            <details className="mb-6" suppressHydrationWarning>
+              <summary className="text-off-white/80 font-body leading-relaxed cursor-pointer marker:text-orange/60">
+                A execução acontece junto com a operação do cliente, não em uma sala de reunião. Redesenhamos a relação entre trabalho, valor, tecnologia e governança.
+              </summary>
+              <p className="mt-3 text-off-white/80 font-body leading-relaxed">
+                Tecnologia entra onde amplifica, nunca antes de entender o problema. A IA não corrige bagunça. Sem método, ela escala bagunça.
+              </p>
+            </details>
             <p className="text-xs text-off-white/50 font-body mb-4">Conduz: Celso Gama.</p>
             <CTAButton variant="tertiary" href="/transpira">
               Ver TRANSPIRA →
@@ -158,23 +194,41 @@ export default function HomePage() {
           {/* Card 1 — pré-IA */}
           <div className="bg-teal/20 border border-teal/40 rounded-lg p-8">
             <p className="font-display text-5xl text-peach mb-4">R$163M</p>
-            <p className="text-off-white/85 font-body leading-relaxed text-sm">
-              Reestruturação da área de ativação e eventos de uma agência multinacional. Crescimento sustentado por dois anos culminou na operação do patrocínio global de uma grande marca de tecnologia nos Jogos Rio 2016. 600 pessoas e 100 fornecedores coordenados.
-            </p>
+            {/* Primeira frase visível no summary; restante colapsado */}
+            <details suppressHydrationWarning>
+              <summary className="text-off-white/85 font-body leading-relaxed text-sm cursor-pointer marker:text-peach/60">
+                Reestruturação da área de ativação e eventos de uma agência multinacional.
+              </summary>
+              <p className="mt-2 text-off-white/85 font-body leading-relaxed text-sm">
+                Crescimento sustentado por dois anos culminou na operação do patrocínio global de uma grande marca de tecnologia nos Jogos Rio 2016. 600 pessoas e 100 fornecedores coordenados.
+              </p>
+            </details>
           </div>
           {/* Card 2 — pré-IA */}
           <div className="bg-teal/20 border border-teal/40 rounded-lg p-8">
             <p className="font-display text-5xl text-peach mb-4">+79pp</p>
-            <p className="text-off-white/85 font-body leading-relaxed text-sm">
-              Conta publicitária de multinacional do setor de bebidas, atendida pela agência onde eu liderava a operação. O problema era simples e ninguém olhava no lugar certo. Revisão de processos e métricas recuperou 79 pontos percentuais de margem em 6 meses, sem aumentar receita nem cortar custo.
-            </p>
+            {/* Primeira frase visível no summary; restante colapsado */}
+            <details suppressHydrationWarning>
+              <summary className="text-off-white/85 font-body leading-relaxed text-sm cursor-pointer marker:text-peach/60">
+                Conta publicitária de multinacional do setor de bebidas, atendida pela agência onde eu liderava a operação.
+              </summary>
+              <p className="mt-2 text-off-white/85 font-body leading-relaxed text-sm">
+                O problema era simples e ninguém olhava no lugar certo. Revisão de processos e métricas recuperou 79 pontos percentuais de margem em 6 meses, sem aumentar receita nem cortar custo.
+              </p>
+            </details>
           </div>
           {/* Card 3 — pós-IA */}
           <div className="bg-teal/20 border border-teal/40 rounded-lg p-8">
             <p className="font-display text-5xl text-peach mb-4">400h→36h</p>
-            <p className="text-off-white/85 font-body leading-relaxed text-sm">
-              Operação jurídica de alto volume. IA bem aplicada e supervisionada por humanos liberou o potencial de faturamento de R$160 mil por mês para o cliente, com a mesma equipe que ele já tinha.
-            </p>
+            {/* Primeira frase visível no summary; restante colapsado */}
+            <details suppressHydrationWarning>
+              <summary className="text-off-white/85 font-body leading-relaxed text-sm cursor-pointer marker:text-peach/60">
+                Operação jurídica de alto volume.
+              </summary>
+              <p className="mt-2 text-off-white/85 font-body leading-relaxed text-sm">
+                IA bem aplicada e supervisionada por humanos liberou o potencial de faturamento de R$160 mil por mês para o cliente, com a mesma equipe que ele já tinha.
+              </p>
+            </details>
           </div>
         </div>
         <p className="text-off-white/60 font-body text-sm leading-relaxed max-w-3xl">

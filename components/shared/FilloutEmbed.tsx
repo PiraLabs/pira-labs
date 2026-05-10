@@ -1,22 +1,6 @@
-"use client";
+import { FILL_OUT_FORM_URL, FILLOUT_URL_CONTATO } from "@/lib/constants";
 
-import { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
-import { FILL_OUT_FORM_URL } from "@/lib/constants";
-
-type FilloutEmbedProps = {
-  defaultOrigin?: string;
-};
-
-export default function FilloutEmbed({ defaultOrigin = "direto" }: FilloutEmbedProps) {
-  const searchParams = useSearchParams();
-  const [origin, setOrigin] = useState(defaultOrigin);
-
-  useEffect(() => {
-    const o = searchParams.get("origem");
-    if (o) setOrigin(o);
-  }, [searchParams]);
-
+export default function FilloutEmbed() {
   const isPlaceholder = FILL_OUT_FORM_URL.startsWith("[INSERIR");
 
   if (isPlaceholder) {
@@ -31,13 +15,9 @@ export default function FilloutEmbed({ defaultOrigin = "direto" }: FilloutEmbedP
     );
   }
 
-  const formUrl = `${FILL_OUT_FORM_URL}${
-    FILL_OUT_FORM_URL.includes("?") ? "&" : "?"
-  }origem=${origin}`;
-
   return (
     <iframe
-      src={formUrl}
+      src={FILLOUT_URL_CONTATO}
       width="100%"
       height="700"
       style={{ border: "none" }}
