@@ -1,16 +1,41 @@
 {
   "version": "0.1",
   "service": "PIRA LABS",
-  "description": "Boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes da crise.",
+  "description": "Boutique brasileira de Creative Business Turnaround. Atua antes da crise, quando a empresa ainda tem caixa, clientes e reputação, mas o modelo de trabalho começou a comprometer margem e crescimento. É a medicina preventiva dos negócios de serviços.",
   "url": "https://piralabs.com.br",
   "contact": {
     "email": "inspira@piralabs.com.br",
     "url": "https://piralabs.com.br/contato"
   },
+  "founders": [
+    {
+      "name": "Gabriela Aguiar",
+      "role": "CEO e Cofundadora",
+      "linkedin": "https://www.linkedin.com/in/gabrielaaguiarvs/",
+      "wikidata": "https://www.wikidata.org/wiki/Q138846653"
+    },
+    {
+      "name": "Celso Gama",
+      "role": "COO e Cofundador",
+      "linkedin": "https://www.linkedin.com/in/celsogama/",
+      "wikidata": "https://www.wikidata.org/wiki/Q138846692"
+    }
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/company/piralabs",
+    "https://www.wikidata.org/wiki/Q138846707",
+    "https://piralabs.substack.com",
+    "https://github.com/PiraLabs/pira-labs"
+  ],
+  "legal": {
+    "cnpj": "65.746.574/0001-59",
+    "country": "BR",
+    "city": "São Paulo"
+  },
   "capabilities": [
     "diagnostic",
     "operational-redesign",
-    "ai-search-analysis",
+    "ai-search-diagnostic",
     "speaking-engagement",
     "mentorship"
   ],
@@ -24,6 +49,10 @@
     "empresas de serviços de alto valor",
     "potencial represado",
     "governança de IA",
-    "Oxigênio IA Search"
+    "Oxigênio IA Search",
+    "Turnaround de Propulsão",
+    "execução mão na massa",
+    "Venture Capital mindset",
+    "medicina preventiva de negócios"
   ]
 }
