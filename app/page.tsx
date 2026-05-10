@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section } from "@/components/shared/Section";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { ORIGINS } from "@/lib/constants";
@@ -279,6 +280,14 @@ export default function HomePage() {
       {/* HOME-6 · FUNDADORES */}
       <Section variant="default" paddingY="lg">
         <div className="max-w-2xl">
+          <Image
+            src="/nos.png"
+            alt="Gabriela Aguiar e Celso Gama, fundadores da PIRA LABS"
+            width={800}
+            height={533}
+            className="rounded-lg w-full object-cover mb-8"
+            priority={false}
+          />
           <p className="text-off-white/90 font-body leading-relaxed text-lg mb-4">
             A PIRA LABS é boutique por escolha, não por estágio. Cada projeto tem Gabriela e Celso do diagnóstico à entrega. Sem camada intermediária entre quem entende o problema e quem resolve.
           </p>

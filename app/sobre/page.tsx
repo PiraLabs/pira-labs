@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section } from "@/components/shared/Section";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { FounderProfile } from "@/components/shared/FounderProfile";
@@ -214,6 +215,16 @@ export default function SobrePage() {
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
           Como trabalhamos juntos
         </h2>
+        <div className="max-w-3xl mb-8">
+          <Image
+            src="/nos.png"
+            alt="Gabriela Aguiar e Celso Gama, fundadores da PIRA LABS"
+            width={800}
+            height={533}
+            className="rounded-lg w-full object-cover"
+            priority={false}
+          />
+        </div>
         <div className="max-w-3xl space-y-4">
           <p className="text-off-white/85 font-body leading-relaxed">
             Gabriela conduz o INSPIRA. Celso conduz o TRANSPIRA. Mas os dois
