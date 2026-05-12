@@ -13,19 +13,35 @@ const breadcrumb = breadcrumbSchema([
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Antes da Crise · Publicação editorial da PIRA LABS no Substack",
+    absolute: "Antes da Crise | PIRA LABS",
   },
   description:
-    "Antes da Crise é a publicação editorial da PIRA LABS no Substack. Teses, estudos e aprendizados de Creative Business Turnaround, incluindo o que não funcionou.",
+    "Conteúdo sobre gestão, turnaround e o que ninguém fala antes da empresa precisar de ajuda. Por Celso Gama e Gabriela Aguiar, fundadores da PIRA LABS.",
   alternates: {
-    canonical: "https://piralabs.com.br/antes-da-crise",
+    canonical: "https://www.piralabs.com.br/antes-da-crise",
   },
   openGraph: {
-    title: "Antes da Crise · Publicação editorial da PIRA LABS no Substack",
+    title: "Antes da Crise | PIRA LABS",
     description:
-      "Teses, estudos e aprendizados de Creative Business Turnaround, incluindo o que não funcionou.",
-    url: "https://piralabs.com.br/antes-da-crise",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+      "Conteúdo sobre gestão, turnaround e o que ninguém fala antes da empresa precisar de ajuda.",
+    url: "https://www.piralabs.com.br/antes-da-crise",
+    siteName: "PIRA LABS",
+    type: "website",
+    images: [
+      {
+        url: "https://www.piralabs.com.br/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Antes da Crise — PIRA LABS",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Antes da Crise | PIRA LABS",
+    description:
+      "Conteúdo sobre gestão, turnaround e o que ninguém fala antes da empresa precisar de ajuda.",
+    images: ["https://www.piralabs.com.br/og-image.png"],
   },
 };
 

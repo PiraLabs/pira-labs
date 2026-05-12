@@ -5,6 +5,11 @@ import type { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
+      // Redes sociais e apps de mensagem — preview de links
+      { userAgent: "facebookexternalhit", allow: "/" },
+      { userAgent: "Twitterbot", allow: "/" },
+      { userAgent: "LinkedInBot", allow: "/" },
+      { userAgent: "Slackbot", allow: "/" },
       // OpenAI
       { userAgent: "GPTBot", allow: "/" },
       { userAgent: "ChatGPT-User", allow: "/" },
