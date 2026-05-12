@@ -44,6 +44,7 @@ export const metadata: Metadata = {
     description:
       "Dois modelos: implementação junto ao time ou capacidade de produção jurídica sob demanda. Execução real dentro da operação.",
     url: "https://piralabs.com.br/transpira/juridico",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
   },
 };
 

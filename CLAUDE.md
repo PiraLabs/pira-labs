@@ -3,7 +3,7 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 **Ler este arquivo inteiro antes de qualquer ação.**
-**Versão:** 1.6 · Maio 2026
+**Versão:** 1.7 · Maio 2026
 **Comando de inicialização:** `/init` no início de cada sessão
 
 ---
@@ -171,7 +171,7 @@ Tokens CSS, fontes, layout root, Header, Footer, CookieBanner, 404, `next.config
 ### Fase 6 — Camada GEO/AEO
 Schemas JSON-LD em todas as páginas, `lib/schemas/`, `llms-full.txt` (já existe em `public/` — atualizar, não gerar do zero)
 
-**Progresso (11/05/2026):** `public/llms-full.txt` atualizado (EEAT, sameAs, CNPJ, founders), `public/.well-known/ai-agents.json` atualizado, `lib/schemas/organization.ts` com sameAs expandido. **Pendente:** schemas BreadcrumbList nas páginas `/inspira/juridico`, `/transpira/juridico` e `/faisca/juridica`.
+**Progresso (12/05/2026):** `public/llms-full.txt` atualizado (EEAT, sameAs, CNPJ, founders), `public/.well-known/ai-agents.json` atualizado, `lib/schemas/organization.ts` com sameAs expandido. Schemas BreadcrumbList + Service adicionados nas páginas `/inspira/juridico`, `/transpira/juridico` e `/faisca/juridica`. **Pendente:** commit das páginas jurídicas, legais e schemas; Fase 7 (Lighthouse + deploy).
 
 ### Fase 7 — Polimento e deploy
 Lighthouse ≥ 90, testes mobile, teste das 13 origens, deploy na Vercel
@@ -208,9 +208,9 @@ Todas as flags e constantes lidas de env estão centralizadas em `lib/constants.
 
 ## ARQUITETURA ATUAL (o que já está construído)
 
-### Estado — Fases 1 a 5 completas + Fase 6 em andamento (11/05/2026)
+### Estado — Fases 1 a 6 concluídas, aguardando commit e Fase 7 (12/05/2026)
 
-Fases 1 a 5 entregues e commitadas. Páginas legais criadas (verificar commit status). Fase 6 parcialmente concluída: `public/llms-full.txt` atualizado (EEAT, sameAs organização, CNPJ, founders), `public/.well-known/ai-agents.json` atualizado, `lib/schemas/organization.ts` com sameAs expandido. Pendente: schemas JSON-LD nas páginas jurídicas. Ver `tasks/STATUS.md` para estado exato.
+Fases 1 a 6 implementadas. Modificações não commitadas: páginas jurídicas (schemas BreadcrumbList + Service), páginas legais (politica-privacidade, termos), lib/schemas/organization.ts, public/llms-full.txt, public/.well-known/ai-agents.json. Ver `tasks/STATUS.md` para estado exato.
 
 **Páginas implementadas:**
 - `app/page.tsx` — home (7 blocos, `id="provas"` obrigatório)
@@ -222,11 +222,11 @@ Fases 1 a 5 entregues e commitadas. Páginas legais criadas (verificar commit st
 - `app/faisca/page.tsx` — 4 blocos, 4 frentes editoriais, 3 cards de trilhas
 - `app/antes-da-crise/page.tsx` — 4 blocos, busca posts via `lib/substack-rss.ts` (Server Component, ISR 3600s)
 - `app/inspira/oxigenio/page.tsx` — 11 blocos, Service schema, 3 feature flags, âncoras `#aplicar` e `#metodo`
-- `app/inspira/juridico/page.tsx` — 8 blocos, ProcessSteps (5 entregas), FAQ, LegalNotice variant="inspira_juridico"
-- `app/transpira/juridico/page.tsx` — 7 blocos, caso âncora "400h para 36h" (EXCLUSIVO desta página), 2 cards Modelo A/B, LegalNotice variant="transpira_juridico"
-- `app/faisca/juridica/page.tsx` — 8 blocos, 2 cards de formato (palestra/workshop), LegalNotice variant="faisca_juridica"
-- `app/politica-privacidade/page.tsx` — 13 seções LGPD, breadcrumb JSON-LD (não commitada)
-- `app/termos/page.tsx` — 13 seções, breadcrumb JSON-LD (não commitada)
+- `app/inspira/juridico/page.tsx` — 8 blocos, ProcessSteps (5 entregas), FAQ, LegalNotice variant="inspira_juridico", schemas BreadcrumbList + Service
+- `app/transpira/juridico/page.tsx` — 7 blocos, caso âncora "400h para 36h" (EXCLUSIVO desta página), 2 cards Modelo A/B, LegalNotice variant="transpira_juridico", schemas BreadcrumbList + Service
+- `app/faisca/juridica/page.tsx` — 8 blocos, 2 cards de formato (palestra/workshop), LegalNotice variant="faisca_juridica", schema BreadcrumbList
+- `app/politica-privacidade/page.tsx` — 13 seções LGPD, breadcrumb JSON-LD (modificada, não commitada)
+- `app/termos/page.tsx` — 13 seções, breadcrumb JSON-LD (modificada, não commitada)
 
 **Página pendente (Fase 7):**
 - `app/cookies/page.tsx` — já existe (criada na Fase 1)
@@ -319,5 +319,5 @@ Manter atualizado ao longo de cada sessão:
 
 ---
 
-*CLAUDE.md · PIRA LABS v3.5 · v1.6 · Maio 2026*
+*CLAUDE.md · PIRA LABS v3.5 · v1.7 · Maio 2026*
 *Atualizar quando houver decisão técnica nova que afete o build*

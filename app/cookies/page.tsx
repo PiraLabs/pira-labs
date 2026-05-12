@@ -16,6 +16,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://piralabs.com.br/cookies",
   },
+  openGraph: {
+    title: "Política de Cookies · PIRA LABS",
+    description: "Como a PIRA LABS usa cookies e como você pode gerenciá-los.",
+    url: "https://piralabs.com.br/cookies",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+  },
 };
 
 export default function CookiesPage() {

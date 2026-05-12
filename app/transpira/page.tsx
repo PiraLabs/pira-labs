@@ -38,6 +38,7 @@ export const metadata: Metadata = {
     description:
       "Redesenho de trabalho, valor, tecnologia e governança. Execução mão na massa dentro da operação do cliente.",
     url: "https://piralabs.com.br/transpira",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
   },
 };
 

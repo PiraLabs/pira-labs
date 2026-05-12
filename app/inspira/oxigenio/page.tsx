@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     description:
       "Diagnóstico de presença em motores de IA. 5 vagas para fundadores, R$6.200 primeira rodada, 5 dias úteis.",
     url: "https://piralabs.com.br/inspira/oxigenio",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
   },
 };
 

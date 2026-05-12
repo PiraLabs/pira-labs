@@ -45,6 +45,7 @@ export const metadata: Metadata = {
     description:
       "Mapeamos como o escritório usa IA hoje, onde está a exposição, e entregamos política mínima e plano de ação priorizado.",
     url: "https://piralabs.com.br/inspira/juridico",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
   },
 };
 

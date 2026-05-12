@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     description:
       "Antes da Crise no Substack, palestras, mentorias e conteúdo aberto sobre Creative Business Turnaround.",
     url: "https://piralabs.com.br/faisca",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
   },
 };
 

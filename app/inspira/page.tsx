@@ -38,6 +38,7 @@ export const metadata: Metadata = {
     description:
       "Cinco leituras paralelas do negócio antes de nomear qualquer problema. Diagnóstico com aprovação humana em cada etapa.",
     url: "https://piralabs.com.br/inspira",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
   },
 };
 

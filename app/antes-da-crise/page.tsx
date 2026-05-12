@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     description:
       "Teses, estudos e aprendizados de Creative Business Turnaround, incluindo o que não funcionou.",
     url: "https://piralabs.com.br/antes-da-crise",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
   },
 };
 
