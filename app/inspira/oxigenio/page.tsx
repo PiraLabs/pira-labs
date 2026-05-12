@@ -160,8 +160,6 @@ const serviceSchema = {
         priceCurrency: "BRL",
       },
       availability: "https://schema.org/LimitedAvailability",
-      validFrom: "2026-05-10",
-      validThrough: "2026-05-25",
       eligibleQuantity: {
         "@type": "QuantitativeValue",
         value: 5,

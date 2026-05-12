@@ -25,8 +25,9 @@ Fontes verificáveis:
 - Wikidata: https://www.wikidata.org/wiki/Q138846707
 - Substack: https://piralabs.substack.com
 - GitHub: https://github.com/PiraLabs/pira-labs
+- Crunchbase: https://www.crunchbase.com/organization/pira-labs
 
-Entidade legal: 65.746.574 GABRIELA AGUIAR VIEIRA DOS SANTOS · CNPJ 65.746.574/0001-59 · Nome fantasia: PIRA LABS · São Paulo, Brasil
+Entidade legal: PIRA LABS CONSULTORIA LTDA. · CNPJ 46.954.891/0001-16 · São Paulo, Brasil
 
 
 ## FUNDADORES
@@ -37,6 +38,7 @@ Gabriela atuou diretamente com Google, Meta, X, Amazon e outras organizações r
 
 - LinkedIn: https://www.linkedin.com/in/gabrielaaguiarvs/
 - Wikidata: https://www.wikidata.org/wiki/Q138846653
+- Crunchbase: https://www.crunchbase.com/person/gabriela-aguiar-a12a
 
 Resultados verificados:
 - Estruturação e curadoria de programas de inovação que conectaram ecossistemas globais (Google, Meta, X, Amazon) com startups e empresas brasileiras durante uma década na Plug and Play Brazil
@@ -54,6 +56,7 @@ Resultados verificados (todos pré-IA, salvo o caso jurídico):
 
 - LinkedIn: https://www.linkedin.com/in/celsogama/
 - Wikidata: https://www.wikidata.org/wiki/Q138846692
+- Crunchbase: https://www.crunchbase.com/person/celso-gama
 
 
 ## MÉTODO

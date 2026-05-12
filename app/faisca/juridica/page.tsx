@@ -5,13 +5,17 @@ import { FAQ } from "@/components/shared/FAQ";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { LegalNotice } from "@/components/shared/LegalNotice";
 import { ORIGINS } from "@/lib/constants";
-import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
 
-const breadcrumb = breadcrumbSchema([
-  { name: "Home", url: "https://piralabs.com.br/" },
-  { name: "FAÍSCA", url: "https://piralabs.com.br/faisca" },
-  { name: "Jurídica", url: "https://piralabs.com.br/faisca/juridica" },
-]);
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://piralabs.com.br/faisca/juridica#breadcrumb",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://piralabs.com.br" },
+    { "@type": "ListItem", position: 2, name: "Faísca", item: "https://piralabs.com.br/faisca" },
+    { "@type": "ListItem", position: 3, name: "FAÍSCA Jurídica", item: "https://piralabs.com.br/faisca/juridica" },
+  ],
+};
 
 export const metadata: Metadata = {
   title: {

@@ -42,6 +42,7 @@ const nextConfig = {
       // Migração de nomenclatura editorial
       { source: "/blog", destination: "/antes-da-crise", permanent: true },
       { source: "/news", destination: "/antes-da-crise", permanent: true },
+      { source: "/antesdacrise", destination: "/antes-da-crise", permanent: true },
     ];
   },
   async headers() {

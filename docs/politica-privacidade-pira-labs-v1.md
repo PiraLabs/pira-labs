@@ -1,6 +1,6 @@
 # Política de Privacidade
 
-**65.746.574 GABRIELA AGUIAR VIEIRA DOS SANTOS**
+**PIRA LABS CONSULTORIA LTDA.**
 Última atualização: maio de 2026
 
 ---
@@ -10,11 +10,10 @@
 A PIRA LABS é uma consultoria brasileira especializada em Creative Business Turnaround para empresas de serviços. Operamos em conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD).
 
 **Controladora dos dados:**
-65.746.574 GABRIELA AGUIAR VIEIRA DOS SANTOS
-CNPJ: 65.746.574/0001-59
+PIRA LABS CONSULTORIA LTDA.
+CNPJ: 46.954.891/0001-16
 Rua Curuzu, 117, Alto da Lapa, São Paulo/SP, CEP 05084-020
 Representada por: Gabriela Aguiar Vieira dos Santos
-Nome fantasia: PIRA LABS
 Contato: inspira@piralabs.com.br
 
 ---
@@ -156,4 +155,4 @@ Respondemos em até 15 dias úteis.
 
 ---
 
-*65.746.574 GABRIELA AGUIAR VIEIRA DOS SANTOS · CNPJ 65.746.574/0001-59 · Nome fantasia: PIRA LABS · piralabs.com.br · São Paulo, Brasil*
+*PIRA LABS CONSULTORIA LTDA. · CNPJ 46.954.891/0001-16 · piralabs.com.br · São Paulo, Brasil*

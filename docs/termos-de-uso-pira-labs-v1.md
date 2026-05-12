@@ -1,6 +1,6 @@
 # Termos de Uso
 
-**PIRA LABS — 65.746.574 GABRIELA AGUIAR VIEIRA DOS SANTOS**
+**PIRA LABS CONSULTORIA LTDA.**
 Última atualização: maio de 2026
 
 ---
@@ -15,11 +15,10 @@ Estes termos se aplicam a todos os visitantes, usuários e qualquer pessoa que a
 
 ## 2. Quem somos
 
-**65.746.574 GABRIELA AGUIAR VIEIRA DOS SANTOS**
-CNPJ: 65.746.574/0001-59
+**PIRA LABS CONSULTORIA LTDA.**
+CNPJ: 46.954.891/0001-16
 Rua Curuzu, 117, Alto da Lapa, São Paulo/SP, CEP 05084-020
 Representada por: Gabriela Aguiar Vieira dos Santos
-Nome fantasia: PIRA LABS
 Contato: inspira@piralabs.com.br
 
 ---
@@ -113,4 +112,4 @@ Para dúvidas sobre estes Termos de Uso:
 
 ---
 
-*65.746.574 GABRIELA AGUIAR VIEIRA DOS SANTOS · CNPJ 65.746.574/0001-59 · Nome fantasia: PIRA LABS · piralabs.com.br · São Paulo, Brasil*
+*PIRA LABS CONSULTORIA LTDA. · CNPJ 46.954.891/0001-16 · piralabs.com.br · São Paulo, Brasil*

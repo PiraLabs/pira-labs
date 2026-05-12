@@ -52,11 +52,10 @@ export default function PoliticaPrivacidadePage() {
             </p>
             <div className="bg-deep-teal/50 rounded-lg p-4 text-sm text-off-white/70 space-y-1">
               <p className="font-semibold text-off-white/90">Controladora dos dados:</p>
-              <p>65.746.574 GABRIELA AGUIAR VIEIRA DOS SANTOS</p>
-              <p>CNPJ: 65.746.574/0001-59</p>
+              <p>PIRA LABS CONSULTORIA LTDA.</p>
+              <p>CNPJ: 46.954.891/0001-16</p>
               <p>Rua Curuzu, 117, Alto da Lapa, São Paulo/SP, CEP 05084-020</p>
               <p>Representada por: Gabriela Aguiar Vieira dos Santos</p>
-              <p>Nome fantasia: PIRA LABS</p>
               <p>
                 Contato:{" "}
                 <a
@@ -382,8 +381,7 @@ export default function PoliticaPrivacidadePage() {
           {/* Rodapé legal */}
           <div className="pt-4 border-t border-teal/20">
             <p className="text-xs text-off-white/40">
-              65.746.574 GABRIELA AGUIAR VIEIRA DOS SANTOS · CNPJ 65.746.574/0001-59 · Nome
-              fantasia: PIRA LABS · piralabs.com.br · São Paulo, Brasil
+              PIRA LABS CONSULTORIA LTDA. · CNPJ 46.954.891/0001-16 · piralabs.com.br · São Paulo, Brasil
             </p>
           </div>
 

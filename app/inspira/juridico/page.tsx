@@ -6,15 +6,19 @@ import { FAQ } from "@/components/shared/FAQ";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { LegalNotice } from "@/components/shared/LegalNotice";
 import { ORIGINS } from "@/lib/constants";
-import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
 import { serviceSchema } from "@/lib/schemas/service";
 
 const schemas = {
-  breadcrumb: breadcrumbSchema([
-    { name: "Home", url: "https://piralabs.com.br/" },
-    { name: "INSPIRA", url: "https://piralabs.com.br/inspira" },
-    { name: "Jurídico", url: "https://piralabs.com.br/inspira/juridico" },
-  ]),
+  breadcrumb: {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://piralabs.com.br/inspira/juridico#breadcrumb",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://piralabs.com.br" },
+      { "@type": "ListItem", position: 2, name: "Inspira", item: "https://piralabs.com.br/inspira" },
+      { "@type": "ListItem", position: 3, name: "INSPIRA Jurídico", item: "https://piralabs.com.br/inspira/juridico" },
+    ],
+  },
   service: serviceSchema({
     name: "INSPIRA Jurídico",
     description:

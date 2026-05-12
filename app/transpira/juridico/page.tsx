@@ -5,15 +5,19 @@ import { FAQ } from "@/components/shared/FAQ";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { LegalNotice } from "@/components/shared/LegalNotice";
 import { ORIGINS } from "@/lib/constants";
-import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
 import { serviceSchema } from "@/lib/schemas/service";
 
 const schemas = {
-  breadcrumb: breadcrumbSchema([
-    { name: "Home", url: "https://piralabs.com.br/" },
-    { name: "TRANSPIRA", url: "https://piralabs.com.br/transpira" },
-    { name: "Jurídico", url: "https://piralabs.com.br/transpira/juridico" },
-  ]),
+  breadcrumb: {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://piralabs.com.br/transpira/juridico#breadcrumb",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://piralabs.com.br" },
+      { "@type": "ListItem", position: 2, name: "Transpira", item: "https://piralabs.com.br/transpira" },
+      { "@type": "ListItem", position: 3, name: "TRANSPIRA Jurídico", item: "https://piralabs.com.br/transpira/juridico" },
+    ],
+  },
   service: serviceSchema({
     name: "TRANSPIRA Jurídico",
     description:

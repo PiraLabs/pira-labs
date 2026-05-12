@@ -3,7 +3,7 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 **Ler este arquivo inteiro antes de qualquer ação.**
-**Versão:** 1.4 · Maio 2026
+**Versão:** 1.6 · Maio 2026
 **Comando de inicialização:** `/init` no início de cada sessão
 
 ---
@@ -169,7 +169,9 @@ Tokens CSS, fontes, layout root, Header, Footer, CookieBanner, 404, `next.config
 `/inspira/juridico`, `/transpira/juridico`, `/faisca/juridica`
 
 ### Fase 6 — Camada GEO/AEO
-Schemas JSON-LD em todas as páginas, `lib/schemas/`, `llms-full.txt` gerado por script
+Schemas JSON-LD em todas as páginas, `lib/schemas/`, `llms-full.txt` (já existe em `public/` — atualizar, não gerar do zero)
+
+**Progresso (11/05/2026):** `public/llms-full.txt` atualizado (EEAT, sameAs, CNPJ, founders), `public/.well-known/ai-agents.json` atualizado, `lib/schemas/organization.ts` com sameAs expandido. **Pendente:** schemas BreadcrumbList nas páginas `/inspira/juridico`, `/transpira/juridico` e `/faisca/juridica`.
 
 ### Fase 7 — Polimento e deploy
 Lighthouse ≥ 90, testes mobile, teste das 13 origens, deploy na Vercel
@@ -206,9 +208,9 @@ Todas as flags e constantes lidas de env estão centralizadas em `lib/constants.
 
 ## ARQUITETURA ATUAL (o que já está construído)
 
-### Estado — Fases 1 a 5 completas + início Fase 7 (09/05/2026)
+### Estado — Fases 1 a 5 completas + Fase 6 em andamento (11/05/2026)
 
-Fases 1 a 5 entregues e commitadas. Fase 7 iniciada: páginas legais criadas (não commitadas ainda). Próxima: Fase 6 (schemas JSON-LD nas páginas jurídicas + llms-full.txt). Ver `tasks/STATUS.md` para estado exato.
+Fases 1 a 5 entregues e commitadas. Páginas legais criadas (verificar commit status). Fase 6 parcialmente concluída: `public/llms-full.txt` atualizado (EEAT, sameAs organização, CNPJ, founders), `public/.well-known/ai-agents.json` atualizado, `lib/schemas/organization.ts` com sameAs expandido. Pendente: schemas JSON-LD nas páginas jurídicas. Ver `tasks/STATUS.md` para estado exato.
 
 **Páginas implementadas:**
 - `app/page.tsx` — home (7 blocos, `id="provas"` obrigatório)
@@ -264,6 +266,13 @@ Todos os componentes reutilizáveis estão em `components/shared/`:
 
 Helpers em `lib/schemas/`: `organization.ts`, `website.ts`, `breadcrumb.ts`, `service.ts`. Organization e WebSite só entram na home. BreadcrumbList entra em todas as páginas internas.
 
+### Arquivos públicos críticos
+
+- `public/og-image.png` — OG image com foto dos dois fundadores e paleta correta. Não substituir por versão sem foto.
+- `public/llms.txt` — conteúdo validado. Não sobrescrever sem motivo.
+- `public/llms-full.txt` — conteúdo EEAT completo. Atualizar incrementalmente, nunca reescrever do zero.
+- `public/.well-known/ai-agents.json` — spec GEO/AEO. Atualizar campos, nunca remover campos existentes.
+
 ### lib/i18n.ts — LEGADO, não usar no v3.5
 
 O arquivo `lib/i18n.ts` contém o dicionário trilíngue (PT/EN/ES) e mapeamento de rotas do site provisório anterior. **Não usar como referência para copy ou rotas do v3.5.** A estrutura multilíngue foi substituída por um site monolíngue PT com redirects 301 para as URLs /en e /es antigas.
@@ -310,5 +319,5 @@ Manter atualizado ao longo de cada sessão:
 
 ---
 
-*CLAUDE.md · PIRA LABS v3.5 · v1.4 · Maio 2026*
+*CLAUDE.md · PIRA LABS v3.5 · v1.6 · Maio 2026*
 *Atualizar quando houver decisão técnica nova que afete o build*
