@@ -1,7 +1,3 @@
-"use client";
-
-import { useState } from "react";
-
 export type FAQItem = {
   question: string;
   answer: string;
@@ -13,8 +9,6 @@ type FAQProps = {
 };
 
 export function FAQ({ items, heading = "Perguntas frequentes" }: FAQProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -40,38 +34,29 @@ export function FAQ({ items, heading = "Perguntas frequentes" }: FAQProps) {
             {heading}
           </h2>
         )}
-        <dl className="space-y-1">
-          {items.map((item, index) => {
-            const isOpen = openIndex === index;
-            return (
-              <div key={index} className="border-b border-off-white/10">
-                <dt>
-                  <button
-                    type="button"
-                    aria-expanded={isOpen}
-                    onClick={() => setOpenIndex(isOpen ? null : index)}
-                    className="w-full flex items-start justify-between gap-4 py-5 text-left text-off-white font-body font-medium text-base md:text-lg hover:text-peach transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
-                  >
-                    <span>{item.question}</span>
-                    <span
-                      className={`shrink-0 mt-0.5 transition-transform duration-200 ${
-                        isOpen ? "rotate-45" : ""
-                      }`}
-                      aria-hidden="true"
-                    >
-                      +
-                    </span>
-                  </button>
-                </dt>
-                {isOpen && (
-                  <dd className="pb-5 text-off-white/80 font-body text-base leading-relaxed">
-                    {item.answer}
-                  </dd>
-                )}
-              </div>
-            );
-          })}
-        </dl>
+        <div className="space-y-1">
+          {items.map((item, index) => (
+            <details key={index} className="border-b border-off-white/10 group">
+              <summary className="w-full flex items-start justify-between gap-4 py-5 text-left text-off-white font-body font-medium text-base md:text-lg hover:text-peach transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange">
+                <span>{item.question}</span>
+                <span
+                  className="shrink-0 mt-0.5 transition-transform duration-200 group-open:rotate-45"
+                  aria-hidden="true"
+                >
+                  +
+                </span>
+              </summary>
+              {item.answer.split('\n\n').map((para, pIdx, arr) => (
+                <p
+                  key={pIdx}
+                  className={`text-off-white/80 font-body text-base leading-relaxed ${pIdx < arr.length - 1 ? 'mb-3' : 'pb-5'}`}
+                >
+                  {para}
+                </p>
+              ))}
+            </details>
+          ))}
+        </div>
       </div>
     </>
   );

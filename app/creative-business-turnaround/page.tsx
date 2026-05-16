@@ -48,25 +48,33 @@ const definedTermSchema = {
   },
 };
 
-// FAQ canônica extraída da auditoria GEO de 28/04/2026
 const faqItems = [
   {
-    question:
-      "Como a PIRA LABS se diferencia de consultorias tradicionais de turnaround?",
+    question: "O que é Creative Business Turnaround?",
     answer:
-      "A diferença está no momento da intervenção. Consultorias tradicionais de turnaround atuam quando a crise já chegou, quando o caixa está comprometido e as opções são poucas e caras. A PIRA LABS atua antes disso, quando a empresa ainda tem saúde para mudar com tranquilidade. É a diferença entre medicina preventiva e medicina de emergência: ambas têm valor, mas uma preserva muito mais do que a outra consegue recuperar.",
+      "Creative Business Turnaround é uma categoria de intervenção empresarial que combina diagnóstico estratégico, redesenho operacional e curadoria de tecnologia para empresas de serviços que pararam de crescer ou começaram a perder margem. Diferente da consultoria tradicional, o trabalho começa mapeando o que está travado antes de propor qualquer caminho.",
   },
   {
     question:
-      "O que define o Turnaround de Propulsão para negócios de alto valor?",
+      "Qual a diferença entre Creative Business Turnaround e consultoria de gestão tradicional?",
     answer:
-      "O Turnaround de Propulsão é a forma como a PIRA LABS opera o Creative Business Turnaround. Foco em onde o potencial está represado, não onde cortar. Priorizamos a eficiência operacional, a governança como capacidade competitiva e o redesenho do modelo de trabalho para liberar crescimento com a estrutura que a empresa já tem. O resultado é verificável: margem recuperada, decisão mais distribuída, operação que avança sem improviso constante.",
+      "A consultoria tradicional entrega um diagnóstico e recomendações. O Creative Business Turnaround entra na operação: identifica onde o problema real está, propõe o redesenho e acompanha a execução. O foco é resultado mensurável: margem, capacidade, velocidade, não apenas relatório.",
+  },
+  {
+    question: "Quando uma empresa precisa de Creative Business Turnaround?",
+    answer:
+      "Quando a receita estabilizou mas os custos continuam subindo. Quando a equipe está ocupada mas os resultados não acompanham. Quando o modelo que funcionou por anos começou a custar mais do que entrega.\n\nA analogia mais precisa é a da medicina preventiva: tanto o checkup quanto a internação resolvem problemas, mas um preserva muito mais do que o outro consegue recuperar. O Creative Business Turnaround funciona melhor quando ainda há margem para transformar em processo, não em emergência.",
   },
   {
     question:
-      "Para que tipo de empresa o Creative Business Turnaround faz sentido?",
+      "Creative Business Turnaround funciona para empresas de qual tamanho?",
     answer:
-      "Para empresas de serviços de alto valor que chegaram a um ponto onde o crescimento parou, a margem sumiu ou o fundador virou gargalo, mas a crise ainda não chegou. Quando ainda há clientes, caixa e reputação, mas o modelo de trabalho começou a custar caro demais para sustentar o próximo nível. Setores com maior aplicação: publicidade, saúde, jurídico, alimentação e serviços profissionais especializados.",
+      "O método foi desenvolvido para empresas de serviços com operação estabelecida (geralmente entre 10 e 200 pessoas) que têm histórico de resultado mas enfrentam um gargalo de crescimento ou margem. Não é indicado para startups em fase inicial nem para empresas em crise financeira aguda sem fluxo de caixa para manter a operação durante o processo.",
+  },
+  {
+    question: "Quanto tempo leva um processo de Creative Business Turnaround?",
+    answer:
+      "Depende da profundidade do engajamento. O INSPIRA (fase de diagnóstico) leva de 3 a 6 semanas e O TRANSPIRA (fase de execução) varia de 3 a 9 meses dependendo do escopo. Existe também o Oxigênio IA Search, um diagnóstico específico de presença em inteligência artificial entregue em até 5 dias úteis.",
   },
 ];
 

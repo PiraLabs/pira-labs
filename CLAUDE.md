@@ -171,7 +171,7 @@ Tokens CSS, fontes, layout root, Header, Footer, CookieBanner, 404, `next.config
 ### Fase 6 — Camada GEO/AEO
 Schemas JSON-LD em todas as páginas, `lib/schemas/`, `llms-full.txt` (já existe em `public/` — atualizar, não gerar do zero)
 
-**Progresso (12/05/2026):** `public/llms-full.txt` atualizado (EEAT, sameAs, CNPJ, founders), `public/.well-known/ai-agents.json` atualizado, `lib/schemas/organization.ts` com sameAs expandido. Schemas BreadcrumbList + Service adicionados nas páginas `/inspira/juridico`, `/transpira/juridico` e `/faisca/juridica`. **Pendente:** commit das páginas jurídicas, legais e schemas; Fase 7 (Lighthouse + deploy).
+**Progresso (12/05/2026):** `public/llms-full.txt` atualizado (EEAT, sameAs, CNPJ, founders), `public/.well-known/ai-agents.json` atualizado, `lib/schemas/organization.ts` com sameAs expandido. Schemas BreadcrumbList + Service adicionados nas páginas `/inspira/juridico`, `/transpira/juridico` e `/faisca/juridica`. Deploy confirmado em www.piralabs.com.br. **Pendente:** Fase 7 (Lighthouse ≥ 90, testes mobile, teste das 13 origens).
 
 ### Fase 7 — Polimento e deploy
 Lighthouse ≥ 90, testes mobile, teste das 13 origens, deploy na Vercel
@@ -208,9 +208,9 @@ Todas as flags e constantes lidas de env estão centralizadas em `lib/constants.
 
 ## ARQUITETURA ATUAL (o que já está construído)
 
-### Estado — Fases 1 a 6 concluídas, aguardando commit e Fase 7 (12/05/2026)
+### Estado — Fases 1 a 6 concluídas e deployadas (12/05/2026)
 
-Fases 1 a 6 implementadas. Modificações não commitadas: páginas jurídicas (schemas BreadcrumbList + Service), páginas legais (politica-privacidade, termos), lib/schemas/organization.ts, public/llms-full.txt, public/.well-known/ai-agents.json. Ver `tasks/STATUS.md` para estado exato.
+Fases 1 a 6 implementadas e deployadas. Site ao vivo em www.piralabs.com.br. Pendente: Fase 7 (Lighthouse ≥ 90, testes mobile, teste das 13 origens). Ver `tasks/STATUS.md` para estado exato.
 
 **Páginas implementadas:**
 - `app/page.tsx` — home (7 blocos, `id="provas"` obrigatório)
@@ -319,5 +319,5 @@ Manter atualizado ao longo de cada sessão:
 
 ---
 
-*CLAUDE.md · PIRA LABS v3.5 · v1.7 · Maio 2026*
+*CLAUDE.md · PIRA LABS v3.5 · v1.8 · Maio 2026*
 *Atualizar quando houver decisão técnica nova que afete o build*
