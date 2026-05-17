@@ -74,5 +74,5 @@ LinkedIn: https://linkedin.com/company/piralabs
 
 ## Tecnologia
 
-Construído com Next.js 15, deployado na Vercel, otimizado para GEO/SEO/AEO.
+Construído com Next.js 16, deployado na Vercel, otimizado para GEO/SEO/AEO.
 Inclui JSON-LD estruturado, llms.txt, robots.txt com crawlers de IA e sitemap dinâmico.
