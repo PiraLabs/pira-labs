@@ -52,19 +52,9 @@ profissionais especializados.
 
 ## Fundadores
 
-**Gabriela Aguiar** — CEO, Co-fundadora, lidera INSPIRA e negócios.
-Quase uma década em inovação e venture capital no Brasil, EUA e países nórdicos.
-Plug and Play TechCenter, German Accelerator, Web Summit, South Summit.
-Professora de MBA na FIAP, mentora na FGV Ventures, membro do Angel Investor Club.
-Em formação em IA no MIT.
-LinkedIn: https://www.linkedin.com/in/gabrielaaguiarvs/
+**Gabriela Aguiar** — CEO, Co-fundadora, lidera INSPIRA e negócios. Quase uma década em inovação e venture capital no Brasil, EUA e países nórdicos. Plug and Play Tech Center Brasil, German Accelerator, Web Summit, South Summit. Professora de MBA na FIAP, mentora na FGV Ventures, membro do Angel Investor Club. MIT Universal AI Foundational Modules (2026). LinkedIn: https://www.linkedin.com/in/gabrielaaguiarvs/
 
-**Celso Gama** — COO, Co-fundador, lidera TRANSPIRA e operações.
-Especialista em turnaround operacional. Resultados verificados pré-IA em escala,
-margem e coordenação de operações complexas.
-MBA em Administração, Pós em Marketing, Graduação em Comunicação e Direito.
-Em formação em IA no MIT.
-LinkedIn: https://www.linkedin.com/in/celsogama/
+**Celso Gama** — COO, Co-fundador, lidera TRANSPIRA e operações. Especialista em turnaround operacional. Resultados verificados pré-IA em escala, margem e coordenação de operações complexas. MBA em Administração, Pós em Marketing, Graduação em Comunicação e Direito. MIT Applied AI Certificate (2026). LinkedIn: https://www.linkedin.com/in/celsogama/
 
 ## Contato
 
