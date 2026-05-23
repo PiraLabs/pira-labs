@@ -152,9 +152,13 @@ export function Footer() {
           </Link>
         </div>
 
-        {/* Copyright — suppressHydrationWarning evita mismatch SSR/cliente no getFullYear() */}
+        {/* CNPJ e copyright */}
+        <p className="text-xs font-body text-off-white/30 text-center mb-1">
+          PIRA LABS · CNPJ 46.954.891/0001-16 · São Paulo, Brasil
+        </p>
+        {/* suppressHydrationWarning evita mismatch SSR/cliente no getFullYear() */}
         <p className="text-xs font-body text-off-white/30 text-center mb-6" suppressHydrationWarning>
-          © {new Date().getFullYear()} PIRA LABS. Todos os direitos reservados. São Paulo, Brasil.
+          © {new Date().getFullYear()} PIRA LABS. Todos os direitos reservados.
         </p>
 
         {/* Aviso jurídico */}

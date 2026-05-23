@@ -7,7 +7,7 @@
 
 @site: https://piralabs.com.br
 @contato: inspira@piralabs.com.br
-@last-updated: 2026-05-10
+@last-updated: 2026-05-17
 @llms-txt: https://piralabs.com.br/llms.txt
 
 
@@ -93,8 +93,7 @@ Quem não deveria contratar: decisor sem autonomia real, empresa em crise aguda,
 ### Oxigênio IA Search · Subproduto do INSPIRA
 URL: https://piralabs.com.br/inspira/oxigenio
 Prazo: 5 dias úteis
-Preço primeira rodada: R$6.200 (5 vagas para fundadores)
-Preço regular: R$9.800 (a partir da 6ª rodada)
+Preços: Fast R$4.400 | Full R$8.900 | Upgrade Fast→Full R$4.500 (dentro de 30 dias)
 
 Diagnóstico de como a empresa aparece nos motores de IA: ChatGPT, Claude, Gemini, Perplexity e Copilot. Entrega laudo de presença por motor, análise de gaps, recomendações priorizadas e sessão de leitura conjunta de 60 minutos.
 

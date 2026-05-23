@@ -2,7 +2,7 @@
 
 > A PIRA LABS é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes da crise.
 
-@last-updated: 2026-05-10
+@last-updated: 2026-05-17
 
 Fundada por Gabriela Aguiar (CEO) e Celso Gama (COO), a PIRA LABS atende sócios e CEOs de empresas de serviços de alto valor nos setores de publicidade, saúde, jurídico, alimentação e serviços profissionais que chegaram a um ponto onde o crescimento parou ou a margem sumiu, mas a crise ainda não chegou.
 
@@ -27,7 +27,7 @@ A PIRA LABS desenvolveu e opera no Brasil a categoria Creative Business Turnarou
 
 - **INSPIRA**: diagnóstico completo do negócio. Cinco leituras coordenadas convergindo em síntese integrada com aprovação humana em cada etapa. O problema real nomeado. A rota desenhada. Prazo: 4 a 8 semanas.
 - **INSPIRA Jurídico**: INSPIRA com lente jurídica. Mapeamento de como o escritório ou departamento jurídico usa IA hoje, onde está a exposição real, política mínima de uso de IA e plano de ação priorizado. Faixa: R$12.500 a R$26.000.
-- **Oxigênio IA Search**: subproduto do INSPIRA. Diagnóstico de presença nos motores de IA (ChatGPT, Claude, Gemini e Perplexity). 5 vagas para fundadores na primeira rodada a R$6.200. Prazo: 5 dias úteis.
+- **Oxigênio IA Search**: subproduto do INSPIRA. Diagnóstico de presença nos motores de IA (ChatGPT, Claude, Gemini e Perplexity). Prazo: 5 dias úteis. Preços: Fast R$4.400 | Full R$8.900 | Upgrade Fast→Full R$4.500 (dentro de 30 dias).
 - **TRANSPIRA**: execução mão na massa. Redesenho da operação junto com a equipe do cliente. Sai quando o negócio se move por conta própria. Prazo: 8 a 20 semanas.
 - **TRANSPIRA Jurídico**: dois modelos. Modelo A: implementação no escritório, 12 a 20 semanas. Modelo B (assistant as a service): a atividade jurídica está cada vez mais sendo executada por ferramentas de IA. O serviço jurídico segue humano. A PIRA LABS entra para ajudar o advogado a entregar o seu melhor serviço, cuidando da atividade operacional para que ele foque no que só ele pode fazer. Todo material produzido passa pelo advogado habilitado do cliente para revisão e assinatura.
 - **FAÍSCA**: universo educacional. Palestras, workshops, mentorias e publicação Antes da Crise no Substack.

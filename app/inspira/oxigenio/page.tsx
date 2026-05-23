@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     absolute: "Oxigênio IA Search · Diagnóstico de presença em IA · PIRA LABS",
   },
   description:
-    "Diagnóstico de como sua empresa aparece nos motores de IA. 5 vagas para fundadores a R$6.200. Entrega em 5 dias úteis.",
+    "Diagnóstico de como sua empresa aparece nos motores de IA: ChatGPT, Claude, Gemini e Perplexity. Prazo: 5 dias úteis. Fast R$4.400 | Full R$8.900.",
   alternates: {
     canonical: "https://piralabs.com.br/inspira/oxigenio",
   },
   openGraph: {
     title: "Oxigênio IA Search · PIRA LABS",
     description:
-      "Diagnóstico de presença em motores de IA. 5 vagas para fundadores, R$6.200 primeira rodada, 5 dias úteis.",
+      "Diagnóstico de presença nos motores de IA. Fast R$4.400 | Full R$8.900. Entrega em 5 dias úteis.",
     url: "https://piralabs.com.br/inspira/oxigenio",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
   },

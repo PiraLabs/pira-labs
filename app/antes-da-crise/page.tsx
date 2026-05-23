@@ -6,6 +6,8 @@ import { SOCIAL } from "@/lib/constants";
 import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
 import { buscarPostsSubstack } from "@/lib/substack-rss";
 
+// atualizado 17/05/2026
+
 const breadcrumb = breadcrumbSchema([
   { name: "Home", url: "https://piralabs.com.br/" },
   { name: "Antes da Crise", url: "https://piralabs.com.br/antes-da-crise" },

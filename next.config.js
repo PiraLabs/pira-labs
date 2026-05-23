@@ -30,6 +30,11 @@ const nextConfig = {
       { source: "/en/cases", destination: "/#provas", permanent: true },
       { source: "/en/contact", destination: "/contato", permanent: true },
 
+      // Proteção extra — EN sem prefixo /en/ (caso alguém tenha linkado sem prefixo)
+      { source: "/services", destination: "/inspira", permanent: true },
+      { source: "/about", destination: "/sobre", permanent: true },
+      { source: "/contact", destination: "/contato", permanent: true },
+
       // URLs em espanhol do site provisório (5 rotas /es/* do sitemap antigo)
       // Nota: /es/servicos e /es/contato usam nomenclatura PT incorreta para ES.
       // Manter mapeamento literal das rotas indexadas.
