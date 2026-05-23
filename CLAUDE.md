@@ -1,5 +1,5 @@
 # CLAUDE.md
-**Versão:** 3.0 · Maio 2026
+**Versão:** 3.1 · Maio 2026
 **Branch:** rebuild-v2
 **Ler este arquivo inteiro antes de qualquer ação.**
 **Comando de inicialização:** `/init` no início de cada sessão
@@ -51,6 +51,13 @@ npm run lint          # ESLint — resolver antes de commitar
 14. "Respondemos em até dois dias úteis." em toda página com CTA
 15. Não inventar copy. Onde não houver conteúdo: `<!-- COPY PENDENTE: [bloco-id] -->`
 16. /plan antes de qualquer tarefa não trivial. Aguardar confirmação antes de executar.
+17. GEO-SFE — aplicar em todas as páginas do rebuild:
+    - Parágrafos: 150 a 300 palavras por bloco
+    - 25 a 35% do conteúdo em tabelas ou listas
+    - Bold em 5 a 10% do conteúdo (prioridade: início de frase > fronteira de seção)
+    - Ao menos um número concreto nos primeiros 100 palavras de cada página
+    - Links internos: cada página linka para ao menos 2 páginas de produto
+18. Lighthouse alvo: Performance ≥96 mobile (não regredir do score atual do site)
 
 ---
 
@@ -107,11 +114,14 @@ export const ORIGINS = {
 ---
 
 ## VARIÁVEIS DE AMBIENTE (.env.local — não commitar)
+
+```
 NEXT_PUBLIC_FILLOUT_URL=[copiar do .env.local atual]
 NEXT_PUBLIC_FLAG_D1=false
 NEXT_PUBLIC_FLAG_D4=false
 NEXT_PUBLIC_FLAG_PULSO=false
 NEXT_PUBLIC_VAGAS_OXIGENIO=5
+```
 
 Copiar NEXT_PUBLIC_FILLOUT_URL do .env.local existente na master.
 Configurar as mesmas variáveis na Vercel em Project Settings > Environment Variables.
@@ -136,6 +146,7 @@ Todos em docs/ exceto onde indicado.
 | termos-de-uso-pira-labs-v1.md | Conteúdo jurídico de /termos |
 | schemas-json-ld.ts | Antes de qualquer schema JSON-LD |
 | prompt-fillout-notion-v2.md | Antes de implementar qualquer formulário |
+| pos-deploy/handoff-geo-aeo-23mai2026.md | Antes de implementar qualquer página editorial |
 
 **Discrepâncias a saber:**
 - componentes-compartilhados-v1.md tem CTA "Falar com a PIRA" e href /antes-da-crise.
@@ -166,13 +177,17 @@ Todos em docs/ exceto onde indicado.
 Fase 1: globals.css, tailwind.config.ts, layout.tsx, next.config.js, robots.ts, sitemap.ts
 Fase 2: Componentes shared (Header, Footer, CTA, FAQ, FinalCTA, CTAWithMicrocopy, FilloutEmbed)
 Fase 3: Home (/)
-Fase 4: /sobre e /creative-business-turnaround
+Fase 4: /sobre e /creative-business-turnaround (expandir com tabela CBT vs tradicional — ver handoff GEO)
 Fase 5: /inspira/oxigenio (página crítica de conversão)
 Fase 6: /inspira, /transpira, /faisca, /antes-pira, /contato
 Fase 7: Verticais jurídicas (/inspira/juridico, /transpira/juridico, /faisca/juridica)
 Fase 8: Legais e 404 (/politica-privacidade, /termos, /cookies, not-found.tsx)
-Fase 9: Schemas JSON-LD em todas as páginas + llms.txt + ai-agents.json
-Fase 10: Lighthouse, testes, QA, deploy para preview Vercel
+Fase 8b: Páginas editoriais GEO — Deploy A (copy gerada pelo Code com specs GEO-SFE):
+         /crescimento-sem-margem (6 causas de margem sumindo em empresas de serviços)
+         /diagnostico-empresa-servicos (formato diagnóstico em 6 perguntas do ICP)
+Fase 9: Schemas JSON-LD em páginas de produto + llms.txt + ai-agents.json
+         Páginas editoriais recebem schemas após conteúdo estabilizado (decisão handoff GEO)
+Fase 10: Lighthouse ≥96 mobile, testes, QA, deploy para preview Vercel
 
 ---
 
@@ -187,4 +202,4 @@ Nunca marcar tarefa como concluída sem teste real.
 
 ---
 
-*CLAUDE.md v3.0 · PIRA LABS rebuild-v2 · Maio 2026*
+*CLAUDE.md v3.1 · PIRA LABS rebuild-v2 · Maio 2026*
