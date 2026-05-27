@@ -1,5 +1,5 @@
 # CLAUDE.md
-**Versão:** 3.1 · Maio 2026
+**Versão:** 3.3 · Maio 2026
 **Branch:** rebuild-v2
 **Ler este arquivo inteiro antes de qualquer ação.**
 **Comando de inicialização:** `/init` no início de cada sessão
@@ -11,7 +11,7 @@
 Celso Gama, COO e cofundador da PIRA LABS. Estamos fazendo o rebuild completo do site
 piralabs.com.br na branch rebuild-v2. O site atual continua no ar em master.
 Este rebuild é novo build a partir do zero, não edição do site existente.
-Fonte da verdade: PiraLabs_Documento_Mestre_v13.md
+Fonte da verdade: PiraLabs_Documento_Mestre_v14.md
 
 ---
 
@@ -45,19 +45,25 @@ npm run lint          # ESLint — resolver antes de commitar
    Gabriela: "Universal AI Foundational Modules (MIT)"
    Celso: "Applied AI Certificate Program (MIT)"
 10. Celso: "bacharelando em Direito (Mackenzie)" — nunca "advogado" ou "bacharel"
-11. /faisca/juridica é página própria. Nunca redirecionar para /transpira/juridico.
-12. CTA do header: "Respire" simples, sem microcopy
-13. CTA de página: componente <CTAWithMicrocopy /> com microcopy contextual como prop
-14. "Respondemos em até dois dias úteis." em toda página com CTA
-15. Não inventar copy. Onde não houver conteúdo: `<!-- COPY PENDENTE: [bloco-id] -->`
-16. /plan antes de qualquer tarefa não trivial. Aguardar confirmação antes de executar.
-17. GEO-SFE — aplicar em todas as páginas do rebuild:
+11. Gabriela: "docente em educação executiva" — nunca ecossistemas globais, nunca Plug and Play como conexão atual
+12. /faisca/juridica é página própria. Nunca redirecionar para /transpira/juridico.
+13. CTA do header: "Respire" simples, sem microcopy
+14. CTA de página: componente <CTAWithMicrocopy /> com microcopy contextual como prop
+15. "Respondemos em até dois dias úteis." em toda página com CTA
+16. Não inventar copy. Onde não houver conteúdo: `<!-- COPY PENDENTE: [bloco-id] -->`
+17. /plan antes de qualquer tarefa não trivial. Aguardar confirmação antes de executar.
+18. GEO-SFE — aplicar em todas as páginas do rebuild:
     - Parágrafos: 150 a 300 palavras por bloco
     - 25 a 35% do conteúdo em tabelas ou listas
     - Bold em 5 a 10% do conteúdo (prioridade: início de frase > fronteira de seção)
     - Ao menos um número concreto nos primeiros 100 palavras de cada página
     - Links internos: cada página linka para ao menos 2 páginas de produto
-18. Lighthouse alvo: Performance ≥96 mobile (não regredir do score atual do site)
+19. Lighthouse alvo: Performance ≥96 mobile (não regredir do score atual do site)
+20. "Mentorias" não existe mais como produto. Não mencionar em nenhum arquivo.
+21. Imersão em IA: R$7.100. Pocket do INSPIRA: R$3.900. Sem outro valor.
+22. Produto "Mentorias Especializadas" foi descontinuado. Não tem substituto direto.
+23. Camada 3 (Sopro, Fôlego, Pulso, Acústica, Pressão, Suspiro): aparecem nos nomes
+    das seis camadas do INSPIRA mas sem detalhar arquitetura interna no site.
 
 ---
 
@@ -98,18 +104,32 @@ Tokens provisórios até assets da KZ chegarem. Quando chegarem: só trocar toke
 
 ---
 
-## SISTEMA DE ORIGENS (13 oficiais)
+## SISTEMA DE ORIGENS (18 oficiais)
 
 ```typescript
 export const ORIGINS = {
-  HOME: "home", SOBRE: "sobre", INSPIRA: "inspira",
-  INSPIRA_JURIDICO: "inspira_juridico", OXIGENIO: "oxigenio",
-  TRANSPIRA: "transpira", TRANSPIRA_JURIDICO: "transpira_juridico",
-  FAISCA: "faisca", FAISCA_JURIDICA: "faisca_juridica",
+  HOME:                         "home",
+  SOBRE:                        "sobre",
+  INSPIRA:                      "inspira",
+  INSPIRA_JURIDICO:             "inspira_juridico",
+  OXIGENIO:                     "oxigenio",
+  TRANSPIRA:                    "transpira",
+  TRANSPIRA_JURIDICO:           "transpira_juridico",
+  TRANSPIRA_UNIFICADO:          "transpira_unificado",
+  FAISCA:                       "faisca",
+  FAISCA_JURIDICA:              "faisca_juridica",
+  FAISCA_IMERSA:                "faisca_imersa",
+  FAISCA_POCKET:                "faisca_pocket",
+  FAISCA_PALESTRAS:             "faisca_palestras",
+  FAISCA_WORKSHOPS:             "faisca_workshops",
+  FAISCA_CLEVEL:                "faisca_clevel",
   CREATIVE_BUSINESS_TURNAROUND: "creative_business_turnaround",
-  HEADER_GLOBAL: "header_global", NOT_FOUND: "404", DIRETO: "direto",
+  HEADER_GLOBAL:                "header_global",
+  NOT_FOUND:                    "404",
 } as const;
 ```
+
+Nota: `direto` foi removido do sistema de origens oficial (v4). Não incluir em rotas.
 
 ---
 
@@ -135,12 +155,14 @@ Todos em docs/ exceto onde indicado.
 | Arquivo | Quando ler |
 |---|---|
 | pacote-final-v3.md | Início de cada sessão |
-| wireframe-completo-site-pira-labs-v3_9_1.md | Antes de qualquer página — USAR ESTE, não v3.5 |
+| wireframe-completo-site-pira-labs-v4.md | Antes de qualquer página — USAR ESTE, não v3.9.1 nem v3.5 |
 | componentes-compartilhados-v1.md | Antes de Header, Footer, componentes shared |
-| copy-home-pira-labs-v2_1.md | Antes de implementar / |
-| copy-paginas-internas-pira-labs-v4_3.md | Antes de qualquer página interna |
-| copy-inspira-oxigenio-v1.md | Antes de /inspira/oxigenio |
-| copy-creative-business-turnaround-v1_1.md | Antes de /creative-business-turnaround |
+| copy-home-pira-labs-v2_2.md | Antes de implementar / |
+| copy-paginas-internas-pira-labs-v4_4.md | Antes de qualquer página interna |
+| copy-inspira-oxigenio-v1_1.md | Antes de /inspira/oxigenio |
+| copy-creative-business-turnaround-v1_2.md | Antes de /creative-business-turnaround |
+| copy-faisca-imersa-em-ia-v1.md | Antes de /faisca/imersa-em-ia |
+| copy-faisca-pocket-v1.md | Antes de /faisca/pocket |
 | copy-paginas-legais-v1.md | Antes de /politica-privacidade, /termos, /cookies |
 | politica-privacidade-pira-labs-v1.md | Conteúdo jurídico de /politica-privacidade |
 | termos-de-uso-pira-labs-v1.md | Conteúdo jurídico de /termos |
@@ -150,10 +172,13 @@ Todos em docs/ exceto onde indicado.
 
 **Discrepâncias a saber:**
 - componentes-compartilhados-v1.md tem CTA "Falar com a PIRA" e href /antes-da-crise.
-  Wireframe v3.9.1 prevalece: CTA "Respire", href /antes-pira, label "Antes, Pira".
-- componentes-compartilhados-v1.md pareado com wireframe v3.5. Wireframe v3.9.1 prevalece.
+  Wireframe v4 prevalece: CTA "Respire", href /antes-pira, label "Antes, Pira".
+- componentes-compartilhados-v1.md pareado com wireframe v3.5. Wireframe v4 prevalece.
+- copy-faisca-imersa-em-ia-v1.md e copy-faisca-pocket-v1.md vêm do projeto de conteúdo.
+  Se ainda não disponíveis em docs/ quando a Fase 6 iniciar: usar COPY PENDENTE em todos os blocos.
 
-**NÃO usar:** copy-vertical-juridica-v1.md (histórico), qualquer arquivo v3.4 e abaixo.
+**NÃO usar:** copy-vertical-juridica-v1.md (histórico), qualquer arquivo v3.4 e abaixo,
+wireframe v3.9.1 ou anterior, PiraLabs_Documento_Mestre_v13.md ou anterior.
 
 ---
 
@@ -169,24 +194,84 @@ Todos em docs/ exceto onde indicado.
 - <section id="provas"> obrigatório na home (destino de redirect de /cases)
 - container-site: classe custom em globals.css com max-width + padding lateral
 - public/robots.txt: deletar no rebuild. Next.js serve app/robots.ts, não o estático.
+- Toggle de idioma PT/EN persiste em cookie pira_lang
+- Vocabulário proprietário (INSPIRA, TRANSPIRA, FAÍSCA, RESPIRA, Oxigênio, "Antes, Pira") não traduz
 
 ---
 
 ## ORDEM DE IMPLEMENTAÇÃO
 
-Fase 1: globals.css, tailwind.config.ts, layout.tsx, next.config.js, robots.ts, sitemap.ts
-Fase 2: Componentes shared (Header, Footer, CTA, FAQ, FinalCTA, CTAWithMicrocopy, FilloutEmbed)
+Fase 1: globals.css, tailwind.config.ts, layout.tsx, next.config.js (com todos os redirects
+        abaixo), robots.ts, sitemap.ts
+
+        Redirects obrigatórios no next.config.js desta fase:
+        — /antes-da-crise → /antes-pira (301)
+        — /antesdacrise → /antes-pira (301)
+        — /imersa → /faisca/imersa-em-ia (301)
+        — /pocket → /faisca/pocket (301)
+        — /oxigenio → /inspira/oxigenio (301)
+        — /oxigenio-ia-search → /inspira/oxigenio (301)
+        — /faisca/ia-search → /inspira/oxigenio (301)
+        — /turnaround → /creative-business-turnaround (301)
+        — /cbt → /creative-business-turnaround (301)
+        — /servicos → /inspira (301)
+        — /cases → /#provas (301)
+        — /blog → /antes-pira (301)
+        — /news → /antes-pira (301)
+        — /services → /inspira (301)
+        — /about → /sobre (301)
+        — /contact → /contato (301)
+        — /en → / (301)
+        — /en/services → /inspira (301)
+        — /en/about → /sobre (301)
+        — /en/cases → /#provas (301)
+        — /en/contact → /contato (301)
+        — /es → / (301)
+        — /es/sobre → /sobre (301)
+        — /es/servicos → /inspira (301)
+        — /es/cases → /#provas (301)
+        — /es/contato → /contato (301)
+        Todos preservam query strings (UTMs).
+
+Fase 2: Componentes shared:
+        Header, Footer, PageHeader, CTA, FAQ, FinalCTA, CTAWithMicrocopy, FilloutEmbed
+        Componentes novos obrigatórios (v4):
+        <TranspiraConfigurations />, <UnifiedContract />,
+        <FaiscaGroup1 />, <FaiscaGroup2 />, <FaiscaGroup3 />,
+        <OfferHero />, <TargetProfile />, <ProcessSteps />,
+        <HowFirstContact />, <FounderProfile />, <MediaKit />
+
 Fase 3: Home (/)
-Fase 4: /sobre e /creative-business-turnaround (expandir com tabela CBT vs tradicional — ver handoff GEO)
+
+Fase 4: /sobre e /creative-business-turnaround
+        (expandir /cbt com tabela CBT vs tradicional — ver handoff GEO)
+
 Fase 5: /inspira/oxigenio (página crítica de conversão)
-Fase 6: /inspira, /transpira, /faisca, /antes-pira, /contato
+
+Fase 6: /inspira, /transpira, /faisca, /faisca/imersa-em-ia, /faisca/pocket,
+        /antes-pira, /contato
+        — /transpira requer <TranspiraConfigurations /> e <UnifiedContract />
+        — /faisca requer <FaiscaGroup1 />, <FaiscaGroup2 />, <FaiscaGroup3 />
+        — copy de imersa-em-ia e pocket devem estar em docs/ antes de iniciar esta fase
+
 Fase 7: Verticais jurídicas (/inspira/juridico, /transpira/juridico, /faisca/juridica)
+
 Fase 8: Legais e 404 (/politica-privacidade, /termos, /cookies, not-found.tsx)
+
 Fase 8b: Páginas editoriais GEO — Deploy A (copy gerada pelo Code com specs GEO-SFE):
          /crescimento-sem-margem (6 causas de margem sumindo em empresas de serviços)
          /diagnostico-empresa-servicos (formato diagnóstico em 6 perguntas do ICP)
-Fase 9: Schemas JSON-LD em páginas de produto + llms.txt + ai-agents.json
-         Páginas editoriais recebem schemas após conteúdo estabilizado (decisão handoff GEO)
+
+Fase 8c: EN mínimo viável:
+         /en (home EN), /en/about, /en/creative-business-turnaround, /en/contact
+         — hreflang em todas as páginas com versão equivalente
+         — toggle PT/EN no header (cookie pira_lang)
+         — estrutura app/[locale]/page.tsx com locale enum: 'pt-BR', 'en'
+
+Fase 9: Schemas JSON-LD em páginas de produto + llms.txt + llms-full.txt + ai-agents.json
+         Incluir produtos novos: Imersão em IA (R$7.100), Pocket do INSPIRA (R$3.900)
+         Schemas das páginas editoriais: após conteúdo estabilizado (decisão handoff GEO)
+
 Fase 10: Lighthouse ≥96 mobile, testes, QA, deploy para preview Vercel
 
 ---
@@ -202,4 +287,4 @@ Nunca marcar tarefa como concluída sem teste real.
 
 ---
 
-*CLAUDE.md v3.1 · PIRA LABS rebuild-v2 · Maio 2026*
+*CLAUDE.md v3.3 · PIRA LABS rebuild-v2 · Maio 2026*
