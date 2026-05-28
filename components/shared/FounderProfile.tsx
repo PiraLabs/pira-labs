@@ -25,7 +25,7 @@ export function FounderProfile({
         <div className="shrink-0">
           <Image
             src={photoSrc}
-            alt={photoAlt || `${name}, ${role} da PIRA LABS`}
+            alt={photoAlt || `${name}, ${role} da Pira Labs`}
             width={240}
             height={300}
             className="rounded-lg object-cover w-48 md:w-60"
@@ -46,7 +46,7 @@ export function FounderProfile({
           {credentials.map((cred, index) => (
             <li
               key={index}
-              className="text-sm text-off-white/60 font-body before:content-['·'] before:mr-2 before:text-peach"
+              className="text-sm text-off-white/60 font-body before:content-['·'] before:mr-2 before:text-orange"
             >
               {cred}
             </li>
@@ -57,7 +57,7 @@ export function FounderProfile({
             href={linkedinHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-peach underline hover:text-orange transition-colors font-body"
+            className="text-sm text-off-white/60 underline hover:text-orange transition-colors font-body"
             aria-label={`LinkedIn de ${name} (abre em nova aba)`}
           >
             LinkedIn

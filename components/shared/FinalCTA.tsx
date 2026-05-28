@@ -11,13 +11,13 @@ type FinalCTAProps = {
 export function FinalCTA({
   heading,
   origin,
-  ctaLabel = "Falar com a PIRA LABS",
+  ctaLabel = "Falar com a Pira Labs",
   showAsterisk = false,
 }: FinalCTAProps) {
   return (
     <section className="bg-ink section-padding">
       <div className="container-site text-center">
-        <p className="font-display text-2xl md:text-3xl italic text-peach mb-8 leading-snug max-w-2xl mx-auto">
+        <p className="font-display text-2xl md:text-3xl italic text-orange mb-8 leading-snug max-w-2xl mx-auto">
           {heading}
         </p>
         <CTAButton

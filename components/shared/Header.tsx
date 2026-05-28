@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FILLOUT_URL_HEADER } from "@/lib/constants";
 
 type ChildItem = { label: string; href: string };
 
@@ -44,10 +43,12 @@ const menuItems: MenuItem[] = [
     href: "/faisca",
     children: [
       { label: "Faísca", href: "/faisca" },
+      { label: "Imersão em IA", href: "/faisca/imersa-em-ia" },
+      { label: "Pocket do INSPIRA", href: "/faisca/pocket" },
       { label: "Faísca Jurídica", href: "/faisca/juridica" },
     ],
   },
-  { label: "Antes da Crise", href: "/antes-da-crise" },
+  { label: "Antes, Pira", href: "/antes-pira" },
 ];
 
 // Componente separado para item do menu mobile com submenu acordeão.
@@ -161,7 +162,7 @@ export function Header() {
     dropdownTimeout.current = setTimeout(() => setOpenDropdown(null), 300);
   }
 
-  const ctaHref = FILLOUT_URL_HEADER;
+  const ctaHref = "/contato?origem=header_global";
 
   return (
     <header
@@ -178,9 +179,9 @@ export function Header() {
           <Link
             href="/"
             className="text-off-white font-body font-semibold text-lg tracking-wide hover:text-orange transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
-            aria-label="PIRA LABS — página inicial"
+            aria-label="Pira Labs — página inicial"
           >
-            PIRA LABS
+            Pira Labs
           </Link>
 
           {/* Nav desktop */}
@@ -246,7 +247,7 @@ export function Header() {
               href={ctaHref}
               className="min-h-[44px] px-5 py-3 bg-orange text-ink font-body font-medium text-sm rounded transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
             >
-              Falar com a PIRA
+              Respire
             </Link>
           </div>
 
@@ -285,7 +286,7 @@ export function Header() {
                 href={ctaHref}
                 className="block w-full text-center min-h-[52px] px-6 py-4 bg-orange text-ink font-body font-medium text-base rounded transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
               >
-                Falar com a PIRA
+                Respire
               </Link>
             </div>
           </nav>

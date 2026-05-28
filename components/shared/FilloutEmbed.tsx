@@ -9,7 +9,7 @@ export default function FilloutEmbed() {
         <p className="text-off-white/60 font-body text-sm">
           Formulário Fillout pendente de configuração.
           <br />
-          <code className="text-peach text-xs">NEXT_PUBLIC_FILLOUT_URL</code> não definido.
+          <code className="text-orange text-xs">NEXT_PUBLIC_FILLOUT_URL</code> não definido.
         </p>
       </div>
     );
@@ -21,7 +21,7 @@ export default function FilloutEmbed() {
       width="100%"
       height="700"
       style={{ border: "none" }}
-      title="Formulário de contato PIRA LABS"
+      title="Formulário de contato Pira Labs"
       loading="lazy"
     />
   );

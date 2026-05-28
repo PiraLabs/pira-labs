@@ -11,7 +11,7 @@ const footerColumns = [
     links: [
       { label: "Sobre", href: "/sobre" },
       { label: "Creative Business Turnaround", href: "/creative-business-turnaround" },
-      { label: "Antes da Crise", href: "/antes-da-crise" },
+      { label: "Antes, Pira", href: "/antes-pira" },
       { label: "Contato", href: "/contato" },
     ],
   },
@@ -39,9 +39,9 @@ const footerColumns = [
         label: "inspira@piralabs.com.br",
         href: "mailto:inspira@piralabs.com.br",
         external: false,
-        ariaLabel: "Enviar email para PIRA LABS",
+        ariaLabel: "Enviar email para Pira Labs",
       },
-      { label: "LinkedIn PIRA LABS", href: SOCIAL.PIRA_LINKEDIN, external: true },
+      { label: "LinkedIn Pira Labs", href: SOCIAL.PIRA_LINKEDIN, external: true },
       { label: "LinkedIn Gabriela Aguiar", href: SOCIAL.GABRIELA_LINKEDIN, external: true },
       { label: "LinkedIn Celso Gama", href: SOCIAL.CELSO_LINKEDIN, external: true },
     ],
@@ -86,7 +86,7 @@ function FooterColumn({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.ariaLabel || `${link.label} (abre em nova aba)`}
-                className="text-sm font-body text-off-white/60 hover:text-peach transition-colors"
+                className="text-sm font-body text-off-white/60 hover:text-off-white transition-colors"
               >
                 {link.label}
                 <span className="sr-only"> (abre em nova aba)</span>
@@ -97,7 +97,7 @@ function FooterColumn({
               <Link
                 href={link.href}
                 aria-label={link.ariaLabel}
-                className="text-sm font-body text-off-white/60 hover:text-peach transition-colors"
+                className="text-sm font-body text-off-white/60 hover:text-off-white transition-colors"
               >
                 {link.label}
               </Link>
@@ -117,9 +117,9 @@ export function Footer() {
         <Link
           href="/"
           className="inline-block text-off-white font-body font-semibold text-xl tracking-wide mb-10 hover:text-orange transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
-          aria-label="PIRA LABS — página inicial"
+          aria-label="Pira Labs — página inicial"
         >
-          PIRA LABS
+          Pira Labs
         </Link>
 
         {/* Colunas */}
@@ -133,7 +133,7 @@ export function Footer() {
         <div className="h-px bg-off-white/10 mb-8" />
 
         {/* Assinatura Cormorant */}
-        <p className="font-display text-2xl italic text-peach text-center mb-8">
+        <p className="font-display text-2xl italic text-orange text-center mb-8">
           Liberamos o próximo nível.
         </p>
 
@@ -154,11 +154,11 @@ export function Footer() {
 
         {/* CNPJ e copyright */}
         <p className="text-xs font-body text-off-white/30 text-center mb-1">
-          PIRA LABS · CNPJ 46.954.891/0001-16 · São Paulo, Brasil
+          Pira Labs · CNPJ 46.954.891/0001-16 · São Paulo, Brasil
         </p>
         {/* suppressHydrationWarning evita mismatch SSR/cliente no getFullYear() */}
         <p className="text-xs font-body text-off-white/30 text-center mb-6" suppressHydrationWarning>
-          © {new Date().getFullYear()} PIRA LABS. Todos os direitos reservados.
+          © {new Date().getFullYear()} Pira Labs. Todos os direitos reservados.
         </p>
 
         {/* Aviso jurídico */}

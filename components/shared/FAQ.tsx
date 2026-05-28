@@ -37,7 +37,7 @@ export function FAQ({ items, heading = "Perguntas frequentes" }: FAQProps) {
         <div className="space-y-1">
           {items.map((item, index) => (
             <details key={index} className="border-b border-off-white/10 group">
-              <summary className="w-full flex items-start justify-between gap-4 py-5 text-left text-off-white font-body font-medium text-base md:text-lg hover:text-peach transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange">
+              <summary className="w-full flex items-start justify-between gap-4 py-5 text-left text-off-white font-body font-medium text-base md:text-lg hover:text-orange transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange">
                 <span>{item.question}</span>
                 <span
                   className="shrink-0 mt-0.5 transition-transform duration-200 group-open:rotate-45"
