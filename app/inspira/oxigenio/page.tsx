@@ -1,26 +1,29 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section } from "@/components/shared/Section";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { ProcessSteps } from "@/components/shared/ProcessSteps";
+import { TargetProfile } from "@/components/shared/TargetProfile";
 import { FAQ } from "@/components/shared/FAQ";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { ORIGINS, FLAGS, VAGAS_OXIGENIO, FILL_OUT_FORM_URL } from "@/lib/constants";
+import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
 
 export const metadata: Metadata = {
   title: {
     absolute: "Oxigênio IA Search · Diagnóstico de presença em IA · PIRA LABS",
   },
   description:
-    "Diagnóstico de como sua empresa aparece nos motores de IA: ChatGPT, Claude, Gemini e Perplexity. Prazo: 5 dias úteis. Fast R$4.400 | Full R$8.900.",
+    "Diagnóstico de como sua empresa aparece nos motores de IA. Fast R$3.500, Full R$5.300. Relatório em até 5 dias úteis.",
   alternates: {
     canonical: "https://piralabs.com.br/inspira/oxigenio",
   },
   openGraph: {
     title: "Oxigênio IA Search · PIRA LABS",
     description:
-      "Diagnóstico de presença nos motores de IA. Fast R$4.400 | Full R$8.900. Entrega em 5 dias úteis.",
+      "Fast R$3.500 · Full R$5.300. Diagnóstico de presença em motores de IA. Relatório em até 5 dias úteis.",
     url: "https://piralabs.com.br/inspira/oxigenio",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 
@@ -30,299 +33,328 @@ const breadcrumbs = [
   { label: "Oxigênio IA Search" },
 ];
 
-const entregas = [
-  {
-    title: "Análise da sua presença nos quatro LLMs principais",
-    description:
-      "ChatGPT, Claude, Gemini e Perplexity. Como sua empresa aparece quando perguntada sobre o setor, sobre a categoria onde ela compete e sobre nomes específicos. O que aparece, o que não aparece e o que aparece errado.",
-  },
-  {
-    title: "Mapa de gaps semânticos",
-    description:
-      "Onde sua empresa deveria aparecer e não aparece. Quais termos de busca relevantes para o seu negócio estão sendo respondidos sem você. Por que isso acontece e como isso muda.",
-  },
-  {
-    title: "Lista priorizada de correções",
-    description:
-      "Tudo organizado por urgência e por esforço. Onde você ganha mais com menos. O que precisa ser corrigido com cuidado e em qual ordem.",
-  },
-  {
-    title: "Recomendações de quick wins",
-    description:
-      "Ações específicas que você pode executar nos próximos 30 dias para começar a corrigir. Sem necessidade de equipe técnica especializada para a maioria delas.",
-  },
-  {
-    title: "Sessão de leitura conjunta de 30 a 45 minutos",
-    description:
-      "Encontro online com Gabriela e Celso para apresentar o diagnóstico, responder perguntas e definir o que faz sentido para você como próximo passo.",
-  },
-];
-
 const passos = [
   {
-    title: "Aplicação online",
+    title: "Aplicação",
     description:
-      "Você preenche um formulário de aplicação com informações básicas sobre a empresa, o setor, o momento. Leva entre 5 e 10 minutos.",
+      "Você preenche o formulário com informações básicas sobre a empresa, setor e contexto. Leva 5 a 10 minutos.",
   },
   {
-    title: "Confirmação e onboarding em até 24h",
+    title: "Confirmação em até 24h",
     description:
-      "Se o seu caso encaixa no escopo, enviamos confirmação, link de pagamento e um briefing curto para você preencher com detalhes do contexto. Se não encaixa, dizemos antes de começar.",
+      "Se o seu caso encaixa no escopo, enviamos confirmação e briefing curto. Se não encaixa, dizemos antes de começar. Sem cobrança.",
   },
   {
-    title: "Análise rodando",
+    title: "Execução do diagnóstico",
     description:
-      "A partir do recebimento do briefing preenchido, a PIRA LABS executa a análise. 1 aplicação fechada: entrega em até 36 horas. Até 3 aplicações: entrega em até 72 horas. Até 5 aplicações: entrega em até 5 dias úteis.",
+      "A partir do briefing preenchido, executamos o Oxigênio. Prazo: até 5 dias úteis a partir do recebimento do briefing.",
   },
   {
     title: "Sessão de leitura conjunta",
     description:
-      "Encontro de 30 a 45 minutos para apresentar o diagnóstico ao decisor. Online, com Gabriela e Celso. Pode incluir até dois convidados pelo cliente, conforme acordado na confirmação.",
+      "Encontro online com Gabriela e Celso para apresentar o diagnóstico. Fast: 45 minutos. Full: 60 minutos. Pode incluir até dois convidados do cliente.",
   },
 ];
 
 const faqItems = [
   {
-    question: "Por que não pesquiso por conta própria?",
+    question: "Por que não faço a pesquisa por conta própria?",
     answer:
-      "Você pode pesquisar. Muitos decisores fazem isso e descobrem alguns achados rápidos. O que o Oxigênio entrega é diferente em três pontos: o cruzamento entre quatro LLMs com queries específicas do seu setor, a leitura interpretativa do que cada padrão de resposta significa, e a priorização de correções por esforço versus impacto. A diferença entre rodar uma busca em ChatGPT e fazer um diagnóstico de presença em IA é parecida com a diferença entre olhar para um exame e ter um médico interpretando o exame.",
+      "Você pode. A diferença está em três pontos: cruzamento de quatro plataformas com queries específicas do seu setor, leitura interpretativa do que cada padrão de resposta revela, e priorização de ações por esforço versus impacto. A diferença entre rodar uma busca no ChatGPT e ter um diagnóstico estruturado é parecida com a diferença entre olhar um exame e ter alguém interpretando o que ele revela.",
   },
   {
-    question: "Como sei que funciona se a PIRA LABS é nova?",
+    question: "O Oxigênio é a mesma coisa que SEO?",
     answer:
-      "Honestidade primeiro: a PIRA LABS é nova como empresa, fundada em 2025. O método do INSPIRA, do qual o Oxigênio é subproduto, foi desenvolvido ao longo de mais de duas décadas de operação real em empresas de serviços. As credenciais de quem conduz estão na página /sobre, com casos verificáveis. Para o Oxigênio especificamente, rodamos o método na própria PIRA antes de oferecer. Os achados estão sendo publicados como parte da campanha.",
+      "Não. SEO trata de como seu site aparece em buscadores como Google. O Oxigênio diagnostica como sua empresa aparece em respostas de modelos de IA como ChatGPT, Claude, Gemini e Perplexity. São sistemas e lógicas diferentes. O que funciona em SEO tradicional não garante visibilidade em IA Search.",
   },
   {
-    question: "Vocês conhecem meu setor?",
+    question: "Quanto tempo demora?",
     answer:
-      "Empresas de serviços com foco maior em publicidade, saúde, jurídico, alimentação e serviços profissionais especializados. Se o seu setor é um desses, há repertório direto. Se não é, o método se aplica, mas pode haver limitação de comparação setorial específica. Em caso de dúvida, conte na aplicação qual é o seu contexto e respondemos honestamente antes de você pagar.",
+      "Até 5 dias úteis a partir do recebimento do briefing preenchido.",
   },
   {
-    question: "Por que tem prazo escalonado em vez de 72 horas fixas para todos?",
+    question: "O Oxigênio inclui execução das ações?",
     answer:
-      "Porque vocês são duas pessoas conduzindo a análise inteira sem equipe intermediária, e fazer 5 análises em 72 horas comprometeria a qualidade. O escalonamento garante que cada cliente receba o mesmo nível de atenção, na ordem em que aplicou.",
+      "Não. O Oxigênio entrega o diagnóstico e os próximos passos priorizados. Execução é decisão do cliente. Para quem quer apoio na execução, o próximo passo depende do que o diagnóstico revela.",
   },
   {
-    question: "Posso aplicar e desistir antes de pagar?",
+    question: "Qual a diferença entre Fast e Full?",
     answer:
-      "Pode. A aplicação não cria obrigação. Avaliamos se o caso encaixa no escopo, conversamos com você se for o caso, e só seguimos para pagamento após sua confirmação. Se em qualquer ponto antes do pagamento você quiser parar, é só dizer.",
-  },
-  {
-    question: "O que acontece se eu não gostar do resultado?",
-    answer:
-      "Antes do encontro de leitura conjunta, você recebe o relatório por escrito. Se algo no diagnóstico não fizer sentido para você, abrimos espaço na sessão para discutir, refinar interpretação e ajustar onde for justo. Não trabalhamos com garantia de satisfação genérica. Trabalhamos com diagnóstico honesto e disposição para ouvir crítica do cliente.",
+      "O Fast responde como você aparece hoje. O Full responde isso e também por que você aparece pior, aparece errado ou não aparece diante de um concorrente específico, com causa nomeada, três ações customizadas, âncora financeira e reexecução em 60 dias para medir variação.",
   },
   {
     question: "Vocês assinam NDA?",
     answer:
-      "Sim. Acordo de confidencialidade assinado antes de qualquer troca de informação ou acesso a dados da empresa. NDA é base canônica de todo trabalho da PIRA LABS, independente do produto. Você recebe o documento antes de pagar.",
+      "Sim. Quando o diagnóstico exigir informação sensível ou briefing detalhado, assinamos NDA antes do acesso. O formulário inicial coleta apenas dados básicos para avaliar encaixe.",
   },
   {
-    question: "Vocês compartilham os dados da minha empresa com outros clientes ou com terceiros?",
+    question: "O que acontece se meu caso não encaixar no escopo?",
     answer:
-      "Não. Cada análise é confidencial entre o cliente, a Gabriela e o Celso. Quando publicamos achados gerais sobre o que IA Search está fazendo no mercado, é a partir de padrões agregados, nunca de empresa específica sem autorização explícita por escrito.",
-  },
-  {
-    question: "O Oxigênio leva ao INSPIRA completo?",
-    answer:
-      "Em alguns casos sim, em alguns casos não. O Oxigênio resolve uma pergunta específica (como sua empresa aparece nos motores de IA). O INSPIRA completo é diagnóstico de cinco áreas do negócio. Se na sessão de leitura conjunta surgir indicação de que faz sentido aprofundar, conversamos sobre INSPIRA. Não há obrigação nem desconto vinculado.",
+      "Dizemos antes de qualquer cobrança. A confirmação de aplicação não cria obrigação financeira. Se o caso não encaixa, indicamos o que faria mais sentido.",
   },
 ];
 
-// Service schema — datas de validade da primeira rodada precisam ser preenchidas antes do deploy.
-// Atualizar validFrom e validThrough conforme data de início e fim da campanha.
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://piralabs.com.br/inspira/oxigenio#service",
   name: "Oxigênio IA Search",
   description:
-    "Diagnóstico de como empresas de serviços aparecem nos motores de inteligência artificial. Subproduto do INSPIRA da PIRA LABS.",
+    "Diagnóstico de como empresas de serviços aparecem nos motores de inteligência artificial. Subproduto do INSPIRA da Pira Labs.",
   provider: {
     "@id": "https://piralabs.com.br/#organization",
   },
-  serviceType: "Análise de presença em IA Search",
-  audience: {
-    "@type": "BusinessAudience",
-    audienceType:
-      "Decisores de empresas de serviços (publicidade, saúde, jurídico, alimentação, serviços profissionais)",
-  },
-  areaServed: {
-    "@type": "Country",
-    name: "Brasil",
-  },
+  serviceType: "Diagnóstico de presença em IA Search",
+  areaServed: { "@type": "Country", name: "Brasil" },
   offers: [
     {
       "@type": "Offer",
-      name: "Oxigênio IA Search · Primeira rodada · 5 vagas para fundadores",
+      name: "Oxigênio IA Search Fast",
       priceSpecification: {
         "@type": "PriceSpecification",
-        price: "6200",
+        price: "3500",
         priceCurrency: "BRL",
-      },
-      availability: "https://schema.org/LimitedAvailability",
-      eligibleQuantity: {
-        "@type": "QuantitativeValue",
-        value: 5,
       },
     },
     {
       "@type": "Offer",
-      name: "Oxigênio IA Search · Preço regular",
+      name: "Oxigênio IA Search Full",
       priceSpecification: {
         "@type": "PriceSpecification",
-        price: "9800",
+        price: "5300",
         priceCurrency: "BRL",
       },
-      availability: "https://schema.org/InStock",
     },
   ],
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+
+const bcSchema = breadcrumbSchema([
+  { name: "Home", url: "https://piralabs.com.br/" },
+  { name: "Inspira", url: "https://piralabs.com.br/inspira" },
+  { name: "Oxigênio IA Search", url: "https://piralabs.com.br/inspira/oxigenio" },
+]);
 
 export default function OxigenioPage() {
   const applyUrl = `${FILL_OUT_FORM_URL}?origem=${ORIGINS.OXIGENIO}`;
 
   return (
     <>
-      {/* Schema Service */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bcSchema) }} />
 
-      {/* OXIGENIO-1 · Header */}
+      {/* OXIGENIO-1 · Header da página */}
       <div className="bg-ink">
         <PageHeader
           breadcrumbs={breadcrumbs}
           h1="Oxigênio IA Search"
-          subtitle="Diagnóstico de como sua empresa de serviços aparece nos motores de IA, antes que isso vire decisão de cliente que você nem viu chegando."
+          subtitle="Diagnóstico de como sua empresa aparece quando alguém pergunta para uma IA sobre o seu setor."
         />
       </div>
 
       {/* OXIGENIO-2 · Hero da oferta */}
       <Section variant="default" paddingY="lg">
         <p className="text-xs font-body font-semibold uppercase tracking-widest text-orange/80 mb-4">
-          Subproduto do INSPIRA. Escopo fechado. Prazo curto. Preço público.
+          Subproduto do INSPIRA. Escopo fechado. Preço público.
         </p>
-        <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6 max-w-3xl">
-          Você sabe como sua empresa aparece quando alguém pergunta para uma IA
-          sobre o seu setor?
-        </h2>
-        <p className="text-off-white/80 font-body leading-relaxed max-w-3xl mb-10">
-          Decisores estão fazendo perguntas para IAs antes de pedir reunião.
-          Concorrentes estão sendo recomendados ou descartados em conversas que
-          sua empresa não vê acontecer. O Oxigênio IA Search é o diagnóstico de
-          como sua presença chega nesses motores, e o que precisa mudar para
-          chegar como deveria.
+        <p className="text-off-white/85 font-body leading-relaxed max-w-3xl mb-10">
+          Parte das decisões de consideração já acontece antes do formulário,
+          antes da reunião, antes do contato direto. Em muitos casos, essa busca
+          passa por motores de inteligência artificial. O Oxigênio IA Search
+          diagnostica como sua empresa aparece nessa etapa, e o que mudar para
+          que sua presença seja lida com mais clareza pelos motores de
+          inteligência artificial.
         </p>
 
-        {/* Bloco de oferta */}
-        <div className="bg-teal/20 border border-teal/40 rounded-lg p-8 max-w-lg mb-10">
-          <div className="space-y-4">
-            <div className="flex justify-between items-start border-b border-off-white/10 pb-4">
-              <span className="text-off-white/60 font-body text-sm">
-                Investimento · primeira rodada
-              </span>
-              <div className="text-right">
-                <p className="font-body text-sm text-off-white/40 line-through">
-                  R$9.800
-                </p>
-                <p className="font-display text-2xl text-peach leading-tight">
-                  R$6.200
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-between items-center border-b border-off-white/10 pb-4">
-              <span className="text-off-white/60 font-body text-sm">
-                Vagas nesta rodada
-              </span>
-              <span className="text-off-white font-body font-semibold text-sm">
-                {VAGAS_OXIGENIO} vagas para fundadores
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-off-white/60 font-body text-sm">
-                Prazo de entrega
-              </span>
-              <span className="text-off-white font-body font-semibold text-sm">
-                até 5 dias úteis
-              </span>
-            </div>
-          </div>
+        {/* Tabela Fast vs Full */}
+        <div className="overflow-x-auto max-w-3xl mb-8">
+          <table className="w-full text-sm font-body border-collapse">
+            <thead>
+              <tr className="border-b border-teal/40">
+                <th className="text-left py-3 pr-6 text-off-white/40 font-semibold w-40"></th>
+                <th className="text-left py-3 pr-6 text-off-white font-semibold">
+                  Fast <span className="text-orange ml-1">R$3.500</span>
+                </th>
+                <th className="text-left py-3 text-off-white font-semibold">
+                  Full <span className="text-orange ml-1">R$5.300</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-teal/20">
+              <tr>
+                <td className="py-3 pr-6 text-off-white/50 align-top">Queries</td>
+                <td className="py-3 pr-6 text-off-white/80 align-top">5 queries em 4 plataformas</td>
+                <td className="py-3 text-off-white/80 align-top">5 queries + frente do concorrente</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-6 text-off-white/50 align-top">Respostas</td>
+                <td className="py-3 pr-6 text-off-white/80 align-top">60 respostas coletadas e classificadas</td>
+                <td className="py-3 text-off-white/80 align-top">60 + 200 respostas adicionais</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-6 text-off-white/50 align-top">Entrega</td>
+                <td className="py-3 pr-6 text-off-white/80 align-top">Relatório de 2 páginas com evidência literal</td>
+                <td className="py-3 text-off-white/80 align-top">
+                  Tudo do Fast + gap nomeado com causa específica + 3 ações customizadas + âncora financeira
+                </td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-6 text-off-white/50 align-top">Sessão</td>
+                <td className="py-3 pr-6 text-off-white/80 align-top">Leitura conjunta 45 minutos</td>
+                <td className="py-3 text-off-white/80 align-top">Leitura conjunta 60 minutos</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-6 text-off-white/50 align-top">Ciclo</td>
+                <td className="py-3 pr-6 text-off-white/80 align-top">Entrega única</td>
+                <td className="py-3 text-off-white/80 align-top">Reexecução metodológica em 60 dias</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-6 text-off-white/50 align-top">Prazo</td>
+                <td className="py-3 pr-6 text-off-white/80 align-top">Até 5 dias úteis</td>
+                <td className="py-3 text-off-white/80 align-top">Até 5 dias úteis</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        {/* CTAs hero */}
-        <div className="flex flex-wrap gap-4">
+        {/* Vagas + CTA */}
+        <p className="text-off-white/70 font-body text-sm mb-6">
+          <strong className="text-off-white">{VAGAS_OXIGENIO} vagas disponíveis.</strong>
+        </p>
+        <div className="flex flex-wrap gap-4 items-center">
           <CTAButton variant="primary" href="#aplicar">
             Aplicar agora
           </CTAButton>
-          <CTAButton variant="secondary" href="#metodo">
-            Ver como funciona
-          </CTAButton>
+          <p className="text-off-white/50 font-body text-sm">
+            5 dias úteis para o relatório. Respondemos em até 24h.
+          </p>
         </div>
       </Section>
 
-      {/* OXIGENIO-3 · Para quem é */}
+      {/* OXIGENIO-3 · O que é e o que não é */}
       <Section variant="highlighted" paddingY="lg">
-        <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-3">
-          Para quem é o Oxigênio IA Search
+        <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
+          O que é e o que não é
         </h2>
-        <p className="text-off-white/70 font-body mb-10 max-w-2xl">
-          Decisores de empresas de serviços que querem entender como a marca
-          chega nos motores de IA antes de tomar decisão maior.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-          {[
-            {
-              titulo: "Você desconfia que está perdendo conversas que nem chegam até você",
-              texto:
-                "Cliente potencial pergunta para uma IA \"qual a melhor empresa de [seu setor] em [sua região]\" e o resultado define quem é convidado para reunião. Se sua empresa não aparece, a conversa termina antes de começar.",
-            },
-            {
-              titulo: "Você investiu em conteúdo, presença digital ou mídia paga e não converteu como esperava",
-              texto:
-                "Tem post, tem site, tem LinkedIn, tem alguma mídia. Mas a tradução de visibilidade humana para visibilidade de IA é diferente. O que ranqueia em busca tradicional não é necessariamente o que aparece em motor de IA.",
-            },
-            {
-              titulo: "Você está prestes a fazer movimento maior e quer começar com o terreno mapeado",
-              texto:
-                "Antes de gastar tempo e capital em mudança grande, vale entender de que ponto você está partindo nos motores de IA. Sair do lugar errado custa mais do que sair do lugar certo.",
-            },
-          ].map((p) => (
-            <div
-              key={p.titulo}
-              className="bg-ink/40 border border-off-white/10 rounded-lg p-6"
-            >
-              <p className="text-orange font-body font-semibold text-sm mb-2">
-                {p.titulo}
-              </p>
-              <p className="text-off-white/75 font-body text-sm leading-relaxed">
-                {p.texto}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="border-l-2 border-off-white/20 pl-6 max-w-2xl">
-          <p className="text-xs font-body font-semibold uppercase tracking-widest text-off-white/40 mb-2">
-            Quem não deve aplicar
-          </p>
-          <p className="text-off-white/60 font-body text-sm leading-relaxed mb-2">
-            Quem está comparando preço de SEO. O Oxigênio IA Search não é
-            serviço de SEO técnico. É diagnóstico de presença em motores de
-            inteligência artificial, com leitura de quatro LLMs, mapa de gaps
-            semânticos e priorização de correções.
-          </p>
-          <p className="text-off-white/60 font-body text-sm leading-relaxed">
-            Quem espera resultado em LinkedIn ou Google em 5 dias úteis. O
-            resultado do Oxigênio é diagnóstico, não execução. A execução é
-            decisão sua a partir do diagnóstico.
-          </p>
+        <div className="max-w-3xl space-y-6">
+          <div>
+            <p className="text-xs font-body font-semibold uppercase tracking-widest text-orange/80 mb-3">
+              O que é
+            </p>
+            <p className="text-off-white/85 font-body leading-relaxed mb-3">
+              O Oxigênio IA Search é um diagnóstico de presença em motores de
+              IA. Rodamos queries específicas do seu setor em ChatGPT, Claude,
+              Gemini e Perplexity, coletamos as respostas, classificamos o que
+              aparece sobre você, sobre seus concorrentes e sobre o seu setor, e
+              entregamos evidência literal com próximos passos priorizados.
+            </p>
+            <p className="text-off-white/85 font-body leading-relaxed">
+              <strong className="text-off-white">O que o cliente recebe ao final:</strong>{" "}
+              sabe como aparece hoje, quem está no mesmo espaço semântico, onde
+              está o gap específico, e o que fazer primeiro.
+            </p>
+          </div>
+          <div className="border-l-2 border-off-white/20 pl-6">
+            <p className="text-xs font-body font-semibold uppercase tracking-widest text-off-white/40 mb-3">
+              O que não é
+            </p>
+            <p className="text-off-white/60 font-body leading-relaxed">
+              Oxigênio IA Search não é SEO técnico, não é gestão de mídia paga,
+              não é criação de conteúdo e não é gestão de redes sociais. É
+              diagnóstico. O que o cliente faz com o diagnóstico é decisão dele.
+            </p>
+          </div>
         </div>
       </Section>
 
-      {/* OXIGENIO-4 · Vídeo de método (D4) */}
+      {/* OXIGENIO-4 · Fast vs Full: quando cada um faz sentido */}
+      <Section variant="default" paddingY="lg">
+        <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-4">
+          Fast ou Full: quando cada um faz sentido
+        </h2>
+        <p className="text-off-white/70 font-body mb-8 max-w-2xl">
+          O Fast responde como a empresa aparece hoje. O Full responde por que
+          aparece pior, aparece errado ou não aparece diante de um concorrente
+          identificado, e o que mudar primeiro.
+        </p>
+        <div className="overflow-x-auto max-w-3xl mb-6">
+          <table className="w-full text-sm font-body border-collapse">
+            <thead>
+              <tr className="border-b border-teal/40">
+                <th className="text-left py-3 pr-6 text-off-white/50 font-semibold">Pergunta</th>
+                <th className="text-left py-3 pr-6 text-off-white font-semibold">Fast</th>
+                <th className="text-left py-3 text-off-white font-semibold">Full</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-teal/20">
+              <tr>
+                <td className="py-3 pr-6 text-off-white/75 align-top">Você quer saber como aparece hoje?</td>
+                <td className="py-3 pr-6 text-orange font-semibold align-top">✓</td>
+                <td className="py-3 text-orange font-semibold align-top">✓</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-6 text-off-white/75 align-top">Há um concorrente específico para comparar?</td>
+                <td className="py-3 pr-6 text-off-white/40 align-top">Não inclui</td>
+                <td className="py-3 text-orange font-semibold align-top">✓</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-6 text-off-white/75 align-top">Quer causa nomeada do gap, não só o gap?</td>
+                <td className="py-3 pr-6 text-off-white/40 align-top">Não inclui</td>
+                <td className="py-3 text-orange font-semibold align-top">✓</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-6 text-off-white/75 align-top">Quer reexecução metodológica em 60 dias?</td>
+                <td className="py-3 pr-6 text-off-white/40 align-top">Não inclui</td>
+                <td className="py-3 text-orange font-semibold align-top">✓</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-6 text-off-white/75 align-top">Quer âncora financeira do impacto?</td>
+                <td className="py-3 pr-6 text-off-white/40 align-top">Não inclui</td>
+                <td className="py-3 text-orange font-semibold align-top">✓</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-6 text-off-white/75 align-top">Budget disponível?</td>
+                <td className="py-3 pr-6 text-off-white font-semibold align-top">R$3.500</td>
+                <td className="py-3 text-off-white font-semibold align-top">R$5.300</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-off-white/60 font-body text-sm max-w-xl">
+          <strong className="text-off-white/80">Dúvida entre Fast e Full?</strong>{" "}
+          Diga no formulário. Na confirmação, indicamos qual faz mais sentido para o seu contexto.
+        </p>
+      </Section>
+
+      {/* OXIGENIO-5 · Para quem é */}
+      <Section variant="highlighted" paddingY="lg">
+        <TargetProfile
+          heading="Para quem faz sentido aplicar"
+          items={[
+            "Decisor que desconfia que sua empresa não aparece onde o cliente pesquisa antes de pedir reunião, mas não tem evidência concreta disso.",
+            "Empresa que investiu em conteúdo, site ou presença digital e não converteu como esperava. Antes de gastar mais, quer entender o que os motores de IA leem do que já existe.",
+            "Empresa em movimento (rebrand, novo produto, expansão de setor) que quer saber de qual ponto está partindo nos motores de IA antes de agir.",
+          ]}
+          notForItems={[
+            "Empresas sem ICP minimamente definido.",
+            "Negócios sem presença pública mínima.",
+            "Quem busca SEO técnico, mídia paga ou gestão de redes sociais.",
+            "Quem não pretende executar nenhuma ação depois do diagnóstico.",
+          ]}
+        />
+      </Section>
+
+      {/* OXIGENIO-6 · Vídeo de método (D4) */}
       <Section variant="default" paddingY="lg" id="metodo">
         {FLAGS.D4_ATIVO ? (
           <>
@@ -330,240 +362,180 @@ export default function OxigenioPage() {
               Como funciona, em 5 minutos
             </h2>
             <p className="text-off-white/70 font-body mb-8 max-w-2xl">
-              Gabriela Aguiar, CEO da PIRA LABS, mostra como o Oxigênio IA
-              Search é executado. O exemplo é ilustrativo, declarado como tal.
+              Gabriela Aguiar, CEO da Pira Labs, mostra como o Oxigênio IA
+              Search é executado, com exemplo ilustrativo.
             </p>
-            {/* Embed vai aqui quando D4 ativo */}
             <div className="bg-teal/20 border border-teal/40 rounded-lg aspect-video max-w-3xl flex items-center justify-center">
               <p className="text-off-white/40 font-body text-sm">
-                [INSERIR_EMBED_LOOM_OU_YOUTUBE]
+                [INSERIR_EMBED_QUANDO_DISPONÍVEL]
               </p>
             </div>
           </>
         ) : (
           <div className="border border-dashed border-off-white/20 rounded-lg p-8 max-w-2xl">
             <p className="text-off-white/50 font-body text-sm leading-relaxed">
-              O vídeo de método está sendo gravado. Em breve, a Gabriela
-              apresenta aqui como o Oxigênio IA Search é executado, em até 5
-              minutos. Enquanto isso, a página abaixo descreve o escopo
-              completo do produto.
+              O vídeo de método está sendo gravado. Abaixo, a descrição completa
+              do escopo e do processo.
             </p>
           </div>
         )}
       </Section>
 
-      {/* OXIGENIO-5 · O que está incluído */}
+      {/* OXIGENIO-7 · Como funciona */}
       <Section variant="highlighted" paddingY="lg">
-        <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-8">
-          O que você recebe
-        </h2>
         <div className="max-w-2xl">
-          <ProcessSteps steps={entregas} />
-        </div>
-
-        {/* Fora do escopo */}
-        <div className="mt-12 border-l-2 border-off-white/20 pl-6 max-w-2xl">
-          <p className="text-xs font-body font-semibold uppercase tracking-widest text-off-white/40 mb-3">
-            O que está fora do escopo
-          </p>
-          <p className="text-off-white/60 font-body text-sm leading-relaxed mb-2">
-            O Oxigênio IA Search é diagnóstico, não execução. Não inclui
-            implementação das correções recomendadas, criação de conteúdo,
-            otimização técnica do site, gestão de mídia paga ou consultoria de
-            SEO tradicional. Quem decide o que fazer com o diagnóstico é você.
-          </p>
-          <p className="text-off-white/60 font-body text-sm leading-relaxed">
-            Se a sua empresa quer apoio na execução depois do Oxigênio,
-            conversamos sobre TRANSPIRA ou sobre INSPIRA completo, conforme o
-            caso.
-          </p>
+          <ProcessSteps heading="Como funciona" steps={passos} />
         </div>
       </Section>
 
-      {/* OXIGENIO-6 · Como funciona */}
+      {/* OXIGENIO-8 · Quem conduz */}
       <Section variant="default" paddingY="lg">
-        <div className="max-w-2xl">
-          <ProcessSteps heading="Como funciona, passo a passo" steps={passos} />
-        </div>
-      </Section>
-
-      {/* OXIGENIO-7 · Quem conduz */}
-      <Section variant="highlighted" paddingY="lg">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
           Quem conduz
         </h2>
-        <div className="max-w-3xl space-y-4 mb-8">
-          <p className="text-off-white/85 font-body leading-relaxed">
-            O Oxigênio IA Search é executado por Gabriela Aguiar e Celso Gama.
-            Não há equipe júnior intermediária. Quem você conhece da venda é
-            quem analisa e quem entrega.
-          </p>
-          <p className="text-off-white/85 font-body leading-relaxed">
-            A Gabriela conduz a leitura institucional e de presença, com
-            Universal AI Foundational Modules pelo MIT e mais de uma década
-            dentro dos ecossistemas globais de inovação.
-          </p>
-          <p className="text-off-white/85 font-body leading-relaxed">
-            O Celso conduz a leitura de governança e exposição operacional, com
-            mais de 20 anos de operação real em multinacionais e Applied AI
-            Certificate Program pelo MIT.
-          </p>
+        <div className="flex flex-col md:flex-row gap-8 items-start max-w-3xl">
+          <div className="shrink-0">
+            <Image
+              src="/nos.png"
+              alt="Gabriela Aguiar e Celso Gama, cofundadores da Pira Labs"
+              width={200}
+              height={133}
+              className="rounded-lg object-cover"
+            />
+          </div>
+          <div className="space-y-4">
+            <p className="text-off-white/85 font-body leading-relaxed">
+              O Oxigênio IA Search é executado por Gabriela Aguiar e Celso Gama.
+              Não há equipe intermediária. Quem apresenta na confirmação é quem
+              analisa e quem entrega.
+            </p>
+            <p className="text-off-white/85 font-body leading-relaxed">
+              Gabriela conduz a leitura institucional e de presença, com
+              Universal AI Foundational Modules (MIT, em andamento, 2026). Celso
+              conduz a leitura de governança e exposição operacional, com Applied
+              AI Certificate Program (MIT, em andamento, 2026).
+            </p>
+            <CTAButton variant="tertiary" href="/sobre">
+              Conhecer Gabriela e Celso
+            </CTAButton>
+          </div>
         </div>
-        <CTAButton variant="tertiary" href="/sobre">
-          Conhecer Gabriela e Celso
-        </CTAButton>
       </Section>
 
-      {/* OXIGENIO-8 · Prova social do método (D1) */}
+      {/* OXIGENIO-8b · Prova da auto-aplicação (D1) */}
       {FLAGS.D1_ATIVO ? (
-        <Section variant="default" paddingY="lg">
+        <Section variant="highlighted" paddingY="lg">
           <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
             Rodamos o Oxigênio em nós antes de oferecer
           </h2>
           <div className="max-w-3xl space-y-4">
             <p className="text-off-white/85 font-body leading-relaxed">
-              Antes de cobrar R$6.200 por uma análise, rodamos o Oxigênio IA
-              Search na própria PIRA LABS. Em parte porque é o que faz sentido
-              fazer. Em parte porque é o que diferencia método validado de
-              método teórico.
+              Antes de cobrar R$3.500 por um Fast, rodamos o método na própria
+              Pira Labs. Em parte porque é o que faz sentido. Em parte porque é
+              o que separa método validado de método teórico.
             </p>
-            {/* Achados — preencher após auto-aplicação */}
-            <div className="bg-teal/20 border border-teal/40 rounded-lg p-6 space-y-4">
+            <div className="bg-teal/20 border border-teal/40 rounded-lg p-6">
               <p className="text-off-white/40 font-body text-sm">
-                [PLACEHOLDER — preencher achados após auto-aplicação concluída]
+                [PREENCHER APÓS AUTO-APLICAÇÃO CONCLUÍDA]
               </p>
             </div>
-            <p className="text-off-white/70 font-body text-sm leading-relaxed">
-              A PIRA LABS é nova. Os achados acima são o ponto de partida do
-              que estamos corrigindo, não o fim do trabalho. O que estamos
-              oferecendo aos clientes do Oxigênio é exatamente o método que
-              estamos aplicando em nós.
-            </p>
           </div>
         </Section>
       ) : null}
 
-      {/* OXIGENIO-9 · FAQ */}
-      <Section variant="highlighted" paddingY="lg">
-        <FAQ heading="Perguntas frequentes" items={faqItems} />
-      </Section>
-
-      {/* OXIGENIO-10 · Oxigênio Pulso (oculto por padrão) */}
-      {FLAGS.PULSO_ATIVO ? (
-        <Section variant="default" paddingY="lg">
-          <div className="bg-teal/20 border border-teal/40 rounded-lg p-8 max-w-2xl">
-            <h2 className="text-xl md:text-2xl font-semibold text-off-white mb-4">
-              Sem urgência das 5 vagas? Conheça o Oxigênio Pulso.
-            </h2>
-            <p className="text-off-white/80 font-body leading-relaxed mb-6">
-              Se as cinco vagas do Oxigênio IA Search não cabem no seu momento
-              agora, o Oxigênio Pulso é uma versão mais curta para quem quer
-              começar pelo básico. Diagnóstico simplificado, sem mapa de gaps
-              semânticos completo, sem sessão de leitura conjunta. Análise dos
-              quatro LLMs e lista de até 10 correções priorizadas.
-            </p>
-            <div className="space-y-3 mb-6 border-t border-off-white/10 pt-6">
-              <div className="flex justify-between">
-                <span className="text-off-white/60 font-body text-sm">
-                  Investimento
-                </span>
-                <span className="font-display text-xl text-peach">R$3.500</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-off-white/60 font-body text-sm">
-                  Prazo de entrega
-                </span>
-                <span className="text-off-white font-body font-semibold text-sm">
-                  até 7 dias úteis
-                </span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-off-white/60 font-body text-sm">
-                  Vagas
-                </span>
-                <span className="text-off-white font-body font-semibold text-sm">
-                  sem limite na primeira rodada
-                </span>
-              </div>
-            </div>
-            <CTAButton variant="primary" href={`${FILL_OUT_FORM_URL}?origem=oxigenio_pulso`}>
-              Aplicar para Oxigênio Pulso
-            </CTAButton>
-          </div>
-        </Section>
-      ) : null}
-
-      {/* OXIGENIO-11 · CTA final e aplicação */}
+      {/* OXIGENIO-9 · CTA de aplicação */}
       <Section variant="dark" paddingY="lg" id="aplicar">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-8">
           Aplicar para o Oxigênio IA Search
         </h2>
 
-        {/* Recap visual */}
-        <div className="bg-teal/20 border border-teal/40 rounded-lg p-6 max-w-lg mb-8">
-          <div className="space-y-4">
-            <div className="flex justify-between items-start border-b border-off-white/10 pb-4">
-              <span className="text-off-white/60 font-body text-sm">
-                Investimento · primeira rodada
-              </span>
-              <div className="text-right">
-                <p className="font-body text-sm text-off-white/40 line-through">
-                  R$9.800
-                </p>
-                <p className="font-display text-2xl text-peach leading-tight">
-                  R$6.200
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-between items-center border-b border-off-white/10 pb-4">
-              <span className="text-off-white/60 font-body text-sm">
-                Vagas restantes para fundadores
-              </span>
-              {/* Atualizar manualmente conforme vagas fecham: 5/5 → 4/5 → ... → "Vagas esgotadas" */}
-              <span className="text-off-white font-body font-semibold text-sm">
-                {VAGAS_OXIGENIO}/5
-              </span>
-            </div>
-            <div className="flex justify-between items-center border-b border-off-white/10 pb-4">
-              <span className="text-off-white/60 font-body text-sm">
-                Prazo de entrega
-              </span>
-              <span className="text-off-white font-body font-semibold text-sm">
-                até 5 dias úteis
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-off-white/60 font-body text-sm">
-                Próximo passo
-              </span>
-              <span className="text-off-white font-body font-semibold text-sm">
-                aplicação online de 5 a 10 minutos
-              </span>
-            </div>
-          </div>
+        {/* Tabela resumo */}
+        <div className="overflow-x-auto max-w-lg mb-8">
+          <table className="w-full text-sm font-body border-collapse">
+            <thead>
+              <tr className="border-b border-teal/40">
+                <th className="text-left py-3 pr-6 text-off-white/40 font-semibold w-40"></th>
+                <th className="text-left py-3 pr-6 text-off-white font-semibold">Fast</th>
+                <th className="text-left py-3 text-off-white font-semibold">Full</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-teal/20">
+              <tr>
+                <td className="py-3 pr-6 text-off-white/50">Preço</td>
+                <td className="py-3 pr-6 text-orange font-semibold">R$3.500</td>
+                <td className="py-3 text-orange font-semibold">R$5.300</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-6 text-off-white/50">Vagas disponíveis</td>
+                <td className="py-3 pr-6 text-off-white font-semibold">{VAGAS_OXIGENIO}</td>
+                <td className="py-3 text-off-white font-semibold">{VAGAS_OXIGENIO}</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-6 text-off-white/50">Prazo</td>
+                <td className="py-3 pr-6 text-off-white">até 5 dias úteis</td>
+                <td className="py-3 text-off-white">até 5 dias úteis</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <p className="text-off-white/70 font-body mb-6 max-w-xl">
           Quanto mais contexto você compartilhar na aplicação, mais útil é a
           primeira resposta. Se o seu caso não encaixa no escopo, dizemos antes
-          de começar.
+          de qualquer cobrança.
         </p>
 
         <CTAButton variant="primary" href={applyUrl}>
           Aplicar agora
         </CTAButton>
-
         <p className="mt-4 text-off-white/50 font-body text-sm">
-          Respondemos em até dois dias úteis. A análise começa após a
-          confirmação da aplicação e o briefing preenchido.
+          5 dias úteis para o relatório. Respondemos em até 24h.
         </p>
 
-        <p className="mt-8 text-off-white/60 font-body text-sm max-w-2xl leading-relaxed font-display italic">
-          O Oxigênio é o ponto de entrada para empresas de serviços que querem
-          agir antes da crise. Cinco dias úteis depois, você tem clareza sobre
-          como sua presença nos motores de IA está performando, e o que precisa
-          mudar para começar a aparecer como deveria.
-        </p>
+        {/* Três caminhos pós-diagnóstico */}
+        <div className="mt-12 max-w-2xl">
+          <p className="text-xs font-body font-semibold uppercase tracking-widest text-off-white/40 mb-6">
+            Após a sessão: os três caminhos
+          </p>
+          <p className="text-off-white/70 font-body text-sm mb-6">
+            O diagnóstico revela onde a empresa está. O próximo passo depende do
+            que revelar:
+          </p>
+          <div className="space-y-5">
+            <div className="border-l-2 border-orange/40 pl-5">
+              <p className="text-off-white font-body font-semibold text-sm mb-1">
+                Problema de execução específica
+              </p>
+              <p className="text-off-white/65 font-body text-sm leading-relaxed">
+                O gap está identificado e o que falta é ajuste de posicionamento
+                e conteúdo. O próximo passo é o TRANSPIRA com foco em GEO/AEO.
+              </p>
+            </div>
+            <div className="border-l-2 border-orange/40 pl-5">
+              <p className="text-off-white font-body font-semibold text-sm mb-1">
+                Empresa invisível e sem clareza de por onde começar
+              </p>
+              <p className="text-off-white/65 font-body text-sm leading-relaxed">
+                O gap de IA Search é sinal de problema mais amplo de modelo,
+                posicionamento ou operação. O próximo passo é o INSPIRA completo.
+              </p>
+            </div>
+            <div className="border-l-2 border-orange/40 pl-5">
+              <p className="text-off-white font-body font-semibold text-sm mb-1">
+                Boa presença e clareza de ação
+              </p>
+              <p className="text-off-white/65 font-body text-sm leading-relaxed">
+                O diagnóstico confirmou o que o cliente já sentia. O próximo
+                passo é FAÍSCA ou conexão com a rede de referência da Pira Labs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* OXIGENIO-10 · FAQ */}
+      <Section variant="highlighted" paddingY="lg">
+        <FAQ heading="Perguntas frequentes" items={faqItems} />
       </Section>
     </>
   );
