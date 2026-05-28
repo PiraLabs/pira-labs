@@ -5,10 +5,9 @@
 @layer base {
   :root {
     --color-ink: #0C0F16;
-    --color-deep-teal: #05262D;
-    --color-teal: #004756;
-    --color-orange: #EA6335;
-    --color-peach: #F2A85E;
+    --color-deep-teal: #05262E;
+    --color-teal: #004757;
+    --color-orange: #EB5C2E;
     --color-off-white: #E8E0D6;
   }
 
@@ -118,10 +117,10 @@
     padding-right: clamp(1.5rem, 4vw, 3rem);
   }
 
-  /* Seção padrão */
+  /* Seção padrão — 80px mobile / 120px desktop */
   .section-padding {
-    padding-top: clamp(4rem, 8vw, 8rem);
-    padding-bottom: clamp(4rem, 8vw, 8rem);
+    padding-top: clamp(5rem, 10vw, 7.5rem);
+    padding-bottom: clamp(5rem, 10vw, 7.5rem);
   }
 
   /* <details>/<summary> — garantir comportamento nativo em todos os browsers.

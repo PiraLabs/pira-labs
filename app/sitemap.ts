@@ -1,25 +1,33 @@
 import type { MetadataRoute } from "next";
 
-// 12 rotas indexáveis do site PIRA LABS v3.5.
-// Rotas antigas (/servicos, /cases, /en/*, /es/*) estão cobertas por
-// redirects 301 no next.config.js — não entram no sitemap novo.
+// 19 rotas indexáveis do site Pira Labs — wireframe v4 + Deploy A.
+// Rotas antigas (/servicos, /cases, /es/*, etc.) cobertas por redirects 301 no next.config.js.
+// Rotas EN mínimo viável (Fase 8c): /en, /en/about, /en/creative-business-turnaround, /en/contact.
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://piralabs.com.br";
   return [
+    // PT — rotas principais
     { url: `${base}/`,                               changeFrequency: "weekly",  priority: 1.0 },
+    { url: `${base}/inspira/oxigenio`,               changeFrequency: "weekly",  priority: 0.9 },
     { url: `${base}/sobre`,                          changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/inspira`,                        changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/inspira/oxigenio`,               changeFrequency: "weekly",  priority: 0.9 },
     { url: `${base}/transpira`,                      changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/creative-business-turnaround`,   changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/transpira/juridico`,             changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/inspira/juridico`,               changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/faisca`,                         changeFrequency: "weekly",  priority: 0.7 },
     { url: `${base}/faisca/juridica`,                changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/creative-business-turnaround`,   changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/antes-da-crise`,                 changeFrequency: "weekly",  priority: 0.6 },
+    { url: `${base}/faisca/imersa-em-ia`,            changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/faisca/pocket`,                  changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/antes-pira`,                     changeFrequency: "weekly",  priority: 0.6 },
     { url: `${base}/contato`,                        changeFrequency: "yearly",  priority: 0.5 },
     { url: `${base}/cookies`,                        changeFrequency: "yearly",  priority: 0.3 },
     { url: `${base}/politica-privacidade`,           changeFrequency: "yearly",  priority: 0.3 },
     { url: `${base}/termos`,                         changeFrequency: "yearly",  priority: 0.3 },
+    // EN mínimo viável (Fase 8c)
+    { url: `${base}/en`,                             changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/en/about`,                       changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/en/creative-business-turnaround`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/en/contact`,                     changeFrequency: "monthly", priority: 0.5 },
   ];
 }

@@ -33,11 +33,11 @@ const grotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL("https://piralabs.com.br"),
   title: {
-    default: "PIRA LABS · Creative Business Turnaround para empresas de serviços",
-    template: "%s · PIRA LABS",
+    default: "Pira Labs · Creative Business Turnaround para empresas de serviços",
+    template: "%s · Pira Labs",
   },
   description:
-    "A PIRA LABS é uma boutique brasileira de Creative Business Turnaround. Atuamos antes da crise, quando ainda dá para mudar com tranquilidade.",
+    "A Pira Labs é uma boutique brasileira de Creative Business Turnaround. Atuamos antes da crise, quando ainda dá para mudar com tranquilidade.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "32x32" },
@@ -47,9 +47,17 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   openGraph: {
-    siteName: "PIRA LABS",
+    siteName: "Pira Labs",
     locale: "pt_BR",
     type: "website",
+    images: [
+      {
+        url: "https://piralabs.com.br/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Pira Labs · Creative Business Turnaround",
+      },
+    ],
   },
 };
 
