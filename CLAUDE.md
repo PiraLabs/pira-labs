@@ -1,5 +1,5 @@
 # CLAUDE.md
-**Versão:** 3.4 · Maio 2026
+**Versão:** 3.5 · Maio 2026
 **Branch:** rebuild-v2
 **Ler este arquivo inteiro antes de qualquer ação.**
 **Comando de inicialização:** `/init` no início de cada sessão
@@ -282,6 +282,7 @@ Fase 1: globals.css, tailwind.config.ts, layout.tsx, next.config.js (com todos o
         — /es/servicos → /inspira (301)
         — /es/cases → /#provas (301)
         — /es/contato → /contato (301)
+        — /empresa-cresce-margem-some → /crescimento-sem-margem (301)
         Todos preservam query strings (UTMs).
 
 Fase 2: Componentes shared:
@@ -344,6 +345,7 @@ Nunca marcar tarefa como concluída sem teste real.
 
 ---
 
-*CLAUDE.md v3.4 · PIRA LABS rebuild-v2 · Maio 2026*
+*CLAUDE.md v3.5 · PIRA LABS rebuild-v2 · Maio 2026*
 *Alterações v3.4: orange #EA6335 → #EB5C2E · deep-teal #05262D → #05262E · teal #004756 → #004757*
 *peach removido · direção visual 70/30 · sistema de nós e conectores · logo animado*
+*Alterações v3.5: redirect /empresa-cresce-margem-some → /crescimento-sem-margem adicionado*
