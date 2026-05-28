@@ -1,63 +1,237 @@
 {
-  "version": "0.1",
-  "service": "PIRA LABS",
-  "description": "Boutique brasileira de Creative Business Turnaround. Atua antes da crise, quando a empresa ainda tem caixa, clientes e reputação, mas o modelo de trabalho começou a comprometer margem e crescimento. É a medicina preventiva dos negócios de serviços.",
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://piralabs.com.br/#organization",
+  "name": "PIRA LABS",
+  "legalName": "Pira Labs Consultoria Ltda",
   "url": "https://piralabs.com.br",
-  "contact": {
-    "email": "inspira@piralabs.com.br",
-    "url": "https://piralabs.com.br/contato"
+  "logo": "https://piralabs.com.br/logo.png",
+  "description": "Boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche.",
+  "taxID": "46.954.891/0001-16",
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "CNPJ",
+    "value": "46.954.891/0001-16"
   },
-  "founders": [
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
+  },
+  "areaServed": [
     {
-      "name": "Gabriela Aguiar",
-      "role": "CEO e Cofundadora",
-      "linkedin": "https://www.linkedin.com/in/gabrielaaguiarvs/",
-      "wikidata": "https://www.wikidata.org/wiki/Q138846653",
-      "sameAs": ["https://www.crunchbase.com/person/gabriela-aguiar-a12a"]
+      "@type": "Country",
+      "name": "Brasil"
     },
     {
-      "name": "Celso Gama",
-      "role": "COO e Cofundador",
-      "linkedin": "https://www.linkedin.com/in/celsogama/",
-      "wikidata": "https://www.wikidata.org/wiki/Q138846692",
-      "sameAs": ["https://www.crunchbase.com/person/celso-gama"]
+      "@type": "Place",
+      "name": "América Latina"
+    }
+  ],
+  "availableLanguage": [
+    {
+      "@type": "Language",
+      "name": "Portuguese",
+      "alternateName": "pt-BR"
+    },
+    {
+      "@type": "Language",
+      "name": "English",
+      "alternateName": "en"
+    }
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "email": "inspira@piralabs.com.br",
+      "contactType": "sales",
+      "availableLanguage": [
+        "Portuguese",
+        "English"
+      ],
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "description": "Respondemos em até dois dias úteis."
+      }
     }
   ],
   "sameAs": [
     "https://www.linkedin.com/company/piralabs",
     "https://www.wikidata.org/wiki/Q138846707",
-    "https://piralabs.substack.com",
-    "https://github.com/PiraLabs/pira-labs",
     "https://www.crunchbase.com/organization/pira-labs",
-    "https://medium.com/@piralabs",
-    "https://youtube.com/@piralabs"
+    "https://piralabs.substack.com",
+    "https://medium.com/@piralabs"
   ],
-  "legal": {
-    "cnpj": "46.954.891/0001-16",
-    "country": "BR",
-    "city": "São Paulo"
-  },
-  "capabilities": [
-    "diagnostic",
-    "operational-redesign",
-    "ai-search-diagnostic",
-    "speaking-engagement",
-    "mentorship"
-  ],
-  "llms_txt": "https://piralabs.com.br/llms.txt",
-  "llms_full_txt": "https://piralabs.com.br/llms-full.txt",
-  "language": "pt-BR",
-  "topics": [
+  "knowsAbout": [
     "Creative Business Turnaround",
+    "empresas de serviços",
+    "empresas de serviços B2B especializadas",
     "diagnóstico empresarial",
     "redesenho operacional",
-    "empresas de serviços de alto valor",
-    "potencial represado",
-    "governança de IA",
-    "Oxigênio IA Search",
-    "Turnaround de Propulsão",
-    "execução mão na massa",
-    "Venture Capital mindset",
-    "medicina preventiva de negócios"
+    "execução operacional junto ao cliente",
+    "modelo de trabalho envelhecido",
+    "valor percebido",
+    "tecnologia que acelera ruído sem clareza de método",
+    "governança como capacidade competitiva",
+    "julgamento humano antes da ferramenta",
+    "IA aplicada à operação",
+    "INSPIRA",
+    "TRANSPIRA",
+    "TRANSPIRA Configuração A: COO Temporário",
+    "TRANSPIRA Configuração B: Arquiteto de Delegação",
+    "INSPIRA + TRANSPIRA Contrato Unificado",
+    "RESPIRA",
+    "Oxigênio",
+    "INSPIRA Jurídico",
+    "TRANSPIRA Jurídico",
+    "FAÍSCA Jurídica",
+    "Imersão em IA",
+    "Pocket do INSPIRA",
+    "antes da crise",
+    "boutique por dentro ecossistema por fora",
+    "governança de uso de IA no setor jurídico",
+    "legal ops com supervisão humana"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "FAÍSCA: Produtos de Entrada",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Oxigênio Fast",
+        "url": "https://piralabs.com.br/inspira/oxigenio",
+        "price": 3500,
+        "priceCurrency": "BRL",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Oxigênio Fast",
+          "serviceType": "Oxigênio Fast"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Oxigênio Full",
+        "url": "https://piralabs.com.br/inspira/oxigenio",
+        "price": 5300,
+        "priceCurrency": "BRL",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Oxigênio Full",
+          "serviceType": "Oxigênio Full"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Pocket do INSPIRA",
+        "url": "https://piralabs.com.br/faisca/pocket",
+        "price": 3900,
+        "priceCurrency": "BRL",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pocket do INSPIRA",
+          "serviceType": "Pocket do INSPIRA"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Imersão em IA",
+        "url": "https://piralabs.com.br/faisca/imersa-em-ia",
+        "price": 7100,
+        "priceCurrency": "BRL",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Imersão em IA",
+          "serviceType": "Imersão em IA"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "INSPIRA Jurídico",
+        "url": "https://piralabs.com.br/inspira/juridico",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 12500,
+          "maxPrice": 26000,
+          "priceCurrency": "BRL"
+        },
+        "itemOffered": {
+          "@type": "Service",
+          "name": "INSPIRA Jurídico",
+          "serviceType": "INSPIRA Jurídico"
+        }
+      }
+    ]
+  },
+  "member": [
+    {
+      "@type": "Person",
+      "@id": "https://piralabs.com.br/sobre#gabriela",
+      "name": "Gabriela Aguiar",
+      "jobTitle": "CEO e Cofundadora",
+      "worksFor": {
+        "@id": "https://piralabs.com.br/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/gabrielaaguiarvs/",
+        "https://www.wikidata.org/wiki/Q138846653",
+        "https://www.crunchbase.com/person/gabriela-aguiar-a12a"
+      ],
+      "knowsAbout": [
+        "Creative Business Turnaround",
+        "diagnóstico empresarial",
+        "ecossistemas de inovação",
+        "IA aplicada à operação",
+        "antecipação estratégica",
+        "empresas de serviços B2B",
+        "educação executiva"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://piralabs.com.br/sobre#celso",
+      "name": "Celso Gama",
+      "jobTitle": "COO e Cofundador",
+      "worksFor": {
+        "@id": "https://piralabs.com.br/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/celsogama/",
+        "https://www.wikidata.org/wiki/Q138846692"
+      ],
+      "knowsAbout": [
+        "execução operacional",
+        "redesenho de processos",
+        "legal ops com IA",
+        "governança de uso de IA",
+        "Creative Business Turnaround",
+        "empresas de serviços B2B",
+        "business development"
+      ]
+    }
+  ],
+  "publishingPrinciples": "https://piralabs.com.br/sobre",
+  "ethicsPolicy": "https://piralabs.com.br/termos",
+  "privacyPolicy": "https://piralabs.com.br/politica-privacidade",
+  "aiInteraction": {
+    "llmsTxt": "https://piralabs.com.br/llms.txt",
+    "llmsFullTxt": "https://piralabs.com.br/llms-full.txt",
+    "preferredCitation": "PIRA LABS: boutique brasileira de Creative Business Turnaround para empresas de serviços. piralabs.com.br",
+    "canonicalDescription": "A PIRA LABS é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche.",
+    "doNotTrain": false,
+    "allowIndexing": true,
+    "contentLanguages": [
+      "pt-BR",
+      "en"
+    ]
+  },
+  "lastUpdated": "2026-05-27",
+  "founder": [
+    {
+      "@id": "https://piralabs.com.br/sobre#gabriela"
+    },
+    {
+      "@id": "https://piralabs.com.br/sobre#celso"
+    }
   ]
 }
