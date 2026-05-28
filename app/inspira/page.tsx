@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { Section } from "@/components/shared/Section";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { ProcessSteps } from "@/components/shared/ProcessSteps";
+import { TargetProfile } from "@/components/shared/TargetProfile";
 import { FAQ } from "@/components/shared/FAQ";
 import { FinalCTA } from "@/components/shared/FinalCTA";
 import { CTAButton } from "@/components/shared/CTAButton";
-import { ORIGINS, VAGAS_OXIGENIO } from "@/lib/constants";
+import { ORIGINS } from "@/lib/constants";
 import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
 import { serviceSchema } from "@/lib/schemas/service";
 
@@ -17,7 +18,7 @@ const schemas = {
   service: serviceSchema({
     name: "INSPIRA · Diagnóstico de Creative Business Turnaround",
     description:
-      "Diagnóstico da PIRA LABS para empresas de serviços de alto valor. Cinco leituras coordenadas do negócio com aprovação humana em cada gate, entregando o problema real nomeado, a rota desenhada e o próximo passo definido.",
+      "Diagnóstico da Pira Labs para empresas de serviços. Seis camadas em sequência, convergindo em síntese integrada. Output: módulo Propulsão com rota executável.",
     url: "https://piralabs.com.br/inspira",
     serviceType: "Diagnóstico empresarial",
   }),
@@ -25,20 +26,19 @@ const schemas = {
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      "INSPIRA · Diagnóstico de Creative Business Turnaround · PIRA LABS",
+    absolute: "INSPIRA · Diagnóstico de Creative Business Turnaround · PIRA LABS",
   },
   description:
-    "O INSPIRA é o diagnóstico da PIRA LABS para empresas de serviços. Cinco leituras paralelas do negócio antes de nomear qualquer problema.",
+    "O INSPIRA é o diagnóstico da Pira Labs. Seis dimensões do negócio em sequência, convergindo em síntese integrada. Gabriela Aguiar conduz.",
   alternates: {
     canonical: "https://piralabs.com.br/inspira",
   },
   openGraph: {
     title: "INSPIRA · Diagnóstico de Creative Business Turnaround · PIRA LABS",
     description:
-      "Cinco leituras paralelas do negócio antes de nomear qualquer problema. Diagnóstico com aprovação humana em cada etapa.",
+      "Seis dimensões do negócio em sequência, convergindo em síntese integrada. Gabriela Aguiar conduz.",
     url: "https://piralabs.com.br/inspira",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 
@@ -47,49 +47,36 @@ const breadcrumbs = [
   { label: "Inspira" },
 ];
 
-const cincoLeituras = [
+const camadas = [
   {
-    title: "Mercado e presença",
+    title: "Sopro",
+    description: "De onde a empresa parte e o que declara querer.",
+  },
+  {
+    title: "Fôlego",
+    description: "Como aparece para o mercado e para os motores de inteligência artificial.",
+  },
+  {
+    title: "Pulso",
+    description: "Como as pessoas e os papéis reais funcionam na prática.",
+  },
+  {
+    title: "Acústica",
+    description: "Como a governança e os processos realmente operam.",
+  },
+  {
+    title: "Pressão",
+    description: "Onde a tensão econômica está concentrada.",
+  },
+  {
+    title: "Suspiro",
+    description: "O que as seis camadas revelam quando lidas juntas.",
+  },
+  {
+    number: "→",
+    title: "Propulsão",
     description:
-      "O que o ambiente externo revela sobre a empresa que ela talvez ainda não esteja vendo. Concorrência, categoria, posicionamento, como a empresa aparece para quem olha de fora, e como é compreendida por motores de busca e por inteligência artificial.",
-  },
-  {
-    title: "Pessoas e operação",
-    description:
-      "Se o funcionamento humano e os papéis reais sustentam o que a empresa quer crescer. Ritmo de decisão, complementaridade, cultura praticada versus cultura declarada.",
-  },
-  {
-    title: "Governança e processos",
-    description:
-      "Se a empresa tem cobertura suficiente para reduzir ruído, exceção e exposição. Processos críticos, pontos de decisão, risco operacional e regulatório.",
-  },
-  {
-    title: "Tensão econômica",
-    description:
-      "Onde o negócio sente o peso primeiro e qual é o ponto de ruptura. Margem, caixa, cobrança, capacidade e o que está comprimindo o resultado.",
-  },
-  {
-    title: "Síntese integrada",
-    description:
-      "As quatro leituras convergem em diagnóstico único, com aprovação humana em cada etapa antes de avançar. O problema real nomeado. A rota desenhada. O próximo passo definido.",
-  },
-];
-
-const perfis = [
-  {
-    titulo: "Crescimento sem estrutura",
-    texto:
-      "A empresa cresceu mais rápido do que o desenho do trabalho. Time aumentou, faturamento subiu, mas a operação ficou dependente de pessoas-chave e de improviso constante.",
-  },
-  {
-    titulo: "Margem que some",
-    texto:
-      "A receita continua, mas o resultado não acompanha. Custos invisíveis, escopo não cobrado, horas além do contratado e precificação desalinhada com custo real.",
-  },
-  {
-    titulo: "Tecnologia que não converteu",
-    texto:
-      "A empresa investiu em tecnologia, incluindo IA, e o resultado foi acelerar o ruído que já existia. Sem método antes, a tecnologia escala bagunça em vez de resolver.",
+      "A rota para frente. O que muda, quem muda, em que ordem e como se sabe que está feito. Uma ação. Um responsável. Um prazo.",
   },
 ];
 
@@ -102,52 +89,45 @@ const comoComeça = [
   {
     title: "Proposta com escopo definido",
     description:
-      "Após a conversa, a PIRA LABS envia proposta com escopo, prazo e investimento. Sem boilerplate. Cada proposta é desenhada para o negócio que vai diagnosticar.",
+      "Após a conversa, proposta com escopo, prazo e investimento. Cada proposta é desenhada para o negócio que vai diagnosticar.",
   },
   {
     title: "Início do diagnóstico",
     description:
-      "Com a proposta aceita, o INSPIRA começa. Cinco leituras avançam com gates de aprovação humana antes de cada avanço.",
+      "Com a proposta aceita, o INSPIRA começa. Seis camadas avançam com aprovação humana em cada etapa.",
   },
 ];
 
 const faqItems = [
   {
-    question:
-      "Qual a diferença entre o INSPIRA e uma consultoria estratégica clássica?",
+    question: "Qual a diferença entre o INSPIRA e uma consultoria estratégica?",
     answer:
-      "Consultoria estratégica entrega relatório e some. O INSPIRA é o ponto de entrada para um turnaround real, com método validado e com aprovação humana em cada gate. O diagnóstico é desenhado para virar execução, não para virar slide. É a primeira metade do que chamamos Turnaround de Propulsão: nomear o problema real para então atacar o desbloqueio do potencial represado da empresa.",
+      "Consultoria estratégica entrega relatório e sai. O INSPIRA é diagnóstico com output executável: problema real nomeado, rota desenhada, próximo passo em até sete dias. É o ponto de entrada para um turnaround real, não para um slide.",
   },
   {
-    question: "Quanto tempo leva um INSPIRA completo?",
+    question: "Quanto tempo leva?",
     answer:
-      "Depende da complexidade da empresa. A maioria dos casos fica entre 4 e 8 semanas. A proposta inicial define o prazo específico do projeto.",
+      "4 a 6 semanas. A proposta inicial define o prazo específico conforme complexidade.",
   },
   {
     question: "O INSPIRA inclui execução?",
     answer:
-      "Não. Execução mão na massa é o TRANSPIRA, conduzido pelo Celso. O INSPIRA entrega o problema nomeado, a rota desenhada e o próximo passo definido. Muitos clientes seguem direto para o TRANSPIRA com a PIRA LABS, mas isso é decisão pós-diagnóstico.",
+      "Não. Execução é o TRANSPIRA, conduzido pelo Celso. O INSPIRA entrega o problema nomeado e a rota. Muitos clientes seguem para o TRANSPIRA, mas é decisão pós-diagnóstico.",
   },
   {
     question: "Vocês usam IA no INSPIRA?",
     answer:
-      "Sim, em pontos específicos do diagnóstico, sempre com supervisão humana. A IA não substitui a leitura. Ela amplifica capacidade onde faz sentido, e fica fora onde não faz.",
+      "Sim, em pontos específicos, sempre com supervisão humana. A IA amplifica capacidade onde faz sentido. O julgamento final é humano em cada etapa.",
   },
   {
-    question:
-      "Posso começar com algo menor antes de contratar o INSPIRA completo?",
+    question: "Posso começar com algo menor antes do INSPIRA completo?",
     answer:
-      "Pode. O Oxigênio IA Search é um subproduto do INSPIRA, com escopo fechado e prazo curto, que diagnostica como sua empresa aparece nos motores de IA. Funciona como porta de entrada para empresas que querem testar o método antes de avançar.",
+      "Pode. O Oxigênio IA Search é o subproduto de entrada, com escopo fechado e prazo curto. O Pocket do INSPIRA é uma leitura inicial de 1,5h com metodologia. Os dois funcionam como porta de entrada antes de qualquer compromisso maior.",
   },
   {
-    question: "Como vocês lidam com confidencialidade?",
+    question: "Como funciona a confidencialidade?",
     answer:
-      "Sempre via NDA. Acordo de confidencialidade assinado antes de qualquer coleta de informação. NDA é base canônica de todo trabalho da PIRA LABS, independente do produto. Acesso restrito a Gabriela, Celso e quem mais for explicitamente autorizado pelo cliente.",
-  },
-  {
-    question: "Como é a precificação? *",
-    answer:
-      "Sob consulta e disponibilidade. Por sermos uma boutique, trabalhamos com agenda limitada de projetos simultâneos para preservar o envolvimento direto dos sócios em cada caso. Investimento varia conforme tamanho da empresa, complexidade do diagnóstico e setor. Respondemos em até dois dias úteis com proposta.",
+      "Sempre via NDA assinado antes de qualquer coleta de informação.",
   },
 ];
 
@@ -171,153 +151,138 @@ export default function InspiraPage() {
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
           O que é o INSPIRA
         </h2>
-        <div className="max-w-3xl space-y-4">
+        <div className="max-w-3xl space-y-4 mb-8">
           <p className="text-off-white/85 font-body leading-relaxed">
-            O INSPIRA é o diagnóstico da PIRA LABS. É onde a empresa pausa,
-            respira fundo e olha para o próprio negócio com lente que de dentro
-            não dá.
+            O INSPIRA é o diagnóstico da Pira Labs. Lê seis dimensões do negócio
+            em sequência: Sopro, de onde a empresa parte e o que declara querer;
+            Fôlego, como aparece para o mercado e para os motores de inteligência
+            artificial; Pulso, como as pessoas e os papéis reais funcionam na
+            prática; Acústica, como a governança e os processos realmente operam;
+            Pressão, onde a tensão econômica está concentrada; e Suspiro, o que
+            as seis camadas revelam quando lidas juntas. A força do INSPIRA está
+            na convergência entre elas, não na leitura isolada de cada uma.
           </p>
           <p className="text-off-white/85 font-body leading-relaxed">
-            Não é auditoria. Não é workshop de inovação. Não é mapeamento de
-            processos para empacotar em consultoria.
+            O diagnóstico fecha com{" "}
+            <strong className="text-off-white">Propulsão:</strong> a rota para
+            frente. O que muda, quem muda, em que ordem e como se sabe que está
+            feito. O cliente sai da entrega sabendo o que fazer primeiro, não
+            apenas o que está errado.
           </p>
           <p className="text-off-white/85 font-body leading-relaxed">
-            É leitura do negócio em cinco áreas, com aprovação humana em cada
-            gate antes de avançar. O resultado é um relatório único, com o
-            problema real nomeado, a rota desenhada e o próximo passo definido.
-          </p>
-          <p className="text-off-white/60 font-body text-sm">
-            Conduz: Gabriela Aguiar.
+            O diagnóstico não inventa o problema. Revela o que a fundadora ou o
+            fundador já sentia mas ainda não havia encontrado palavras para
+            nomear. Gabriela Aguiar conduz.
           </p>
         </div>
+        <blockquote className="border-l-2 border-orange/40 pl-6 max-w-2xl">
+          <p className="font-display text-xl italic text-off-white/80 leading-relaxed">
+            &ldquo;O INSPIRA sempre termina com ação. Não com relatório para
+            arquivar.&rdquo;
+          </p>
+        </blockquote>
       </Section>
 
-      {/* INSPIRA-3 · As cinco leituras */}
+      {/* INSPIRA-3 · As seis camadas e a Propulsão */}
       <Section variant="highlighted" paddingY="lg">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-3">
-          As cinco leituras
+          As seis camadas e a Propulsão
         </h2>
         <p className="text-off-white/70 font-body mb-10 max-w-2xl">
-          O diagnóstico não lê uma área do negócio. Lê cinco, antes de nomear
-          qualquer problema.
+          Descritores canônicos por camada. Sem detalhar arquitetura interna.
         </p>
         <div className="max-w-2xl">
-          <ProcessSteps steps={cincoLeituras} />
+          <ProcessSteps steps={camadas} />
         </div>
-        <p className="mt-10 text-off-white/55 font-body text-sm italic max-w-2xl">
-          Nenhuma recomendação é feita antes das cinco leituras estarem
-          integradas. Esse é o protocolo que impede diagnóstico apressado.
-        </p>
       </Section>
 
-      {/* INSPIRA-4 · Para quem é */}
+      {/* INSPIRA-4 · O output: rota executável */}
       <Section variant="default" paddingY="lg">
-        <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-3">
-          Para quem é
+        <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
+          O output: rota executável
         </h2>
-        <p className="text-off-white/70 font-body mb-10 max-w-2xl">
-          Empresas de serviços de alto valor agregado com potencial represado.
-          Sócios, CEOs e presidentes com autonomia real e abertura genuína para
-          mudar.
-        </p>
-
-        {/* 3 perfis típicos */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-          {perfis.map((p) => (
-            <div
-              key={p.titulo}
-              className="bg-teal/20 border border-teal/40 rounded-lg p-6"
-            >
-              <p className="text-orange font-body font-semibold text-sm mb-2">
-                {p.titulo}
-              </p>
-              <p className="text-off-white/80 font-body text-sm leading-relaxed">
-                {p.texto}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Quem não deveria contratar */}
-        <div className="border-l-2 border-off-white/20 pl-6 max-w-2xl">
-          <p className="text-xs font-body font-semibold uppercase tracking-widest text-off-white/40 mb-2">
-            Quem não deveria contratar
+        <div className="max-w-3xl space-y-4">
+          <p className="text-off-white/85 font-body leading-relaxed">
+            O INSPIRA não entrega relatório para arquivar. O output final é o
+            módulo{" "}
+            <strong className="text-off-white">PROPULSÃO:</strong> o que muda
+            para o cliente, os movimentos necessários em sequência, o que
+            precisam para rodar, como a Pira Labs pode ajudar e o próximo passo
+            em até sete dias. Uma ação. Um responsável. Um prazo.
           </p>
-          <p className="text-off-white/60 font-body text-sm leading-relaxed">
-            Decisor sem autonomia real para mudar. Empresa em crise aguda, onde
-            o tempo de resposta exige outro tipo de intervenção. Cliente que
-            procura validação para decisão já tomada.
+          <p className="text-off-white/85 font-body leading-relaxed">
+            O diagnóstico é de propriedade do cliente. Pode ser usado
+            internamente sem qualquer continuidade com a Pira Labs. O TRANSPIRA
+            é natural e complementar, nunca obrigatório.
           </p>
         </div>
       </Section>
 
-      {/* INSPIRA-5 · Oxigênio IA Search */}
+      {/* INSPIRA-5 · Para quem é */}
       <Section variant="highlighted" paddingY="lg">
-        <div className="bg-ink/40 border border-orange/20 rounded-lg p-8 max-w-2xl">
-          <p className="text-xs font-body font-semibold uppercase tracking-widest text-orange mb-4">
+        <TargetProfile
+          heading="Para quem é"
+          items={[
+            "Crescimento sem estrutura: a empresa cresceu mais rápido do que o desenho do trabalho. Time aumentou, faturamento subiu, mas a operação ficou dependente de pessoas-chave e de improviso constante.",
+            "Margem que some: a receita continua, mas o resultado não acompanha. Custos invisíveis, escopo não cobrado, precificação desalinhada com custo real.",
+            "Tecnologia que não converteu: a empresa investiu em IA e o resultado foi acelerar o ruído que já existia. Sem método antes, a tecnologia escala o problema.",
+          ]}
+          notForItems={[
+            "Decisor sem autonomia real para mudar.",
+            "Empresa em crise aguda.",
+            "Quem busca validação de decisão já tomada.",
+          ]}
+        />
+      </Section>
+
+      {/* INSPIRA-5b · Subproduto de entrada: Oxigênio */}
+      <Section variant="default" paddingY="lg">
+        <div className="bg-teal/20 border border-teal/40 rounded-lg p-8 max-w-2xl">
+          <p className="text-xs font-body font-semibold uppercase tracking-widest text-orange/80 mb-3">
             Comece com escopo fechado
           </p>
-          <h2 className="text-xl md:text-2xl font-semibold text-off-white mb-4">
+          <h2 className="text-xl font-semibold text-off-white mb-3">
             Oxigênio IA Search
           </h2>
           <p className="text-off-white/80 font-body leading-relaxed mb-4">
-            Se você quer entender como sua empresa aparece nos motores de IA
-            antes de tomar qualquer outra decisão, o Oxigênio IA Search é o
-            ponto de entrada. Subproduto do INSPIRA, com escopo fechado, prazo
-            curto e preço público.
+            Quer começar com escopo fechado antes de qualquer compromisso maior?
+            O Oxigênio IA Search diagnostica como sua empresa aparece nos motores
+            de IA.{" "}
+            <strong className="text-off-white">Fast R$3.500 · Full R$5.300.</strong>{" "}
+            Entrega em até 5 dias úteis.
           </p>
-          <p className="font-body text-base text-off-white/40 line-through mb-1">
-            R$9.800
-          </p>
-          <p className="font-display text-3xl text-peach mb-2">R$6.200</p>
-          <p className="text-off-white/60 font-body text-sm mb-6">
-            Primeiras {VAGAS_OXIGENIO} vagas. Preço regular R$9.800 a partir da
-            6ª rodada.
-          </p>
-          <CTAButton variant="primary" href="/inspira/oxigenio">
-            Conhecer Oxigênio IA Search
+          <CTAButton variant="secondary" href="/inspira/oxigenio">
+            Conhecer Oxigênio
           </CTAButton>
+        </div>
+
+        {/* INSPIRA-5c · Investimento INSPIRA completo */}
+        <div className="mt-6 max-w-2xl">
+          <p className="text-off-white/60 font-body text-sm leading-relaxed">
+            O INSPIRA completo é dimensionado individualmente após a primeira
+            conversa. Cada projeto considera complexidade da operação, profundidade
+            necessária e duração.
+          </p>
         </div>
       </Section>
 
       {/* INSPIRA-6 · Como começa */}
-      <Section variant="default" paddingY="lg">
+      <Section variant="highlighted" paddingY="lg">
         <div className="max-w-2xl">
-          <ProcessSteps
-            heading="Como começa um INSPIRA"
-            steps={comoComeça}
-          />
-          <p className="mt-8 text-off-white/60 font-body text-sm">
-            Respondemos em até dois dias úteis.
-          </p>
-          <div className="mt-6">
-            <CTAButton
-              variant="secondary"
-              href="/contato"
-              origin={ORIGINS.INSPIRA}
-            >
-              Falar com a PIRA LABS
-            </CTAButton>
-          </div>
+          <ProcessSteps heading="Como começa" steps={comoComeça} />
         </div>
       </Section>
 
-      {/* INSPIRA-7 · FAQ — FAQPage schema injetado pelo componente */}
-      <Section variant="highlighted" paddingY="lg">
-        <FAQ
-          heading="Perguntas frequentes"
-          items={faqItems}
-        />
-        <p className="mt-6 text-xs text-off-white/40 font-body">
-          * Mediante consulta e disponibilidade.
-        </p>
+      {/* INSPIRA-7 · FAQ */}
+      <Section variant="default" paddingY="lg">
+        <FAQ heading="Perguntas frequentes" items={faqItems} />
       </Section>
 
       {/* INSPIRA-8 · CTA final */}
       <FinalCTA
         heading="O INSPIRA começa quando a conversa começa."
+        ctaLabel="Respire"
         origin={ORIGINS.INSPIRA}
-        showAsterisk
       />
     </>
   );

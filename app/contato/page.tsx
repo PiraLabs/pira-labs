@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     absolute: "Contato · PIRA LABS",
   },
   description:
-    "Falar com a PIRA LABS sobre INSPIRA, TRANSPIRA, Oxigênio IA Search, palestras ou mentorias. Respondemos em até dois dias úteis.",
+    "Falar com a Pira Labs sobre INSPIRA, TRANSPIRA, Oxigênio IA Search ou FAÍSCA. Respondemos em até dois dias úteis.",
   alternates: {
     canonical: "https://piralabs.com.br/contato",
   },
@@ -78,7 +78,7 @@ export default function ContatoPage() {
             </p>
             <a
               href={`mailto:${SOCIAL.EMAIL}`}
-              className="text-off-white/85 font-body hover:text-peach transition-colors"
+              className="text-off-white/85 font-body hover:text-orange transition-colors"
               aria-label="Enviar email para a PIRA LABS"
             >
               {SOCIAL.EMAIL}
@@ -104,7 +104,7 @@ export default function ContatoPage() {
                   href={SOCIAL.PIRA_LINKEDIN}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-body text-off-white/70 hover:text-peach transition-colors"
+                  className="text-sm font-body text-off-white/70 hover:text-orange transition-colors"
                   aria-label="LinkedIn da PIRA LABS (abre em nova aba)"
                 >
                   PIRA LABS
@@ -116,7 +116,7 @@ export default function ContatoPage() {
                   href={SOCIAL.GABRIELA_LINKEDIN}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-body text-off-white/70 hover:text-peach transition-colors"
+                  className="text-sm font-body text-off-white/70 hover:text-orange transition-colors"
                   aria-label="LinkedIn de Gabriela Aguiar (abre em nova aba)"
                 >
                   Gabriela Aguiar
@@ -128,7 +128,7 @@ export default function ContatoPage() {
                   href={SOCIAL.CELSO_LINKEDIN}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-body text-off-white/70 hover:text-peach transition-colors"
+                  className="text-sm font-body text-off-white/70 hover:text-orange transition-colors"
                   aria-label="LinkedIn de Celso Gama (abre em nova aba)"
                 >
                   Celso Gama
