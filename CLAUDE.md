@@ -1,5 +1,5 @@
 # CLAUDE.md
-**Versão:** 3.3 · Maio 2026
+**Versão:** 3.4 · Maio 2026
 **Branch:** rebuild-v2
 **Ler este arquivo inteiro antes de qualquer ação.**
 **Comando de inicialização:** `/init` no início de cada sessão
@@ -33,7 +33,7 @@ npm run lint          # ESLint — resolver antes de commitar
 
 1. Sem travessão em nenhum texto público
 2. PIRA LABS sempre em caixa alta
-3. Botão primário: fundo `#EA6335` (orange) com texto `#0C0F16` (ink). Nunca off-white.
+3. Botão primário: fundo `#EB5C2E` (orange) com texto `#0C0F16` (ink). Nunca off-white.
 4. Frase canônica na home dentro dos primeiros 150 termos, sentença única sem quebra:
    "A PIRA LABS é uma boutique brasileira de Creative Business Turnaround para
    empresas de serviços que precisam agir antes que a janela se feche."
@@ -64,6 +64,15 @@ npm run lint          # ESLint — resolver antes de commitar
 22. Produto "Mentorias Especializadas" foi descontinuado. Não tem substituto direto.
 23. Camada 3 (Sopro, Fôlego, Pulso, Acústica, Pressão, Suspiro): aparecem nos nomes
     das seis camadas do INSPIRA mas sem detalhar arquitetura interna no site.
+24. Direção visual: 70% fundo escuro (ink/deep-teal), 30% fundo claro (off-white).
+    Seções claras são respiro intencional, não padrão. Nunca inverter essa proporção.
+25. Logo animado: vinheta de 5s, uso editorial pontual (não fundo de hero nem splash).
+    Entra uma vez por página, no bloco de Método (HOME-3) ou em /sobre.
+    Nunca em loop contínuo como textura. Fallback: imagem estática para mobile e
+    prefers-reduced-motion. Arquivo: public/logo-animation.mp4 + .webm.
+26. Nós e conectores: sistema animado por scroll (IntersectionObserver + CSS transforms).
+    Nós aparecem desconectados e se conectam conforme o usuário desce a página.
+    Nunca partículas em loop livre no hero — causa dano de performance no Lighthouse.
 
 ---
 
@@ -89,18 +98,47 @@ Cormorant NÃO entra em: headers de seção, navegação, body padrão, UI, bot�
 
 ---
 
-## PALETA
+## PALETA — confirmada pelo kit KZ (Maio 2026)
 
 ```css
---color-ink:        #0C0F16;
---color-deep-teal:  #05262D;
---color-teal:       #004756;
---color-orange:     #EA6335;
---color-peach:      #F2A85E;
---color-off-white:  #E8E0D6;
+--color-ink:        #0C0F16;   /* fundo dominante — 70% das seções */
+--color-deep-teal:  #05262E;   /* fundo alternativo escuro */
+--color-teal:       #004757;   /* destaque, bordas, elementos secundários */
+--color-orange:     #EB5C2E;   /* CTA primário, acento — cor de ação */
+--color-off-white:  #E8E0D6;   /* fundo claro — 30% das seções, texto sobre escuro */
 ```
 
-Tokens provisórios até assets da KZ chegarem. Quando chegarem: só trocar tokens e imagens.
+Cinco cores. Sem peach (#F2A85E — removido: não consta na paleta oficial KZ).
+Nota: KZ usa preto puro (#000000) como variante de ink em alguns contextos.
+Resolver com o guia completo quando o kit chegar. Até lá, usar #0C0F16.
+
+Kit KZ pendente: quando chegar, atualizar tokens, fotos (nos.png, celso-gama.jpg,
+gabriela-aguiar.jpg) e og-image.png (1200×630px). Só trocar tokens e imagens — sem
+refatorar estrutura.
+
+---
+
+## SISTEMA DE NÓS E CONECTORES — regras de implementação
+
+O símbolo da marca é um sistema de nós (círculos) e conectores (linhas).
+A metáfora: sistema disperso → sistema em operação → sistema pleno.
+Essa progressão mapeia a jornada do cliente e deve aparecer no scroll da home.
+
+**Regras:**
+- Implementar com SVG inline + IntersectionObserver. Sem canvas, sem WebGL.
+- Nós: círculos ocos (stroke) e sólidos (fill). Cores: orange, teal, off-white sobre fundo escuro.
+- Conectores: linhas finas (1px), opacidade 40-60%, animadas com stroke-dashoffset.
+- Animação de entrada: 0.6s ease-out por nó, offset de 80ms entre nós consecutivos.
+- prefers-reduced-motion: remover transforms e transitions, manter layout estático.
+- Mobile: simplificar o sistema (menos nós, sem animação de conector — só fade-in).
+- Nunca bloquear o texto principal. Nós ficam atrás do conteúdo (z-index < 0 ou pointer-events: none).
+
+**Onde aparece:**
+- Hero da home: nós desconectados, começam a se conectar no scroll
+- HOME-3 (Método): conexão completa ao chegar na seção — metáfora visual do método
+- HOME-4 (Provas): nó de resultado conectado ao sistema
+- /sobre: versão estática menor, decorativa
+- Outros: não replicar sem decisão explícita do Celso
 
 ---
 
@@ -196,6 +234,9 @@ wireframe v3.9.1 ou anterior, PiraLabs_Documento_Mestre_v13.md ou anterior.
 - public/robots.txt: deletar no rebuild. Next.js serve app/robots.ts, não o estático.
 - Toggle de idioma PT/EN persiste em cookie pira_lang
 - Vocabulário proprietário (INSPIRA, TRANSPIRA, FAÍSCA, RESPIRA, Oxigênio, "Antes, Pira") não traduz
+- Logo animado requer ajuste de Content-Security-Policy no next.config.js para autoplay muted
+- Vídeo do logo: servir public/logo-animation.webm (primário) + public/logo-animation.mp4 (fallback)
+  Gerar versão WebM antes de implementar o componente de vídeo
 
 ---
 
@@ -203,6 +244,16 @@ wireframe v3.9.1 ou anterior, PiraLabs_Documento_Mestre_v13.md ou anterior.
 
 Fase 1: globals.css, tailwind.config.ts, layout.tsx, next.config.js (com todos os redirects
         abaixo), robots.ts, sitemap.ts
+
+        Paleta no globals.css:
+        --color-ink: #0C0F16 | --color-deep-teal: #05262E | --color-teal: #004757
+        --color-orange: #EB5C2E | --color-off-white: #E8E0D6
+        Sem peach. Sem outra cor fora dessas cinco.
+
+        Direção visual no Tailwind:
+        bg-ink como classe padrão de seção escura
+        bg-off-white como classe de seção clara — usar com moderação (30%)
+        bg-deep-teal como alternativa escura para seções de destaque
 
         Redirects obrigatórios no next.config.js desta fase:
         — /antes-da-crise → /antes-pira (301)
@@ -240,8 +291,14 @@ Fase 2: Componentes shared:
         <FaiscaGroup1 />, <FaiscaGroup2 />, <FaiscaGroup3 />,
         <OfferHero />, <TargetProfile />, <ProcessSteps />,
         <HowFirstContact />, <FounderProfile />, <MediaKit />
+        Componentes visuais novos:
+        <NodeSystem /> — nós e conectores animados por scroll (SVG + IntersectionObserver)
+        <LogoVideo /> — player editorial do logo animado com fallback estático e prefers-reduced-motion
 
 Fase 3: Home (/)
+        Implementar progressão de nós via <NodeSystem /> nas seções HOME-1 a HOME-4
+        Logo animado em HOME-3 (Método) via <LogoVideo hasVideo={false} /> por padrão
+        até arquivo otimizado disponível em public/
 
 Fase 4: /sobre e /creative-business-turnaround
         (expandir /cbt com tabela CBT vs tradicional — ver handoff GEO)
@@ -287,4 +344,6 @@ Nunca marcar tarefa como concluída sem teste real.
 
 ---
 
-*CLAUDE.md v3.3 · PIRA LABS rebuild-v2 · Maio 2026*
+*CLAUDE.md v3.4 · PIRA LABS rebuild-v2 · Maio 2026*
+*Alterações v3.4: orange #EA6335 → #EB5C2E · deep-teal #05262D → #05262E · teal #004756 → #004757*
+*peach removido · direção visual 70/30 · sistema de nós e conectores · logo animado*
