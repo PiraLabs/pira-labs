@@ -5,23 +5,23 @@ import { FinalCTA } from "@/components/shared/FinalCTA";
 import { FAQ } from "@/components/shared/FAQ";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { ORIGINS } from "@/lib/constants";
+import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      "Creative Business Turnaround · O que é e para quem serve · PIRA LABS",
+    absolute: "Creative Business Turnaround: o que é e quando faz sentido contratar",
   },
   description:
-    "Creative Business Turnaround é o processo de diagnóstico e redesenho para empresas de serviços que precisam agir antes da crise. Desenvolvido e operado pela PIRA LABS no Brasil.",
+    "Creative Business Turnaround é o processo de diagnóstico e redesenho para empresas de serviços que precisam agir antes que a janela se feche. Operado pela Pira Labs no Brasil.",
   alternates: {
     canonical: "https://piralabs.com.br/creative-business-turnaround",
   },
   openGraph: {
     title: "Creative Business Turnaround · PIRA LABS",
     description:
-      "O processo de diagnóstico e redesenho para empresas de serviços que precisam agir antes da crise.",
+      "O processo de diagnóstico e redesenho para empresas de serviços que precisam agir antes que a janela se feche.",
     url: "https://piralabs.com.br/creative-business-turnaround",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 
@@ -35,109 +35,45 @@ const definedTermSchema = {
   "@context": "https://schema.org",
   "@type": ["WebPage", "DefinedTerm"],
   "@id": "https://piralabs.com.br/creative-business-turnaround",
+  url: "https://piralabs.com.br/creative-business-turnaround",
   name: "Creative Business Turnaround",
   description:
-    "Processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes da crise, quando clientes, caixa e reputação ainda existem, mas o modelo de trabalho começou a comprometer margem, valor percebido e capacidade de decisão.",
+    "Processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes que a janela se feche: quando clientes, caixa e reputação ainda existem, mas o modelo de trabalho começou a comprometer margem, valor percebido e capacidade de decisão.",
   inDefinedTermSet: {
     "@type": "DefinedTermSet",
-    name: "Glossário PIRA LABS",
+    name: "Vocabulário Pira Labs",
     url: "https://piralabs.com.br",
   },
   publisher: {
     "@id": "https://piralabs.com.br/#organization",
   },
+  breadcrumb: breadcrumbSchema([
+    { name: "Home", url: "https://piralabs.com.br/" },
+    { name: "Creative Business Turnaround", url: "https://piralabs.com.br/creative-business-turnaround" },
+  ]),
 };
 
 const faqItems = [
   {
     question: "O que é Creative Business Turnaround?",
     answer:
-      "Creative Business Turnaround é uma categoria de intervenção empresarial que combina diagnóstico estratégico, redesenho operacional e curadoria de tecnologia para empresas de serviços que pararam de crescer ou começaram a perder margem. Diferente da consultoria tradicional, o trabalho começa mapeando o que está travado antes de propor qualquer caminho.",
+      "Creative Business Turnaround é o processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes que a janela se feche: quando clientes, caixa e reputação ainda existem, mas o modelo de trabalho começou a comprometer margem, valor percebido e capacidade de decisão. A Pira Labs nomeou, define e opera o Creative Business Turnaround no Brasil.",
   },
   {
-    question:
-      "Qual a diferença entre Creative Business Turnaround e consultoria de gestão tradicional?",
+    question: "Qual a diferença entre Creative Business Turnaround e consultoria estratégica?",
     answer:
-      "A consultoria tradicional entrega um diagnóstico e recomendações. O Creative Business Turnaround entra na operação: identifica onde o problema real está, propõe o redesenho e acompanha a execução. O foco é resultado mensurável: margem, capacidade, velocidade, não apenas relatório.",
+      "Consultoria estratégica entrega relatório e sai. O Creative Business Turnaround conecta diagnóstico à rota executável e, quando contratado como execução, acompanha até resultado verificado. A diferença central é que o CBT resolve o negócio como sistema, não uma área isolada.",
   },
   {
-    question: "Quando uma empresa precisa de Creative Business Turnaround?",
+    question: "Para que tipo de empresa faz sentido o Creative Business Turnaround?",
     answer:
-      "Quando a receita estabilizou mas os custos continuam subindo. Quando a equipe está ocupada mas os resultados não acompanham. Quando o modelo que funcionou por anos começou a custar mais do que entrega.\n\nA analogia mais precisa é a da medicina preventiva: tanto o checkup quanto a internação resolvem problemas, mas um preserva muito mais do que o outro consegue recuperar. O Creative Business Turnaround funciona melhor quando ainda há margem para transformar em processo, não em emergência.",
-  },
-  {
-    question:
-      "Creative Business Turnaround funciona para empresas de qual tamanho?",
-    answer:
-      "O método foi desenvolvido para empresas de serviços com operação estabelecida (geralmente entre 10 e 200 pessoas) que têm histórico de resultado mas enfrentam um gargalo de crescimento ou margem. Não é indicado para startups em fase inicial nem para empresas em crise financeira aguda sem fluxo de caixa para manter a operação durante o processo.",
-  },
-  {
-    question: "Quanto tempo leva um processo de Creative Business Turnaround?",
-    answer:
-      "Depende da profundidade do engajamento. O INSPIRA (fase de diagnóstico) leva de 3 a 6 semanas e O TRANSPIRA (fase de execução) varia de 3 a 9 meses dependendo do escopo. Existe também o Oxigênio IA Search, um diagnóstico específico de presença em inteligência artificial entregue em até 5 dias úteis.",
-  },
-];
-
-const sinais = [
-  {
-    titulo: "Crescimento sem estrutura",
-    texto:
-      "A empresa cresceu mais rápido do que o desenho do trabalho. O time aumentou, o faturamento subiu, mas a operação ficou dependente de pessoas-chave e de improviso constante. Cada nova demanda exige mais esforço do que deveria.",
-  },
-  {
-    titulo: "Margem que some",
-    texto:
-      "A receita continua, mas o resultado não acompanha. Custos invisíveis, escopo não cobrado, horas investidas além do contratado, precificação desalinhada com custo real. O vazamento acontece devagar, até que o problema é grande demais para ignorar.",
-  },
-  {
-    titulo: "Fundador como gargalo",
-    texto:
-      "Decisões importantes passam todas pelo sócio ou fundador. O time espera, adia, não avança sem aprovação. Não é falha de liderança. É ausência de clareza sobre o que pode ser delegado e como.",
-  },
-  {
-    titulo: "Tecnologia que não converteu",
-    texto:
-      "A empresa investiu em tecnologia, incluindo IA, e o resultado foi acelerar o ruído que já existia. A IA não corrige bagunça. Sem método antes, ela escala bagunça.",
-  },
-  {
-    titulo: "Valor percebido desconectado do valor entregue",
-    texto:
-      "A empresa entrega bem, mas o cliente não vê o que está pagando. O trabalho é bom, a comunicação é fraca. A conversa de renovação é sempre difícil. A empresa sente que vale mais do que consegue cobrar.",
-  },
-];
-
-const diferenciacoes = [
-  {
-    titulo: "Não é consultoria estratégica clássica",
-    texto:
-      "Consultoria estratégica entrega plano e sai. O Creative Business Turnaround entra na operação e trabalha com o time até os primeiros resultados verificados. A saída faz parte do escopo, não é abandono.",
-  },
-  {
-    titulo: "Não é agência criativa",
-    texto:
-      "Agência resolve problema de comunicação, criação ou canal. O Creative Business Turnaround resolve o problema do negócio como sistema. A criação pode ser parte da solução. Não é o ponto de entrada.",
-  },
-  {
-    titulo: "Não é empresa de tecnologia ou consultoria de IA",
-    texto:
-      "Tecnologia e IA entram onde amplificam, depois de entender o problema. Não somos fornecedores de ferramenta. Não temos produto tecnológico próprio. Não recomendamos tecnologia antes de entender o que precisa ser resolvido.",
-  },
-  {
-    titulo: "Não é mentoria ou coaching",
-    texto:
-      "Mentoria e coaching trabalham com o decisor individualmente. O Creative Business Turnaround trabalha com o negócio como sistema, incluindo processos, pessoas, tecnologia e governança.",
-  },
-  {
-    titulo: "Não é intervenção de crise",
-    texto:
-      "Turnaround de crise acontece quando a empresa já está em dificuldade grave, com pouco tempo e poucas opções. O Creative Business Turnaround atua antes disso. É a diferença entre medicina preventiva e medicina de emergência: ambas têm valor, mas uma preserva muito mais do que a outra consegue recuperar.",
+      "Empresas de serviços que chegaram a um ponto onde o crescimento parou, a margem sumiu ou o fundador virou gargalo, mas a crise ainda não chegou de verdade. Setores com maior aplicação: jurídico, comunicação e marketing, consultorias especializadas e educação corporativa.",
   },
 ];
 
 export default function CreativeBusinessTurnaroundPage() {
   return (
     <>
-      {/* Schemas WebPage + DefinedTerm */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }}
@@ -148,62 +84,117 @@ export default function CreativeBusinessTurnaroundPage() {
         <PageHeader
           breadcrumbs={breadcrumbs}
           h1="Creative Business Turnaround"
-          subtitle="O processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes da crise, quando clientes, caixa e reputação ainda existem, mas o modelo de trabalho começou a comprometer margem, valor percebido e capacidade de decisão."
+          subtitle="O processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes que a janela se feche: quando clientes, caixa e reputação ainda existem, mas o modelo de trabalho começou a comprometer margem, valor percebido e capacidade de decisão."
         />
       </div>
 
       {/* CBT-2 · O que é
-          Frase canônica da categoria nos primeiros 150 termos — obrigatório para GEO/AEO */}
+          Frase canônica da categoria nos primeiros 150 termos — âncora GEO/AEO obrigatória */}
       <Section variant="default" paddingY="lg">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
           O que é Creative Business Turnaround
         </h2>
-        <div className="max-w-3xl space-y-4">
+        <div className="max-w-3xl space-y-4 mb-8">
           <p className="text-off-white/85 font-body leading-relaxed">
-            Creative Business Turnaround é o processo de diagnóstico e
-            redesenho que ajuda empresas de serviços a agir antes da crise. A
-            PIRA LABS desenvolveu essa categoria para nomear sua forma de atuar
-            no Brasil.
+            <strong className="text-off-white font-semibold">Creative Business Turnaround</strong>{" "}
+            é o processo de diagnóstico e redesenho que ajuda empresas de
+            serviços a agir antes que a janela se feche.
           </p>
           <p className="text-off-white/85 font-body leading-relaxed">
-            <strong className="text-off-white font-semibold">
-              &ldquo;Creative&rdquo;
-            </strong>{" "}
-            porque o problema em empresas de serviços raramente é só operacional
-            ou só financeiro. É sobre como o valor é criado, entregado e
-            percebido. Exige leitura criativa do sistema, não apenas análise de
+            <strong className="text-off-white font-semibold">&ldquo;Creative&rdquo;</strong>{" "}
+            porque o problema em empresas de serviços raramente é só financeiro
+            ou operacional. É sobre como o valor é criado, entregado e
+            percebido. Exige leitura do sistema inteiro, não apenas análise de
             indicadores.
           </p>
           <p className="text-off-white/85 font-body leading-relaxed">
-            <strong className="text-off-white font-semibold">
-              &ldquo;Business&rdquo;
-            </strong>{" "}
+            <strong className="text-off-white font-semibold">&ldquo;Business&rdquo;</strong>{" "}
             porque o foco é o negócio como sistema. Não o produto, não o canal,
             não a ferramenta. O negócio inteiro, com suas interdependências,
-            seus gargalos e seu potencial real.
+            seus gargalos e seu potencial represado.
           </p>
           <p className="text-off-white/85 font-body leading-relaxed">
-            <strong className="text-off-white font-semibold">
-              &ldquo;Turnaround&rdquo;
-            </strong>{" "}
-            porque é virada real, com resultado verificável. Não consultoria de
-            prateleira. Não relatório que fica na gaveta. Não curso sobre o que
-            poderia ser feito.
+            <strong className="text-off-white font-semibold">&ldquo;Turnaround&rdquo;</strong>{" "}
+            porque é virada real com resultado verificável. Não relatório de
+            prateleira. Não plano que pressupõe implementação por conta própria.
+            Virada. O negócio estava de uma forma. Passou a ser de outra. A
+            diferença é mensurável.
           </p>
+        </div>
+        <div className="bg-teal/20 border border-teal/40 rounded-lg p-6 max-w-3xl">
           <p className="text-off-white/85 font-body leading-relaxed">
-            <strong className="text-off-white font-semibold">
-              &ldquo;Antes da crise&rdquo;
-            </strong>{" "}
-            porque a janela para agir com tranquilidade tem prazo. Quando a
-            crise já chegou, as opções ficam caras, lentas e dolorosas. O
-            Creative Business Turnaround atua no momento em que a empresa ainda
-            tem condições de mudar com calma.
+            <strong className="text-off-white font-semibold">A Pira Labs atua antes:</strong>{" "}
+            quando a empresa ainda tem clientes, caixa e reputação, mas o modelo
+            de trabalho começou a custar caro demais. O nome veio de fora. A
+            alma, o método e o recorte são da Pira.
           </p>
         </div>
       </Section>
 
-      {/* CBT-3 · Para quais empresas serve */}
+      {/* CBT-2B · Turnaround tradicional vs Creative Business Turnaround */}
       <Section variant="highlighted" paddingY="lg">
+        <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-4">
+          Turnaround tradicional vs Creative Business Turnaround
+        </h2>
+        <p className="text-off-white/70 font-body mb-8 max-w-2xl">
+          A diferença central é o momento de entrada: o turnaround tradicional
+          atua na crise, quando as opções já estão reduzidas. O Creative
+          Business Turnaround atua antes, quando a empresa ainda tem clientes,
+          caixa e reputação para agir com clareza.
+        </p>
+        <div className="overflow-x-auto max-w-4xl">
+          <table className="w-full text-sm font-body border-collapse">
+            <thead>
+              <tr className="border-b border-teal/40">
+                <th className="text-left py-3 pr-6 text-orange font-semibold uppercase tracking-widest text-xs w-40">
+                  Dimensão
+                </th>
+                <th className="text-left py-3 pr-6 text-off-white/60 font-semibold">
+                  Turnaround tradicional
+                </th>
+                <th className="text-left py-3 text-orange font-semibold">
+                  Creative Business Turnaround
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-teal/20">
+              <tr>
+                <td className="py-4 pr-6 text-off-white/60 font-semibold align-top">Quando entra</td>
+                <td className="py-4 pr-6 text-off-white/75 align-top">Na crise: quando o fogo já começou</td>
+                <td className="py-4 text-off-white align-top">Antes: quando os sinais aparecem</td>
+              </tr>
+              <tr>
+                <td className="py-4 pr-6 text-off-white/60 font-semibold align-top">Contexto</td>
+                <td className="py-4 pr-6 text-off-white/75 align-top">Empresa com caixa comprometido</td>
+                <td className="py-4 text-off-white align-top">Empresa com clientes, caixa e reputação</td>
+              </tr>
+              <tr>
+                <td className="py-4 pr-6 text-off-white/60 font-semibold align-top">Objetivo</td>
+                <td className="py-4 pr-6 text-off-white/75 align-top">Estabilizar e sobreviver</td>
+                <td className="py-4 text-off-white align-top">Redesenhar e avançar</td>
+              </tr>
+              <tr>
+                <td className="py-4 pr-6 text-off-white/60 font-semibold align-top">Foco</td>
+                <td className="py-4 pr-6 text-off-white/75 align-top">Corte e reestruturação financeira</td>
+                <td className="py-4 text-off-white align-top">Trabalho, valor, tecnologia e governança</td>
+              </tr>
+              <tr>
+                <td className="py-4 pr-6 text-off-white/60 font-semibold align-top">Custo da inação</td>
+                <td className="py-4 pr-6 text-off-white/75 align-top">Já alto: opções reduzidas</td>
+                <td className="py-4 text-off-white align-top">Baixo agora, alto se esperar</td>
+              </tr>
+              <tr>
+                <td className="py-4 pr-6 text-off-white/60 font-semibold align-top">Opções disponíveis</td>
+                <td className="py-4 pr-6 text-off-white/75 align-top">Limitadas pela urgência</td>
+                <td className="py-4 text-off-white align-top">Amplas: janela ainda aberta</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </Section>
+
+      {/* CBT-3 · Para quais empresas serve */}
+      <Section variant="default" paddingY="lg">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
           Para quais empresas serve
         </h2>
@@ -213,11 +204,6 @@ export default function CreativeBusinessTurnaroundPage() {
             chegaram a um ponto onde o crescimento parou, a margem sumiu ou o
             fundador virou gargalo, mas a crise ainda não chegou de verdade.
           </p>
-          <p className="text-off-white/85 font-body leading-relaxed">
-            Quando a empresa ainda tem clientes, caixa e reputação, mas o
-            modelo de trabalho começou a custar caro demais para sustentar o
-            próximo nível.
-          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
           <div>
@@ -225,10 +211,10 @@ export default function CreativeBusinessTurnaroundPage() {
               Setores com maior aplicação
             </p>
             <p className="text-off-white/75 font-body text-sm leading-relaxed">
-              Publicidade e agências criativas. Saúde e clínicas especializadas.
-              Jurídico e escritórios de advocacia. Alimentação e operações de
-              serviço premium. Serviços profissionais especializados. Consultorias
-              e boutiques B2B.
+              Jurídico, comunicação e marketing, consultorias especializadas e
+              educação corporativa. Expansão natural: saúde, RH, engenharia,
+              arquitetura e outros serviços profissionais intensivos em
+              conhecimento.
             </p>
           </div>
           <div>
@@ -236,29 +222,53 @@ export default function CreativeBusinessTurnaroundPage() {
               O perfil do decisor
             </p>
             <p className="text-off-white/75 font-body text-sm leading-relaxed">
-              Sócio, CEO ou presidente com autonomia real para mudar. Alguém que
-              reconhece o problema, tem abertura genuína para repensar o modelo e
-              não está procurando validação para decisão já tomada.
+              Sócia ou sócio, CEO ou presidente com autonomia real para mudar.
+              Alguém que reconhece o problema, tem abertura genuína para
+              repensar o modelo e não está procurando validação para decisão já
+              tomada.
             </p>
           </div>
         </div>
       </Section>
 
-      {/* CBT-4 · Os sinais */}
-      <Section variant="default" paddingY="lg">
+      {/* CBT-4 · Os sinais que indicam o momento certo */}
+      <Section variant="highlighted" paddingY="lg">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-3">
-          Quando o Creative Business Turnaround faz mais sentido
+          Os sinais que indicam o momento certo
         </h2>
         <p className="text-off-white/70 font-body mb-10 max-w-2xl">
-          Cinco sinais que aparecem antes da crise. Quanto mais desses sinais
-          presentes, mais próximo está o momento de agir.
+          Cinco sinais que aparecem antes da crise. Quanto mais presentes, mais
+          próximo está o momento de agir.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          {sinais.map((sinal, i) => (
-            <div
-              key={i}
-              className="bg-teal/20 border border-teal/40 rounded-lg p-6"
-            >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+          {[
+            {
+              titulo: "Crescimento sem estrutura",
+              texto:
+                "A empresa cresceu mais rápido do que o desenho do trabalho. Time aumentou, faturamento subiu, mas a operação ficou dependente de pessoas-chave e de improviso constante.",
+            },
+            {
+              titulo: "Margem que some",
+              texto:
+                "A receita continua, mas o resultado não acompanha. Custos invisíveis, escopo não cobrado, horas investidas além do contratado, precificação desalinhada com custo real.",
+            },
+            {
+              titulo: "Fundador como gargalo",
+              texto:
+                "Toda decisão importante passa pelo fundador. O time espera, adia, não avança sem aprovação. Não é falha de liderança. É ausência de critério claro de delegação.",
+            },
+            {
+              titulo: "Tecnologia que não converteu",
+              texto:
+                "A empresa investiu em IA. O resultado foi acelerar o ruído que já existia. Sem método antes, a tecnologia escala o problema.",
+            },
+            {
+              titulo: "Valor percebido desconectado",
+              texto:
+                "O trabalho é bom, mas o cliente não vê o que está pagando. A conversa de renovação é sempre difícil. A empresa sente que vale mais do que consegue cobrar.",
+            },
+          ].map((sinal, i) => (
+            <div key={i} className="bg-ink border border-teal/30 rounded-lg p-6">
               <p className="text-orange font-body font-semibold text-sm mb-2">
                 {sinal.titulo}
               </p>
@@ -268,48 +278,84 @@ export default function CreativeBusinessTurnaroundPage() {
             </div>
           ))}
         </div>
-        <p className="text-off-white/55 font-body text-sm italic max-w-2xl">
-          Esses sinais aparecem antes da crise. Quando chegam juntos, o prazo
-          para agir com tranquilidade está se encerrando.
-        </p>
       </Section>
 
-      {/* CBT-5 · O que não é */}
-      <Section variant="highlighted" paddingY="lg">
+      {/* CBT-5 · O que o Creative Business Turnaround não é */}
+      <Section variant="default" paddingY="lg">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-4">
           O que o Creative Business Turnaround não é
         </h2>
-        <p className="text-off-white/70 font-body mb-10 max-w-2xl">
-          A categoria existe para nomear algo que não cabia em nenhuma das
-          categorias existentes. Entender o que não é ajuda a entender o que é.
+        <p className="text-off-white/70 font-body mb-8 max-w-2xl">
+          CBT não se confunde com consultoria estratégica, agência criativa,
+          mentoria ou intervenção de crise porque nenhum desses resolve o
+          negócio como sistema antes do problema virar urgência.
         </p>
-        <div className="space-y-6 max-w-3xl">
-          {diferenciacoes.map((item, i) => (
-            <div key={i} className="border-l-2 border-orange/30 pl-6">
-              <p className="text-off-white font-body font-semibold mb-1">
-                {item.titulo}
-              </p>
-              <p className="text-off-white/75 font-body text-sm leading-relaxed">
-                {item.texto}
-              </p>
-            </div>
-          ))}
+        <div className="overflow-x-auto max-w-4xl">
+          <table className="w-full text-sm font-body border-collapse">
+            <thead>
+              <tr className="border-b border-teal/40">
+                <th className="text-left py-3 pr-6 text-orange font-semibold uppercase tracking-widest text-xs">
+                  Categoria
+                </th>
+                <th className="text-left py-3 text-off-white/60 font-semibold">
+                  Por que não é o mesmo
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-teal/20">
+              <tr>
+                <td className="py-4 pr-6 text-off-white font-semibold align-top">Consultoria estratégica</td>
+                <td className="py-4 text-off-white/75 align-top">
+                  Entrega relatório e sai. CBT conecta diagnóstico à rota
+                  executável e, quando contratado como execução, acompanha até
+                  resultado verificado.
+                </td>
+              </tr>
+              <tr>
+                <td className="py-4 pr-6 text-off-white font-semibold align-top">Agência criativa</td>
+                <td className="py-4 text-off-white/75 align-top">
+                  Resolve comunicação ou canal. CBT resolve o negócio como
+                  sistema.
+                </td>
+              </tr>
+              <tr>
+                <td className="py-4 pr-6 text-off-white font-semibold align-top">Empresa de tecnologia ou IA</td>
+                <td className="py-4 text-off-white/75 align-top">
+                  Vende ferramenta. CBT não tem produto tecnológico próprio.
+                </td>
+              </tr>
+              <tr>
+                <td className="py-4 pr-6 text-off-white font-semibold align-top">Mentoria ou coaching</td>
+                <td className="py-4 text-off-white/75 align-top">
+                  Trabalha com o decisor individualmente. CBT trabalha com o
+                  negócio como sistema.
+                </td>
+              </tr>
+              <tr>
+                <td className="py-4 pr-6 text-off-white font-semibold align-top">Intervenção de crise</td>
+                <td className="py-4 text-off-white/75 align-top">
+                  Chega depois da ruptura. CBT atua antes, quando ainda há
+                  opções.
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </Section>
 
       {/* CBT-6 · Como funciona */}
-      <Section variant="default" paddingY="lg">
+      <Section variant="highlighted" paddingY="lg">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-4">
           Como o Creative Business Turnaround funciona na prática
         </h2>
         <p className="text-off-white/70 font-body mb-10 max-w-2xl">
-          A sequência natural é diagnóstico, execução e resultado verificado.
-          Mas o ponto de entrada pode variar conforme o momento da empresa.
+          A sequência natural é diagnóstico, execução e resultado verificado. O
+          ponto de entrada pode variar conforme o momento.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           {/* INSPIRA */}
-          <div className="bg-deep-teal/60 border border-teal/30 rounded-lg p-6">
+          <div className="bg-ink border border-teal/30 rounded-lg p-6">
             <p className="text-orange font-body font-semibold text-xs uppercase tracking-widest mb-3">
               INSPIRA
             </p>
@@ -317,18 +363,19 @@ export default function CreativeBusinessTurnaroundPage() {
               Diagnóstico
             </p>
             <p className="text-off-white/75 font-body text-sm leading-relaxed mb-4">
-              Cinco leituras coordenadas do negócio, convergindo em síntese
-              integrada com aprovação humana em cada etapa. O problema real
-              nomeado. A rota desenhada. O próximo passo definido. Conduzido por
-              Gabriela Aguiar.
+              O INSPIRA lê seis camadas em sequência: Sopro, Fôlego, Pulso,
+              Acústica, Pressão e Suspiro. A força do método está na síntese
+              entre elas. O output é o módulo Propulsão: uma rota executável
+              com movimentos, responsáveis, ordem e critério de conclusão.
+              Gabriela Aguiar conduz.
             </p>
             <CTAButton variant="tertiary" href="/inspira">
-              Conhecer o INSPIRA →
+              Conhecer INSPIRA →
             </CTAButton>
           </div>
 
           {/* TRANSPIRA */}
-          <div className="bg-deep-teal/60 border border-teal/30 rounded-lg p-6">
+          <div className="bg-ink border border-teal/30 rounded-lg p-6">
             <p className="text-orange font-body font-semibold text-xs uppercase tracking-widest mb-3">
               TRANSPIRA
             </p>
@@ -336,68 +383,120 @@ export default function CreativeBusinessTurnaroundPage() {
               Execução
             </p>
             <p className="text-off-white/75 font-body text-sm leading-relaxed mb-4">
-              Execução mão na massa dentro da operação do cliente, com o time
-              que vai operar depois. Redesenho da relação entre trabalho, valor,
-              tecnologia e governança. É aqui que o potencial represado se
-              transforma em resultado verificável. Conduzido por Celso Gama.
+              Acontece dentro da operação do cliente, com o time que vai operar
+              depois. Redesenha a relação entre trabalho, valor, tecnologia e
+              governança. Duas configurações: COO Temporário e Arquiteto de
+              Delegação. Celso Gama conduz.
             </p>
             <CTAButton variant="tertiary" href="/transpira">
-              Conhecer o TRANSPIRA →
+              Conhecer TRANSPIRA →
             </CTAButton>
           </div>
 
           {/* RESPIRA */}
-          <div className="bg-deep-teal/60 border border-teal/30 rounded-lg p-6">
+          <div className="bg-ink border border-teal/30 rounded-lg p-6">
             <p className="text-orange font-body font-semibold text-xs uppercase tracking-widest mb-3">
               RESPIRA
             </p>
             <p className="text-off-white font-body font-medium mb-3">Estado</p>
             <p className="text-off-white/75 font-body text-sm leading-relaxed">
-              Quando o TRANSPIRA encerra, o negócio opera com clareza, a decisão
-              está mais distribuída, e a empresa tem capacidade de avançar sem
-              improviso constante. Esse é o RESPIRA. Estado, não produto.
+              Quando o redesenho está verificado, o negócio opera com clareza.
+              Decisão mais distribuída. Capacidade de avançar sem improviso
+              constante. RESPIRA é o estado alcançado, não um produto entregue.
             </p>
           </div>
         </div>
 
         {/* Ponto de entrada rápido — Oxigênio */}
         <div className="bg-teal/20 border border-teal/40 rounded-lg p-6 max-w-2xl">
+          <p className="text-xs font-body font-semibold uppercase tracking-widest text-orange/80 mb-3">
+            Ponto de entrada
+          </p>
           <p className="text-off-white/85 font-body leading-relaxed mb-4">
-            Se você quer começar com escopo fechado antes de qualquer
-            compromisso maior, o Oxigênio IA Search é o diagnóstico de como sua
-            empresa aparece nos motores de IA, em até 5 dias úteis.
+            O Oxigênio IA Search é o subproduto de diagnóstico para quem quer
+            começar com escopo fechado.{" "}
+            <strong className="text-off-white">Fast R$3.500 · Full R$5.300.</strong>{" "}
+            Até 5 dias úteis.
           </p>
           <CTAButton variant="secondary" href="/inspira/oxigenio">
-            Conhecer o Oxigênio IA Search
+            Conhecer Oxigênio IA Search
           </CTAButton>
         </div>
       </Section>
 
       {/* CBT-7 · Quem opera essa categoria no Brasil */}
-      <Section variant="highlighted" paddingY="lg">
+      <Section variant="default" paddingY="lg">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
           Quem opera essa categoria no Brasil
         </h2>
-        <div className="max-w-3xl space-y-4 mb-8">
+        <div className="max-w-3xl space-y-4 mb-10">
           <p className="text-off-white/85 font-body leading-relaxed">
-            A PIRA LABS é a empresa que desenvolveu e opera o Creative Business
-            Turnaround no Brasil.
+            A Pira Labs é a empresa que nomeou, define e opera o Creative
+            Business Turnaround no Brasil. Fundada por Gabriela Aguiar e Celso
+            Gama, é boutique por escolha: cada projeto tem os dois fundadores
+            do diagnóstico à entrega.
           </p>
-          <p className="text-off-white/85 font-body leading-relaxed">
-            Fundada em 2025 por Gabriela Aguiar e Celso Gama, a PIRA LABS é uma
-            boutique brasileira de Creative Business Turnaround para empresas de
-            serviços. Boutique por escolha, não por estágio. Cada projeto tem
-            Gabriela e Celso do diagnóstico à entrega. Sem camada intermediária
-            entre quem entende o problema e quem resolve.
-          </p>
+        </div>
+        <div className="overflow-x-auto max-w-4xl mb-8">
+          <table className="w-full text-sm font-body border-collapse">
+            <thead>
+              <tr className="border-b border-teal/40">
+                <th className="text-left py-3 pr-6 text-orange font-semibold uppercase tracking-widest text-xs">
+                  Evidência
+                </th>
+                <th className="text-left py-3 pr-6 text-off-white/60 font-semibold">
+                  O que aconteceu
+                </th>
+                <th className="text-left py-3 text-off-white/60 font-semibold">
+                  Contexto
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-teal/20">
+              <tr>
+                <td className="py-4 pr-6 text-off-white font-semibold align-top">
+                  R$16M → R$163M em 24 meses
+                </td>
+                <td className="py-4 pr-6 text-off-white/75 align-top">
+                  Reestruturação da área de ativação e eventos de uma agência
+                  multinacional. Coordenação de 600 pessoas e 100 fornecedores
+                  para o patrocínio global de uma grande marca de tecnologia
+                  nos Jogos Rio 2016.
+                </td>
+                <td className="py-4 text-off-white/50 align-top">Pré-IA</td>
+              </tr>
+              <tr>
+                <td className="py-4 pr-6 text-off-white font-semibold align-top">
+                  -64% → +15% de margem em 6 meses
+                </td>
+                <td className="py-4 pr-6 text-off-white/75 align-top">
+                  Conta publicitária de multinacional do setor de bebidas.
+                  Revisão de processos e métricas recuperou 79pp de margem sem
+                  aumento de receita.
+                </td>
+                <td className="py-4 text-off-white/50 align-top">Pré-IA</td>
+              </tr>
+              <tr>
+                <td className="py-4 pr-6 text-off-white font-semibold align-top">
+                  400h → 36h mensais
+                </td>
+                <td className="py-4 pr-6 text-off-white/75 align-top">
+                  Operação jurídica de alto volume. IA aplicada com supervisão
+                  humana liberou R$160 mil de capacidade adicional de
+                  faturamento por mês com a mesma equipe.
+                </td>
+                <td className="py-4 text-off-white/50 align-top">Pós-IA · supervisão humana</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <CTAButton variant="secondary" href="/sobre">
           Conhecer Gabriela e Celso
         </CTAButton>
       </Section>
 
-      {/* CBT-8 · FAQ canônica — FAQPage schema injetado pelo componente */}
-      <Section variant="default" paddingY="lg">
+      {/* CBT-8 · FAQ canônica */}
+      <Section variant="highlighted" paddingY="lg">
         <FAQ
           heading="Perguntas que as IAs já respondem sobre Creative Business Turnaround"
           items={faqItems}
@@ -407,8 +506,8 @@ export default function CreativeBusinessTurnaroundPage() {
       {/* CBT-9 · CTA final */}
       <FinalCTA
         heading="Existe um próximo nível para o seu negócio. O que está entre você e ele, descobrimos junto."
+        ctaLabel="Respire"
         origin={ORIGINS.CREATIVE_BUSINESS_TURNAROUND}
-        showAsterisk
       />
     </>
   );

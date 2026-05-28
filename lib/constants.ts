@@ -14,23 +14,27 @@ export const FILLOUT_URL_HEADER =
 export const FILLOUT_URL_CONTATO =
   `${FILL_OUT_FORM_URL}?origem=contato&${UTM_BASE}&utm_content=pagina_contato`;
 
-// 13 origens oficiais do sistema de rastreamento de CTAs.
+// 18 origens oficiais do sistema de rastreamento de CTAs (v4).
 // Todos os CTAs que apontam para /contato incluem ?origem=[valor].
-// Nota: /antes-da-crise usa origem "faisca" (não tem origem própria).
 export const ORIGINS = {
-  HOME: "home",
-  SOBRE: "sobre",
-  INSPIRA: "inspira",
-  INSPIRA_JURIDICO: "inspira_juridico",
-  OXIGENIO: "oxigenio",
-  TRANSPIRA: "transpira",
-  TRANSPIRA_JURIDICO: "transpira_juridico",
-  FAISCA: "faisca",
-  FAISCA_JURIDICA: "faisca_juridica",
+  HOME:                         "home",
+  SOBRE:                        "sobre",
+  INSPIRA:                      "inspira",
+  INSPIRA_JURIDICO:             "inspira_juridico",
+  OXIGENIO:                     "oxigenio",
+  TRANSPIRA:                    "transpira",
+  TRANSPIRA_JURIDICO:           "transpira_juridico",
+  TRANSPIRA_UNIFICADO:          "transpira_unificado",
+  FAISCA:                       "faisca",
+  FAISCA_JURIDICA:              "faisca_juridica",
+  FAISCA_IMERSA:                "faisca_imersa",
+  FAISCA_POCKET:                "faisca_pocket",
+  FAISCA_PALESTRAS:             "faisca_palestras",
+  FAISCA_WORKSHOPS:             "faisca_workshops",
+  FAISCA_CLEVEL:                "faisca_clevel",
   CREATIVE_BUSINESS_TURNAROUND: "creative_business_turnaround",
-  HEADER_GLOBAL: "header_global",
-  NOT_FOUND: "404",
-  DIRETO: "direto",
+  HEADER_GLOBAL:                "header_global",
+  NOT_FOUND:                    "404",
 } as const;
 
 export type Origin = (typeof ORIGINS)[keyof typeof ORIGINS];

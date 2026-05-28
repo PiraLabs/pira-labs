@@ -29,7 +29,7 @@ export function CTAButton({
     secondary:
       "inline-flex items-center justify-center min-h-[44px] px-8 py-4 rounded border border-off-white text-off-white font-body font-medium text-base leading-tight bg-transparent transition-colors hover:bg-off-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange",
     tertiary:
-      "inline-flex items-center justify-center min-h-[44px] px-2 py-1 text-peach underline font-body font-medium text-base transition-colors hover:text-orange focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange",
+      "inline-flex items-center justify-center min-h-[44px] px-2 py-1 text-off-white/70 underline font-body font-medium text-base transition-colors hover:text-orange focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange",
   }[variant];
 
   const content = (
