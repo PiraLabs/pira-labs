@@ -31,7 +31,7 @@ const schemas = {
 export const metadata: Metadata = {
   title: {
     absolute:
-      "INSPIRA Jurídico · Diagnóstico de risco de IA para escritórios · PIRA LABS",
+      "INSPIRA Jurídico · Diagnóstico de uso de IA para escritórios · PIRA LABS",
   },
   description:
     "Diagnóstico de 2 a 3 semanas. Mapeamos como o escritório usa IA hoje, onde está a exposição, e entregamos política mínima e plano de ação priorizado.",
@@ -87,32 +87,27 @@ const faqItems = [
   {
     question: "Isso é consultoria jurídica?",
     answer:
-      "Não. O INSPIRA Jurídico é diagnóstico operacional de governança de uso de IA. Não define estratégia de caso, não emite parecer jurídico e não substitui a atuação de advogado habilitado. A política mínima que entregamos é documento operacional, não instrumento jurídico.",
+      "Não. É diagnóstico operacional de governança de uso de IA. Não emite parecer jurídico, não define estratégia de caso e não substitui advogado habilitado.",
   },
   {
     question: "Quanto tempo leva?",
     answer:
-      "2 a 3 semanas da abertura até a sessão de leitura conjunta. O prazo depende do tamanho do escritório e da disponibilidade da equipe para as entrevistas de mapeamento.",
-  },
-  {
-    question: "Quais são as cinco leituras do INSPIRA Jurídico?",
-    answer:
-      "As mesmas cinco leituras do INSPIRA padrão da PIRA LABS, com lente jurídica em cada uma: mercado e presença, pessoas e operação, governança e processos, tensão econômica e síntese integrada. Em cada leitura, o olhar jurídico é específico: confidencialidade e sigilo profissional, LGPD aplicada ao tratamento de dados de clientes, responsabilidade técnica do advogado, governança de uso de IA e exposição operacional do escritório. A vantagem dessa estrutura é que cada projeto alimenta a base própria de conhecimento setorial que a PIRA LABS está construindo desde 2026, tornando os diagnósticos progressivamente mais calibrados.",
-  },
-  {
-    question: "O que acontece depois do diagnóstico?",
-    answer:
-      "Você decide. O INSPIRA Jurídico entrega o diagnóstico e o plano. Executar é decisão sua. Para escritórios que querem apoio na execução, o próximo passo natural é o TRANSPIRA Jurídico. Mas não há obrigação.",
+      "2 a 3 semanas da abertura até a sessão de leitura conjunta.",
   },
   {
     question: "Como é a precificação?",
     answer:
-      "Sob consulta e disponibilidade. Investimento típico entre R$12.500 e R$26.000, conforme tamanho do escritório e escopo do mapeamento. Por sermos uma boutique, trabalhamos com agenda limitada de projetos simultâneos. Respondemos em até dois dias úteis com proposta.",
+      "R$12.500 a R$26.000 conforme tamanho do escritório e escopo do mapeamento. Sob consulta e disponibilidade.",
+  },
+  {
+    question: "O que acontece depois?",
+    answer:
+      "Você decide. O INSPIRA Jurídico entrega o diagnóstico e o plano. Para quem quer apoio na execução, o próximo passo natural é o TRANSPIRA Jurídico.",
   },
   {
     question: "Vocês assinam NDA?",
     answer:
-      "Sempre. Acordo de confidencialidade assinado antes de qualquer conversa com membros da equipe ou acesso a documentos. NDA é base canônica de todo trabalho da PIRA LABS, independentemente do produto contratado.",
+      "Sempre. NDA assinado antes de qualquer conversa com a equipe ou acesso a documentos.",
   },
 ];
 
@@ -182,18 +177,15 @@ export default function InspiraJuridicoPage() {
             de ação priorizado.
           </p>
           <p className="text-off-white/85 font-body leading-relaxed">
-            É o método INSPIRA da PIRA LABS aplicado com lente jurídica. As
-            cinco leituras coordenadas que estruturam todo INSPIRA acontecem
-            aqui também: mercado e presença, pessoas e operação, governança e
-            processos, tensão econômica e síntese integrada. A diferença é o
-            que olhamos em cada uma: confidencialidade, sigilo profissional,
-            LGPD aplicada ao tratamento de dados de clientes, responsabilidade
-            técnica do advogado, governança de uso de IA e exposição
-            operacional do escritório.
+            É o método INSPIRA da Pira Labs aplicado com lente jurídica. As
+            seis camadas do INSPIRA com lente jurídica: confidencialidade,
+            sigilo profissional, LGPD aplicada ao tratamento de dados de
+            clientes, responsabilidade técnica do advogado, governança de uso
+            de IA e exposição operacional do escritório.
           </p>
           <p className="text-off-white/85 font-body leading-relaxed">
             Cada projeto da vertical jurídica alimenta a base própria de
-            conhecimento setorial que a PIRA LABS está construindo desde 2026.
+            conhecimento setorial que a Pira Labs está construindo desde 2026.
             Isso significa que cada novo INSPIRA Jurídico chega ao cliente mais
             calibrado do que o anterior, com referências reais do mercado
             jurídico brasileiro acumuladas ao longo do tempo.
@@ -260,9 +252,9 @@ export default function InspiraJuridicoPage() {
         <div className="max-w-3xl space-y-4">
           <p className="text-off-white/85 font-body leading-relaxed">
             Gabriela Aguiar conduz a leitura institucional. Celso Gama,
-            cursando último ano de Direito no Mackenzie com Applied AI
-            Certificate Program pelo MIT, conduz a leitura de governança e
-            exposição operacional.
+            bacharelando em Direito (Mackenzie) com Applied AI Certificate
+            Program (MIT, em andamento, 2026), conduz a leitura de governança
+            e exposição operacional.
           </p>
           <p className="text-off-white/85 font-body leading-relaxed">
             Os dois juntos, como em todo diagnóstico da PIRA LABS. Sem equipe
@@ -279,7 +271,7 @@ export default function InspiraJuridicoPage() {
       {/* INSPIRA-JUR-8 · CTAs */}
       <section className="bg-ink section-padding">
         <div className="container-site text-center">
-          <p className="font-display text-2xl md:text-3xl italic text-peach mb-8 leading-snug max-w-2xl mx-auto">
+          <p className="font-display text-2xl md:text-3xl italic text-off-white/70 mb-8 leading-snug max-w-2xl mx-auto">
             Saber onde está a exposição já é metade do trabalho. A outra metade
             é decidir o que fazer com isso.
           </p>
@@ -288,19 +280,15 @@ export default function InspiraJuridicoPage() {
               variant="primary"
               href="/contato"
               origin={ORIGINS.INSPIRA_JURIDICO}
-              withAsterisk
             >
-              Falar sobre INSPIRA Jurídico
+              Respire
             </CTAButton>
             <CTAButton variant="secondary" href="/transpira/juridico">
-              Quer ir além do diagnóstico? Conheça o TRANSPIRA Jurídico
+              Conheça o TRANSPIRA Jurídico
             </CTAButton>
           </div>
           <p className="mt-4 text-sm text-off-white/60 font-body">
-            Respondemos em até dois dias úteis.
-          </p>
-          <p className="mt-2 text-xs text-off-white/40 font-body">
-            * Mediante consulta e disponibilidade.
+            Conversa inicial sem compromisso. Respondemos em até 2 dias úteis.
           </p>
           <div className="max-w-2xl mx-auto mt-8">
             <LegalNotice variant="inspira_juridico" />

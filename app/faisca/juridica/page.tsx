@@ -127,8 +127,8 @@ export default function FaiscaJuridicaPage() {
         <div className="max-w-3xl space-y-4">
           <p className="text-off-white/85 font-body leading-relaxed">
             Palestra ou workshop executivo para escritórios de advocacia, áreas
-            jurídicas corporativas e instituições de ensino jurídico. Conduzido
-            pela Gabriela Aguiar, CEO da PIRA LABS.
+            jurídicas corporativas e instituições de ensino jurídico. Celso
+            Gama conduz.
           </p>
           <p className="text-off-white/85 font-body leading-relaxed">
             Não começa pela ferramenta. Começa pelo fluxo. Onde a IA pode
@@ -191,7 +191,7 @@ export default function FaiscaJuridicaPage() {
               Workshop executivo
             </h3>
             <p className="text-off-white/50 font-body text-sm mb-6">
-              2 horas
+              4 horas
             </p>
             <p className="text-off-white/80 font-body leading-relaxed mb-4">
               Para grupos de 5 a 25 pessoas. Sócios, heads jurídicos,
@@ -253,15 +253,14 @@ export default function FaiscaJuridicaPage() {
         </h2>
         <div className="max-w-3xl space-y-4">
           <p className="text-off-white/85 font-body leading-relaxed">
-            Gabriela Aguiar, CEO e cofundadora da PIRA LABS. Docente em
-            programas de MBA na FIA, FIAP e Instituto Cidades Responsivas.
-            Universal AI Foundational Modules (MIT). Uma década dentro dos
-            ecossistemas globais de inovação.
+            Celso Gama, bacharelando em Direito (Mackenzie) com Applied AI
+            Certificate Program (MIT, em andamento, 2026), conduz o conteúdo
+            técnico-jurídico.
           </p>
           <p className="text-off-white/85 font-body leading-relaxed">
-            O Celso Gama, COO e cofundador, cursando último ano de Direito no
-            Mackenzie com Applied AI Certificate Program pelo MIT, contribui com
-            o conteúdo técnico-jurídico que fundamenta o workshop.
+            Gabriela Aguiar, docente em programas de MBA na FIAP e no Instituto
+            Cidades Responsivas, contribui com o conteúdo sobre contexto e
+            futuro do trabalho quando o formato pede.
           </p>
         </div>
       </Section>
@@ -274,7 +273,7 @@ export default function FaiscaJuridicaPage() {
       {/* FAISCA-JUR-8 · CTAs */}
       <section className="bg-ink section-padding">
         <div className="container-site text-center">
-          <p className="font-display text-2xl md:text-3xl italic text-peach mb-8 leading-snug max-w-2xl mx-auto">
+          <p className="font-display text-2xl md:text-3xl italic text-off-white/70 mb-8 leading-snug max-w-2xl mx-auto">
             O risco não está no futuro. Está no navegador aberto agora no
             computador do estagiário.
           </p>
@@ -283,19 +282,15 @@ export default function FaiscaJuridicaPage() {
               variant="primary"
               href="/contato"
               origin={ORIGINS.FAISCA_JURIDICA}
-              withAsterisk
             >
-              Falar sobre FAÍSCA Jurídica
+              Respire
             </CTAButton>
             <CTAButton variant="secondary" href="/inspira/juridico">
-              Quer ir além do workshop? Conheça o INSPIRA Jurídico
+              Quer ir além do workshop? INSPIRA Jurídico
             </CTAButton>
           </div>
           <p className="mt-4 text-sm text-off-white/60 font-body">
-            Respondemos em até dois dias úteis.
-          </p>
-          <p className="mt-2 text-xs text-off-white/40 font-body">
-            * Mediante consulta e disponibilidade.
+            Conversa inicial sem compromisso. Respondemos em até 2 dias úteis.
           </p>
           <div className="max-w-2xl mx-auto mt-8">
             <LegalNotice variant="faisca_juridica" />

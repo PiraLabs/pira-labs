@@ -69,7 +69,7 @@ const faqItems = [
     question:
       "Qual a qualificação de quem executa o trabalho jurídico operacional?",
     answer:
-      "Celso Gama, COO da PIRA LABS, está cursando o último ano de Direito no Mackenzie e tem o Applied AI Certificate Program pelo MIT. Atua na condução operacional de legal ops com método e IA aplicada, sempre com supervisão, revisão, validação e assinatura do advogado habilitado do escritório contratante em cada entrega.",
+      "Celso Gama, bacharelando em Direito (Mackenzie) com Applied AI Certificate Program (MIT, em andamento, 2026), conduz o trabalho operacional. Todo material passa por revisão, validação e assinatura do advogado habilitado do escritório contratante.",
   },
   {
     question: "Como começa um projeto?",
@@ -99,7 +99,7 @@ export default function TranspiraJuridicoPage() {
         <PageHeader
           breadcrumbs={breadcrumbs}
           h1="TRANSPIRA Jurídico"
-          subtitle="Execução operacional para escritórios e departamentos jurídicos que querem resultado agora, não apenas um diagnóstico."
+          subtitle="Execução operacional para escritórios e departamentos jurídicos que querem resultado, não apenas diagnóstico."
         />
       </div>
 
@@ -139,7 +139,7 @@ export default function TranspiraJuridicoPage() {
         <div className="max-w-3xl">
           {/* Métrica em destaque */}
           <div className="flex items-baseline gap-4 mb-8">
-            <span className="font-display text-5xl md:text-6xl text-peach">
+            <span className="font-display text-5xl md:text-6xl text-off-white/50">
               400h
             </span>
             <span className="text-off-white/50 font-body text-xl">para</span>
@@ -231,7 +231,7 @@ export default function TranspiraJuridicoPage() {
               Modelo B *
             </p>
             <h3 className="text-xl font-semibold text-off-white mb-4">
-              Assistant as a service
+              Capacidade de produção jurídica sob demanda
             </h3>
             <p className="text-off-white/80 font-body leading-relaxed mb-4">
               A atividade jurídica está cada vez mais sendo executada por
@@ -333,7 +333,7 @@ export default function TranspiraJuridicoPage() {
       {/* JURIDICO-7 · CTAs */}
       <section className="bg-ink section-padding">
         <div className="container-site text-center">
-          <p className="font-display text-2xl md:text-3xl italic text-peach mb-8 leading-snug max-w-2xl mx-auto">
+          <p className="font-display text-2xl md:text-3xl italic text-off-white/70 mb-8 leading-snug max-w-2xl mx-auto">
             O trabalho mecânico que ocupa o time hoje pode ser feito de outra
             forma. O que libera é o que não pode ser automatizado: o julgamento,
             a estratégia, a relação com o cliente.
@@ -343,19 +343,15 @@ export default function TranspiraJuridicoPage() {
               variant="primary"
               href="/contato"
               origin={ORIGINS.TRANSPIRA_JURIDICO}
-              withAsterisk
             >
-              Falar sobre TRANSPIRA Jurídico
+              Respire
             </CTAButton>
             <CTAButton variant="secondary" href="/inspira/juridico">
-              Prefere começar pelo diagnóstico? Conheça o INSPIRA Jurídico
+              Prefere começar pelo diagnóstico? INSPIRA Jurídico
             </CTAButton>
           </div>
           <p className="mt-4 text-sm text-off-white/60 font-body">
-            Respondemos em até dois dias úteis.
-          </p>
-          <p className="mt-2 text-xs text-off-white/40 font-body">
-            * Mediante consulta e disponibilidade.
+            Conversa inicial sem compromisso. Respondemos em até 2 dias úteis.
           </p>
           <div className="max-w-2xl mx-auto mt-8">
             <LegalNotice variant="transpira_juridico" />
