@@ -8,7 +8,7 @@ import { FinalCTA } from "@/components/shared/FinalCTA";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { ORIGINS } from "@/lib/constants";
 import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
-import { serviceSchema } from "@/lib/schemas/service";
+import { serviceSchema, faqPageSchema } from "@/lib/schemas/service";
 
 const schemas = {
   breadcrumb: breadcrumbSchema([
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description:
       "Seis dimensões do negócio em sequência, convergindo em síntese integrada. Gabriela Aguiar conduz.",
     url: "https://piralabs.com.br/inspira",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 
@@ -131,11 +131,14 @@ const faqItems = [
   },
 ];
 
+const faqSchema = faqPageSchema(faqItems);
+
 export default function InspiraPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.service) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* INSPIRA-1 · Header */}
       <div className="bg-ink">

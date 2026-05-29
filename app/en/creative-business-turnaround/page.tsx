@@ -64,7 +64,7 @@ export const metadata: Metadata = {
       "The diagnosis and redesign process for service businesses that need to act before the window closes.",
     url: "https://piralabs.com.br/en/creative-business-turnaround",
     locale: "en_US",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 

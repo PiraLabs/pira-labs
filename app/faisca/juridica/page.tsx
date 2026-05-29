@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description:
       "Como usar IA com método, critério e governança na rotina jurídica. Para escritórios, áreas jurídicas e instituições de ensino.",
     url: "https://piralabs.com.br/faisca/juridica",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
   },
 };
 

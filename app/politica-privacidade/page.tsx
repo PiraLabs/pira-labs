@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Política de Privacidade · PIRA LABS",
     description: "Como a PIRA LABS coleta, usa e protege seus dados pessoais, em conformidade com a LGPD.",
     url: "https://piralabs.com.br/politica-privacidade",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
   },
 };
 

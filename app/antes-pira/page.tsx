@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description:
       "Publicação editorial da Pira Labs no Substack. Teses, estudos e o que aprendemos operando.",
     url: "https://piralabs.com.br/antes-pira",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 

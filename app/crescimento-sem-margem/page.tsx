@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     description:
       "Seis causas que aparecem antes da crise. Diagnóstico via INSPIRA da Pira Labs.",
     url: "https://piralabs.com.br/crescimento-sem-margem",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 

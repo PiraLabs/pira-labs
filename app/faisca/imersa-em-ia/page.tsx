@@ -111,7 +111,7 @@ export const metadata: Metadata = {
     description:
       "Sessão de trabalho com IA sobre os processos reais da empresa. R$7.100. Três sessões.",
     url: "https://piralabs.com.br/faisca/imersa-em-ia",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 

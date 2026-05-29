@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     description:
       "Seis perguntas para avaliar o momento. Se três ou mais gerarem hesitação, talvez seja hora de diagnosticar o modelo.",
     url: "https://piralabs.com.br/diagnostico-empresa-servicos",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 

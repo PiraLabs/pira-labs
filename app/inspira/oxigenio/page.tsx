@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description:
       "Fast R$3.500 · Full R$5.300. Diagnóstico de presença em motores de IA. Relatório em até 5 dias úteis.",
     url: "https://piralabs.com.br/inspira/oxigenio",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 

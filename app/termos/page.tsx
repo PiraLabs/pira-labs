@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Termos de Uso · PIRA LABS",
     description: "Termos e condições de uso do site piralabs.com.br.",
     url: "https://piralabs.com.br/termos",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
   },
 };
 

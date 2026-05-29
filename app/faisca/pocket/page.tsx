@@ -106,7 +106,7 @@ export const metadata: Metadata = {
     description:
       "Leitura diagnóstica inicial em três dimensões: mercado, financeiro e presença em IA. Sessão de 1,5h. R$3.900.",
     url: "https://piralabs.com.br/faisca/pocket",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 

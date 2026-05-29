@@ -6,7 +6,7 @@ import { FAQ } from "@/components/shared/FAQ";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { LegalNotice } from "@/components/shared/LegalNotice";
 import { ORIGINS } from "@/lib/constants";
-import { serviceSchema } from "@/lib/schemas/service";
+import { serviceSchema, faqPageSchema } from "@/lib/schemas/service";
 
 const schemas = {
   breadcrumb: {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description:
       "Mapeamos como o escritório usa IA hoje, onde está a exposição, e entregamos política mínima e plano de ação priorizado.",
     url: "https://piralabs.com.br/inspira/juridico",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
   },
 };
 
@@ -111,11 +111,14 @@ const faqItems = [
   },
 ];
 
+const faqSchema = faqPageSchema(faqItems);
+
 export default function InspiraJuridicoPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.service) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* INSPIRA-JUR-1 · Header */}
       <div className="bg-ink">

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       "Brazilian boutique of Creative Business Turnaround. Gabriela and Celso in each project, from diagnosis to delivery.",
     url: "https://piralabs.com.br/en/about",
     locale: "en_US",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 

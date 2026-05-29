@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://piralabs.com.br/og-image.png",
+        url: "https://piralabs.com.br/piralabs-og-image.png",
         width: 1200,
         height: 630,
         alt: "Pira Labs · Creative Business Turnaround",

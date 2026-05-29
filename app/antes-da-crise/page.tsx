@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.piralabs.com.br/og-image.png",
+        url: "https://www.piralabs.com.br/piralabs-og-image.png",
         width: 1200,
         height: 630,
         alt: "Antes da Crise — PIRA LABS",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Antes da Crise | PIRA LABS",
     description:
       "Conteúdo sobre gestão, turnaround e o que ninguém fala antes da empresa precisar de ajuda.",
-    images: ["https://www.piralabs.com.br/og-image.png"],
+    images: ["https://www.piralabs.com.br/piralabs-og-image.png"],
   },
 };
 

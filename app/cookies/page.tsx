@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Política de Cookies · PIRA LABS",
     description: "Como a PIRA LABS usa cookies e como você pode gerenciá-los.",
     url: "https://piralabs.com.br/cookies",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
   },
 };
 

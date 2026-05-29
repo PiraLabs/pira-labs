@@ -43,6 +43,8 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "DuckDuckBot", allow: "/" },
       { userAgent: "Bingbot", allow: "/" },
       { userAgent: "YandexBot", allow: "/" },
+      // Brave
+      { userAgent: "BraveBot", allow: "/" },
       // Padrão para todos os outros bots
       { userAgent: "*", allow: "/" },
     ],

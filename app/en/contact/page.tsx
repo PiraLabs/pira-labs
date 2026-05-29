@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: "Talk to PIRA LABS. We respond within two business days.",
     url: "https://piralabs.com.br/en/contact",
     locale: "en_US",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
   },
 };
 

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description:
       "Três grupos, sete produtos. Preço fixo. Escopo fechado. Zero atrito de entrada.",
     url: "https://piralabs.com.br/faisca",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 

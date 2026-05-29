@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       "Brazilian boutique of Creative Business Turnaround for service businesses. We enter before the business model becomes a crisis.",
     url: "https://piralabs.com.br/en",
     locale: "en_US",
-    images: [{ url: "https://piralabs.com.br/og-image.png", width: 1200, height: 630, alt: "PIRA LABS · Creative Business Turnaround" }],
+    images: [{ url: "https://piralabs.com.br/piralabs-og-image.png", width: 1200, height: 630, alt: "PIRA LABS · Creative Business Turnaround" }],
   },
 };
 
