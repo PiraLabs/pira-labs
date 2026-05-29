@@ -2,7 +2,19 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+
+// Mapa bidirecional PT ↔ EN para as 4 páginas com versão EN
+const LANG_MAP: Record<string, string> = {
+  "/": "/en",
+  "/sobre": "/en/about",
+  "/creative-business-turnaround": "/en/creative-business-turnaround",
+  "/contato": "/en/contact",
+  "/en": "/",
+  "/en/about": "/sobre",
+  "/en/creative-business-turnaround": "/creative-business-turnaround",
+  "/en/contact": "/contato",
+};
 
 type ChildItem = { label: string; href: string };
 
@@ -119,10 +131,19 @@ function MobileMenuItem({
 
 export function Header() {
   const pathname = usePathname();
+  const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const dropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const isEN = pathname.startsWith("/en");
+  const altPath = LANG_MAP[pathname] ?? null;
+
+  function handleLangSwitch(targetLang: "pt" | "en") {
+    document.cookie = `pira_lang=${targetLang};path=/;max-age=31536000;SameSite=Lax`;
+    if (altPath) router.push(altPath);
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
@@ -241,8 +262,32 @@ export function Header() {
             })}
           </nav>
 
-          {/* CTA desktop */}
-          <div className="hidden md:flex">
+          {/* Toggle PT/EN + CTA desktop */}
+          <div className="hidden md:flex items-center gap-3">
+            <div className="flex items-center gap-1 text-xs font-body font-medium" aria-label="Idioma / Language">
+              <button
+                type="button"
+                onClick={() => handleLangSwitch("pt")}
+                className={`px-2 py-1 rounded transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange ${
+                  !isEN ? "text-orange" : "text-off-white/40 hover:text-off-white/70"
+                }`}
+                aria-current={!isEN ? "true" : undefined}
+              >
+                PT
+              </button>
+              <span className="text-off-white/20" aria-hidden="true">/</span>
+              <button
+                type="button"
+                onClick={() => handleLangSwitch("en")}
+                className={`px-2 py-1 rounded transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange ${
+                  isEN ? "text-orange" : altPath ? "text-off-white/40 hover:text-off-white/70" : "text-off-white/20 cursor-not-allowed"
+                }`}
+                aria-current={isEN ? "true" : undefined}
+                disabled={!isEN && !altPath}
+              >
+                EN
+              </button>
+            </div>
             <Link
               href={ctaHref}
               className="min-h-[44px] px-5 py-3 bg-orange text-ink font-body font-medium text-sm rounded transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
@@ -280,8 +325,33 @@ export function Header() {
                 <MobileMenuItem key={item.label} item={item} pathname={pathname} />
               ))}
             </ul>
+            {/* Toggle PT/EN mobile */}
+            <div className="pt-4 pb-2 flex items-center gap-2" aria-label="Idioma / Language">
+              <button
+                type="button"
+                onClick={() => handleLangSwitch("pt")}
+                className={`px-3 py-2 text-sm font-body font-medium rounded transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange ${
+                  !isEN ? "text-orange" : "text-off-white/50 hover:text-off-white/80"
+                }`}
+                aria-current={!isEN ? "true" : undefined}
+              >
+                PT
+              </button>
+              <span className="text-off-white/20 text-sm" aria-hidden="true">/</span>
+              <button
+                type="button"
+                onClick={() => handleLangSwitch("en")}
+                className={`px-3 py-2 text-sm font-body font-medium rounded transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange ${
+                  isEN ? "text-orange" : altPath ? "text-off-white/50 hover:text-off-white/80" : "text-off-white/20 cursor-not-allowed"
+                }`}
+                aria-current={isEN ? "true" : undefined}
+                disabled={!isEN && !altPath}
+              >
+                EN
+              </button>
+            </div>
             {/* CTA dentro do menu mobile */}
-            <div className="pt-6">
+            <div className="pt-4">
               <Link
                 href={ctaHref}
                 className="block w-full text-center min-h-[52px] px-6 py-4 bg-orange text-ink font-body font-medium text-base rounded transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"

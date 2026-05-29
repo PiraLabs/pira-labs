@@ -82,6 +82,7 @@ export const metadata: Metadata = {
     "A Pira Labs é uma boutique brasileira de Creative Business Turnaround. Conheça Gabriela Aguiar e Celso Gama, os fundadores.",
   alternates: {
     canonical: "https://piralabs.com.br/sobre",
+    languages: { en: "https://piralabs.com.br/en/about" },
   },
   openGraph: {
     title: "Sobre · PIRA LABS · Gabriela Aguiar e Celso Gama",

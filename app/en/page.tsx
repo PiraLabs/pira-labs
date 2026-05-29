@@ -7,28 +7,34 @@ import { CTAWithMicrocopy } from "@/components/shared/CTAWithMicrocopy";
 import { NodeSystem } from "@/components/shared/NodeSystem";
 import { LogoVideo } from "@/components/shared/LogoVideo";
 import { CountUp } from "@/components/home/CountUp";
-import { organizationSchema } from "@/lib/schemas/organization";
-import { websiteSchema } from "@/lib/schemas/website";
+import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
 import type { NodeDef, ConnectorDef } from "@/components/shared/NodeSystem";
 
 export const metadata: Metadata = {
-  title: { absolute: "Creative Business Turnaround · PIRA LABS" },
+  title: { absolute: "Creative Business Turnaround · Pira Labs" },
   description:
-    "A Pira Labs é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche.",
+    "Pira Labs is a Brazilian boutique of Creative Business Turnaround for service businesses that need to act before the window closes.",
   alternates: {
-    canonical: "https://piralabs.com.br/",
-    languages: { en: "https://piralabs.com.br/en" },
+    canonical: "https://piralabs.com.br/en",
+    languages: {
+      "pt-BR": "https://piralabs.com.br/",
+      "x-default": "https://piralabs.com.br/",
+    },
   },
   openGraph: {
     title: "PIRA LABS · Creative Business Turnaround",
     description:
-      "Boutique brasileira de Creative Business Turnaround para empresas de serviços. Entramos antes que o modelo de trabalho vire crise.",
-    url: "https://piralabs.com.br/",
+      "Brazilian boutique of Creative Business Turnaround for service businesses. We enter before the business model becomes a crisis.",
+    url: "https://piralabs.com.br/en",
+    locale: "en_US",
     images: [{ url: "https://piralabs.com.br/og-image.png", width: 1200, height: 630, alt: "PIRA LABS · Creative Business Turnaround" }],
   },
 };
 
-// NodeSystem — HOME-1: nós dispersos, sem conectores
+const bcSchema = breadcrumbSchema([
+  { name: "Home", url: "https://piralabs.com.br/en" },
+]);
+
 const heroNodes: NodeDef[] = [
   { id: "h1", cx: 12, cy: 20, variant: "hollow", color: "teal" },
   { id: "h2", cx: 78, cy: 12, variant: "hollow", color: "off-white" },
@@ -37,7 +43,6 @@ const heroNodes: NodeDef[] = [
   { id: "h5", cx: 93, cy: 38, variant: "hollow", color: "off-white" },
 ];
 
-// NodeSystem — HOME-3: conexão completa, metáfora do método
 const methodNodes: NodeDef[] = [
   { id: "m1", cx: 8,  cy: 25, variant: "hollow", color: "teal" },
   { id: "m2", cx: 28, cy: 8,  variant: "solid",  color: "orange", r: 3 },
@@ -52,7 +57,6 @@ const methodConnectors: ConnectorDef[] = [
   { from: "m4", to: "m5" },
 ];
 
-// NodeSystem — HOME-4: três nós de origem convergindo para nó de resultado
 const proofsNodes: NodeDef[] = [
   { id: "p1", cx: 5,  cy: 30, variant: "hollow", color: "teal" },
   { id: "p2", cx: 50, cy: 8,  variant: "solid",  color: "orange", r: 3 },
@@ -67,92 +71,82 @@ const proofsConnectors: ConnectorDef[] = [
 
 const faqItems = [
   {
-    question: "Quanto custa trabalhar com a Pira Labs?",
+    question: "How much does it cost to work with Pira Labs?",
     answer:
-      "Cada projeto é dimensionado individualmente. Os produtos de entrada têm preço público: Oxigênio IA Search Fast R$3.500 / Full R$5.300. Pocket do INSPIRA R$3.900. Imersão em IA R$7.100. Para INSPIRA e TRANSPIRA, o investimento é definido após a primeira conversa.",
+      "Each project is sized individually. Entry products have public pricing: Oxigênio IA Search Fast R$3,500 / Full R$5,300. Pocket do INSPIRA R$3,900. Imersão em IA R$7,100. For INSPIRA and TRANSPIRA, the investment is defined after the first conversation.",
   },
   {
-    question: "Quanto tempo demora?",
+    question: "How long does it take?",
     answer:
-      "Depende do produto. Oxigênio: até 5 dias úteis. Pocket do INSPIRA: sessão única de 1,5h. Imersão em IA: 3 sessões, 5,5h no total. INSPIRA completo: 4 a 6 semanas. TRANSPIRA: entre 2 e 6 meses conforme escopo e configuração.",
+      "Depends on the product. Oxigênio: up to 5 business days. Pocket do INSPIRA: a single 1.5h session. Imersão em IA: 3 sessions, 5.5h total. Full INSPIRA: 4 to 6 weeks. TRANSPIRA: 2 to 6 months depending on scope and configuration.",
   },
   {
-    question: "E se eu não sei exatamente o que preciso?",
+    question: "What if I don't know exactly what I need?",
     answer:
-      "A primeira conversa é justamente isso. Sem compromisso. Ajudamos a nomear o problema antes de propor qualquer solução.",
+      "The first conversation is exactly that. No commitment. We help name the problem before proposing any solution.",
   },
   {
-    question: "Como começa o primeiro contato?",
+    question: "How does the first contact work?",
     answer:
-      "Você manda mensagem pelo formulário. Em até 2 dias úteis Gabriela e Celso respondem. Conversa inicial de 30 a 45 minutos. Se fizer sentido para os dois lados, proposta em até 5 dias úteis.",
+      "You send a message through the form. Within 2 business days Gabriela and Celso respond. Initial conversation of 30 to 45 minutes. If it makes sense for both sides, a proposal within 5 business days.",
   },
   {
-    question: "Vocês atendem empresas internacionais?",
-    answer: "Sim. Atendemos em português e inglês.",
+    question: "Do you work with international companies?",
+    answer: "Yes. We work in Portuguese and English.",
   },
 ];
 
-export default function HomePage() {
+export default function EnHomePage() {
   return (
     <>
-      {/* Schemas globais — Organization + WebSite só na home */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bcSchema) }} />
 
       {/* HOME-1 · HERO */}
       <Section variant="dark" paddingY="xl" id="hero">
         <div className="relative overflow-hidden">
-          {/* NodeSystem: nós dispersos, sem conectores. Conexão inicia conforme scroll. */}
           <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
             <NodeSystem nodes={heroNodes} className="w-full h-full" />
           </div>
           <div className="relative max-w-3xl">
-            {/* H1 em Cormorant 64–80px conforme spec */}
             <h1 className="font-display text-5xl md:text-7xl text-off-white leading-tight mb-6">
-              Existe um momento em que transformar ainda é um processo, não uma crise.
+              There is a moment when transforming is still a process, not a crisis.
             </h1>
-            {/* Frase canônica — obrigatória nos primeiros 150 termos, sentença única, sem quebra */}
-            <p className="text-lg md:text-xl text-off-white/85 font-body leading-relaxed mb-10">
-              A Pira Labs é uma boutique brasileira de Creative Business Turnaround para empresas
-              de serviços que precisam agir antes que a janela se feche.
+            <p className="text-lg md:text-xl text-off-white/85 font-body leading-relaxed mb-4">
+              Where businesses find propulsion to new heights.
             </p>
-            {/* 1 CTA único no hero. Sem segundo CTA. */}
+            <p className="text-base text-off-white/70 font-body leading-relaxed mb-10">
+              Pira Labs is a Brazilian boutique of Creative Business Turnaround for service
+              businesses that need to act before the window closes.
+            </p>
             <Link
-              href="#metodo"
+              href="#method"
               className="inline-flex items-center justify-center min-h-[44px] px-6 py-3 rounded bg-orange text-ink font-body font-medium text-base transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
             >
-              Entender o método
+              Understand the method
             </Link>
           </div>
         </div>
       </Section>
 
-      {/* HOME-2 · SINAIS */}
+      {/* HOME-2 · SIGNALS */}
       <Section variant="default" paddingY="lg">
         <p className="text-sm font-body font-medium text-orange uppercase tracking-widest mb-4">
-          Quando a operação começa a custar mais do que deveria
+          When the operation starts costing more than it should
         </p>
         <p className="text-off-white/80 font-body leading-relaxed mb-10 max-w-2xl">
-          Em seis meses, <strong>79 pontos percentuais de margem</strong> recuperados sem
-          aumento de receita, em uma evidência de trajetória dos fundadores. O problema estava
-          exatamente onde ninguém estava olhando. Esse tipo de sinal é o que a Pira Labs procura
-          antes de recomendar qualquer solução. Cinco sinais de quando o modelo começa a mostrar
-          o custo:
+          In six months, <strong>79 percentage points of margin</strong> recovered without
+          increasing revenue, in one founder trajectory evidence. The problem was exactly
+          where nobody was looking. That kind of signal is what Pira Labs finds before
+          recommending any solution. Five signals of when the model starts showing its cost:
         </p>
         <ul className="space-y-6 mb-8 max-w-2xl">
           {[
-            "A empresa cresce, mas a margem some. O esforço aumenta, o resultado fica igual.",
-            "Toda decisão importante passa pelo fundador. O time espera.",
-            "A operação só funciona porque algumas pessoas fazem o que não é papel delas.",
-            "A empresa adotou IA. O resultado foi acelerar o ruído que já existia.",
-            "Em buscas feitas por IA, listas geradas automaticamente e recomendações de mercado, a empresa não aparece, ou aparece errado.",
-          ].map((sinal, i) => (
+            "The business grows, but the margin disappears. Effort increases, results stay the same.",
+            "Every important decision goes through the founder. The team waits.",
+            "The operation only works because some people do what isn't their role.",
+            "The company adopted AI. The result was accelerating the noise that already existed.",
+            "In AI-powered searches, auto-generated lists and market recommendations, the company doesn't appear — or appears incorrectly.",
+          ].map((signal, i) => (
             <li key={i} className="flex items-start gap-4">
               <span
                 className="shrink-0 text-orange font-body font-semibold text-sm mt-1"
@@ -160,126 +154,114 @@ export default function HomePage() {
               >
                 {i + 1}.
               </span>
-              <p className="text-off-white/80 font-body leading-relaxed">{sinal}</p>
+              <p className="text-off-white/80 font-body leading-relaxed">{signal}</p>
             </li>
           ))}
         </ul>
         <p className="text-off-white/60 font-body italic">
-          Se você reconheceu mais de um, continue a leitura.
+          If you recognized more than one, keep reading.
         </p>
       </Section>
 
-      {/* HOME-3 · MÉTODO — id="metodo": destino do CTA do hero */}
-      <Section variant="highlighted" paddingY="lg" id="metodo">
+      {/* HOME-3 · METHOD */}
+      <Section variant="highlighted" paddingY="lg" id="method">
         <div className="relative overflow-hidden">
-          {/* NodeSystem: conexão completa ao chegar na seção */}
           <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
             <NodeSystem nodes={methodNodes} connectors={methodConnectors} className="w-full h-full" />
           </div>
           <div className="relative">
             <h2 className="text-3xl md:text-4xl font-body font-semibold text-off-white mb-3">
-              O método
+              The method
             </h2>
             <p className="text-off-white/75 font-body mb-12 max-w-2xl">
-              Três movimentos. Três fases. Não é metáfora. É como o negócio se move.
+              Three moves. Three phases. Not a metaphor. That is how the business moves.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-              {/* INSPIRA */}
               <div className="bg-ink/60 rounded-lg p-8 backdrop-blur-sm">
                 <p className="text-orange font-body font-semibold text-sm uppercase tracking-widest mb-2">
                   INSPIRA
                 </p>
                 <p className="text-off-white font-body font-medium text-lg mb-4">
-                  Quando você para de resolver o problema errado.
+                  When you stop solving the wrong problem.
                 </p>
                 <p className="text-off-white/80 font-body leading-relaxed mb-6">
-                  O diagnóstico. Seis camadas em sequência, convergindo em síntese integrada com
-                  aprovação humana em cada etapa. Nenhuma recomendação antes de todas as leituras
-                  estarem integradas. Gabriela Aguiar conduz. O resultado é o problema real nomeado,
-                  a rota desenhada e o próximo passo definido.
+                  The diagnosis. Six layers in sequence, converging into integrated synthesis
+                  with human approval at each step. No recommendation before all readings are
+                  integrated. Gabriela Aguiar leads. The result is the real problem named,
+                  the route drawn, and the next step defined.
                 </p>
                 <Link
                   href="/inspira"
                   className="text-sm font-body font-medium text-off-white hover:text-orange transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
                 >
-                  Ver INSPIRA →
+                  See INSPIRA →
                 </Link>
               </div>
 
-              {/* TRANSPIRA */}
               <div className="bg-ink/60 rounded-lg p-8 backdrop-blur-sm">
                 <p className="text-orange font-body font-semibold text-sm uppercase tracking-widest mb-2">
                   TRANSPIRA
                 </p>
-                {/* "trabalho certo" e "trabalho muito" em itálico via <em> — sem aspas */}
                 <p className="text-off-white font-body font-medium text-lg mb-4">
-                  Quando o{" "}
-                  <em className="emphasis-italic">trabalho certo</em> substitui o{" "}
-                  <em className="emphasis-italic">trabalho muito</em>.
+                  When <em className="emphasis-italic">right work</em> replaces <em className="emphasis-italic">too much work</em>.
                 </p>
                 <p className="text-off-white/80 font-body leading-relaxed mb-6">
-                  A execução. Acontece dentro da operação do cliente, com o time que vai operar
-                  depois. Redesenha a relação entre trabalho, valor, tecnologia e governança. A Pira
-                  Labs não sai quando o prazo acaba. Sai quando os resultados acordados são
-                  verificados. Celso Gama conduz.
+                  The execution. It happens inside the client's operation, with the team
+                  that will operate afterwards. Redesigns the relationship between work, value,
+                  technology and governance. Pira Labs does not leave when the deadline ends.
+                  It leaves when the agreed results are verified. Celso Gama leads.
                 </p>
                 <Link
                   href="/transpira"
                   className="text-sm font-body font-medium text-off-white hover:text-orange transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
                 >
-                  Ver TRANSPIRA →
+                  See TRANSPIRA →
                 </Link>
               </div>
             </div>
 
-            {/* LogoVideo — HOME-3, hasVideo=false até arquivo disponível em public/ */}
             <LogoVideo hasVideo={false} className="mb-10 max-w-sm" />
 
-            {/* RESPIRA — estado, não produto */}
             <p className="text-off-white/70 font-body leading-relaxed mb-10 max-w-2xl">
-              Quando a clareza chega, o ritmo volta. O negócio decide. A empresa cresce sem
-              improviso constante. Esse é o RESPIRA. Estado, não produto.
+              When clarity arrives, the rhythm returns. The business decides. The company grows
+              without constant improvisation. That is RESPIRA. A state, not a product.
             </p>
 
-            {/* Bloco Oxigênio */}
             <div className="bg-ink/50 border border-teal/30 rounded-lg p-6 max-w-2xl">
               <p className="text-off-white/85 font-body leading-relaxed mb-4">
-                Quer começar com escopo fechado e prazo definido? O Oxigênio IA Search diagnostica
-                como a sua empresa aparece nos motores de IA. Fast R$3.500 · Full R$5.300. Entrega
-                em até 5 dias úteis.
+                Want to start with a closed scope and defined timeline? Oxigênio IA Search
+                diagnoses how your company appears in AI engines. Fast R$3,500 · Full R$5,300.
+                Delivered in up to 5 business days.
               </p>
               <Link
                 href="/inspira/oxigenio"
                 className="text-sm font-body font-medium text-off-white hover:text-orange transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
               >
-                Conhecer Oxigênio →
+                Learn about Oxigênio →
               </Link>
             </div>
           </div>
         </div>
       </Section>
 
-      {/* HOME-4 · PROVAS — id="provas": destino dos redirects 301 de /cases */}
-      <Section variant="default" paddingY="lg" id="provas">
+      {/* HOME-4 · PROOFS */}
+      <Section variant="default" paddingY="lg" id="proofs">
         <div className="relative overflow-hidden">
-          {/* NodeSystem: três origens convergindo para nó de resultado */}
           <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
             <NodeSystem nodes={proofsNodes} connectors={proofsConnectors} className="w-full h-full" />
           </div>
           <div className="relative">
             <h2 className="text-3xl md:text-4xl font-body font-semibold text-off-white mb-3">
-              O que a operação real ensinou
+              What real operations taught us
             </h2>
             <p className="text-off-white/75 font-body mb-10 max-w-2xl">
-              Não é teoria de prateleira. É o que aprendemos errando, corrigindo, entregando. Três
-              evidências de trajetória dos fundadores, anteriores à Pira Labs como empresa:
+              Not shelf theory. This is what we learned by making mistakes, correcting course,
+              and delivering. Three founder trajectory evidences, before Pira Labs as a company:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {/* Card 1 — pré-IA */}
               <div className="bg-teal/20 border border-teal/40 rounded-lg p-8">
-                {/* CountUp anima apenas o número de destino */}
                 <p
                   className="font-display text-5xl text-orange mb-1"
                   style={{ letterSpacing: "-0.02em" }}
@@ -288,17 +270,15 @@ export default function HomePage() {
                   <CountUp prefix="R$" end={163} suffix="M" duration={1.2} />
                 </p>
                 <p className="text-xs font-body text-off-white/40 uppercase tracking-widest mb-4">
-                  pré-IA
+                  pre-AI
                 </p>
                 <p className="text-off-white/80 font-body text-sm leading-relaxed">
-                  Reestruturação da área de ativação e eventos de uma agência multinacional. Dois
-                  anos de operação redesenhada culminaram na coordenação de 600 pessoas e 100
-                  fornecedores para o patrocínio global de uma grande marca de tecnologia nos Jogos
-                  Rio 2016.
+                  Restructuring of the activation and events area of a multinational agency.
+                  Two years of redesigned operations culminated in coordinating 600 people and
+                  100 vendors for a major technology brand's global sponsorship at the Rio 2016 Games.
                 </p>
               </div>
 
-              {/* Card 2 — pré-IA */}
               <div className="bg-teal/20 border border-teal/40 rounded-lg p-8">
                 <p
                   className="font-display text-5xl text-orange mb-1"
@@ -308,16 +288,15 @@ export default function HomePage() {
                   <CountUp prefix="+" end={15} suffix="%" duration={1.2} />
                 </p>
                 <p className="text-xs font-body text-off-white/40 uppercase tracking-widest mb-4">
-                  pré-IA
+                  pre-AI
                 </p>
                 <p className="text-off-white/80 font-body text-sm leading-relaxed">
-                  Conta publicitária de multinacional do setor de bebidas, atendida pela agência
-                  onde Celso liderava a operação. Revisão de processos e métricas recuperou 79
-                  pontos percentuais de margem em 6 meses, sem aumentar receita.
+                  Advertising account of a beverages multinational, served by the agency where
+                  Celso led operations. Process and metrics review recovered 79 percentage points
+                  of margin in 6 months, without increasing revenue.
                 </p>
               </div>
 
-              {/* Card 3 — pós-IA com supervisão humana */}
               <div className="bg-teal/20 border border-teal/40 rounded-lg p-8">
                 <p
                   className="font-display text-5xl text-orange mb-1"
@@ -327,63 +306,63 @@ export default function HomePage() {
                   <CountUp end={36} suffix="h" duration={1.2} />
                 </p>
                 <p className="text-xs font-body text-off-white/40 uppercase tracking-widest mb-4">
-                  pós-IA · supervisão humana
+                  post-AI · human supervision
                 </p>
                 <p className="text-off-white/80 font-body text-sm leading-relaxed">
-                  Operação jurídica de alto volume. IA bem aplicada e supervisionada por humanos
-                  liberou capacidade de R$160 mil de faturamento adicional por mês, com a mesma
-                  equipe que o cliente já tinha.
+                  High-volume legal operation. Well-applied AI supervised by humans freed
+                  capacity worth R$160k in additional monthly billing with the same team the
+                  client already had.
                 </p>
               </div>
             </div>
 
             <p className="text-off-white/60 font-body text-sm leading-relaxed max-w-3xl">
-              Os dois primeiros vieram de redesenho de processo, antes da onda atual de IA. O
-              terceiro veio depois, com IA aplicada e supervisão humana. Em todos, o resultado
-              veio de olhar para onde ninguém estava olhando.
+              The first two came from process redesign, before the current AI wave. The third
+              came after, with AI applied and human supervision. In all of them, results came
+              from looking where nobody was looking.
             </p>
           </div>
         </div>
       </Section>
 
-      {/* HOME-5 · FAÍSCA teaser — 3 grupos, sem Mentorias */}
+      {/* HOME-5 · FAÍSCA teaser */}
       <Section variant="dark" paddingY="lg">
         <h2 className="text-3xl md:text-4xl font-body font-semibold text-off-white mb-3">
-          FAÍSCA · a porta de entrada
+          FAÍSCA · the entry point
         </h2>
         <p className="text-off-white/75 font-body mb-10 max-w-2xl">
-          Engajamentos de tempo curto que ensinam, despertam ou provocam antes de qualquer
-          compromisso maior. Três grupos, sete produtos.
+          Short-engagement programs that teach, awaken or provoke before any larger
+          commitment. Three groups, seven products.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           <div className="border-t border-orange/40 pt-6">
             <p className="text-xs font-body font-semibold uppercase tracking-widest text-off-white/40 mb-2">
-              Grupo 1
+              Group 1
             </p>
             <h3 className="text-off-white font-body font-medium mb-3">
-              Entrada rápida: preço fixo, sem atrito
+              Fast entry: fixed price, no friction
             </h3>
             <p className="text-off-white/65 font-body text-sm leading-relaxed">
-              Imersão em IA (R$7.100) · Oxigênio IA Search (R$3.500/R$5.300) · Pocket do INSPIRA
-              (R$3.900)
+              Imersão em IA (R$7,100) · Oxigênio IA Search (R$3,500/R$5,300) · Pocket do INSPIRA
+              (R$3,900)
             </p>
           </div>
           <div className="border-t border-orange/40 pt-6">
             <p className="text-xs font-body font-semibold uppercase tracking-widest text-off-white/40 mb-2">
-              Grupo 2
+              Group 2
             </p>
             <h3 className="text-off-white font-body font-medium mb-3">
-              Autoridade e relacionamento
+              Authority and relationship
             </h3>
             <p className="text-off-white/65 font-body text-sm leading-relaxed">
-              Palestras · Workshops
+              Talks · Workshops
             </p>
           </div>
           <div className="border-t border-orange/40 pt-6">
             <p className="text-xs font-body font-semibold uppercase tracking-widest text-off-white/40 mb-2">
-              Grupo 3
+              Group 3
             </p>
-            <h3 className="text-off-white font-body font-medium mb-3">Oferta seletiva</h3>
+            <h3 className="text-off-white font-body font-medium mb-3">Selective offering</h3>
             <p className="text-off-white/65 font-body text-sm leading-relaxed">
               C-level as a Service · FAÍSCA Jurídica
             </p>
@@ -393,67 +372,67 @@ export default function HomePage() {
           href="/faisca"
           className="inline-flex items-center justify-center min-h-[44px] px-6 py-3 rounded border border-off-white text-off-white bg-transparent font-body font-medium text-base transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
         >
-          Conhecer FAÍSCA
+          Learn about FAÍSCA
         </Link>
       </Section>
 
-      {/* HOME-6 · FUNDADORES teaser */}
+      {/* HOME-6 · FOUNDERS teaser */}
       <Section variant="default" paddingY="lg">
         <div className="max-w-2xl">
           <Image
             src="/nos.png"
-            alt="Gabriela Aguiar e Celso Gama, cofundadores da Pira Labs"
+            alt="Gabriela Aguiar and Celso Gama, co-founders of Pira Labs"
             width={800}
             height={533}
             className="rounded-lg w-full object-cover mb-8"
             priority={false}
           />
           <p className="text-off-white/90 font-body leading-relaxed text-lg mb-4">
-            A Pira Labs é boutique por escolha, não por estágio. Cada projeto tem Gabriela e Celso
-            do diagnóstico à entrega. Sem camada intermediária entre quem entende o problema e
-            quem resolve.
+            Pira Labs is a boutique by choice, not by stage. Each project has Gabriela and
+            Celso from diagnosis to delivery. No intermediary layer between the person who
+            understands the problem and the person who solves it.
           </p>
           <p className="text-off-white/65 font-body leading-relaxed mb-8">
-            Quase uma década conectando organizações globais de tecnologia, inovação e educação
-            executiva. Mais de 25 anos de operação em multinacionais. A combinação não é comum. É
-            o que sustenta cada decisão.
+            Nearly a decade connecting global organizations in technology, innovation and
+            executive education. More than 25 years of operations in multinationals. The
+            combination is not common. It is what sustains every decision.
           </p>
           <Link
-            href="/sobre"
+            href="/en/about"
             className="inline-flex items-center justify-center min-h-[44px] px-6 py-3 rounded border border-off-white text-off-white bg-transparent font-body font-medium text-base transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
           >
-            Conhecer Gabriela e Celso
+            Meet Gabriela and Celso
           </Link>
         </div>
       </Section>
 
-      {/* HOME-7 · FAQ PRIMEIRA CONVERSA — schema FAQPage embutido no componente */}
+      {/* HOME-7 · FAQ */}
       <Section variant="dark" paddingY="lg">
-        <FAQ heading="Perguntas de quem está chegando agora" items={faqItems} />
+        <FAQ heading="Questions from those arriving now" items={faqItems} />
       </Section>
 
       {/* HOME-8 · CTA FINAL */}
       <section className="bg-ink section-padding">
         <div className="container-site text-center">
           <p className="font-display text-2xl md:text-4xl italic text-orange mb-10 leading-snug max-w-2xl mx-auto">
-            Existe um próximo nível para o seu negócio. O que está entre você e ele, descobrimos
-            junto.
+            There is a next level for your business. What stands between you and it, we
+            discover together.
           </p>
           <div className="flex flex-col items-center gap-2">
             <Link
-              href="/contato?origem=home"
+              href="/en/contact?origem=home_en"
               className="inline-flex items-center justify-center min-h-[44px] px-6 py-3 rounded bg-orange text-ink font-body font-medium text-base transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
             >
-              Respire
+              Breathe
             </Link>
             <p className="text-sm font-body text-off-white/60">
-              Conversa inicial sem compromisso. Respondemos em até dois dias úteis.
+              Initial conversation, no commitment. We respond within two business days.
             </p>
           </div>
           <p className="mt-10 font-display text-lg italic text-off-white/40">
             Inspira. Transpira. Respira.
           </p>
-          <p className="mt-1 font-body text-sm text-off-white/30">Liberamos o próximo nível.</p>
+          <p className="mt-1 font-body text-sm text-off-white/30">We unlock the next level.</p>
         </div>
       </section>
     </>
