@@ -66,7 +66,7 @@ export default function PoliticaPrivacidadePage() {
                 Contato:{" "}
                 <a
                   href="mailto:inspira@piralabs.com.br"
-                  className="text-peach underline hover:text-orange transition-colors"
+                  className="text-orange underline hover:text-orange transition-colors"
                 >
                   inspira@piralabs.com.br
                 </a>
@@ -146,7 +146,7 @@ export default function PoliticaPrivacidadePage() {
                 </thead>
                 <tbody className="divide-y divide-teal/20">
                   <tr>
-                    <td className="py-3 pr-4 font-mono text-peach text-xs">pira_consent</td>
+                    <td className="py-3 pr-4 font-mono text-orange text-xs">pira_consent</td>
                     <td className="py-3 pr-4">Essencial</td>
                     <td className="py-3 pr-4">
                       Armazena sua preferência de consentimento de cookies
@@ -154,7 +154,7 @@ export default function PoliticaPrivacidadePage() {
                     <td className="py-3">1 ano</td>
                   </tr>
                   <tr>
-                    <td className="py-3 pr-4 font-mono text-peach text-xs">_ga, _ga_*</td>
+                    <td className="py-3 pr-4 font-mono text-orange text-xs">_ga, _ga_*</td>
                     <td className="py-3 pr-4">Analítico</td>
                     <td className="py-3 pr-4">
                       Google Analytics: análise de tráfego e comportamento no site
@@ -162,7 +162,7 @@ export default function PoliticaPrivacidadePage() {
                     <td className="py-3">2 anos</td>
                   </tr>
                   <tr>
-                    <td className="py-3 pr-4 font-mono text-peach text-xs">Vercel Analytics</td>
+                    <td className="py-3 pr-4 font-mono text-orange text-xs">Vercel Analytics</td>
                     <td className="py-3 pr-4">Analítico</td>
                     <td className="py-3 pr-4">Métricas de desempenho e acesso ao site</td>
                     <td className="py-3">Sessão</td>
@@ -172,7 +172,7 @@ export default function PoliticaPrivacidadePage() {
             </div>
             <p className="mb-2">
               Você pode gerenciar suas preferências de cookies a qualquer momento pela nossa{" "}
-              <Link href="/cookies" className="text-peach underline hover:text-orange transition-colors">
+              <Link href="/cookies" className="text-orange underline hover:text-orange transition-colors">
                 Política de Cookies
               </Link>
               .
@@ -272,7 +272,7 @@ export default function PoliticaPrivacidadePage() {
               Para exercer qualquer desses direitos, entre em contato pelo e-mail{" "}
               <a
                 href="mailto:inspira@piralabs.com.br"
-                className="text-peach underline hover:text-orange transition-colors"
+                className="text-orange underline hover:text-orange transition-colors"
               >
                 inspira@piralabs.com.br
               </a>
@@ -369,7 +369,7 @@ export default function PoliticaPrivacidadePage() {
                 <strong className="text-off-white/90">E-mail:</strong>{" "}
                 <a
                   href="mailto:inspira@piralabs.com.br"
-                  className="text-peach underline hover:text-orange transition-colors"
+                  className="text-orange underline hover:text-orange transition-colors"
                 >
                   inspira@piralabs.com.br
                 </a>

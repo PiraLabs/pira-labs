@@ -45,9 +45,17 @@ const nextConfig = {
       { source: "/es/contato", destination: "/contato", permanent: true },
 
       // Migração de nomenclatura editorial
-      { source: "/blog", destination: "/antes-da-crise", permanent: true },
-      { source: "/news", destination: "/antes-da-crise", permanent: true },
-      { source: "/antesdacrise", destination: "/antes-da-crise", permanent: true },
+      { source: "/antes-da-crise", destination: "/antes-pira", permanent: true },
+      { source: "/antesdacrise", destination: "/antes-pira", permanent: true },
+      { source: "/blog", destination: "/antes-pira", permanent: true },
+      { source: "/news", destination: "/antes-pira", permanent: true },
+
+      // Migração editorial
+      { source: "/empresa-cresce-margem-some", destination: "/crescimento-sem-margem", permanent: true },
+
+      // Pocket e Imersão
+      { source: "/imersa", destination: "/faisca/imersa-em-ia", permanent: true },
+      { source: "/pocket", destination: "/faisca/pocket", permanent: true },
     ];
   },
   async headers() {

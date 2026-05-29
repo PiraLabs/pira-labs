@@ -3,7 +3,7 @@ import { Breadcrumbs, type BreadcrumbItem } from "./Breadcrumbs";
 type PageHeaderProps = {
   breadcrumbs: BreadcrumbItem[];
   h1: string;
-  subtitle?: string;
+  subtitle?: React.ReactNode;
 };
 
 export function PageHeader({ breadcrumbs, h1, subtitle }: PageHeaderProps) {

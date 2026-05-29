@@ -25,14 +25,16 @@ export type ConnectorDef = {
 type NodeSystemProps = {
   nodes: NodeDef[];
   connectors?: ConnectorDef[];
-  aspectRatio?: number; // width/height ratio, default 2
+  /** Omitir para preencher o container pai (uso como background absoluto).
+   *  Definir para uso em fluxo normal (ex: aspectRatio={2} = 2:1). */
+  aspectRatio?: number;
   className?: string;
 };
 
 export function NodeSystem({
   nodes,
   connectors = [],
-  aspectRatio = 2,
+  aspectRatio,
   className = "",
 }: NodeSystemProps) {
   const [visibleNodes, setVisibleNodes] = useState<Set<string>>(new Set());
@@ -99,7 +101,7 @@ export function NodeSystem({
     <div
       className={`relative pointer-events-none select-none ${className}`}
       aria-hidden="true"
-      style={{ aspectRatio: String(aspectRatio) }}
+      style={aspectRatio !== undefined ? { aspectRatio: String(aspectRatio) } : undefined}
     >
       {/* Invisible sentinels — one per node, positioned at node location */}
       {nodes.map((node) => (

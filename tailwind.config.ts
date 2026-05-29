@@ -9,10 +9,9 @@ const config: Config = {
     extend: {
       colors: {
         ink: "#0C0F16",
-        "deep-teal": "#05262D",
-        teal: "#004756",
-        orange: "#EA6335",
-        peach: "#F2A85E",
+        "deep-teal": "#05262E",
+        teal: "#004757",
+        orange: "#EB5C2E",
         "off-white": "#E8E0D6",
       },
       fontFamily: {
