@@ -36,10 +36,31 @@ const breadcrumbs = [
   { label: "Faísca" },
 ];
 
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://piralabs.com.br/faisca#itemlist",
+  name: "FAÍSCA · Produtos de entrada da PIRA LABS",
+  description:
+    "Engajamentos de tempo curto. Três grupos, sete produtos com preço fixo e escopo fechado.",
+  url: "https://piralabs.com.br/faisca",
+  numberOfItems: 7,
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Oxigênio IA Search", url: "https://piralabs.com.br/inspira/oxigenio" },
+    { "@type": "ListItem", position: 2, name: "Pocket do INSPIRA", url: "https://piralabs.com.br/faisca/pocket" },
+    { "@type": "ListItem", position: 3, name: "Imersão em IA", url: "https://piralabs.com.br/faisca/imersa-em-ia" },
+    { "@type": "ListItem", position: 4, name: "FAÍSCA Jurídica", url: "https://piralabs.com.br/faisca/juridica" },
+    { "@type": "ListItem", position: 5, name: "Palestras", url: "https://piralabs.com.br/faisca/palestras" },
+    { "@type": "ListItem", position: 6, name: "Workshops", url: "https://piralabs.com.br/faisca/workshops" },
+    { "@type": "ListItem", position: 7, name: "FAÍSCA C-Level", url: "https://piralabs.com.br/faisca/clevel" },
+  ],
+};
+
 export default function FaiscaPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bcSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
       {/* FAISCA-1 · Header */}
       <div className="bg-ink">

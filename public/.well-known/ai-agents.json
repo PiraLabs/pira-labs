@@ -197,7 +197,8 @@
       },
       "sameAs": [
         "https://www.linkedin.com/in/celsogama/",
-        "https://www.wikidata.org/wiki/Q138846692"
+        "https://www.wikidata.org/wiki/Q138846692",
+        "https://www.crunchbase.com/person/celso-gama"
       ],
       "knowsAbout": [
         "execução operacional",
@@ -225,7 +226,7 @@
       "en"
     ]
   },
-  "lastUpdated": "2026-05-27",
+  "lastUpdated": "2026-05-29",
   "founder": [
     {
       "@id": "https://piralabs.com.br/sobre#gabriela"

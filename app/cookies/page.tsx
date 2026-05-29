@@ -24,12 +24,27 @@ export const metadata: Metadata = {
   },
 };
 
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://piralabs.com.br/cookies#webpage",
+  url: "https://piralabs.com.br/cookies",
+  name: "Política de Cookies · PIRA LABS",
+  description: "Como a PIRA LABS usa cookies e como você pode gerenciá-los.",
+  isPartOf: { "@id": "https://piralabs.com.br/#website" },
+  inLanguage: "pt-BR",
+};
+
 export default function CookiesPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
       <Section variant="dark" paddingY="lg">

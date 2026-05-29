@@ -5,6 +5,7 @@ import { FAQ } from "@/components/shared/FAQ";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { LegalNotice } from "@/components/shared/LegalNotice";
 import { ORIGINS } from "@/lib/constants";
+import { serviceSchema, faqPageSchema } from "@/lib/schemas/service";
 
 const breadcrumb = {
   "@context": "https://schema.org",
@@ -72,10 +73,22 @@ const faqItems = [
   },
 ];
 
+const service = serviceSchema({
+  name: "FAÍSCA Jurídica",
+  description:
+    "Palestra e workshop executivo para escritórios de advocacia, áreas jurídicas corporativas e instituições de ensino jurídico. Como usar IA com método, critério e governança na rotina jurídica.",
+  url: "https://piralabs.com.br/faisca/juridica",
+  serviceType: "Educação executiva em IA para o setor jurídico",
+});
+
+const faqSchema = faqPageSchema(faqItems);
+
 export default function FaiscaJuridicaPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* FAISCA-JUR-1 · Header */}
       <div className="bg-ink">

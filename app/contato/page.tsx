@@ -34,10 +34,23 @@ const breadcrumbs = [
   { label: "Contato" },
 ];
 
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "https://piralabs.com.br/contato#webpage",
+  url: "https://piralabs.com.br/contato",
+  name: "Contato · PIRA LABS",
+  description:
+    "Falar com a Pira Labs sobre INSPIRA, TRANSPIRA, Oxigênio IA Search ou FAÍSCA. Respondemos em até dois dias úteis.",
+  isPartOf: { "@id": "https://piralabs.com.br/#website" },
+  inLanguage: "pt-BR",
+};
+
 export default function ContatoPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }} />
 
       {/* CONTATO-1 · Header da página */}
       <div className="bg-ink">

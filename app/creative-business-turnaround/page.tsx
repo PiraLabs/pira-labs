@@ -6,6 +6,7 @@ import { FAQ } from "@/components/shared/FAQ";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { ORIGINS } from "@/lib/constants";
 import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
+import { faqPageSchema } from "@/lib/schemas/service";
 
 export const metadata: Metadata = {
   title: {
@@ -72,12 +73,18 @@ const faqItems = [
   },
 ];
 
+const faqSchema = faqPageSchema(faqItems);
+
 export default function CreativeBusinessTurnaroundPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* CBT-1 · Header da página */}

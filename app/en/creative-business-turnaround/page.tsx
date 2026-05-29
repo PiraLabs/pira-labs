@@ -4,6 +4,7 @@ import { PageHeader } from "@/components/shared/PageHeader";
 import { FAQ } from "@/components/shared/FAQ";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
+import { faqPageSchema } from "@/lib/schemas/service";
 
 const bcSchema = breadcrumbSchema([
   { name: "Home", url: "https://piralabs.com.br/en" },
@@ -72,10 +73,13 @@ const breadcrumbs = [
   { label: "Creative Business Turnaround" },
 ];
 
+const faqSchema = faqPageSchema(faqItems);
+
 export default function EnCBTPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* CBT-1 · Page header */}
       <div className="bg-ink">

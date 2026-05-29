@@ -9,6 +9,7 @@ import { LogoVideo } from "@/components/shared/LogoVideo";
 import { CountUp } from "@/components/home/CountUp";
 import { organizationSchema } from "@/lib/schemas/organization";
 import { websiteSchema } from "@/lib/schemas/website";
+import { faqPageSchema } from "@/lib/schemas/service";
 import type { NodeDef, ConnectorDef } from "@/components/shared/NodeSystem";
 
 export const metadata: Metadata = {
@@ -92,10 +93,24 @@ const faqItems = [
   },
 ];
 
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://piralabs.com.br/#webpage",
+  url: "https://piralabs.com.br/",
+  name: "Creative Business Turnaround · PIRA LABS",
+  description:
+    "A Pira Labs é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche.",
+  isPartOf: { "@id": "https://piralabs.com.br/#website" },
+  inLanguage: "pt-BR",
+};
+
+const faqSchema = faqPageSchema(faqItems);
+
 export default function HomePage() {
   return (
     <>
-      {/* Schemas globais — Organization + WebSite só na home */}
+      {/* Schemas globais — Organization + WebSite + WebPage + FAQPage na home */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -103,6 +118,14 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* HOME-1 · HERO */}

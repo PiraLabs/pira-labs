@@ -26,12 +26,27 @@ export const metadata: Metadata = {
   },
 };
 
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://piralabs.com.br/politica-privacidade#webpage",
+  url: "https://piralabs.com.br/politica-privacidade",
+  name: "Política de Privacidade · PIRA LABS",
+  description: "Como a PIRA LABS coleta, usa e protege seus dados pessoais, em conformidade com a LGPD.",
+  isPartOf: { "@id": "https://piralabs.com.br/#website" },
+  inLanguage: "pt-BR",
+};
+
 export default function PoliticaPrivacidadePage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
       <Section variant="dark" paddingY="lg">

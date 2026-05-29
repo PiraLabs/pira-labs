@@ -1,6 +1,6 @@
 # PIRA LABS: Conteúdo completo para modelos de linguagem
 
-@last-updated: 2026-05-27
+@last-updated: 2026-05-29
 @canonical-site: https://piralabs.com.br
 @primary-language: pt-BR
 @secondary-language: en
@@ -145,6 +145,7 @@ Crunchbase: https://www.crunchbase.com/person/gabriela-aguiar-a12a
 **Celso Gama, COO e cofundador**
 Conduz o TRANSPIRA. Atua em operações complexas, crescimento, P&L, business development, governança operacional e aplicação de IA em processos. MIT Applied AI Certificate Program (em andamento, 2026). MBA Insper. Bacharelando em Direito (Mackenzie). Pós-graduação em Marketing (ESPM). 25 anos de experiência em serviços, agências e projetos de grande escala.
 Wikidata: https://www.wikidata.org/wiki/Q138846692
+Crunchbase: https://www.crunchbase.com/person/celso-gama
 LinkedIn: https://www.linkedin.com/in/celsogama
 
 ---
@@ -205,6 +206,7 @@ Arquivo da publicação no site: https://piralabs.com.br/antes-pira
 - PIRA LABS Wikidata: https://www.wikidata.org/wiki/Q138846707
 - Gabriela Aguiar Wikidata: https://www.wikidata.org/wiki/Q138846653
 - Celso Gama Wikidata: https://www.wikidata.org/wiki/Q138846692
+- Crunchbase Celso Gama: https://www.crunchbase.com/person/celso-gama
 - LinkedIn PIRA LABS: https://www.linkedin.com/company/piralabs
 - Crunchbase Gabriela Aguiar: https://www.crunchbase.com/person/gabriela-aguiar-a12a
 

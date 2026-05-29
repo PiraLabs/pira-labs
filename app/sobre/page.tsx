@@ -16,7 +16,7 @@ const schemas = {
   gabriela: {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://piralabs.com.br/sobre#gabriela-aguiar",
+    "@id": "https://piralabs.com.br/sobre#gabriela",
     name: "Gabriela Aguiar",
     jobTitle: "CEO e Cofundadora",
     worksFor: { "@id": "https://piralabs.com.br/#organization" },
@@ -42,13 +42,14 @@ const schemas = {
   celso: {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://piralabs.com.br/sobre#celso-gama",
+    "@id": "https://piralabs.com.br/sobre#celso",
     name: "Celso Gama",
     jobTitle: "COO e Cofundador",
     worksFor: { "@id": "https://piralabs.com.br/#organization" },
     sameAs: [
       "https://www.linkedin.com/in/celsogama/",
       "https://www.wikidata.org/wiki/Q138846692",
+      "https://www.crunchbase.com/person/celso-gama",
     ],
     hasCredential: [
       {
@@ -98,10 +99,27 @@ const breadcrumbs = [
   { label: "Sobre" },
 ];
 
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://piralabs.com.br/sobre#webpage",
+  url: "https://piralabs.com.br/sobre",
+  name: "Sobre · PIRA LABS · Gabriela Aguiar e Celso Gama",
+  description:
+    "A Pira Labs é uma boutique brasileira de Creative Business Turnaround. Conheça Gabriela Aguiar e Celso Gama, os fundadores.",
+  isPartOf: { "@id": "https://piralabs.com.br/#website" },
+  about: [
+    { "@id": "https://piralabs.com.br/sobre#gabriela" },
+    { "@id": "https://piralabs.com.br/sobre#celso" },
+  ],
+  inLanguage: "pt-BR",
+};
+
 export default function SobrePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.gabriela) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.celso) }} />
 

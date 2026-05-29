@@ -8,6 +8,7 @@ import { NodeSystem } from "@/components/shared/NodeSystem";
 import { LogoVideo } from "@/components/shared/LogoVideo";
 import { CountUp } from "@/components/home/CountUp";
 import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
+import { faqPageSchema } from "@/lib/schemas/service";
 import type { NodeDef, ConnectorDef } from "@/components/shared/NodeSystem";
 
 export const metadata: Metadata = {
@@ -96,10 +97,26 @@ const faqItems = [
   },
 ];
 
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://piralabs.com.br/en#webpage",
+  url: "https://piralabs.com.br/en",
+  name: "Creative Business Turnaround · Pira Labs",
+  description:
+    "Pira Labs is a Brazilian boutique of Creative Business Turnaround for service businesses that need to act before the window closes.",
+  isPartOf: { "@id": "https://piralabs.com.br/#website" },
+  inLanguage: "en",
+};
+
+const faqSchema = faqPageSchema(faqItems);
+
 export default function EnHomePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bcSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* HOME-1 · HERO */}
       <Section variant="dark" paddingY="xl" id="hero">

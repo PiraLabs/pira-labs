@@ -32,10 +32,23 @@ const breadcrumbs = [
   { label: "Antes, Pira" },
 ];
 
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://piralabs.com.br/antes-pira#webpage",
+  url: "https://piralabs.com.br/antes-pira",
+  name: "Antes, Pira · Publicação editorial da PIRA LABS",
+  description:
+    "Antes, Pira é a publicação editorial da Pira Labs no Substack. Teses, estudos e o que aprendemos operando.",
+  isPartOf: { "@id": "https://piralabs.com.br/#website" },
+  inLanguage: "pt-BR",
+};
+
 export default function AntesPiraPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bcSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       {/* ANTESPIRA-1 · Header da página */}
       <div className="bg-ink">

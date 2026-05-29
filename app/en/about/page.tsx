@@ -37,10 +37,27 @@ const breadcrumbs = [
   { label: "About" },
 ];
 
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://piralabs.com.br/en/about#webpage",
+  url: "https://piralabs.com.br/en/about",
+  name: "About · PIRA LABS · Gabriela Aguiar and Celso Gama",
+  description:
+    "Pira Labs is a Brazilian boutique of Creative Business Turnaround. Meet Gabriela Aguiar and Celso Gama, the founders.",
+  isPartOf: { "@id": "https://piralabs.com.br/#website" },
+  about: [
+    { "@id": "https://piralabs.com.br/sobre#gabriela" },
+    { "@id": "https://piralabs.com.br/sobre#celso" },
+  ],
+  inLanguage: "en",
+};
+
 export default function EnAboutPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bcSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }} />
 
       {/* ABOUT-1 · Page header */}
       <div className="bg-ink">
