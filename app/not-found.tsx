@@ -15,7 +15,7 @@ const links = [
   { label: "Inspira (e Inspira Jurídico, Oxigênio IA Search)", href: "/inspira" },
   { label: "Transpira (e Transpira Jurídico)", href: "/transpira" },
   { label: "Faísca (e Faísca Jurídica)", href: "/faisca" },
-  { label: "Antes da Crise", href: "/antes-da-crise" },
+  { label: "Antes, Pira", href: "/antes-pira" },
 ];
 
 export default function NotFound() {
@@ -26,7 +26,7 @@ export default function NotFound() {
         <nav aria-label="Breadcrumb" className="mb-8">
           <ol className="flex items-center gap-1 text-sm text-off-white/50 font-body">
             <li>
-              <Link href="/" className="hover:text-peach transition-colors">
+              <Link href="/" className="hover:text-orange transition-colors">
                 Home
               </Link>
             </li>
@@ -48,7 +48,7 @@ export default function NotFound() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="flex items-center gap-2 text-off-white/80 hover:text-peach font-body transition-colors group"
+                className="flex items-center gap-2 text-off-white/80 hover:text-orange font-body transition-colors group"
               >
                 <span className="text-orange group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
                 {link.label}

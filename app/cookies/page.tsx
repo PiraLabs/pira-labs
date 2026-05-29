@@ -68,19 +68,19 @@ export default function CookiesPage() {
                 </thead>
                 <tbody className="divide-y divide-teal/20">
                   <tr>
-                    <td className="py-3 pr-4 font-mono text-peach text-xs">pira_consent</td>
+                    <td className="py-3 pr-4 font-mono text-orange text-xs">pira_consent</td>
                     <td className="py-3 pr-4">Essencial</td>
                     <td className="py-3 pr-4">Armazena sua escolha de consentimento de cookies</td>
                     <td className="py-3">12 meses</td>
                   </tr>
                   <tr>
-                    <td className="py-3 pr-4 font-mono text-peach text-xs">_ga, _ga_*</td>
+                    <td className="py-3 pr-4 font-mono text-orange text-xs">_ga, _ga_*</td>
                     <td className="py-3 pr-4">Analítico</td>
                     <td className="py-3 pr-4">Google Analytics: analisa tráfego e uso do site de forma anonimizada</td>
                     <td className="py-3">2 anos</td>
                   </tr>
                   <tr>
-                    <td className="py-3 pr-4 font-mono text-peach text-xs">Vercel Analytics</td>
+                    <td className="py-3 pr-4 font-mono text-orange text-xs">Vercel Analytics</td>
                     <td className="py-3 pr-4">Analítico</td>
                     <td className="py-3 pr-4">Analisa tráfego e uso do site de forma anonimizada</td>
                     <td className="py-3">Sessão</td>
@@ -93,7 +93,7 @@ export default function CookiesPage() {
           <div>
             <h2 className="text-xl font-semibold text-off-white mb-3">Cookies essenciais</h2>
             <p>
-              O cookie <span className="font-mono text-peach text-sm">pira_consent</span> é necessário
+              O cookie <span className="font-mono text-orange text-sm">pira_consent</span> é necessário
               para o funcionamento do banner de consentimento. Ele não rastreia você, não armazena dados
               pessoais e não pode ser desativado.
             </p>
@@ -127,7 +127,7 @@ export default function CookiesPage() {
               Para dúvidas sobre cookies, escreva para{" "}
               <a
                 href="mailto:inspira@piralabs.com.br"
-                className="text-peach underline hover:text-orange transition-colors"
+                className="text-orange underline hover:text-orange transition-colors"
               >
                 inspira@piralabs.com.br
               </a>

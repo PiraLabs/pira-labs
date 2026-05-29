@@ -74,7 +74,7 @@ export default function TermosPage() {
                 Contato:{" "}
                 <a
                   href="mailto:inspira@piralabs.com.br"
-                  className="text-peach underline hover:text-orange transition-colors"
+                  className="text-orange underline hover:text-orange transition-colors"
                 >
                   inspira@piralabs.com.br
                 </a>
@@ -193,7 +193,7 @@ export default function TermosPage() {
               O tratamento dos seus dados pessoais é regido pela nossa{" "}
               <Link
                 href="/politica-privacidade"
-                className="text-peach underline hover:text-orange transition-colors"
+                className="text-orange underline hover:text-orange transition-colors"
               >
                 Política de Privacidade
               </Link>
@@ -234,7 +234,7 @@ export default function TermosPage() {
                 <strong className="text-off-white/90">E-mail:</strong>{" "}
                 <a
                   href="mailto:inspira@piralabs.com.br"
-                  className="text-peach underline hover:text-orange transition-colors"
+                  className="text-orange underline hover:text-orange transition-colors"
                 >
                   inspira@piralabs.com.br
                 </a>
