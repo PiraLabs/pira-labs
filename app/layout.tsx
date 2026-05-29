@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 import { Header } from "@/components/shared/Header";
 import { Footer } from "@/components/shared/Footer";
@@ -7,27 +7,35 @@ import { SkipLink } from "@/components/shared/SkipLink";
 import { CookieBannerLoader } from "@/components/CookieBannerLoader";
 import "./globals.css";
 
-/* Sistema Caminho C:
-   Space Grotesk → tudo (body, UI, headers de página, navegação, botões, footer).
-   Substituta da Groteske até licenciamento final da KZ.
-   Manter --font-grotesk para não refatorar quando a fonte definitiva chegar.
+/* Sistema tipográfico definitivo (kit KZ — decisão D10):
+   AtypDisplay → headings H1–H4, CTAs, wordmark.
+   AtypText    → body, nav, UI, forms, FAQs.
+   Fallback para ambos: 'Plus Jakarta Sans', sans-serif.
+   AtypText-Regular ainda não disponível — Medium (500) serve como 400 até chegar. */
 
-   Cormorant Garamond → APENAS frases canônicas, citações dos fundadores e números de destaque.
-   NÃO usar em headers de seção, navegação, body, UI ou botões. */
-
-const cormorant = Cormorant_Garamond({
-  weight: ["300", "400", "500"],
-  style: ["normal", "italic"],
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-cormorant",
+const atypDisplay = localFont({
+  src: [
+    { path: "../public/fonts/AtypDisplay-Light.ttf",    weight: "300", style: "normal" },
+    { path: "../public/fonts/AtypDisplay-Regular.ttf",  weight: "400", style: "normal" },
+    { path: "../public/fonts/AtypDisplay-Medium.ttf",   weight: "500", style: "normal" },
+    { path: "../public/fonts/AtypDisplay-Semibold.ttf", weight: "600", style: "normal" },
+    { path: "../public/fonts/AtypDisplay-Bold.ttf",     weight: "700", style: "normal" },
+  ],
+  variable: "--font-atyp-display",
   display: "swap",
+  fallback: ["Plus Jakarta Sans", "sans-serif"],
 });
 
-const grotesk = Space_Grotesk({
-  weight: ["400", "500", "600"],
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-grotesk",
+const atypText = localFont({
+  src: [
+    { path: "../public/fonts/AtypText-Light.ttf",    weight: "300", style: "normal" },
+    { path: "../public/fonts/AtypText-Medium.ttf",   weight: "400", style: "normal" },
+    { path: "../public/fonts/AtypText-Medium.ttf",   weight: "500", style: "normal" },
+    { path: "../public/fonts/AtypText-Semibold.ttf", weight: "600", style: "normal" },
+  ],
+  variable: "--font-atyp-text",
   display: "swap",
+  fallback: ["Plus Jakarta Sans", "sans-serif"],
 });
 
 export const metadata: Metadata = {
@@ -69,7 +77,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${cormorant.variable} ${grotesk.variable}`}
+      className={`${atypDisplay.variable} ${atypText.variable}`}
       suppressHydrationWarning
     >
       <body className="font-body bg-deep-teal text-off-white antialiased">

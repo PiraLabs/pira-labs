@@ -15,20 +15,18 @@
     scroll-behavior: smooth;
   }
 
-  /* Space Grotesk como substituta de Groteske até licenciamento final (sistema Caminho C).
-     Quando chegar: trocar por next/font/local + arquivos .woff2 da Groteske.
-     Manter o nome --font-grotesk para não refatorar. */
+  /* AtypText — body, nav, UI, forms, FAQs. */
   body {
     background-color: var(--color-deep-teal);
     color: var(--color-off-white);
-    font-family: var(--font-grotesk), system-ui, sans-serif;
+    font-family: var(--font-atyp-text), 'Plus Jakarta Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Todos os headers usam Space Grotesk (Groteske). Cormorant NÃO entra aqui. */
+  /* AtypDisplay — H1–H4, wordmark. */
   h1, h2, h3, h4 {
-    font-family: var(--font-grotesk), system-ui, sans-serif;
+    font-family: var(--font-atyp-display), 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
     line-height: 1.15;
   }
@@ -42,7 +40,7 @@
     color: var(--color-ink);
     padding: 8px 16px;
     z-index: 100;
-    font-family: var(--font-grotesk), system-ui, sans-serif;
+    font-family: var(--font-atyp-text), 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
   }
 
@@ -58,16 +56,15 @@
 }
 
 @layer components {
-  /* Cormorant Garamond apenas em frases canônicas, citações dos fundadores e números de destaque.
-     NÃO usar em headers de seção, navegação, body, UI, botões ou formulários. */
+  /* AtypDisplay italic — frases canônicas, citações dos fundadores, números de destaque. */
   .emphasis-italic {
     font-style: italic;
     font-weight: 500;
-    font-family: var(--font-cormorant), Georgia, serif;
+    font-family: var(--font-atyp-display), 'Plus Jakarta Sans', sans-serif;
   }
 
   .font-display {
-    font-family: var(--font-cormorant), Georgia, serif;
+    font-family: var(--font-atyp-display), 'Plus Jakarta Sans', sans-serif;
   }
 
   /* ATENÇÃO: botão primário usa ink (#0C0F16) como texto.
@@ -76,7 +73,7 @@
   .btn-primary {
     background-color: var(--color-orange);
     color: var(--color-ink);
-    font-family: var(--font-grotesk), system-ui, sans-serif;
+    font-family: var(--font-atyp-text), 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
     padding: 0.75rem 1.5rem;
     border-radius: 0.25rem;
@@ -94,7 +91,7 @@
     background-color: transparent;
     border: 1px solid var(--color-off-white);
     color: var(--color-off-white);
-    font-family: var(--font-grotesk), system-ui, sans-serif;
+    font-family: var(--font-atyp-text), 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
     padding: 0.75rem 1.5rem;
     border-radius: 0.25rem;
