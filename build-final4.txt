@@ -1,0 +1,71 @@
+﻿
+> piralabs-site@0.1.0 build
+> next build
+
+node.exe : ÔÜá Invalid next.config.js options detected: 
+No linha:1 caractere:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Users\Lenovo\AppData\Roaming ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ÔÜá Invalid nex...ions detected: :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ÔÜá     Unrecognized key(s) in object: 'turbopack' at "experimental"
+ÔÜá See more info here: https://nextjs.org/docs/messages/invalid-next-config
+Ôû▓ Next.js 16.2.6 (Turbopack)
+- Environments: .env.local
+- Experiments (use with caution):
+  ? turbopack (invalid experimental key)
+
+  Creating an optimized production build ...
+Ô£ô Compiled successfully in 8.9s
+  Running TypeScript ...
+
+  We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+  The following mandatory changes were made to your tsconfig.json:
+
+  	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+
+  Finished TypeScript in 5.7s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/30) ...
+  Generating static pages using 3 workers (7/30) 
+  Generating static pages using 3 workers (14/30) 
+  Generating static pages using 3 workers (22/30) 
+Ô£ô Generating static pages using 3 workers (30/30) in 1850ms
+  Finalizing page optimization ...
+
+Route (app)                           Revalidate  Expire
+Ôöî Ôùï /
+Ôö£ Ôùï /_not-found
+Ôö£ Ôùï /antes-da-crise                           1h      1y
+Ôö£ Ôùï /antes-pira
+Ôö£ ãÆ /api/indexnow
+Ôö£ Ôùï /contato
+Ôö£ Ôùï /cookies
+Ôö£ Ôùï /creative-business-turnaround
+Ôö£ Ôùï /crescimento-sem-margem
+Ôö£ Ôùï /diagnostico-empresa-servicos
+Ôö£ Ôùï /en
+Ôö£ Ôùï /en/about
+Ôö£ Ôùï /en/contact
+Ôö£ Ôùï /en/creative-business-turnaround
+Ôö£ Ôùï /faisca
+Ôö£ Ôùï /faisca/imersa-em-ia
+Ôö£ Ôùï /faisca/juridica
+Ôö£ Ôùï /faisca/pocket
+Ôö£ Ôùï /icon.png
+Ôö£ Ôùï /inspira
+Ôö£ Ôùï /inspira/juridico
+Ôö£ Ôùï /inspira/oxigenio
+Ôö£ Ôùï /politica-privacidade
+Ôö£ Ôùï /robots.txt
+Ôö£ Ôùï /sitemap.xml
+Ôö£ Ôùï /sobre
+Ôö£ Ôùï /termos
+Ôö£ Ôùï /transpira
+Ôöö Ôùï /transpira/juridico
+
+
+Ôùï  (Static)   prerendered as static content
+ãÆ  (Dynamic)  server-rendered on demand
+

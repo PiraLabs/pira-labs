@@ -1,0 +1,28 @@
+﻿
+> piralabs-site@0.1.0 build
+> next build
+
+Ôû▓ Next.js 16.2.5 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+Ô£ô Compiled successfully in 7.7s
+  Running TypeScript ...
+  Finished TypeScript in 5.6s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/30) ...
+node.exe : Error occurred prerendering page "/faisca/juridica". Read more: 
+https://nextjs.org/docs/messages/prerender-error
+No linha:1 caractere:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Users\Lenovo\AppData\Roaming ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Error occurred ...prerender-error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error [InvariantError]: Invariant: Expected workStore to be initialized. This is a bug in Next.js.
+    at N (C:\Users\Lenovo\piralabs\piralabs-site\.next\server\chunks\ssr\[root-of-the-server]__098zro9._.js:8:85026)
+    at M (C:\Users\Lenovo\piralabs\piralabs-site\.next\server\chunks\ssr\[root-of-the-server]__098zro9._.js:8:84927)
+    at <unknown> 
+(C:\Users\Lenovo\piralabs\piralabs-site\.next\server\chunks\ssr\[root-of-the-server]__098zro9._.js:13:29237)
+Export encountered an error on /faisca/juridica/page: /faisca/juridica, exiting the build.
+Ô¿» Next.js build worker exited with code: 1 and signal: null

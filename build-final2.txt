@@ -1,0 +1,58 @@
+﻿
+> piralabs-site@0.1.0 build
+> next build
+
+   Ôû▓ Next.js 15.3.6
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+ Ô£ô Compiled successfully in 11.0s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/31) ...
+   Generating static pages (7/31) 
+   Generating static pages (15/31) 
+   Generating static pages (23/31) 
+ Ô£ô Generating static pages (31/31)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS  Revalidate  Expire
+Ôöî Ôùï /                                    1.08 kB         111 kB
+Ôö£ Ôùï /_not-found                            147 B         101 kB
+Ôö£ Ôùï /antes-da-crise                        216 B         105 kB          1h      1y
+Ôö£ Ôùï /antes-pira                            216 B         105 kB
+Ôö£ ãÆ /api/indexnow                          147 B         101 kB
+Ôö£ Ôùï /contato                               178 B         105 kB
+Ôö£ Ôùï /cookies                               178 B         105 kB
+Ôö£ Ôùï /creative-business-turnaround          216 B         105 kB
+Ôö£ Ôùï /crescimento-sem-margem                216 B         105 kB
+Ôö£ Ôùï /diagnostico-empresa-servicos          216 B         105 kB
+Ôö£ Ôùï /en                                  1.08 kB         111 kB
+Ôö£ Ôùï /en/about                              184 B         110 kB
+Ôö£ Ôùï /en/contact                            178 B         105 kB
+Ôö£ Ôùï /en/creative-business-turnaround       216 B         105 kB
+Ôö£ Ôùï /faisca                                216 B         105 kB
+Ôö£ Ôùï /faisca/imersa-em-ia                   216 B         105 kB
+Ôö£ Ôùï /faisca/juridica                       216 B         105 kB
+Ôö£ Ôùï /faisca/pocket                         216 B         105 kB
+Ôö£ Ôùï /icon.png                                0 B            0 B
+Ôö£ Ôùï /inspira                               216 B         105 kB
+Ôö£ Ôùï /inspira/juridico                      216 B         105 kB
+Ôö£ Ôùï /inspira/oxigenio                      187 B         110 kB
+Ôö£ Ôùï /politica-privacidade                  216 B         105 kB
+Ôö£ Ôùï /robots.txt                            147 B         101 kB
+Ôö£ Ôùï /sitemap.xml                           147 B         101 kB
+Ôö£ Ôùï /sobre                                 187 B         110 kB
+Ôö£ Ôùï /termos                                216 B         105 kB
+Ôö£ Ôùï /transpira                             216 B         105 kB
+Ôöö Ôùï /transpira/juridico                    216 B         105 kB
++ First Load JS shared by all             101 kB
+  Ôö£ chunks/4bd1b696-d4d5eb693d0a7af9.js  53.2 kB
+  Ôö£ chunks/684-b1bf9a906d455c82.js       46.1 kB
+  Ôöö other shared chunks (total)          2.01 kB
+
+
+Ôùï  (Static)   prerendered as static content
+ãÆ  (Dynamic)  server-rendered on demand
+
