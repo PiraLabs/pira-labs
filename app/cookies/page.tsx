@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import type { Metadata } from "next";
 import { Section } from "@/components/shared/Section";
 import { PageHeader } from "@/components/shared/PageHeader";
@@ -122,7 +124,7 @@ export default function CookiesPage() {
               dado é vinculado a você pessoalmente.
             </p>
             <p className="mt-3">
-              Os cookies analíticos só são ativados se você clicar em "Aceitar todos" no banner de
+              Os cookies analíticos só são ativados se você clicar em &quot;Aceitar todos&quot; no banner de
               consentimento.
             </p>
           </div>
@@ -130,7 +132,7 @@ export default function CookiesPage() {
           <div>
             <h2 className="text-xl font-semibold text-off-white mb-3">Como gerenciar seus cookies</h2>
             <p>
-              Você pode alterar sua escolha a qualquer momento clicando em "Gerenciar cookies" no rodapé
+              Você pode alterar sua escolha a qualquer momento clicando em &quot;Gerenciar cookies&quot; no rodapé
               do site. Também pode configurar seu navegador para bloquear todos os cookies, mas isso pode
               afetar a funcionalidade do site.
             </p>

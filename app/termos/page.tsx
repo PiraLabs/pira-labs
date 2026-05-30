@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section } from "@/components/shared/Section";
@@ -222,8 +224,8 @@ export default function TermosPage() {
               11. Alterações nestes termos
             </h2>
             <p>
-              Podemos atualizar estes Termos de Uso a qualquer momento. A data de "última
-              atualização" no início do documento indica a versão vigente. O uso continuado do site
+              Podemos atualizar estes Termos de Uso a qualquer momento. A data de &quot;última
+              atualização&quot; no início do documento indica a versão vigente. O uso continuado do site
               após alterações implica aceitação dos novos termos.
             </p>
           </div>

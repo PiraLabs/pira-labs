@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    turbopack: false,
+  },
   async redirects() {
     return [
       // URLs curtas para campanhas
@@ -101,6 +104,11 @@ const nextConfig = {
         ],
       },
     ];
+  },
+  webpack: (config) => {
+    const path = require('path');
+    config.resolve.alias['@'] = path.resolve(__dirname, '.');
+    return config;
   },
 };
 

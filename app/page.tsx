@@ -1,9 +1,10 @@
+export const dynamic = 'force-static';
+
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/shared/Section";
 import { FAQ } from "@/components/shared/FAQ";
-import { CTAWithMicrocopy } from "@/components/shared/CTAWithMicrocopy";
 import NodeSystem from "@/components/shared/NodeSystem";
 import { LogoVideo } from "@/components/shared/LogoVideo";
 import { CountUp } from "@/components/home/CountUp";

@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section } from "@/components/shared/Section";
@@ -365,7 +367,7 @@ export default function PoliticaPrivacidadePage() {
               11. Alterações nesta política
             </h2>
             <p>
-              Podemos atualizar esta política periodicamente. A data de "última atualização" no
+              Podemos atualizar esta política periodicamente. A data de &quot;última atualização&quot; no
               início do documento indica quando a versão vigente foi publicada. Mudanças
               significativas serão comunicadas de forma destacada no site.
             </p>

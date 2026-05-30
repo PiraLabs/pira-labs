@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import type { Metadata } from "next";
 import { Section } from "@/components/shared/Section";
 import { PageHeader } from "@/components/shared/PageHeader";
@@ -127,7 +129,7 @@ export default function EnCBTPage() {
             <strong className="text-off-white font-semibold">Pira Labs acts before:</strong>{" "}
             when the company still has clients, cash and reputation, but the
             business model has started costing too much. The name came from
-            outside. The soul, the method and the focus are Pira's.
+            outside. The soul, the method and the focus are Pira&apos;s.
           </p>
         </div>
       </Section>
@@ -360,7 +362,7 @@ export default function EnCBTPage() {
             <p className="text-off-white font-body font-medium mb-3">Diagnosis</p>
             <p className="text-off-white/75 font-body text-sm leading-relaxed mb-4">
               INSPIRA reads six layers in sequence: Sopro, Fôlego, Pulso,
-              Acústica, Pressão and Suspiro. The method's strength lies in the
+              Acústica, Pressão and Suspiro. The method&apos;s strength lies in the
               synthesis between them. The output is the Propulsão module: an
               executable route with moves, owners, order and completion criteria.
               Gabriela Aguiar leads.
@@ -376,7 +378,7 @@ export default function EnCBTPage() {
             </p>
             <p className="text-off-white font-body font-medium mb-3">Execution</p>
             <p className="text-off-white/75 font-body text-sm leading-relaxed mb-4">
-              Happens inside the client's operation, with the team that will
+              Happens inside the client&apos;s operation, with the team that will
               operate afterwards. Redesigns the relationship between work, value,
               technology and governance. Two configurations: Temporary COO and
               Delegation Architect. Celso Gama leads.
@@ -452,7 +454,7 @@ export default function EnCBTPage() {
                 <td className="py-4 pr-6 text-off-white/75 align-top">
                   Restructuring of the activation and events area of a
                   multinational agency. Coordination of 600 people and 100
-                  vendors for a major technology brand's global sponsorship at
+                  vendors for a major technology brand&apos;s global sponsorship at
                   the Rio 2016 Games.
                 </td>
                 <td className="py-4 text-off-white/50 align-top">Pre-AI</td>

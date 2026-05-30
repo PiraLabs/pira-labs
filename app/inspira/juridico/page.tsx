@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import type { Metadata } from "next";
 import { Section } from "@/components/shared/Section";
 import { PageHeader } from "@/components/shared/PageHeader";
@@ -142,8 +144,8 @@ export default function InspiraJuridicoPage() {
           <p className="text-off-white/85 font-body leading-relaxed">
             A maioria dos sócios e heads jurídicos já percebeu que IA está na
             rotina do escritório. Mas quando perguntam com detalhe, a resposta
-            costuma ser vaga: "a gente usa para pesquisa", "para rascunho de
-            emails", "para resumir documentos".
+            costuma ser vaga: &quot;a gente usa para pesquisa&quot;, &quot;para rascunho de
+            emails&quot;, &quot;para resumir documentos&quot;.
           </p>
           <p className="text-off-white/85 font-body leading-relaxed">
             O que raramente está mapeado é quais ferramentas, em quais planos,

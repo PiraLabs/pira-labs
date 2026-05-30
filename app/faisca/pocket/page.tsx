@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import type { Metadata } from "next";
 import { Section } from "@/components/shared/Section";
 import { PageHeader } from "@/components/shared/PageHeader";
@@ -204,8 +206,8 @@ export default function PocketPage() {
           <p className="text-off-white/65 font-body text-sm leading-relaxed">
             O Pocket do INSPIRA é leitura inicial com metodologia. Não substitui
             o INSPIRA completo, que roda as seis camadas em 4 a 6 semanas com
-            aprovação humana em cada etapa. O Pocket responde: "por onde
-            começo?" O INSPIRA responde: "o que está acontecendo de verdade?"
+            aprovação humana em cada etapa. O Pocket responde: &quot;por onde
+            começo?&quot; O INSPIRA responde: &quot;o que está acontecendo de verdade?&quot;
           </p>
         </div>
 

@@ -1,9 +1,10 @@
+export const dynamic = 'force-static';
+
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/shared/Section";
 import { FAQ } from "@/components/shared/FAQ";
-import { CTAWithMicrocopy } from "@/components/shared/CTAWithMicrocopy";
 import NodeSystem from "@/components/shared/NodeSystem";
 import { LogoVideo } from "@/components/shared/LogoVideo";
 import { CountUp } from "@/components/home/CountUp";
@@ -189,7 +190,7 @@ export default function EnHomePage() {
                   When <em className="emphasis-italic">right work</em> replaces <em className="emphasis-italic">too much work</em>.
                 </p>
                 <p className="text-off-white/80 font-body leading-relaxed mb-6">
-                  The execution. It happens inside the client's operation, with the team
+                  The execution. It happens inside the client&apos;s operation, with the team
                   that will operate afterwards. Redesigns the relationship between work, value,
                   technology and governance. Pira Labs does not leave when the deadline ends.
                   It leaves when the agreed results are verified. Celso Gama leads.
@@ -257,7 +258,7 @@ export default function EnHomePage() {
                 <p className="text-off-white/80 font-body text-sm leading-relaxed">
                   Restructuring of the activation and events area of a multinational agency.
                   Two years of redesigned operations culminated in coordinating 600 people and
-                  100 vendors for a major technology brand's global sponsorship at the Rio 2016 Games.
+                  100 vendors for a major technology brand&apos;s global sponsorship at the Rio 2016 Games.
                 </p>
               </div>
 
