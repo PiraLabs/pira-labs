@@ -4,13 +4,12 @@ import Link from "next/link";
 import { Section } from "@/components/shared/Section";
 import { FAQ } from "@/components/shared/FAQ";
 import { CTAWithMicrocopy } from "@/components/shared/CTAWithMicrocopy";
-import { NodeSystem } from "@/components/shared/NodeSystem";
+import NodeSystem from "@/components/shared/NodeSystem";
 import { LogoVideo } from "@/components/shared/LogoVideo";
 import { CountUp } from "@/components/home/CountUp";
 import { organizationSchema } from "@/lib/schemas/organization";
 import { websiteSchema } from "@/lib/schemas/website";
 import { faqPageSchema } from "@/lib/schemas/service";
-import type { NodeDef, ConnectorDef } from "@/components/shared/NodeSystem";
 
 export const metadata: Metadata = {
   title: { absolute: "Creative Business Turnaround · PIRA LABS" },
@@ -28,43 +27,6 @@ export const metadata: Metadata = {
     images: [{ url: "https://piralabs.com.br/piralabs-og-image.png", width: 1200, height: 630, alt: "PIRA LABS · Creative Business Turnaround" }],
   },
 };
-
-// NodeSystem — HOME-1: nós dispersos, sem conectores
-const heroNodes: NodeDef[] = [
-  { id: "h1", cx: 12, cy: 20, variant: "hollow", color: "teal" },
-  { id: "h2", cx: 78, cy: 12, variant: "hollow", color: "off-white" },
-  { id: "h3", cx: 88, cy: 65, variant: "solid",  color: "orange", r: 3 },
-  { id: "h4", cx: 38, cy: 84, variant: "hollow", color: "teal" },
-  { id: "h5", cx: 93, cy: 38, variant: "hollow", color: "off-white" },
-];
-
-// NodeSystem — HOME-3: conexão completa, metáfora do método
-const methodNodes: NodeDef[] = [
-  { id: "m1", cx: 8,  cy: 25, variant: "hollow", color: "teal" },
-  { id: "m2", cx: 28, cy: 8,  variant: "solid",  color: "orange", r: 3 },
-  { id: "m3", cx: 88, cy: 18, variant: "hollow", color: "off-white" },
-  { id: "m4", cx: 82, cy: 75, variant: "hollow", color: "teal" },
-  { id: "m5", cx: 48, cy: 92, variant: "solid",  color: "orange", r: 3 },
-];
-const methodConnectors: ConnectorDef[] = [
-  { from: "m1", to: "m2" },
-  { from: "m2", to: "m3" },
-  { from: "m3", to: "m4" },
-  { from: "m4", to: "m5" },
-];
-
-// NodeSystem — HOME-4: três nós de origem convergindo para nó de resultado
-const proofsNodes: NodeDef[] = [
-  { id: "p1", cx: 5,  cy: 30, variant: "hollow", color: "teal" },
-  { id: "p2", cx: 50, cy: 8,  variant: "solid",  color: "orange", r: 3 },
-  { id: "p3", cx: 93, cy: 30, variant: "hollow", color: "off-white" },
-  { id: "p4", cx: 50, cy: 88, variant: "solid",  color: "orange", r: 5 },
-];
-const proofsConnectors: ConnectorDef[] = [
-  { from: "p1", to: "p4" },
-  { from: "p2", to: "p4" },
-  { from: "p3", to: "p4" },
-];
 
 const faqItems = [
   {
@@ -133,7 +95,7 @@ export default function HomePage() {
         <div className="relative overflow-hidden">
           {/* NodeSystem: nós dispersos, sem conectores. Conexão inicia conforme scroll. */}
           <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-            <NodeSystem nodes={heroNodes} className="w-full h-full" />
+            <NodeSystem variant="dark" density="sparse" />
           </div>
           <div className="relative max-w-3xl">
             {/* H1 em Cormorant 64–80px conforme spec */}
@@ -197,7 +159,7 @@ export default function HomePage() {
         <div className="relative overflow-hidden">
           {/* NodeSystem: conexão completa ao chegar na seção */}
           <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-            <NodeSystem nodes={methodNodes} connectors={methodConnectors} className="w-full h-full" />
+            <NodeSystem variant="dark" density="medium" />
           </div>
           <div className="relative">
             <h2 className="text-3xl md:text-4xl font-body font-semibold text-off-white mb-3">
@@ -288,7 +250,7 @@ export default function HomePage() {
         <div className="relative overflow-hidden">
           {/* NodeSystem: três origens convergindo para nó de resultado */}
           <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-            <NodeSystem nodes={proofsNodes} connectors={proofsConnectors} className="w-full h-full" />
+            <NodeSystem variant="dark" density="dense" />
           </div>
           <div className="relative">
             <h2 className="text-3xl md:text-4xl font-body font-semibold text-off-white mb-3">

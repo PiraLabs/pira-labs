@@ -1,200 +1,125 @@
-"use client";
+type NodeType = "filled" | "hollow-thin" | "hollow-thick";
 
-import { useEffect, useRef, useState } from "react";
+interface Node {
+  x: number;
+  y: number;
+  r: number;
+  type: NodeType;
+}
 
-const COLOR_MAP = {
-  orange: "#EB5C2E",
-  teal: "#004757",
-  "off-white": "#E8E0D6",
-} as const;
+type ConnectorPair = [number, number];
 
-export type NodeDef = {
-  id: string;
-  cx: number; // 0–100 (% of viewBox width)
-  cy: number; // 0–100 (% of viewBox height)
-  r?: number; // radius in viewBox units, default 4
-  variant?: "hollow" | "solid";
-  color?: keyof typeof COLOR_MAP;
-};
-
-export type ConnectorDef = {
-  from: string; // node id
-  to: string;   // node id
-};
-
-type NodeSystemProps = {
-  nodes: NodeDef[];
-  connectors?: ConnectorDef[];
-  /** Omitir para preencher o container pai (uso como background absoluto).
-   *  Definir para uso em fluxo normal (ex: aspectRatio={2} = 2:1). */
-  aspectRatio?: number;
+interface NodeSystemProps {
+  variant: "dark" | "light";
+  density: "sparse" | "medium" | "dense";
   className?: string;
+}
+
+const NODES: Record<"sparse" | "medium" | "dense", Node[]> = {
+  sparse: [
+    { x: 8,  y: 65, r: 20, type: "hollow-thick" },
+    { x: 22, y: 30, r: 27, type: "filled"        },
+    { x: 45, y: 72, r: 20, type: "hollow-thin"   },
+    { x: 68, y: 20, r: 42, type: "hollow-thick"  },
+    { x: 78, y: 58, r: 20, type: "filled"        },
+    { x: 92, y: 35, r: 27, type: "hollow-thin"   },
+  ],
+  medium: [
+    { x: 5,  y: 50, r: 20, type: "hollow-thin"  },
+    { x: 15, y: 20, r: 27, type: "filled"        },
+    { x: 28, y: 75, r: 20, type: "hollow-thick"  },
+    { x: 42, y: 35, r: 42, type: "hollow-thin"   },
+    { x: 55, y: 65, r: 20, type: "filled"        },
+    { x: 65, y: 20, r: 27, type: "hollow-thick"  },
+    { x: 72, y: 80, r: 20, type: "filled"        },
+    { x: 82, y: 45, r: 27, type: "hollow-thin"   },
+    { x: 94, y: 25, r: 20, type: "hollow-thick"  },
+  ],
+  dense: [
+    { x: 4,  y: 60, r: 20, type: "filled"        },
+    { x: 12, y: 25, r: 27, type: "hollow-thin"   },
+    { x: 22, y: 75, r: 20, type: "hollow-thick"  },
+    { x: 32, y: 40, r: 27, type: "filled"        },
+    { x: 42, y: 15, r: 42, type: "hollow-thin"   },
+    { x: 50, y: 70, r: 20, type: "hollow-thick"  },
+    { x: 60, y: 35, r: 20, type: "filled"        },
+    { x: 68, y: 80, r: 27, type: "hollow-thin"   },
+    { x: 74, y: 20, r: 20, type: "hollow-thick"  },
+    { x: 82, y: 55, r: 42, type: "filled"        },
+    { x: 88, y: 30, r: 20, type: "hollow-thin"   },
+    { x: 95, y: 65, r: 27, type: "hollow-thick"  },
+  ],
 };
 
-export function NodeSystem({
-  nodes,
-  connectors = [],
-  aspectRatio,
-  className = "",
-}: NodeSystemProps) {
-  const [visibleNodes, setVisibleNodes] = useState<Set<string>>(new Set());
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const sentinelRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+const CONNECTORS: Record<"sparse" | "medium" | "dense", ConnectorPair[]> = {
+  sparse: [[0, 1], [1, 3], [3, 4]],
+  medium: [[0, 1], [1, 3], [3, 4], [4, 5], [5, 7]],
+  dense:  [[0, 1], [1, 3], [2, 3], [3, 4], [4, 6], [5, 6], [6, 9], [8, 9]],
+};
 
-  // Detect prefers-reduced-motion once on mount
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (mq.matches) {
-      setReducedMotion(true);
-      setVisibleNodes(new Set(nodes.map((n) => n.id)));
-    }
-    const handler = (e: MediaQueryListEvent) => {
-      setReducedMotion(e.matches);
-      if (e.matches) setVisibleNodes(new Set(nodes.map((n) => n.id)));
-    };
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, [nodes]);
+const COLOR: Record<"dark" | "light", string> = {
+  dark:  "#e8e0d6",
+  light: "#05262e",
+};
 
-  // One IntersectionObserver per node sentinel — scroll-driven entry
-  useEffect(() => {
-    if (reducedMotion) return;
-
-    const observers: IntersectionObserver[] = [];
-
-    nodes.forEach((node) => {
-      const sentinel = sentinelRefs.current.get(node.id);
-      if (!sentinel) return;
-
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setVisibleNodes((prev) => new Set([...prev, node.id]));
-            observer.disconnect(); // trigger once, stay visible
-          }
-        },
-        { threshold: 0.1, rootMargin: "0px 0px -10% 0px" }
-      );
-
-      observer.observe(sentinel);
-      observers.push(observer);
-    });
-
-    return () => observers.forEach((o) => o.disconnect());
-  }, [nodes, reducedMotion]);
-
-  const nodeMap = new Map(nodes.map((n) => [n, n.id] as const).map(([n]) => [n.id, n]));
-
-  const connectorLength = (c: ConnectorDef): number => {
-    const a = nodeMap.get(c.from);
-    const b = nodeMap.get(c.to);
-    if (!a || !b) return 200;
-    const dx = b.cx - a.cx;
-    const dy = b.cy - a.cy;
-    return Math.sqrt(dx * dx + dy * dy);
-  };
-
-  const isConnectorVisible = (c: ConnectorDef) =>
-    visibleNodes.has(c.from) && visibleNodes.has(c.to);
+export default function NodeSystem({ variant, density, className }: NodeSystemProps) {
+  const color = COLOR[variant];
+  const nodes = NODES[density];
+  const connectors = CONNECTORS[density];
 
   return (
-    <div
-      className={`relative pointer-events-none select-none ${className}`}
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="xMidYMid slice"
+      className={`absolute inset-0 pointer-events-none${className ? ` ${className}` : ""}`}
       aria-hidden="true"
-      style={aspectRatio !== undefined ? { aspectRatio: String(aspectRatio) } : undefined}
     >
-      {/* Invisible sentinels — one per node, positioned at node location */}
-      {nodes.map((node) => (
-        <div
-          key={node.id}
-          ref={(el) => {
-            if (el) sentinelRefs.current.set(node.id, el);
-            else sentinelRefs.current.delete(node.id);
-          }}
-          style={{
-            position: "absolute",
-            left: `${node.cx}%`,
-            top: `${node.cy}%`,
-            width: 1,
-            height: 1,
-          }}
+      {connectors.map(([a, b], i) => (
+        <line
+          key={i}
+          x1={nodes[a].x}
+          y1={nodes[a].y}
+          x2={nodes[b].x}
+          y2={nodes[b].y}
+          stroke={color}
+          strokeWidth="1"
+          opacity="0.5"
+          vectorEffect="non-scaling-stroke"
         />
       ))}
-
-      {/* SVG — fills the container, z-index below content */}
-      <svg
-        viewBox="0 0 100 100"
-        preserveAspectRatio="none"
-        className="absolute inset-0 w-full h-full"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        {/* Connectors first — nodes render on top */}
-        {connectors.map((c) => {
-          const a = nodeMap.get(c.from);
-          const b = nodeMap.get(c.to);
-          if (!a || !b) return null;
-
-          const visible = isConnectorVisible(c);
-          const len = connectorLength(c);
-
+      {nodes.map((node, i) => {
+        if (node.type === "filled") {
           return (
-            <line
-              key={`${c.from}-${c.to}`}
-              x1={a.cx}
-              y1={a.cy}
-              x2={b.cx}
-              y2={b.cy}
-              stroke={COLOR_MAP.teal}
-              strokeWidth="0.5"
-              strokeOpacity={0.5}
-              strokeDasharray={len}
-              strokeDashoffset={visible ? 0 : len}
-              style={
-                !reducedMotion
-                  ? { transition: "stroke-dashoffset 0.6s ease-out 0.15s" }
-                  : undefined
-              }
-            />
+            <circle key={i} cx={node.x} cy={node.y} r={node.r} fill={color} />
           );
-        })}
-
-        {/* Nodes */}
-        {nodes.map((node, index) => {
-          const color = COLOR_MAP[node.color ?? "off-white"];
-          const r = node.r ?? 4;
-          const visible = visibleNodes.has(node.id);
-          const delay = index * 0.08; // 80ms stagger between consecutive nodes
-
-          const style = !reducedMotion
-            ? {
-                opacity: visible ? 1 : 0,
-                transition: `opacity 0.6s ease-out ${delay}s`,
-              }
-            : { opacity: visible ? 1 : 0 };
-
-          return node.variant === "solid" ? (
+        }
+        if (node.type === "hollow-thin") {
+          return (
             <circle
-              key={node.id}
-              cx={node.cx}
-              cy={node.cy}
-              r={r}
-              fill={color}
-              style={style}
-            />
-          ) : (
-            <circle
-              key={node.id}
-              cx={node.cx}
-              cy={node.cy}
-              r={r}
+              key={i}
+              cx={node.x}
+              cy={node.y}
+              r={node.r}
               fill="none"
               stroke={color}
-              strokeWidth="0.8"
-              style={style}
+              strokeWidth="1.5"
             />
           );
-        })}
-      </svg>
-    </div>
+        }
+        return (
+          <circle
+            key={i}
+            cx={node.x}
+            cy={node.y}
+            r={node.r}
+            fill="none"
+            stroke={color}
+            strokeWidth="9"
+          />
+        );
+      })}
+    </svg>
   );
 }
