@@ -239,6 +239,8 @@ wireframe v3.9.1 ou anterior, PiraLabs_Documento_Mestre_v13.md ou anterior.
   Gerar versão WebM antes de implementar o componente de vídeo
 - lib/constants.ts é a fonte da verdade para ORIGINS, FLAGS, VAGAS_OXIGENIO e FILLOUT_URL_*
   Qualquer alteração nesses valores passa por lá — nunca hardcodar em página
+- Logo header: sempre offwhite (header é sempre escuro). Variante navy disponível em
+  /brand/logo-completo-navy.svg — usar quando/se uma página implementar header claro
 
 ---
 

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { SOCIAL } from "@/lib/constants";
 import { LegalNotice } from "./LegalNotice";
@@ -116,10 +117,16 @@ export function Footer() {
         {/* Logo */}
         <Link
           href="/"
-          className="inline-block text-off-white font-body font-semibold text-xl tracking-wide mb-10 hover:text-orange transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
+          className="inline-block mb-10 hover:opacity-80 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
           aria-label="Pira Labs — página inicial"
         >
-          Pira Labs
+          <Image
+            src="/brand/logo-completo-offwhite.svg"
+            alt="Pira Labs"
+            width={286}
+            height={32}
+            className="h-8 w-auto"
+          />
         </Link>
 
         {/* Colunas */}

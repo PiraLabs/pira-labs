@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 
 // Mapa bidirecional PT ↔ EN para as 4 páginas com versão EN
@@ -199,10 +200,17 @@ export function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-off-white font-body font-semibold text-lg tracking-wide hover:text-orange transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
+            className="hover:opacity-80 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
             aria-label="Pira Labs — página inicial"
           >
-            Pira Labs
+            <Image
+              src="/brand/logo-completo-offwhite.svg"
+              alt="Pira Labs"
+              width={286}
+              height={32}
+              className="h-7 md:h-8 w-auto"
+              priority
+            />
           </Link>
 
           {/* Nav desktop */}
