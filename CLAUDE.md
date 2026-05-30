@@ -1,5 +1,5 @@
 # CLAUDE.md
-**Versão:** 3.5 · Maio 2026
+**Versão:** 3.6 · Maio 2026
 **Branch:** rebuild-v2
 **Ler este arquivo inteiro antes de qualquer ação.**
 **Comando de inicialização:** `/init` no início de cada sessão
@@ -88,13 +88,13 @@ npm run lint          # ESLint — resolver antes de commitar
 
 ---
 
-## TIPOGRAFIA (SISTEMA CAMINHO C)
+## TIPOGRAFIA (SISTEMA KZ — decisão D10, Trilho B)
 
-Space Grotesk (`--font-grotesk`): body, headers, navegação, UI, botões, formulários, FAQs
-Cormorant Garamond (`--font-cormorant`): frases canônicas, citações dos fundadores,
-números de destaque
+AtypDisplay (`font-atypDisplay` / alias `font-display`): H1–H4, CTAs, wordmark
+AtypText (`font-atypText` / alias `font-body`): body, navegação, UI, botões, formulários, FAQs
 
-Cormorant NÃO entra em: headers de seção, navegação, body padrão, UI, botões, formulários.
+Variáveis CSS: `--font-atyp-display` e `--font-atyp-text`. Fallback: Plus Jakarta Sans.
+Cormorant e Space Grotesk foram removidos no Trilho B. Não reintroduzir.
 
 ---
 
@@ -237,10 +237,16 @@ wireframe v3.9.1 ou anterior, PiraLabs_Documento_Mestre_v13.md ou anterior.
 - Logo animado requer ajuste de Content-Security-Policy no next.config.js para autoplay muted
 - Vídeo do logo: servir public/logo-animation.webm (primário) + public/logo-animation.mp4 (fallback)
   Gerar versão WebM antes de implementar o componente de vídeo
+- lib/constants.ts é a fonte da verdade para ORIGINS, FLAGS, VAGAS_OXIGENIO e FILLOUT_URL_*
+  Qualquer alteração nesses valores passa por lá — nunca hardcodar em página
 
 ---
 
 ## ORDEM DE IMPLEMENTAÇÃO
+
+> **Estado atual (Mai 2026):** Fases 1–9 concluídas. Fase 10 (Lighthouse ≥96, QA mobile,
+> verificação das 18 origens) é a única pendente.
+> A lista abaixo é referência histórica de decisões de implementação.
 
 Fase 1: globals.css, tailwind.config.ts, layout.tsx, next.config.js (com todos os redirects
         abaixo), robots.ts, sitemap.ts
@@ -349,3 +355,4 @@ Nunca marcar tarefa como concluída sem teste real.
 *Alterações v3.4: orange #EA6335 → #EB5C2E · deep-teal #05262D → #05262E · teal #004756 → #004757*
 *peach removido · direção visual 70/30 · sistema de nós e conectores · logo animado*
 *Alterações v3.5: redirect /empresa-cresce-margem-some → /crescimento-sem-margem adicionado*
+*Alterações v3.6: tipografia atualizada para sistema KZ/AtypDisplay+AtypText (Trilho B) · fases 1–9 marcadas como concluídas · lib/constants.ts documentada como fonte da verdade*
