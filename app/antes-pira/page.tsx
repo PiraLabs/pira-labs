@@ -102,16 +102,14 @@ export default function AntesPiraPage() {
           <CTAButton
             variant="primary"
             href="https://piralabs.substack.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            external
           >
             Ler no Substack
           </CTAButton>
           <CTAButton
             variant="secondary"
             href="https://piralabs.substack.com/subscribe"
-            target="_blank"
-            rel="noopener noreferrer"
+            external
           >
             Receber por email
           </CTAButton>
