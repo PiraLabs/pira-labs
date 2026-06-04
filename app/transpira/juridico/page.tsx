@@ -32,7 +32,7 @@ const schemas = {
 export const metadata: Metadata = {
   title: {
     absolute:
-      "TRANSPIRA Jurídico · Execução operacional e legal ops com IA · PIRA LABS",
+      "TRANSPIRA Jurídico · Execução operacional e legal ops com IA · Pira Labs",
   },
   description:
     "Redesenho operacional para escritórios de advocacia e departamentos jurídicos. Dois modelos: implementação junto ao time ou capacidade de produção jurídica sob demanda.",
@@ -42,11 +42,11 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     title:
-      "TRANSPIRA Jurídico · Execução operacional e legal ops com IA · PIRA LABS",
+      "TRANSPIRA Jurídico · Execução operacional e legal ops com IA · Pira Labs",
     description:
       "Dois modelos: implementação junto ao time ou capacidade de produção jurídica sob demanda. Execução real dentro da operação.",
     url: "https://piralabs.com.br/transpira/juridico",
-    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 
@@ -60,12 +60,12 @@ const faqItems = [
   {
     question: "Vocês prestam consultoria jurídica?",
     answer:
-      "Não. O TRANSPIRA Jurídico trata de fluxos de trabalho, produtividade, governança de uso de IA e capacidade operacional jurídica. Todo material produzido no Modelo B passa pelo advogado habilitado do escritório para revisão, validação e assinatura. A PIRA LABS não representa clientes, não assina peças e não emite pareceres.",
+      "Não. O TRANSPIRA Jurídico trata de fluxos de trabalho, produtividade, governança de uso de IA e capacidade operacional jurídica. Todo material produzido no Modelo B passa pelo advogado habilitado do escritório para revisão, validação e assinatura. A Pira Labs não representa clientes, não assina peças e não emite pareceres.",
   },
   {
     question: "Como vocês garantem confidencialidade?",
     answer:
-      "Sempre via NDA. Acordo de confidencialidade assinado antes de qualquer coleta de informação ou acesso a documentos. Acordo é base canônica de todo trabalho da PIRA LABS, independente do modelo contratado. Quando há uso de ferramentas de IA, trabalhamos exclusivamente com soluções que oferecem garantias contratuais de não treinamento sobre dados do cliente. Cada protocolo de uso é validado pelo decisor jurídico do cliente antes de operar.",
+      "Sempre via NDA. Acordo de confidencialidade assinado antes de qualquer coleta de informação ou acesso a documentos. Acordo é base canônica de todo trabalho da Pira Labs, independente do modelo contratado. Quando há uso de ferramentas de IA, trabalhamos exclusivamente com soluções que oferecem garantias contratuais de não treinamento sobre dados do cliente. Cada protocolo de uso é validado pelo decisor jurídico do cliente antes de operar.",
   },
   {
     question:
@@ -129,7 +129,7 @@ export default function TranspiraJuridicoPage() {
             técnica.
           </p>
           <p className="text-off-white/85 font-body leading-relaxed">
-            O TRANSPIRA Jurídico é a frente executiva da PIRA LABS para esse
+            O TRANSPIRA Jurídico é a frente executiva da Pira Labs para esse
             contexto. Não entregamos relatório. Entramos na operação e fazemos
             o trabalho mudar.
           </p>
@@ -192,10 +192,10 @@ export default function TranspiraJuridicoPage() {
               Implementação junto ao time
             </h3>
             <p className="text-off-white/80 font-body leading-relaxed mb-6">
-              A PIRA LABS trabalha dentro do escritório, com a equipe,
+              A Pira Labs trabalha dentro do escritório, com a equipe,
               redesenhando os fluxos de trabalho jurídico e implementando IA
               onde ela amplifica. O escritório aprende fazendo. No final, a
-              operação roda sem depender da PIRA LABS.
+              operação roda sem depender da Pira Labs.
             </p>
             <div className="space-y-2 mb-6">
               <p className="text-xs font-body font-semibold uppercase tracking-widest text-off-white/40 mb-3">
@@ -242,12 +242,12 @@ export default function TranspiraJuridicoPage() {
               A atividade jurídica está cada vez mais sendo executada por
               ferramentas de IA. O serviço jurídico, o julgamento, a
               estratégia, a relação com o cliente, esse segue humano e seguirá
-              crescendo em valor exatamente por isso. A PIRA LABS entra para
+              crescendo em valor exatamente por isso. A Pira Labs entra para
               ajudar o advogado a entregar o seu melhor serviço, cuidando da
               atividade para que ele foque no que só ele pode fazer.
             </p>
             <p className="text-off-white/80 font-body leading-relaxed mb-6">
-              No Modelo B, a PIRA LABS executa o trabalho operacional de legal
+              No Modelo B, a Pira Labs executa o trabalho operacional de legal
               ops. O escritório recebe o material produzido, o advogado
               habilitado do próprio escritório revisa, valida e assina.
             </p>
@@ -273,9 +273,9 @@ export default function TranspiraJuridicoPage() {
             </div>
             <div className="mt-auto pt-4 border-t border-teal/30 space-y-2">
               <p className="text-off-white/55 font-body text-xs leading-relaxed italic">
-                Todo material produzido pela PIRA LABS no Modelo B passa pelo
+                Todo material produzido pela Pira Labs no Modelo B passa pelo
                 advogado habilitado do próprio escritório antes de qualquer
-                uso. A PIRA LABS não assina peça, não representa cliente e não
+                uso. A Pira Labs não assina peça, não representa cliente e não
                 presta consultoria jurídica.
               </p>
               <p className="text-off-white/60 font-body text-sm">

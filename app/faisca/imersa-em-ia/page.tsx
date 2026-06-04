@@ -101,7 +101,7 @@ const sessoes = [
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Imersão em IA · Sessão prática com IA · PIRA LABS",
+    absolute: "Imersão em IA · Sessão prática com IA · Pira Labs",
   },
   description:
     "Não é curso. É sessão de trabalho com os casos reais da sua empresa. Celso Gama conduz. R$7.100. Três sessões, 5,5 horas no total.",
@@ -109,7 +109,7 @@ export const metadata: Metadata = {
     canonical: "https://piralabs.com.br/faisca/imersa-em-ia",
   },
   openGraph: {
-    title: "Imersão em IA · PIRA LABS",
+    title: "Imersão em IA · Pira Labs",
     description:
       "Sessão de trabalho com IA sobre os processos reais da empresa. R$7.100. Três sessões.",
     url: "https://piralabs.com.br/faisca/imersa-em-ia",

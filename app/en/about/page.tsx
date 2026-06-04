@@ -15,7 +15,7 @@ const bcSchema = breadcrumbSchema([
 ]);
 
 export const metadata: Metadata = {
-  title: { absolute: "About · PIRA LABS · Gabriela Aguiar and Celso Gama" },
+  title: { absolute: "About · Pira Labs · Gabriela Aguiar and Celso Gama" },
   description:
     "Pira Labs is a Brazilian boutique of Creative Business Turnaround. Meet Gabriela Aguiar and Celso Gama, the founders.",
   alternates: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "About · PIRA LABS · Gabriela Aguiar and Celso Gama",
+    title: "About · Pira Labs · Gabriela Aguiar and Celso Gama",
     description:
       "Brazilian boutique of Creative Business Turnaround. Gabriela and Celso in each project, from diagnosis to delivery.",
     url: "https://piralabs.com.br/en/about",
@@ -44,7 +44,7 @@ const aboutPageSchema = {
   "@type": "AboutPage",
   "@id": "https://piralabs.com.br/en/about#webpage",
   url: "https://piralabs.com.br/en/about",
-  name: "About · PIRA LABS · Gabriela Aguiar and Celso Gama",
+  name: "About · Pira Labs · Gabriela Aguiar and Celso Gama",
   description:
     "Pira Labs is a Brazilian boutique of Creative Business Turnaround. Meet Gabriela Aguiar and Celso Gama, the founders.",
   isPartOf: { "@id": "https://piralabs.com.br/#website" },
@@ -65,7 +65,7 @@ export default function EnAboutPage() {
       <div className="bg-ink">
         <PageHeader
           breadcrumbs={breadcrumbs}
-          h1="About PIRA LABS"
+          h1="About Pira Labs"
           subtitle="Brazilian boutique of Creative Business Turnaround for service businesses that need to act before the window closes."
         />
       </div>

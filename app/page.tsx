@@ -13,19 +13,22 @@ import { websiteSchema } from "@/lib/schemas/website";
 import { faqPageSchema } from "@/lib/schemas/service";
 
 export const metadata: Metadata = {
-  title: { absolute: "Creative Business Turnaround · PIRA LABS" },
+  title: { absolute: "Creative Business Turnaround · Pira Labs" },
   description:
     "A Pira Labs é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche.",
   alternates: {
     canonical: "https://piralabs.com.br/",
-    languages: { en: "https://piralabs.com.br/en" },
+    languages: {
+      "pt-BR": "https://piralabs.com.br",
+      en: "https://piralabs.com.br/en",
+    },
   },
   openGraph: {
-    title: "PIRA LABS · Creative Business Turnaround",
+    title: "Pira Labs · Creative Business Turnaround",
     description:
       "Boutique brasileira de Creative Business Turnaround para empresas de serviços. Entramos antes que o modelo de trabalho vire crise.",
     url: "https://piralabs.com.br/",
-    images: [{ url: "https://piralabs.com.br/piralabs-og-image.png", width: 1200, height: 630, alt: "PIRA LABS · Creative Business Turnaround" }],
+    images: [{ url: "https://piralabs.com.br/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs · Creative Business Turnaround" }],
   },
 };
 
@@ -61,7 +64,7 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": "https://piralabs.com.br/#webpage",
   url: "https://piralabs.com.br/",
-  name: "Creative Business Turnaround · PIRA LABS",
+  name: "Creative Business Turnaround · Pira Labs",
   description:
     "A Pira Labs é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche.",
   isPartOf: { "@id": "https://piralabs.com.br/#website" },

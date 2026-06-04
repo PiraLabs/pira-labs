@@ -13,7 +13,7 @@ const bcSchema = breadcrumbSchema([
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Antes, Pira · Publicação editorial da PIRA LABS",
+    absolute: "Antes, Pira · Publicação editorial da Pira Labs",
   },
   description:
     "Antes, Pira é a publicação editorial da Pira Labs no Substack. Teses, estudos e o que aprendemos operando, incluindo o que não funcionou.",
@@ -39,7 +39,7 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": "https://piralabs.com.br/antes-pira#webpage",
   url: "https://piralabs.com.br/antes-pira",
-  name: "Antes, Pira · Publicação editorial da PIRA LABS",
+  name: "Antes, Pira · Publicação editorial da Pira Labs",
   description:
     "Antes, Pira é a publicação editorial da Pira Labs no Substack. Teses, estudos e o que aprendemos operando.",
   isPartOf: { "@id": "https://piralabs.com.br/#website" },

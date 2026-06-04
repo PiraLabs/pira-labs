@@ -36,7 +36,7 @@ export default function NotFound() {
         </nav>
 
         <h1 className="text-3xl md:text-5xl font-semibold text-off-white mb-6 leading-tight">
-          Essa página não existe na PIRA LABS
+          Essa página não existe na Pira Labs
         </h1>
 
         <p className="text-off-white/75 font-body leading-relaxed mb-10">
@@ -58,7 +58,7 @@ export default function NotFound() {
         </ul>
 
         <CTAButton variant="primary" href="/contato" origin={ORIGINS.NOT_FOUND}>
-          Falar com a PIRA LABS →
+          Falar com a Pira Labs →
         </CTAButton>
       </div>
     </main>

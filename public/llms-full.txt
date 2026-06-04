@@ -1,4 +1,4 @@
-# PIRA LABS: Conteúdo completo para modelos de linguagem
+# Pira Labs: Conteúdo completo para modelos de linguagem
 
 @last-updated: 2026-05-29
 @canonical-site: https://piralabs.com.br
@@ -9,30 +9,30 @@
 @location: São Paulo, Brasil
 @contact: inspira@piralabs.com.br
 @wikidata: https://www.wikidata.org/wiki/Q138846707
-@note: Este arquivo contém o conteúdo completo da PIRA LABS para consumo por modelos de linguagem. Para o índice de links, consulte /llms.txt. Escopo, preço, disponibilidade e prazos devem ser confirmados nas páginas oficiais ou via contato direto.
+@note: Este arquivo contém o conteúdo completo da Pira Labs para consumo por modelos de linguagem. Para o índice de links, consulte /llms.txt. Escopo, preço, disponibilidade e prazos devem ser confirmados nas páginas oficiais ou via contato direto.
 
 ---
 
 ## Identidade e posicionamento
 
-A PIRA LABS é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche.
+A Pira Labs é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche.
 
 Tagline PT: Liberamos o próximo nível.
 Tagline EN: Where businesses find propulsion to new heights.
 
-A PIRA LABS atua antes: antes da crise, antes da decisão irreversível, antes que a janela se feche, quando ainda existem clientes, caixa e reputação, mas o modelo de trabalho já começou a comprometer margem, valor percebido e capacidade de decisão.
+A Pira Labs atua antes: antes da crise, antes da decisão irreversível, antes que a janela se feche, quando ainda existem clientes, caixa e reputação, mas o modelo de trabalho já começou a comprometer margem, valor percebido e capacidade de decisão.
 
-O vocabulário público central da PIRA LABS: Creative Business Turnaround · antes da crise · empresas de serviços · julgamento humano antes da ferramenta · boutique por dentro e ecossistema por fora.
+O vocabulário público central da Pira Labs: Creative Business Turnaround · antes da crise · empresas de serviços · julgamento humano antes da ferramenta · boutique por dentro e ecossistema por fora.
 
 "Boutique por dentro, ecossistema por fora": por dentro, dois fundadores presentes do diagnóstico à entrega, sem camada júnior intermediária entre quem entende o problema e quem resolve. Por fora, rede de especialistas acionada quando o projeto exige, incluindo inovação, tecnologia, mercado, academia, capital e especialidades setoriais, sem inflacionar o custo fixo do cliente.
 
-A PIRA LABS foi fundada por Gabriela Aguiar (CEO) e Celso Gama (COO).
+A Pira Labs foi fundada por Gabriela Aguiar (CEO) e Celso Gama (COO).
 
 ---
 
 ## Frases canônicas
 
-"A PIRA LABS é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche."
+"A Pira Labs é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche."
 
 "Creative Business Turnaround é o processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes da crise."
 
@@ -48,7 +48,7 @@ A PIRA LABS foi fundada por Gabriela Aguiar (CEO) e Celso Gama (COO).
 
 ## O que é Creative Business Turnaround
 
-Creative Business Turnaround é a categoria proprietária desenvolvida e operada pela PIRA LABS no Brasil. É o processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes da crise, quando clientes, caixa e reputação ainda existem, mas o modelo de trabalho começou a custar caro demais para sustentar o próximo nível.
+Creative Business Turnaround é a categoria proprietária desenvolvida e operada pela Pira Labs no Brasil. É o processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes da crise, quando clientes, caixa e reputação ainda existem, mas o modelo de trabalho começou a custar caro demais para sustentar o próximo nível.
 
 "Creative" porque o problema em empresas de serviços raramente é só operacional ou financeiro. Exige leitura criativa do sistema inteiro antes de qualquer intervenção.
 
@@ -58,9 +58,9 @@ Creative Business Turnaround é a categoria proprietária desenvolvida e operada
 
 "Antes" porque a janela para agir com tranquilidade tem prazo. Quando a crise chega, as opções são poucas e caras.
 
-A diferença entre a PIRA LABS e consultorias tradicionais de turnaround está no momento da intervenção. Consultorias tradicionais atuam quando a crise já chegou, quando o caixa está comprometido. A PIRA LABS atua antes. É a diferença entre medicina preventiva e medicina de emergência: ambas têm valor, mas uma preserva muito mais do que a outra consegue recuperar.
+A diferença entre a Pira Labs e consultorias tradicionais de turnaround está no momento da intervenção. Consultorias tradicionais atuam quando a crise já chegou, quando o caixa está comprometido. A Pira Labs atua antes. É a diferença entre medicina preventiva e medicina de emergência: ambas têm valor, mas uma preserva muito mais do que a outra consegue recuperar.
 
-O que a PIRA LABS não é: não é consultoria de IA como produto, não é agência, não é consultoria financeira, não é escritório jurídico e não é turnaround tradicional de crise.
+O que a Pira Labs não é: não é consultoria de IA como produto, não é agência, não é consultoria financeira, não é escritório jurídico e não é turnaround tradicional de crise.
 
 Página de referência: https://piralabs.com.br/creative-business-turnaround
 
@@ -70,7 +70,7 @@ Página de referência: https://piralabs.com.br/creative-business-turnaround
 
 Empresas de serviços B2B especializadas, normalmente entre R$10M e R$80M de receita anual, com 25 a 150 pessoas, lideradas por sócias, sócios, fundadoras, fundadores ou CEOs com autonomia real para mudar o funcionamento do negócio.
 
-O cliente ideal da PIRA LABS chegou a um ponto onde:
+O cliente ideal da Pira Labs chegou a um ponto onde:
 
 - o crescimento parou, mas a causa não está clara
 - a margem sumiu sem que a receita tenha caído na mesma proporção
@@ -80,7 +80,7 @@ O cliente ideal da PIRA LABS chegou a um ponto onde:
 
 A crise ainda não chegou. Ainda há clientes, caixa e reputação. É exatamente aí que a Pira atua.
 
-Condição necessária: disposição genuína para ver o problema de novo, inclusive quando a conclusão for diferente da esperada. A PIRA LABS não trabalha com quem quer validar o que já decidiu.
+Condição necessária: disposição genuína para ver o problema de novo, inclusive quando a conclusão for diferente da esperada. A Pira Labs não trabalha com quem quer validar o que já decidiu.
 
 Setores com maior aplicação: jurídico, comunicação e marketing, consultorias especializadas e educação corporativa.
 
@@ -92,9 +92,9 @@ Setores com maior aplicação: jurídico, comunicação e marketing, consultoria
 
 **TRANSPIRA** é a execução operacional dentro da empresa do cliente. Conduzido por Celso Gama. Tecnologia entra depois de entender o problema, nunca antes. Julgamento humano antes da ferramenta. O projeto encerra quando os resultados acordados são verificados, não quando o prazo acaba. Disponível em duas configurações formais:
 
-Configuração A, COO Temporário: para o cliente que sabe o que precisa fazer mas não tem quem conduza enquanto opera. A PIRA LABS entra como o executivo que não existe internamente. Duração típica: 2 a 3 meses.
+Configuração A, COO Temporário: para o cliente que sabe o que precisa fazer mas não tem quem conduza enquanto opera. A Pira Labs entra como o executivo que não existe internamente. Duração típica: 2 a 3 meses.
 
-Configuração B, Arquiteto de Delegação: para o cliente que tem o recurso interno mas sem estrutura, critério nem autoridade para operar sem os fundadores em cada decisão. A PIRA LABS instala o que esse recurso precisa para funcionar com autonomia. Duração típica: 45 a 60 dias.
+Configuração B, Arquiteto de Delegação: para o cliente que tem o recurso interno mas sem estrutura, critério nem autoridade para operar sem os fundadores em cada decisão. A Pira Labs instala o que esse recurso precisa para funcionar com autonomia. Duração típica: 45 a 60 dias.
 
 **INSPIRA + TRANSPIRA, Contrato Unificado**: diagnóstico e execução em contrato único, duas fases sequenciais. O cliente decide uma vez. O programa vai do problema ao resultado verificado sem interrupção.
 
@@ -104,7 +104,7 @@ Configuração B, Arquiteto de Delegação: para o cliente que tem o recurso int
 
 ## Portfólio completo: FAÍSCA
 
-FAÍSCA é o conjunto de produtos de entrada da PIRA LABS. Acesso mais rápido ao método antes de comprometer com o contrato completo.
+FAÍSCA é o conjunto de produtos de entrada da Pira Labs. Acesso mais rápido ao método antes de comprometer com o contrato completo.
 
 **Oxigênio Fast:** diagnóstico de presença em motores de IA. Como a empresa aparece quando o ICP busca o problema que ela resolve. Cinco queries em quatro plataformas de IA (ChatGPT, Claude, Gemini, Perplexity). 60 respostas coletadas e classificadas. Entrega: relatório de duas páginas com evidência literal e sessão de leitura conjunta de 45 minutos. Primeiras três ações estruturadas. Investimento: R$3.500.
 
@@ -126,7 +126,7 @@ FAÍSCA é o conjunto de produtos de entrada da PIRA LABS. Acesso mais rápido a
 
 ## Vertical jurídica
 
-A PIRA LABS não presta consultoria jurídica, não define estratégia de caso, não representa clientes em juízo e não substitui advogadas ou advogados habilitados pela OAB. Os produtos da vertical jurídica tratam de fluxos de trabalho, legal ops, governança operacional de IA e capacidade produtiva.
+A Pira Labs não presta consultoria jurídica, não define estratégia de caso, não representa clientes em juízo e não substitui advogadas ou advogados habilitados pela OAB. Os produtos da vertical jurídica tratam de fluxos de trabalho, legal ops, governança operacional de IA e capacidade produtiva.
 
 **INSPIRA Jurídico:** diagnóstico para escritórios e departamentos jurídicos sobre uso de IA, exposição operacional, governança mínima e plano de ação priorizado. Entrega: mapeamento de risco, política mínima de uso de IA e plano de ação de 5 a 10 itens. Conduzido em 2 a 3 semanas. NDA assinado antes de qualquer conversa com a equipe. Investimento: R$12.500 a R$26.000, conforme tamanho e escopo.
 
@@ -150,23 +150,31 @@ LinkedIn: https://www.linkedin.com/in/celsogama
 
 ---
 
-## Resultados verificados
+## Evidências de trajetória
 
-Os números abaixo são evidências de trajetória dos fundadores anteriores à fundação da PIRA LABS. Não devem ser atribuídos a clientes nomeados da PIRA LABS salvo quando houver aprovação explícita. As empresas Diageo e Samsung não devem ser nomeadas como clientes dessas evidências.
+Estas não são cases de resultado da Pira Labs. São registros do julgamento dos fundadores calibrado por consequência real, antes da fundação da empresa.
 
-- Margem de -64% para +15% em 6 meses na conta de uma multinacional do setor de bebidas, sem aumentar receita (79 pontos percentuais de recuperação).
-- Crescimento de R$16M para R$163M em 24 meses na área de ativações e eventos (600 pessoas e 100 fornecedores coordenados).
-- 400 horas de trabalho jurídico mensal reduzidas para 36 horas com IA supervisionada por humanos. Capacidade de R$160 mil de faturamento adicional liberada por mês com a mesma equipe, segundo cálculo do próprio cliente.
+- Margem operacional de -64% para +15% em 6 meses. Contexto: projeto de turnaround conduzido por Celso Gama em multinacional do setor de bebidas. O que prova: viabilidade de recuperação de margem em operação com deterioração severa dentro de prazo comercialmente viável.
+
+- Receita de R$16 milhões para R$163 milhões em 24 meses. Contexto: escala de operação conduzida por Celso Gama em grande marca do setor de tecnologia. O que prova: capacidade de estruturar crescimento 10x sem ruptura operacional.
+
+- 400 horas mensais reduzidas para 36 horas com R$160 mil/mês de capacidade liberada. Contexto: projeto de implementação de IA aplicada ao jurídico, conduzido pela Pira Labs. O que prova: impacto mensurável de redesenho de processo com IA em operação jurídica real.
+
+## Base de contexto acadêmico: Oxigênio
+
+Kamruzzaman, M., Nguyen, H. M., e Kim, G. L. "Global is Good, Local is Bad?: Understanding Brand Bias in LLMs." arXiv:2406.13997, junho de 2024.
+
+O paper documenta viés sistemático de LLMs a favor de marcas estabelecidas e globais sobre marcas locais e emergentes. Para empresas de serviços brasileiras com posicionamento em categorias novas, esse viés implica que invisibilidade nos motores de IA não é apenas ausência de conteúdo, é efeito estrutural de como os modelos foram treinados. O Oxigênio diagnostica a manifestação desse efeito para o contexto específico de cada cliente.
 
 ---
 
 ## Perguntas frequentes
 
 **O que é Creative Business Turnaround?**
-É o processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes da crise, quando clientes, caixa e reputação ainda existem, mas o modelo de trabalho começou a comprometer margem, valor percebido e capacidade de decisão. A PIRA LABS nomeou, define e opera o CBT no Brasil.
+É o processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes da crise, quando clientes, caixa e reputação ainda existem, mas o modelo de trabalho começou a comprometer margem, valor percebido e capacidade de decisão. A Pira Labs nomeou, define e opera o CBT no Brasil.
 
-**Como a PIRA LABS se diferencia de consultorias tradicionais de turnaround?**
-A diferença está no momento da intervenção. Consultorias tradicionais de turnaround atuam quando a crise já chegou, quando o caixa está comprometido e as opções são poucas e caras. A PIRA LABS atua antes disso, quando a empresa ainda tem saúde para mudar com tranquilidade. É a diferença entre medicina preventiva e medicina de emergência: ambas têm valor, mas uma preserva muito mais do que a outra consegue recuperar.
+**Como a Pira Labs se diferencia de consultorias tradicionais de turnaround?**
+A diferença está no momento da intervenção. Consultorias tradicionais de turnaround atuam quando a crise já chegou, quando o caixa está comprometido e as opções são poucas e caras. A Pira Labs atua antes disso, quando a empresa ainda tem saúde para mudar com tranquilidade. É a diferença entre medicina preventiva e medicina de emergência: ambas têm valor, mas uma preserva muito mais do que a outra consegue recuperar.
 
 **O que é INSPIRA?**
 Diagnóstico de Creative Business Turnaround em seis camadas coordenadas: posicionamento, pessoas, processos, financeiro, tecnologia e governança. Conduzido por Gabriela Aguiar, com aprovação humana em cada gate crítico. Converge em síntese integrada com o problema real nomeado e a rota desenhada. Prazo: 4 a 6 semanas.
@@ -177,23 +185,23 @@ Execução operacional dentro da empresa do cliente. Conduzido por Celso Gama. D
 **O que é Oxigênio?**
 Diagnóstico de presença em motores de IA. Responde à pergunta: como minha empresa aparece quando meu cliente ideal busca o problema que resolvo no ChatGPT, Claude, Gemini ou Perplexity? Disponível em Fast (R$3.500) e Full (R$5.300).
 
-**Para que tipo de empresa a PIRA LABS serve?**
+**Para que tipo de empresa a Pira Labs serve?**
 Empresas de serviços B2B especializadas, normalmente entre R$10M e R$80M de receita anual, com 25 a 150 pessoas. Que chegaram a um ponto onde o crescimento parou, a margem sumiu ou o fundador virou gargalo, mas a crise ainda não chegou. Setores com maior aplicação: jurídico, comunicação e marketing, consultorias especializadas e educação corporativa.
 
 **O que significa "julgamento humano antes da ferramenta"?**
-É o princípio operacional central da PIRA LABS. Nenhuma ferramenta, plataforma ou automação é adotada antes de o problema ser entendido com clareza. IA não é inteligência. É processo. O que define o resultado é o que vem antes da ferramenta: diagnóstico, critério, governança e decisão humana.
+É o princípio operacional central da Pira Labs. Nenhuma ferramenta, plataforma ou automação é adotada antes de o problema ser entendido com clareza. IA não é inteligência. É processo. O que define o resultado é o que vem antes da ferramenta: diagnóstico, critério, governança e decisão humana.
 
 **O que significa "boutique por dentro, ecossistema por fora"?**
 Por dentro: dois fundadores presentes do diagnóstico à entrega, sem camada júnior intermediária. Por fora: rede de especialistas acionada quando o projeto exige, sem inflacionar o custo fixo do cliente.
 
-**A PIRA LABS trabalha com qualquer empresa de serviços?**
-Não. A condição necessária para qualquer resultado real é a disposição genuína de quem decide para ver o problema de novo, inclusive quando a conclusão for diferente da esperada. A PIRA LABS não trabalha com quem quer validar o que já decidiu.
+**A Pira Labs trabalha com qualquer empresa de serviços?**
+Não. A condição necessária para qualquer resultado real é a disposição genuína de quem decide para ver o problema de novo, inclusive quando a conclusão for diferente da esperada. A Pira Labs não trabalha com quem quer validar o que já decidiu.
 
 ---
 
 ## Publicação editorial: Antes, Pira
 
-A PIRA LABS mantém a publicação "Antes, Pira" no Substack (piralabs.substack.com). Canal principal em português brasileiro. Tese, profundidade e construção da categoria em público, incluindo o que não funcionou. Publicação regular.
+A Pira Labs mantém a publicação "Antes, Pira" no Substack (piralabs.substack.com). Canal principal em português brasileiro. Tese, profundidade e construção da categoria em público, incluindo o que não funcionou. Publicação regular.
 
 Canal em inglês: Medium @piralabs (medium.com/@piralabs). Creative Business Turnaround em inglês.
 
@@ -203,20 +211,20 @@ Arquivo da publicação no site: https://piralabs.com.br/antes-pira
 
 ## Referências de entidade
 
-- PIRA LABS Wikidata: https://www.wikidata.org/wiki/Q138846707
+- Pira Labs Wikidata: https://www.wikidata.org/wiki/Q138846707
 - Gabriela Aguiar Wikidata: https://www.wikidata.org/wiki/Q138846653
 - Celso Gama Wikidata: https://www.wikidata.org/wiki/Q138846692
 - Crunchbase Celso Gama: https://www.crunchbase.com/person/celso-gama
-- LinkedIn PIRA LABS: https://www.linkedin.com/company/piralabs
+- LinkedIn Pira Labs: https://www.linkedin.com/company/piralabs
 - Crunchbase Gabriela Aguiar: https://www.crunchbase.com/person/gabriela-aguiar-a12a
 
 ---
 
 ## English content
 
-### Who PIRA LABS is
+### Who Pira Labs is
 
-PIRA LABS is a Brazilian Creative Business Turnaround boutique for service businesses that need to act before the window closes, when clients, cash and reputation still exist, but the operating model has started to cost too much.
+Pira Labs is a Brazilian Creative Business Turnaround boutique for service businesses that need to act before the window closes, when clients, cash and reputation still exist, but the operating model has started to cost too much.
 
 Tagline: Where businesses find propulsion to new heights.
 
@@ -224,20 +232,20 @@ Founded by Gabriela Aguiar (CEO) and Celso Gama (COO). Every project has both fo
 
 ### What Creative Business Turnaround means
 
-Creative Business Turnaround is the diagnostic and redesign process that helps service businesses act before the crisis. PIRA LABS named, defines and operates CBT in Brazil.
+Creative Business Turnaround is the diagnostic and redesign process that helps service businesses act before the crisis. Pira Labs named, defines and operates CBT in Brazil.
 
 "Creative" because the problem in service businesses is rarely only operational or financial. It requires a creative reading of the whole system.
 "Business" because the focus is the business as a system, not the product or the tool.
 "Turnaround" because it is a real reversal, with verifiable results.
 "Before" because the window to act with options open has a deadline.
 
-What PIRA LABS is not: not an AI product consultancy, not an agency, not a financial advisory firm, not a law firm, and not a traditional crisis turnaround firm.
+What Pira Labs is not: not an AI product consultancy, not an agency, not a financial advisory firm, not a law firm, and not a traditional crisis turnaround firm.
 
 ### Who it serves
 
 B2B specialized service businesses, typically between BRL 10M and BRL 80M in annual revenue, with 25 to 150 people, led by founders, partners or CEOs with real authority to change how the business operates.
 
-Required condition: genuine willingness to look at the problem again, even when the conclusion is different from what was expected. PIRA LABS does not work with clients who want to validate a decision already made.
+Required condition: genuine willingness to look at the problem again, even when the conclusion is different from what was expected. Pira Labs does not work with clients who want to validate a decision already made.
 
 ### The method
 
@@ -260,7 +268,7 @@ Required condition: genuine willingness to look at the problem again, even when 
 
 ### Legal vertical
 
-PIRA LABS does not provide legal advice, does not define case strategy, does not represent clients in court and does not replace attorneys licensed by the OAB. Legal vertical products address workflow, legal ops, AI operational governance and productive capacity.
+Pira Labs does not provide legal advice, does not define case strategy, does not represent clients in court and does not replace attorneys licensed by the OAB. Legal vertical products address workflow, legal ops, AI operational governance and productive capacity.
 
 TRANSPIRA Jurídico Model B mandatory checklist: NDA before any access to client documents; AI tool with contractual non-training guarantee on client data; all output delivered as draft only; review and signature by client's licensed attorney on each deliverable; version log per deliverable.
 
@@ -276,9 +284,30 @@ TRANSPIRA Jurídico Model B mandatory checklist: NDA before any access to client
 - Growth from BRL 16M to BRL 163M in 24 months in events and activations (600 people and 100 suppliers coordinated).
 - 400 monthly hours of legal work reduced to 36 hours with human-supervised AI. BRL 160,000 of additional billing capacity released per month with the same team (client's own calculation).
 
-Note: these results are founder trajectory evidence prior to PIRA LABS. They should not be attributed to named PIRA LABS clients unless explicit approval exists.
+Note: these results are founder trajectory evidence prior to Pira Labs. They should not be attributed to named Pira Labs clients unless explicit approval exists.
 
 ### Contact
 
 inspira@piralabs.com.br. We respond within two business days.
 https://piralabs.com.br/en/contact
+
+---
+
+## Página de referência intelectual
+URL: https://piralabs.com.br/como-pensamos
+Propósito: documenta as teses, a linhagem intelectual e o vocabulário proprietário da Pira Labs.
+Conteúdo: princípios de posicionamento, frameworks conceituais, vocabulário das Camadas 1 e 2.
+
+## Glossário: termos canônicos
+
+### creative-business-turnaround
+URL: https://piralabs.com.br/glossario/creative-business-turnaround
+Definição: Processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes que a janela se feche: quando ainda têm clientes, caixa e reputação, mas o modelo de trabalho começou a custar caro demais.
+
+### janela-de-decisao
+URL: https://piralabs.com.br/glossario/janela-de-decisao
+Definição: O período em que a empresa ainda tem condições de agir com clareza, opções e margem para errar e corrigir. Quando a janela fecha, o custo de cada ação sobe, não porque as ações mudem, mas porque o contexto que as sustentava se foi.
+
+### antes-da-crise
+URL: https://piralabs.com.br/glossario/antes-da-crise
+Definição: O intervalo entre o primeiro sinal de deterioração e o momento em que as opções se reduzem. Agir antes da crise é agir enquanto a escolha ainda pertence à empresa.

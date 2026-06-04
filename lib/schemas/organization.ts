@@ -4,17 +4,18 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": ["Organization", "LocalBusiness"],
   "@id": "https://piralabs.com.br/#organization",
-  name: "PIRA LABS",
+  name: "Pira Labs",
   url: "https://piralabs.com.br",
   email: "inspira@piralabs.com.br",
   description:
-    "A PIRA LABS é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes da crise.",
+    "A Pira Labs é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes da crise.",
   sameAs: [
     "https://www.linkedin.com/company/piralabs",
     "https://www.wikidata.org/wiki/Q138846707",
     "https://piralabs.substack.com",
     "https://github.com/PiraLabs/pira-labs",
     "https://www.crunchbase.com/organization/pira-labs",
+    "https://medium.com/@piralabs",
   ],
   address: {
     "@type": "PostalAddress",

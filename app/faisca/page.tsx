@@ -17,7 +17,7 @@ const bcSchema = breadcrumbSchema([
 
 export const metadata: Metadata = {
   title: {
-    absolute: "FAÍSCA · Porta de entrada da PIRA LABS",
+    absolute: "FAÍSCA · Porta de entrada da Pira Labs",
   },
   description:
     "Engajamentos de tempo curto que ensinam, despertam ou provocam antes de qualquer compromisso maior. Três grupos, sete produtos com preço fixo e escopo fechado.",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     canonical: "https://piralabs.com.br/faisca",
   },
   openGraph: {
-    title: "FAÍSCA · Porta de entrada da PIRA LABS",
+    title: "FAÍSCA · Porta de entrada da Pira Labs",
     description:
       "Três grupos, sete produtos. Preço fixo. Escopo fechado. Zero atrito de entrada.",
     url: "https://piralabs.com.br/faisca",
@@ -42,7 +42,7 @@ const itemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "@id": "https://piralabs.com.br/faisca#itemlist",
-  name: "FAÍSCA · Produtos de entrada da PIRA LABS",
+  name: "FAÍSCA · Produtos de entrada da Pira Labs",
   description:
     "Engajamentos de tempo curto. Três grupos, sete produtos com preço fixo e escopo fechado.",
   url: "https://piralabs.com.br/faisca",

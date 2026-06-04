@@ -13,7 +13,7 @@ const breadcrumb = breadcrumbSchema([
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Contato · PIRA LABS",
+    absolute: "Contato · Pira Labs",
   },
   description:
     "Falar com a Pira Labs sobre INSPIRA, TRANSPIRA, Oxigênio IA Search ou FAÍSCA. Respondemos em até dois dias úteis.",
@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     languages: { en: "https://piralabs.com.br/en/contact" },
   },
   openGraph: {
-    title: "Contato · PIRA LABS",
-    description: "Falar com a PIRA LABS. Respondemos em até dois dias úteis.",
+    title: "Contato · Pira Labs",
+    description: "Falar com a Pira Labs. Respondemos em até dois dias úteis.",
     url: "https://piralabs.com.br/contato",
-    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 
@@ -39,7 +39,7 @@ const contactPageSchema = {
   "@type": "ContactPage",
   "@id": "https://piralabs.com.br/contato#webpage",
   url: "https://piralabs.com.br/contato",
-  name: "Contato · PIRA LABS",
+  name: "Contato · Pira Labs",
   description:
     "Falar com a Pira Labs sobre INSPIRA, TRANSPIRA, Oxigênio IA Search ou FAÍSCA. Respondemos em até dois dias úteis.",
   isPartOf: { "@id": "https://piralabs.com.br/#website" },
@@ -56,7 +56,7 @@ export default function ContatoPage() {
       <div className="bg-ink">
         <PageHeader
           breadcrumbs={breadcrumbs}
-          h1="Falar com a PIRA LABS"
+          h1="Falar com a Pira Labs"
           subtitle="Conte o contexto. Respondemos em até dois dias úteis."
         />
       </div>
@@ -93,7 +93,7 @@ export default function ContatoPage() {
             <a
               href={`mailto:${SOCIAL.EMAIL}`}
               className="text-off-white/85 font-body hover:text-orange transition-colors"
-              aria-label="Enviar email para a PIRA LABS"
+              aria-label="Enviar email para a Pira Labs"
             >
               {SOCIAL.EMAIL}
             </a>
@@ -119,9 +119,9 @@ export default function ContatoPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-body text-off-white/70 hover:text-orange transition-colors"
-                  aria-label="LinkedIn da PIRA LABS (abre em nova aba)"
+                  aria-label="LinkedIn da Pira Labs (abre em nova aba)"
                 >
-                  PIRA LABS
+                  Pira Labs
                   <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               </li>

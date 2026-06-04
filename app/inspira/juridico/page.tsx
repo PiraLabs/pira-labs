@@ -33,7 +33,7 @@ const schemas = {
 export const metadata: Metadata = {
   title: {
     absolute:
-      "INSPIRA Jurídico · Diagnóstico de uso de IA para escritórios · PIRA LABS",
+      "INSPIRA Jurídico · Diagnóstico de uso de IA para escritórios · Pira Labs",
   },
   description:
     "Diagnóstico de 2 a 3 semanas. Mapeamos como o escritório usa IA hoje, onde está a exposição, e entregamos política mínima e plano de ação priorizado.",
@@ -43,11 +43,11 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     title:
-      "INSPIRA Jurídico · Diagnóstico de risco de IA para escritórios · PIRA LABS",
+      "INSPIRA Jurídico · Diagnóstico de risco de IA para escritórios · Pira Labs",
     description:
       "Mapeamos como o escritório usa IA hoje, onde está a exposição, e entregamos política mínima e plano de ação priorizado.",
     url: "https://piralabs.com.br/inspira/juridico",
-    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 
@@ -176,7 +176,7 @@ export default function InspiraJuridicoPage() {
         </h2>
         <div className="max-w-3xl space-y-4">
           <p className="text-off-white/85 font-body leading-relaxed">
-            Diagnóstico conduzido pela PIRA LABS em 2 a 3 semanas. Mapeamos
+            Diagnóstico conduzido pela Pira Labs em 2 a 3 semanas. Mapeamos
             como o escritório ou departamento jurídico usa IA hoje, onde está a
             exposição real, e entregamos política mínima de uso de IA e plano
             de ação priorizado.
@@ -262,7 +262,7 @@ export default function InspiraJuridicoPage() {
             e exposição operacional.
           </p>
           <p className="text-off-white/85 font-body leading-relaxed">
-            Os dois juntos, como em todo diagnóstico da PIRA LABS. Sem equipe
+            Os dois juntos, como em todo diagnóstico da Pira Labs. Sem equipe
             júnior entre o dado e a interpretação.
           </p>
         </div>

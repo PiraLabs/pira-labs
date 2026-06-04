@@ -30,7 +30,7 @@ const schemas = {
 
 export const metadata: Metadata = {
   title: {
-    absolute: "TRANSPIRA · Execução de Creative Business Turnaround · PIRA LABS",
+    absolute: "TRANSPIRA · Execução de Creative Business Turnaround · Pira Labs",
   },
   description:
     "O TRANSPIRA é a execução da Pira Labs dentro da operação do cliente. Duas configurações: COO Temporário e Arquiteto de Delegação.",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     canonical: "https://piralabs.com.br/transpira",
   },
   openGraph: {
-    title: "TRANSPIRA · Execução de Creative Business Turnaround · PIRA LABS",
+    title: "TRANSPIRA · Execução de Creative Business Turnaround · Pira Labs",
     description:
       "Redesenho de trabalho, valor, tecnologia e governança. Duas configurações: COO Temporário e Arquiteto de Delegação.",
     url: "https://piralabs.com.br/transpira",

@@ -1,5 +1,5 @@
 // lib/substack-rss.ts
-// Busca e parseia o RSS do Substack da PIRA LABS.
+// Busca e parseia o RSS do Substack da Pira Labs.
 // Usado pela página /antes-da-crise como Server Component.
 
 export interface SubstackPost {

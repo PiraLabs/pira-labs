@@ -12,17 +12,17 @@ const breadcrumb = breadcrumbSchema([
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Política de Cookies · PIRA LABS",
+    absolute: "Política de Cookies · Pira Labs",
   },
-  description: "Como a PIRA LABS usa cookies e como você pode gerenciá-los.",
+  description: "Como a Pira Labs usa cookies e como você pode gerenciá-los.",
   alternates: {
     canonical: "https://piralabs.com.br/cookies",
   },
   openGraph: {
-    title: "Política de Cookies · PIRA LABS",
-    description: "Como a PIRA LABS usa cookies e como você pode gerenciá-los.",
+    title: "Política de Cookies · Pira Labs",
+    description: "Como a Pira Labs usa cookies e como você pode gerenciá-los.",
     url: "https://piralabs.com.br/cookies",
-    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 
@@ -31,8 +31,8 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": "https://piralabs.com.br/cookies#webpage",
   url: "https://piralabs.com.br/cookies",
-  name: "Política de Cookies · PIRA LABS",
-  description: "Como a PIRA LABS usa cookies e como você pode gerenciá-los.",
+  name: "Política de Cookies · Pira Labs",
+  description: "Como a Pira Labs usa cookies e como você pode gerenciá-los.",
   isPartOf: { "@id": "https://piralabs.com.br/#website" },
   inLanguage: "pt-BR",
 };

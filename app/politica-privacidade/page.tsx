@@ -13,18 +13,18 @@ const breadcrumb = breadcrumbSchema([
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Política de Privacidade · PIRA LABS",
+    absolute: "Política de Privacidade · Pira Labs",
   },
   description:
-    "Como a PIRA LABS coleta, usa e protege seus dados pessoais, em conformidade com a LGPD.",
+    "Como a Pira Labs coleta, usa e protege seus dados pessoais, em conformidade com a LGPD.",
   alternates: {
     canonical: "https://piralabs.com.br/politica-privacidade",
   },
   openGraph: {
-    title: "Política de Privacidade · PIRA LABS",
-    description: "Como a PIRA LABS coleta, usa e protege seus dados pessoais, em conformidade com a LGPD.",
+    title: "Política de Privacidade · Pira Labs",
+    description: "Como a Pira Labs coleta, usa e protege seus dados pessoais, em conformidade com a LGPD.",
     url: "https://piralabs.com.br/politica-privacidade",
-    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 
@@ -33,8 +33,8 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": "https://piralabs.com.br/politica-privacidade#webpage",
   url: "https://piralabs.com.br/politica-privacidade",
-  name: "Política de Privacidade · PIRA LABS",
-  description: "Como a PIRA LABS coleta, usa e protege seus dados pessoais, em conformidade com a LGPD.",
+  name: "Política de Privacidade · Pira Labs",
+  description: "Como a Pira Labs coleta, usa e protege seus dados pessoais, em conformidade com a LGPD.",
   isPartOf: { "@id": "https://piralabs.com.br/#website" },
   inLanguage: "pt-BR",
 };
@@ -69,13 +69,13 @@ export default function PoliticaPrivacidadePage() {
           <div>
             <h2 className="text-xl font-semibold text-off-white mb-3">1. Quem somos</h2>
             <p className="mb-4">
-              A PIRA LABS é uma consultoria brasileira especializada em Creative Business Turnaround
+              A Pira Labs é uma consultoria brasileira especializada em Creative Business Turnaround
               para empresas de serviços. Operamos em conformidade com a Lei Geral de Proteção de
               Dados Pessoais (Lei nº 13.709/2018, LGPD).
             </p>
             <div className="bg-deep-teal/50 rounded-lg p-4 text-sm text-off-white/70 space-y-1">
               <p className="font-semibold text-off-white/90">Controladora dos dados:</p>
-              <p>PIRA LABS CONSULTORIA LTDA.</p>
+              <p>Pira Labs Consultoria Ltda.</p>
               <p>CNPJ: 46.954.891/0001-16</p>
               <p>Rua Curuzu, 117, Alto da Lapa, São Paulo/SP, CEP 05084-020</p>
               <p>Representada por: Gabriela Aguiar Vieira dos Santos</p>
@@ -404,7 +404,7 @@ export default function PoliticaPrivacidadePage() {
           {/* Rodapé legal */}
           <div className="pt-4 border-t border-teal/20">
             <p className="text-xs text-off-white/40">
-              PIRA LABS CONSULTORIA LTDA. · CNPJ 46.954.891/0001-16 · piralabs.com.br · São Paulo, Brasil
+              Pira Labs Consultoria Ltda. · CNPJ 46.954.891/0001-16 · piralabs.com.br · São Paulo, Brasil
             </p>
           </div>
 

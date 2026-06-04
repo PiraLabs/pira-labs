@@ -13,7 +13,7 @@ import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Oxigênio IA Search · Diagnóstico de presença em IA · PIRA LABS",
+    absolute: "Oxigênio IA Search · Diagnóstico de presença em IA · Pira Labs",
   },
   description:
     "Diagnóstico de como sua empresa aparece nos motores de IA. Fast R$3.500, Full R$5.300. Relatório em até 5 dias úteis.",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     canonical: "https://piralabs.com.br/inspira/oxigenio",
   },
   openGraph: {
-    title: "Oxigênio IA Search · PIRA LABS",
+    title: "Oxigênio IA Search · Pira Labs",
     description:
       "Fast R$3.500 · Full R$5.300. Diagnóstico de presença em motores de IA. Relatório em até 5 dias úteis.",
     url: "https://piralabs.com.br/inspira/oxigenio",

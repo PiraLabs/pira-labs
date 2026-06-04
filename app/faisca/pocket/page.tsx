@@ -96,7 +96,7 @@ const formularios = [
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Pocket do INSPIRA · Leitura diagnóstica inicial · PIRA LABS",
+    absolute: "Pocket do INSPIRA · Leitura diagnóstica inicial · Pira Labs",
   },
   description:
     "Leitura diagnóstica compacta em 1,5h. Gabriela Aguiar conduz. Celso Gama opera os agentes. R$3.900. Mercado, financeiro e presença em IA em síntese integrada.",

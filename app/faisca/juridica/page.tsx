@@ -23,7 +23,7 @@ const breadcrumb = {
 export const metadata: Metadata = {
   title: {
     absolute:
-      "FAÍSCA Jurídica · Palestra e workshop de IA para o jurídico · PIRA LABS",
+      "FAÍSCA Jurídica · Palestra e workshop de IA para o jurídico · Pira Labs",
   },
   description:
     "Palestra e workshop executivo para escritórios, áreas jurídicas e instituições de ensino. Como usar IA com método, critério e governança na rotina jurídica.",
@@ -33,11 +33,11 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     title:
-      "FAÍSCA Jurídica · Palestra e workshop de IA para o jurídico · PIRA LABS",
+      "FAÍSCA Jurídica · Palestra e workshop de IA para o jurídico · Pira Labs",
     description:
       "Como usar IA com método, critério e governança na rotina jurídica. Para escritórios, áreas jurídicas e instituições de ensino.",
     url: "https://piralabs.com.br/faisca/juridica",
-    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 
@@ -66,7 +66,7 @@ const faqItems = [
   {
     question: "Vocês assinam NDA quando é workshop fechado para um escritório?",
     answer:
-      "Sempre. Quando há trabalho de calibragem prévia ou conteúdo customizado para o cliente, o NDA é assinado antes da conversa. NDA é base canônica de todo trabalho da PIRA LABS, independente do produto.",
+      "Sempre. Quando há trabalho de calibragem prévia ou conteúdo customizado para o cliente, o NDA é assinado antes da conversa. NDA é base canônica de todo trabalho da Pira Labs, independente do produto.",
   },
   {
     question: "Como é a precificação?",

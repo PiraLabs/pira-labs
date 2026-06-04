@@ -12,7 +12,7 @@ const bcSchema = breadcrumbSchema([
 ]);
 
 export const metadata: Metadata = {
-  title: { absolute: "Contact · PIRA LABS" },
+  title: { absolute: "Contact · Pira Labs" },
   description:
     "Talk to Pira Labs about INSPIRA, TRANSPIRA, Oxigênio IA Search or FAÍSCA. We respond within two business days.",
   alternates: {
@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Contact · PIRA LABS",
-    description: "Talk to PIRA LABS. We respond within two business days.",
+    title: "Contact · Pira Labs",
+    description: "Talk to Pira Labs. We respond within two business days.",
     url: "https://piralabs.com.br/en/contact",
     locale: "en_US",
-    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "PIRA LABS" }],
+    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 
@@ -40,7 +40,7 @@ const contactPageSchema = {
   "@type": "ContactPage",
   "@id": "https://piralabs.com.br/en/contact#webpage",
   url: "https://piralabs.com.br/en/contact",
-  name: "Contact · PIRA LABS",
+  name: "Contact · Pira Labs",
   description:
     "Talk to Pira Labs about INSPIRA, TRANSPIRA, Oxigênio IA Search or FAÍSCA. We respond within two business days.",
   isPartOf: { "@id": "https://piralabs.com.br/#website" },
@@ -57,7 +57,7 @@ export default function EnContactPage() {
       <div className="bg-ink">
         <PageHeader
           breadcrumbs={breadcrumbs}
-          h1="Talk to PIRA LABS"
+          h1="Talk to Pira Labs"
           subtitle="Share the context. We respond within two business days."
         />
       </div>
@@ -93,7 +93,7 @@ export default function EnContactPage() {
             <a
               href={`mailto:${SOCIAL.EMAIL}`}
               className="text-off-white/85 font-body hover:text-orange transition-colors"
-              aria-label="Send email to PIRA LABS"
+              aria-label="Send email to Pira Labs"
             >
               {SOCIAL.EMAIL}
             </a>
@@ -117,9 +117,9 @@ export default function EnContactPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-body text-off-white/70 hover:text-orange transition-colors"
-                  aria-label="PIRA LABS on LinkedIn (opens in new tab)"
+                  aria-label="Pira Labs on LinkedIn (opens in new tab)"
                 >
-                  PIRA LABS
+                  Pira Labs
                   <span className="sr-only"> (opens in new tab)</span>
                 </a>
               </li>

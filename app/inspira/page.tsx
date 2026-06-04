@@ -28,7 +28,7 @@ const schemas = {
 
 export const metadata: Metadata = {
   title: {
-    absolute: "INSPIRA · Diagnóstico de Creative Business Turnaround · PIRA LABS",
+    absolute: "INSPIRA · Diagnóstico de Creative Business Turnaround · Pira Labs",
   },
   description:
     "O INSPIRA é o diagnóstico da Pira Labs. Seis dimensões do negócio em sequência, convergindo em síntese integrada. Gabriela Aguiar conduz.",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     canonical: "https://piralabs.com.br/inspira",
   },
   openGraph: {
-    title: "INSPIRA · Diagnóstico de Creative Business Turnaround · PIRA LABS",
+    title: "INSPIRA · Diagnóstico de Creative Business Turnaround · Pira Labs",
     description:
       "Seis dimensões do negócio em sequência, convergindo em síntese integrada. Gabriela Aguiar conduz.",
     url: "https://piralabs.com.br/inspira",

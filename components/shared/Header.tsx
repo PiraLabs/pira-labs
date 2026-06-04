@@ -30,7 +30,7 @@ const menuItems: MenuItem[] = [
     label: "Sobre",
     href: "/sobre",
     children: [
-      { label: "Sobre a PIRA LABS", href: "/sobre" },
+      { label: "Sobre a Pira Labs", href: "/sobre" },
       { label: "Creative Business Turnaround", href: "/creative-business-turnaround" },
     ],
   },

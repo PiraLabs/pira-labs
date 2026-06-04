@@ -15,7 +15,7 @@ export default function Footer({ locale }: FooterProps) {
           {/* Identidade */}
           <div>
             <p className="font-display text-2xl text-off-white mb-3">
-              <span className="text-amber">PIRA</span> LABS
+              <span className="text-amber">Pira</span> Labs
             </p>
             <p className="font-body text-sm leading-relaxed">
               {t.tagline}
@@ -63,7 +63,7 @@ export default function Footer({ locale }: FooterProps) {
 
         <div className="border-t border-off-white/10 pt-6 flex flex-col md:flex-row justify-between gap-3">
           <p className="font-body text-xs text-off-white/30">
-            © {new Date().getFullYear()} PIRA LABS. {t.rights}
+            © {new Date().getFullYear()} Pira Labs. {t.rights}
           </p>
           <p className="font-body text-xs text-off-white/30">{t.closing}</p>
         </div>

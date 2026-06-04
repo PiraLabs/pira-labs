@@ -18,10 +18,13 @@ export const metadata: Metadata = {
     "Creative Business Turnaround é o processo de diagnóstico e redesenho para empresas de serviços que precisam agir antes que a janela se feche. Operado pela Pira Labs no Brasil.",
   alternates: {
     canonical: "https://piralabs.com.br/creative-business-turnaround",
-    languages: { en: "https://piralabs.com.br/en/creative-business-turnaround" },
+    languages: {
+      "pt-BR": "https://piralabs.com.br/creative-business-turnaround",
+      en: "https://piralabs.com.br/en/creative-business-turnaround",
+    },
   },
   openGraph: {
-    title: "Creative Business Turnaround · PIRA LABS",
+    title: "Creative Business Turnaround · Pira Labs",
     description:
       "O processo de diagnóstico e redesenho para empresas de serviços que precisam agir antes que a janela se feche.",
     url: "https://piralabs.com.br/creative-business-turnaround",
@@ -45,8 +48,8 @@ const definedTermSchema = {
     "Processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes que a janela se feche: quando clientes, caixa e reputação ainda existem, mas o modelo de trabalho começou a comprometer margem, valor percebido e capacidade de decisão.",
   inDefinedTermSet: {
     "@type": "DefinedTermSet",
-    name: "Vocabulário Pira Labs",
-    url: "https://piralabs.com.br",
+    name: "Glossário Pira Labs",
+    url: "https://piralabs.com.br/glossario",
   },
   publisher: {
     "@id": "https://piralabs.com.br/#organization",

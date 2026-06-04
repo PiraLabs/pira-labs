@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Creative Business Turnaround · PIRA LABS",
+    title: "Creative Business Turnaround · Pira Labs",
     description:
       "The diagnosis and redesign process for service businesses that need to act before the window closes.",
     url: "https://piralabs.com.br/en/creative-business-turnaround",

@@ -20,11 +20,12 @@ const schemas = {
     "@type": "Person",
     "@id": "https://piralabs.com.br/sobre#gabriela",
     name: "Gabriela Aguiar",
-    jobTitle: "CEO e Cofundadora",
+    jobTitle: "CEO and Co-founder",
     worksFor: { "@id": "https://piralabs.com.br/#organization" },
     sameAs: [
       "https://www.linkedin.com/in/gabrielaaguiarvs/",
       "https://www.wikidata.org/wiki/Q138846653",
+      "https://www.crunchbase.com/person/gabriela-aguiar-a12a",
     ],
     hasCredential: [
       {
@@ -46,7 +47,7 @@ const schemas = {
     "@type": "Person",
     "@id": "https://piralabs.com.br/sobre#celso",
     name: "Celso Gama",
-    jobTitle: "COO e Cofundador",
+    jobTitle: "COO and Co-founder",
     worksFor: { "@id": "https://piralabs.com.br/#organization" },
     sameAs: [
       "https://www.linkedin.com/in/celsogama/",
@@ -79,7 +80,7 @@ const schemas = {
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Sobre · PIRA LABS · Gabriela Aguiar e Celso Gama",
+    absolute: "Sobre · Pira Labs · Gabriela Aguiar e Celso Gama",
   },
   description:
     "A Pira Labs é uma boutique brasileira de Creative Business Turnaround. Conheça Gabriela Aguiar e Celso Gama, os fundadores.",
@@ -88,7 +89,7 @@ export const metadata: Metadata = {
     languages: { en: "https://piralabs.com.br/en/about" },
   },
   openGraph: {
-    title: "Sobre · PIRA LABS · Gabriela Aguiar e Celso Gama",
+    title: "Sobre · Pira Labs · Gabriela Aguiar e Celso Gama",
     description:
       "Boutique brasileira de Creative Business Turnaround. Gabriela e Celso em cada projeto, do diagnóstico à entrega.",
     url: "https://piralabs.com.br/sobre",
@@ -106,7 +107,7 @@ const aboutPageSchema = {
   "@type": "AboutPage",
   "@id": "https://piralabs.com.br/sobre#webpage",
   url: "https://piralabs.com.br/sobre",
-  name: "Sobre · PIRA LABS · Gabriela Aguiar e Celso Gama",
+  name: "Sobre · Pira Labs · Gabriela Aguiar e Celso Gama",
   description:
     "A Pira Labs é uma boutique brasileira de Creative Business Turnaround. Conheça Gabriela Aguiar e Celso Gama, os fundadores.",
   isPartOf: { "@id": "https://piralabs.com.br/#website" },
@@ -129,7 +130,7 @@ export default function SobrePage() {
       <div className="bg-ink">
         <PageHeader
           breadcrumbs={breadcrumbs}
-          h1="Sobre a PIRA LABS"
+          h1="Sobre a Pira Labs"
           subtitle="Boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche."
         />
       </div>

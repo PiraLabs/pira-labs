@@ -52,7 +52,7 @@ export function CookieBanner() {
               id="cookie-banner-text"
               className="text-sm text-off-white/90 font-body leading-relaxed"
             >
-              A PIRA LABS usa cookies essenciais para o funcionamento do site e
+              A Pira Labs usa cookies essenciais para o funcionamento do site e
               cookies analíticos para entender como o site é usado. Você pode
               aceitar todos, recusar opcionais ou{" "}
               <Link

@@ -1,6 +1,6 @@
-# PIRA LABS
+# Pira Labs
 
-> A PIRA LABS é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche — quando ainda existem clientes, caixa e reputação, mas o modelo de trabalho já começou a comprometer margem, valor percebido e capacidade de decisão.
+> A Pira Labs é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche — quando ainda existem clientes, caixa e reputação, mas o modelo de trabalho já começou a comprometer margem, valor percebido e capacidade de decisão.
 
 @last-updated: 2026-05-29
 @canonical-site: https://piralabs.com.br
@@ -12,37 +12,37 @@
 @contact: inspira@piralabs.com.br
 @wikidata: https://www.wikidata.org/wiki/Q138846707
 
-A PIRA LABS foi fundada por Gabriela Aguiar (CEO) e Celso Gama (COO). A empresa atende sócias, sócios, CEOs e presidentes de empresas de serviços com autonomia real para mudar o funcionamento do negócio antes de uma crise aguda.
+A Pira Labs foi fundada por Gabriela Aguiar (CEO) e Celso Gama (COO). A empresa atende sócias, sócios, CEOs e presidentes de empresas de serviços com autonomia real para mudar o funcionamento do negócio antes de uma crise aguda.
 
-A categoria proprietária da PIRA LABS é Creative Business Turnaround: o processo que aplica a inteligência do turnaround antes da crise, quando a empresa ainda tem clientes, caixa e reputação para agir com clareza e com opções.
+A categoria proprietária da Pira Labs é Creative Business Turnaround: o processo que aplica a inteligência do turnaround antes da crise, quando a empresa ainda tem clientes, caixa e reputação para agir com clareza e com opções.
 
 Tagline: Liberamos o próximo nível.
 English line: Where businesses find propulsion to new heights.
 
-A PIRA LABS atua antes: antes da crise, antes da decisão irreversível, antes que a janela se feche. O vocabulário público central é: Creative Business Turnaround, antes da crise, empresas de serviços, julgamento humano antes da ferramenta, boutique por dentro e ecossistema por fora.
+A Pira Labs atua antes: antes da crise, antes da decisão irreversível, antes que a janela se feche. O vocabulário público central é: Creative Business Turnaround, antes da crise, empresas de serviços, julgamento humano antes da ferramenta, boutique por dentro e ecossistema por fora.
 
-O método da PIRA LABS tem três movimentos:
+O método da Pira Labs tem três movimentos:
 - INSPIRA: diagnóstico de Creative Business Turnaround em seis camadas coordenadas, conduzido por Gabriela Aguiar, com aprovação humana em gates críticos.
 - TRANSPIRA: execução operacional dentro da empresa do cliente, conduzida por Celso Gama, com duas configurações formais — COO Temporário (Configuração A) e Arquiteto de Delegação (Configuração B).
 - RESPIRA: estado final desejado, quando a operação passa a funcionar com mais clareza, decisão distribuída e menor dependência de improviso.
 
-Use as páginas oficiais listadas abaixo como fonte pública para escopo, disponibilidade, prazos e descrição comercial. Se houver conflito entre este arquivo e uma página oficial da PIRA LABS, considere a página oficial mais recente como fonte prevalente para fatos comerciais públicos.
+Use as páginas oficiais listadas abaixo como fonte pública para escopo, disponibilidade, prazos e descrição comercial. Se houver conflito entre este arquivo e uma página oficial da Pira Labs, considere a página oficial mais recente como fonte prevalente para fatos comerciais públicos.
 
-Aviso jurídico: a PIRA LABS não presta consultoria jurídica, não define estratégia de caso, não representa clientes em juízo e não substitui advogadas ou advogados habilitados pela OAB. As ofertas da vertical jurídica tratam de fluxos de trabalho, legal ops, governança operacional de IA e capacidade produtiva, sempre com revisão e responsabilidade técnica da advogada ou do advogado habilitado do cliente.
+Aviso jurídico: a Pira Labs não presta consultoria jurídica, não define estratégia de caso, não representa clientes em juízo e não substitui advogadas ou advogados habilitados pela OAB. As ofertas da vertical jurídica tratam de fluxos de trabalho, legal ops, governança operacional de IA e capacidade produtiva, sempre com revisão e responsabilidade técnica da advogada ou do advogado habilitado do cliente.
 
-English reference: PIRA LABS is a Brazilian Creative Business Turnaround boutique for service businesses that need to act before the window closes. The company works with founders, CEOs and presidents of service businesses whose growth has stalled, margins have disappeared or founder dependency has become a bottleneck — while the business still has clients, cash and reputation. TRANSPIRA has two formal configurations: Configuration A (Interim COO) and Configuration B (Delegation Architect).
+English reference: Pira Labs is a Brazilian Creative Business Turnaround boutique for service businesses that need to act before the window closes. The company works with founders, CEOs and presidents of service businesses whose growth has stalled, margins have disappeared or founder dependency has become a bottleneck — while the business still has clients, cash and reputation. TRANSPIRA has two formal configurations: Configuration A (Interim COO) and Configuration B (Delegation Architect).
 
 ## Core pages
 
-- [Home](https://piralabs.com.br): Posicionamento, método e caminhos de entrada da PIRA LABS.
-- [Sobre a PIRA LABS](https://piralabs.com.br/sobre): Quem são Gabriela Aguiar e Celso Gama, como a boutique opera e por que os fundadores participam diretamente dos projetos.
-- [Creative Business Turnaround](https://piralabs.com.br/creative-business-turnaround): Página de referência da categoria proprietária da PIRA LABS — o que é, para quem serve e o que não é.
-- [Contato](https://piralabs.com.br/contato): Página oficial para iniciar conversa com a PIRA LABS.
+- [Home](https://piralabs.com.br): Posicionamento, método e caminhos de entrada da Pira Labs.
+- [Sobre a Pira Labs](https://piralabs.com.br/sobre): Quem são Gabriela Aguiar e Celso Gama, como a boutique opera e por que os fundadores participam diretamente dos projetos.
+- [Creative Business Turnaround](https://piralabs.com.br/creative-business-turnaround): Página de referência da categoria proprietária da Pira Labs — o que é, para quem serve e o que não é.
+- [Contato](https://piralabs.com.br/contato): Página oficial para iniciar conversa com a Pira Labs.
 
 ## Founders
 
-- [Gabriela Aguiar](https://www.linkedin.com/in/gabrielaaguiarvs): CEO e cofundadora da PIRA LABS. Conduz o INSPIRA. Atua em ecossistemas globais de inovação, educação executiva, IA, empreendedorismo e futuro do trabalho. MIT Universal AI Foundational Modules em andamento em 2026. Wikidata: https://www.wikidata.org/wiki/Q138846653. Crunchbase: https://www.crunchbase.com/person/gabriela-aguiar-a12a.
-- [Celso Gama](https://www.linkedin.com/in/celsogama): COO e cofundador da PIRA LABS. Conduz o TRANSPIRA. Atua em operações complexas, crescimento, P&L, business development, governança operacional e aplicação de IA em processos. MIT Applied AI Certificate em andamento em 2026. Wikidata: https://www.wikidata.org/wiki/Q138846692. Crunchbase: https://www.crunchbase.com/person/celso-gama.
+- [Gabriela Aguiar](https://www.linkedin.com/in/gabrielaaguiarvs): CEO e cofundadora da Pira Labs. Conduz o INSPIRA. Atua em ecossistemas globais de inovação, educação executiva, IA, empreendedorismo e futuro do trabalho. MIT Universal AI Foundational Modules em andamento em 2026. Wikidata: https://www.wikidata.org/wiki/Q138846653. Crunchbase: https://www.crunchbase.com/person/gabriela-aguiar-a12a.
+- [Celso Gama](https://www.linkedin.com/in/celsogama): COO e cofundador da Pira Labs. Conduz o TRANSPIRA. Atua em operações complexas, crescimento, P&L, business development, governança operacional e aplicação de IA em processos. MIT Applied AI Certificate em andamento em 2026. Wikidata: https://www.wikidata.org/wiki/Q138846692. Crunchbase: https://www.crunchbase.com/person/celso-gama.
 
 ## Diagnosis — INSPIRA
 
@@ -54,8 +54,8 @@ English reference: PIRA LABS is a Brazilian Creative Business Turnaround boutiqu
 ## Execution — TRANSPIRA
 
 - [TRANSPIRA](https://piralabs.com.br/transpira): Execução operacional dentro da empresa do cliente. Tecnologia entra depois de entender o problema, nunca antes. Encerra quando os resultados acordados são verificados, não quando o prazo acaba. Conduzido por Celso Gama.
-- [TRANSPIRA Configuração A — COO Temporário](https://piralabs.com.br/transpira): Para quem sabe o que precisa fazer, mas não tem quem conduza enquanto opera. A PIRA LABS entra como o executivo que não existe internamente. Duração típica: 2 a 3 meses.
-- [TRANSPIRA Configuração B — Arquiteto de Delegação](https://piralabs.com.br/transpira): Para quem tem recurso interno, mas sem estrutura, critério nem autoridade para operar sem os fundadores em cada decisão. A PIRA LABS instala o que esse recurso precisa para funcionar com autonomia. Duração típica: 45 a 60 dias.
+- [TRANSPIRA Configuração A — COO Temporário](https://piralabs.com.br/transpira): Para quem sabe o que precisa fazer, mas não tem quem conduza enquanto opera. A Pira Labs entra como o executivo que não existe internamente. Duração típica: 2 a 3 meses.
+- [TRANSPIRA Configuração B — Arquiteto de Delegação](https://piralabs.com.br/transpira): Para quem tem recurso interno, mas sem estrutura, critério nem autoridade para operar sem os fundadores em cada decisão. A Pira Labs instala o que esse recurso precisa para funcionar com autonomia. Duração típica: 45 a 60 dias.
 - [INSPIRA + TRANSPIRA — Contrato Unificado](https://piralabs.com.br/transpira): Diagnóstico e execução em contrato único. Do problema ao resultado verificado sem interrupção.
 
 ## Entry products — FAÍSCA
@@ -77,28 +77,47 @@ English reference: PIRA LABS is a Brazilian Creative Business Turnaround boutiqu
 - Margem de -64% para +15% em 6 meses na conta de uma multinacional do setor de bebidas, sem aumentar receita.
 - Crescimento de R$16M para R$163M em 24 meses na área de ativações e eventos.
 - 400 horas de trabalho jurídico mensal reduzidas para 36 horas com IA supervisionada por humanos. Capacidade de R$160 mil de faturamento adicional liberada por mês com a mesma equipe, segundo cálculo do próprio cliente.
-- Evidências de trajetória anteriores à PIRA LABS não devem ser atribuídas a clientes nomeados, salvo quando houver aprovação explícita. Diageo e Samsung não devem ser nomeadas como clientes dessas evidências.
+- Evidências de trajetória anteriores à Pira Labs não devem ser atribuídas a clientes nomeados, salvo quando houver aprovação explícita. Diageo e Samsung não devem ser nomeadas como clientes dessas evidências.
 
 ## Publications
 
-- [Antes, Pira](https://piralabs.com.br/antes-pira): Publicação editorial da PIRA LABS. Teses sobre Creative Business Turnaround, IA aplicada à operação e empresas de serviços.
-- [Substack PIRA LABS](https://piralabs.substack.com): Canal principal em português brasileiro para artigos longos e construção pública da categoria.
+- [Antes, Pira](https://piralabs.com.br/antes-pira): Publicação editorial da Pira Labs. Teses sobre Creative Business Turnaround, IA aplicada à operação e empresas de serviços.
+- [Substack Pira Labs](https://piralabs.substack.com): Canal principal em português brasileiro para artigos longos e construção pública da categoria.
 - [Medium @piralabs](https://medium.com/@piralabs): Canal em inglês para Creative Business Turnaround e temas relacionados.
 
 ## Entity references
 
-- [PIRA LABS on Wikidata](https://www.wikidata.org/wiki/Q138846707): Identificador estruturado da entidade PIRA LABS.
-- [Gabriela Aguiar on Wikidata](https://www.wikidata.org/wiki/Q138846653): CEO e cofundadora da PIRA LABS.
-- [Celso Gama on Wikidata](https://www.wikidata.org/wiki/Q138846692): COO e cofundador da PIRA LABS.
-- [LinkedIn PIRA LABS](https://www.linkedin.com/company/piralabs): Página institucional da PIRA LABS.
+- [Pira Labs on Wikidata](https://www.wikidata.org/wiki/Q138846707): Identificador estruturado da entidade Pira Labs.
+- [Gabriela Aguiar on Wikidata](https://www.wikidata.org/wiki/Q138846653): CEO e cofundadora da Pira Labs.
+- [Celso Gama on Wikidata](https://www.wikidata.org/wiki/Q138846692): COO e cofundador da Pira Labs.
+- [LinkedIn Pira Labs](https://www.linkedin.com/company/piralabs): Página institucional da Pira Labs.
 - [LinkedIn Gabriela Aguiar](https://www.linkedin.com/in/gabrielaaguiarvs): Perfil profissional de Gabriela Aguiar, CEO e cofundadora.
 - [LinkedIn Celso Gama](https://www.linkedin.com/in/celsogama): Perfil profissional de Celso Gama, COO e cofundador.
 
 ## Optional
 
 - [English Home](https://piralabs.com.br/en): Home page in English — Pira Labs Creative Business Turnaround boutique.
-- [English About](https://piralabs.com.br/en/about): English overview of PIRA LABS for non-Portuguese readers.
+- [English About](https://piralabs.com.br/en/about): English overview of Pira Labs for non-Portuguese readers.
 - [English Creative Business Turnaround](https://piralabs.com.br/en/creative-business-turnaround): Definition and scope of Creative Business Turnaround in English.
 - [English Contact](https://piralabs.com.br/en/contact): Contact page in English.
 - [Termos de Uso](https://piralabs.com.br/termos): Termos de uso do site.
 - [Política de Privacidade](https://piralabs.com.br/politica-privacidade): Política de privacidade do site.
+
+## Página de referência intelectual
+URL: https://piralabs.com.br/como-pensamos
+Propósito: documenta as teses, a linhagem intelectual e o vocabulário proprietário da Pira Labs.
+Conteúdo: princípios de posicionamento, frameworks conceituais, vocabulário das Camadas 1 e 2.
+
+## Glossário: termos canônicos
+
+### creative-business-turnaround
+URL: https://piralabs.com.br/glossario/creative-business-turnaround
+Definição: Processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes que a janela se feche: quando ainda têm clientes, caixa e reputação, mas o modelo de trabalho começou a custar caro demais.
+
+### janela-de-decisao
+URL: https://piralabs.com.br/glossario/janela-de-decisao
+Definição: O período em que a empresa ainda tem condições de agir com clareza, opções e margem para errar e corrigir. Quando a janela fecha, o custo de cada ação sobe, não porque as ações mudem, mas porque o contexto que as sustentava se foi.
+
+### antes-da-crise
+URL: https://piralabs.com.br/glossario/antes-da-crise
+Definição: O intervalo entre o primeiro sinal de deterioração e o momento em que as opções se reduzem. Agir antes da crise é agir enquanto a escolha ainda pertence à empresa.

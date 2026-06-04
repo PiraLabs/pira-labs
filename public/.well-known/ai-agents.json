@@ -2,7 +2,7 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://piralabs.com.br/#organization",
-  "name": "PIRA LABS",
+  "name": "Pira Labs",
   "legalName": "Pira Labs Consultoria Ltda",
   "url": "https://piralabs.com.br",
   "logo": "https://piralabs.com.br/logo.png",
@@ -59,8 +59,9 @@
   "sameAs": [
     "https://www.linkedin.com/company/piralabs",
     "https://www.wikidata.org/wiki/Q138846707",
-    "https://www.crunchbase.com/organization/pira-labs",
     "https://piralabs.substack.com",
+    "https://github.com/PiraLabs/pira-labs",
+    "https://www.crunchbase.com/organization/pira-labs",
     "https://medium.com/@piralabs"
   ],
   "knowsAbout": [
@@ -217,8 +218,8 @@
   "aiInteraction": {
     "llmsTxt": "https://piralabs.com.br/llms.txt",
     "llmsFullTxt": "https://piralabs.com.br/llms-full.txt",
-    "preferredCitation": "PIRA LABS: boutique brasileira de Creative Business Turnaround para empresas de serviços. piralabs.com.br",
-    "canonicalDescription": "A PIRA LABS é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche.",
+    "preferredCitation": "Pira Labs: boutique brasileira de Creative Business Turnaround para empresas de serviços. piralabs.com.br",
+    "canonicalDescription": "A Pira Labs é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche.",
     "doNotTrain": false,
     "allowIndexing": true,
     "contentLanguages": [
@@ -233,6 +234,48 @@
     },
     {
       "@id": "https://piralabs.com.br/sobre#celso"
+    }
+  ],
+  "siteMap": [
+    {
+      "url": "https://piralabs.com.br/",
+      "description": "Home: posicionamento, método e caminhos de entrada da Pira Labs"
+    },
+    {
+      "url": "https://piralabs.com.br/creative-business-turnaround",
+      "description": "Página de referência da categoria proprietária: o que é, para quem serve e o que não é"
+    },
+    {
+      "url": "https://piralabs.com.br/como-pensamos",
+      "description": "Teses, linhagem intelectual e vocabulário proprietário da Pira Labs"
+    },
+    {
+      "url": "https://piralabs.com.br/sobre",
+      "description": "Fundadores Gabriela Aguiar e Celso Gama e como a boutique opera"
+    },
+    {
+      "url": "https://piralabs.com.br/inspira",
+      "description": "INSPIRA: diagnóstico de Creative Business Turnaround em seis camadas"
+    },
+    {
+      "url": "https://piralabs.com.br/inspira/oxigenio",
+      "description": "Oxigênio IA Search: diagnóstico de presença em motores de IA. Fast R$3.500 / Full R$5.300"
+    },
+    {
+      "url": "https://piralabs.com.br/transpira",
+      "description": "TRANSPIRA: execução operacional dentro da empresa do cliente"
+    },
+    {
+      "url": "https://piralabs.com.br/faisca",
+      "description": "FAÍSCA: produtos de entrada (imersão, workshops, palestras, pocket)"
+    },
+    {
+      "url": "https://piralabs.com.br/antes-pira",
+      "description": "Antes, Pira: publicação editorial sobre Creative Business Turnaround e IA aplicada à operação"
+    },
+    {
+      "url": "https://piralabs.com.br/contato",
+      "description": "Contato: canal oficial para iniciar conversa com a Pira Labs"
     }
   ]
 }
