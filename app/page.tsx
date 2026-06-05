@@ -9,6 +9,7 @@ import NodeSystem from "@/components/shared/NodeSystem";
 import { LogoVideo } from "@/components/shared/LogoVideo";
 import { HeroSectionClient } from "@/components/home/HeroSectionClient";
 import { SystemSectionClient } from "@/components/home/SystemSectionClient";
+import { SignalsSectionClient } from "@/components/home/SignalsSectionClient";
 import { CountUp } from "@/components/home/CountUp";
 import { organizationSchema } from "@/lib/schemas/organization";
 import { websiteSchema } from "@/lib/schemas/website";
@@ -102,7 +103,10 @@ export default function HomePage() {
       {/* HOME-2 · SISTEMA */}
       <SystemSectionClient />
 
-      {/* HOME-2 · SINAIS */}
+      {/* HOME-3 · SINAIS */}
+      <SignalsSectionClient />
+
+      {/* legado — manter abaixo até refactor completo */}
       <Section variant="default" paddingY="lg">
         <p className="text-sm font-body font-medium text-orange uppercase tracking-widest mb-4">
           Quando a operação começa a custar mais do que deveria
