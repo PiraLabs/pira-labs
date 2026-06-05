@@ -1,51 +1,151 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 gsap.registerPlugin(ScrollTrigger)
 
-/* HOME-6 · Faísca teaser · fundo Sand #e8e0d6
-   3 colunas tipográficas sem símbolos.
-   GSAP ScrollTrigger: cada coluna entra com opacity 0→1, y 24→0, escalonado.
-   Sem Ember. Sem SVG. */
+/* HOME-6 · Faísca · fundo Sand #e8e0d6
+   Lista vertical com divisores de categoria, numeração e hover por linha.
+   GSAP ScrollTrigger: stagger 0.08s por grupo.
+   Ember exclusivo: palavra "respirar" no H2. */
 
 const INK      = "#05262e"
-const SAND     = "#e8e0d6"
 const TEAL_MID = "#1A5568"
+const EMBER    = "#eb5c2e"
 
-const GROUPS = [
+interface Product { num: string; name: string; price: string; href: string }
+
+const GROUPS: { label: string; items: Product[] }[] = [
   {
     label: "ENTRADA RÁPIDA",
     items: [
-      { name: "Imersão em IA",      detail: "R$7.100" },
-      { name: "Oxigênio",           detail: "R$3.500 / R$5.300" },
-      { name: "pocket do INSPIRA",  detail: "R$3.900" },
+      { num: "01", name: "Imersão em IA",       price: "R$7.100",              href: "/faisca/imersa-em-ia" },
+      { num: "02", name: "Oxigênio",             price: "R$3.500 / R$5.300",   href: "/inspira/oxigenio" },
+      { num: "03", name: "pocket do INSPIRA",    price: "R$3.900",             href: "/faisca/pocket" },
     ],
   },
   {
     label: "AUTORIDADE E RELACIONAMENTO",
     items: [
-      { name: "Palestras",   detail: "sob consulta" },
-      { name: "Workshops",   detail: "a partir de R$12.500" },
+      { num: "04", name: "Palestras",            price: "sob consulta",         href: "/faisca" },
+      { num: "05", name: "Workshops",            price: "a partir de R$12.500", href: "/faisca" },
     ],
   },
   {
     label: "OFERTA SELETIVA",
     items: [
-      { name: "C-level as a Service", detail: "sob consulta" },
-      { name: "Faísca Jurídica",      detail: "sob consulta" },
+      { num: "06", name: "C-level as a Service", price: "sob consulta",         href: "/faisca" },
+      { num: "07", name: "Faísca Jurídica",      price: "sob consulta",         href: "/faisca/juridica" },
     ],
   },
 ]
 
+function CategoryDivider({ label }: { label: string }) {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "32px 0 16px" }}>
+      <div style={{ flex: 1, height: "1.5px", background: TEAL_MID, opacity: 0.5 }} />
+      <span style={{
+        fontSize: "9px", fontWeight: 600, letterSpacing: "0.18em",
+        textTransform: "uppercase", color: TEAL_MID, opacity: 0.8,
+        whiteSpace: "nowrap", fontFamily: "var(--font-atyp-text)",
+      }}>
+        {label}
+      </span>
+      <div style={{ flex: 1, height: "1.5px", background: TEAL_MID, opacity: 0.5 }} />
+    </div>
+  )
+}
+
+function ProductRow({
+  item,
+  rowRef,
+}: {
+  item: Product
+  rowRef: (el: HTMLAnchorElement | null) => void
+}) {
+  const [hovered, setHovered] = useState(false)
+
+  return (
+    <Link
+      href={item.href}
+      ref={rowRef}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        display: "grid",
+        gridTemplateColumns: "36px 1fr auto 20px",
+        gap: "20px",
+        padding: "22px 0",
+        borderBottom: "1px solid rgba(5,38,46,0.1)",
+        position: "relative",
+        overflow: "hidden",
+        textDecoration: "none",
+        alignItems: "center",
+      }}
+    >
+      {/* Overlay slide-in da esquerda */}
+      <div style={{
+        position: "absolute",
+        inset: 0,
+        backgroundColor: "rgba(5,38,46,0.035)",
+        transform: hovered ? "translateX(0)" : "translateX(-100%)",
+        transition: "transform 0.35s ease",
+        pointerEvents: "none",
+      }} />
+
+      {/* Número */}
+      <span style={{
+        fontFamily: "var(--font-atyp-text)",
+        fontWeight: 600,
+        fontSize: "10px",
+        color: TEAL_MID,
+        letterSpacing: "0.08em",
+      }}>
+        {item.num}
+      </span>
+
+      {/* Nome */}
+      <span style={{
+        fontFamily: "var(--font-atyp-display)",
+        fontWeight: 400,
+        fontSize: "clamp(28px, 3vw, 48px)",
+        color: INK,
+        letterSpacing: hovered ? "-0.015em" : "-0.02em",
+        transition: "letter-spacing 0.35s",
+      }}>
+        {item.name}
+      </span>
+
+      {/* Preço */}
+      <span style={{
+        fontFamily: "var(--font-atyp-text)",
+        fontWeight: 300,
+        fontSize: "13px",
+        color: "rgba(5,38,46,0.38)",
+        textAlign: "right",
+        whiteSpace: "nowrap",
+      }}>
+        {item.price}
+      </span>
+
+      {/* Seta */}
+      <span style={{
+        fontSize: "16px",
+        color: hovered ? TEAL_MID : "rgba(5,38,46,0.2)",
+        transform: hovered ? "translateX(5px)" : "translateX(0)",
+        transition: "color 0.25s, transform 0.25s",
+      }}>
+        →
+      </span>
+    </Link>
+  )
+}
+
 export function FaiscaSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const col0 = useRef<HTMLDivElement>(null)
-  const col1 = useRef<HTMLDivElement>(null)
-  const col2 = useRef<HTMLDivElement>(null)
+  const rowRefs = useRef<(HTMLAnchorElement | null)[]>([])
 
   useEffect(() => {
     let raf1: number, raf2: number
@@ -53,25 +153,30 @@ export function FaiscaSection() {
     raf1 = requestAnimationFrame(() => {
       raf2 = requestAnimationFrame(() => {
         const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-        const cols = [col0.current, col1.current, col2.current]
+        const all = rowRefs.current.filter(Boolean)
 
         if (reduced) {
-          gsap.set(cols, { opacity: 1, y: 0 })
+          gsap.set(all, { opacity: 1, y: 0 })
           return
         }
 
-        gsap.set(cols, { opacity: 0, y: 24 })
+        gsap.set(all, { opacity: 0, y: 16 })
 
-        cols.forEach((col, i) => {
-          gsap.to(col, {
+        // Stagger por grupo: linhas 0-2 | 3-4 | 5-6
+        const groupBounds: [number, number][] = [[0, 3], [3, 5], [5, 7]]
+
+        groupBounds.forEach(([start, end]) => {
+          const rows = rowRefs.current.slice(start, end).filter(Boolean)
+          if (!rows.length || !rows[0]) return
+          gsap.to(rows, {
             opacity: 1,
             y: 0,
-            duration: 0.6,
-            delay: i * 0.15,
+            duration: 0.55,
+            stagger: 0.08,
             ease: "power2.out",
             scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top 70%",
+              trigger: rows[0],
+              start: "top 80%",
               toggleActions: "play none none none",
             },
           })
@@ -85,9 +190,11 @@ export function FaiscaSection() {
     }
   }, [])
 
+  let globalIdx = 0
+
   return (
-    <section ref={sectionRef} style={{ backgroundColor: SAND }}>
-      <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 pt-20 pb-16">
+    <section style={{ backgroundColor: "#e8e0d6" }}>
+      <div className="max-w-[1280px] mx-auto px-6 md:px-20 pt-12 md:pt-20 pb-12 md:pb-20">
 
         {/* Eyebrow */}
         <p style={{
@@ -96,7 +203,7 @@ export function FaiscaSection() {
           fontSize: "10px",
           letterSpacing: "0.18em",
           textTransform: "uppercase",
-          color: INK,
+          color: "rgba(5,38,46,0.45)",
           marginBottom: "24px",
         }}>
           PORTAS DE ENTRADA
@@ -104,148 +211,49 @@ export function FaiscaSection() {
 
         {/* H2 */}
         <h2 style={{
-          fontFamily: "var(--font-atyp-display), sans-serif",
-          fontWeight: 500,
-          fontSize: "36px",
-          lineHeight: 1.2,
+          fontFamily: "var(--font-atyp-display)",
+          fontWeight: 300,
+          fontSize: "clamp(44px, 5vw, 68px)",
+          lineHeight: 1.1,
+          letterSpacing: "-0.015em",
           color: INK,
-          marginBottom: "56px",
+          marginBottom: "72px",
         }}>
-          Nem todo problema pede o mesmo começo.
+          Entradas diferentes.<br />
+          O mesmo destino:{" "}
+          <span style={{ color: EMBER, fontWeight: 600 }}>respirar.</span>
         </h2>
 
-        {/* Três colunas */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-
-          {/* Coluna 1 */}
-          <div ref={col0} style={{ paddingRight: "48px", paddingBottom: "40px" }}>
-            <div style={{ borderTop: "1px solid rgba(5,38,46,0.15)", paddingTop: "24px" }}>
-              <p style={{
-                fontFamily: "var(--font-atyp-text), sans-serif",
-                fontWeight: 600,
-                fontSize: "10px",
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: TEAL_MID,
-                marginBottom: "24px",
-              }}>
-                {GROUPS[0].label}
-              </p>
-              {GROUPS[0].items.map((item) => (
-                <div key={item.name}>
-                  <p style={{
-                    fontFamily: "var(--font-atyp-display), sans-serif",
-                    fontWeight: 400,
-                    fontSize: "22px",
-                    color: INK,
-                    marginBottom: "4px",
-                  }}>
-                    {item.name}
-                  </p>
-                  <p style={{
-                    fontFamily: "var(--font-atyp-text), sans-serif",
-                    fontWeight: 300,
-                    fontSize: "13px",
-                    color: "rgba(5,38,46,0.45)",
-                    marginBottom: "20px",
-                  }}>
-                    {item.detail}
-                  </p>
-                </div>
-              ))}
-            </div>
+        {/* Lista de produtos */}
+        {GROUPS.map((group) => (
+          <div key={group.label}>
+            <CategoryDivider label={group.label} />
+            {group.items.map((item) => {
+              const idx = globalIdx++
+              return (
+                <ProductRow
+                  key={item.num}
+                  item={item}
+                  rowRef={(el) => { rowRefs.current[idx] = el }}
+                />
+              )
+            })}
           </div>
-
-          {/* Coluna 2 */}
-          <div ref={col1} style={{ paddingLeft: "48px", paddingRight: "48px", paddingBottom: "40px" }}>
-            <div style={{ borderTop: "1px solid rgba(5,38,46,0.15)", paddingTop: "24px" }}>
-              <p style={{
-                fontFamily: "var(--font-atyp-text), sans-serif",
-                fontWeight: 600,
-                fontSize: "10px",
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: TEAL_MID,
-                marginBottom: "24px",
-              }}>
-                {GROUPS[1].label}
-              </p>
-              {GROUPS[1].items.map((item) => (
-                <div key={item.name}>
-                  <p style={{
-                    fontFamily: "var(--font-atyp-display), sans-serif",
-                    fontWeight: 400,
-                    fontSize: "22px",
-                    color: INK,
-                    marginBottom: "4px",
-                  }}>
-                    {item.name}
-                  </p>
-                  <p style={{
-                    fontFamily: "var(--font-atyp-text), sans-serif",
-                    fontWeight: 300,
-                    fontSize: "13px",
-                    color: "rgba(5,38,46,0.45)",
-                    marginBottom: "20px",
-                  }}>
-                    {item.detail}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Coluna 3 */}
-          <div ref={col2} style={{ paddingLeft: "48px", paddingBottom: "40px" }}>
-            <div style={{ borderTop: "1px solid rgba(5,38,46,0.15)", paddingTop: "24px" }}>
-              <p style={{
-                fontFamily: "var(--font-atyp-text), sans-serif",
-                fontWeight: 600,
-                fontSize: "10px",
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: TEAL_MID,
-                marginBottom: "24px",
-              }}>
-                {GROUPS[2].label}
-              </p>
-              {GROUPS[2].items.map((item) => (
-                <div key={item.name}>
-                  <p style={{
-                    fontFamily: "var(--font-atyp-display), sans-serif",
-                    fontWeight: 400,
-                    fontSize: "22px",
-                    color: INK,
-                    marginBottom: "4px",
-                  }}>
-                    {item.name}
-                  </p>
-                  <p style={{
-                    fontFamily: "var(--font-atyp-text), sans-serif",
-                    fontWeight: 300,
-                    fontSize: "13px",
-                    color: "rgba(5,38,46,0.45)",
-                    marginBottom: "20px",
-                  }}>
-                    {item.detail}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-        </div>
+        ))}
 
         {/* CTA */}
-        <div style={{ marginTop: "48px", display: "flex", justifyContent: "center" }}>
+        <div style={{ marginTop: "56px", display: "flex", justifyContent: "center" }}>
           <Link
             href="/faisca"
-            className="inline-flex items-center justify-center min-h-[44px] transition-transform duration-150 hover:scale-[1.02] focus-visible:outline-2 focus-visible:outline-offset-2"
             style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              minHeight: "44px",
               border: `2px solid ${INK}`,
               color: INK,
               backgroundColor: "transparent",
-              fontFamily: "var(--font-atyp-text), sans-serif",
+              fontFamily: "var(--font-atyp-text)",
               fontWeight: 600,
               fontSize: "13px",
               letterSpacing: "0.10em",
