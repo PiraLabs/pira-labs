@@ -11,6 +11,7 @@ import { HeroSectionClient } from "@/components/home/HeroSectionClient";
 import { SystemSectionClient } from "@/components/home/SystemSectionClient";
 import { SignalsSectionClient } from "@/components/home/SignalsSectionClient";
 import { CBTSectionClient } from "@/components/home/CBTSectionClient";
+import { MethodSectionClient } from "@/components/home/MethodSectionClient";
 import { CountUp } from "@/components/home/CountUp";
 import { organizationSchema } from "@/lib/schemas/organization";
 import { websiteSchema } from "@/lib/schemas/website";
@@ -109,6 +110,9 @@ export default function HomePage() {
 
       {/* HOME-4 · CBT CATEGORIA */}
       <CBTSectionClient />
+
+      {/* HOME-5 · MÉTODO */}
+      <MethodSectionClient />
 
       {/* legado — manter abaixo até refactor completo */}
       <Section variant="default" paddingY="lg">
