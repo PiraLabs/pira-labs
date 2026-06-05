@@ -15,7 +15,8 @@ import { MethodSectionClient } from "@/components/home/MethodSectionClient";
 import { FaiscaSectionClient } from "@/components/home/FaiscaSectionClient"
 import { ProofsSectionClient } from "@/components/home/ProofsSectionClient"
 import { FoundersSectionClient } from "@/components/home/FoundersSectionClient"
-import { EditorialSectionClient } from "@/components/home/EditorialSectionClient";
+import { EditorialSectionClient } from "@/components/home/EditorialSectionClient"
+import { FAQSectionClient } from "@/components/home/FAQSectionClient";
 import { CountUp } from "@/components/home/CountUp";
 import { organizationSchema } from "@/lib/schemas/organization";
 import { websiteSchema } from "@/lib/schemas/website";
@@ -129,6 +130,9 @@ export default function HomePage() {
 
       {/* HOME-9 · ANTES, PIRA */}
       <EditorialSectionClient />
+
+      {/* HOME-10 · FAQ */}
+      <FAQSectionClient />
 
       {/* legado — manter abaixo até refactor completo */}
       <Section variant="default" paddingY="lg">
