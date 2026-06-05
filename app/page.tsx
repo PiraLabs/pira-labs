@@ -10,6 +10,7 @@ import { LogoVideo } from "@/components/shared/LogoVideo";
 import { HeroSectionClient } from "@/components/home/HeroSectionClient";
 import { SystemSectionClient } from "@/components/home/SystemSectionClient";
 import { SignalsSectionClient } from "@/components/home/SignalsSectionClient";
+import { CBTSectionClient } from "@/components/home/CBTSectionClient";
 import { CountUp } from "@/components/home/CountUp";
 import { organizationSchema } from "@/lib/schemas/organization";
 import { websiteSchema } from "@/lib/schemas/website";
@@ -105,6 +106,9 @@ export default function HomePage() {
 
       {/* HOME-3 · SINAIS */}
       <SignalsSectionClient />
+
+      {/* HOME-4 · CBT CATEGORIA */}
+      <CBTSectionClient />
 
       {/* legado — manter abaixo até refactor completo */}
       <Section variant="default" paddingY="lg">
