@@ -12,6 +12,7 @@ import { SystemSectionClient } from "@/components/home/SystemSectionClient";
 import { SignalsSectionClient } from "@/components/home/SignalsSectionClient";
 import { CBTSectionClient } from "@/components/home/CBTSectionClient";
 import { MethodSectionClient } from "@/components/home/MethodSectionClient";
+import { FaiscaSectionClient } from "@/components/home/FaiscaSectionClient";
 import { CountUp } from "@/components/home/CountUp";
 import { organizationSchema } from "@/lib/schemas/organization";
 import { websiteSchema } from "@/lib/schemas/website";
@@ -113,6 +114,9 @@ export default function HomePage() {
 
       {/* HOME-5 · MÉTODO */}
       <MethodSectionClient />
+
+      {/* HOME-6 · FAÍSCA TEASER */}
+      <FaiscaSectionClient />
 
       {/* legado — manter abaixo até refactor completo */}
       <Section variant="default" paddingY="lg">
