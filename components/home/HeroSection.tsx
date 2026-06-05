@@ -11,36 +11,44 @@ import gsap from "gsap"
    prefers-reduced-motion: desabilita todo motion. */
 
 export function HeroSection() {
-  const svgRef = useRef<SVGSVGElement>(null)
+  const svgRef   = useRef<SVGSVGElement>(null)
+  const tweensRef = useRef<gsap.core.Tween[]>([])
 
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    console.log("prefersReducedMotion:", prefersReducedMotion)
-    console.log("svgRef.current:", !!svgRef.current)
-    // TEMP TEST: if (prefersReducedMotion || !svgRef.current) return
+    let raf1: number, raf2: number
 
-    const nodes = svgRef.current.querySelectorAll<SVGGElement>(".hero-node")
-    console.log("nodes found:", nodes.length)
-    const tweens: gsap.core.Tween[] = []
-    console.log("gsap running")
+    raf1 = requestAnimationFrame(() => {
+      raf2 = requestAnimationFrame(() => {
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        if (prefersReducedMotion || !svgRef.current) return
 
-    nodes.forEach((node) => {
-      const dur = parseFloat(node.dataset.dur ?? "10")
-      const dist = 6 + Math.random() * 2 // 6–8px
+        const nodes = svgRef.current.querySelectorAll<SVGGElement>(".hero-node")
 
-      tweens.push(
-        gsap.to(node, {
-          y: dist,
-          duration: dur / 2,
-          yoyo: true,
-          repeat: -1,
-          ease: "sine.inOut",
+        nodes.forEach((node) => {
+          const dur = parseFloat(node.dataset.dur ?? "10")
+          const distY = 14 + Math.random() * 4 // 14–18px
+          const distX = 4 + Math.random() * 2  // 4–6px
+
+          tweensRef.current.push(
+            gsap.to(node, {
+              y: distY,
+              x: distX,
+              duration: dur / 2,
+              yoyo: true,
+              repeat: -1,
+              ease: "sine.inOut",
+            })
+          )
         })
-      )
+
+      })
     })
 
     return () => {
-      tweens.forEach((t) => t.kill())
+      cancelAnimationFrame(raf1)
+      cancelAnimationFrame(raf2)
+      tweensRef.current.forEach((t) => t.kill())
+      tweensRef.current = []
     }
   }, [])
 
@@ -60,6 +68,7 @@ export function HeroSection() {
           width: "65%",
           height: "120%",
           overflow: "visible",
+          pointerEvents: "none",
           zIndex: 0,
         }}
       >
@@ -150,8 +159,11 @@ export function HeroSection() {
       <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 pt-20 pb-16">
         <div className="grid grid-cols-1 md:grid-cols-12">
 
-          {/* Texto — cols 1–7 · z-index 10 para ficar sempre acima do SVG */}
-          <div className="col-span-full md:col-span-7" style={{ position: "relative", zIndex: 10 }}>
+          {/* Texto — max-width 52% desktop · z-index 10 para ficar sempre acima do SVG */}
+          <div
+            className="col-span-full"
+            style={{ position: "relative", zIndex: 10, maxWidth: "52%" }}
+          >
 
             {/* CBT headline — elemento próprio, acima do H1. Não é eyebrow. */}
             <p

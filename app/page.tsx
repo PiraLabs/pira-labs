@@ -8,6 +8,7 @@ import { FAQ } from "@/components/shared/FAQ";
 import NodeSystem from "@/components/shared/NodeSystem";
 import { LogoVideo } from "@/components/shared/LogoVideo";
 import { HeroSectionClient } from "@/components/home/HeroSectionClient";
+import { SystemSectionClient } from "@/components/home/SystemSectionClient";
 import { CountUp } from "@/components/home/CountUp";
 import { organizationSchema } from "@/lib/schemas/organization";
 import { websiteSchema } from "@/lib/schemas/website";
@@ -97,6 +98,9 @@ export default function HomePage() {
 
       {/* HOME-1 · HERO */}
       <HeroSectionClient />
+
+      {/* HOME-2 · SISTEMA */}
+      <SystemSectionClient />
 
       {/* HOME-2 · SINAIS */}
       <Section variant="default" paddingY="lg">
