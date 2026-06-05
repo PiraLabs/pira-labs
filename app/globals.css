@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --color-ink: #0C0F16;
+    --color-ink: #05262e;
     --color-deep-teal: #05262E;
     --color-teal: #004757;
     --color-orange: #EB5C2E;
@@ -132,3 +132,6 @@
     display: block;
   }
 }
+
+/* Hero HOME-1 — float dos nós gerenciado por GSAP (ver HeroSection.tsx).
+   prefers-reduced-motion: desabilitado no useEffect antes de iniciar os tweens. */

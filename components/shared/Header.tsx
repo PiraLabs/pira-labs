@@ -130,7 +130,7 @@ function MobileMenuItem({
   );
 }
 
-export function Header() {
+export function Header({ theme = "ink" }: { theme?: "ink" | "sand" }) {
   const pathname = usePathname();
   const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
@@ -204,11 +204,12 @@ export function Header() {
             aria-label="Pira Labs — página inicial"
           >
             <Image
-              src="/brand/logo-completo-offwhite.svg"
-              alt="Pira Labs"
+              src={theme === "sand" ? "/brand/COMPLETA_INK.svg" : "/brand/COMPLETA_BRANCA.svg"}
+              alt="Logotipo PiraLabs"
               width={286}
               height={32}
               className="h-7 md:h-8 w-auto"
+              style={{ width: "auto" }}
               priority
             />
           </Link>

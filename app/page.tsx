@@ -1,4 +1,4 @@
-export const dynamic = 'force-static';
+
 
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -7,6 +7,7 @@ import { Section } from "@/components/shared/Section";
 import { FAQ } from "@/components/shared/FAQ";
 import NodeSystem from "@/components/shared/NodeSystem";
 import { LogoVideo } from "@/components/shared/LogoVideo";
+import { HeroSectionClient } from "@/components/home/HeroSectionClient";
 import { CountUp } from "@/components/home/CountUp";
 import { organizationSchema } from "@/lib/schemas/organization";
 import { websiteSchema } from "@/lib/schemas/website";
@@ -95,32 +96,7 @@ export default function HomePage() {
       />
 
       {/* HOME-1 · HERO */}
-      <Section variant="dark" paddingY="xl" id="hero">
-        <div className="relative overflow-hidden">
-          {/* NodeSystem: nós dispersos, sem conectores. Conexão inicia conforme scroll. */}
-          <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-            <NodeSystem variant="dark" density="sparse" />
-          </div>
-          <div className="relative max-w-3xl">
-            {/* H1 em Cormorant 64–80px conforme spec */}
-            <h1 className="font-display text-5xl md:text-7xl text-off-white leading-tight mb-6">
-              Existe um momento em que transformar ainda é um processo, não uma crise.
-            </h1>
-            {/* Frase canônica — obrigatória nos primeiros 150 termos, sentença única, sem quebra */}
-            <p className="text-lg md:text-xl text-off-white/85 font-body leading-relaxed mb-10">
-              A Pira Labs é uma boutique brasileira de Creative Business Turnaround para empresas
-              de serviços que precisam agir antes que a janela se feche.
-            </p>
-            {/* 1 CTA único no hero. Sem segundo CTA. */}
-            <Link
-              href="#metodo"
-              className="inline-flex items-center justify-center min-h-[44px] px-6 py-3 rounded bg-orange text-ink font-body font-medium text-base transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
-            >
-              Entender o método
-            </Link>
-          </div>
-        </div>
-      </Section>
+      <HeroSectionClient />
 
       {/* HOME-2 · SINAIS */}
       <Section variant="default" paddingY="lg">

@@ -93,7 +93,7 @@ app/
 | `LangSetter.tsx` | Client component que seta `document.documentElement.lang` |
 | `CookieBanner.tsx` | Banner LGPD/GDPR |
 
-Home-specific: `/components/home/CountUp.tsx` (contador animado).
+Home-specific: `/components/home/CountUp.tsx` (contador animado) · `/components/home/HeroSection.tsx` (bloco hero da home).
 
 ### Padrões de implementação
 
