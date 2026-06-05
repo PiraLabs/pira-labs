@@ -12,7 +12,8 @@ import { SystemSectionClient } from "@/components/home/SystemSectionClient";
 import { SignalsSectionClient } from "@/components/home/SignalsSectionClient";
 import { CBTSectionClient } from "@/components/home/CBTSectionClient";
 import { MethodSectionClient } from "@/components/home/MethodSectionClient";
-import { FaiscaSectionClient } from "@/components/home/FaiscaSectionClient";
+import { FaiscaSectionClient } from "@/components/home/FaiscaSectionClient"
+import { ProofsSectionClient } from "@/components/home/ProofsSectionClient";
 import { CountUp } from "@/components/home/CountUp";
 import { organizationSchema } from "@/lib/schemas/organization";
 import { websiteSchema } from "@/lib/schemas/website";
@@ -117,6 +118,9 @@ export default function HomePage() {
 
       {/* HOME-6 · FAÍSCA TEASER */}
       <FaiscaSectionClient />
+
+      {/* HOME-7 · PROVAS */}
+      <ProofsSectionClient />
 
       {/* legado — manter abaixo até refactor completo */}
       <Section variant="default" paddingY="lg">
