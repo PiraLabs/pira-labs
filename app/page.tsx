@@ -14,7 +14,8 @@ import { CBTSectionClient } from "@/components/home/CBTSectionClient";
 import { MethodSectionClient } from "@/components/home/MethodSectionClient";
 import { FaiscaSectionClient } from "@/components/home/FaiscaSectionClient"
 import { ProofsSectionClient } from "@/components/home/ProofsSectionClient"
-import { FoundersSectionClient } from "@/components/home/FoundersSectionClient";
+import { FoundersSectionClient } from "@/components/home/FoundersSectionClient"
+import { EditorialSectionClient } from "@/components/home/EditorialSectionClient";
 import { CountUp } from "@/components/home/CountUp";
 import { organizationSchema } from "@/lib/schemas/organization";
 import { websiteSchema } from "@/lib/schemas/website";
@@ -125,6 +126,9 @@ export default function HomePage() {
 
       {/* HOME-8 · FUNDADORES */}
       <FoundersSectionClient />
+
+      {/* HOME-9 · ANTES, PIRA */}
+      <EditorialSectionClient />
 
       {/* legado — manter abaixo até refactor completo */}
       <Section variant="default" paddingY="lg">
