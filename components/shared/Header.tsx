@@ -23,6 +23,7 @@ type MenuItem = {
   label: string;
   href: string;
   children?: ChildItem[];
+  emberComma?: boolean;
 };
 
 const menuItems: MenuItem[] = [
@@ -61,7 +62,7 @@ const menuItems: MenuItem[] = [
       { label: "Faísca Jurídica", href: "/faisca/juridica" },
     ],
   },
-  { label: "Antes, Pira", href: "/antes-pira" },
+  { label: "Antes, Pira", href: "/antes-pira", emberComma: true },
 ];
 
 // Componente separado para item do menu mobile com submenu acordeão.
@@ -86,7 +87,9 @@ function MobileMenuItem({
             isCurrent ? "text-orange" : "text-off-white"
           }`}
         >
-          {item.label}
+          {item.emberComma ? (
+            <>Antes<span style={{ color: '#eb5c2e' }}>,</span> Pira</>
+          ) : item.label}
         </Link>
         <div className="h-px bg-off-white/10" />
       </li>
@@ -240,7 +243,9 @@ export function Header({ theme = "ink" }: { theme?: "ink" | "sand" }) {
                         : "text-off-white/80 hover:text-off-white"
                     }`}
                   >
-                    {item.label}
+                    {item.emberComma ? (
+                      <>Antes<span style={{ color: '#eb5c2e' }}>,</span> Pira</>
+                    ) : item.label}
                     {hasChildren && (
                       <span className="text-xs opacity-60" aria-hidden="true">
                         ▾

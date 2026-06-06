@@ -126,7 +126,9 @@ function FooterColumn({
                   onMouseEnter={e => (e.currentTarget.style.color = hoverColor)}
                   onMouseLeave={e => (e.currentTarget.style.color = baseStyle.color as string)}
                 >
-                  {link.label}
+                  {link.label === 'Antes, Pira' ? (
+                    <>Antes<span style={{ color: '#eb5c2e' }}>,</span> Pira</>
+                  ) : link.label}
                   <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               ) : (
@@ -137,7 +139,9 @@ function FooterColumn({
                   onMouseEnter={e => (e.currentTarget.style.color = hoverColor)}
                   onMouseLeave={e => (e.currentTarget.style.color = baseStyle.color as string)}
                 >
-                  {link.label}
+                  {link.label === 'Antes, Pira' ? (
+                    <>Antes<span style={{ color: '#eb5c2e' }}>,</span> Pira</>
+                  ) : link.label}
                 </Link>
               )}
             </li>
@@ -174,22 +178,23 @@ export function Footer() {
           ))}
         </div>
 
+        {/* Slogan — assinatura de marca, acima do separador */}
+        <div style={{ marginBottom: '48px' }}>
+          <p
+            style={{
+              fontSize: 'clamp(32px, 4vw, 52px)',
+              fontWeight: 300,
+              color: 'rgba(245,245,242,0.5)',
+              letterSpacing: '-0.02em',
+              lineHeight: 1.1,
+            }}
+          >
+            Liberamos o próximo nível.
+          </p>
+        </div>
+
         {/* Separador */}
         <div className="h-px mb-8" style={{ backgroundColor: 'rgba(245,245,242,0.1)' }} />
-
-        {/* Slogan */}
-        <p
-          className="text-center mb-8"
-          style={{
-            fontFamily: 'inherit',
-            fontSize: '20px',
-            fontWeight: 300,
-            color: 'rgba(245,245,242,0.35)',
-            letterSpacing: '0.02em',
-          }}
-        >
-          Liberamos o próximo nível.
-        </p>
 
         {/* Links legais */}
         <div
