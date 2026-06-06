@@ -87,7 +87,7 @@ function FAQItem({
         <span
           className="font-display"
           style={{
-            fontSize: "clamp(16px, 1.5vw, 20px)",
+            fontSize: "clamp(18px, 1.8vw, 24px)",
             fontWeight: isOpen ? 500 : 400,
             color: isOpen ? "#F5F5F2" : "rgba(245,245,242,0.7)",
             lineHeight: 1.35,
@@ -106,7 +106,7 @@ function FAQItem({
             alignItems: "center",
             justifyContent: "center",
             marginTop: "2px",
-            color: isOpen ? "#eb5c2e" : "rgba(245,245,242,0.4)",
+            color: isOpen ? "#eb5c2e" : "rgba(245,245,242,0.5)",
             fontSize: "22px",
             fontWeight: 300,
             lineHeight: 1,
@@ -143,7 +143,7 @@ function FAQItem({
 export function FAQSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const [visible, setVisible] = useState(false)
-  const [openIndex, setOpenIndex] = useState<number>(0)
+  const [openIndex, setOpenIndex] = useState<number>(-1)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -208,6 +208,7 @@ export function FAQSection() {
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: "0 80px",
+            alignItems: "start",
           }}
         >
           {/* Coluna 1 */}
