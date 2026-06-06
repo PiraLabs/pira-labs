@@ -17,6 +17,7 @@ import { ProofsSectionClient } from "@/components/home/ProofsSectionClient"
 import { FoundersSectionClient } from "@/components/home/FoundersSectionClient"
 import { EditorialSectionClient } from "@/components/home/EditorialSectionClient"
 import { FAQSectionClient } from "@/components/home/FAQSectionClient";
+import { FinalCTASectionClient } from "@/components/home/FinalCTASectionClient";
 import { CountUp } from "@/components/home/CountUp";
 import { organizationSchema } from "@/lib/schemas/organization";
 import { websiteSchema } from "@/lib/schemas/website";
@@ -133,6 +134,9 @@ export default function HomePage() {
 
       {/* HOME-10 · FAQ */}
       <FAQSectionClient />
+
+      {/* HOME-11 · CTA FINAL */}
+      <FinalCTASectionClient />
 
       {/* legado — manter abaixo até refactor completo */}
       <Section variant="default" paddingY="lg">
