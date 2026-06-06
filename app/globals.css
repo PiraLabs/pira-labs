@@ -11,6 +11,11 @@
     --color-off-white: #E8E0D6;
   }
 
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   html {
     scroll-behavior: smooth;
   }
