@@ -8,7 +8,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#0C0F16",
+        ink: "#05262e",
         "deep-teal": "#05262E",
         teal: "#004757",
         orange: "#EB5C2E",

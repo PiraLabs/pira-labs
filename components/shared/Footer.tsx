@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { SOCIAL } from "@/lib/constants";
-import { LegalNotice } from "./LegalNotice";
 
 const footerColumns = [
   {
@@ -19,18 +18,20 @@ const footerColumns = [
   {
     heading: "O que fazemos",
     links: [
-      { label: "Inspira", href: "/inspira" },
-      { label: "Oxigênio IA Search", href: "/inspira/oxigenio" },
-      { label: "Transpira", href: "/transpira" },
-      { label: "Faísca", href: "/faisca" },
+      { label: "INSPIRA", href: "/inspira", main: true },
+      { label: "Oxigênio", href: "/inspira/oxigenio", sub: true },
+      { label: "pocket do INSPIRA", href: "/faisca/pocket", sub: true },
+      { label: "TRANSPIRA", href: "/transpira", main: true },
+      { label: "Faísca", href: "/faisca", main: true },
+      { label: "Imersão em IA", href: "/faisca/imersa-em-ia", sub: true },
     ],
   },
   {
-    heading: "Vertical Jurídica",
+    heading: "Jurídico",
     links: [
-      { label: "Inspira Jurídico", href: "/inspira/juridico" },
-      { label: "Transpira Jurídico", href: "/transpira/juridico" },
-      { label: "Faísca Jurídica", href: "/faisca/juridica" },
+      { label: "INSPIRA Jurídico", href: "/inspira/juridico", main: true },
+      { label: "TRANSPIRA Jurídico", href: "/transpira/juridico", main: true },
+      { label: "Faísca Jurídica", href: "/faisca/juridica", main: true },
     ],
   },
   {
@@ -40,7 +41,7 @@ const footerColumns = [
         label: "inspira@piralabs.com.br",
         href: "mailto:inspira@piralabs.com.br",
         external: false,
-        ariaLabel: "Enviar email para Pira Labs",
+        ariaLabel: "Enviar email para a Pira Labs",
       },
       { label: "LinkedIn Pira Labs", href: SOCIAL.PIRA_LINKEDIN, external: true },
       { label: "LinkedIn Gabriela Aguiar", href: SOCIAL.GABRIELA_LINKEDIN, external: true },
@@ -54,14 +55,29 @@ function FooterColumn({
   links,
 }: {
   heading: string;
-  links: { label: string; href: string; external?: boolean; ariaLabel?: string }[];
+  links: {
+    label: string;
+    href: string;
+    external?: boolean;
+    ariaLabel?: string;
+    main?: boolean;
+    sub?: boolean;
+  }[];
 }) {
   const [open, setOpen] = useState(false);
 
   return (
     <section>
       {/* Desktop: heading estático */}
-      <h2 className="hidden md:block text-xs font-semibold uppercase tracking-widest text-off-white/50 mb-4 font-body">
+      <h2
+        className="hidden md:block uppercase tracking-widest mb-4"
+        style={{
+          fontSize: '10px',
+          fontWeight: 700,
+          color: '#F5F5F2',
+          fontFamily: 'inherit',
+        }}
+      >
         {heading}
       </h2>
 
@@ -70,41 +86,63 @@ function FooterColumn({
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="md:hidden w-full flex items-center justify-between py-3 text-sm font-semibold uppercase tracking-widest text-off-white/50 font-body focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
+        className="md:hidden w-full flex items-center justify-between py-3 uppercase tracking-widest"
+        style={{ fontSize: '10px', fontWeight: 700, color: '#F5F5F2' }}
       >
         {heading}
-        <span className={`text-xs transition-transform duration-200 ${open ? "rotate-180" : ""}`} aria-hidden="true">▾</span>
+        <span
+          className={`text-xs transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          aria-hidden="true"
+        >
+          ▾
+        </span>
       </button>
-      <div className="h-px bg-off-white/10 md:hidden" />
+      <div className="h-px md:hidden" style={{ backgroundColor: 'rgba(245,245,242,0.1)' }} />
 
       {/* Links */}
       <ul className={`space-y-2 mt-2 md:mt-0 md:block ${open ? "block" : "hidden"}`}>
-        {links.map((link) =>
-          link.external ? (
+        {links.map((link) => {
+          const baseStyle: React.CSSProperties = {
+            fontSize: link.sub ? '12px' : '13px',
+            color: link.sub ? 'rgba(245,245,242,0.35)' : 'rgba(245,245,242,0.6)',
+            textDecoration: 'none',
+            paddingLeft: link.sub ? '12px' : '0',
+            display: 'block',
+            transition: 'color 0.2s',
+            fontWeight: 300,
+          }
+
+          const hoverColor = 'rgba(245,245,242,0.9)'
+
+          return (
             <li key={link.href}>
-              <a
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={link.ariaLabel || `${link.label} (abre em nova aba)`}
-                className="text-sm font-body text-off-white/60 hover:text-off-white transition-colors"
-              >
-                {link.label}
-                <span className="sr-only"> (abre em nova aba)</span>
-              </a>
-            </li>
-          ) : (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                aria-label={link.ariaLabel}
-                className="text-sm font-body text-off-white/60 hover:text-off-white transition-colors"
-              >
-                {link.label}
-              </Link>
+              {link.external ? (
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={link.ariaLabel || `${link.label} (abre em nova aba)`}
+                  style={baseStyle}
+                  onMouseEnter={e => (e.currentTarget.style.color = hoverColor)}
+                  onMouseLeave={e => (e.currentTarget.style.color = baseStyle.color as string)}
+                >
+                  {link.label}
+                  <span className="sr-only"> (abre em nova aba)</span>
+                </a>
+              ) : (
+                <Link
+                  href={link.href}
+                  aria-label={link.ariaLabel}
+                  style={baseStyle}
+                  onMouseEnter={e => (e.currentTarget.style.color = hoverColor)}
+                  onMouseLeave={e => (e.currentTarget.style.color = baseStyle.color as string)}
+                >
+                  {link.label}
+                </Link>
+              )}
             </li>
           )
-        )}
+        })}
       </ul>
     </section>
   );
@@ -112,17 +150,17 @@ function FooterColumn({
 
 export function Footer() {
   return (
-    <footer role="contentinfo" className="bg-ink pt-16 pb-8 md:pt-20 md:pb-10">
+    <footer role="contentinfo" style={{ backgroundColor: '#05262e' }} className="pt-16 pb-8 md:pt-20 md:pb-10">
       <div className="container-site">
         {/* Logo */}
         <Link
           href="/"
-          className="inline-block mb-10 hover:opacity-80 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
+          className="inline-block mb-10 hover:opacity-80 transition-opacity"
           aria-label="Pira Labs — página inicial"
         >
           <Image
-            src="/brand/logo-completo-offwhite.svg"
-            alt="Pira Labs"
+            src="/brand/COMPLETA_OFFWHITE.svg"
+            alt="Logotipo PiraLabs"
             width={286}
             height={32}
             className="h-8 w-auto"
@@ -137,39 +175,69 @@ export function Footer() {
         </div>
 
         {/* Separador */}
-        <div className="h-px bg-off-white/10 mb-8" />
+        <div className="h-px mb-8" style={{ backgroundColor: 'rgba(245,245,242,0.1)' }} />
 
-        {/* Assinatura Cormorant */}
-        <p className="font-display text-2xl italic text-orange text-center mb-8">
+        {/* Slogan */}
+        <p
+          className="text-center mb-8"
+          style={{
+            fontFamily: 'inherit',
+            fontSize: '20px',
+            fontWeight: 300,
+            color: 'rgba(245,245,242,0.35)',
+            letterSpacing: '0.02em',
+          }}
+        >
           Liberamos o próximo nível.
         </p>
 
         {/* Links legais */}
-        <div className="flex flex-wrap justify-center gap-4 mb-6 text-xs font-body text-off-white/40">
-          <Link href="/politica-privacidade" className="hover:text-off-white/70 transition-colors">
+        <div
+          className="flex flex-wrap justify-center gap-4 mb-6"
+          style={{ fontSize: '12px', color: 'rgba(245,245,242,0.35)' }}
+        >
+          <Link
+            href="/politica-privacidade"
+            style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }}
+            onMouseEnter={e => (e.currentTarget.style.color = 'rgba(245,245,242,0.7)')}
+            onMouseLeave={e => (e.currentTarget.style.color = 'rgba(245,245,242,0.35)')}
+          >
             Política de Privacidade
           </Link>
           <span aria-hidden="true">·</span>
-          <Link href="/termos" className="hover:text-off-white/70 transition-colors">
+          <Link
+            href="/termos"
+            style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }}
+            onMouseEnter={e => (e.currentTarget.style.color = 'rgba(245,245,242,0.7)')}
+            onMouseLeave={e => (e.currentTarget.style.color = 'rgba(245,245,242,0.35)')}
+          >
             Termos de Uso
           </Link>
           <span aria-hidden="true">·</span>
-          <Link href="/cookies" className="hover:text-off-white/70 transition-colors">
+          <Link
+            href="/cookies"
+            style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }}
+            onMouseEnter={e => (e.currentTarget.style.color = 'rgba(245,245,242,0.7)')}
+            onMouseLeave={e => (e.currentTarget.style.color = 'rgba(245,245,242,0.35)')}
+          >
             Aviso de Cookies
           </Link>
         </div>
 
         {/* CNPJ e copyright */}
-        <p className="text-xs font-body text-off-white/30 text-center mb-1">
+        <p
+          className="text-center mb-1"
+          style={{ fontSize: '12px', color: 'rgba(245,245,242,0.25)' }}
+        >
           Pira Labs · CNPJ 46.954.891/0001-16 · São Paulo, Brasil
         </p>
-        {/* suppressHydrationWarning evita mismatch SSR/cliente no getFullYear() */}
-        <p className="text-xs font-body text-off-white/30 text-center mb-6" suppressHydrationWarning>
+        <p
+          className="text-center mb-6"
+          style={{ fontSize: '12px', color: 'rgba(245,245,242,0.25)' }}
+          suppressHydrationWarning
+        >
           © {new Date().getFullYear()} Pira Labs. Todos os direitos reservados.
         </p>
-
-        {/* Aviso jurídico */}
-        <LegalNotice variant="short" />
       </div>
     </footer>
   );

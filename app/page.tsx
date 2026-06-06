@@ -179,7 +179,7 @@ export default function HomePage() {
         <div className="relative overflow-hidden">
           {/* NodeSystem: conexão completa ao chegar na seção */}
           <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-            <NodeSystem variant="dark" density="medium" />
+            <NodeSystem density="medium" />
           </div>
           <div className="relative">
             <h2 className="text-3xl md:text-4xl font-body font-semibold text-off-white mb-3">
@@ -270,7 +270,7 @@ export default function HomePage() {
         <div className="relative overflow-hidden">
           {/* NodeSystem: três origens convergindo para nó de resultado */}
           <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-            <NodeSystem variant="dark" density="dense" />
+            <NodeSystem density="dense" />
           </div>
           <div className="relative">
             <h2 className="text-3xl md:text-4xl font-body font-semibold text-off-white mb-3">

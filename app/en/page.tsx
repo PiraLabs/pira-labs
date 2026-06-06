@@ -88,7 +88,7 @@ export default function EnHomePage() {
       <Section variant="dark" paddingY="xl" id="hero">
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-            <NodeSystem variant="dark" density="sparse" />
+            <NodeSystem density="sparse" />
           </div>
           <div className="relative max-w-3xl">
             <h1 className="font-display text-5xl md:text-7xl text-off-white leading-tight mb-6">
@@ -150,7 +150,7 @@ export default function EnHomePage() {
       <Section variant="highlighted" paddingY="lg" id="method">
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-            <NodeSystem variant="dark" density="medium" />
+            <NodeSystem density="medium" />
           </div>
           <div className="relative">
             <h2 className="text-3xl md:text-4xl font-body font-semibold text-off-white mb-3">
@@ -232,7 +232,7 @@ export default function EnHomePage() {
       <Section variant="default" paddingY="lg" id="proofs">
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-            <NodeSystem variant="dark" density="dense" />
+            <NodeSystem density="dense" />
           </div>
           <div className="relative">
             <h2 className="text-3xl md:text-4xl font-body font-semibold text-off-white mb-3">

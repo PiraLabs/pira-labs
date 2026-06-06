@@ -36,7 +36,8 @@ Scripts disponíveis (referência — não executar via bash):
 
 ## Arquitetura técnica
 
-**Stack:** Next.js 15 App Router · React 19 · TypeScript · Tailwind CSS 3 · Vercel
+**Stack:** Next.js 16.2.6 App Router · React 19 · TypeScript · Tailwind CSS 3 · Vercel
+**Animações:** GSAP 3.15 (produção) — ScrollTrigger e float no home; importar de `gsap/ScrollTrigger`
 **Conteúdo em .tsx** (não .mdx — decisão deliberada)
 **Renderização:** todas as páginas usam `export const dynamic = 'force-static'` (SSG puro)
 
@@ -54,8 +55,6 @@ app/
 ├── en/
 │   ├── layout.tsx          # define document.lang="en" via LangSetter
 │   ├── page.tsx            # home EN
-│   ├── about/
-│   ├── contact/
 │   └── creative-business-turnaround/
 ├── sobre/                  # fundadores (Gabriela + Celso)
 ├── contato/                # formulário Fillout embed
@@ -73,8 +72,10 @@ app/
 │   └── juridica/
 ├── creative-business-turnaround/
 ├── antes-pira/             # blog/conteúdo (URL canônica: /antes-pira, não /blog)
-├── diagnostico-empresa-servicos/
-├── crescimento-sem-margem/
+│   └── arquivo/            # placeholder — "Em breve"
+├── como-pensamos/          # placeholder — "Em breve"
+├── podcast/                # placeholder — "Em breve"
+├── glossario/              # placeholder — "Em breve"
 └── cookies/ · politica-privacidade/ · termos/
 ```
 
@@ -83,17 +84,35 @@ app/
 | Componente | Função |
 |---|---|
 | `Header.tsx` | Nav com mega-menu desktop + accordion mobile + toggle de idioma |
-| `Footer.tsx` | Colunas com accordion mobile |
+| `Footer.tsx` | Colunas com accordion mobile + `LegalNotice` |
 | `Section.tsx` | Wrapper com variants: `dark` \| `default` \| `highlighted` + padding presets |
 | `NodeSystem.tsx` | Canvas animado com nós (ver seção abaixo) |
 | `CTAButton.tsx` | Link com prop `origin` para rastreamento (18 origens canônicas em `lib/constants.ts`) |
+| `CTAWithMicrocopy.tsx` | CTA com linha de texto auxiliar abaixo |
+| `FinalCTA.tsx` | Bloco de encerramento de página com CTA |
 | `FAQ.tsx` | `<details>`/`<summary>` nativos + JSON-LD FAQPage inline |
 | `FilloutEmbed.tsx` | iframe do formulário Fillout |
 | `Breadcrumbs.tsx` | Trilha de navegação + JSON-LD BreadcrumbList |
+| `PageHeader.tsx` | Cabeçalho de página interna (título + subtítulo) |
+| `OfferHero.tsx` | Hero de página de oferta (produto/serviço) |
+| `TargetProfile.tsx` | Bloco "para quem é" com lista de perfis |
+| `ProcessSteps.tsx` | Etapas numeradas de processo |
+| `FounderProfile.tsx` | Card de fundador (foto + bio) |
+| `UnifiedContract.tsx` | Bloco de contrato/proposta unificada |
+| `TranspiraConfigurations.tsx` | Variantes de configuração do TRANSPIRA |
+| `FaiscaGroup1/2/3.tsx` | Grupos de conteúdo da página Faísca |
+| `MediaKit.tsx` | Bloco de kit de mídia |
+| `LogoVideo.tsx` | Exibição de vídeo do logo |
+| `LegalNotice.tsx` | Aviso jurídico (variant: `"short"` \| `"full"`) |
+| `SkipLink.tsx` | Link de acessibilidade "pular para conteúdo" |
 | `LangSetter.tsx` | Client component que seta `document.documentElement.lang` |
 | `CookieBanner.tsx` | Banner LGPD/GDPR |
+| `CookieBannerLoader.tsx` | Lazy loader do CookieBanner (importado no root layout) |
+| `HowFirstContact.tsx` | Bloco "como funciona o primeiro contato" |
 
-Home-specific: `/components/home/CountUp.tsx` (contador animado) · `/components/home/HeroSection.tsx` (bloco hero da home).
+Home-specific (`/components/home/`): cada seção usa par duplo de arquivos. `*SectionClient.tsx` é um thin wrapper `'use client'` que usa `dynamic()` com `{ ssr: false }` para desabilitar SSR do componente GSAP. `*Section.tsx` contém o conteúdo real com as animações. Exemplo: `HeroSectionClient.tsx` importa dinamicamente `HeroSection.tsx`. Seções existentes: Hero · System · Signals · CBT · Method · Faisca · Proofs · Founders · Editorial · FAQ · FinalCTA. `CountUp.tsx` é componente auxiliar de contador animado.
+
+`components/Nav.tsx` e `components/Footer.tsx` na raiz de components são legado — os ativos são `components/shared/Header.tsx` e `components/shared/Footer.tsx`.
 
 ### Padrões de implementação
 
@@ -121,6 +140,15 @@ export const metadata: Metadata = {
 <FAQ items={faqItems} />  // gera details/summary + JSON-LD automaticamente
 ```
 
+**CSS utilities customizadas (globals.css — não recriar via Tailwind):**
+- `.emphasis-italic` — AtypDisplay italic weight 500 (frases canônicas, citações, números de destaque)
+- `.container-site` — max-width 1200px com padding fluid via clamp
+- `.section-padding` — padding-top/bottom 80px mobile / 120px desktop
+- `.btn-primary` — botão laranja, texto ink (WCAG AA verificado: contraste 4.7:1)
+- `.btn-secondary` — botão outline off-white
+
+**Código legado em `app/page.tsx`:** a partir da linha 138 existe um bloco marcado `/* legado — manter abaixo até refactor completo */` com seções duplicadas das HOME-3 a HOME-8 antigas. Não deletar sem instrução do Celso.
+
 ### Schemas SEO (`/lib/schemas/`)
 
 - `organization.ts` — Organization + LocalBusiness com fundadores, credentials MIT, sameAs links
@@ -134,11 +162,11 @@ Todos injetados via `<script type="application/ld+json">` no corpo dos component
 
 `lib/i18n.ts` é legado — não usar para novas implementações, não deletar sem confirmação.
 O padrão atual é conteúdo duplicado em componentes PT e EN separados (não dicionário dinâmico).
-Rotas EN são MVP mínimo: apenas home, about, contact, creative-business-turnaround.
+Rotas EN são MVP mínimo: apenas home e creative-business-turnaround (about e contact foram removidos).
 
 ### NodeSystem (canvas animado)
 
-Props: `density: "sparse"(5) | "medium"(10) | "dense"(19)` · `colorScheme: "dark" | "light"`
+Props: `density: "sparse"(5) | "medium"(10) | "dense"(19)` · `variant: "dark" | "light"`
 
 4 estados de nó com easing de 800ms cada. Respeita `prefers-reduced-motion`. Conexões entre nós a menos de 200px com opacidade proporcional à distância.
 
@@ -183,18 +211,19 @@ Turbopack está **desabilitado** (`experimental.turbopack: false`) — usar webp
 
 ## Design tokens canônicos
 
-```ts
-ink:        "#05262e"
-teal:       "#004757"
-ember:      "#eb5c2e"
-sand:       "#e8e0d6"
-tealMid:    "#1A5568"
-emberDeep:  "#C4421A"
-white:      "#F5F5F2"
-black:      "#000000"
-```
+| Conceito | Hex | Classe Tailwind |
+|---|---|---|
+| ink | `#05262e` | `bg-ink` / `text-ink` |
+| teal | `#004757` | `bg-teal` / `text-teal` |
+| ember | `#EB5C2E` | `bg-orange` / `text-orange` |
+| sand / off-white | `#E8E0D6` | `bg-off-white` / `text-off-white` |
+| tealMid | `#1A5568` | — (uso inline) |
+| emberDeep | `#C4421A` | — (uso inline) |
+| white | `#F5F5F2` | — (uso inline) |
 
-Tokens extintos — nunca usar: #0C0F16 · #05262D · #EA6335 · #F2A85E
+> O Tailwind usa `orange` para ember e `off-white` para sand — nomes distintos do manual de marca. Usar as classes Tailwind no código, os nomes do manual no copy e documentação.
+
+Tokens extintos — nunca usar: `#0C0F16` · `#05262D` · `#EA6335` · `#F2A85E`
 
 Regra do Ember: uma ocorrência singular por contexto visual. Nunca fundo de seção, CTA preenchido ou label.
 
@@ -202,12 +231,14 @@ Regra do Ember: uma ocorrência singular por contexto visual. Nunca fundo de se�
 
 ## Tipografia
 
-Fonte exclusiva: AtypDisplay (arquivos em public/fonts/)
-Fallback: Inter → Helvetica Neue → Arial → sans-serif
+Fontes exclusivas: AtypDisplay (títulos, CTAs) + AtypText (corpo, nav, UI) — arquivos em `public/fonts/`
+Fallback: `'Plus Jakarta Sans', sans-serif` (configurado em `tailwind.config.ts` e `layout.tsx`)
 Space Grotesk e Cormorant Garamond estão extintos neste projeto.
 
-CSS vars: `--font-atyp-display` (títulos, CTAs) · `--font-atyp-text` (corpo, nav, formulários)
-Classes Tailwind: `font-display` / `font-body` (aliases configurados no tailwind.config.ts)
+CSS vars: `--font-atyp-display` · `--font-atyp-text`
+Classes Tailwind: `font-display` / `font-body` (aliases para as vars acima; `font-atypDisplay` e `font-atypText` também disponíveis)
+
+Nota: `AtypText-Regular` ainda não disponível — `AtypText-Medium (500)` serve como 400 até chegar.
 
 ---
 
@@ -231,6 +262,23 @@ Travessão (—) · "em paralelo" · "neste contexto" · "além disso" · "por f
 
 ---
 
+## Assets de marca (`/public/brand/`)
+
+Nomenclatura atual (pós-redesign jun/2026):
+
+| Arquivo | Uso |
+|---|---|
+| `COMPLETA_OFFWHITE.svg` | Logo completo fundo escuro (footer, header dark) |
+| `COMPLETA_BRANCA.svg` | Logo completo branco puro |
+| `COMPLETA_INK.svg` | Logo completo ink (fundo claro) |
+| `ICONE_BRANCO.svg` / `ICONE_INK.svg` / `ICONE_SAND.svg` | Ícone isolado nas três variações |
+| `FAISCA_Ink_transp.svg` / `FAISCA_Sand_transp.svg` | Símbolo Faísca (PNG e SVG disponíveis) |
+| `INSPIRA_Ink_Sand.png` / `RESPIRA_Ink_Sand.png` / `TRANSPIRA_Ink_Sand.png` | Wordmarks de submarcas |
+
+Arquivos antigos `logo-completo-*.svg` e `logo-icone-*.svg` foram deletados. Não referenciar.
+
+---
+
 ## Estado atual do repositório
 
 - Build: passando
@@ -240,6 +288,7 @@ Travessão (—) · "em paralelo" · "neste contexto" · "além disso" · "por f
 - lib/i18n.ts: legado — não usar, não deletar sem confirmação
 - Foto home: /nos.png (aprovada, não substituir)
 - Fotos /sobre: placeholder intencional — não gerar nem substituir sem instrução do Celso
+- Playwright (`^1.59.1`): instalado como devDep, sem testes escritos até jun/2026
 
 ---
 
