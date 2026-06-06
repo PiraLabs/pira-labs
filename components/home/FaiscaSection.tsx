@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { CTAButton } from '@/components/ui/CTAButton'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -243,29 +244,7 @@ export function FaiscaSection() {
 
         {/* CTA */}
         <div style={{ marginTop: "56px", display: "flex", justifyContent: "center" }}>
-          <Link
-            href="/faisca"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              minHeight: "44px",
-              border: `2px solid ${INK}`,
-              color: INK,
-              backgroundColor: "transparent",
-              fontFamily: "var(--font-atyp-text)",
-              fontWeight: 600,
-              fontSize: "13px",
-              letterSpacing: "0.10em",
-              textTransform: "uppercase",
-              padding: "16px 32px",
-              borderRadius: "2px",
-              boxShadow: "0 2px 8px rgba(5,38,46,0.15)",
-              textDecoration: "none",
-            }}
-          >
-            VER TODAS AS PORTAS DE ENTRADA
-          </Link>
+          <CTAButton href="/faisca" label="VER TODAS AS PORTAS DE ENTRADA" theme="light" />
         </div>
 
       </div>

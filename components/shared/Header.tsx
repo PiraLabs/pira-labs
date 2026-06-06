@@ -304,9 +304,10 @@ export function Header({ theme = "ink" }: { theme?: "ink" | "sand" }) {
             </div>
             <Link
               href={ctaHref}
-              className="min-h-[44px] px-5 py-3 bg-orange text-ink font-body font-medium text-sm rounded transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
+              className="min-h-[44px] inline-flex items-center transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2"
+              style={{ backgroundColor: '#eb5c2e', color: '#F5F5F2', fontSize: '13px', fontWeight: 600, letterSpacing: '0.10em', textTransform: 'uppercase', padding: '12px 24px', borderRadius: '2px' }}
             >
-              Respire
+              RESPIRE
             </Link>
           </div>
 
@@ -368,9 +369,10 @@ export function Header({ theme = "ink" }: { theme?: "ink" | "sand" }) {
             <div className="pt-4">
               <Link
                 href={ctaHref}
-                className="block w-full text-center min-h-[52px] px-6 py-4 bg-orange text-ink font-body font-medium text-base rounded transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
+                className="block w-full text-center min-h-[52px] transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2"
+                style={{ backgroundColor: '#eb5c2e', color: '#F5F5F2', fontSize: '13px', fontWeight: 600, letterSpacing: '0.10em', textTransform: 'uppercase', padding: '16px 24px', borderRadius: '2px' }}
               >
-                Respire
+                RESPIRE
               </Link>
             </div>
           </nav>

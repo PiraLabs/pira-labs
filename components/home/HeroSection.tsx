@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react"
 import Link from "next/link"
 import gsap from "gsap"
+import { CTAButton } from '@/components/ui/CTAButton'
 
 /* Artboard 1 — geometria canônica KZ sobre Sand #e8e0d6.
    Os 2 pontos originalmente Ember (#ec6336) recoloridos para TealMid #1A5568.
@@ -202,23 +203,8 @@ export function HeroSection() {
               reputação e voltar a crescer com margem, antes que a janela se feche.
             </p>
 
-            {/* CTA único — VER OS SINAIS → #sinais. Outline Ink 2px. */}
-            <Link
-              href="#sinais"
-              className="inline-flex items-center justify-center min-h-[44px] font-body font-semibold uppercase transition-transform duration-150 hover:scale-[1.02] focus-visible:outline-2 focus-visible:outline-offset-2"
-              style={{
-                border: "2px solid #05262e",
-                color: "#05262e",
-                backgroundColor: "transparent",
-                fontSize: "13px",
-                letterSpacing: "0.10em",
-                padding: "16px 32px",
-                borderRadius: "2px",
-                boxShadow: "0 2px 8px rgba(5,38,46,0.15)",
-              }}
-            >
-              VER OS SINAIS
-            </Link>
+            {/* CTA único — VER OS SINAIS → #sinais. */}
+            <CTAButton href="#sinais" label="VER OS SINAIS" theme="light" />
           </div>
 
         </div>

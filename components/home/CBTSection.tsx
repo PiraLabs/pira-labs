@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { CTAButton } from '@/components/ui/CTAButton'
 
 /* HOME-4 · Creative Business Turnaround · fundo Teal #004757
    Conteúdo estático — sem animação, sem Ember. Server Component. */
@@ -98,25 +98,7 @@ export function CBTSection() {
         </div>
 
         {/* CTA */}
-        <Link
-          href="/creative-business-turnaround"
-          className="inline-flex items-center justify-center min-h-[44px] transition-transform duration-150 hover:scale-[1.02] focus-visible:outline-2 focus-visible:outline-offset-2"
-          style={{
-            border: `2px solid ${WHITE}`,
-            color: WHITE,
-            backgroundColor: "transparent",
-            fontFamily: "var(--font-atyp-text), sans-serif",
-            fontWeight: 600,
-            fontSize: "13px",
-            letterSpacing: "0.10em",
-            textTransform: "uppercase",
-            padding: "16px 32px",
-            borderRadius: "2px",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
-          }}
-        >
-          LER A CATEGORIA
-        </Link>
+        <CTAButton href="/creative-business-turnaround" label="LER A CATEGORIA" theme="dark" />
 
       </div>
     </section>
