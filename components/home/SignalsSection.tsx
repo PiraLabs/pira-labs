@@ -151,7 +151,7 @@ export function SignalsSection() {
         >
           Os sinais aparecem{" "}
           <span style={{ color: EMBER }}>antes</span>{" "}
-          da crise. O problema é que quase ninguém para para lê-los.
+          da crise. O problema é que quase ninguém sabe lê-los.
         </h2>
 
         {/* Lista tipográfica */}
