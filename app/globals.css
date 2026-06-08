@@ -5,7 +5,6 @@
 @layer base {
   :root {
     --color-ink: #05262e;
-    --color-deep-teal: #05262E;
     --color-teal: #004757;
     --color-orange: #EB5C2E;
     --color-off-white: #E8E0D6;
@@ -24,14 +23,14 @@
   body {
     background-color: var(--color-deep-teal);
     color: var(--color-off-white);
-    font-family: var(--font-atyp-text), 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-atyp-text), sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   /* AtypDisplay — H1–H4, wordmark. */
   h1, h2, h3, h4 {
-    font-family: var(--font-atyp-display), 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-atyp-display), sans-serif;
     font-weight: 600;
     line-height: 1.15;
   }
@@ -45,7 +44,7 @@
     color: var(--color-ink);
     padding: 8px 16px;
     z-index: 100;
-    font-family: var(--font-atyp-text), 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-atyp-text), sans-serif;
     font-weight: 500;
   }
 
@@ -65,11 +64,11 @@
   .emphasis-italic {
     font-style: italic;
     font-weight: 500;
-    font-family: var(--font-atyp-display), 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-atyp-display), sans-serif;
   }
 
   .font-display {
-    font-family: var(--font-atyp-display), 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-atyp-display), sans-serif;
   }
 
   /* ATENÇÃO: botão primário usa ink (#0C0F16) como texto.
@@ -78,7 +77,7 @@
   .btn-primary {
     background-color: var(--color-orange);
     color: var(--color-ink);
-    font-family: var(--font-atyp-text), 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-atyp-text), sans-serif;
     font-weight: 500;
     padding: 0.75rem 1.5rem;
     border-radius: 0.25rem;
@@ -96,7 +95,7 @@
     background-color: transparent;
     border: 1px solid var(--color-off-white);
     color: var(--color-off-white);
-    font-family: var(--font-atyp-text), 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-atyp-text), sans-serif;
     font-weight: 500;
     padding: 0.75rem 1.5rem;
     border-radius: 0.25rem;
