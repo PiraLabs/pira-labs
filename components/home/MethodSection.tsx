@@ -1,73 +1,73 @@
 import Link from "next/link"
 
-/* HOME-5 · Método · fundo Teal #004757 · id="metodo"
+/* HOME-5 · Método · fundo Ink #05262e · id="metodo"
    Geometria canônica Manual v3 — coordenadas fixas, não alterar.
    RESPIRA: AtypDisplay Light 300 obrigatório. Bola +45° Ember = único Ember desta seção. */
 
 const WHITE = "#F5F5F2"
-const TEAL  = "#004757"
+const INK   = "#05262e"
 
 function InspiraSVG() {
   return (
-    <svg viewBox="0 0 100 120" width={180} style={{ height: "auto", display: "block", marginBottom: "16px" }}>
-      {/* Nó central com gap */}
-      <path d="M50,55 m-20,0 a20,20 0 0,1 40,0" fill="#e8e0d6" stroke="none" />
-      <path d="M50,55 m-20,0 a20,20 0 0,0 40,0" fill="#e8e0d6" stroke="none" />
-      <rect x="30" y="52" width="40" height="6" fill="#004757" stroke="none" />
-      {/* Bola -45° vazia */}
-      <circle cx="22" cy="28" r="11" fill="none" stroke="#e8e0d6" strokeWidth="1.5" />
-      {/* Bola +45° cheia */}
-      <circle cx="78" cy="28" r="11" fill="#e8e0d6" stroke="none" />
+    <svg viewBox="0 0 120 130" width={216} style={{ height: "auto", display: "block", marginBottom: "16px" }}>
       {/* Conectores */}
-      <line x1="34" y1="42" x2="29" y2="37" stroke="#e8e0d6" strokeWidth="1" opacity="0.4" />
-      <line x1="66" y1="42" x2="71" y2="37" stroke="#e8e0d6" strokeWidth="1" opacity="0.4" />
+      <line x1="46" y1="67" x2="33" y2="47" stroke="#F5F5F2" strokeWidth="1" strokeLinecap="square" opacity="0.5" />
+      <line x1="74" y1="67" x2="87" y2="47" stroke="#F5F5F2" strokeWidth="1" strokeLinecap="square" opacity="0.5" />
+      {/* Bola -45° vazia */}
+      <circle cx="25" cy="38" r="11" fill="none" stroke="#F5F5F2" strokeWidth="1.5" />
+      {/* Bola +45° cheia */}
+      <circle cx="95" cy="38" r="11" fill="#F5F5F2" />
+      {/* Nó central cheio */}
+      <circle cx="60" cy="80" r="18" fill="#F5F5F2" />
+      {/* Retângulo de corte — gap horizontal */}
+      <rect x="42" y="77" width="36" height="6" fill="#05262e" />
     </svg>
   )
 }
 
 function TranspiraSVG() {
   return (
-    <svg viewBox="0 0 100 120" width={180} style={{ height: "auto", display: "block", marginBottom: "16px" }}>
-      {/* Nó central com gap */}
-      <path d="M50,65 m-20,0 a20,20 0 0,1 40,0" fill="#e8e0d6" stroke="none" />
-      <path d="M50,65 m-20,0 a20,20 0 0,0 40,0" fill="#e8e0d6" stroke="none" />
-      <rect x="30" y="62" width="40" height="6" fill="#004757" stroke="none" />
-      {/* Bola -45° cheia */}
-      <circle cx="18" cy="38" r="11" fill="#e8e0d6" stroke="none" />
-      {/* Bola 0° vazia */}
-      <circle cx="50" cy="18" r="11" fill="none" stroke="#e8e0d6" strokeWidth="1.5" />
-      {/* Bola +45° cheia */}
-      <circle cx="82" cy="38" r="11" fill="#e8e0d6" stroke="none" />
+    <svg viewBox="0 0 120 130" width={216} style={{ height: "auto", display: "block", marginBottom: "16px" }}>
       {/* Conectores */}
-      <line x1="34" y1="52" x2="25" y2="45" stroke="#e8e0d6" strokeWidth="1" opacity="0.4" />
-      <line x1="50" y1="45" x2="50" y2="27" stroke="#e8e0d6" strokeWidth="1" opacity="0.4" />
-      <line x1="66" y1="52" x2="75" y2="45" stroke="#e8e0d6" strokeWidth="1" opacity="0.4" />
+      <line x1="45" y1="72" x2="28" y2="53" stroke="#F5F5F2" strokeWidth="1" strokeLinecap="square" opacity="0.5" />
+      <line x1="60" y1="67" x2="60" y2="33" stroke="#F5F5F2" strokeWidth="1" strokeLinecap="square" opacity="0.5" />
+      <line x1="75" y1="72" x2="92" y2="53" stroke="#F5F5F2" strokeWidth="1" strokeLinecap="square" opacity="0.5" />
+      {/* Bola -45° cheia */}
+      <circle cx="20" cy="45" r="11" fill="#F5F5F2" />
+      {/* Bola 0° vazia */}
+      <circle cx="60" cy="22" r="11" fill="none" stroke="#F5F5F2" strokeWidth="1.5" />
+      {/* Bola +45° cheia */}
+      <circle cx="100" cy="45" r="11" fill="#F5F5F2" />
+      {/* Nó central cheio */}
+      <circle cx="60" cy="85" r="18" fill="#F5F5F2" />
+      {/* Retângulo de corte — gap horizontal */}
+      <rect x="42" y="82" width="36" height="6" fill="#05262e" />
     </svg>
   )
 }
 
 function RespiraSVG() {
   return (
-    <svg viewBox="0 0 100 120" width={180} style={{ height: "auto", display: "block", marginBottom: "16px" }}>
-      {/* Nó central cheio */}
-      <circle cx="50" cy="65" r="20" fill="#e8e0d6" stroke="none" />
-      {/* Bola -45° cheia */}
-      <circle cx="18" cy="38" r="11" fill="#e8e0d6" stroke="none" />
-      {/* Bola 0° cheia */}
-      <circle cx="50" cy="18" r="11" fill="#e8e0d6" stroke="none" />
-      {/* Bola +45° Ember — único Ember desta seção */}
-      <circle cx="82" cy="38" r="11" fill="#eb5c2e" stroke="none" />
+    <svg viewBox="0 0 120 130" width={216} style={{ height: "auto", display: "block", marginBottom: "16px" }}>
       {/* Conectores */}
-      <line x1="34" y1="52" x2="25" y2="45" stroke="#e8e0d6" strokeWidth="1" opacity="0.4" />
-      <line x1="50" y1="45" x2="50" y2="27" stroke="#e8e0d6" strokeWidth="1" opacity="0.4" />
-      <line x1="66" y1="52" x2="75" y2="45" stroke="#e8e0d6" strokeWidth="1" opacity="0.4" />
+      <line x1="45" y1="72" x2="28" y2="53" stroke="#F5F5F2" strokeWidth="1" strokeLinecap="square" opacity="0.5" />
+      <line x1="60" y1="67" x2="60" y2="33" stroke="#F5F5F2" strokeWidth="1" strokeLinecap="square" opacity="0.5" />
+      <line x1="75" y1="72" x2="92" y2="53" stroke="#F5F5F2" strokeWidth="1" strokeLinecap="square" opacity="0.5" />
+      {/* Bola -45° cheia */}
+      <circle cx="20" cy="45" r="11" fill="#F5F5F2" />
+      {/* Bola 0° cheia */}
+      <circle cx="60" cy="22" r="11" fill="#F5F5F2" />
+      {/* Bola +45° Ember — único Ember desta seção */}
+      <circle cx="100" cy="45" r="11" fill="#eb5c2e" />
+      {/* Nó central sólido — sem retângulo de corte */}
+      <circle cx="60" cy="85" r="18" fill="#F5F5F2" />
     </svg>
   )
 }
 
 export function MethodSection() {
   return (
-    <section id="metodo" style={{ backgroundColor: TEAL }}>
+    <section id="metodo" style={{ backgroundColor: INK }}>
       <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 pt-20 pb-16">
 
         {/* Eyebrow */}
@@ -104,7 +104,7 @@ export function MethodSection() {
         }}>
 
           {/* INSPIRA */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "20px", alignItems: "flex-start" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "20px", alignItems: "center", textAlign: "center" }}>
             <InspiraSVG />
             <p style={{
               fontFamily: "var(--font-atyp-display), sans-serif",
@@ -148,7 +148,7 @@ export function MethodSection() {
           </div>
 
           {/* TRANSPIRA */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "20px", alignItems: "flex-start" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "20px", alignItems: "center", textAlign: "center" }}>
             <TranspiraSVG />
             <p style={{
               fontFamily: "var(--font-atyp-display), sans-serif",
@@ -192,13 +192,15 @@ export function MethodSection() {
           </div>
 
           {/* RESPIRA — Light 300 obrigatório, sem link */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "20px", alignItems: "flex-start" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "20px", alignItems: "center", textAlign: "center" }}>
             <RespiraSVG />
             <p style={{
-              fontFamily: "var(--font-atyp-display), sans-serif",
-              fontWeight: 300,
+              fontFamily: "var(--font-atyp-display)",
+              fontWeight: 600,
               fontSize: "24px",
-              color: WHITE,
+              letterSpacing: "inherit",
+              textTransform: "uppercase",
+              color: "#e8e0d6",
               margin: 0,
             }}>
               RESPIRA
