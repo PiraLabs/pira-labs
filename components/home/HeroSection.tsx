@@ -114,10 +114,10 @@ export function HeroSection() {
             />
           </g>
 
-          {/* Nó 2 — disco TealMid grande · cx≈1647, cy≈356, r≈58 · era Ember */}
+          {/* Nó 2 — disco Ember grande · cx≈1647, cy≈356, r≈58 */}
           <g className="hero-node" data-dur="9">
             <path
-              fill="#1A5568"
+              fill="#eb5c2e"
               d="M1705.23,356.45c0-32.33-26.21-58.54-58.54-58.54s-58.54,26.21-58.54,58.54,26.21,58.54,58.54,58.54,58.54-26.21,58.54-58.54"
             />
           </g>
