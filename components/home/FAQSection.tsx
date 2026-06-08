@@ -12,17 +12,17 @@ const faqs = [
   {
     pergunta: "No que a Pira Labs é diferente de uma consultoria tradicional?",
     resposta:
-      "Muitas consultorias são chamadas quando o problema já virou crise. A Pira Labs trabalha antes: quando o negócio ainda tem clientes, caixa e reputação para agir com opções. O diagnóstico não repete o que qualquer consultoria entregaria, porque cada empresa de serviços tem uma combinação única de pessoas, processos e tecnologia. A rota de saída também precisa ser.",
+      "A maioria das consultorias chega quando o problema já virou crise. A Pira Labs chega antes, quando o negócio ainda tem clientes, caixa e reputação para agir com opções. Gabriela e Celso estão em cada projeto do diagnóstico à entrega, sem camada intermediária. O diagnóstico percorre seis camadas antes de nomear qualquer problema, porque o problema declarado raramente é o problema real. A execução não encerra quando o prazo acaba: encerra quando os resultados acordados são verificados. O cliente sai com ações que a própria equipe consegue rodar, sem depender de retainer. A curadoria de tecnologia e o mapeamento de ecossistema entram no diagnóstico porque Gabriela navega esses ambientes por convicção, não por metodologia. O que chega ao cliente não é tendência empacotada: é o sinal que o mercado local ainda não nomeou.",
   },
   {
     pergunta: "A Pira Labs é para empresas em crise?",
     resposta:
-      "Não necessariamente. A Pira entra melhor quando o negócio ainda pode escolher. Se os sinais já estão presentes, mas a empresa ainda tem fôlego para agir, esse é o momento. Crise reduz opções. A Pira trabalha antes que as opções diminuam.",
+      "Não necessariamente. A Pira Labs entra melhor quando o negócio ainda pode escolher. Se os sinais já estão presentes, mas a empresa ainda tem fôlego para agir, esse é o momento. Crise reduz opções. A Pira Labs trabalha antes que as opções diminuam.",
   },
   {
     pergunta: "Quanto custa trabalhar com a Pira Labs?",
     resposta:
-      "As entradas da Faísca têm preço fixo: pocket do INSPIRA a R$3.900, Imersão em IA a R$7.100, Oxigênio Fast a R$3.500 e Full a R$5.300. INSPIRA e TRANSPIRA são precificados por projeto, após o diagnóstico inicial. O primeiro contato é gratuito e sem compromisso.",
+      "Depende do que a empresa precisa agora. Os produtos Faísca começam em R$3.500. INSPIRA e TRANSPIRA são sob consulta, com valor calculado pelo escopo real do projeto. O que define o investimento não é o tempo gasto, mas o resultado acordado antes de começar. A conversa inicial não tem custo.",
   },
   {
     pergunta: "Quanto tempo demora?",
