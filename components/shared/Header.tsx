@@ -1,383 +1,300 @@
-"use client";
+'use client'
 
-import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import Link from 'next/link'
+import Image from 'next/image'
+import { useState, useRef } from 'react'
+import { usePathname } from 'next/navigation'
+import { MobileMenu } from './MobileMenu'
+import type { MobileNavItem } from './MobileMenu'
 
-// Mapa bidirecional PT ↔ EN para as 4 páginas com versão EN
-const LANG_MAP: Record<string, string> = {
-  "/": "/en",
-  "/sobre": "/en/about",
-  "/creative-business-turnaround": "/en/creative-business-turnaround",
-  "/contato": "/en/contact",
-  "/en": "/",
-  "/en/about": "/sobre",
-  "/en/creative-business-turnaround": "/creative-business-turnaround",
-  "/en/contact": "/contato",
-};
-
-type ChildItem = { label: string; href: string };
-
-type MenuItem = {
-  label: string;
-  href: string;
-  children?: ChildItem[];
-  emberComma?: boolean;
-};
-
-const menuItems: MenuItem[] = [
+const NAV_ITEMS = [
   {
-    label: "Sobre",
-    href: "/sobre",
-    children: [
-      { label: "Sobre a Pira Labs", href: "/sobre" },
-      { label: "Creative Business Turnaround", href: "/creative-business-turnaround" },
+    label: 'Sobre',
+    items: [
+      { label: 'Sobre a Pira', href: '/sobre' },
+      { label: 'Creative Business Turnaround', href: '/creative-business-turnaround' },
     ],
   },
   {
-    label: "Inspira",
-    href: "/inspira",
-    children: [
-      { label: "Inspira", href: "/inspira" },
-      { label: "Inspira Jurídico", href: "/inspira/juridico" },
-      { label: "Oxigênio IA Search", href: "/inspira/oxigenio" },
+    label: 'Entrada',
+    items: [
+      { label: 'Imersão em IA', href: '/faisca/imersa-em-ia' },
+      { label: 'Oxigênio Fast', href: '/inspira/oxigenio' },
+      { label: 'pocket do INSPIRA', href: '/faisca/pocket' },
+      { label: 'Faísca Jurídica', href: '/faisca/juridica' },
+      { label: 'C-level as a Service', href: '/faisca#clevel' },
     ],
   },
   {
-    label: "Transpira",
-    href: "/transpira",
-    children: [
-      { label: "Transpira", href: "/transpira" },
-      { label: "Transpira Jurídico", href: "/transpira/juridico" },
+    label: 'Diagnóstico',
+    items: [
+      { label: 'INSPIRA', href: '/inspira' },
+      { label: 'Oxigênio Full', href: '/inspira/oxigenio' },
+      { label: 'INSPIRA Jurídico', href: '/inspira/juridico' },
     ],
   },
   {
-    label: "Faísca",
-    href: "/faisca",
-    children: [
-      { label: "Faísca", href: "/faisca" },
-      { label: "Imersão em IA", href: "/faisca/imersa-em-ia" },
-      { label: "Pocket do INSPIRA", href: "/faisca/pocket" },
-      { label: "Faísca Jurídica", href: "/faisca/juridica" },
+    label: 'Execução',
+    items: [
+      { label: 'TRANSPIRA', href: '/transpira' },
+      { label: 'TRANSPIRA Jurídico', href: '/transpira/juridico' },
     ],
   },
-  { label: "Antes, Pira", href: "/antes-pira", emberComma: true },
-];
+  {
+    label: 'Pira junto',
+    items: [
+      { label: 'Palestras', href: '/faisca#palestras' },
+      { label: 'Workshops', href: '/faisca#workshops' },
+      { label: 'Aulas', href: '/faisca#aulas' },
+    ],
+  },
+]
 
-// Componente separado para item do menu mobile com submenu acordeão.
-// Precisa ser componente próprio para poder usar useState sem violar Rules of Hooks.
-function MobileMenuItem({
-  item,
-  pathname,
-}: {
-  item: MenuItem;
-  pathname: string;
-}) {
-  const [subOpen, setSubOpen] = useState(false);
-  const isCurrent = pathname === item.href || pathname.startsWith(item.href + "/");
+// Converte NAV_ITEMS para o formato esperado por MobileMenu
+const MOBILE_NAV_ITEMS: MobileNavItem[] = [
+  ...NAV_ITEMS.map((item) => ({
+    kind: 'dropdown' as const,
+    label: item.label,
+    children: item.items,
+  })),
+  { kind: 'link' as const, label: 'Antes, Pira', href: '/antes-pira', emberComma: true },
+]
 
-  if (!item.children) {
-    return (
-      <li>
-        <Link
-          href={item.href}
-          aria-current={isCurrent ? "page" : undefined}
-          className={`block py-4 text-lg font-body font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange ${
-            isCurrent ? "text-orange" : "text-off-white"
-          }`}
-        >
-          {item.emberComma ? (
-            <>Antes<span style={{ color: '#eb5c2e' }}>,</span> Pira</>
-          ) : item.label}
-        </Link>
-        <div className="h-px bg-off-white/10" />
-      </li>
-    );
+const CTA_HREF = '/contato?origem=header_global'
+
+export function Header() {
+  const pathname = usePathname()
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  function handleMouseEnter(label: string) {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    setOpenDropdown(label)
   }
 
+  function handleMouseLeave() {
+    timeoutRef.current = setTimeout(() => setOpenDropdown(null), 80)
+  }
+
+  const langToggle = (
+    <div style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
+      <button style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'var(--font-atyp-text)', fontSize: '11px', fontWeight: 600, color: '#F5F5F2', opacity: 1, letterSpacing: '0.06em' }}>PT</button>
+      <span style={{ color: '#F5F5F2', opacity: 0.3, fontSize: '11px' }}>/</span>
+      <button style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'var(--font-atyp-text)', fontSize: '11px', fontWeight: 600, color: '#F5F5F2', opacity: 0.4, letterSpacing: '0.06em' }}>EN</button>
+    </div>
+  )
+
   return (
-    <li>
-      <button
-        type="button"
-        onClick={() => setSubOpen((v) => !v)}
-        aria-expanded={subOpen}
-        className={`w-full flex items-center justify-between py-4 text-lg font-body font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange ${
-          isCurrent ? "text-orange" : "text-off-white"
-        }`}
+    <>
+      <header
+        style={{
+          position: 'sticky',
+          top: 0,
+          zIndex: 50,
+          backgroundColor: '#05262e',
+          height: '64px',
+          width: '100%',
+        }}
       >
-        {item.label}
-        <span
-          className={`text-sm transition-transform duration-200 ${subOpen ? "rotate-180" : ""}`}
-          aria-hidden="true"
+        <div
+          style={{
+            maxWidth: '1280px',
+            margin: '0 auto',
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: '24px',
+          }}
+          className="px-6 lg:px-20"
         >
-          ▾
-        </span>
-      </button>
-      {subOpen && (
-        <ul className="pl-4 pb-2 space-y-0">
-          {item.children.map((child) => (
-            <li key={child.href}>
-              <Link
-                href={child.href}
-                className="block py-3 text-base font-body text-off-white/70 hover:text-off-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
-              >
-                {child.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-      <div className="h-px bg-off-white/10" />
-    </li>
-  );
-}
-
-export function Header({ theme = "ink" }: { theme?: "ink" | "sand" }) {
-  const pathname = usePathname();
-  const router = useRouter();
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const dropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const isEN = pathname.startsWith("/en");
-  const altPath = LANG_MAP[pathname] ?? null;
-
-  function handleLangSwitch(targetLang: "pt" | "en") {
-    document.cookie = `pira_lang=${targetLang};path=/;max-age=31536000;SameSite=Lax`;
-    if (altPath) router.push(altPath);
-  }
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // Fecha menu mobile ao navegar
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
-
-  // Esc fecha menu mobile
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setMobileOpen(false);
-    };
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, []);
-
-  // Trava scroll do body quando menu mobile está aberto
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [mobileOpen]);
-
-  function handleDropdownEnter(label: string) {
-    if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
-    dropdownTimeout.current = setTimeout(() => setOpenDropdown(label), 150);
-  }
-
-  function handleDropdownLeave() {
-    if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
-    dropdownTimeout.current = setTimeout(() => setOpenDropdown(null), 300);
-  }
-
-  const ctaHref = "/contato?origem=header_global";
-
-  return (
-    <header
-      role="banner"
-      className={`sticky top-0 z-50 transition-all duration-200 ${
-        scrolled
-          ? "bg-ink/90 backdrop-blur-sm"
-          : "bg-ink"
-      }`}
-    >
-      <div className="container-site">
-        <div className="flex items-center justify-between h-[72px]">
           {/* Logo */}
-          <Link
-            href="/"
-            className="hover:opacity-80 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
-            aria-label="Pira Labs — página inicial"
-          >
+          <Link href="/" style={{ flexShrink: 0 }}>
             <Image
-              src={theme === "sand" ? "/brand/COMPLETA_INK.svg" : "/brand/COMPLETA_BRANCA.svg"}
-              alt="Logotipo PiraLabs"
-              width={286}
-              height={32}
-              className="h-7 md:h-8 w-auto"
-              style={{ width: "auto" }}
-              priority
+              src="/brand/COMPLETA_OFFWHITE.svg"
+              alt="Pira Labs"
+              width={120}
+              height={28}
+              style={{ height: '28px', width: 'auto' }}
             />
           </Link>
 
           {/* Nav desktop */}
-          <nav aria-label="Navegação principal" className="hidden md:flex items-center gap-1">
-            {menuItems.map((item) => {
-              const isCurrent =
-                pathname === item.href || pathname.startsWith(item.href + "/");
-              const hasChildren = Boolean(item.children?.length);
-              const isDropOpen = openDropdown === item.label;
-
-              return (
-                <div
-                  key={item.label}
-                  className="relative"
-                  onMouseEnter={() => hasChildren && handleDropdownEnter(item.label)}
-                  onMouseLeave={() => hasChildren && handleDropdownLeave()}
-                >
-                  <Link
-                    href={item.href}
-                    aria-haspopup={hasChildren ? "true" : undefined}
-                    aria-expanded={hasChildren ? isDropOpen : undefined}
-                    aria-current={isCurrent ? "page" : undefined}
-                    className={`flex items-center gap-1 px-3 py-2 rounded text-sm font-body font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange ${
-                      isCurrent
-                        ? "text-orange"
-                        : "text-off-white/80 hover:text-off-white"
-                    }`}
-                  >
-                    {item.emberComma ? (
-                      <>Antes<span style={{ color: '#eb5c2e' }}>,</span> Pira</>
-                    ) : item.label}
-                    {hasChildren && (
-                      <span className="text-xs opacity-60" aria-hidden="true">
-                        ▾
-                      </span>
-                    )}
-                  </Link>
-
-                  {/* Dropdown desktop */}
-                  {hasChildren && isDropOpen && (
-                    <div
-                      className="absolute top-full left-0 mt-1 min-w-[200px] bg-deep-teal border border-teal/30 rounded shadow-lg py-1"
-                      onMouseEnter={() => handleDropdownEnter(item.label)}
-                      onMouseLeave={handleDropdownLeave}
-                    >
-                      {item.children!.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="block px-4 py-3 text-sm font-body text-off-white/80 hover:text-off-white hover:bg-teal/40 transition-colors"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </nav>
-
-          {/* Toggle PT/EN + CTA desktop */}
-          <div className="hidden md:flex items-center gap-3">
-            <div className="flex items-center gap-1 text-xs font-body font-medium" aria-label="Idioma / Language">
-              <button
-                type="button"
-                onClick={() => handleLangSwitch("pt")}
-                className={`px-2 py-1 rounded transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange ${
-                  !isEN ? "text-orange" : "text-off-white/40 hover:text-off-white/70"
-                }`}
-                aria-current={!isEN ? "true" : undefined}
-              >
-                PT
-              </button>
-              <span className="text-off-white/20" aria-hidden="true">/</span>
-              <button
-                type="button"
-                onClick={() => handleLangSwitch("en")}
-                className={`px-2 py-1 rounded transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange ${
-                  isEN ? "text-orange" : altPath ? "text-off-white/40 hover:text-off-white/70" : "text-off-white/20 cursor-not-allowed"
-                }`}
-                aria-current={isEN ? "true" : undefined}
-                disabled={!isEN && !altPath}
-              >
-                EN
-              </button>
-            </div>
-            <Link
-              href={ctaHref}
-              className="min-h-[44px] inline-flex items-center transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2"
-              style={{ backgroundColor: '#eb5c2e', color: '#F5F5F2', fontSize: '13px', fontWeight: 600, letterSpacing: '0.10em', textTransform: 'uppercase', padding: '12px 24px', borderRadius: '2px' }}
-            >
-              RESPIRE
-            </Link>
-          </div>
-
-          {/* Hamburger mobile */}
-          <button
-            type="button"
-            className="md:hidden flex items-center justify-center w-11 h-11 text-off-white hover:text-orange transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
-            aria-label={
-              mobileOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"
-            }
-            aria-expanded={mobileOpen}
-            onClick={() => setMobileOpen((v) => !v)}
-          >
-            <span className="text-2xl leading-none" aria-hidden="true">
-              {mobileOpen ? "✕" : "☰"}
-            </span>
-          </button>
-        </div>
-      </div>
-
-      {/* Painel mobile */}
-      {mobileOpen && (
-        <div className="md:hidden fixed inset-0 top-[72px] bg-ink z-40 overflow-y-auto">
           <nav
-            aria-label="Menu de navegação mobile"
-            className="container-site py-6"
+            aria-label="Menu principal"
+            style={{
+              alignItems: 'center',
+              gap: 'clamp(10px, 1.2vw, 24px)',
+              flex: 1,
+              justifyContent: 'center',
+            }}
+            className="hidden md:flex"
           >
-            <ul className="space-y-0">
-              {menuItems.map((item) => (
-                <MobileMenuItem key={item.label} item={item} pathname={pathname} />
-              ))}
-            </ul>
-            {/* Toggle PT/EN mobile */}
-            <div className="pt-4 pb-2 flex items-center gap-2" aria-label="Idioma / Language">
-              <button
-                type="button"
-                onClick={() => handleLangSwitch("pt")}
-                className={`px-3 py-2 text-sm font-body font-medium rounded transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange ${
-                  !isEN ? "text-orange" : "text-off-white/50 hover:text-off-white/80"
-                }`}
-                aria-current={!isEN ? "true" : undefined}
+            {NAV_ITEMS.map((item) => (
+              <div
+                key={item.label}
+                style={{ position: 'relative' }}
+                onMouseEnter={() => handleMouseEnter(item.label)}
+                onMouseLeave={handleMouseLeave}
               >
-                PT
-              </button>
-              <span className="text-off-white/20 text-sm" aria-hidden="true">/</span>
-              <button
-                type="button"
-                onClick={() => handleLangSwitch("en")}
-                className={`px-3 py-2 text-sm font-body font-medium rounded transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange ${
-                  isEN ? "text-orange" : altPath ? "text-off-white/50 hover:text-off-white/80" : "text-off-white/20 cursor-not-allowed"
-                }`}
-                aria-current={isEN ? "true" : undefined}
-                disabled={!isEN && !altPath}
-              >
-                EN
-              </button>
-            </div>
-            {/* CTA dentro do menu mobile */}
-            <div className="pt-4">
-              <Link
-                href={ctaHref}
-                className="block w-full text-center min-h-[52px] transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2"
-                style={{ backgroundColor: '#eb5c2e', color: '#F5F5F2', fontSize: '13px', fontWeight: 600, letterSpacing: '0.10em', textTransform: 'uppercase', padding: '16px 24px', borderRadius: '2px' }}
-              >
-                RESPIRE
-              </Link>
-            </div>
+                <button
+                  aria-expanded={openDropdown === item.label}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '4px',
+                    fontFamily: 'var(--font-atyp-text)',
+                    fontWeight: 600,
+                    fontSize: 'clamp(11px, 1vw, 14px)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.06em',
+                    color: '#F5F5F2',
+                    opacity: openDropdown === item.label ? 1 : 0.7,
+                    whiteSpace: 'nowrap',
+                    padding: '4px 0',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
+                  onMouseLeave={(e) => (e.currentTarget.style.opacity = openDropdown === item.label ? '1' : '0.7')}
+                >
+                  {item.label}
+                  <span style={{ fontSize: '10px', opacity: 0.6 }}>▾</span>
+                </button>
+
+                {/* Dropdown */}
+                {openDropdown === item.label && (
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: '100%',
+                      left: 0,
+                      marginTop: '8px',
+                      backgroundColor: '#05262e',
+                      border: '1px solid rgba(245,245,242,0.1)',
+                      borderRadius: '0 0 4px 4px',
+                      boxShadow: '0 8px 24px rgba(0,0,0,0.3)',
+                      padding: '8px 0',
+                      minWidth: '220px',
+                      zIndex: 100,
+                    }}
+                  >
+                    {item.items.map((sub) => (
+                      <Link
+                        key={sub.href}
+                        href={sub.href}
+                        style={{
+                          display: 'block',
+                          padding: '10px 20px',
+                          fontFamily: 'var(--font-atyp-text)',
+                          fontSize: '13px',
+                          color: '#F5F5F2',
+                          opacity: 0.6,
+                          whiteSpace: 'nowrap',
+                          transition: 'opacity 0.15s ease, padding-left 0.15s ease',
+                          textDecoration: 'none',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.opacity = '1'
+                          e.currentTarget.style.paddingLeft = '24px'
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.opacity = '0.6'
+                          e.currentTarget.style.paddingLeft = '20px'
+                        }}
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {/* Antes, Pira — link direto */}
+            <Link
+              href="/antes-pira"
+              style={{
+                fontFamily: 'var(--font-atyp-text)',
+                fontWeight: 600,
+                fontSize: 'clamp(11px, 1vw, 14px)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.06em',
+                opacity: pathname === '/antes-pira' ? 1 : 0.7,
+                whiteSpace: 'nowrap',
+                textDecoration: 'none',
+                transition: 'opacity 0.15s ease',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
+              onMouseLeave={(e) => (e.currentTarget.style.opacity = pathname === '/antes-pira' ? '1' : '0.7')}
+            >
+              <span style={{ color: '#F5F5F2' }}>Antes</span>
+              <span style={{ color: '#eb5c2e' }}>,</span>
+              <span style={{ color: '#F5F5F2' }}> Pira</span>
+            </Link>
           </nav>
+
+          {/* Direita: PT/EN + Chama + Hamburguer */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexShrink: 0 }}>
+            {/* Toggle PT/EN — só em telas grandes */}
+            <div className="hidden xl:flex" style={{ gap: '4px', alignItems: 'center' }}>
+              {langToggle}
+            </div>
+
+            {/* Botão Chama */}
+            <Link
+              href={CTA_HREF}
+              className="hidden md:inline-flex"
+              style={{
+                backgroundColor: '#eb5c2e',
+                color: '#F5F5F2',
+                fontFamily: 'var(--font-atyp-text)',
+                fontWeight: 600,
+                fontSize: '12px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.10em',
+                padding: '8px 18px',
+                borderRadius: '2px',
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+                transition: 'background-color 0.15s ease',
+                flexShrink: 0,
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#C4421A')}
+              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#eb5c2e')}
+            >
+              Chama
+            </Link>
+
+            {/* Hamburguer mobile */}
+            <button
+              className="flex md:hidden"
+              onClick={() => setMobileOpen(true)}
+              aria-label="Abrir menu"
+              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '8px' }}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect y="4" width="24" height="2" fill="#F5F5F2" />
+                <rect y="11" width="24" height="2" fill="#F5F5F2" />
+                <rect y="18" width="24" height="2" fill="#F5F5F2" />
+              </svg>
+            </button>
+          </div>
         </div>
+      </header>
+
+      {mobileOpen && (
+        <MobileMenu
+          items={MOBILE_NAV_ITEMS}
+          pathname={pathname}
+          onClose={() => setMobileOpen(false)}
+          ctaHref={CTA_HREF}
+          langToggle={langToggle}
+        />
       )}
-    </header>
-  );
+    </>
+  )
 }
