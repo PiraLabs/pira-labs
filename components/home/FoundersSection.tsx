@@ -46,7 +46,7 @@ export function FoundersSection() {
           position: "absolute",
           top: 0,
           right: 0,
-          width: "48%",
+          width: "52%",
           height: "100%",
           zIndex: 0,
         }}
@@ -198,11 +198,11 @@ export function FoundersSection() {
 
       {/* Mobile */}
       <style>{`
-        @media (max-width: 1023px) {
+        @media (max-width: 767px) {
           #fundadores [aria-hidden="true"] {
             position: relative !important;
             width: 100% !important;
-            height: 320px !important;
+            height: 280px !important;
             top: auto !important;
             right: auto !important;
           }
