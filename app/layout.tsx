@@ -15,26 +15,26 @@ import "./globals.css";
 
 const atypDisplay = localFont({
   src: [
-    { path: "../public/fonts/AtypDisplay-Light.ttf",    weight: "300", style: "normal" },
-    { path: "../public/fonts/AtypDisplay-Regular.ttf",  weight: "400", style: "normal" },
-    { path: "../public/fonts/AtypDisplay-Medium.ttf",   weight: "500", style: "normal" },
-    { path: "../public/fonts/AtypDisplay-Semibold.ttf", weight: "600", style: "normal" },
-    { path: "../public/fonts/AtypDisplay-Bold.ttf",     weight: "700", style: "normal" },
+    { path: "../public/fonts/AtypDisplay-Light.woff2",    weight: "300", style: "normal" },
+    { path: "../public/fonts/AtypDisplay-Regular.woff2",  weight: "400", style: "normal" },
+    { path: "../public/fonts/AtypDisplay-Medium.woff2",   weight: "500", style: "normal" },
+    { path: "../public/fonts/AtypDisplay-Semibold.woff2", weight: "600", style: "normal" },
+    { path: "../public/fonts/AtypDisplay-Bold.woff2",     weight: "700", style: "normal" },
   ],
   variable: "--font-atyp-display",
-  display: "swap",
+  display: "optional",
   fallback: ["Plus Jakarta Sans", "sans-serif"],
 });
 
 const atypText = localFont({
   src: [
-    { path: "../public/fonts/AtypText-Light.ttf",    weight: "300", style: "normal" },
-    { path: "../public/fonts/AtypText-Medium.ttf",   weight: "400", style: "normal" },
-    { path: "../public/fonts/AtypText-Medium.ttf",   weight: "500", style: "normal" },
-    { path: "../public/fonts/AtypText-Semibold.ttf", weight: "600", style: "normal" },
+    { path: "../public/fonts/AtypText-Light.woff2",    weight: "300", style: "normal" },
+    { path: "../public/fonts/AtypText-Medium.woff2",   weight: "400", style: "normal" },
+    { path: "../public/fonts/AtypText-Medium.woff2",   weight: "500", style: "normal" },
+    { path: "../public/fonts/AtypText-Semibold.woff2", weight: "600", style: "normal" },
   ],
   variable: "--font-atyp-text",
-  display: "swap",
+  display: "optional",
   fallback: ["Plus Jakarta Sans", "sans-serif"],
 });
 
