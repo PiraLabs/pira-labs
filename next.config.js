@@ -1,12 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   turbopack: {
-    resolveAlias: {
-      '@': '.',
-      '../build/polyfills/polyfill-module': './lib/empty.js',
-      'next/dist/build/polyfills/polyfill-module': './lib/empty.js',
+      resolveAlias: {
+        '@': '.',
+      },
     },
-  },
   async redirects() {
     return [
       // URLs curtas para campanhas
