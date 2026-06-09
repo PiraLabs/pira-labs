@@ -33,7 +33,7 @@ const LABELS = [
 export function SystemSection() {
   const sectionRef  = useRef<HTMLElement>(null)
   const leftNodeRef = useRef<SVGGElement>(null)
-  const centerRef   = useRef<SVGPathElement>(null)
+  const centerRef   = useRef<SVGCircleElement>(null)
   const rightRef    = useRef<SVGCircleElement>(null)
 
   useEffect(() => {
