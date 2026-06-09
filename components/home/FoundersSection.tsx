@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import type { CSSProperties } from "react"
+import Image from "next/image"
 
 /* HOME-8 · Fundadores · fundo Teal #004757
    Imagem /nos.png na metade direita com gradiente de transição.
@@ -42,6 +43,7 @@ export function FoundersSection() {
       {/* Imagem de fundo — metade direita */}
       <div
         aria-hidden="true"
+        className="hidden md:block"
         style={{
           position: "absolute",
           top: 0,
@@ -51,16 +53,13 @@ export function FoundersSection() {
           zIndex: 0,
         }}
       >
-        <img
+        <Image
           src="/nos.png"
           alt=""
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center top",
-          }}
-          loading="lazy"
+          fill
+          sizes="52vw"
+          quality={80}
+          style={{ objectFit: "cover", objectPosition: "center top" }}
         />
         <div style={{
           position: "absolute",
