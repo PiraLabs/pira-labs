@@ -1,10 +1,5 @@
 'use client'
-import dynamic from 'next/dynamic'
-
-const HeroSection = dynamic(
-  () => import('./HeroSection').then((mod) => mod.HeroSection),
-  {}
-)
+import { HeroSection } from './HeroSection'
 
 export function HeroSectionClient() {
   return <HeroSection />
