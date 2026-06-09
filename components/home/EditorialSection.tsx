@@ -49,7 +49,9 @@ function parseRSS(xml: string): Post[] {
     const items = Array.from(doc.querySelectorAll("item")).slice(0, 4)
     return items.map((item) => {
       const titulo = item.querySelector("title")?.textContent?.trim() ?? ""
-      const url = item.querySelector("link")?.textContent?.trim() ?? "https://piralabs.substack.com"
+      const guidEl = item.querySelector("guid")
+      const linkEl = item.querySelector("link")
+      const url = guidEl?.textContent?.trim() || linkEl?.nextSibling?.textContent?.trim() || "https://piralabs.substack.com"
       const pubDate = item.querySelector("pubDate")?.textContent?.trim() ?? ""
       const enclosure = item.querySelector("enclosure")
       const mediaThumbnail = item.getElementsByTagNameNS("http://search.yahoo.com/mrss/", "thumbnail")[0]
