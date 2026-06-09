@@ -111,53 +111,39 @@ export function SystemSection() {
           operam juntos, a empresa trabalha mais, decide pior e perde margem em silêncio.
         </p>
 
-          {/* Desktop: SVG com geometria exata do Artboard_6 reescalonado */}
+          {/* Desktop: Artboard_6 inline com nó direito em Ember */}
           <div className="hidden md:block" style={{ marginTop: "56px" }}>
-            <svg viewBox="300 455 1320 250"
+            <svg ref={rightRef as any} viewBox="300 455 1320 250"
               style={{ width: "100%", height: "auto", display: "block" }}
-              aria-hidden="true" focusable="false">
+              aria-hidden="true" focusable="false"
+              xmlns="http://www.w3.org/2000/svg">
 
-                {/* Conectores — rects simples, renderizados antes dos nós para ficarem por baixo */}
-                <g opacity={0.2}>
-                  <rect x={510} y={534} width={388} height={12} fill={SAND} rx={6} />
-                  <rect x={1022} y={534} width={388} height={12} fill={SAND} rx={6} />
-                </g>
+              {/* Nó esquerdo — anel donut + nó centro + conectores */}
+              <g ref={leftNodeRef} opacity={0.35}>
+                <path fill={SAND} d="M480.14,540c0,17.71-14.36,32.07-32.07,32.07s-32.07-14.36-32.07-32.07,14.36-32.07,32.07-32.07,32.07,14.36,32.07,32.07M497.38,540c0-27.23-22.08-49.31-49.31-49.31s-49.31,22.08-49.31,49.31,22.07,49.31,49.31,49.31,49.31-22.07,49.31-49.31"/>
+              </g>
 
-                {/* Nó esquerdo — anel donut r=62 */}
-                <g ref={leftNodeRef} opacity={0.35}>
-                  <circle cx={448} cy={540} r={62} fill={SAND} />
-                  <circle cx={448} cy={540} r={42} fill={INK} />
-                </g>
+              {/* Nó centro + conectores */}
+              <g ref={centerRef} opacity={0.35}>
+                <path fill={SAND} d="M1008.93,546h-97.86c2.96,24.4,23.73,43.31,48.93,43.31s45.97-18.91,48.93-43.31M911.07,534h97.86c-2.96-24.4-23.73-43.31-48.93-43.31s-45.97,18.91-48.93,43.31M1009.31,540c0,2.03-.14,4.03-.38,6h413.69v-12h-413.69c.24,1.97.38,3.97.38,6M496.37,546h414.7c-.24-1.97-.38-3.97-.38-6s.14-4.03.38-6h-414.7v12Z"/>
+              </g>
 
-                {/* Nó centro — duas meias-luas r=62 desenhadas do zero, centradas em 960,540 */}
-                <g ref={centerRef} opacity={0.35}>
-                  {/* Meia-lua superior: arco de 180° abrindo para cima */}
-                  <path fill={SAND}
-                    d="M898,540 A62,62 0 0,1 1022,540 L1010,540 A50,50 0 0,0 910,540 Z"
-                  />
-                  {/* Meia-lua inferior: arco de 180° abrindo para baixo */}
-                  <path fill={SAND}
-                    d="M898,540 A62,62 0 0,0 1022,540 L1010,540 A50,50 0 0,1 910,540 Z"
-                  />
-                </g>
+              {/* Nó direito — Ember fixo */}
+              <path fill={EMBER} opacity={0.9} d="M1471.93,490.69c-27.23,0-49.31,22.08-49.31,49.31s22.08,49.31,49.31,49.31,49.31-22.07,49.31-49.31-22.08-49.31-49.31-49.31"/>
 
-                {/* Nó direito — disco sólido r=62, vira Ember */}
-                <circle ref={rightRef} cx={1472} cy={540} r={62}
-                  style={{ fill: SAND, opacity: 0.35 }} />
+              {/* Labels */}
+              <text x={448}  y={620} textAnchor="middle"
+                fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={20}
+                fill="rgba(232,224,214,0.55)">Sistema disperso</text>
+              <text x={960}  y={620} textAnchor="middle"
+                fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={20}
+                fill="rgba(232,224,214,0.55)">Sistema em operação</text>
+              <text x={1472} y={620} textAnchor="middle"
+                fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={20}
+                fill="rgba(232,224,214,0.55)">Sistema pleno</text>
+            </svg>
 
-                {/* Labels centralizados em cada nó */}
-                <text x={448}  y={650} textAnchor="middle"
-                  fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={24}
-                  fill="rgba(232,224,214,0.55)">Sistema disperso</text>
-                <text x={960}  y={650} textAnchor="middle"
-                  fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={24}
-                  fill="rgba(232,224,214,0.55)">Sistema em operação</text>
-                <text x={1472} y={650} textAnchor="middle"
-                  fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={24}
-                  fill="rgba(232,224,214,0.55)">Sistema pleno</text>
-              </svg>
-
-            <div className="grid grid-cols-3 gap-8" style={{ marginTop: "16px" }}>
+            <div className="grid grid-cols-3 gap-8" style={{ marginTop: "8px" }}>
               {LABELS.map(({ desc }, i) => (
                 <div key={i} style={{ textAlign: "center", padding: "0 16px" }}>
                   <p style={{ color: "rgba(232,224,214,0.45)", fontSize: "13px", lineHeight: 1.7,
