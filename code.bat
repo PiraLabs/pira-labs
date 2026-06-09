@@ -1,1 +1,3 @@
-$env:NODE_TLS_REJECT_UNAUTHORIZED="0"; claude --dangerously-skip-permissions
+@echo off
+set NODE_TLS_REJECT_UNAUTHORIZED=0
+claude --dangerously-skip-permissions

@@ -1,5 +1,4 @@
 @echo off
 git add -A
 git commit -m "%~1"
-git push origin master
-npx vercel --prod
+git push origin rebuild-v2

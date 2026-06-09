@@ -66,6 +66,7 @@ app/
 │   ├── page.tsx
 │   └── juridico/
 ├── faisca/
+│   ├── layout.tsx          # layout específico do Faisca
 │   ├── page.tsx
 │   ├── imersa-em-ia/
 │   ├── pocket/
@@ -109,6 +110,7 @@ app/
 | `CookieBanner.tsx` | Banner LGPD/GDPR |
 | `CookieBannerLoader.tsx` | Lazy loader do CookieBanner (importado no root layout) |
 | `HowFirstContact.tsx` | Bloco "como funciona o primeiro contato" |
+| `MobileMenu.tsx` | Menu mobile full-screen (drawer), invocado pelo Header |
 
 Home-specific (`/components/home/`): cada seção usa par duplo de arquivos. `*SectionClient.tsx` é um thin wrapper `'use client'` que usa `dynamic()` com `{ ssr: false }` para desabilitar SSR do componente GSAP. `*Section.tsx` contém o conteúdo real com as animações. Exemplo: `HeroSectionClient.tsx` importa dinamicamente `HeroSection.tsx`. Seções existentes: Hero · System · Signals · CBT · Method · Faisca · Proofs · Founders · Editorial · FAQ · FinalCTA. `CountUp.tsx` é componente auxiliar de contador animado.
 
@@ -147,14 +149,16 @@ export const metadata: Metadata = {
 - `.btn-primary` — botão laranja, texto ink (WCAG AA verificado: contraste 4.7:1)
 - `.btn-secondary` — botão outline off-white
 
-**Código legado em `app/page.tsx`:** a partir da linha 138 existe um bloco marcado `/* legado — manter abaixo até refactor completo */` com seções duplicadas das HOME-3 a HOME-8 antigas. Não deletar sem instrução do Celso.
+**`components/ui/CTAButton.tsx`:** CTAButton alternativo com API diferente do `shared/CTAButton.tsx`. Props: `href`, `label`, `theme: 'light'|'dark'`, `external`. Não usa `origin`. Renderiza texto + seta animada via inline styles. Usar `shared/CTAButton.tsx` para CTAs com rastreamento de origem; usar `ui/CTAButton.tsx` para links simples sem UTM.
 
 ### Schemas SEO (`/lib/schemas/`)
 
 - `organization.ts` — Organization + LocalBusiness com fundadores, credentials MIT, sameAs links
 - `website.ts` — WebSite com sitelinks search box
-- `service.ts` — helper genérico para INSPIRA/TRANSPIRA/etc.
+- `service.ts` — helpers para INSPIRA/TRANSPIRA/etc.; também exporta `faqPageSchema()` usado na home
 - `breadcrumb.ts` — helper BreadcrumbList
+
+`lib/substack-rss.ts` — busca e parseia RSS do Substack (`piralabs.substack.com/feed`) via `fetch` com revalidação de 1h. Exporta `buscarPostsSubstack(limite)` e tipo `SubstackPost`. Usado pela página `/antes-pira` como Server Component.
 
 Todos injetados via `<script type="application/ld+json">` no corpo dos componentes. A home injeta Organization + WebSite + WebPage + FAQPage simultaneamente.
 
@@ -182,6 +186,20 @@ Props: `density: "sparse"(5) | "medium"(10) | "dense"(19)` · `variant: "dark" |
 
 Alias `@/` → raiz do projeto (configurado em `next.config.js` via `webpack.resolve.alias`).
 Turbopack está **desabilitado** (`experimental.turbopack: false`) — usar webpack.
+
+### Redirects em next.config.js
+
+Atalhos de campanha: `/oxigenio` → `/inspira/oxigenio` · `/turnaround` e `/cbt` → `/creative-business-turnaround` · `/imersa` → `/faisca/imersa-em-ia` · `/pocket` → `/faisca/pocket`.
+Resíduos do site provisório PT cobertos: `/servicos` → `/inspira` · `/blog` e `/news` → `/antes-pira` · rotas `/en/*` e `/es/*` antigas.
+Não adicionar redirect para `/sobre` nem `/contato` (essas rotas existem com o mesmo URL e retornam 200).
+
+### `lib/constants.ts` — exports relevantes
+
+- `ORIGINS` — 18 origens canônicas do sistema de rastreamento de CTAs; usar via `shared/CTAButton.tsx`
+- `FILL_OUT_FORM_URL` / `FILLOUT_URL_HEADER` / `FILLOUT_URL_CONTATO` — URLs Fillout com UTMs embutidos
+- `SOCIAL` — links LinkedIn (empresa + Gabriela + Celso), email, Substack
+- `FLAGS` — feature flags D1 / D4 / PULSO (controle via env vars)
+- `VAGAS_OXIGENIO` — vagas exibidas em `/inspira/oxigenio` (default 5)
 
 ---
 
@@ -218,6 +236,7 @@ Turbopack está **desabilitado** (`experimental.turbopack: false`) — usar webp
 | ember | `#EB5C2E` | `bg-orange` / `text-orange` |
 | sand / off-white | `#E8E0D6` | `bg-off-white` / `text-off-white` |
 | tealMid | `#1A5568` | — (uso inline) |
+| deep-teal | `#05262E` | `bg-deep-teal` / `text-deep-teal` (alias legado de ink — preferir `ink`) |
 | emberDeep | `#C4421A` | — (uso inline) |
 | white | `#F5F5F2` | — (uso inline) |
 
