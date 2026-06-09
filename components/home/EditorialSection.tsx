@@ -91,15 +91,13 @@ export function EditorialSection() {
   useEffect(() => {
     const fetchRSS = async () => {
       try {
-        const proxy = "https://api.allorigins.win/get?url="
-        const feed = encodeURIComponent("https://piralabs.substack.com/feed")
-        const res = await fetch(`${proxy}${feed}`, { signal: AbortSignal.timeout(5000) })
+        const res = await fetch('/api/feed', { signal: AbortSignal.timeout(5000) })
         if (!res.ok) throw new Error("fetch failed")
-        const json = await res.json()
-        const parsed = parseRSS(json.contents)
+        const xml = await res.text()
+        const parsed = parseRSS(xml)
         if (parsed.length > 0) setPosts(parsed)
       } catch {
-        // silently fall back
+        // silently fall back to hardcoded posts
       }
     }
     fetchRSS()
