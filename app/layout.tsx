@@ -81,7 +81,7 @@ export default function RootLayout({
       className={`${atypDisplay.variable} ${atypText.variable}`}
       suppressHydrationWarning
     >
-      <body className="font-body bg-ink text-off-white antialiased">
+      <body className="font-body text-off-white antialiased" style={{ backgroundColor: "#05262e" }}>
         <SkipLink />
         <Header />
         <main id="main-content">{children}</main>
