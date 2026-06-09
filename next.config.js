@@ -51,6 +51,7 @@ const nextConfig = {
       // Migração de nomenclatura editorial
       { source: "/antes-da-crise", destination: "/antes-pira", permanent: true },
       { source: "/antesdacrise", destination: "/antes-pira", permanent: true },
+      { source: "/glossario/janela-de-decisao", destination: "/glossario/janela-de-oportunidade", permanent: true },
       { source: "/blog", destination: "/antes-pira", permanent: true },
       { source: "/news", destination: "/antes-pira", permanent: true },
 
