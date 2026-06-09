@@ -1,5 +1,10 @@
 import { CTAButton } from '@/components/ui/CTAButton'
-import { HeroSVGClient } from './HeroSVGClient'
+import dynamic from 'next/dynamic'
+
+const HeroSVGClient = dynamic(
+  () => import('./HeroSVGClient').then((mod) => mod.HeroSVGClient),
+  { ssr: false }
+)
 
 /* Artboard 1 — geometria canônica KZ sobre Sand #e8e0d6.
    Texto renderiza no servidor (sem 'use client') para LCP imediato.
