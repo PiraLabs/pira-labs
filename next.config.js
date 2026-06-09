@@ -3,6 +3,8 @@ const nextConfig = {
   turbopack: {
     resolveAlias: {
       '@': '.',
+      '../build/polyfills/polyfill-module': './lib/empty.js',
+      'next/dist/build/polyfills/polyfill-module': './lib/empty.js',
     },
   },
   async redirects() {
