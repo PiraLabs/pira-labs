@@ -57,7 +57,7 @@ export function HeroSection() {
     <section
       id="hero"
       aria-label="Pira Labs · Creative Business Turnaround"
-      style={{ backgroundColor: "#e8e0d6", position: "relative", overflow: "hidden", minHeight: "560px" }}
+      style={{ backgroundColor: "#e8e0d6", position: "relative", overflow: "hidden", minHeight: "clamp(480px, 60vw, 680px)" }}
     >
       {/* SVG camada de fundo — absoluto, lado direito, fora do fluxo do grid */}
       <div
