@@ -113,14 +113,14 @@ export function SystemSection() {
 
           {/* Desktop: SVG com geometria exata do Artboard_6 reescalonado */}
           <div className="hidden md:block" style={{ marginTop: "56px" }}>
-            <svg viewBox="0 430 1920 280"
+            <svg viewBox="300 460 1320 220"
               style={{ width: "100%", height: "auto", display: "block" }}
               aria-hidden="true" focusable="false">
 
               {/* Nó esquerdo — anel donut */}
               <g ref={leftNodeRef} opacity={0.35}>
-                <circle cx={448} cy={540} r={49} fill={SAND} />
-                <circle cx={448} cy={540} r={32} fill={INK} />
+                <circle cx={448} cy={540} r={62} fill={SAND} />
+                <circle cx={448} cy={540} r={42} fill={INK} />
               </g>
 
               {/* Nó centro + conectores — path exato do Artboard_6 */}
@@ -131,18 +131,18 @@ export function SystemSection() {
               </g>
 
               {/* Nó direito — disco sólido, vira Ember */}
-              <circle ref={rightRef} cx={1472} cy={540} r={49}
+              <circle ref={rightRef} cx={1472} cy={540} r={62}
                 style={{ fill: SAND, opacity: 0.35 }} />
 
               {/* Labels */}
               <text x={448}  y={638} textAnchor="middle"
-                fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={22}
+                fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={26}
                 fill="rgba(232,224,214,0.55)">Sistema disperso</text>
               <text x={960}  y={638} textAnchor="middle"
-                fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={22}
+                fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={26}
                 fill="rgba(232,224,214,0.55)">Sistema em operação</text>
               <text x={1472} y={638} textAnchor="middle"
-                fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={22}
+                fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={26}
                 fill="rgba(232,224,214,0.55)">Sistema pleno</text>
             </svg>
 
