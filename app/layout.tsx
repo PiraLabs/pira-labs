@@ -22,7 +22,7 @@ const atypDisplay = localFont({
     { path: "../public/fonts/AtypDisplay-Bold.woff2",     weight: "700", style: "normal" },
   ],
   variable: "--font-atyp-display",
-  display: "optional",
+  display: "swap",
   fallback: ["Plus Jakarta Sans", "sans-serif"],
 });
 
@@ -34,7 +34,7 @@ const atypText = localFont({
     { path: "../public/fonts/AtypText-Semibold.woff2", weight: "600", style: "normal" },
   ],
   variable: "--font-atyp-text",
-  display: "optional",
+  display: "swap",
   fallback: ["Plus Jakarta Sans", "sans-serif"],
 });
 
