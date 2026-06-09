@@ -113,35 +113,46 @@ export function SystemSection() {
 
           {/* Desktop: SVG com geometria exata do Artboard_6 reescalonado */}
           <div className="hidden md:block" style={{ marginTop: "56px" }}>
-            <svg viewBox="300 460 1320 240"
+            <svg viewBox="300 455 1320 250"
               style={{ width: "100%", height: "auto", display: "block" }}
               aria-hidden="true" focusable="false">
 
-                {/* Nó esquerdo — anel donut maior */}
-                <g ref={leftNodeRef} opacity={0.35}>
-                  <circle cx={448} cy={540} r={70} fill={SAND} />
-                  <circle cx={448} cy={540} r={48} fill={INK} />
+                {/* Conectores — rects simples, renderizados antes dos nós para ficarem por baixo */}
+                <g opacity={0.2}>
+                  <rect x={510} y={534} width={388} height={12} fill={SAND} rx={6} />
+                  <rect x={1022} y={534} width={388} height={12} fill={SAND} rx={6} />
                 </g>
 
-                {/* Nó centro — scale 1.28, tamanho de referência */}
-                <g ref={centerRef} opacity={0.35} transform="translate(960,540) scale(1.28) translate(-960,-540)">
+                {/* Nó esquerdo — anel donut r=62 */}
+                <g ref={leftNodeRef} opacity={0.35}>
+                  <circle cx={448} cy={540} r={62} fill={SAND} />
+                  <circle cx={448} cy={540} r={42} fill={INK} />
+                </g>
+
+                {/* Nó centro — duas meias-luas r=62 desenhadas do zero, centradas em 960,540 */}
+                <g ref={centerRef} opacity={0.35}>
+                  {/* Meia-lua superior: arco de 180° abrindo para cima */}
                   <path fill={SAND}
-                    d="M1008.93,546h-97.86c2.96,24.4,23.73,43.31,48.93,43.31s45.97-18.91,48.93-43.31M911.07,534h97.86c-2.96-24.4-23.73-43.31-48.93-43.31s-45.97,18.91-48.93,43.31M1009.31,540c0,2.03-.14,4.03-.38,6h413.69v-12h-413.69c.24,1.97.38,3.97.38,6M496.37,546h414.7c-.24-1.97-.38-3.97-.38-6s.14-4.03.38-6h-414.7v12Z"
+                    d="M898,540 A62,62 0 0,1 1022,540 L1010,540 A50,50 0 0,0 910,540 Z"
+                  />
+                  {/* Meia-lua inferior: arco de 180° abrindo para baixo */}
+                  <path fill={SAND}
+                    d="M898,540 A62,62 0 0,0 1022,540 L1010,540 A50,50 0 0,1 910,540 Z"
                   />
                 </g>
 
-                {/* Nó direito — disco maior */}
-                <circle ref={rightRef} cx={1472} cy={540} r={70}
+                {/* Nó direito — disco sólido r=62, vira Ember */}
+                <circle ref={rightRef} cx={1472} cy={540} r={62}
                   style={{ fill: SAND, opacity: 0.35 }} />
 
-                {/* Labels */}
-                <text x={448}  y={655} textAnchor="middle"
+                {/* Labels centralizados em cada nó */}
+                <text x={448}  y={650} textAnchor="middle"
                   fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={24}
                   fill="rgba(232,224,214,0.55)">Sistema disperso</text>
-                <text x={960}  y={655} textAnchor="middle"
+                <text x={960}  y={650} textAnchor="middle"
                   fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={24}
                   fill="rgba(232,224,214,0.55)">Sistema em operação</text>
-                <text x={1472} y={655} textAnchor="middle"
+                <text x={1472} y={650} textAnchor="middle"
                   fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={24}
                   fill="rgba(232,224,214,0.55)">Sistema pleno</text>
               </svg>
