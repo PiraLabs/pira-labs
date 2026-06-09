@@ -29,7 +29,6 @@ const nextConfig = {
       { source: "/cases", destination: "/#provas", permanent: true },
 
       // URLs em inglês do site provisório (5 rotas /en/* do sitemap antigo)
-      { source: "/en", destination: "/", permanent: true },
       { source: "/en/services", destination: "/inspira", permanent: true },
       { source: "/en/about", destination: "/sobre", permanent: true },
       { source: "/en/cases", destination: "/#provas", permanent: true },
