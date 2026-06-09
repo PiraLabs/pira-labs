@@ -24,7 +24,13 @@ Em conflito entre este CLAUDE.md e o wireframe v5, comunicar ao Celso antes de r
 **Shell Bash:** inoperante neste ambiente Windows — nunca tente rodar comandos shell.
 **Ferramentas que funcionam:** Read, Write, Edit, Glob, Grep (ferramentas nativas do Code).
 **Diagnóstico de build:** `npm run capture-win` (abre Node.js diretamente, funciona no Windows).
-**Deploy:** via `deploy.bat` (git add → commit → push → vercel --prod).
+**Deploy:** via `deploy.bat "mensagem de commit"` — executa em sequência:
+1. `git add -A`
+2. `git commit -m "<mensagem>"`
+3. `git push origin rebuild-v2`
+4. `npx vercel --prod --yes`
+
+O argumento `%~1` é a mensagem do commit. Sem argumento, o commit fica sem mensagem e falha. Exemplo: `deploy.bat "fix: ajuste hero mobile"`.
 
 Scripts disponíveis (referência — não executar via bash):
 - `npm run dev` — servidor local (porta 3000), Turbopack desabilitado
@@ -38,6 +44,34 @@ Scripts disponíveis (referência — não executar via bash):
 
 **Stack:** Next.js 16.2.6 App Router · React 19 · TypeScript · Tailwind CSS 3 · Vercel
 **Animações:** GSAP 3.15 (produção) — ScrollTrigger e float no home; importar de `gsap/ScrollTrigger`
+
+### Padrões GSAP obrigatórios
+
+**Registro de plugins:** `gsap.registerPlugin(ScrollTrigger)` no topo do módulo (fora do componente), não dentro de `useEffect`.
+
+**Padrão de inicialização segura (SSR):** todo `useEffect` com GSAP usa double-RAF para garantir que o DOM está pintado antes de animar:
+```tsx
+useEffect(() => {
+  let raf1: number, raf2: number
+  raf1 = requestAnimationFrame(() => {
+    raf2 = requestAnimationFrame(() => {
+      // animações aqui
+    })
+  })
+  return () => {
+    cancelAnimationFrame(raf1)
+    cancelAnimationFrame(raf2)
+    tweensRef.current.forEach((t) => t.kill())
+    tweensRef.current = []
+  }
+}, [])
+```
+
+**`prefers-reduced-motion`:** verificar via `window.matchMedia("(prefers-reduced-motion: reduce)").matches` antes de criar qualquer tween. Para ScrollTrigger, usar `gsap.set()` para estado estático final e retornar early.
+
+**Cleanup de ScrollTrigger:** matar via `ScrollTrigger.getAll().forEach(t => t.kill())` no return do useEffect quando a seção cria triggers próprios.
+
+**Float (nós animados):** duração lida de `node.dataset.dur`, distância Y 14–18px, X 4–6px, `yoyo: true`, `repeat: -1`, `ease: "sine.inOut"`. Refs via `querySelectorAll(".hero-node")` no SVG.
 **Conteúdo em .tsx** (não .mdx — decisão deliberada)
 **Renderização:** todas as páginas usam `export const dynamic = 'force-static'` (SSG puro)
 
@@ -116,6 +150,17 @@ Home-specific (`/components/home/`): cada seção usa par duplo de arquivos. `*S
 
 `components/Nav.tsx` e `components/Footer.tsx` na raiz de components são legado — os ativos são `components/shared/Header.tsx` e `components/shared/Footer.tsx`.
 
+### Onde colocar novos componentes
+
+| Situação | Pasta |
+|---|---|
+| Componente reutilizável entre páginas | `components/shared/` |
+| Seção específica da home com GSAP | `components/home/` — criar par `*Section.tsx` + `*SectionClient.tsx` |
+| Link/botão simples sem rastreamento de origem | `components/ui/` |
+| Componente one-off de uma única página | dentro da própria pasta da rota (`app/[rota]/`) |
+
+Não criar componente em `components/shared/` para uso exclusivo de uma página. Não criar abstração genérica para padrão que ocorre menos de 3 vezes.
+
 ### Padrões de implementação
 
 **Nova página:**
@@ -176,11 +221,15 @@ Props: `density: "sparse"(5) | "medium"(10) | "dense"(19)` · `variant: "dark" |
 
 ### Variáveis de ambiente
 
-| Var | Uso |
-|---|---|
-| `NEXT_PUBLIC_FILLOUT_URL` | URL do iframe Fillout (não configurada na Vercel — formulário inativo) |
-| `NEXT_PUBLIC_FLAG_D1` / `FLAG_D4` / `FLAG_PULSO` | Feature flags de produtos |
-| `NEXT_PUBLIC_VAGAS_OXIGENIO` | Vagas disponíveis (default 5) |
+| Var | Status na Vercel | Uso |
+|---|---|---|
+| `NEXT_PUBLIC_FILLOUT_URL` | **ausente** | URL do iframe Fillout — formulário inativo até configurar |
+| `NEXT_PUBLIC_FLAG_D1` | ausente (default `false`) | Feature flag produto D1 |
+| `FLAG_D4` | ausente (default `false`) | Feature flag produto D4 (server-side) |
+| `FLAG_PULSO` | ausente (default `false`) | Feature flag produto Pulso (server-side) |
+| `NEXT_PUBLIC_VAGAS_OXIGENIO` | ausente (default `"5"`) | Vagas exibidas em `/inspira/oxigenio` |
+
+Flags ausentes na Vercel resultam em produto oculto (comportamento esperado). Não adicionar valor `"false"` explícito — ausência já desativa. Para ativar um produto, adicionar a var com valor `"true"` no painel da Vercel em Environment Variables → Production.
 
 ### Webpack / imports
 

@@ -167,7 +167,7 @@ export function Footer() {
             alt="Logotipo PiraLabs"
             width={286}
             height={32}
-            className="h-8 w-auto"
+            style={{ height: '32px', width: '286px' }}
           />
         </Link>
 

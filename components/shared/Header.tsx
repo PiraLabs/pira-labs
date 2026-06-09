@@ -116,7 +116,7 @@ export function Header() {
               alt="Pira Labs"
               width={120}
               height={28}
-              style={{ height: '28px', width: 'auto' }}
+              style={{ height: '28px', width: '249px' }}
             />
           </Link>
 

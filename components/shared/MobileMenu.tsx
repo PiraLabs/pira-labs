@@ -193,7 +193,7 @@ export function MobileMenu({
             <img
               src="/brand/COMPLETA_OFFWHITE.svg"
               alt="PiraLabs"
-              style={{ height: '24px', width: 'auto' }}
+              style={{ height: '24px', width: '214px' }}
             />
           </Link>
 
