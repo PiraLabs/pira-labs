@@ -123,8 +123,8 @@ export function SystemSection() {
                 <circle cx={448} cy={540} r={42} fill={INK} />
               </g>
 
-              {/* Nó centro + conectores — path exato do Artboard_6 */}
-              <g ref={centerRef} opacity={0.35}>
+              {/* Nó centro + conectores — path escalado para r=62 */}
+              <g ref={centerRef} opacity={0.35} transform="translate(960,540) scale(1.43) translate(-960,-540)">
                 <path fill={SAND}
                   d="M1008.93,546h-97.86c2.96,24.4,23.73,43.31,48.93,43.31s45.97-18.91,48.93-43.31M911.07,534h97.86c-2.96-24.4-23.73-43.31-48.93-43.31s-45.97,18.91-48.93,43.31M1009.31,540c0,2.03-.14,4.03-.38,6h413.69v-12h-413.69c.24,1.97.38,3.97.38,6M496.37,546h414.7c-.24-1.97-.38-3.97-.38-6s.14-4.03.38-6h-414.7v12Z"
                 />
@@ -134,21 +134,21 @@ export function SystemSection() {
               <circle ref={rightRef} cx={1472} cy={540} r={62}
                 style={{ fill: SAND, opacity: 0.35 }} />
 
-              {/* Labels */}
-              <text x={448}  y={638} textAnchor="middle"
+              {/* Labels — y aumentado para mais espaço */}
+              <text x={448}  y={650} textAnchor="middle"
                 fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={26}
                 fill="rgba(232,224,214,0.55)">Sistema disperso</text>
-              <text x={960}  y={638} textAnchor="middle"
+              <text x={960}  y={650} textAnchor="middle"
                 fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={26}
                 fill="rgba(232,224,214,0.55)">Sistema em operação</text>
-              <text x={1472} y={638} textAnchor="middle"
+              <text x={1472} y={650} textAnchor="middle"
                 fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={26}
                 fill="rgba(232,224,214,0.55)">Sistema pleno</text>
             </svg>
 
-            <div className="grid grid-cols-3 gap-8" style={{ marginTop: "8px" }}>
+            <div className="grid grid-cols-3 gap-8" style={{ marginTop: "16px" }}>
               {LABELS.map(({ desc }, i) => (
-                <div key={i} style={{ textAlign: "center", padding: "0 8px" }}>
+                <div key={i} style={{ textAlign: "center", padding: "0 16px" }}>
                   <p style={{ color: "rgba(232,224,214,0.45)", fontSize: "13px", lineHeight: 1.7,
                     fontFamily: "var(--font-atyp-text), sans-serif", fontWeight: 300 }}>
                     {desc}
