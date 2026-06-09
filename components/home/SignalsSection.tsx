@@ -150,7 +150,7 @@ export function SignalsSection() {
           }}
         >
           Os sinais aparecem{" "}
-          <span style={{ color: EMBER }}>antes</span>{" "}
+          <span style={{ color: "#C4421A" }}>antes</span>{" "}
           da crise. O problema é que quase ninguém sabe lê-los.
         </h2>
 

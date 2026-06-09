@@ -41,7 +41,7 @@ export function CookieBanner() {
   return (
     <div
       role="dialog"
-      aria-labelledby="cookie-banner-title"
+      aria-label="Aviso de cookies"
       aria-describedby="cookie-banner-text"
       className="fixed bottom-0 left-0 right-0 z-[60] bg-deep-teal border-t border-teal/50 px-4 py-5 md:px-8 md:py-6"
     >

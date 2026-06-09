@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
 
 /* HOME-7 · Provas · fundo Ink #05262e
    Imagem de fundo na metade direita com gradiente de transição.
@@ -107,6 +108,7 @@ function ProofMetric({
   return (
     <div className="py-12 first:pt-0 last:pb-0 border-b border-white/10 last:border-0">
       <div
+        role="text"
         className={`font-display font-bold leading-none tracking-tight ${numberClass}`}
         style={{ fontSize: "clamp(64px, 8vw, 104px)" }}
         aria-label={`${proof.fromPrefix}${proof.from}${proof.fromSuffix} para ${proof.toPrefix}${proof.to}${proof.toSuffix}`}
@@ -173,15 +175,13 @@ export function ProofsSection() {
           zIndex: 0,
         }}
       >
-        <img
+        <Image
           src="/H7.png"
           alt=""
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center 68%",
-          }}
+          fill
+          sizes="(max-width: 768px) 100vw, 52vw"
+          quality={80}
+          style={{ objectFit: "cover", objectPosition: "center 68%" }}
         />
         {/* Gradiente da esquerda — transição */}
         <div

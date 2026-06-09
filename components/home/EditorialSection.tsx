@@ -175,7 +175,7 @@ export function EditorialSection() {
               lineHeight: 1,
             }}
           >
-            Antes<span style={{ color: "#eb5c2e" }}>,</span> Pira
+            Antes<span style={{ color: "#C4421A" }}>,</span> Pira
           </p>
         </div>
 
@@ -190,7 +190,7 @@ export function EditorialSection() {
             }}
           >
             Para quem prefere decidir<br />
-            <span style={{ color: "#eb5c2e" }}>antes</span>{" "}
+            <span style={{ color: "#C4421A" }}>antes</span>{" "}
             que a crise decida.
           </h2>
           <p

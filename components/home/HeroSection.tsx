@@ -171,7 +171,7 @@ export function HeroSection() {
               className="font-display font-bold mb-4"
               style={{ fontSize: "clamp(28px, 3.5vw, 36px)" }}
             >
-              <span style={{ color: "#eb5c2e" }}>Creative</span>{" "}
+              <span style={{ color: "#C4421A" }}>Creative</span>{" "}
               <span style={{ color: "#05262e" }}>Business Turnaround</span>
             </p>
 

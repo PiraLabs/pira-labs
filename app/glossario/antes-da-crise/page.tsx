@@ -1,5 +1,3 @@
-export const dynamic = 'force-static'
-
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Section } from "@/components/shared/Section"

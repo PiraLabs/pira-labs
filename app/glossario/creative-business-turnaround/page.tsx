@@ -1,5 +1,3 @@
-export const dynamic = 'force-static'
-
 import type { Metadata } from "next"
 import { Section } from "@/components/shared/Section"
 import { PageHeader } from "@/components/shared/PageHeader"
@@ -48,10 +46,11 @@ const breadcrumbs = [
 ]
 
 export default function CBTTerm() {
+  const combinedSchema = [bcSchema, termSchema]
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bcSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(termSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }} />
 
       <div className="bg-ink">
         <PageHeader
