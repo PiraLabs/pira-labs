@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbopack: false,
+  turbopack: {
+    resolveAlias: {
+      '@': '.',
+    },
   },
   async redirects() {
     return [
@@ -104,11 +106,6 @@ const nextConfig = {
         ],
       },
     ];
-  },
-  webpack: (config) => {
-    const path = require('path');
-    config.resolve.alias['@'] = path.resolve(__dirname, '.');
-    return config;
   },
 };
 
