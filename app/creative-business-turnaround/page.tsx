@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description:
       "O processo de diagnóstico e redesenho para empresas de serviços que precisam agir antes que a janela se feche.",
     url: "https://piralabs.com.br/creative-business-turnaround",
-    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
+    images: [{ url: "https://piralabs.com.br/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 
@@ -75,6 +75,11 @@ const faqItems = [
     question: "Para que tipo de empresa faz sentido o Creative Business Turnaround?",
     answer:
       "Empresas de serviços que chegaram a um ponto onde o crescimento parou, a margem sumiu ou o fundador virou gargalo, mas a crise ainda não chegou de verdade. Setores com maior aplicação: jurídico, comunicação e marketing, consultorias especializadas e educação corporativa.",
+  },
+  {
+    question: "Como saber se ainda estou dentro da janela de oportunidade?",
+    answer:
+      "A janela de oportunidade está aberta quando o negócio ainda tem clientes, caixa e reputação ao mesmo tempo. Quando um dos três começa a faltar, a janela começa a fechar. O diagnóstico INSPIRA existe exatamente para medir isso — não para confirmar que a janela está aberta, mas para identificar por quanto tempo ainda estará.",
   },
 ];
 
@@ -133,13 +138,15 @@ export default function CreativeBusinessTurnaroundPage() {
             Virada. O negócio estava de uma forma. Passou a ser de outra. A
             diferença é mensurável.
           </p>
+          <p className="text-off-white/85 font-body leading-relaxed">
+            É a diferença entre medicina preventiva, medicina responsiva e medicina paliativa. As três tratam o mesmo paciente. O que muda é o momento: preventiva quando o sistema ainda tem saúde para mudar, responsiva quando o problema já se instalou, paliativa quando o dano é irreversível. O Creative Business Turnaround atua no primeiro momento — quando ainda há opções, velocidade e margem para decidir.
+          </p>
         </div>
         <div className="bg-teal/20 border border-teal/40 rounded-lg p-6 max-w-3xl">
           <p className="text-off-white/85 font-body leading-relaxed">
-            <strong className="text-off-white font-semibold">A Pira Labs atua antes:</strong>{" "}
-            quando a empresa ainda tem clientes, caixa e reputação, mas o modelo
-            de trabalho começou a custar caro demais. O nome veio de fora. A
-            alma, o método e o recorte são da Pira.
+            <strong className="text-off-white font-semibold">A Pira Labs nomeou, define e opera o Creative Business Turnaround no Brasil.</strong>{" "}
+            A Pira atua antes: quando a empresa ainda tem clientes, caixa e reputação, mas o modelo
+            de trabalho começou a custar caro demais.
           </p>
         </div>
       </Section>
@@ -299,7 +306,7 @@ export default function CreativeBusinessTurnaroundPage() {
           O que o Creative Business Turnaround não é
         </h2>
         <p className="text-off-white/70 font-body mb-8 max-w-2xl">
-          CBT não se confunde com consultoria estratégica, agência criativa,
+          O Creative Business Turnaround não se confunde com consultoria estratégica, agência criativa,
           mentoria ou intervenção de crise porque nenhum desses resolve o
           negócio como sistema antes do problema virar urgência.
         </p>
@@ -319,7 +326,7 @@ export default function CreativeBusinessTurnaroundPage() {
               <tr>
                 <td className="py-4 pr-6 text-off-white font-semibold align-top">Consultoria estratégica</td>
                 <td className="py-4 text-off-white/75 align-top">
-                  Entrega relatório e sai. CBT conecta diagnóstico à rota
+                  Entrega relatório e sai. O Creative Business Turnaround conecta diagnóstico à rota
                   executável e, quando contratado como execução, acompanha até
                   resultado verificado.
                 </td>
@@ -327,27 +334,27 @@ export default function CreativeBusinessTurnaroundPage() {
               <tr>
                 <td className="py-4 pr-6 text-off-white font-semibold align-top">Agência criativa</td>
                 <td className="py-4 text-off-white/75 align-top">
-                  Resolve comunicação ou canal. CBT resolve o negócio como
+                  Resolve comunicação ou canal. O Creative Business Turnaround resolve o negócio como
                   sistema.
                 </td>
               </tr>
               <tr>
                 <td className="py-4 pr-6 text-off-white font-semibold align-top">Empresa de tecnologia ou IA</td>
                 <td className="py-4 text-off-white/75 align-top">
-                  Vende ferramenta. CBT não tem produto tecnológico próprio.
+                  Vende ferramenta. O Creative Business Turnaround não tem produto tecnológico próprio.
                 </td>
               </tr>
               <tr>
                 <td className="py-4 pr-6 text-off-white font-semibold align-top">Mentoria ou coaching</td>
                 <td className="py-4 text-off-white/75 align-top">
-                  Trabalha com o decisor individualmente. CBT trabalha com o
+                  Trabalha com o decisor individualmente. O Creative Business Turnaround trabalha com o
                   negócio como sistema.
                 </td>
               </tr>
               <tr>
                 <td className="py-4 pr-6 text-off-white font-semibold align-top">Intervenção de crise</td>
                 <td className="py-4 text-off-white/75 align-top">
-                  Chega depois da ruptura. CBT atua antes, quando ainda há
+                  Chega depois da ruptura. O Creative Business Turnaround atua antes, quando ainda há
                   opções.
                 </td>
               </tr>
@@ -426,8 +433,7 @@ export default function CreativeBusinessTurnaroundPage() {
             Ponto de entrada
           </p>
           <p className="text-off-white/85 font-body leading-relaxed mb-4">
-            O Oxigênio IA Search é o subproduto de diagnóstico para quem quer
-            começar com escopo fechado.{" "}
+            Para quem quer começar com escopo fechado, a Pira Labs tem a Faísca: produtos de entrada com entrega verificável e preço fixo, sem compromisso longo. O Oxigênio IA Search é a porta de diagnóstico de presença em IA.{" "}
             <strong className="text-off-white">Fast R$3.500 · Full R$5.300.</strong>{" "}
             Até 5 dias úteis.
           </p>
@@ -444,10 +450,7 @@ export default function CreativeBusinessTurnaroundPage() {
         </h2>
         <div className="max-w-3xl space-y-4 mb-10">
           <p className="text-off-white/85 font-body leading-relaxed">
-            A Pira Labs é a empresa que nomeou, define e opera o Creative
-            Business Turnaround no Brasil. Fundada por Gabriela Aguiar e Celso
-            Gama, é boutique por escolha: cada projeto tem os dois fundadores
-            do diagnóstico à entrega.
+            A Pira Labs é a empresa que nomeou, define e opera o Creative Business Turnaround no Brasil. Cada projeto tem os dois fundadores do diagnóstico à entrega — boutique por escolha, não por limitação.
           </p>
         </div>
         <div className="overflow-x-auto max-w-4xl mb-8">
@@ -519,7 +522,7 @@ export default function CreativeBusinessTurnaroundPage() {
       {/* CBT-9 · CTA final */}
       <FinalCTA
         heading="Existe um próximo nível para o seu negócio. O que está entre você e ele, descobrimos junto."
-        ctaLabel="Respire"
+        ctaLabel="RESPIRE"
         origin={ORIGINS.CREATIVE_BUSINESS_TURNAROUND}
       />
     </>

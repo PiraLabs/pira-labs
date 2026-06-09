@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     description:
       "Seis dimensões do negócio em sequência, convergindo em síntese integrada. Gabriela Aguiar conduz.",
     url: "https://piralabs.com.br/inspira",
-    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
+    images: [{ url: "https://piralabs.com.br/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 
 const breadcrumbs = [
   { label: "Home", href: "/" },
-  { label: "Inspira" },
+  { label: "INSPIRA" },
 ];
 
 const camadas = [
@@ -286,7 +286,7 @@ export default function InspiraPage() {
       {/* INSPIRA-8 · CTA final */}
       <FinalCTA
         heading="O INSPIRA começa quando a conversa começa."
-        ctaLabel="Respire"
+        ctaLabel="RESPIRE"
         origin={ORIGINS.INSPIRA}
       />
     </>

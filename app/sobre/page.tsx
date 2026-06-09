@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     description:
       "Boutique brasileira de Creative Business Turnaround. Gabriela e Celso em cada projeto, do diagnóstico à entrega.",
     url: "https://piralabs.com.br/sobre",
-    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
+    images: [{ url: "https://piralabs.com.br/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 
@@ -260,7 +260,7 @@ export default function SobrePage() {
       {/* SOBRE-8 · CTA final */}
       <FinalCTA
         heading="Existe um próximo nível para o seu negócio. O que está entre você e ele, descobrimos junto."
-        ctaLabel="Respire"
+        ctaLabel="RESPIRE"
         origin={ORIGINS.SOBRE}
       />
     </>

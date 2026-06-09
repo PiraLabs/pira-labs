@@ -42,13 +42,13 @@ export const metadata: Metadata = {
     description:
       "Redesenho de trabalho, valor, tecnologia e governança. Duas configurações: COO Temporário e Arquiteto de Delegação.",
     url: "https://piralabs.com.br/transpira",
-    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
+    images: [{ url: "https://piralabs.com.br/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };
 
 const breadcrumbs = [
   { label: "Home", href: "/" },
-  { label: "Transpira" },
+  { label: "TRANSPIRA" },
 ];
 
 const frentesEntrega = [
@@ -214,7 +214,7 @@ export default function TranspiraPage() {
       {/* TRANSPIRA-8 · CTA final */}
       <FinalCTA
         heading="O TRANSPIRA não é projeto que se vende. É projeto que se aceita."
-        ctaLabel="Respire"
+        ctaLabel="RESPIRE"
         origin={ORIGINS.TRANSPIRA}
       />
     </>
