@@ -113,7 +113,7 @@ export function SystemSection() {
 
           {/* Desktop: Artboard_6 inline com nó direito em Ember */}
           <div className="hidden md:block" style={{ marginTop: "56px" }}>
-            <svg ref={rightRef as any} viewBox="300 455 1320 250"
+            <svg ref={rightRef as any} viewBox="280 450 1380 240"
               style={{ width: "100%", height: "auto", display: "block" }}
               aria-hidden="true" focusable="false"
               xmlns="http://www.w3.org/2000/svg">
@@ -132,14 +132,14 @@ export function SystemSection() {
               <path fill={EMBER} opacity={0.9} d="M1471.93,490.69c-27.23,0-49.31,22.08-49.31,49.31s22.08,49.31,49.31,49.31,49.31-22.07,49.31-49.31-22.08-49.31-49.31-49.31"/>
 
               {/* Labels */}
-              <text x={448}  y={620} textAnchor="middle"
-                fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={20}
+              <text x={448}  y={618} textAnchor="middle"
+                fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={18}
                 fill="rgba(232,224,214,0.55)">Sistema disperso</text>
-              <text x={960}  y={620} textAnchor="middle"
-                fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={20}
+              <text x={960}  y={618} textAnchor="middle"
+                fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={18}
                 fill="rgba(232,224,214,0.55)">Sistema em operação</text>
-              <text x={1472} y={620} textAnchor="middle"
-                fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={20}
+              <text x={1471} y={618} textAnchor="middle"
+                fontFamily="var(--font-atyp-text),sans-serif" fontWeight={300} fontSize={18}
                 fill="rgba(232,224,214,0.55)">Sistema pleno</text>
             </svg>
 
