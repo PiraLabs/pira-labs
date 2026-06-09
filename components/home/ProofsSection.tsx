@@ -173,13 +173,15 @@ export function ProofsSection() {
           width: "52%",
           height: "100%",
           zIndex: 0,
+          display: "var(--proofs-img-display, block)",
         }}
+        className="hidden md:block"
       >
         <Image
           src="/H7.png"
           alt=""
           fill
-          sizes="(max-width: 768px) 100vw, 52vw"
+          sizes="52vw"
           quality={80}
           style={{ objectFit: "cover", objectPosition: "center 68%" }}
         />
