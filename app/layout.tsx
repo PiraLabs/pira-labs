@@ -23,6 +23,7 @@ const atypDisplay = localFont({
   ],
   variable: "--font-atyp-display",
   display: "swap",
+  preload: true,
   fallback: ["Plus Jakarta Sans", "sans-serif"],
 });
 
