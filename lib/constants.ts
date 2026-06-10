@@ -32,6 +32,8 @@ export const ORIGINS = {
   FAISCA_PALESTRAS:             "faisca_palestras",
   FAISCA_WORKSHOPS:             "faisca_workshops",
   FAISCA_CLEVEL:                "faisca_clevel",
+  CHAMA:                        "chama",
+  COMO_PENSAMOS:                "como_pensamos",
   CREATIVE_BUSINESS_TURNAROUND: "creative_business_turnaround",
   HEADER_GLOBAL:                "header_global",
   NOT_FOUND:                    "404",
