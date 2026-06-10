@@ -87,7 +87,7 @@ export function FoundersSection() {
         <div style={{ ...entry("0s"), maxWidth: "580px", marginBottom: "80px" }}>
           <p
             className="font-body font-semibold uppercase tracking-widest"
-            style={{ fontSize: "10px", color: "rgba(245,245,242,0.5)", marginBottom: "16px" }}
+            style={{ fontSize: "10px", color: "#e8e0d6", marginBottom: "16px" }}
           >
             QUEM CONDUZ
           </p>
@@ -101,7 +101,7 @@ export function FoundersSection() {
             className="font-body font-light"
             style={{
               fontSize: "17px",
-              color: "rgba(245,245,242,0.65)",
+              color: "#e8e0d6",
               marginTop: "24px",
               maxWidth: "480px",
               lineHeight: 1.75,
@@ -125,7 +125,7 @@ export function FoundersSection() {
             </p>
             <p
               className="font-body font-light leading-relaxed"
-              style={{ fontSize: "17px", color: "rgba(245,245,242,0.72)", marginBottom: "20px" }}
+              style={{ fontSize: "17px", color: "#F5F5F2", marginBottom: "20px" }}
             >
               Lê o que a empresa não está conseguindo nomear. Conduz o INSPIRA: cruza mercado,
               tecnologia, ecossistema e decisão para identificar onde o modelo de trabalho começou
@@ -133,7 +133,7 @@ export function FoundersSection() {
             </p>
             <p
               className="font-body font-light"
-              style={{ fontSize: "14px", color: "rgba(245,245,242,0.45)", lineHeight: 1.7, marginBottom: "20px" }}
+              style={{ fontSize: "14px", color: "#e8e0d6", lineHeight: 1.7, marginBottom: "20px" }}
             >
               Docente em educação executiva.{" "}
               Universal AI Foundational Modules (MIT).
@@ -143,12 +143,12 @@ export function FoundersSection() {
               className="font-body font-light"
               style={{
                 fontSize: "13px",
-                color: "rgba(245,245,242,0.5)",
+                color: "#e8e0d6",
                 textDecoration: "none",
                 transition: "color 0.25s",
               }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#F5F5F2")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245,245,242,0.5)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#e8e0d6")}
             >
               Conhecer Gabriela →
             </a>
@@ -164,14 +164,14 @@ export function FoundersSection() {
             </p>
             <p
               className="font-body font-light leading-relaxed"
-              style={{ fontSize: "17px", color: "rgba(245,245,242,0.72)", marginBottom: "20px" }}
+              style={{ fontSize: "17px", color: "#F5F5F2", marginBottom: "20px" }}
             >
               Entra quando o diagnóstico precisa virar movimento. Conduz o TRANSPIRA: reorganiza
               trabalho, margem, cadência e execução até o resultado ser verificável.
             </p>
             <p
               className="font-body font-light"
-              style={{ fontSize: "14px", color: "rgba(245,245,242,0.45)", lineHeight: 1.7, marginBottom: "20px" }}
+              style={{ fontSize: "14px", color: "#e8e0d6", lineHeight: 1.7, marginBottom: "20px" }}
             >
               Bacharelando em Direito (Mackenzie).{" "}
               Applied AI Certificate Program (MIT).
@@ -181,12 +181,12 @@ export function FoundersSection() {
               className="font-body font-light"
               style={{
                 fontSize: "13px",
-                color: "rgba(245,245,242,0.5)",
+                color: "#e8e0d6",
                 textDecoration: "none",
                 transition: "color 0.25s",
               }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#F5F5F2")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245,245,242,0.5)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#e8e0d6")}
             >
               Conhecer Celso →
             </a>

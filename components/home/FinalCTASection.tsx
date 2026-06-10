@@ -73,17 +73,14 @@ export function FinalCTASection() {
               borderRadius: '2px',
               letterSpacing: '0.12em',
               display: 'inline-block',
-              boxShadow: '0 4px 24px rgba(235,92,46,0.35)',
-              transition: 'opacity 0.2s, box-shadow 0.2s, transform 0.2s',
+              transition: 'opacity 0.2s, transform 0.2s',
             }}
             onMouseEnter={e => {
               e.currentTarget.style.opacity = '0.9'
-              e.currentTarget.style.boxShadow = '0 8px 32px rgba(235,92,46,0.5)'
               e.currentTarget.style.transform = 'translateY(-1px)'
             }}
             onMouseLeave={e => {
               e.currentTarget.style.opacity = '1'
-              e.currentTarget.style.boxShadow = '0 4px 24px rgba(235,92,46,0.35)'
               e.currentTarget.style.transform = 'translateY(0)'
             }}
           >
@@ -97,7 +94,7 @@ export function FinalCTASection() {
             className="font-body font-light"
             style={{
               fontSize: '13px',
-              color: 'rgba(245,245,242,0.5)',
+              color: '#e8e0d6',
               marginBottom: '64px',
             }}
           >
@@ -111,7 +108,7 @@ export function FinalCTASection() {
             className="font-display font-light"
             style={{
               fontSize: '20px',
-              color: 'rgba(245,245,242,0.25)',
+              color: '#e8e0d6',
               letterSpacing: '0.05em',
             }}
           >

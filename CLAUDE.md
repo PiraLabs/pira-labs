@@ -365,7 +365,7 @@ Nomenclatura atual (pós-redesign jun/2026):
 | `COMPLETA_INK.svg` | Logo completo ink (fundo claro) |
 | `ICONE_BRANCO.svg` / `ICONE_INK.svg` / `ICONE_SAND.svg` | Ícone isolado nas três variações |
 | `FAISCA_Ink_transp.svg` / `FAISCA_Sand_transp.svg` | Símbolo Faísca (PNG e SVG disponíveis) |
-| `INSPIRA_Ink_Sand.png` / `RESPIRA_Ink_Sand.png` / `TRANSPIRA_Ink_Sand.png` | Wordmarks de submarcas |
+| `INSPIRA_Ink_Sand.svg` / `INSPIRA_Sand_Ink.svg` / `INSPIRA_Teal_Sand.svg` / `TRANSPIRA_Ink_Sand.svg` / `TRANSPIRA_Sand_Ink.svg` / `TRANSPIRA_Teal_Sand.svg` / `RESPIRA_Ink_Sand.svg` / `RESPIRA_Sand_Ink.svg` / `RESPIRA_Teal_Sand.svg` | Wordmarks de submarcas |
 
 Arquivos antigos `logo-completo-*.svg` e `logo-icone-*.svg` foram deletados. Não referenciar.
 

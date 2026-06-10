@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 170">
+  <rect width="140" height="170" fill="#05262e"/>
+  <g transform="translate(70,82)">
+    <!-- Nó central com clipPath para linha divisória correta -->
+    <clipPath id="clip-inspira-ink">
+      <circle cx="0" cy="0" r="18"/>
+    </clipPath>
+    <circle cx="0" cy="0" r="18" fill="#e8e0d6"/>
+    <rect x="-20" y="-2.2" width="40" height="4.4" fill="#05262e" clip-path="url(#clip-inspira-ink)"/>
+    <!-- Linhas -->
+    <line x1="-12.73" y1="-12.73" x2="-28.99" y2="-28.99" stroke="#e8e0d6" stroke-width="1" stroke-linecap="square"/>
+    <line x1="12.73" y1="-12.73" x2="28.99" y2="-28.99" stroke="#e8e0d6" stroke-width="1" stroke-linecap="square"/>
+    <!-- Nó esquerdo vazio -->
+    <circle cx="-36.77" cy="-36.77" r="11" fill="none" stroke="#e8e0d6" stroke-width="1.5"/>
+    <!-- Nó direito cheio -->
+    <circle cx="36.77" cy="-36.77" r="11" fill="#e8e0d6"/>
+    <text x="0" y="46" text-anchor="middle" font-size="12" font-weight="500" font-family="AtypDisplay, sans-serif" fill="#e8e0d6">INSPIRA</text>
+  </g>
+</svg>

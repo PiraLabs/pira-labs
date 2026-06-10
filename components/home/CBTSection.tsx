@@ -12,7 +12,7 @@ const bodyStyle: React.CSSProperties = {
   fontWeight: 300,
   fontSize: "16px",
   lineHeight: 1.75,
-  color: "rgba(245,245,242,0.8)",
+  color: "#F5F5F2",
   margin: 0,
 }
 
@@ -36,7 +36,7 @@ export function CBTSection() {
             fontSize: "10px",
             letterSpacing: "0.18em",
             textTransform: "uppercase",
-            color: "rgba(245,245,242,0.5)",
+            color: "#e8e0d6",
             marginBottom: "40px",
           }}
         >

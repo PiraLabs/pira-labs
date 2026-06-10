@@ -197,7 +197,7 @@ export function EditorialSection() {
             className="font-body font-light"
             style={{
               fontSize: "19px",
-              color: "rgba(5,38,46,0.65)",
+              color: "#05262e",
               marginTop: "24px",
               maxWidth: "400px",
               lineHeight: 1.8,
@@ -259,7 +259,7 @@ export function EditorialSection() {
                   style={{
                     fontSize: "clamp(18px, 2vw, 24px)",
                     fontWeight: 400,
-                    color: hoveredPost === i ? "#05262e" : "rgba(5,38,46,0.8)",
+                    color: hoveredPost === i ? "#05262e" : "#05262e",
                     lineHeight: 1.3,
                     letterSpacing: "-0.02em",
                     transition: "color 0.25s",
@@ -278,7 +278,7 @@ export function EditorialSection() {
                   className="font-body font-light"
                   style={{
                     fontSize: "13px",
-                    color: "rgba(5,38,46,0.4)",
+                    color: "#05262e",
                     whiteSpace: "nowrap",
                     flexShrink: 0,
                   }}
@@ -324,12 +324,12 @@ export function EditorialSection() {
             className="font-body font-light"
             style={{
               fontSize: "13px",
-              color: "rgba(5,38,46,0.45)",
+              color: "#05262e",
               textDecoration: "none",
               transition: "color 0.2s",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#05262e")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(5,38,46,0.45)")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#05262e")}
           >
             Abrir no Substack ↗
           </a>

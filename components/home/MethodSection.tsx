@@ -130,7 +130,7 @@ export function MethodSection() {
               fontWeight: 300,
               fontSize: "16px",
               lineHeight: 1.6,
-              color: "rgba(245,245,242,0.75)",
+              color: "#F5F5F2",
               margin: 0,
             }}>
               Gabriela Aguiar conduz.
@@ -174,7 +174,7 @@ export function MethodSection() {
               fontWeight: 300,
               fontSize: "16px",
               lineHeight: 1.6,
-              color: "rgba(245,245,242,0.75)",
+              color: "#F5F5F2",
               margin: 0,
             }}>
               Celso Gama conduz.
@@ -220,7 +220,7 @@ export function MethodSection() {
               fontWeight: 300,
               fontSize: "16px",
               lineHeight: 1.6,
-              color: "rgba(245,245,242,0.75)",
+              color: "#F5F5F2",
               margin: 0,
             }}>
               O destino. Quando o negócio<br />pode focar no que importa.

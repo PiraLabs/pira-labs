@@ -120,14 +120,14 @@ function ProofMetric({
         </span>
       </div>
       <p
-        className="mt-3 font-body font-light uppercase tracking-widest text-white/40"
-        style={{ fontSize: "11px" }}
+        className="mt-3 font-body font-light uppercase tracking-widest"
+        style={{ fontSize: "11px", color: "#e8e0d6" }}
       >
         {proof.label}
       </p>
       <p
-        className="mt-4 font-body font-light leading-relaxed text-white/70"
-        style={{ fontSize: "15px", maxWidth: "52ch" }}
+        className="mt-4 font-body font-light leading-relaxed"
+        style={{ fontSize: "15px", maxWidth: "52ch", color: "#F5F5F2" }}
       >
         {proof.body}
       </p>
@@ -218,8 +218,8 @@ export function ProofsSection() {
         {/* Header */}
         <div style={{ maxWidth: "640px", marginBottom: "64px" }}>
           <p
-            className="font-body font-semibold uppercase tracking-widest text-white/50"
-            style={{ fontSize: "10px", marginBottom: "16px" }}
+            className="font-body font-semibold uppercase tracking-widest"
+            style={{ fontSize: "10px", marginBottom: "16px", color: "#e8e0d6" }}
           >
             O QUE A OPERAÇÃO REAL ENSINOU
           </p>
@@ -230,8 +230,8 @@ export function ProofsSection() {
             Não é teoria de prateleira.
           </h2>
           <p
-            className="font-body font-light text-white/60"
-            style={{ fontSize: "16px", marginTop: "16px" }}
+            className="font-body font-light"
+            style={{ fontSize: "16px", marginTop: "16px", color: "#e8e0d6" }}
           >
             Trajetória antes da Pira Labs.
           </p>
@@ -251,8 +251,8 @@ export function ProofsSection() {
 
         {/* Fechamento */}
         <p
-          className="font-body font-light text-white/50 leading-relaxed"
-          style={{ fontSize: "16px", maxWidth: "52ch", marginTop: "48px" }}
+          className="font-body font-light leading-relaxed"
+          style={{ fontSize: "16px", maxWidth: "52ch", marginTop: "48px", color: "#e8e0d6" }}
         >
           Em todos, o resultado veio de olhar para onde ninguém estava olhando.
         </p>

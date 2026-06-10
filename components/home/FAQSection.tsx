@@ -89,7 +89,7 @@ function FAQItem({
           style={{
             fontSize: "clamp(18px, 1.8vw, 24px)",
             fontWeight: isOpen ? 500 : 400,
-            color: isOpen ? "#F5F5F2" : "rgba(245,245,242,0.7)",
+            color: "#F5F5F2",
             lineHeight: 1.35,
             letterSpacing: "-0.01em",
             transition: "color 0.25s",
@@ -106,7 +106,7 @@ function FAQItem({
             alignItems: "center",
             justifyContent: "center",
             marginTop: "2px",
-            color: isOpen ? "#eb5c2e" : "rgba(245,245,242,0.5)",
+            color: isOpen ? "#eb5c2e" : "#e8e0d6",
             fontSize: "22px",
             fontWeight: 300,
             lineHeight: 1,
@@ -128,7 +128,7 @@ function FAQItem({
           className="font-body font-light"
           style={{
             fontSize: "15px",
-            color: "rgba(245,245,242,0.6)",
+            color: "#F5F5F2",
             paddingBottom: "24px",
             lineHeight: 1.8,
           }}
@@ -186,7 +186,7 @@ export function FAQSection() {
         <div style={{ ...entry("0s"), marginBottom: "80px" }}>
           <p
             className="font-body font-semibold uppercase tracking-widest"
-            style={{ fontSize: "10px", color: "rgba(245,245,242,0.45)", marginBottom: "20px" }}
+            style={{ fontSize: "10px", color: "#e8e0d6", marginBottom: "20px" }}
           >
             PERGUNTAS DE QUEM ESTÁ CHEGANDO AGORA
           </p>

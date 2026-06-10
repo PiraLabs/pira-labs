@@ -104,7 +104,7 @@ function SignalItem({
             fontFamily: "var(--font-atyp-text), sans-serif",
             fontWeight: 300,
             fontSize: "16px",
-            color: "rgba(5,38,46,0.6)",
+            color: "#05262e",
             lineHeight: 1.6,
             marginTop: "8px",
             marginBottom: 0,

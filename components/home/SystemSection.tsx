@@ -106,7 +106,7 @@ export function SystemSection() {
 
         {/* Corpo */}
         <p className="font-body font-light max-w-2xl"
-          style={{ color: "rgba(232,224,214,0.8)", fontSize: "16px", lineHeight: 1.75, marginBottom: "64px", fontFamily: "var(--font-atyp-text), sans-serif" }}>
+          style={{ color: "#e8e0d6", fontSize: "16px", lineHeight: 1.75, marginBottom: "64px", fontFamily: "var(--font-atyp-text), sans-serif" }}>
           Cada nó representa pessoas, processos, decisões, tecnologias e entregas. Quando não
           operam juntos, a empresa trabalha mais, decide pior e perde margem em silêncio.
         </p>
@@ -133,7 +133,7 @@ export function SystemSection() {
               {LABELS.map(({ label, desc }, i) => (
                 <div key={i} style={{ textAlign: "center", padding: "0 12px" }}>
                   <p style={{
-                    color: "rgba(232,224,214,0.6)",
+                    color: "#e8e0d6",
                     fontSize: "13px",
                     fontWeight: 400,
                     letterSpacing: "0.04em",
@@ -143,7 +143,7 @@ export function SystemSection() {
                     {label}
                   </p>
                   <p style={{
-                    color: "rgba(232,224,214,0.4)",
+                    color: "#e8e0d6",
                     fontSize: "12px",
                     lineHeight: 1.65,
                     fontFamily: "var(--font-atyp-text), sans-serif",
@@ -180,7 +180,7 @@ export function SystemSection() {
                   <p style={{ color: SAND, fontSize: "13px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "6px", fontFamily: "var(--font-atyp-text), sans-serif" }}>
                     {label}
                   </p>
-                  <p style={{ color: "rgba(232,224,214,0.6)", fontSize: "15px", lineHeight: 1.7, fontFamily: "var(--font-atyp-text), sans-serif", fontWeight: 300 }}>
+                  <p style={{ color: "#e8e0d6", fontSize: "15px", lineHeight: 1.7, fontFamily: "var(--font-atyp-text), sans-serif", fontWeight: 300 }}>
                     {desc}
                   </p>
                 </div>

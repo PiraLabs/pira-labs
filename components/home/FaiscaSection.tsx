@@ -125,7 +125,7 @@ function ProductRow({
         fontFamily: "var(--font-atyp-text)",
         fontWeight: 300,
         fontSize: "13px",
-        color: "rgba(5,38,46,0.38)",
+        color: "#05262e",
         textAlign: "right",
         whiteSpace: "nowrap",
       }}>
@@ -135,7 +135,7 @@ function ProductRow({
       {/* Seta */}
       <span style={{
         fontSize: "16px",
-        color: hovered ? TEAL_MID : "rgba(5,38,46,0.2)",
+        color: hovered ? TEAL_MID : "#05262e",
         transform: hovered ? "translateX(5px)" : "translateX(0)",
         transition: "color 0.25s, transform 0.25s",
       }}>
@@ -204,7 +204,7 @@ export function FaiscaSection() {
           fontSize: "10px",
           letterSpacing: "0.18em",
           textTransform: "uppercase",
-          color: "rgba(5,38,46,0.45)",
+          color: "#05262e",
           marginBottom: "24px",
         }}>
           PORTAS DE ENTRADA
