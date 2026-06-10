@@ -10,17 +10,17 @@ const INK   = "#05262e"
 function InspiraSVG() {
   return (
     <svg viewBox="0 0 120 130" width={216} style={{ height: "auto", display: "block", marginBottom: "16px" }}>
-      {/* Conectores */}
-      <line x1="46" y1="67" x2="33" y2="47" stroke="#F5F5F2" strokeWidth="1" strokeLinecap="square" opacity="0.5" />
-      <line x1="74" y1="67" x2="87" y2="47" stroke="#F5F5F2" strokeWidth="1" strokeLinecap="square" opacity="0.5" />
-      {/* Bola -45° vazia */}
+      <defs>
+        <clipPath id="clip-inspira-method">
+          <circle cx="60" cy="80" r="18" />
+        </clipPath>
+      </defs>
+      <line x1="46" y1="67" x2="33" y2="47" stroke="#e8e0d6" strokeWidth="1" strokeLinecap="round" />
+      <line x1="74" y1="67" x2="87" y2="47" stroke="#e8e0d6" strokeWidth="1" strokeLinecap="round" />
       <circle cx="25" cy="38" r="11" fill="none" stroke="#F5F5F2" strokeWidth="1.5" />
-      {/* Bola +45° cheia */}
       <circle cx="95" cy="38" r="11" fill="#F5F5F2" />
-      {/* Nó central cheio */}
       <circle cx="60" cy="80" r="18" fill="#F5F5F2" />
-      {/* Retângulo de corte — gap horizontal */}
-      <rect x="42" y="77" width="36" height="6" fill="#05262e" />
+      <rect x="42" y="77" width="36" height="6" fill="#05262e" clipPath="url(#clip-inspira-method)" />
     </svg>
   )
 }
@@ -28,20 +28,19 @@ function InspiraSVG() {
 function TranspiraSVG() {
   return (
     <svg viewBox="0 0 120 130" width={216} style={{ height: "auto", display: "block", marginBottom: "16px" }}>
-      {/* Conectores */}
-      <line x1="45" y1="72" x2="28" y2="53" stroke="#F5F5F2" strokeWidth="1" strokeLinecap="square" opacity="0.5" />
-      <line x1="60" y1="67" x2="60" y2="33" stroke="#F5F5F2" strokeWidth="1" strokeLinecap="square" opacity="0.5" />
-      <line x1="75" y1="72" x2="92" y2="53" stroke="#F5F5F2" strokeWidth="1" strokeLinecap="square" opacity="0.5" />
-      {/* Bola -45° cheia */}
+      <defs>
+        <clipPath id="clip-transpira-method">
+          <circle cx="60" cy="85" r="18" />
+        </clipPath>
+      </defs>
+      <line x1="45" y1="72" x2="28" y2="53" stroke="#e8e0d6" strokeWidth="1" strokeLinecap="round" />
+      <line x1="60" y1="67" x2="60" y2="33" stroke="#e8e0d6" strokeWidth="1" strokeLinecap="round" />
+      <line x1="75" y1="72" x2="92" y2="53" stroke="#e8e0d6" strokeWidth="1" strokeLinecap="round" />
       <circle cx="20" cy="45" r="11" fill="#F5F5F2" />
-      {/* Bola 0° vazia */}
       <circle cx="60" cy="22" r="11" fill="none" stroke="#F5F5F2" strokeWidth="1.5" />
-      {/* Bola +45° cheia */}
       <circle cx="100" cy="45" r="11" fill="#F5F5F2" />
-      {/* Nó central cheio */}
       <circle cx="60" cy="85" r="18" fill="#F5F5F2" />
-      {/* Retângulo de corte — gap horizontal */}
-      <rect x="42" y="82" width="36" height="6" fill="#05262e" />
+      <rect x="42" y="82" width="36" height="6" fill="#05262e" clipPath="url(#clip-transpira-method)" />
     </svg>
   )
 }
@@ -49,17 +48,12 @@ function TranspiraSVG() {
 function RespiraSVG() {
   return (
     <svg viewBox="0 0 120 130" width={216} style={{ height: "auto", display: "block", marginBottom: "16px" }}>
-      {/* Conectores */}
-      <line x1="45" y1="72" x2="28" y2="53" stroke="#F5F5F2" strokeWidth="1" strokeLinecap="square" opacity="0.5" />
-      <line x1="60" y1="67" x2="60" y2="33" stroke="#F5F5F2" strokeWidth="1" strokeLinecap="square" opacity="0.5" />
-      <line x1="75" y1="72" x2="92" y2="53" stroke="#F5F5F2" strokeWidth="1" strokeLinecap="square" opacity="0.5" />
-      {/* Bola -45° cheia */}
+      <line x1="45" y1="72" x2="28" y2="53" stroke="#e8e0d6" strokeWidth="1" strokeLinecap="round" />
+      <line x1="60" y1="67" x2="60" y2="33" stroke="#e8e0d6" strokeWidth="1" strokeLinecap="round" />
+      <line x1="75" y1="72" x2="92" y2="53" stroke="#e8e0d6" strokeWidth="1" strokeLinecap="round" />
       <circle cx="20" cy="45" r="11" fill="#F5F5F2" />
-      {/* Bola 0° cheia */}
       <circle cx="60" cy="22" r="11" fill="#F5F5F2" />
-      {/* Bola +45° Ember — único Ember desta seção */}
       <circle cx="100" cy="45" r="11" fill="#eb5c2e" />
-      {/* Nó central sólido — sem retângulo de corte */}
       <circle cx="60" cy="85" r="18" fill="#F5F5F2" />
     </svg>
   )
@@ -77,7 +71,7 @@ export function MethodSection() {
           fontSize: "10px",
           letterSpacing: "0.18em",
           textTransform: "uppercase",
-          color: WHITE,
+          color: "#e8e0d6",
           marginBottom: "24px",
         }}>
           O MÉTODO
