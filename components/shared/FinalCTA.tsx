@@ -17,8 +17,8 @@ export function FinalCTA({
   return (
     <section className="bg-ink section-padding">
       <div className="container-site text-center">
-        <p className="font-display italic mb-8 leading-snug max-w-2xl mx-auto"
-          style={{ fontSize: "clamp(22px, 2.5vw, 32px)", color: "#F5F5F2" }}>
+        <p className="font-display mb-8 leading-snug max-w-2xl mx-auto"
+          style={{ fontSize: "clamp(22px, 2.5vw, 32px)", color: "#F5F5F2", fontStyle: "normal" }}>
           {heading}
         </p>
         <CTAButton

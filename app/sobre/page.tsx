@@ -194,9 +194,6 @@ export default function SobrePage() {
               Gabriela lê o que está chegando antes de chegar ao Brasil. Uma carreira construída dentro das redes onde tecnologia, inovação e educação se cruzam: Google, Meta, X, Amazon, entre outras. Não como observadora. Como parte ativa dos projetos, programas e conexões que definem para onde o mercado está indo.
             </p>
             <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(245,245,242,0.80)" }}>
-              Docente em programas de MBA e educação executiva na FIAP, no Instituto Cidades Responsivas, na USP e no ITA. Mentora de startups na FGV Ventures, no German Accelerator, na FINEP e no programa Empreendedoras Tech (Sebrae). Universal AI Foundational Modules (MIT, em andamento, 2026).
-            </p>
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(245,245,242,0.80)" }}>
               O que ela traz para cada projeto não é repertório aplicado de fora. É a capacidade de nomear o que o mercado local ainda não nomeou. Conduz o INSPIRA.
             </p>
           </div>
@@ -204,21 +201,21 @@ export default function SobrePage() {
           {/* CREDENCIAIS */}
           <ul className="mb-6 space-y-2">
             <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(245,245,242,0.65)", fontWeight: 300 }}>
-              <span style={{ color: "#eb5c2e", flexShrink: 0, marginTop: "2px" }}>·</span>
+              <span style={{ color: "rgba(245,245,242,0.40)", flexShrink: 0, marginTop: "2px" }}>·</span>
               <span>Docente em MBA na FIAP, Instituto Cidades Responsivas, USP e ITA</span>
             </li>
             <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(245,245,242,0.65)", fontWeight: 300 }}>
-              <span style={{ color: "#eb5c2e", flexShrink: 0, marginTop: "2px" }}>·</span>
+              <span style={{ color: "rgba(245,245,242,0.40)", flexShrink: 0, marginTop: "2px" }}>·</span>
               <span>Mentora na FGV Ventures, German Accelerator, FINEP e Empreendedoras Tech (Sebrae)</span>
             </li>
             <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(245,245,242,0.65)", fontWeight: 300 }}>
-              <span style={{ color: "#eb5c2e", flexShrink: 0, marginTop: "2px" }}>·</span>
+              <span style={{ color: "rgba(245,245,242,0.40)", flexShrink: 0, marginTop: "2px" }}>·</span>
               <span>Universal AI Foundational Modules (MIT, em andamento, 2026)</span>
             </li>
           </ul>
 
           {/* LINKEDIN */}
-          <a href="https://www.linkedin.com/in/gabrielaaguiarvs/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mb-8" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(245,245,242,0.60)", textDecoration: "none" }} aria-label="LinkedIn de Gabriela Aguiar">
+          <a href="https://www.linkedin.com/in/gabrielaaguiarvs/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mt-6 mb-12" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(245,245,242,0.60)", textDecoration: "none" }} aria-label="LinkedIn de Gabriela Aguiar">
             LinkedIn
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -284,26 +281,21 @@ export default function SobrePage() {
           {/* CREDENCIAIS */}
           <ul className="mb-3 space-y-2">
             <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(232,224,214,0.65)", fontWeight: 300 }}>
-              <span style={{ color: "#eb5c2e", flexShrink: 0, marginTop: "2px" }}>·</span>
+              <span style={{ color: "rgba(232,224,214,0.40)", flexShrink: 0, marginTop: "2px" }}>·</span>
               <span>Bacharelando em Direito (Mackenzie)</span>
             </li>
             <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(232,224,214,0.65)", fontWeight: 300 }}>
-              <span style={{ color: "#eb5c2e", flexShrink: 0, marginTop: "2px" }}>·</span>
+              <span style={{ color: "rgba(232,224,214,0.40)", flexShrink: 0, marginTop: "2px" }}>·</span>
               <span>MBA Insper · Pós-graduação em Marketing (ESPM) · Publicidade (FAAP)</span>
             </li>
             <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(232,224,214,0.65)", fontWeight: 300 }}>
-              <span style={{ color: "#eb5c2e", flexShrink: 0, marginTop: "2px" }}>·</span>
+              <span style={{ color: "rgba(232,224,214,0.40)", flexShrink: 0, marginTop: "2px" }}>·</span>
               <span>Applied AI Certificate Program (MIT, em andamento, 2026)</span>
             </li>
           </ul>
 
-          {/* NOTA DISCRETA */}
-          <p className="font-body mb-6" style={{ fontSize: "0.6875rem", color: "rgba(232,224,214,0.40)", lineHeight: 1.6, fontWeight: 300 }}>
-            Estas não são cases da Pira Labs. São registros do julgamento calibrado por consequência real.
-          </p>
-
           {/* LINKEDIN */}
-          <a href="https://www.linkedin.com/in/celsogama/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mb-8" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(232,224,214,0.60)", textDecoration: "none" }} aria-label="LinkedIn de Celso Gama">
+          <a href="https://www.linkedin.com/in/celsogama/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mt-6 mb-12" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(232,224,214,0.60)", textDecoration: "none" }} aria-label="LinkedIn de Celso Gama">
             LinkedIn
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -329,7 +321,7 @@ export default function SobrePage() {
           </h2>
           <div className="max-w-2xl mb-10 overflow-hidden rounded-lg" style={{ maxHeight: "420px" }}>
             <Image
-              src="/nos.png"
+              src="/nos2.png"
               alt="Gabriela Aguiar e Celso Gama, cofundadores da Pira Labs"
               width={800}
               height={533}
@@ -348,9 +340,6 @@ export default function SobrePage() {
               Não é divisão de trabalho. É metodologia: o diagnóstico real exige as duas perspectivas ao mesmo tempo. Gabriela nomeia o que está chegando antes de chegar. Celso executa o redesenho dentro da operação, com o time que vai operar depois.
             </p>
           </div>
-          <p className="font-body" style={{ fontSize: "12px", color: "rgba(5,38,46,0.4)" }}>
-            Estas não são cases da Pira Labs. São registros do julgamento calibrado por consequência real.
-          </p>
         </div>
       </section>
 
@@ -370,7 +359,7 @@ export default function SobrePage() {
               Boutique é o modelo deliberado. O ecossistema é o que torna isso possível: uma rede de especialistas, parceiros e referências que entra quando o projeto pede, sem virar overhead fixo.
             </p>
           </div>
-          <p className="font-body font-semibold uppercase mb-6" style={{ fontSize: "10px", letterSpacing: "0.18em", color: "rgba(245,245,242,0.4)" }}>
+          <p className="font-body font-semibold uppercase mb-6" style={{ fontSize: "10px", letterSpacing: "0.18em", color: "rgba(245,245,242,0.45)" }}>
             PARA IMPRENSA, PALESTRAS E PARCERIAS
           </p>
           <MediaKit className="max-w-2xl" />

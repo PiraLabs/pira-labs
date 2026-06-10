@@ -191,7 +191,9 @@ export function Footer() {
               lineHeight: 1.1,
             }}
           >
-            Liberamos o próximo nível.
+            Liberamos o{" "}
+            <span style={{ color: "#eb5c2e" }}>próximo</span>
+            {" "}nível.
           </p>
         </div>
 
