@@ -101,26 +101,26 @@ export default function HomePage() {
       {/* HOME-1 · HERO */}
       <HeroSectionClient />
 
-      {/* HOME-2 · SISTEMA */}
-      <SystemSectionClient />
-
-      {/* HOME-3 · SINAIS */}
+      {/* HOME-2 · SINAIS */}
       <SignalsSectionClient />
 
-      {/* HOME-4 · CBT CATEGORIA */}
-      <CBTSectionClient />
-
-      {/* HOME-5 · MÉTODO */}
-      <MethodSectionClient />
-
-      {/* HOME-6 · FAÍSCA TEASER */}
-      <FaiscaSectionClient />
-
-      {/* HOME-7 · PROVAS */}
+      {/* HOME-3 · PROVAS */}
       <ProofsSectionClient />
 
-      {/* HOME-8 · FUNDADORES */}
+      {/* HOME-4 · FUNDADORES */}
       <FoundersSectionClient />
+
+      {/* HOME-5 · CBT CATEGORIA */}
+      <CBTSectionClient />
+
+      {/* HOME-6 · MÉTODO */}
+      <MethodSectionClient />
+
+      {/* HOME-7 · SISTEMA */}
+      <SystemSectionClient />
+
+      {/* HOME-8 · FAÍSCA TEASER */}
+      <FaiscaSectionClient />
 
       {/* HOME-9 · ANTES, PIRA */}
       <EditorialSectionClient />

@@ -5,7 +5,7 @@ import type { CSSProperties } from "react"
 import Image from "next/image"
 
 /* HOME-8 · Fundadores · fundo Teal #004757
-   Imagem /nos.png na metade direita com gradiente de transição.
+   Imagem /nos2.png na metade direita com gradiente de transição.
    Fade-in por IntersectionObserver.
    font-body = alias para var(--font-atyp-text) no tailwind.config. */
 
@@ -54,7 +54,7 @@ export function FoundersSection() {
         }}
       >
         <Image
-          src="/nos.png"
+          src="/nos2.png"
           alt=""
           fill
           sizes="52vw"
