@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import Image from "next/image"
 
 /* HOME-7 · Provas · fundo Ink #05262e
    Imagem de fundo na metade direita com gradiente de transição.
@@ -163,49 +162,7 @@ export function ProofsSection() {
       aria-label="Resultados"
       style={{ position: "relative", backgroundColor: "#05262e", overflow: "hidden" }}
     >
-      {/* Imagem de fundo — metade direita, altura total */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          top: 0,
-          right: 0,
-          width: "52%",
-          height: "100%",
-          zIndex: 0,
-          display: "var(--proofs-img-display, block)",
-        }}
-        className="hidden md:block"
-      >
-        <Image
-          src="/H7.png"
-          alt=""
-          fill
-          sizes="52vw"
-          quality={80}
-          style={{ objectFit: "cover", objectPosition: "center 68%" }}
-        />
-        {/* Gradiente da esquerda — transição */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(to right, #05262e 0%, #05262e 12%, rgba(5,38,46,0.9) 26%, rgba(5,38,46,0) 50%)",
-          }}
-        />
-        {/* Gradiente topo/base — suaviza bordas */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(to bottom, #05262e 0%, rgba(5,38,46,0) 12%, rgba(5,38,46,0) 88%, #05262e 100%)",
-          }}
-        />
-      </div>
-
-      {/* Conteúdo — acima da imagem */}
+      {/* Conteúdo */}
       <div
         style={{
           position: "relative",
@@ -258,20 +215,9 @@ export function ProofsSection() {
         </p>
       </div>
 
-      {/* Mobile: imagem como faixa no topo */}
       <style>{`
         @media (max-width: 1023px) {
-          #provas [aria-hidden="true"] {
-            position: relative !important;
-            width: 100% !important;
-            height: 280px !important;
-            top: auto !important;
-            right: auto !important;
-          }
-          #provas [aria-hidden="true"] > div {
-            background: linear-gradient(to bottom, rgba(5,38,46,0) 60%, #05262e 100%) !important;
-          }
-          #provas > div:last-child {
+          #provas > div {
             padding: 48px 24px 80px !important;
           }
         }

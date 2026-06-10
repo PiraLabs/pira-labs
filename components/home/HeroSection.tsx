@@ -18,7 +18,7 @@ export function HeroSection() {
       }}
     >
       <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 pt-20 pb-16">
-        <div style={{ maxWidth: '640px' }}>
+        <div style={{ maxWidth: 'min(90vw, 1100px)' }}>
           <p
             className="font-display font-semibold mb-6"
             style={{

@@ -58,12 +58,12 @@ export function HeroMotionClient() {
           })
           .to(
             criseRef.current,
-            { color: '#eb5c2e', duration: 0.15, ease: 'power1.in' },
+            { color: '#eb5c2e', duration: 0.3, ease: 'power1.in' },
             '+=0.05'
           )
           .to(criseRef.current, {
             color: '#05262e',
-            duration: 0.65,
+            duration: 1.4,
             ease: 'power2.out',
           })
           .to(
@@ -100,48 +100,33 @@ export function HeroMotionClient() {
         className="font-display font-bold"
         style={{
           color: '#05262e',
-          fontSize: 'clamp(42px, 5.5vw, 72px)',
-          lineHeight: 1.1,
-          marginBottom: '24px',
+          fontSize: 'clamp(52px, 6.5vw, 96px)',
+          lineHeight: 1.0,
+          marginBottom: '32px',
+          letterSpacing: '-0.02em',
         }}
       >
         <span
           ref={line1Ref}
-          style={{
-            display: 'block',
-            opacity: 0,
-            transform: 'translateY(12px)',
-          }}
+          style={{ display: 'block', opacity: 0, transform: 'translateY(12px)' }}
         >
-          Existe um momento
+          Existe um momento em que
         </span>
         <span
           ref={line2Ref}
-          style={{
-            display: 'block',
-            opacity: 0,
-            transform: 'translateY(12px)',
-          }}
+          style={{ display: 'block', opacity: 0, transform: 'translateY(12px)' }}
         >
-          em que transformar
+          transformar ainda é
         </span>
         <span
           ref={line3Ref}
-          style={{
-            display: 'block',
-            opacity: 0,
-            transform: 'translateY(12px)',
-          }}
+          style={{ display: 'block', opacity: 0, transform: 'translateY(12px)' }}
         >
-          ainda é um processo,
+          um processo,
         </span>
         <span
           ref={line4Ref}
-          style={{
-            display: 'block',
-            opacity: 0,
-            transform: 'translateY(12px)',
-          }}
+          style={{ display: 'block', opacity: 0, transform: 'translateY(12px)' }}
         >
           não uma{' '}
           <span ref={criseRef} style={{ color: '#05262e' }}>
