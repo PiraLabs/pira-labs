@@ -9,43 +9,31 @@ import type { MobileNavItem } from './MobileMenu'
 
 const NAV_ITEMS = [
   {
-    label: 'Sobre',
+    label: 'Venha',
     items: [
-      { label: 'Sobre a Pira', href: '/sobre' },
+      { label: 'Sobre a Pira Labs', href: '/sobre' },
       { label: 'Creative Business Turnaround', href: '/creative-business-turnaround' },
+      { label: 'Como pensamos', href: '/como-pensamos' },
     ],
   },
   {
-    label: 'Entrada',
+    label: 'Entre',
     items: [
+      { label: 'Faísca', href: '/faisca' },
       { label: 'Imersão em IA', href: '/faisca/imersa-em-ia' },
-      { label: 'Oxigênio Fast', href: '/inspira/oxigenio' },
+      { label: 'Oxigênio IA Search', href: '/inspira/oxigenio' },
       { label: 'pocket do INSPIRA', href: '/faisca/pocket' },
       { label: 'Faísca Jurídica', href: '/faisca/juridica' },
       { label: 'C-level as a Service', href: '/faisca#clevel' },
     ],
   },
   {
-    label: 'Diagnóstico',
+    label: 'Avance',
     items: [
       { label: 'INSPIRA', href: '/inspira' },
-      { label: 'Oxigênio Full', href: '/inspira/oxigenio' },
-      { label: 'INSPIRA Jurídico', href: '/inspira/juridico' },
-    ],
-  },
-  {
-    label: 'Execução',
-    items: [
       { label: 'TRANSPIRA', href: '/transpira' },
+      { label: 'INSPIRA Jurídico', href: '/inspira/juridico' },
       { label: 'TRANSPIRA Jurídico', href: '/transpira/juridico' },
-    ],
-  },
-  {
-    label: 'Pira junto',
-    items: [
-      { label: 'Palestras', href: '/faisca#palestras' },
-      { label: 'Workshops', href: '/faisca#workshops' },
-      { label: 'Aulas', href: '/faisca#aulas' },
     ],
   },
 ]
@@ -57,6 +45,7 @@ const MOBILE_NAV_ITEMS: MobileNavItem[] = [
     label: item.label,
     children: item.items,
   })),
+  { kind: 'link' as const, label: 'Chama', href: '/chama' },
   { kind: 'link' as const, label: 'Antes, Pira', href: '/antes-pira', emberComma: true },
 ]
 
@@ -214,6 +203,27 @@ export function Header() {
               </div>
             ))}
 
+            {/* Chama — link direto */}
+            <Link
+              href="/chama"
+              style={{
+                fontFamily: 'var(--font-atyp-text)',
+                fontWeight: 600,
+                fontSize: 'clamp(11px, 1vw, 14px)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.06em',
+                opacity: pathname === '/chama' ? 1 : 0.7,
+                whiteSpace: 'nowrap',
+                textDecoration: 'none',
+                transition: 'opacity 0.15s ease',
+                color: '#F5F5F2',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
+              onMouseLeave={(e) => (e.currentTarget.style.opacity = pathname === '/chama' ? '1' : '0.7')}
+            >
+              Chama
+            </Link>
+
             {/* Antes, Pira — link direto */}
             <Link
               href="/antes-pira"
@@ -266,7 +276,7 @@ export function Header() {
               onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#C4421A')}
               onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#eb5c2e')}
             >
-              Chama
+              Chame
             </Link>
 
             {/* Hamburguer mobile */}
