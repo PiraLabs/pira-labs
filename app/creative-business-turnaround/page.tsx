@@ -356,7 +356,7 @@ export default function CreativeBusinessTurnaroundPage() {
                   <span className="font-display" style={{
                     fontSize: "0.75rem",
                     fontWeight: 300,
-                    color: "#004757",
+                    color: "#e8e0d6",
                     letterSpacing: "0.05em",
                     paddingTop: "3px",
                   }}>
