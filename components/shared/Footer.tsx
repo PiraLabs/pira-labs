@@ -11,6 +11,7 @@ const footerColumns = [
     links: [
       { label: "Sobre", href: "/sobre" },
       { label: "Creative Business Turnaround", href: "/creative-business-turnaround" },
+      { label: "Como pensamos", href: "/como-pensamos" },
       { label: "Antes, Pira", href: "/antes-pira" },
       { label: "Contato", href: "/contato" },
     ],
@@ -24,6 +25,7 @@ const footerColumns = [
       { label: "TRANSPIRA", href: "/transpira", main: true },
       { label: "Faísca", href: "/faisca", main: true },
       { label: "Imersão em IA", href: "/faisca/imersa-em-ia", sub: true },
+      { label: "Chama", href: "/chama", main: true },
     ],
   },
   {
@@ -184,7 +186,7 @@ export function Footer() {
             style={{
               fontSize: 'clamp(32px, 4vw, 52px)',
               fontWeight: 300,
-              color: 'rgba(245,245,242,0.5)',
+              color: '#e8e0d6',
               letterSpacing: '-0.02em',
               lineHeight: 1.1,
             }}

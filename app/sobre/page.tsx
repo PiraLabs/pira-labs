@@ -156,145 +156,168 @@ export default function SobrePage() {
       </section>
 
       {/* SOBRE-3 · Gabriela Aguiar (Teal) */}
-      <section className="bg-teal py-16 md:py-24">
-        <div className="container-site">
-          <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
-            <div className="shrink-0 w-48 md:w-56">
-              <div className="aspect-[4/5] w-full overflow-hidden rounded-lg">
-                <Image
-                  src="/gabriela-aguiar.jpg"
-                  alt="Gabriela Aguiar, CEO e cofundadora da Pira Labs"
-                  width={224}
-                  height={280}
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-            </div>
-            <div className="flex-1 min-w-0">
-              <h2 className="font-display font-semibold mb-1" style={{ fontSize: "clamp(22px, 2.2vw, 28px)", color: "#F5F5F2" }}>
-                Gabriela Aguiar
-              </h2>
-              <p className="font-body font-semibold mb-5" style={{ fontSize: "13px", letterSpacing: "0.04em" }}>
-                <span style={{ color: "#eb5c2e" }}>CEO e cofundadora</span>
-                <span style={{ color: "rgba(232,224,214,0.5)" }}> · Conduz o INSPIRA</span>
-              </p>
-              <div className="space-y-4 mb-6">
-                {[
-                  "Gabriela lê o que está chegando antes de chegar ao Brasil. Uma carreira construída dentro das redes onde tecnologia, inovação e educação se cruzam: Google, Meta, X, Amazon, entre outras. Não como observadora. Como parte ativa dos projetos, programas e conexões que definem para onde o mercado está indo.",
-                  "Docente em programas de MBA e educação executiva na FIAP, no Instituto Cidades Responsivas, na USP e no ITA. Mentora de startups na FGV Ventures, no German Accelerator, na FINEP e no programa Empreendedoras Tech (Sebrae). Universal AI Foundational Modules (MIT, em andamento, 2026).",
-                  "O que ela traz para cada projeto não é repertório aplicado de fora. É a capacidade de nomear o que o mercado local ainda não nomeou. Conduz o INSPIRA.",
-                ].map((p, i) => (
-                  <p key={i} className="font-body leading-relaxed" style={{ fontSize: "15px", color: "rgba(245,245,242,0.85)" }}>
-                    {p}
-                  </p>
-                ))}
-              </div>
-              <ul className="space-y-2 mb-5">
-                {[
-                  "Docente em MBA na FIAP, Instituto Cidades Responsivas, USP e ITA",
-                  "Mentora na FGV Ventures, German Accelerator, FINEP e Empreendedoras Tech (Sebrae)",
-                  "Universal AI Foundational Modules (MIT, em andamento, 2026)",
-                ].map((cred, i) => (
-                  <li key={i} className="font-body flex gap-2" style={{ fontSize: "13px", color: "rgba(245,245,242,0.55)" }}>
-                    <span style={{ color: "rgba(245,245,242,0.3)", flexShrink: 0 }}>·</span>
-                    {cred}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={SOCIAL.GABRIELA_LINKEDIN}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-body font-semibold uppercase underline transition-opacity hover:opacity-60"
-                style={{ fontSize: "11px", letterSpacing: "0.10em", color: "rgba(245,245,242,0.5)" }}
-                aria-label="LinkedIn de Gabriela Aguiar (abre em nova aba)"
-              >
-                LinkedIn
-              </a>
-            </div>
+      <section className="bg-teal w-full" aria-labelledby="sobre-gabriela-heading">
+        <div className="mx-auto px-6 py-20 md:py-28" style={{ maxWidth: "720px" }}>
+
+          {/* Eyebrow */}
+          <p className="font-body mb-12" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(245,245,242,0.45)" }}>
+            Fundadora
+          </p>
+
+          {/* FOTO */}
+          <div className="w-full overflow-hidden mb-8" style={{ aspectRatio: "4/5", borderRadius: "2px", maxHeight: "560px" }}>
+            <Image
+              src="/gabriela-aguiar.jpg"
+              alt="Gabriela Aguiar, CEO e cofundadora da Pira Labs"
+              width={640}
+              height={800}
+              className="w-full h-full object-cover"
+              style={{ objectPosition: "center 10%" }}
+              priority
+            />
           </div>
 
-          {/* Tese intelectual */}
-          <div className="mt-14 max-w-3xl border-l-2 pl-8" style={{ borderColor: "rgba(245,245,242,0.15)" }}>
-            <p className="font-display font-light leading-relaxed" style={{ fontSize: "clamp(16px, 1.8vw, 21px)", color: "rgba(245,245,242,0.7)" }}>
-              &ldquo;O futuro do trabalho nas empresas de serviços não será resolvido por ferramentas. Será decidido por quem conseguir redesenhar a relação entre trabalho, valor, tecnologia e governança, e agir antes que a janela para essa escolha se feche.&rdquo;
+          {/* NOME */}
+          <h2 id="sobre-gabriela-heading" className="font-display mt-8 mb-1" style={{ fontWeight: 600, fontSize: "clamp(2rem, 4vw, 2.75rem)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
+            Gabriela Aguiar
+          </h2>
+
+          {/* PAPEL */}
+          <p className="font-body mb-6" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase" }}>
+            <span style={{ color: "#eb5c2e" }}>CEO e cofundadora</span>
+            <span style={{ color: "rgba(245,245,242,0.60)" }}> · Conduz o INSPIRA</span>
+          </p>
+
+          {/* BIO */}
+          <div className="space-y-4 mb-8">
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(245,245,242,0.80)" }}>
+              Gabriela lê o que está chegando antes de chegar ao Brasil. Uma carreira construída dentro das redes onde tecnologia, inovação e educação se cruzam: Google, Meta, X, Amazon, entre outras. Não como observadora. Como parte ativa dos projetos, programas e conexões que definem para onde o mercado está indo.
+            </p>
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(245,245,242,0.80)" }}>
+              Docente em programas de MBA e educação executiva na FIAP, no Instituto Cidades Responsivas, na USP e no ITA. Mentora de startups na FGV Ventures, no German Accelerator, na FINEP e no programa Empreendedoras Tech (Sebrae). Universal AI Foundational Modules (MIT, em andamento, 2026).
+            </p>
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(245,245,242,0.80)" }}>
+              O que ela traz para cada projeto não é repertório aplicado de fora. É a capacidade de nomear o que o mercado local ainda não nomeou. Conduz o INSPIRA.
             </p>
           </div>
 
-          {/* Quote operacional */}
-          <div className="mt-8 max-w-2xl">
-            <p className="font-body font-medium leading-relaxed" style={{ fontSize: "clamp(15px, 1.5vw, 18px)", color: "rgba(245,245,242,0.6)" }}>
-              &ldquo;O diagnóstico não inventa o problema. Revela o que a fundadora ou o fundador já sentia mas ainda não havia encontrado palavras para nomear.&rdquo;
-            </p>
-          </div>
+          {/* CREDENCIAIS */}
+          <ul className="mb-6 space-y-2">
+            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(245,245,242,0.65)", fontWeight: 300 }}>
+              <span style={{ color: "#eb5c2e", flexShrink: 0, marginTop: "2px" }}>·</span>
+              <span>Docente em MBA na FIAP, Instituto Cidades Responsivas, USP e ITA</span>
+            </li>
+            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(245,245,242,0.65)", fontWeight: 300 }}>
+              <span style={{ color: "#eb5c2e", flexShrink: 0, marginTop: "2px" }}>·</span>
+              <span>Mentora na FGV Ventures, German Accelerator, FINEP e Empreendedoras Tech (Sebrae)</span>
+            </li>
+            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(245,245,242,0.65)", fontWeight: 300 }}>
+              <span style={{ color: "#eb5c2e", flexShrink: 0, marginTop: "2px" }}>·</span>
+              <span>Universal AI Foundational Modules (MIT, em andamento, 2026)</span>
+            </li>
+          </ul>
+
+          {/* LINKEDIN */}
+          <a href="https://www.linkedin.com/in/gabrielaaguiarvs/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mb-8" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(245,245,242,0.60)", textDecoration: "none" }} aria-label="LinkedIn de Gabriela Aguiar">
+            LinkedIn
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </a>
+
+          {/* SEPARADOR */}
+          <hr style={{ borderColor: "rgba(245,245,242,0.15)", borderTopWidth: 1, margin: "2.5rem 0" }} />
+
+          {/* QUOTE */}
+          <blockquote className="font-display" style={{ fontSize: "clamp(1.125rem, 2.5vw, 1.375rem)", fontWeight: 400, lineHeight: 1.6, color: "#F5F5F2", fontStyle: "normal", margin: 0, padding: 0 }}>
+            &ldquo;O diagnóstico não inventa o problema. Revela o que a fundadora ou o fundador já sentia mas ainda não havia encontrado palavras para nomear.&rdquo;
+          </blockquote>
+
         </div>
       </section>
 
       {/* SOBRE-4 · Celso Gama (Ink) */}
-      <section className="bg-ink py-16 md:py-24">
-        <div className="container-site">
-          <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
-            <div className="shrink-0 w-48 md:w-56">
-              <div className="aspect-[4/5] w-full overflow-hidden rounded-lg">
-                <Image
-                  src="/celso-gama.jpg"
-                  alt="Celso Gama, COO e cofundador da Pira Labs"
-                  width={224}
-                  height={280}
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-            </div>
-            <div className="flex-1 min-w-0">
-              <h2 className="font-display font-semibold mb-1" style={{ fontSize: "clamp(22px, 2.2vw, 28px)", color: "#F5F5F2" }}>
-                Celso Gama
-              </h2>
-              <p className="font-body font-semibold mb-5" style={{ fontSize: "13px", letterSpacing: "0.04em" }}>
-                <span style={{ color: "#eb5c2e" }}>COO e cofundador</span>
-                <span style={{ color: "rgba(232,224,214,0.5)" }}> · Conduz o TRANSPIRA</span>
-              </p>
-              <div className="space-y-4 mb-6">
-                {[
-                  "Celso entra quando a operação precisa de alguém que já viu isso antes. E já viu muita coisa.",
-                  "Vinte e cinco anos dentro de operações complexas: de hubs regionais de multinacionais a empresas de serviços que cresceram, travaram, viraram e, algumas, não voltaram. Bacharelando em Direito (Mackenzie), MBA pelo Insper, pós-graduação em Marketing pela ESPM e Publicidade pela FAAP. Applied AI Certificate Program (MIT, em andamento, 2026).",
-                  "Sabe onde colocar tecnologia e onde colocar gente porque já errou nos dois. Conduz o TRANSPIRA. Entra na operação, trabalha junto com o time, sai quando os resultados acordados são verificados. Não quando o prazo acaba.",
-                ].map((p, i) => (
-                  <p key={i} className="font-body leading-relaxed" style={{ fontSize: "15px", color: "rgba(245,245,242,0.85)" }}>
-                    {p}
-                  </p>
-                ))}
-              </div>
-              <ul className="space-y-2 mb-5">
-                {[
-                  "Margem de -64% para +15% em seis meses em conta de multinacional do setor de bebidas, sem aumento de receita",
-                  "R$16M para R$163M em 24 meses no patrocínio global de uma grande marca de tecnologia nos Jogos Rio 2016",
-                  "Applied AI Certificate Program (MIT, em andamento, 2026)",
-                ].map((cred, i) => (
-                  <li key={i} className="font-body flex gap-2" style={{ fontSize: "13px", color: "rgba(245,245,242,0.55)" }}>
-                    <span style={{ color: "rgba(245,245,242,0.3)", flexShrink: 0 }}>·</span>
-                    {cred}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={SOCIAL.CELSO_LINKEDIN}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-body font-semibold uppercase underline transition-opacity hover:opacity-60"
-                style={{ fontSize: "11px", letterSpacing: "0.10em", color: "rgba(245,245,242,0.5)" }}
-                aria-label="LinkedIn de Celso Gama (abre em nova aba)"
-              >
-                LinkedIn
-              </a>
-            </div>
+      <section className="bg-ink w-full" aria-labelledby="sobre-celso-heading">
+        <div className="mx-auto px-6 py-20 md:py-28" style={{ maxWidth: "720px" }}>
+
+          {/* Eyebrow */}
+          <p className="font-body mb-12" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(232,224,214,0.45)" }}>
+            Fundador
+          </p>
+
+          {/* FOTO */}
+          <div className="w-full overflow-hidden mb-8" style={{ aspectRatio: "4/5", borderRadius: "2px", maxHeight: "560px" }}>
+            <Image
+              src="/celso-gama.jpg"
+              alt="Celso Gama, COO e cofundador da Pira Labs"
+              width={640}
+              height={800}
+              className="w-full h-full object-cover"
+              style={{ objectPosition: "center top" }}
+            />
           </div>
 
-          {/* Quote operacional */}
-          <div className="mt-10 max-w-2xl">
-            <p className="font-body font-medium leading-relaxed" style={{ fontSize: "clamp(15px, 1.5vw, 18px)", color: "rgba(245,245,242,0.6)" }}>
-              &ldquo;A Pira Labs não sai quando o prazo acaba. Sai quando os resultados acordados são verificados.&rdquo;
+          {/* NOME */}
+          <h2 id="sobre-celso-heading" className="font-display mt-8 mb-1" style={{ fontWeight: 600, fontSize: "clamp(2rem, 4vw, 2.75rem)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
+            Celso Gama
+          </h2>
+
+          {/* PAPEL */}
+          <p className="font-body mb-6" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase" }}>
+            <span style={{ color: "#eb5c2e" }}>COO e cofundador</span>
+            <span style={{ color: "rgba(232,224,214,0.60)" }}> · Conduz o TRANSPIRA</span>
+          </p>
+
+          {/* BIO */}
+          <div className="space-y-4 mb-8">
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(232,224,214,0.80)" }}>
+              Celso entra quando a operação precisa de alguém que já viu isso antes. E já viu muita coisa.
+            </p>
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(232,224,214,0.80)" }}>
+              Vinte e cinco anos dentro de operações complexas: de hubs regionais de multinacionais a empresas de serviços que cresceram, travaram, viraram e, algumas, não voltaram. Bacharelando em Direito (Mackenzie), MBA pelo Insper, pós-graduação em Marketing pela ESPM e Publicidade pela FAAP. Applied AI Certificate Program (MIT, em andamento, 2026).
+            </p>
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(232,224,214,0.80)" }}>
+              Sabe onde colocar tecnologia e onde colocar gente porque já errou nos dois. Conduz o TRANSPIRA. Entra na operação, trabalha junto com o time, sai quando os resultados acordados são verificados. Não quando o prazo acaba.
             </p>
           </div>
+
+          {/* CREDENCIAIS */}
+          <ul className="mb-3 space-y-2">
+            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(232,224,214,0.65)", fontWeight: 300 }}>
+              <span style={{ color: "#eb5c2e", flexShrink: 0, marginTop: "2px" }}>·</span>
+              <span>Bacharelando em Direito (Mackenzie)</span>
+            </li>
+            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(232,224,214,0.65)", fontWeight: 300 }}>
+              <span style={{ color: "#eb5c2e", flexShrink: 0, marginTop: "2px" }}>·</span>
+              <span>MBA Insper · Pós-graduação em Marketing (ESPM) · Publicidade (FAAP)</span>
+            </li>
+            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(232,224,214,0.65)", fontWeight: 300 }}>
+              <span style={{ color: "#eb5c2e", flexShrink: 0, marginTop: "2px" }}>·</span>
+              <span>Applied AI Certificate Program (MIT, em andamento, 2026)</span>
+            </li>
+          </ul>
+
+          {/* NOTA DISCRETA */}
+          <p className="font-body mb-6" style={{ fontSize: "0.6875rem", color: "rgba(232,224,214,0.40)", lineHeight: 1.6, fontWeight: 300 }}>
+            Estas não são cases da Pira Labs. São registros do julgamento calibrado por consequência real.
+          </p>
+
+          {/* LINKEDIN */}
+          <a href="https://www.linkedin.com/in/celsogama/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mb-8" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(232,224,214,0.60)", textDecoration: "none" }} aria-label="LinkedIn de Celso Gama">
+            LinkedIn
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </a>
+
+          {/* SEPARADOR */}
+          <hr style={{ borderColor: "rgba(232,224,214,0.15)", borderTopWidth: 1, margin: "2.5rem 0" }} />
+
+          {/* QUOTE */}
+          <blockquote className="font-display" style={{ fontSize: "clamp(1.125rem, 2.5vw, 1.375rem)", fontWeight: 400, lineHeight: 1.6, color: "#F5F5F2", fontStyle: "normal", margin: 0, padding: 0 }}>
+            &ldquo;A Pira Labs não sai quando o prazo acaba. Sai quando os resultados acordados são verificados.&rdquo;
+          </blockquote>
+
         </div>
       </section>
 
