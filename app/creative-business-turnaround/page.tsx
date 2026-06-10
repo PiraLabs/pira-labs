@@ -284,10 +284,10 @@ export default function CreativeBusinessTurnaroundPage() {
             <table className="w-full font-body" style={{ borderCollapse: "collapse" }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(245,245,242,0.12)" }}>
-                  <th className="text-left pb-4 pr-8" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(245,245,242,0.40)", width: "180px" }}>
+                  <th className="text-left pb-4 pr-8" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#e8e0d6", width: "180px" }}>
                     Dimensão
                   </th>
-                  <th className="text-left pb-4 pr-8" style={{ fontSize: "0.8125rem", fontWeight: 400, color: "rgba(245,245,242,0.45)" }}>
+                  <th className="text-left pb-4 pr-8" style={{ fontSize: "0.8125rem", fontWeight: 400, color: "#e8e0d6" }}>
                     Sem intervenção agora
                   </th>
                   <th className="text-left pb-4" style={{ fontSize: "0.8125rem", fontWeight: 600, color: "#eb5c2e" }}>
@@ -298,10 +298,10 @@ export default function CreativeBusinessTurnaroundPage() {
               <tbody>
                 {comparativo.map((row, i) => (
                   <tr key={i} style={{ borderBottom: "1px solid rgba(245,245,242,0.07)" }}>
-                    <td className="py-4 pr-8 align-top font-body" style={{ fontSize: "0.8125rem", fontWeight: 500, color: "rgba(245,245,242,0.50)" }}>
+                    <td className="py-4 pr-8 align-top font-body" style={{ fontSize: "0.8125rem", fontWeight: 500, color: "#e8e0d6" }}>
                       {row.dimensao}
                     </td>
-                    <td className="py-4 pr-8 align-top font-body" style={{ fontSize: "0.9375rem", lineHeight: 1.6, fontWeight: 300, color: "rgba(245,245,242,0.55)" }}>
+                    <td className="py-4 pr-8 align-top font-body" style={{ fontSize: "0.9375rem", lineHeight: 1.6, fontWeight: 300, color: "#e8e0d6" }}>
                       {row.tradicional}
                     </td>
                     <td className="py-4 align-top font-body" style={{ fontSize: "0.9375rem", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2" }}>
@@ -356,7 +356,7 @@ export default function CreativeBusinessTurnaroundPage() {
                   <span className="font-display" style={{
                     fontSize: "0.75rem",
                     fontWeight: 300,
-                    color: i === 0 ? "#eb5c2e" : "rgba(245,245,242,0.35)",
+                    color: i === 0 ? "#eb5c2e" : "#004757",
                     letterSpacing: "0.05em",
                     paddingTop: "3px",
                   }}>
@@ -376,7 +376,7 @@ export default function CreativeBusinessTurnaroundPage() {
             ))}
           </div>
           <div className="max-w-3xl mt-12 pt-10" style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
-            <p className="font-body mb-6" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(245,245,242,0.80)" }}>
+            <p className="font-body mb-6" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
               Se você reconheceu três ou mais desses sinais, a janela de oportunidade ainda está aberta.
             </p>
             <CTAButton variant="secondary" href="/contato" origin={ORIGINS.CREATIVE_BUSINESS_TURNAROUND}>
@@ -391,7 +391,7 @@ export default function CreativeBusinessTurnaroundPage() {
         <div className="container-site">
           <span className="font-body" style={eyebrow()}>O que não é</span>
           <h2 className="font-display" style={h2Dark}>O Creative Business Turnaround não é</h2>
-          <p className="font-body mb-12 max-w-2xl" style={{ ...bodyDark, color: "rgba(245,245,242,0.60)" }}>
+          <p className="font-body mb-12 max-w-2xl" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#e8e0d6" }}>
             O Creative Business Turnaround não se confunde com consultoria estratégica, agência criativa, mentoria ou intervenção de crise porque nenhum desses resolve o negócio como sistema antes do problema virar <span style={{ color: "#eb5c2e" }}>urgência</span>.
           </p>
           <div className="max-w-3xl">
@@ -424,7 +424,7 @@ export default function CreativeBusinessTurnaroundPage() {
           <div className="max-w-3xl space-y-0">
             {/* INSPIRA */}
             <div className="py-10" style={{ borderTop: "1px solid rgba(5,38,46,0.12)" }}>
-              <p className="font-body mb-1" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(5,38,46,0.40)" }}>
+              <p className="font-body mb-1" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A5568" }}>
                 INSPIRA
               </p>
               <p className="font-display mb-4" style={{ fontSize: "1.25rem", fontWeight: 500, color: "#05262e" }}>
@@ -440,7 +440,7 @@ export default function CreativeBusinessTurnaroundPage() {
 
             {/* TRANSPIRA */}
             <div className="py-10" style={{ borderTop: "1px solid rgba(5,38,46,0.12)" }}>
-              <p className="font-body mb-1" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(5,38,46,0.40)" }}>
+              <p className="font-body mb-1" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A5568" }}>
                 TRANSPIRA
               </p>
               <p className="font-display mb-4" style={{ fontSize: "1.25rem", fontWeight: 500, color: "#05262e" }}>
@@ -456,7 +456,7 @@ export default function CreativeBusinessTurnaroundPage() {
 
             {/* RESPIRA */}
             <div className="py-10" style={{ borderTop: "1px solid rgba(5,38,46,0.12)" }}>
-              <p className="font-body mb-1" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(5,38,46,0.40)" }}>
+              <p className="font-body mb-1" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A5568" }}>
                 RESPIRA
               </p>
               <p className="font-display mb-4" style={{ fontSize: "1.25rem", fontWeight: 300, color: "#05262e", letterSpacing: "0.01em" }}>
@@ -470,7 +470,7 @@ export default function CreativeBusinessTurnaroundPage() {
 
             {/* Ponto de entrada */}
             <div className="py-10" style={{ borderTop: "1px solid rgba(5,38,46,0.12)", borderBottom: "1px solid rgba(5,38,46,0.12)" }}>
-              <p className="font-body mb-1" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(5,38,46,0.40)" }}>
+              <p className="font-body mb-1" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A5568" }}>
                 Ponto de entrada
               </p>
               <p className="font-body mb-6" style={bodyLight}>
@@ -497,20 +497,20 @@ export default function CreativeBusinessTurnaroundPage() {
 
           <div className="max-w-4xl mb-4">
             <div style={{ borderBottom: "1px solid rgba(245,245,242,0.12)", paddingBottom: "1rem", marginBottom: "0", display: "grid", gridTemplateColumns: "1fr 2fr 120px", gap: "2rem" }}>
-              <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(245,245,242,0.35)" }}>Evidência</p>
-              <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(245,245,242,0.35)" }}>O que aconteceu</p>
-              <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(245,245,242,0.35)" }}>Contexto</p>
+              <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#e8e0d6" }}>Evidência</p>
+              <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#e8e0d6" }}>O que aconteceu</p>
+              <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#e8e0d6" }}>Contexto</p>
             </div>
             {evidencias.map((ev, i) => (
               <div key={i} style={{ borderBottom: "1px solid rgba(245,245,242,0.07)", display: "grid", gridTemplateColumns: "1fr 2fr 120px", gap: "2rem", padding: "1.5rem 0" }}>
                 <p className="font-display" style={{ fontSize: "clamp(1.125rem, 2vw, 1.5rem)", fontWeight: 600, lineHeight: 1.2, color: "#F5F5F2" }}>{ev.numero}</p>
                 <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#e8e0d6" }}>{ev.contexto}</p>
-                <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 300, color: "rgba(245,245,242,0.40)", lineHeight: 1.5 }}>{ev.tag}</p>
+                <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 300, color: "#e8e0d6", lineHeight: 1.5 }}>{ev.tag}</p>
               </div>
             ))}
           </div>
 
-          <p className="font-body mb-10" style={{ fontSize: "0.75rem", color: "rgba(245,245,242,0.30)", fontWeight: 300 }}>
+          <p className="font-body mb-10" style={{ fontSize: "0.75rem", color: "#e8e0d6", fontWeight: 300 }}>
             Estas não são cases da Pira Labs. São registros do julgamento calibrado por consequência real.
           </p>
 
@@ -537,7 +537,7 @@ export default function CreativeBusinessTurnaroundPage() {
                   <span className="font-body" style={{ fontSize: "1rem", fontWeight: 400, color: "#F5F5F2", lineHeight: 1.5 }}>
                     {item.question}
                   </span>
-                  <span className="shrink-0 transition-transform duration-200 group-open:rotate-45 font-body" style={{ color: "rgba(245,245,242,0.45)", fontSize: "1.25rem", fontWeight: 300, marginTop: "2px" }} aria-hidden="true">
+                  <span className="shrink-0 transition-transform duration-200 group-open:rotate-45 font-body" style={{ color: "#e8e0d6", fontSize: "1.25rem", fontWeight: 300, marginTop: "2px" }} aria-hidden="true">
                     +
                   </span>
                 </summary>
