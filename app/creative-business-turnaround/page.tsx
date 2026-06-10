@@ -123,11 +123,11 @@ const sinais = [
 ];
 
 const comparativo = [
-  { dimensao: "Quando entra", tradicional: "Na crise: quando o fogo já começou", cbt: "Antes: quando os sinais aparecem" },
-  { dimensao: "Contexto", tradicional: "Empresa com caixa comprometido", cbt: "Empresa com clientes, caixa e reputação" },
+  { dimensao: "Quando entra", tradicional: "Quando a crise já chegou e o fogo começou", cbt: "Antes: quando os sinais aparecem" },
+  { dimensao: "Contexto", tradicional: "Empresa com caixa comprometido e opções reduzidas", cbt: "Empresa com clientes, caixa e reputação" },
   { dimensao: "Objetivo", tradicional: "Estabilizar e sobreviver", cbt: "Redesenhar e avançar" },
-  { dimensao: "Foco", tradicional: "Corte e reestruturação financeira", cbt: "Trabalho, valor, tecnologia e governança" },
-  { dimensao: "Custo da inação", tradicional: "Já alto: opções reduzidas", cbt: "Baixo agora, alto se esperar" },
+  { dimensao: "Foco", tradicional: "Corte de custo e reestruturação emergencial", cbt: "Trabalho, valor, tecnologia e governança" },
+  { dimensao: "Custo da inação", tradicional: "Já alto: poucas escolhas restantes", cbt: "Baixo agora, alto se esperar" },
   { dimensao: "Opções disponíveis", tradicional: "Limitadas pela urgência", cbt: "Amplas: janela de oportunidade ainda aberta" },
 ];
 
@@ -262,7 +262,7 @@ export default function CreativeBusinessTurnaroundPage() {
               </p>
             </div>
 
-            <p className="font-body" style={{ ...bodyLight, fontWeight: 400, color: "rgba(5,38,46,0.55)", fontSize: "0.875rem" }}>
+            <p className="font-body mt-10" style={{ fontSize: "1rem", fontWeight: 500, lineHeight: 1.6, color: "#05262e" }}>
               A Pira Labs nomeou, define e opera o Creative Business Turnaround no Brasil.
             </p>
           </div>
@@ -288,7 +288,7 @@ export default function CreativeBusinessTurnaroundPage() {
                     Dimensão
                   </th>
                   <th className="text-left pb-4 pr-8" style={{ fontSize: "0.8125rem", fontWeight: 400, color: "rgba(245,245,242,0.45)" }}>
-                    Turnaround tradicional
+                    Sem intervenção agora
                   </th>
                   <th className="text-left pb-4" style={{ fontSize: "0.8125rem", fontWeight: 600, color: "#eb5c2e" }}>
                     Creative Business Turnaround
@@ -375,6 +375,14 @@ export default function CreativeBusinessTurnaroundPage() {
               </div>
             ))}
           </div>
+          <div className="max-w-3xl mt-12 pt-10" style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
+            <p className="font-body mb-6" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(245,245,242,0.80)" }}>
+              Se você reconheceu três ou mais desses sinais, a janela de oportunidade ainda está aberta.
+            </p>
+            <CTAButton variant="secondary" href="/contato" origin={ORIGINS.CREATIVE_BUSINESS_TURNAROUND}>
+              Entender o próximo passo
+            </CTAButton>
+          </div>
         </div>
       </section>
 
@@ -382,7 +390,7 @@ export default function CreativeBusinessTurnaroundPage() {
       <section className="bg-ink py-20 md:py-28">
         <div className="container-site">
           <span className="font-body" style={eyebrow()}>O que não é</span>
-          <h2 className="font-display" style={h2Dark}>O que o Creative Business Turnaround não é</h2>
+          <h2 className="font-display" style={h2Dark}>O Creative Business Turnaround não é</h2>
           <p className="font-body mb-12 max-w-2xl" style={{ ...bodyDark, color: "rgba(245,245,242,0.60)" }}>
             O Creative Business Turnaround não se confunde com consultoria estratégica, agência criativa, mentoria ou intervenção de crise porque nenhum desses resolve o negócio como sistema antes do problema virar urgência.
           </p>
@@ -425,7 +433,7 @@ export default function CreativeBusinessTurnaroundPage() {
               <p className="font-body mb-6" style={bodyLight}>
                 O INSPIRA lê o negócio em seis camadas coordenadas antes de nomear qualquer problema. A força do método está na síntese entre elas. O output é o módulo Propulsão: uma rota executável com movimentos, responsáveis, ordem e critério de conclusão. Gabriela Aguiar conduz.
               </p>
-              <CTAButton variant="tertiary" href="/inspira">
+              <CTAButton variant="secondary" theme="light" href="/inspira">
                 Conhecer INSPIRA
               </CTAButton>
             </div>
@@ -441,7 +449,7 @@ export default function CreativeBusinessTurnaroundPage() {
               <p className="font-body mb-6" style={bodyLight}>
                 Acontece dentro da operação do cliente, com o time que vai operar depois. Redesenha a relação entre trabalho, valor, tecnologia e governança. Duas configurações: COO Temporário e Arquiteto de Delegação. Celso Gama conduz. O projeto encerra quando os resultados acordados são verificados, não quando o prazo acaba.
               </p>
-              <CTAButton variant="tertiary" href="/transpira">
+              <CTAButton variant="secondary" theme="light" href="/transpira">
                 Conhecer TRANSPIRA
               </CTAButton>
             </div>
@@ -470,7 +478,7 @@ export default function CreativeBusinessTurnaroundPage() {
                 <span style={{ fontWeight: 500, color: "#05262e" }}>Fast R$3.500 · Full R$5.300.</span>{" "}
                 Até 5 dias úteis.
               </p>
-              <CTAButton variant="tertiary" href="/inspira/oxigenio">
+              <CTAButton variant="secondary" theme="light" href="/inspira/oxigenio">
                 Conhecer Oxigênio
               </CTAButton>
             </div>
@@ -495,7 +503,7 @@ export default function CreativeBusinessTurnaroundPage() {
             </div>
             {evidencias.map((ev, i) => (
               <div key={i} style={{ borderBottom: "1px solid rgba(245,245,242,0.07)", display: "grid", gridTemplateColumns: "1fr 2fr 120px", gap: "2rem", padding: "1.5rem 0" }}>
-                <p className="font-body" style={{ fontSize: "1rem", fontWeight: 500, color: "#F5F5F2", lineHeight: 1.4 }}>{ev.numero}</p>
+                <p className="font-display" style={{ fontSize: "clamp(1.125rem, 2vw, 1.5rem)", fontWeight: 600, lineHeight: 1.2, color: "#F5F5F2" }}>{ev.numero}</p>
                 <p className="font-body" style={{ ...bodyDark, color: "rgba(245,245,242,0.65)" }}>{ev.contexto}</p>
                 <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 300, color: "rgba(245,245,242,0.40)", lineHeight: 1.5 }}>{ev.tag}</p>
               </div>
@@ -507,7 +515,7 @@ export default function CreativeBusinessTurnaroundPage() {
           </p>
 
           <CTAButton variant="secondary" href="/sobre">
-            Conhecer Gabriela e Celso
+            Os dois fundadores em cada projeto
           </CTAButton>
         </div>
       </section>
@@ -547,6 +555,7 @@ export default function CreativeBusinessTurnaroundPage() {
         heading="Existe um próximo nível para o seu negócio. O que está entre você e ele, descobrimos junto."
         ctaLabel="RESPIRE"
         origin={ORIGINS.CREATIVE_BUSINESS_TURNAROUND}
+        className="!pt-12 md:!pt-16"
       />
     </>
   );

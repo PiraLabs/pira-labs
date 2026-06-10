@@ -106,11 +106,15 @@ app/
 │   ├── pocket/
 │   └── juridica/
 ├── creative-business-turnaround/
+├── chama/                  # palestras, workshops, aulas e mentorias (Gabriela + Celso)
 ├── antes-pira/             # blog/conteúdo (URL canônica: /antes-pira, não /blog)
 │   └── arquivo/            # placeholder — "Em breve"
 ├── como-pensamos/          # placeholder — "Em breve"
 ├── podcast/                # placeholder — "Em breve"
-├── glossario/              # placeholder — "Em breve"
+├── glossario/              # ativo — 3 termos: creative-business-turnaround, janela-de-oportunidade, antes-da-crise
+│   ├── creative-business-turnaround/
+│   ├── janela-de-oportunidade/
+│   └── antes-da-crise/
 └── cookies/ · politica-privacidade/ · termos/
 ```
 
@@ -122,7 +126,7 @@ app/
 | `Footer.tsx` | Colunas com accordion mobile + `LegalNotice` |
 | `Section.tsx` | Wrapper com variants: `dark` \| `default` \| `highlighted` + padding presets |
 | `NodeSystem.tsx` | Canvas animado com nós (ver seção abaixo) |
-| `CTAButton.tsx` | Link com prop `origin` para rastreamento (18 origens canônicas em `lib/constants.ts`) |
+| `CTAButton.tsx` | Link com prop `origin` para rastreamento (20 origens em `lib/constants.ts`); variants: `primary` \| `secondary` \| `tertiary`; prop `theme: "dark"\|"light"` |
 | `CTAWithMicrocopy.tsx` | CTA com linha de texto auxiliar abaixo |
 | `FinalCTA.tsx` | Bloco de encerramento de página com CTA |
 | `FAQ.tsx` | `<details>`/`<summary>` nativos + JSON-LD FAQPage inline |
@@ -172,10 +176,16 @@ export const metadata: Metadata = {
 }
 ```
 
-**Section variants:**
-- `dark` → fundo `ink` (#05262e)
-- `highlighted` → fundo `teal` (#004757)
-- `default` → fundo padrão
+**Section variants** (prop `variant`):
+- `dark` → `bg-ink` (#05262e)
+- `highlighted` → `bg-teal` (#004757)
+- `default` → `bg-deep-teal` (#05262E — mesmo hex que ink; alias legado)
+
+**Section paddingY** (prop `paddingY`, default `"lg"`):
+- `sm` → py-8 / md:py-8
+- `md` → py-10 / md:py-16
+- `lg` → py-16 / md:py-24
+- `xl` → py-20 / md:py-32
 
 **CTA com rastreamento:**
 ```tsx
@@ -211,7 +221,7 @@ Todos injetados via `<script type="application/ld+json">` no corpo dos component
 
 `lib/i18n.ts` é legado — não usar para novas implementações, não deletar sem confirmação.
 O padrão atual é conteúdo duplicado em componentes PT e EN separados (não dicionário dinâmico).
-Rotas EN são MVP mínimo: apenas home e creative-business-turnaround (about e contact foram removidos).
+Rotas EN: arquivos existentes são apenas `app/en/page.tsx` e `app/en/creative-business-turnaround/`. O sitemap referencia `/en/about` e `/en/contact` mas esses arquivos de rota não existem — causam 404 se acessados diretamente.
 
 ### NodeSystem (canvas animado)
 
@@ -231,20 +241,32 @@ Props: `density: "sparse"(5) | "medium"(10) | "dense"(19)` · `variant: "dark" |
 
 Flags ausentes na Vercel resultam em produto oculto (comportamento esperado). Não adicionar valor `"false"` explícito — ausência já desativa. Para ativar um produto, adicionar a var com valor `"true"` no painel da Vercel em Environment Variables → Production.
 
-### Webpack / imports
+### Imports
 
-Alias `@/` → raiz do projeto (configurado em `next.config.js` via `webpack.resolve.alias`).
-Turbopack está **desabilitado** (`experimental.turbopack: false`) — usar webpack.
+Alias `@/` → raiz do projeto (configurado em `next.config.js` via `turbopack.resolveAlias`).
+O bundler em uso é o webpack (padrão Next.js); o bloco `turbopack` no config existe apenas para manter o alias funcionando nos dois modos.
+
+### Headers de segurança e CSP
+
+`next.config.js` aplica headers globais em `/:path*`: HSTS, X-Frame-Options (`SAMEORIGIN`), X-Content-Type-Options, Referrer-Policy e Content-Security-Policy.
+
+**Domínios permitidos na CSP atual:** `va.vercel-scripts.com`, `*.fillout.com`, `googletagmanager.com`, `google-analytics.com`, `youtube.com`, `youtube-nocookie.com`.
+
+Ao adicionar qualquer novo embed, analytics ou fonte externa, atualizar o array CSP em `next.config.js` nas diretivas relevantes (`script-src`, `frame-src`, `connect-src`, etc.) antes de fazer deploy. CSP restritiva quebra embeds silenciosamente no browser sem erro de build.
 
 ### Redirects em next.config.js
 
-Atalhos de campanha: `/oxigenio` → `/inspira/oxigenio` · `/turnaround` e `/cbt` → `/creative-business-turnaround` · `/imersa` → `/faisca/imersa-em-ia` · `/pocket` → `/faisca/pocket`.
-Resíduos do site provisório PT cobertos: `/servicos` → `/inspira` · `/blog` e `/news` → `/antes-pira` · rotas `/en/*` e `/es/*` antigas.
+Atalhos de campanha: `/oxigenio` · `/oxigenio-ia-search` · `/faisca/ia-search` → `/inspira/oxigenio` · `/turnaround` e `/cbt` → `/creative-business-turnaround` · `/imersa` → `/faisca/imersa-em-ia` · `/pocket` → `/faisca/pocket`.
+
+Resíduos do site provisório: `/servicos` → `/inspira` · `/cases` → `/#provas` · `/blog` e `/news` e `/antes-da-crise` e `/antesdacrise` → `/antes-pira` · `/index.html` e `/home` → `/` · rotas `/en/*` e `/es/*` antigas · `/about`, `/services`, `/contact` sem prefixo → equivalentes PT.
+
+Migração editorial: `/glossario/janela-de-decisao` → `/glossario/janela-de-oportunidade` · `/empresa-cresce-margem-some` → `/crescimento-sem-margem`.
+
 Não adicionar redirect para `/sobre` nem `/contato` (essas rotas existem com o mesmo URL e retornam 200).
 
 ### `lib/constants.ts` — exports relevantes
 
-- `ORIGINS` — 18 origens canônicas do sistema de rastreamento de CTAs; usar via `shared/CTAButton.tsx`
+- `ORIGINS` — 20 origens do sistema de rastreamento de CTAs; usar via `shared/CTAButton.tsx`
 - `FILL_OUT_FORM_URL` / `FILLOUT_URL_HEADER` / `FILLOUT_URL_CONTATO` — URLs Fillout com UTMs embutidos
 - `SOCIAL` — links LinkedIn (empresa + Gabriela + Celso), email, Substack
 - `FLAGS` — feature flags D1 / D4 / PULSO (controle via env vars)
@@ -294,6 +316,8 @@ Não adicionar redirect para `/sobre` nem `/contato` (essas rotas existem com o 
 Tokens extintos — nunca usar: `#0C0F16` · `#05262D` · `#EA6335` · `#F2A85E`
 
 Regra do Ember: uma ocorrência singular por contexto visual. Nunca fundo de seção, CTA preenchido ou label.
+
+Nota: `bg-ember` e `bg-orange` são aliases no Tailwind — apontam para o mesmo `#EB5C2E`. Usar `bg-orange` / `text-orange` por convenção; `bg-ember` existe mas não é o padrão.
 
 ---
 
@@ -350,7 +374,7 @@ Arquivos antigos `logo-completo-*.svg` e `logo-icone-*.svg` foram deletados. Nã
 ## Estado atual do repositório
 
 - Build: passando
-- Rotas no ar: 15 indexáveis (estado mai/2026)
+- Rotas no ar: 27 no sitemap (estado jun/2026); /en/about e /en/contact no sitemap mas sem arquivos de rota (404)
 - Branch ativo: rebuild-v2
 - Formulário Fillout: NEXT_PUBLIC_FILLOUT_URL não configurado na Vercel
 - lib/i18n.ts: legado — não usar, não deletar sem confirmação
