@@ -4,8 +4,8 @@
   "description": "Boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes da crise.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0C0F16",
-  "theme_color": "#0C0F16",
+  "background_color": "#05262e",
+  "theme_color": "#05262e",
   "lang": "pt-BR",
   "icons": [
     {

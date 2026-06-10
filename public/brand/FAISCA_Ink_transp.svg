@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 160">
+  <g transform="translate(70,72)">
+  <circle cx="0" cy="0" r="18" fill="none" stroke="#05262e" stroke-width="6.3"/>
+  <line x1="0.00" y1="-18.00" x2="0.00" y2="-41.00" stroke="#05262e" stroke-width="1" stroke-linecap="square"/>
+  <circle cx="0.00" cy="-52.00" r="11" fill="none" stroke="#05262e" stroke-width="1.5"/>
+  <text x="0" y="46" text-anchor="middle" font-size="12" font-weight="500" font-family="AtypDisplay, sans-serif" fill="#05262e">Faísca</text>
+  </g>
+</svg>

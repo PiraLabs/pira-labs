@@ -363,7 +363,7 @@ Nomenclatura atual (pós-redesign jun/2026):
 | `COMPLETA_OFFWHITE.svg` | Logo completo fundo escuro (footer, header dark) |
 | `COMPLETA_BRANCA.svg` | Logo completo branco puro |
 | `COMPLETA_INK.svg` | Logo completo ink (fundo claro) |
-| `ICONE_BRANCO.svg` / `ICONE_INK.svg` / `ICONE_SAND.svg` | Ícone isolado nas três variações |
+| `ICONE_INK.svg` / `ICONE_BRANCO.svg` / `ICONE_SAND.svg` | Ícone standalone KZ, formato paisagem viewBox 831x293 (ink / branco #F5F5F2 / sand #E8E0D6) |
 | `FAISCA_Ink_transp.svg` / `FAISCA_Sand_transp.svg` | Símbolo Faísca (PNG e SVG disponíveis) |
 | `INSPIRA_Ink_Sand.svg` / `INSPIRA_Sand_Ink.svg` / `INSPIRA_Teal_Sand.svg` / `TRANSPIRA_Ink_Sand.svg` / `TRANSPIRA_Sand_Ink.svg` / `TRANSPIRA_Teal_Sand.svg` / `RESPIRA_Ink_Sand.svg` / `RESPIRA_Sand_Ink.svg` / `RESPIRA_Teal_Sand.svg` | Wordmarks de submarcas |
 
