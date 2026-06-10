@@ -18,11 +18,11 @@ export function MediaKit({
 }: MediaKitProps) {
   return (
     <div className={className}>
-      <p className="text-off-white/80 font-body text-base leading-relaxed mb-6">
+      <p className="font-body text-base leading-relaxed mb-6" style={{ color: "rgba(245,245,242,0.80)" }}>
         Para entrevistas, palestras, eventos ou parcerias institucionais, escrever para{" "}
         <a
           href="mailto:inspira@piralabs.com.br"
-          className="text-off-white underline hover:text-orange transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
+          style={{ color: "#F5F5F2", textDecoration: "underline" }}
           aria-label="Enviar email para Pira Labs"
         >
           inspira@piralabs.com.br
@@ -57,13 +57,14 @@ export function MediaKit({
         </div>
       )}
 
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-col gap-3 mt-6">
         {pressKitHref && (
           <a
             href={pressKitHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-body text-off-white/60 underline hover:text-off-white transition-colors"
+            className="font-body"
+            style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(245,245,242,0.60)", textDecoration: "none" }}
           >
             Download de bios e fotos em alta resolução
             <span className="sr-only"> (abre em nova aba)</span>
@@ -73,21 +74,27 @@ export function MediaKit({
           href={SOCIAL.GABRIELA_LINKEDIN}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm font-body text-off-white/60 hover:text-off-white transition-colors"
+          className="font-body inline-flex items-center gap-2"
+          style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(245,245,242,0.60)", textDecoration: "none" }}
           aria-label="LinkedIn Gabriela Aguiar (abre em nova aba)"
         >
           LinkedIn Gabriela Aguiar
-          <span className="sr-only"> (abre em nova aba)</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
         </a>
         <a
           href={SOCIAL.CELSO_LINKEDIN}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm font-body text-off-white/60 hover:text-off-white transition-colors"
+          className="font-body inline-flex items-center gap-2"
+          style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(245,245,242,0.60)", textDecoration: "none" }}
           aria-label="LinkedIn Celso Gama (abre em nova aba)"
         >
           LinkedIn Celso Gama
-          <span className="sr-only"> (abre em nova aba)</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
         </a>
       </div>
     </div>

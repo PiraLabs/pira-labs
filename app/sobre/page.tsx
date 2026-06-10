@@ -271,7 +271,7 @@ export default function SobrePage() {
               Celso entra quando a operação precisa de alguém que já viu isso antes. E já viu muita coisa.
             </p>
             <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(232,224,214,0.80)" }}>
-              Vinte e cinco anos dentro de operações complexas: de hubs regionais de multinacionais a empresas de serviços que cresceram, travaram, viraram e, algumas, não voltaram. Bacharelando em Direito (Mackenzie), MBA pelo Insper, pós-graduação em Marketing pela ESPM e Publicidade pela FAAP. Applied AI Certificate Program (MIT, em andamento, 2026).
+              Vinte e cinco anos dentro de operações complexas: de hubs regionais de multinacionais a empresas de serviços que cresceram, travaram, viraram e, algumas, não voltaram.
             </p>
             <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(232,224,214,0.80)" }}>
               Sabe onde colocar tecnologia e onde colocar gente porque já errou nos dois. Conduz o TRANSPIRA. Entra na operação, trabalha junto com o time, sai quando os resultados acordados são verificados. Não quando o prazo acaba.
@@ -316,7 +316,7 @@ export default function SobrePage() {
       {/* SOBRE-5 · Como as duas lentes trabalham juntas (Sand) */}
       <section className="bg-sand py-16 md:py-24">
         <div className="container-site">
-          <h2 className="font-display font-semibold mb-10" style={{ fontSize: "clamp(24px, 2.8vw, 36px)", color: "#05262e" }}>
+          <h2 className="font-display font-semibold mb-10" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)", lineHeight: 1.2, color: "#05262e" }}>
             Como as duas lentes trabalham juntas
           </h2>
           <div className="max-w-2xl mb-10 overflow-hidden rounded-lg" style={{ maxHeight: "420px" }}>
@@ -331,12 +331,12 @@ export default function SobrePage() {
             />
           </div>
           <div className="max-w-3xl space-y-5 mb-8">
-            <p className="font-body leading-relaxed" style={{ fontSize: "16px", color: "#05262e" }}>
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#05262e" }}>
               Gabriela lê contexto, sinais e movimentos de mercado antes de virarem demanda óbvia. Celso lê operação, gargalo e consequência antes de virarem perda visível. Separadas, essas lentes geram diagnóstico parcial.{" "}
               <span style={{ color: "#eb5c2e" }}>Juntas</span>,
               mostram onde o negócio está travado e o que precisa mudar para avançar sem quebrar o que já funciona.
             </p>
-            <p className="font-body leading-relaxed" style={{ fontSize: "16px", color: "#05262e" }}>
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#05262e" }}>
               Não é divisão de trabalho. É metodologia: o diagnóstico real exige as duas perspectivas ao mesmo tempo. Gabriela nomeia o que está chegando antes de chegar. Celso executa o redesenho dentro da operação, com o time que vai operar depois.
             </p>
           </div>
