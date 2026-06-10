@@ -11,8 +11,13 @@ const config: Config = {
         ink: "#05262e",
         "deep-teal": "#05262E",
         teal: "#004757",
+        tealMid: "#1A5568",
         orange: "#EB5C2E",
+        ember: "#eb5c2e",
+        emberDeep: "#C4421A",
+        sand: "#e8e0d6",
         "off-white": "#E8E0D6",
+        white: "#F5F5F2",
       },
       fontFamily: {
         /* Sistema tipográfico KZ (decisão D10):
