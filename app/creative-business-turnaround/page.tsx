@@ -190,14 +190,14 @@ const bodyDark: React.CSSProperties = {
   fontSize: "1rem",
   lineHeight: 1.75,
   fontWeight: 300,
-  color: "rgba(245,245,242,0.82)",
+  color: "#F5F5F2",
 };
 
 const bodyLight: React.CSSProperties = {
   fontSize: "1rem",
   lineHeight: 1.75,
   fontWeight: 300,
-  color: "rgba(5,38,46,0.80)",
+  color: "#05262e",
 };
 
 const hrDark: React.CSSProperties = {
@@ -277,7 +277,7 @@ export default function CreativeBusinessTurnaroundPage() {
             Turnaround tradicional vs{" "}
             <span style={{ color: "#eb5c2e" }}>Creative Business Turnaround</span>
           </h2>
-          <p className="font-body mb-12 max-w-2xl" style={{ ...bodyDark, color: "rgba(245,245,242,0.60)" }}>
+          <p className="font-body mb-12 max-w-2xl" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#e8e0d6" }}>
             A diferença central é o momento de entrada: o turnaround tradicional atua na crise, quando as opções já estão reduzidas. O Creative Business Turnaround atua antes, quando a empresa ainda tem clientes, caixa e reputação para agir com clareza.
           </p>
           <div className="overflow-x-auto max-w-4xl">
@@ -346,7 +346,7 @@ export default function CreativeBusinessTurnaroundPage() {
         <div className="container-site">
           <span className="font-body" style={eyebrow()}>Os sinais</span>
           <h2 className="font-display" style={h2Dark}>Os sinais que indicam o momento certo</h2>
-          <p className="font-body mb-14 max-w-xl" style={{ ...bodyDark, color: "rgba(245,245,242,0.60)" }}>
+          <p className="font-body mb-14 max-w-xl" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#e8e0d6" }}>
             Cinco sinais que aparecem antes da crise. Quanto mais presentes, mais próximo está o momento de agir.
           </p>
           <div className="max-w-3xl">
@@ -356,7 +356,7 @@ export default function CreativeBusinessTurnaroundPage() {
                   <span className="font-display" style={{
                     fontSize: "0.75rem",
                     fontWeight: 300,
-                    color: i === 0 ? "#eb5c2e" : "rgba(245,245,242,0.30)",
+                    color: i === 0 ? "#eb5c2e" : "rgba(245,245,242,0.35)",
                     letterSpacing: "0.05em",
                     paddingTop: "3px",
                   }}>
@@ -366,7 +366,7 @@ export default function CreativeBusinessTurnaroundPage() {
                     <p className="font-body mb-2" style={{ fontSize: "1rem", fontWeight: 500, color: "#F5F5F2" }}>
                       {sinal.titulo}
                     </p>
-                    <p className="font-body" style={{ ...bodyDark, color: "rgba(245,245,242,0.70)" }}>
+                    <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#e8e0d6" }}>
                       {sinal.texto}
                     </p>
                   </div>
@@ -392,7 +392,7 @@ export default function CreativeBusinessTurnaroundPage() {
           <span className="font-body" style={eyebrow()}>O que não é</span>
           <h2 className="font-display" style={h2Dark}>O Creative Business Turnaround não é</h2>
           <p className="font-body mb-12 max-w-2xl" style={{ ...bodyDark, color: "rgba(245,245,242,0.60)" }}>
-            O Creative Business Turnaround não se confunde com consultoria estratégica, agência criativa, mentoria ou intervenção de crise porque nenhum desses resolve o negócio como sistema antes do problema virar urgência.
+            O Creative Business Turnaround não se confunde com consultoria estratégica, agência criativa, mentoria ou intervenção de crise porque nenhum desses resolve o negócio como sistema antes do problema virar <span style={{ color: "#eb5c2e" }}>urgência</span>.
           </p>
           <div className="max-w-3xl">
             {naoE.map((row, i) => (
@@ -401,7 +401,7 @@ export default function CreativeBusinessTurnaroundPage() {
                   <p className="font-body" style={{ fontSize: "0.9375rem", fontWeight: 500, color: "#F5F5F2" }}>
                     {row.categoria}
                   </p>
-                  <p className="font-body" style={{ ...bodyDark, color: "rgba(245,245,242,0.65)" }}>
+                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#e8e0d6" }}>
                     {row.motivo}
                   </p>
                 </div>
@@ -417,7 +417,7 @@ export default function CreativeBusinessTurnaroundPage() {
         <div className="container-site">
           <span className="font-body" style={eyebrow(true)}>O método</span>
           <h2 className="font-display" style={h2Light}>Como o Creative Business Turnaround funciona na prática</h2>
-          <p className="font-body mb-14 max-w-2xl" style={{ ...bodyLight, color: "rgba(5,38,46,0.55)" }}>
+          <p className="font-body mb-14 max-w-2xl" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#05262e" }}>
             A sequência natural é diagnóstico, execução e resultado verificado. O ponto de entrada pode variar conforme o momento.
           </p>
 
@@ -492,7 +492,7 @@ export default function CreativeBusinessTurnaroundPage() {
           <span className="font-body" style={eyebrow()}>Quem opera</span>
           <h2 className="font-display" style={h2Dark}>Quem opera essa categoria no Brasil</h2>
           <p className="font-body mb-12 max-w-2xl" style={bodyDark}>
-            A Pira Labs é a empresa que nomeou, define e opera o Creative Business Turnaround no Brasil. Cada projeto tem os dois fundadores do diagnóstico à entrega. Boutique por escolha, não por limitação.
+            A Pira Labs é a empresa que nomeou, define e opera o Creative Business Turnaround no Brasil. Cada projeto tem os dois fundadores do diagnóstico à entrega. <span style={{ color: "#eb5c2e" }}>Boutique</span> por escolha, não por limitação.
           </p>
 
           <div className="max-w-4xl mb-4">
@@ -504,7 +504,7 @@ export default function CreativeBusinessTurnaroundPage() {
             {evidencias.map((ev, i) => (
               <div key={i} style={{ borderBottom: "1px solid rgba(245,245,242,0.07)", display: "grid", gridTemplateColumns: "1fr 2fr 120px", gap: "2rem", padding: "1.5rem 0" }}>
                 <p className="font-display" style={{ fontSize: "clamp(1.125rem, 2vw, 1.5rem)", fontWeight: 600, lineHeight: 1.2, color: "#F5F5F2" }}>{ev.numero}</p>
-                <p className="font-body" style={{ ...bodyDark, color: "rgba(245,245,242,0.65)" }}>{ev.contexto}</p>
+                <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#e8e0d6" }}>{ev.contexto}</p>
                 <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 300, color: "rgba(245,245,242,0.40)", lineHeight: 1.5 }}>{ev.tag}</p>
               </div>
             ))}
@@ -525,7 +525,7 @@ export default function CreativeBusinessTurnaroundPage() {
         <div className="container-site max-w-3xl">
           <span className="font-body" style={eyebrow()}>FAQ</span>
           <h2 className="font-display mb-12" style={h2Dark}>
-            Perguntas que as IAs já respondem sobre Creative Business Turnaround
+            Perguntas que as <span style={{ color: "#eb5c2e" }}>IAs</span> já respondem sobre Creative Business Turnaround
           </h2>
           <div>
             {faqItems.map((item, i) => (
@@ -541,7 +541,7 @@ export default function CreativeBusinessTurnaroundPage() {
                     +
                   </span>
                 </summary>
-                <p className="font-body pb-6" style={{ ...bodyDark, color: "rgba(245,245,242,0.70)", paddingTop: "0.25rem" }}>
+                <p className="font-body pb-6" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", paddingTop: "0.25rem" }}>
                   {item.answer}
                 </p>
               </details>
