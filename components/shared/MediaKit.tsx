@@ -32,7 +32,7 @@ export function MediaKit({
 
       {appearances.length > 0 && (
         <div className="mb-6">
-          <p className="text-xs font-body font-semibold uppercase tracking-widest text-off-white/40 mb-3">
+          <p className="font-body font-semibold uppercase mb-3" style={{ fontSize: "0.625rem", letterSpacing: "0.18em", color: "rgba(245,245,242,0.40)" }}>
             Aparições recentes
           </p>
           <ul className="space-y-2">
@@ -70,6 +70,19 @@ export function MediaKit({
             <span className="sr-only"> (abre em nova aba)</span>
           </a>
         )}
+        <a
+          href={SOCIAL.PIRA_LINKEDIN}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-body inline-flex items-center gap-2"
+          style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(245,245,242,0.60)", textDecoration: "none" }}
+          aria-label="LinkedIn Pira Labs (abre em nova aba)"
+        >
+          LinkedIn Pira Labs
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </a>
         <a
           href={SOCIAL.GABRIELA_LINKEDIN}
           target="_blank"

@@ -352,10 +352,10 @@ export default function SobrePage() {
             por fora.
           </h2>
           <div className="max-w-3xl space-y-4 mb-12">
-            <p className="font-body leading-relaxed" style={{ fontSize: "16px", color: "rgba(245,245,242,0.85)" }}>
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(245,245,242,0.85)" }}>
               Quem contrata a Pira Labs não recebe um sócio na venda e um analista na entrega. Recebe Gabriela e Celso do diagnóstico ao encerramento.
             </p>
-            <p className="font-body leading-relaxed" style={{ fontSize: "16px", color: "rgba(245,245,242,0.85)" }}>
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(245,245,242,0.85)" }}>
               Boutique é o modelo deliberado. O ecossistema é o que torna isso possível: uma rede de especialistas, parceiros e referências que entra quando o projeto pede, sem virar overhead fixo.
             </p>
           </div>
