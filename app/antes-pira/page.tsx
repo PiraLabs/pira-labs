@@ -57,7 +57,7 @@ export default function AntesPiraPage() {
         <PageHeader
           breadcrumbs={breadcrumbs}
           h1="Antes, Pira"
-          subtitle="Publicação editorial da Pira Labs no Substack. Parte do universo FAÍSCA."
+          subtitle="Publicação editorial da Pira Labs no Substack. Parte do universo Faísca."
         />
       </div>
 

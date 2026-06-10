@@ -308,10 +308,10 @@ export default function EnHomePage() {
         </div>
       </Section>
 
-      {/* HOME-5 · FAÍSCA teaser */}
+      {/* HOME-5 · Faísca teaser */}
       <Section variant="dark" paddingY="lg">
         <h2 className="text-3xl md:text-4xl font-body font-semibold text-off-white mb-3">
-          FAÍSCA · the entry point
+          Faísca · the entry point
         </h2>
         <p className="text-off-white/75 font-body mb-10 max-w-2xl">
           Short-engagement programs that teach, awaken or provoke before any larger
@@ -347,7 +347,7 @@ export default function EnHomePage() {
             </p>
             <h3 className="text-off-white font-body font-medium mb-3">Selective offering</h3>
             <p className="text-off-white/65 font-body text-sm leading-relaxed">
-              C-level as a Service · FAÍSCA Jurídica
+              C-level as a Service · Faísca Jurídica
             </p>
           </div>
         </div>
@@ -355,7 +355,7 @@ export default function EnHomePage() {
           href="/faisca"
           className="inline-flex items-center justify-center min-h-[44px] px-6 py-3 rounded border border-off-white text-off-white bg-transparent font-body font-medium text-base transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
         >
-          Learn about FAÍSCA
+          Learn about Faísca
         </Link>
       </Section>
 

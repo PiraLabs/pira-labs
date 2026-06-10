@@ -231,7 +231,7 @@ export default function InspiraJuridicoPage() {
             de forma descentralizada.
           </p>
           <p className="text-off-white/85 font-body leading-relaxed">
-            Escritórios que contrataram o FAÍSCA Jurídica e querem ir além da
+            Escritórios que contrataram o Faísca Jurídica e querem ir além da
             educação para o diagnóstico estruturado.
           </p>
         </div>

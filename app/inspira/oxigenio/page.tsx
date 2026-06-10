@@ -528,7 +528,7 @@ export default function OxigenioPage() {
               </p>
               <p className="text-off-white/65 font-body text-sm leading-relaxed">
                 O diagnóstico confirmou o que o cliente já sentia. O próximo
-                passo é FAÍSCA ou conexão com a rede de referência da Pira Labs.
+                passo é Faísca ou conexão com a rede de referência da Pira Labs.
               </p>
             </div>
           </div>

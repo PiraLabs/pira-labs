@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     absolute: "Sobre · Pira Labs · Gabriela Aguiar e Celso Gama",
   },
   description:
-    "A Pira Labs é uma boutique brasileira de Creative Business Turnaround. Conheça Gabriela Aguiar e Celso Gama, os fundadores.",
+    "A Pira Labs é uma consultoria boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam transformar sinais fracos em decisão, proteger reputação e voltar a crescer com margem, antes que a janela se feche. Conheça Gabriela Aguiar e Celso Gama, os fundadores.",
   alternates: {
     canonical: "https://piralabs.com.br/sobre",
     languages: { en: "https://piralabs.com.br/en/about" },
@@ -109,7 +109,7 @@ const aboutPageSchema = {
   url: "https://piralabs.com.br/sobre",
   name: "Sobre · Pira Labs · Gabriela Aguiar e Celso Gama",
   description:
-    "A Pira Labs é uma boutique brasileira de Creative Business Turnaround. Conheça Gabriela Aguiar e Celso Gama, os fundadores.",
+    "A Pira Labs é uma consultoria boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam transformar sinais fracos em decisão, proteger reputação e voltar a crescer com margem, antes que a janela se feche. Conheça Gabriela Aguiar e Celso Gama, os fundadores.",
   isPartOf: { "@id": "https://piralabs.com.br/#website" },
   about: [
     { "@id": "https://piralabs.com.br/sobre#gabriela" },
@@ -131,7 +131,7 @@ export default function SobrePage() {
         <PageHeader
           breadcrumbs={breadcrumbs}
           h1="Sobre a Pira Labs"
-          subtitle="Boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche."
+          subtitle="Consultoria boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam transformar sinais fracos em decisão, proteger reputação e voltar a crescer com margem, antes que a janela se feche."
         />
       </div>
 

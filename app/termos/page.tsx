@@ -138,7 +138,7 @@ export default function TermosPage() {
             <p className="mb-2">
               Todo o conteúdo disponível neste site, incluindo textos, metodologias, marcas, nomes,
               logotipos, imagens, estrutura editorial e nomenclaturas proprietárias (INSPIRA,
-              TRANSPIRA, RESPIRA, FAÍSCA, Oxigênio IA Search, Creative Business Turnaround), é de
+              TRANSPIRA, RESPIRA, Faísca, Oxigênio IA Search, Creative Business Turnaround), é de
               propriedade exclusiva da Pira Labs ou de seus licenciantes, protegido pela legislação
               brasileira de propriedade intelectual.
             </p>

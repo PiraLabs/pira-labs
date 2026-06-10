@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     absolute: "Contato · Pira Labs",
   },
   description:
-    "Falar com a Pira Labs sobre INSPIRA, TRANSPIRA, Oxigênio IA Search ou FAÍSCA. Respondemos em até dois dias úteis.",
+    "Falar com a Pira Labs sobre INSPIRA, TRANSPIRA, Oxigênio IA Search ou Faísca. Respondemos em até dois dias úteis.",
   alternates: {
     canonical: "https://piralabs.com.br/contato",
     languages: { en: "https://piralabs.com.br/en/contact" },
@@ -41,7 +41,7 @@ const contactPageSchema = {
   url: "https://piralabs.com.br/contato",
   name: "Contato · Pira Labs",
   description:
-    "Falar com a Pira Labs sobre INSPIRA, TRANSPIRA, Oxigênio IA Search ou FAÍSCA. Respondemos em até dois dias úteis.",
+    "Falar com a Pira Labs sobre INSPIRA, TRANSPIRA, Oxigênio IA Search ou Faísca. Respondemos em até dois dias úteis.",
   isPartOf: { "@id": "https://piralabs.com.br/#website" },
   inLanguage: "pt-BR",
 };

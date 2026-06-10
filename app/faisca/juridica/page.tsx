@@ -16,14 +16,14 @@ const breadcrumb = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://piralabs.com.br" },
     { "@type": "ListItem", position: 2, name: "Faísca", item: "https://piralabs.com.br/faisca" },
-    { "@type": "ListItem", position: 3, name: "FAÍSCA Jurídica", item: "https://piralabs.com.br/faisca/juridica" },
+    { "@type": "ListItem", position: 3, name: "Faísca Jurídica", item: "https://piralabs.com.br/faisca/juridica" },
   ],
 };
 
 export const metadata: Metadata = {
   title: {
     absolute:
-      "FAÍSCA Jurídica · Palestra e workshop de IA para o jurídico · Pira Labs",
+      "Faísca Jurídica · Palestra e workshop de IA para o jurídico · Pira Labs",
   },
   description:
     "Palestra e workshop executivo para escritórios, áreas jurídicas e instituições de ensino. Como usar IA com método, critério e governança na rotina jurídica.",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     title:
-      "FAÍSCA Jurídica · Palestra e workshop de IA para o jurídico · Pira Labs",
+      "Faísca Jurídica · Palestra e workshop de IA para o jurídico · Pira Labs",
     description:
       "Como usar IA com método, critério e governança na rotina jurídica. Para escritórios, áreas jurídicas e instituições de ensino.",
     url: "https://piralabs.com.br/faisca/juridica",
@@ -51,7 +51,7 @@ const faqItems = [
   {
     question: "Vocês prestam consultoria jurídica?",
     answer:
-      "Não. O FAÍSCA Jurídica trata de fluxos de trabalho, produtividade, governança de uso de IA e operação jurídica. Não define estratégia de caso, não substitui a atuação de advogados habilitados pela OAB e não é consultoria jurídica.",
+      "Não. O Faísca Jurídica trata de fluxos de trabalho, produtividade, governança de uso de IA e operação jurídica. Não define estratégia de caso, não substitui a atuação de advogados habilitados pela OAB e não é consultoria jurídica.",
   },
   {
     question: "O workshop pode ser adaptado para o contexto do nosso escritório?",
@@ -76,7 +76,7 @@ const faqItems = [
 ];
 
 const service = serviceSchema({
-  name: "FAÍSCA Jurídica",
+  name: "Faísca Jurídica",
   description:
     "Palestra e workshop executivo para escritórios de advocacia, áreas jurídicas corporativas e instituições de ensino jurídico. Como usar IA com método, critério e governança na rotina jurídica.",
   url: "https://piralabs.com.br/faisca/juridica",
@@ -96,7 +96,7 @@ export default function FaiscaJuridicaPage() {
       <div className="bg-ink">
         <PageHeader
           breadcrumbs={breadcrumbs}
-          h1="FAÍSCA Jurídica"
+          h1="Faísca Jurídica"
           subtitle="Antes de ensinar prompt para o time jurídico, vale saber o que não pode entrar na ferramenta."
         />
       </div>
@@ -128,7 +128,7 @@ export default function FaiscaJuridicaPage() {
             mapeou.
           </p>
           <p className="text-off-white/85 font-body leading-relaxed">
-            O FAÍSCA Jurídica existe para nomear esse problema e dar ao time as
+            O Faísca Jurídica existe para nomear esse problema e dar ao time as
             ferramentas para resolvê-lo.
           </p>
         </div>
@@ -137,7 +137,7 @@ export default function FaiscaJuridicaPage() {
       {/* FAISCA-JUR-3 · O que é */}
       <Section variant="highlighted" paddingY="lg">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
-          O que é o FAÍSCA Jurídica
+          O que é o Faísca Jurídica
         </h2>
         <div className="max-w-3xl space-y-4">
           <p className="text-off-white/85 font-body leading-relaxed">
