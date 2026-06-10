@@ -163,7 +163,7 @@ const eyebrow = (light = false): React.CSSProperties => ({
   fontWeight: 600,
   letterSpacing: "0.18em",
   textTransform: "uppercase" as const,
-  color: light ? "rgba(5,38,46,0.45)" : "rgba(245,245,242,0.45)",
+  color: light ? "#1A5568" : "#e8e0d6",
   marginBottom: "2rem",
   display: "block",
 });
@@ -345,7 +345,7 @@ export default function CreativeBusinessTurnaroundPage() {
       <section className="bg-teal py-20 md:py-28">
         <div className="container-site">
           <span className="font-body" style={eyebrow()}>Os sinais</span>
-          <h2 className="font-display" style={h2Dark}>Os sinais que indicam o momento certo</h2>
+          <h2 className="font-display" style={h2Dark}>Os <span style={{ color: "#eb5c2e" }}>sinais</span> que indicam o momento certo</h2>
           <p className="font-body mb-14 max-w-xl" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#e8e0d6" }}>
             Cinco sinais que aparecem antes da crise. Quanto mais presentes, mais próximo está o momento de agir.
           </p>
