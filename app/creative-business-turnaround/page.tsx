@@ -219,12 +219,22 @@ export default function CreativeBusinessTurnaroundPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* CBT-1 · Header — Ink */}
-      <div className="bg-ink">
-        <PageHeader
-          breadcrumbs={breadcrumbs}
-          h1="Creative Business Turnaround"
-          subtitle="O processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes que a janela de oportunidade se feche: quando clientes, caixa e reputação ainda existem, mas o modelo de trabalho começou a comprometer margem, valor percebido e capacidade de decisão."
-        />
+      <div className="bg-ink pt-20 md:pt-24 mb-10 md:mb-16">
+        <div className="container-site">
+          <nav aria-label="Breadcrumb" className="mb-6">
+            <ol className="flex items-center gap-2 font-body" style={{ fontSize: "0.75rem", color: "#e8e0d6", listStyle: "none", padding: 0, margin: 0 }}>
+              <li><a href="/" style={{ color: "#e8e0d6", textDecoration: "none" }}>Home</a></li>
+              <li style={{ color: "#e8e0d6", opacity: 0.4 }}>·</li>
+              <li style={{ color: "#e8e0d6", opacity: 0.6 }}>Creative Business Turnaround</li>
+            </ol>
+          </nav>
+          <h1 className="font-display mb-6" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: "#F5F5F2" }}>
+            Creative Business Turnaround
+          </h1>
+          <p className="font-body max-w-2xl" style={{ fontSize: "clamp(1.0625rem, 1.8vw, 1.25rem)", lineHeight: 1.65, fontWeight: 300, color: "#e8e0d6" }}>
+            O processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes que a janela de oportunidade se feche: quando clientes, caixa e reputação ainda existem, mas o modelo de trabalho começou a comprometer margem, valor percebido e capacidade de decisão.
+          </p>
+        </div>
       </div>
 
       {/* CBT-2 · O que é — Sand */}
@@ -336,6 +346,13 @@ export default function CreativeBusinessTurnaroundPage() {
             <p className="font-body" style={{ ...bodyLight, fontSize: "0.8125rem", fontWeight: 400 }}>
               <span style={{ fontWeight: 500, color: "#05262e" }}>O perfil do decisor:</span>{" "}
               sócia ou sócio, CEO ou presidente com autonomia real para mudar. Alguém que reconhece o problema, tem abertura genuína para repensar o modelo e não está procurando validação para decisão já tomada.
+            </p>
+            <p className="font-body pt-2" style={{ fontSize: "0.8125rem", fontWeight: 300, color: "#05262e" }}>
+              Não tem certeza se o momento é agora?{" "}
+              <a href="/inspira/oxigenio" style={{ fontWeight: 500, color: "#1A5568", textDecoration: "underline", textUnderlineOffset: "3px" }}>
+                O Oxigênio existe para isso.
+              </a>{" "}
+              Fast R$3.500 · Full R$5.300.
             </p>
           </div>
         </div>
