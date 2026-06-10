@@ -7,6 +7,7 @@ type CTAButtonProps = {
   external?: boolean;
   withAsterisk?: boolean;
   className?: string;
+  theme?: "dark" | "light";
   children: React.ReactNode;
 };
 
@@ -17,19 +18,35 @@ export function CTAButton({
   external = false,
   withAsterisk = false,
   className = "",
+  theme = "dark",
   children,
 }: CTAButtonProps) {
   const resolvedHref = origin
     ? `${href}${href.includes("?") ? "&" : "?"}origem=${origin}`
     : href;
 
+  const colors = {
+    primary: {
+      dark: { backgroundColor: "#eb5c2e", color: "#05262e" },
+      light: { backgroundColor: "#eb5c2e", color: "#F5F5F2" },
+    },
+    secondary: {
+      dark: { border: "1px solid #F5F5F2", color: "#F5F5F2" },
+      light: { border: "1px solid #05262e", color: "#05262e" },
+    },
+    tertiary: {
+      dark: { color: "rgba(245,245,242,0.7)" },
+      light: { color: "rgba(5,38,46,0.7)" },
+    },
+  }[variant][theme];
+
   const baseClass = {
     primary:
-      "inline-flex items-center justify-center min-h-[44px] px-8 py-4 rounded bg-orange text-ink font-body font-medium text-base leading-tight transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange",
+      "inline-flex items-center justify-center min-h-[44px] px-8 py-4 rounded font-body font-medium text-base leading-tight transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2",
     secondary:
-      "inline-flex items-center justify-center min-h-[44px] px-8 py-4 rounded border border-off-white text-off-white font-body font-medium text-base leading-tight bg-transparent transition-colors hover:bg-off-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange",
+      "inline-flex items-center justify-center min-h-[44px] px-8 py-4 rounded font-body font-medium text-base leading-tight bg-transparent transition-colors hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2",
     tertiary:
-      "inline-flex items-center justify-center min-h-[44px] px-2 py-1 text-off-white/70 underline font-body font-medium text-base transition-colors hover:text-orange focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange",
+      "inline-flex items-center justify-center min-h-[44px] px-2 py-1 underline font-body font-medium text-base transition-colors focus-visible:outline-2 focus-visible:outline-offset-2",
   }[variant];
 
   const content = (
@@ -50,6 +67,7 @@ export function CTAButton({
         target="_blank"
         rel="noopener noreferrer"
         className={`${baseClass} ${className}`}
+        style={colors}
       >
         {content}
         <span className="sr-only">(abre em nova aba)</span>
@@ -58,7 +76,7 @@ export function CTAButton({
   }
 
   return (
-    <Link href={resolvedHref} className={`${baseClass} ${className}`}>
+    <Link href={resolvedHref} className={`${baseClass} ${className}`} style={colors}>
       {content}
     </Link>
   );

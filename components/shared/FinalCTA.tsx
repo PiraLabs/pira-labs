@@ -17,7 +17,8 @@ export function FinalCTA({
   return (
     <section className="bg-ink section-padding">
       <div className="container-site text-center">
-        <p className="font-display text-2xl md:text-3xl italic text-orange mb-8 leading-snug max-w-2xl mx-auto">
+        <p className="font-display italic mb-8 leading-snug max-w-2xl mx-auto"
+          style={{ fontSize: "clamp(22px, 2.5vw, 32px)", color: "#F5F5F2" }}>
           {heading}
         </p>
         <CTAButton
@@ -28,7 +29,7 @@ export function FinalCTA({
         >
           {ctaLabel}
         </CTAButton>
-        <p className="mt-4 text-sm text-off-white/60 font-body">
+        <p className="mt-4 font-body" style={{ fontSize: "14px", color: "rgba(245,245,242,0.6)" }}>
           Respondemos em até dois dias úteis.
         </p>
       </div>
