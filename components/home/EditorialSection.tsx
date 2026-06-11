@@ -116,7 +116,7 @@ export function EditorialSection() {
       ref={sectionRef}
       id="antes-pira"
       aria-label="Antes, Pira"
-      style={{ position: "relative", backgroundColor: "#e8e0d6", overflow: "hidden" }}
+      style={{ position: "relative", backgroundColor: "#004757", overflow: "hidden" }}
     >
       {/* Imagem de fundo — metade direita */}
       <div
@@ -144,12 +144,12 @@ export function EditorialSection() {
         <div style={{
           position: "absolute",
           inset: 0,
-          background: "linear-gradient(to right, #e8e0d6 0%, #e8e0d6 8%, rgba(232,224,214,0.85) 24%, rgba(232,224,214,0) 52%)",
+          background: "linear-gradient(to right, #004757 0%, #004757 8%, rgba(0,71,87,0.85) 24%, rgba(0,71,87,0) 52%)",
         }} />
         <div style={{
           position: "absolute",
           inset: 0,
-          background: "linear-gradient(to bottom, #e8e0d6 0%, rgba(232,224,214,0) 8%, rgba(232,224,214,0) 92%, #e8e0d6 100%)",
+          background: "linear-gradient(to bottom, #004757 0%, rgba(0,71,87,0) 8%, rgba(0,71,87,0) 92%, #004757 100%)",
         }} />
       </div>
 
@@ -170,7 +170,7 @@ export function EditorialSection() {
             style={{
               fontSize: "clamp(52px, 7vw, 96px)",
               fontWeight: 700,
-              color: "#05262e",
+              color: "#F5F5F2",
               letterSpacing: "-0.03em",
               lineHeight: 1,
             }}
@@ -185,7 +185,7 @@ export function EditorialSection() {
             className="font-display font-medium leading-tight"
             style={{
               fontSize: "clamp(44px, 5vw, 68px)",
-              color: "#05262e",
+              color: "#F5F5F2",
               letterSpacing: "-0.02em",
             }}
           >
@@ -197,7 +197,7 @@ export function EditorialSection() {
             className="font-body font-light"
             style={{
               fontSize: "19px",
-              color: "#05262e",
+              color: "#e8e0d6",
               marginTop: "24px",
               maxWidth: "400px",
               lineHeight: 1.8,
@@ -221,7 +221,7 @@ export function EditorialSection() {
                 alignItems: "center",
                 gap: "24px",
                 textDecoration: "none",
-                borderTop: "1px solid rgba(5,38,46,0.15)",
+                borderTop: "1px solid rgba(245,245,242,0.15)",
                 padding: "24px 0",
                 paddingLeft: hoveredPost === i ? "12px" : "0",
                 transition: "padding-left 0.35s cubic-bezier(0.16,1,0.3,1)",
@@ -259,7 +259,7 @@ export function EditorialSection() {
                   style={{
                     fontSize: "clamp(18px, 2vw, 24px)",
                     fontWeight: 400,
-                    color: hoveredPost === i ? "#05262e" : "#05262e",
+                    color: hoveredPost === i ? "#F5F5F2" : "#F5F5F2",
                     lineHeight: 1.3,
                     letterSpacing: "-0.02em",
                     transition: "color 0.25s",
@@ -278,7 +278,7 @@ export function EditorialSection() {
                   className="font-body font-light"
                   style={{
                     fontSize: "13px",
-                    color: "#05262e",
+                    color: "#e8e0d6",
                     whiteSpace: "nowrap",
                     flexShrink: 0,
                   }}
@@ -288,7 +288,7 @@ export function EditorialSection() {
               </div>
             </a>
           ))}
-          <div style={{ borderTop: "1px solid rgba(5,38,46,0.15)" }} />
+          <div style={{ borderTop: "1px solid rgba(245,245,242,0.15)" }} />
         </div>
 
         {/* CTAs */}
@@ -304,9 +304,9 @@ export function EditorialSection() {
             className="font-body font-semibold uppercase tracking-widest"
             style={{
               fontSize: "13px",
-              color: "#e8e0d6",
+              color: "#05262e",
               textDecoration: "none",
-              backgroundColor: "#05262e",
+              backgroundColor: "#e8e0d6",
               padding: "14px 28px",
               borderRadius: "2px",
               letterSpacing: "0.08em",
@@ -324,12 +324,12 @@ export function EditorialSection() {
             className="font-body font-light"
             style={{
               fontSize: "13px",
-              color: "#05262e",
+              color: "#e8e0d6",
               textDecoration: "none",
               transition: "color 0.2s",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "#05262e")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "#05262e")}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#F5F5F2")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#e8e0d6")}
           >
             Abrir no Substack ↗
           </a>
