@@ -67,7 +67,7 @@ function FAQItem({
   const isOpen = openIndex === index
 
   return (
-    <div style={{ borderTop: "1px solid rgba(245,245,242,0.12)", ...entryStyle }}>
+    <div style={{ borderTop: "1px solid rgba(5,38,46,0.12)", ...entryStyle }}>
       <button
         onClick={() => setOpenIndex(isOpen ? -1 : index)}
         aria-expanded={isOpen}
@@ -89,7 +89,7 @@ function FAQItem({
           style={{
             fontSize: "clamp(18px, 1.8vw, 24px)",
             fontWeight: isOpen ? 500 : 400,
-            color: "#F5F5F2",
+            color: "#05262e",
             lineHeight: 1.35,
             letterSpacing: "-0.01em",
             transition: "color 0.25s",
@@ -106,7 +106,7 @@ function FAQItem({
             alignItems: "center",
             justifyContent: "center",
             marginTop: "2px",
-            color: isOpen ? "#eb5c2e" : "#e8e0d6",
+            color: isOpen ? "#eb5c2e" : "#05262e",
             fontSize: "22px",
             fontWeight: 300,
             lineHeight: 1,
@@ -128,7 +128,7 @@ function FAQItem({
           className="font-body font-light"
           style={{
             fontSize: "15px",
-            color: "#F5F5F2",
+            color: "#05262e",
             paddingBottom: "24px",
             lineHeight: 1.8,
           }}
@@ -173,7 +173,7 @@ export function FAQSection() {
       ref={sectionRef}
       id="faq"
       aria-label="Perguntas frequentes"
-      style={{ backgroundColor: "#004757" }}
+      style={{ backgroundColor: "#e8e0d6" }}
     >
       <div
         style={{
@@ -186,7 +186,7 @@ export function FAQSection() {
         <div style={{ ...entry("0s"), marginBottom: "80px" }}>
           <p
             className="font-body font-semibold uppercase tracking-widest"
-            style={{ fontSize: "10px", color: "#e8e0d6", marginBottom: "20px" }}
+            style={{ fontSize: "10px", color: "#1A5568", marginBottom: "20px" }}
           >
             PERGUNTAS DE QUEM ESTÁ CHEGANDO AGORA
           </p>
@@ -194,7 +194,7 @@ export function FAQSection() {
             className="font-display font-medium leading-none"
             style={{
               fontSize: "clamp(64px, 8vw, 112px)",
-              color: "#F5F5F2",
+              color: "#05262e",
               letterSpacing: "-0.03em",
             }}
           >
@@ -223,7 +223,7 @@ export function FAQSection() {
                 entryStyle={entry(`${0.1 + i * 0.05}s`)}
               />
             ))}
-            <div style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }} />
+            <div style={{ borderTop: "1px solid rgba(5,38,46,0.12)" }} />
           </div>
 
           {/* Coluna 2 */}
@@ -238,7 +238,7 @@ export function FAQSection() {
                 entryStyle={entry(`${0.1 + (i + 4) * 0.05}s`)}
               />
             ))}
-            <div style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }} />
+            <div style={{ borderTop: "1px solid rgba(5,38,46,0.12)" }} />
           </div>
         </div>
       </div>
