@@ -89,15 +89,8 @@ export function MethodSection() {
           Dois métodos que operam juntos. Um destino: o negócio que cresce sem depender do esforço de quem o lidera.
         </h2>
 
-        {/* Grid 3 colunas */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "48px",
-          alignItems: "start",
-        }}
-          className="method-grid"
-        >
+        {/* Grid 3 colunas — colapsa para 1 coluna no mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-14 md:gap-12 items-start">
 
           {/* INSPIRA */}
           <div style={{ display: "flex", flexDirection: "column", gap: "20px", alignItems: "center", textAlign: "center" }}>
