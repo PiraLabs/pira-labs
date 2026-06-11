@@ -89,30 +89,8 @@ export function SystemSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} style={{ backgroundColor: INK, position: "relative", overflow: "hidden" }}>
-      {/* Artboard KZ — nós sobre Ink, layer de fundo */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          inset: 0,
-          zIndex: 0,
-          pointerEvents: "none",
-        }}
-      >
-        <img
-          src="/brand/Artboard_2.svg"
-          alt=""
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center",
-            opacity: 0.18,
-          }}
-        />
-      </div>
-      <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 pt-20 pb-16" style={{ position: "relative", zIndex: 1 }}>
+    <section ref={sectionRef} style={{ backgroundColor: INK }}>
+      <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 pt-20 pb-16">
 
         {/* Eyebrow */}
         <p className="font-body font-semibold uppercase mb-6"

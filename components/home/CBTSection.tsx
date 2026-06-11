@@ -3,7 +3,7 @@ import Link from 'next/link'
 /* HOME-4 · Creative Business Turnaround · fundo Teal #004757
    Server Component puro — sem animação, sem 'use client'. */
 
-const TEAL  = "#05262e"
+const TEAL  = "#004757"
 const WHITE = "#F5F5F2"
 const EMBER = "#eb5c2e"
 

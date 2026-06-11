@@ -210,7 +210,7 @@ export default function SobrePage() {
             </li>
             <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(245,245,242,0.65)", fontWeight: 300 }}>
               <span style={{ color: "rgba(245,245,242,0.40)", flexShrink: 0, marginTop: "2px" }}>·</span>
-              <span>MIT Universal AI Foundational Modules (em andamento, 2026)</span>
+              <span>Universal AI Foundational Modules (MIT, em andamento, 2026)</span>
             </li>
           </ul>
 
@@ -290,7 +290,7 @@ export default function SobrePage() {
             </li>
             <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(232,224,214,0.65)", fontWeight: 300 }}>
               <span style={{ color: "rgba(232,224,214,0.40)", flexShrink: 0, marginTop: "2px" }}>·</span>
-              <span>MIT Applied AI Certificate Program (em andamento, 2026)</span>
+              <span>Applied AI Certificate Program (MIT, em andamento, 2026)</span>
             </li>
           </ul>
 
