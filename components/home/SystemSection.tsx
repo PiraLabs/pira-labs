@@ -178,40 +178,40 @@ export function SystemSection() {
             </div>
           </div>
 
-          {/* Mobile: três estados empilhados verticalmente */}
-          <div className="flex flex-col gap-10 md:hidden" style={{ marginTop: "48px" }}>
-            {LABELS.map(({ label, desc }, i) => (
-              <div key={i} className="flex items-start gap-4">
-                <div style={{ flexShrink: 0, marginTop: "4px" }}>
-                  {i === 2 ? (
-                    /* RESPIRA — disco Ember sólido */
-                    <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-                      <circle cx={16} cy={16} r={16} fill={EMBER} />
-                    </svg>
-                  ) : i === 0 ? (
-                    /* DISPERSO — anel aberto (apenas stroke, sem fill) */
-                    <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-                      <circle cx={16} cy={16} r={13} fill="none" stroke={SAND} strokeWidth="2" strokeOpacity="0.45" />
-                    </svg>
-                  ) : (
-                    /* EM OPERAÇÃO — duas meias-luas com gap central visível */
-                    <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-                      <path d="M16,3 A13,13 0 0,1 16,29" fill={SAND} />
-                      <path d="M16,29 A13,13 0 0,1 16,3" fill={SAND} fillOpacity="0.55" />
-                    </svg>
-                  )}
-                </div>
-                <div>
-                  <p style={{ color: SAND, fontSize: "13px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "6px", fontFamily: "var(--font-atyp-text), sans-serif" }}>
-                    {label}
-                  </p>
-                  <p style={{ color: "#e8e0d6", fontSize: "15px", lineHeight: 1.7, fontFamily: "var(--font-atyp-text), sans-serif", fontWeight: 300 }}>
-                    {desc}
-                  </p>
-                </div>
+          {/* Mobile: três estados empilhados verticalmente — símbolos canônicos KZ */}
+          {(() => {
+            const MOBILE_SYMBOLS = [
+              "/brand/INSPIRA_Ink_Sand.svg",
+              "/brand/TRANSPIRA_Ink_Sand.svg",
+              "/brand/RESPIRA_Ink_Sand.svg",
+            ]
+            return (
+              <div className="flex flex-col gap-10 md:hidden" style={{ marginTop: "48px" }}>
+                {LABELS.map(({ label, desc }, i) => (
+                  <div key={i} className="flex items-start gap-5">
+                    <div style={{ flexShrink: 0 }}>
+                      <img
+                        src={MOBILE_SYMBOLS[i]}
+                        alt=""
+                        aria-hidden="true"
+                        width={64}
+                        height={i === 0 ? 78 : 83}
+                        style={{ display: "block" }}
+                      />
+                    </div>
+                    <div style={{ paddingTop: "8px" }}>
+                      <p style={{ color: SAND, fontSize: "13px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "6px", fontFamily: "var(--font-atyp-text), sans-serif" }}>
+                        {label}
+                      </p>
+                      <p style={{ color: "#e8e0d6", fontSize: "15px", lineHeight: 1.7, fontFamily: "var(--font-atyp-text), sans-serif", fontWeight: 300 }}>
+                        {desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            )
+          })()}
 
       </div>
     </section>
