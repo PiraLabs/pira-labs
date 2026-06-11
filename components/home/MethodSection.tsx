@@ -20,7 +20,7 @@ function InspiraSVG() {
       <circle cx="25" cy="38" r="11" fill="none" stroke="#F5F5F2" strokeWidth="1.5" />
       <circle cx="95" cy="38" r="11" fill="#F5F5F2" />
       <circle cx="60" cy="80" r="18" fill="#F5F5F2" />
-      <rect x="42" y="77" width="36" height="6" fill="#05262e" clipPath="url(#clip-inspira-method)" />
+      <rect x="42" y="77" width="36" height="6" fill="#004757" clipPath="url(#clip-inspira-method)" />
     </svg>
   )
 }
@@ -40,7 +40,7 @@ function TranspiraSVG() {
       <circle cx="60" cy="22" r="11" fill="none" stroke="#F5F5F2" strokeWidth="1.5" />
       <circle cx="100" cy="45" r="11" fill="#F5F5F2" />
       <circle cx="60" cy="85" r="18" fill="#F5F5F2" />
-      <rect x="42" y="82" width="36" height="6" fill="#05262e" clipPath="url(#clip-transpira-method)" />
+      <rect x="42" y="82" width="36" height="6" fill="#004757" clipPath="url(#clip-transpira-method)" />
     </svg>
   )
 }
@@ -61,7 +61,7 @@ function RespiraSVG() {
 
 export function MethodSection() {
   return (
-    <section id="metodo" style={{ backgroundColor: INK }}>
+    <section id="metodo" style={{ backgroundColor: "#004757" }}>
       <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 pt-20 pb-16">
 
         {/* Eyebrow */}
