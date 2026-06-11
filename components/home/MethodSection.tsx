@@ -92,10 +92,12 @@ export function MethodSection() {
         {/* Grid 3 colunas */}
         <div style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
+          gridTemplateColumns: "repeat(3, 1fr)",
           gap: "48px",
           alignItems: "start",
-        }}>
+        }}
+          className="method-grid"
+        >
 
           {/* INSPIRA */}
           <div style={{ display: "flex", flexDirection: "column", gap: "20px", alignItems: "center", textAlign: "center" }}>
@@ -223,6 +225,14 @@ export function MethodSection() {
 
         </div>
       </div>
+      <style>{`
+        @media (max-width: 767px) {
+          .method-grid {
+            grid-template-columns: 1fr !important;
+            gap: 56px !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }

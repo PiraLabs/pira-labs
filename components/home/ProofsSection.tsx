@@ -182,7 +182,7 @@ export function ProofsSection() {
           </p>
           <h2
             className="font-display font-medium text-white leading-tight"
-            style={{ fontSize: "clamp(44px, 5.5vw, 88px)", whiteSpace: "nowrap" }}
+            style={{ fontSize: "clamp(32px, 5.5vw, 88px)" }}
           >
             Não é teoria de prateleira.
           </h2>
@@ -195,7 +195,7 @@ export function ProofsSection() {
         </div>
 
         {/* Blocos de prova */}
-        <div style={{ maxWidth: "600px" }}>
+        <div style={{ maxWidth: "600px", width: "100%" }}>
           {proofs.map((proof, i) => (
             <ProofMetric
               key={i}

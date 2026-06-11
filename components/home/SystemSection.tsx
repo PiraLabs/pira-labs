@@ -107,7 +107,7 @@ export function SystemSection() {
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            objectPosition: "center",
+            objectPosition: "center top",
             opacity: 0.18,
           }}
         />
@@ -184,17 +184,20 @@ export function SystemSection() {
               <div key={i} className="flex items-start gap-4">
                 <div style={{ flexShrink: 0, marginTop: "4px" }}>
                   {i === 2 ? (
+                    /* RESPIRA — disco Ember sólido */
                     <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
                       <circle cx={16} cy={16} r={16} fill={EMBER} />
                     </svg>
                   ) : i === 0 ? (
+                    /* DISPERSO — anel aberto (apenas stroke, sem fill) */
                     <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-                      <circle cx={16} cy={16} r={16} fill={SAND} opacity={0.4} />
-                      <circle cx={16} cy={16} r={10} fill={INK} />
+                      <circle cx={16} cy={16} r={13} fill="none" stroke={SAND} strokeWidth="2" strokeOpacity="0.45" />
                     </svg>
                   ) : (
+                    /* EM OPERAÇÃO — duas meias-luas com gap central visível */
                     <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-                      <circle cx={16} cy={16} r={16} fill={SAND} opacity={0.7} />
+                      <path d="M16,3 A13,13 0 0,1 16,29" fill={SAND} />
+                      <path d="M16,29 A13,13 0 0,1 16,3" fill={SAND} fillOpacity="0.55" />
                     </svg>
                   )}
                 </div>
