@@ -94,14 +94,14 @@ function MobileAccordionItem({
                     fontSize: '15px',
                     minHeight: '44px',
                     paddingLeft: '20px',
-                    color: childActive ? '#F5F5F2' : 'rgba(245,245,242,0.7)',
+                    color: childActive ? '#F5F5F2' : '#e8e0d6',
                     outlineColor: '#eb5c2e',
                   }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = '#F5F5F2')}
                   onMouseLeave={(e) =>
                     (e.currentTarget.style.color = childActive
                       ? '#F5F5F2'
-                      : 'rgba(245,245,242,0.7)')
+                      : '#e8e0d6')
                   }
                 >
                   {child.label}

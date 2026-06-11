@@ -106,7 +106,7 @@ function FooterColumn({
         {links.map((link) => {
           const baseStyle: React.CSSProperties = {
             fontSize: link.sub ? '12px' : '13px',
-            color: link.sub ? 'rgba(245,245,242,0.35)' : 'rgba(245,245,242,0.6)',
+            color: link.sub ? '#6B8A8F' : '#e8e0d6',
             textDecoration: 'none',
             paddingLeft: link.sub ? '12px' : '0',
             display: 'block',
@@ -114,7 +114,7 @@ function FooterColumn({
             fontWeight: 300,
           }
 
-          const hoverColor = 'rgba(245,245,242,0.9)'
+          const hoverColor = '#F5F5F2'
 
           return (
             <li key={link.href}>
@@ -203,13 +203,13 @@ export function Footer() {
         {/* Links legais */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-6"
-          style={{ fontSize: '12px', color: 'rgba(245,245,242,0.35)' }}
+          style={{ fontSize: '12px', color: '#6B8A8F' }}
         >
           <Link
             href="/politica-privacidade"
             style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }}
-            onMouseEnter={e => (e.currentTarget.style.color = 'rgba(245,245,242,0.7)')}
-            onMouseLeave={e => (e.currentTarget.style.color = 'rgba(245,245,242,0.35)')}
+            onMouseEnter={e => (e.currentTarget.style.color = '#F5F5F2')}
+            onMouseLeave={e => (e.currentTarget.style.color = '#6B8A8F')}
           >
             Política de Privacidade
           </Link>
@@ -217,8 +217,8 @@ export function Footer() {
           <Link
             href="/termos"
             style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }}
-            onMouseEnter={e => (e.currentTarget.style.color = 'rgba(245,245,242,0.7)')}
-            onMouseLeave={e => (e.currentTarget.style.color = 'rgba(245,245,242,0.35)')}
+            onMouseEnter={e => (e.currentTarget.style.color = '#F5F5F2')}
+            onMouseLeave={e => (e.currentTarget.style.color = '#6B8A8F')}
           >
             Termos de Uso
           </Link>
@@ -226,8 +226,8 @@ export function Footer() {
           <Link
             href="/cookies"
             style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }}
-            onMouseEnter={e => (e.currentTarget.style.color = 'rgba(245,245,242,0.7)')}
-            onMouseLeave={e => (e.currentTarget.style.color = 'rgba(245,245,242,0.35)')}
+            onMouseEnter={e => (e.currentTarget.style.color = '#F5F5F2')}
+            onMouseLeave={e => (e.currentTarget.style.color = '#6B8A8F')}
           >
             Aviso de Cookies
           </Link>
@@ -236,13 +236,13 @@ export function Footer() {
         {/* CNPJ e copyright */}
         <p
           className="text-center mb-1"
-          style={{ fontSize: '12px', color: 'rgba(245,245,242,0.25)' }}
+          style={{ fontSize: '12px', color: '#4a6b72' }}
         >
           Pira Labs · CNPJ 46.954.891/0001-16 · São Paulo, Brasil
         </p>
         <p
           className="text-center mb-6"
-          style={{ fontSize: '12px', color: 'rgba(245,245,242,0.25)' }}
+          style={{ fontSize: '12px', color: '#4a6b72' }}
           suppressHydrationWarning
         >
           © {new Date().getFullYear()} Pira Labs. Todos os direitos reservados.

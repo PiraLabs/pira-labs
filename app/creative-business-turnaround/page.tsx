@@ -224,8 +224,8 @@ export default function CreativeBusinessTurnaroundPage() {
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 font-body" style={{ fontSize: "0.75rem", color: "#e8e0d6", listStyle: "none", padding: 0, margin: 0 }}>
               <li><a href="/" style={{ color: "#e8e0d6", textDecoration: "none" }}>Home</a></li>
-              <li style={{ color: "#e8e0d6", opacity: 0.4 }}>·</li>
-              <li style={{ color: "#e8e0d6", opacity: 0.6 }}>Creative Business Turnaround</li>
+              <li style={{ color: "#6B8A8F" }}>·</li>
+              <li style={{ color: "#a8b8bb" }}>Creative Business Turnaround</li>
             </ol>
           </nav>
           <h1 className="font-display mb-6" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: "#F5F5F2" }}>

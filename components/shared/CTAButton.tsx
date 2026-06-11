@@ -35,8 +35,8 @@ export function CTAButton({
       light: { border: "1px solid #05262e", color: "#05262e" },
     },
     tertiary: {
-      dark: { color: "rgba(245,245,242,0.7)" },
-      light: { color: "rgba(5,38,46,0.7)" },
+      dark: { color: "#e8e0d6" },
+      light: { color: "#1A5568" },
     },
   }[variant][theme];
 

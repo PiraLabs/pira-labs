@@ -31,7 +31,7 @@ export function FinalCTA({
         >
           {ctaLabel}
         </CTAButton>
-        <p className="mt-4 font-body" style={{ fontSize: "14px", color: "rgba(245,245,242,0.6)" }}>
+        <p className="mt-4 font-body" style={{ fontSize: "14px", color: "#e8e0d6" }}>
           Respondemos em até dois dias úteis.
         </p>
       </div>
