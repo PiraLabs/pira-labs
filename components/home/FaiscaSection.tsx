@@ -19,29 +19,34 @@ const EMBER    = "#eb5c2e"
 
 interface Product { num: string; name: string; price: string; href: string }
 
-const GROUPS: { label: string; items: Product[] }[] = [
+interface Group { situation: string; items: Product[] }
+
+const GROUPS: Group[] = [
   {
-    label: "ENTRADA RÁPIDA",
+    situation: "Precisa entender o que está acontecendo antes de assumir qualquer compromisso maior.",
     items: [
-      { num: "01", name: "Imersão em IA",       price: "R$7.100",              href: "/faisca/imersa-em-ia" },
-      { num: "02", name: "Oxigênio",             price: "R$3.500 / R$5.300",   href: "/inspira/oxigenio" },
-      { num: "03", name: "pocket do INSPIRA",    price: "R$3.900",             href: "/faisca/pocket" },
+      { num: "02", name: "Oxigênio",          price: "R$3.500 / R$5.300", href: "/inspira/oxigenio" },
+      { num: "03", name: "pocket do INSPIRA", price: "R$3.900",           href: "/faisca/pocket" },
     ],
   },
   {
-    label: "AUTORIDADE E RELACIONAMENTO",
+    situation: "A IA já entrou na operação, mas ainda não entrou no modelo.",
     items: [
-      { num: "04", name: "Palestras",            price: "sob consulta",         href: "/faisca" },
-      { num: "05", name: "Workshops",            price: "a partir de R$12.500", href: "/faisca" },
+      { num: "01", name: "Imersão em IA", price: "R$7.100", href: "/faisca/imersa-em-ia" },
     ],
   },
   {
-    label: "OFERTA SELETIVA",
+    situation: "Quer levar essa leitura para uma liderança, empresa ou evento.",
     items: [
-      { num: "06", name: "C-level as a Service", price: "sob consulta",         href: "/faisca" },
-      { num: "07", name: "Faísca Jurídica",      price: "sob consulta",         href: "/faisca/juridica" },
+      { num: "04", name: "Palestras",   price: "sob consulta",         href: "/chama" },
+      { num: "05", name: "Workshops",   price: "a partir de R$12.500", href: "/chama" },
     ],
   },
+]
+
+const SELECTIVE: Product[] = [
+  { num: "06", name: "C-level as a Service", price: "sob consulta", href: "/faisca" },
+  { num: "07", name: "Faísca Jurídica",      price: "sob consulta", href: "/faisca/juridica" },
 ]
 
 function CategoryDivider({ label }: { label: string }) {
@@ -207,7 +212,7 @@ export function FaiscaSection() {
           color: "#05262e",
           marginBottom: "24px",
         }}>
-          PORTAS DE ENTRADA
+          ONDE VOCÊ ESTÁ AGORA
         </p>
 
         {/* H2 */}
@@ -225,10 +230,25 @@ export function FaiscaSection() {
           <span style={{ color: EMBER, fontWeight: 600 }}>respirar.</span>
         </h2>
 
-        {/* Lista de produtos */}
+        {/* Lista de produtos por situação */}
         {GROUPS.map((group) => (
-          <div key={group.label}>
-            <CategoryDivider label={group.label} />
+          <div key={group.situation}>
+            {/* Separador com linha */}
+            <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "32px 0 12px" }}>
+              <div style={{ flex: 1, height: "1px", backgroundColor: "#1A5568", opacity: 0.3 }} />
+            </div>
+            {/* Situação */}
+            <p style={{
+              fontFamily: "var(--font-atyp-text)",
+              fontWeight: 300,
+              fontSize: "14px",
+              color: "#1A5568",
+              lineHeight: 1.5,
+              marginBottom: "8px",
+              fontStyle: "italic",
+            }}>
+              {group.situation}
+            </p>
             {group.items.map((item) => {
               const idx = globalIdx++
               return (
@@ -242,9 +262,48 @@ export function FaiscaSection() {
           </div>
         ))}
 
+        {/* Ofertas seletivas */}
+        <div style={{
+          marginTop: "48px",
+          paddingTop: "32px",
+          borderTop: "1px solid rgba(5,38,46,0.15)",
+        }}>
+          <p style={{
+            fontFamily: "var(--font-atyp-text)",
+            fontWeight: 600,
+            fontSize: "10px",
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            color: "#1A5568",
+            marginBottom: "4px",
+          }}>
+            OFERTAS SELETIVAS
+          </p>
+          <p style={{
+            fontFamily: "var(--font-atyp-text)",
+            fontWeight: 300,
+            fontSize: "13px",
+            color: "#05262e",
+            marginBottom: "16px",
+            lineHeight: 1.5,
+          }}>
+            Se nenhum dos grupos acima descreve o seu momento, pode ser um destes.
+          </p>
+          {SELECTIVE.map((item) => {
+            const idx = globalIdx++
+            return (
+              <ProductRow
+                key={item.num}
+                item={item}
+                rowRef={(el) => { rowRefs.current[idx] = el }}
+              />
+            )
+          })}
+        </div>
+
         {/* CTA */}
         <div style={{ marginTop: "56px", display: "flex", justifyContent: "center" }}>
-          <CTAButton href="/faisca" label="VER TODAS AS PORTAS DE ENTRADA" theme="light" />
+          <CTAButton href="/faisca" label="VER PORTAS DE ENTRADA →" theme="light" />
         </div>
 
       </div>

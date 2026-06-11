@@ -136,7 +136,7 @@ export function FoundersSection() {
               style={{ fontSize: "14px", color: "#e8e0d6", lineHeight: 1.7, marginBottom: "20px" }}
             >
               Docente em educação executiva.{" "}
-              Universal AI Foundational Modules (MIT).
+              MIT Universal AI Foundational Modules (em andamento, 2026).
             </p>
             <a
               href="/sobre"
@@ -174,7 +174,7 @@ export function FoundersSection() {
               style={{ fontSize: "14px", color: "#e8e0d6", lineHeight: 1.7, marginBottom: "20px" }}
             >
               Bacharelando em Direito (Mackenzie).{" "}
-              Applied AI Certificate Program (MIT).
+              MIT Applied AI Certificate Program (em andamento, 2026).
             </p>
             <a
               href="/sobre"

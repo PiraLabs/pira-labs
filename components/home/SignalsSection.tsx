@@ -142,17 +142,59 @@ export function SignalsSection() {
           className="font-display"
           style={{
             color: INK,
-            fontSize: "36px",
+            fontSize: "clamp(32px, 4vw, 56px)",
             fontWeight: 500,
-            lineHeight: 1.25,
-            marginBottom: "56px",
+            lineHeight: 1.15,
+            marginBottom: "24px",
+            letterSpacing: "-0.02em",
             fontFamily: "var(--font-atyp-display), sans-serif",
           }}
         >
-          Os sinais aparecem{" "}
-          <span style={{ color: "#C4421A" }}>antes</span>{" "}
-          da crise. O problema é que quase ninguém sabe lê-los.
+          O problema não está onde você está olhando.
         </h2>
+
+        {/* Subtítulo */}
+        <p
+          className="font-body"
+          style={{
+            fontSize: "clamp(17px, 1.8vw, 22px)",
+            fontWeight: 300,
+            color: INK,
+            lineHeight: 1.6,
+            marginBottom: "40px",
+            maxWidth: "640px",
+          }}
+        >
+          E quem está dentro paga caro para tentar enxergar isso sozinho.
+        </p>
+
+        {/* Parágrafos */}
+        <div style={{ maxWidth: "680px", marginBottom: "56px" }}>
+          <p
+            className="font-body"
+            style={{
+              fontSize: "16px",
+              fontWeight: 300,
+              color: INK,
+              lineHeight: 1.75,
+              marginBottom: "24px",
+            }}
+          >
+            Empresas de serviços não param de crescer por falta de esforço. Param quando o modelo pelo qual o trabalho é feito, cobrado e entregue deixou de sustentar o crescimento. O sinal aparece nos números, mas a causa está na estrutura. E a estrutura não muda enquanto quem precisa mudá-la está operando dentro dela.
+          </p>
+          <p
+            className="font-body"
+            style={{
+              fontSize: "16px",
+              fontWeight: 300,
+              color: INK,
+              lineHeight: 1.75,
+              marginBottom: 0,
+            }}
+          >
+            Não é incompetência. É impossibilidade estrutural. Operar exige manter tudo funcionando. Redesenhar exige questionar por que funciona assim. Quando a mesma liderança tenta sustentar as duas coisas ao mesmo tempo, uma cobra da outra: ou a operação perde ritmo, ou o modelo permanece intocado.
+          </p>
+        </div>
 
         {/* Lista tipográfica */}
         <ul
@@ -168,18 +210,6 @@ export function SignalsSection() {
         </ul>
 
         {/* Fechamento */}
-        <p
-          style={{
-            fontFamily: "var(--font-atyp-text), sans-serif",
-            fontWeight: 600,
-            fontSize: "16px",
-            color: INK,
-            marginTop: "40px",
-            marginBottom: 0,
-          }}
-        >
-          Se você reconheceu mais de um, continue a leitura.
-        </p>
 
       </div>
     </section>
