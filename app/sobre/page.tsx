@@ -160,7 +160,7 @@ export default function SobrePage() {
         <div className="mx-auto px-6 py-20 md:py-28" style={{ maxWidth: "720px" }}>
 
           {/* Eyebrow */}
-          <p className="font-body mb-12" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(245,245,242,0.45)" }}>
+          <p className="font-body mb-12" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#e8e0d6" }}>
             Fundadora
           </p>
 
@@ -185,37 +185,37 @@ export default function SobrePage() {
           {/* PAPEL */}
           <p className="font-body mb-6" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase" }}>
             <span style={{ color: "#eb5c2e" }}>CEO e cofundadora</span>
-            <span style={{ color: "rgba(245,245,242,0.60)" }}> · Conduz o INSPIRA</span>
+            <a href="/inspira" style={{ color: "#e8e0d6", textDecoration: "none" }}> · Conduz o INSPIRA</a>
           </p>
 
           {/* BIO */}
           <div className="space-y-4 mb-8">
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(245,245,242,0.80)" }}>
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
               Gabriela lê o que está chegando antes de chegar ao Brasil. Uma carreira construída dentro das redes onde tecnologia, inovação e educação se cruzam: Google, Meta, X, Amazon, entre outras. Não como observadora. Como parte ativa dos projetos, programas e conexões que definem para onde o mercado está indo.
             </p>
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(245,245,242,0.80)" }}>
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
               O que ela traz para cada projeto não é repertório aplicado de fora. É a capacidade de nomear o que o mercado local ainda não nomeou. Conduz o INSPIRA.
             </p>
           </div>
 
           {/* CREDENCIAIS */}
           <ul className="mb-6 space-y-2">
-            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(245,245,242,0.65)", fontWeight: 300 }}>
-              <span style={{ color: "rgba(245,245,242,0.40)", flexShrink: 0, marginTop: "2px" }}>·</span>
+            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "#e8e0d6", fontWeight: 300 }}>
+              <span style={{ color: "#e8e0d6", flexShrink: 0, marginTop: "2px" }}>·</span>
               <span>Docente em MBA na FIAP, Instituto Cidades Responsivas, USP e ITA</span>
             </li>
-            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(245,245,242,0.65)", fontWeight: 300 }}>
-              <span style={{ color: "rgba(245,245,242,0.40)", flexShrink: 0, marginTop: "2px" }}>·</span>
+            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "#e8e0d6", fontWeight: 300 }}>
+              <span style={{ color: "#e8e0d6", flexShrink: 0, marginTop: "2px" }}>·</span>
               <span>Mentora na FGV Ventures, German Accelerator, FINEP e Empreendedoras Tech (Sebrae)</span>
             </li>
-            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(245,245,242,0.65)", fontWeight: 300 }}>
-              <span style={{ color: "rgba(245,245,242,0.40)", flexShrink: 0, marginTop: "2px" }}>·</span>
+            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "#e8e0d6", fontWeight: 300 }}>
+              <span style={{ color: "#e8e0d6", flexShrink: 0, marginTop: "2px" }}>·</span>
               <span>MIT Universal AI Foundational Modules (em andamento, 2026)</span>
             </li>
           </ul>
 
           {/* LINKEDIN */}
-          <a href="https://www.linkedin.com/in/gabrielaaguiarvs/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mt-6 mb-12" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(245,245,242,0.60)", textDecoration: "none" }} aria-label="LinkedIn de Gabriela Aguiar">
+          <a href="https://www.linkedin.com/in/gabrielaaguiarvs/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mt-6 mb-12" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }} aria-label="LinkedIn de Gabriela Aguiar">
             LinkedIn
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -238,7 +238,7 @@ export default function SobrePage() {
         <div className="mx-auto px-6 py-20 md:py-28" style={{ maxWidth: "720px" }}>
 
           {/* Eyebrow */}
-          <p className="font-body mb-12" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(232,224,214,0.45)" }}>
+          <p className="font-body mb-12" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#e8e0d6" }}>
             Fundador
           </p>
 
@@ -262,40 +262,40 @@ export default function SobrePage() {
           {/* PAPEL */}
           <p className="font-body mb-6" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase" }}>
             <span style={{ color: "#eb5c2e" }}>COO e cofundador</span>
-            <span style={{ color: "rgba(232,224,214,0.60)" }}> · Conduz o TRANSPIRA</span>
+            <a href="/transpira" style={{ color: "#e8e0d6", textDecoration: "none" }}> · Conduz o TRANSPIRA</a>
           </p>
 
           {/* BIO */}
           <div className="space-y-4 mb-8">
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(232,224,214,0.80)" }}>
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
               Celso entra quando a operação precisa de alguém que já viu isso antes. E já viu muita coisa.
             </p>
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(232,224,214,0.80)" }}>
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
               Vinte e cinco anos dentro de operações complexas: de hubs regionais de multinacionais a empresas de serviços que cresceram, travaram, viraram e, algumas, não voltaram.
             </p>
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(232,224,214,0.80)" }}>
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
               Sabe onde colocar tecnologia e onde colocar gente porque já errou nos dois. Conduz o TRANSPIRA. Entra na operação, trabalha junto com o time, sai quando os resultados acordados são verificados. Não quando o prazo acaba.
             </p>
           </div>
 
           {/* CREDENCIAIS */}
           <ul className="mb-3 space-y-2">
-            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(232,224,214,0.65)", fontWeight: 300 }}>
-              <span style={{ color: "rgba(232,224,214,0.40)", flexShrink: 0, marginTop: "2px" }}>·</span>
+            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "#e8e0d6", fontWeight: 300 }}>
+              <span style={{ color: "#e8e0d6", flexShrink: 0, marginTop: "2px" }}>·</span>
               <span>Bacharelando em Direito (Mackenzie)</span>
             </li>
-            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(232,224,214,0.65)", fontWeight: 300 }}>
-              <span style={{ color: "rgba(232,224,214,0.40)", flexShrink: 0, marginTop: "2px" }}>·</span>
+            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "#e8e0d6", fontWeight: 300 }}>
+              <span style={{ color: "#e8e0d6", flexShrink: 0, marginTop: "2px" }}>·</span>
               <span>MBA Insper · Pós-graduação em Marketing (ESPM) · Publicidade (FAAP)</span>
             </li>
-            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "rgba(232,224,214,0.65)", fontWeight: 300 }}>
-              <span style={{ color: "rgba(232,224,214,0.40)", flexShrink: 0, marginTop: "2px" }}>·</span>
+            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "#e8e0d6", fontWeight: 300 }}>
+              <span style={{ color: "#e8e0d6", flexShrink: 0, marginTop: "2px" }}>·</span>
               <span>MIT Applied AI Certificate Program (em andamento, 2026)</span>
             </li>
           </ul>
 
           {/* LINKEDIN */}
-          <a href="https://www.linkedin.com/in/celsogama/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mt-6 mb-12" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(232,224,214,0.60)", textDecoration: "none" }} aria-label="LinkedIn de Celso Gama">
+          <a href="https://www.linkedin.com/in/celsogama/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mt-6 mb-12" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }} aria-label="LinkedIn de Celso Gama">
             LinkedIn
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -319,26 +319,35 @@ export default function SobrePage() {
           <h2 className="font-display font-semibold mb-10" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)", lineHeight: 1.2, color: "#05262e" }}>
             Como as duas lentes trabalham juntas
           </h2>
-          <div className="max-w-2xl mb-10 overflow-hidden rounded-lg" style={{ maxHeight: "420px" }}>
+          <div className="max-w-3xl mb-10 overflow-hidden" style={{ aspectRatio: "16/9", borderRadius: "2px" }}>
             <Image
               src="/nos2.png"
               alt="Gabriela Aguiar e Celso Gama, cofundadores da Pira Labs"
-              width={800}
-              height={533}
-              className="w-full object-cover object-top"
-              style={{ maxHeight: "420px" }}
+              width={1600}
+              height={900}
+              className="w-full h-full object-cover"
+              style={{ objectPosition: "center center" }}
               priority={false}
             />
           </div>
-          <div className="max-w-3xl space-y-5 mb-8">
+          <div className="max-w-3xl space-y-5 mb-4">
             <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#05262e" }}>
               Gabriela lê contexto, sinais e movimentos de mercado antes de virarem demanda óbvia. Celso lê operação, gargalo e consequência antes de virarem perda visível. Separadas, essas lentes geram diagnóstico parcial.{" "}
               <span style={{ color: "#eb5c2e" }}>Juntas</span>,
               mostram onde o negócio está travado e o que precisa mudar para avançar sem quebrar o que já funciona.
             </p>
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#05262e" }}>
-              Não é divisão de trabalho. É metodologia: o diagnóstico real exige as duas perspectivas ao mesmo tempo. Gabriela nomeia o que está chegando antes de chegar. Celso executa o redesenho dentro da operação, com o time que vai operar depois.
-            </p>
+          </div>
+          <p className="font-display" style={{ fontSize: "clamp(1.25rem, 2.5vw, 1.75rem)", fontWeight: 500, lineHeight: 1.3, color: "#05262e", letterSpacing: "-0.02em", maxWidth: "720px", marginBottom: "48px" }}>
+            Não é divisão de trabalho.{" "}
+            <span style={{ color: "#eb5c2e" }}>É metodologia.</span>
+          </p>
+          <div style={{ display: "flex", alignItems: "center", gap: "32px", flexWrap: "wrap", marginBottom: "0" }}>
+            <a href="/inspira" className="font-body font-semibold uppercase" style={{ fontSize: "13px", letterSpacing: "0.10em", color: "#e8e0d6", backgroundColor: "#05262e", padding: "14px 28px", borderRadius: "2px", textDecoration: "none" }}>
+              VER O INSPIRA →
+            </a>
+            <a href="/transpira" className="font-body font-light" style={{ fontSize: "13px", color: "#05262e", textDecoration: "none" }}>
+              Ver o TRANSPIRA →
+            </a>
           </div>
         </div>
       </section>
@@ -352,14 +361,14 @@ export default function SobrePage() {
             por fora.
           </h2>
           <div className="max-w-3xl space-y-4 mb-12">
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(245,245,242,0.85)" }}>
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
               Quem contrata a Pira Labs não recebe um sócio na venda e um analista na entrega. Recebe Gabriela e Celso do diagnóstico ao encerramento.
             </p>
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "rgba(245,245,242,0.85)" }}>
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
               Boutique é o modelo deliberado. O ecossistema é o que torna isso possível: uma rede de especialistas, parceiros e referências que entra quando o projeto pede, sem virar overhead fixo.
             </p>
           </div>
-          <p className="font-body font-semibold uppercase mb-6" style={{ fontSize: "10px", letterSpacing: "0.18em", color: "rgba(245,245,242,0.45)" }}>
+          <p className="font-body font-semibold uppercase mb-6" style={{ fontSize: "10px", letterSpacing: "0.18em", color: "#e8e0d6" }}>
             PARA IMPRENSA, PALESTRAS E PARCERIAS
           </p>
           <MediaKit className="max-w-2xl" />
@@ -368,7 +377,7 @@ export default function SobrePage() {
 
       {/* SOBRE-8 · CTA final (Ink) */}
       <FinalCTA
-        heading="Existe um próximo nível para o seu negócio. O que está entre você e ele, descobrimos junto."
+        heading="A gente não precisa de mais do que uma conversa para saber se conseguimos ajudar."
         ctaLabel="RESPIRE"
         origin={ORIGINS.SOBRE}
       />
