@@ -178,40 +178,41 @@ export function SystemSection() {
             </div>
           </div>
 
-          {/* Mobile: três estados empilhados verticalmente — símbolos canônicos KZ */}
-          {(() => {
-            const MOBILE_SYMBOLS = [
-              "/brand/INSPIRA_Ink_Sand.svg",
-              "/brand/TRANSPIRA_Ink_Sand.svg",
-              "/brand/RESPIRA_Ink_Sand.svg",
-            ]
-            return (
-              <div className="flex flex-col gap-10 md:hidden" style={{ marginTop: "48px" }}>
-                {LABELS.map(({ label, desc }, i) => (
-                  <div key={i} className="flex items-start gap-5">
-                    <div style={{ flexShrink: 0 }}>
-                      <img
-                        src={MOBILE_SYMBOLS[i]}
-                        alt=""
-                        aria-hidden="true"
-                        width={64}
-                        height={i === 0 ? 78 : 83}
-                        style={{ display: "block" }}
-                      />
-                    </div>
-                    <div style={{ paddingTop: "8px" }}>
-                      <p style={{ color: SAND, fontSize: "13px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "6px", fontFamily: "var(--font-atyp-text), sans-serif" }}>
-                        {label}
-                      </p>
-                      <p style={{ color: "#e8e0d6", fontSize: "15px", lineHeight: 1.7, fontFamily: "var(--font-atyp-text), sans-serif", fontWeight: 300 }}>
-                        {desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+          {/* Mobile: três estados empilhados verticalmente — paths canônicos do desktop isolados por nó */}
+          <div className="flex flex-col gap-10 md:hidden" style={{ marginTop: "48px" }}>
+            {LABELS.map(({ label, desc }, i) => (
+              <div key={i} className="flex items-start gap-5">
+                <div style={{ flexShrink: 0, marginTop: "2px" }}>
+                  {i === 0 && (
+                    /* DISPERSO — anel duplo, opacidade 0.35 como no desktop */
+                    <svg width="40" height="40" viewBox="399 507 98 66" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                      <path fill={SAND} opacity={0.35} d="M480.14,540c0,17.71-14.36,32.07-32.07,32.07s-32.07-14.36-32.07-32.07,14.36-32.07,32.07-32.07,32.07,14.36,32.07,32.07M497.38,540c0-27.23-22.08-49.31-49.31-49.31s-49.31,22.08-49.31,49.31,22.07,49.31,49.31,49.31,49.31-22.07,49.31-49.31"/>
+                    </svg>
+                  )}
+                  {i === 1 && (
+                    /* EM OPERAÇÃO — meias-luas, opacidade 0.35 como no desktop */
+                    <svg width="40" height="40" viewBox="862 491 196 98" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                      <path fill={SAND} opacity={0.35} d="M1008.93,546h-97.86c2.96,24.4,23.73,43.31,48.93,43.31s45.97-18.91,48.93-43.31M911.07,534h97.86c-2.96-24.4-23.73-43.31-48.93-43.31s-45.97,18.91-48.93,43.31"/>
+                    </svg>
+                  )}
+                  {i === 2 && (
+                    /* PLENO — disco Ember sólido */
+                    <svg width="40" height="40" viewBox="1422 491 99 99" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                      <path fill={EMBER} d="M1471.93,490.69c-27.23,0-49.31,22.08-49.31,49.31s22.08,49.31,49.31,49.31,49.31-22.07,49.31-49.31-22.08-49.31-49.31-49.31"/>
+                    </svg>
+                  )}
+                </div>
+                <div style={{ paddingTop: "4px" }}>
+                  <p style={{ color: SAND, fontSize: "13px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "6px", fontFamily: "var(--font-atyp-text), sans-serif" }}>
+                    {label}
+                  </p>
+                  <p style={{ color: "#e8e0d6", fontSize: "15px", lineHeight: 1.7, fontFamily: "var(--font-atyp-text), sans-serif", fontWeight: 300 }}>
+                    {desc}
+                  </p>
+                </div>
               </div>
-            )
-          })()}
+            ))}
+          </div>
 
       </div>
     </section>
