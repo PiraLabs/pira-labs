@@ -25,45 +25,46 @@ const GROUPS: Group[] = [
   {
     situation: "Precisa entender o que está acontecendo antes de assumir qualquer compromisso maior.",
     items: [
-      { num: "02", name: "Oxigênio",          price: "R$3.500 / R$5.300", href: "/inspira/oxigenio" },
-      { num: "03", name: "pocket do INSPIRA", price: "R$3.900",           href: "/faisca/pocket" },
+      { num: "", name: "Oxigênio",          price: "R$3.500 / R$5.300", href: "/inspira/oxigenio" },
+      { num: "", name: "pocket do INSPIRA", price: "R$3.900",           href: "/faisca/pocket" },
     ],
   },
   {
     situation: "A IA já entrou na operação, mas ainda não entrou no modelo.",
     items: [
-      { num: "01", name: "Imersão em IA", price: "R$7.100", href: "/faisca/imersa-em-ia" },
+      { num: "", name: "Imersão em IA", price: "R$7.100", href: "/faisca/imersa-em-ia" },
     ],
   },
   {
     situation: "Quer levar essa leitura para uma liderança, empresa ou evento.",
     items: [
-      { num: "04", name: "Palestras",   price: "sob consulta",         href: "/chama" },
-      { num: "05", name: "Workshops",   price: "a partir de R$12.500", href: "/chama" },
+      { num: "", name: "Palestras",  price: "sob consulta",         href: "/chama" },
+      { num: "", name: "Workshops",  price: "a partir de R$12.500", href: "/chama" },
     ],
   },
 ]
 
 const SELECTIVE: Product[] = [
-  { num: "06", name: "C-level as a Service", price: "sob consulta", href: "/faisca" },
-  { num: "07", name: "Faísca Jurídica",      price: "sob consulta", href: "/faisca/juridica" },
+  { num: "", name: "C-level as a Service", price: "sob consulta", href: "/faisca" },
+  { num: "", name: "Faísca Jurídica",      price: "sob consulta", href: "/faisca/juridica" },
 ]
 
-function CategoryDivider({ label }: { label: string }) {
+function SituationDivider({ label }: { label: string }) {
   return (
     <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "32px 0 16px" }}>
-      <div style={{ flex: 1, height: "1.5px", background: TEAL_MID, opacity: 0.5 }} />
+      <div style={{ flexShrink: 0, width: "32px", height: "1px", background: TEAL_MID }} />
       <span style={{
-        fontSize: "9px", fontWeight: 600, letterSpacing: "0.18em",
-        textTransform: "uppercase", color: TEAL_MID, opacity: 0.8,
-        whiteSpace: "nowrap", fontFamily: "var(--font-atyp-text)",
+        fontSize: "12px", fontWeight: 300, fontStyle: "italic",
+        color: TEAL_MID, fontFamily: "var(--font-atyp-text)",
+        lineHeight: 1.4,
       }}>
         {label}
       </span>
-      <div style={{ flex: 1, height: "1.5px", background: TEAL_MID, opacity: 0.5 }} />
+      <div style={{ flex: 1, height: "1px", background: TEAL_MID, opacity: 0.25 }} />
     </div>
   )
 }
+
 
 function ProductRow({
   item,
@@ -82,7 +83,7 @@ function ProductRow({
       onMouseLeave={() => setHovered(false)}
       style={{
         display: "grid",
-        gridTemplateColumns: "36px 1fr auto 20px",
+        gridTemplateColumns: item.num ? "36px 1fr auto 20px" : "1fr auto 20px",
         gap: "20px",
         padding: "22px 0",
         borderBottom: "1px solid rgba(5,38,46,0.1)",
@@ -102,16 +103,18 @@ function ProductRow({
         pointerEvents: "none",
       }} />
 
-      {/* Número */}
-      <span style={{
-        fontFamily: "var(--font-atyp-text)",
-        fontWeight: 600,
-        fontSize: "10px",
-        color: TEAL_MID,
-        letterSpacing: "0.08em",
-      }}>
-        {item.num}
-      </span>
+      {/* Número — oculto quando vazio */}
+      {item.num && (
+        <span style={{
+          fontFamily: "var(--font-atyp-text)",
+          fontWeight: 600,
+          fontSize: "10px",
+          color: TEAL_MID,
+          letterSpacing: "0.08em",
+        }}>
+          {item.num}
+        </span>
+      )}
 
       {/* Nome */}
       <span style={{
@@ -233,27 +236,12 @@ export function FaiscaSection() {
         {/* Lista de produtos por situação */}
         {GROUPS.map((group) => (
           <div key={group.situation}>
-            {/* Separador com linha */}
-            <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "32px 0 12px" }}>
-              <div style={{ flex: 1, height: "1px", backgroundColor: "#1A5568", opacity: 0.3 }} />
-            </div>
-            {/* Situação */}
-            <p style={{
-              fontFamily: "var(--font-atyp-text)",
-              fontWeight: 300,
-              fontSize: "14px",
-              color: "#1A5568",
-              lineHeight: 1.5,
-              marginBottom: "8px",
-              fontStyle: "italic",
-            }}>
-              {group.situation}
-            </p>
+            <SituationDivider label={group.situation} />
             {group.items.map((item) => {
               const idx = globalIdx++
               return (
                 <ProductRow
-                  key={item.num}
+                  key={item.name}
                   item={item}
                   rowRef={(el) => { rowRefs.current[idx] = el }}
                 />
@@ -293,7 +281,7 @@ export function FaiscaSection() {
             const idx = globalIdx++
             return (
               <ProductRow
-                key={item.num}
+                key={item.name}
                 item={item}
                 rowRef={(el) => { rowRefs.current[idx] = el }}
               />
