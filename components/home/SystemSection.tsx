@@ -184,15 +184,15 @@ export function SystemSection() {
               <div key={i} className="flex items-start gap-5">
                 <div style={{ flexShrink: 0, marginTop: "2px" }}>
                   {i === 0 && (
-                    /* DISPERSO — anel duplo, opacidade 0.35 como no desktop */
-                    <svg width="40" height="40" viewBox="399 507 98 66" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                      <path fill={SAND} opacity={0.35} d="M480.14,540c0,17.71-14.36,32.07-32.07,32.07s-32.07-14.36-32.07-32.07,14.36-32.07,32.07-32.07,32.07,14.36,32.07,32.07M497.38,540c0-27.23-22.08-49.31-49.31-49.31s-49.31,22.08-49.31,49.31,22.07,49.31,49.31,49.31,49.31-22.07,49.31-49.31"/>
+                    /* DISPERSO — anel duplo, opacidade via style no svg pai */
+                    <svg width="40" height="40" viewBox="399 507 98 66" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" style={{ opacity: 0.35 }}>
+                      <path fill={SAND} d="M480.14,540c0,17.71-14.36,32.07-32.07,32.07s-32.07-14.36-32.07-32.07,14.36-32.07,32.07-32.07,32.07,14.36,32.07,32.07M497.38,540c0-27.23-22.08-49.31-49.31-49.31s-49.31,22.08-49.31,49.31,22.07,49.31,49.31,49.31,49.31-22.07,49.31-49.31"/>
                     </svg>
                   )}
                   {i === 1 && (
-                    /* EM OPERAÇÃO — meias-luas, opacidade 0.35 como no desktop */
-                    <svg width="40" height="40" viewBox="862 491 196 98" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                      <path fill={SAND} opacity={0.35} d="M1008.93,546h-97.86c2.96,24.4,23.73,43.31,48.93,43.31s45.97-18.91,48.93-43.31M911.07,534h97.86c-2.96-24.4-23.73-43.31-48.93-43.31s-45.97,18.91-48.93,43.31"/>
+                    /* EM OPERAÇÃO — meias-luas, viewBox quadrado centrado no nó, opacidade via style */
+                    <svg width="40" height="40" viewBox="911 491 98 98" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" style={{ opacity: 0.35 }}>
+                      <path fill={SAND} d="M1008.93,546h-97.86c2.96,24.4,23.73,43.31,48.93,43.31s45.97-18.91,48.93-43.31M911.07,534h97.86c-2.96-24.4-23.73-43.31-48.93-43.31s-45.97,18.91-48.93,43.31"/>
                     </svg>
                   )}
                   {i === 2 && (

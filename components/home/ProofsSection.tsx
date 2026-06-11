@@ -109,7 +109,7 @@ function ProofMetric({
       <div
         role="text"
         className={`font-display font-bold leading-none tracking-tight ${numberClass}`}
-        style={{ fontSize: "clamp(64px, 8vw, 104px)" }}
+        style={{ fontSize: "clamp(36px, 8vw, 104px)" }}
         aria-label={`${proof.fromPrefix}${proof.from}${proof.fromSuffix} para ${proof.toPrefix}${proof.to}${proof.toSuffix}`}
       >
         <span aria-hidden="true">
