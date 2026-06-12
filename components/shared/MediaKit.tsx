@@ -22,7 +22,8 @@ export function MediaKit({
         Para entrevistas, palestras, eventos ou parcerias institucionais, escrever para{" "}
         <a
           href="mailto:inspira@piralabs.com.br"
-          style={{ color: "#F5F5F2", textDecoration: "underline" }}
+          className="!text-white underline"
+          style={{ color: "#F5F5F2" }}
           aria-label="Enviar email para Pira Labs"
         >
           inspira@piralabs.com.br
