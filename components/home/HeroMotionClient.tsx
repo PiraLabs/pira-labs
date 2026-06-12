@@ -39,15 +39,16 @@ export function HeroMotionClient() {
           y: 0,
           duration: 0.35,
           ease: 'power2.out',
+          clearProps: 'y,opacity',
         })
           .to(
             line2Ref.current,
-            { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' },
+            { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out', clearProps: 'y,opacity' },
             '+=0.05'
           )
           .to(
             line3Ref.current,
-            { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' },
+            { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out', clearProps: 'y,opacity' },
             '+=0.05'
           )
           .to({}, { duration: 0.6 })
@@ -56,6 +57,7 @@ export function HeroMotionClient() {
             y: 0,
             duration: 0.45,
             ease: 'power2.out',
+            clearProps: 'y,opacity',
           })
           .to(
             criseRef.current,
