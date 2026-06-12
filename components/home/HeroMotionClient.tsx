@@ -1,6 +1,9 @@
 'use client'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import { CTAButton } from '@/components/shared/CTAButton'
+import { ORIGINS } from '@/lib/constants'
+
 
 export function HeroMotionClient() {
   const line1Ref = useRef<HTMLSpanElement>(null)
@@ -8,6 +11,8 @@ export function HeroMotionClient() {
   const line3Ref = useRef<HTMLSpanElement>(null)
   const line4Ref = useRef<HTMLSpanElement>(null)
   const criseRef = useRef<HTMLSpanElement>(null)
+  const subtitleRef = useRef<HTMLParagraphElement>(null)
+  const ctaRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     let raf1: number, raf2: number
@@ -18,9 +23,11 @@ export function HeroMotionClient() {
         ).matches
 
         if (prefersReducedMotion) {
-          ;[line1Ref, line2Ref, line3Ref, line4Ref].forEach((ref) => {
-            if (ref.current) ref.current.style.opacity = '1'
-          })
+          ;[line1Ref, line2Ref, line3Ref, line4Ref, subtitleRef, ctaRef].forEach(
+            (ref) => {
+              if (ref.current) ref.current.style.opacity = '1'
+            }
+          )
           return
         }
 
@@ -59,6 +66,16 @@ export function HeroMotionClient() {
             duration: 1.4,
             ease: 'power2.out',
           })
+          .to(
+            subtitleRef.current,
+            { opacity: 1, duration: 0.5, ease: 'power1.out' },
+            '-=0.3'
+          )
+          .to(
+            ctaRef.current,
+            { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' },
+            '-=0.1'
+          )
       })
     })
 
@@ -71,48 +88,107 @@ export function HeroMotionClient() {
         line3Ref.current,
         line4Ref.current,
         criseRef.current,
+        subtitleRef.current,
+        ctaRef.current,
       ])
     }
   }, [])
 
   return (
-    <h1
-      className="font-display font-bold"
-      style={{
-        color: '#05262e',
-        fontSize: 'clamp(52px, 6.5vw, 96px)',
-        lineHeight: 1.0,
-        marginBottom: '32px',
-        letterSpacing: '-0.02em',
-      }}
-    >
-      <span
-        ref={line1Ref}
-        style={{ display: 'block', opacity: 0, transform: 'translateY(12px)' }}
+    <>
+      <h1
+        className="font-display font-bold"
+        style={{
+          color: '#05262e',
+          fontSize: 'clamp(52px, 6.5vw, 96px)',
+          lineHeight: 1.0,
+          marginBottom: '32px',
+          letterSpacing: '-0.02em',
+        }}
       >
-        Existe um momento em que
-      </span>
-      <span
-        ref={line2Ref}
-        style={{ display: 'block', opacity: 0, transform: 'translateY(12px)' }}
-      >
-        transformar ainda é
-      </span>
-      <span
-        ref={line3Ref}
-        style={{ display: 'block', opacity: 0, transform: 'translateY(12px)' }}
-      >
-        um processo,
-      </span>
-      <span
-        ref={line4Ref}
-        style={{ display: 'block', opacity: 0, transform: 'translateY(12px)' }}
-      >
-        não uma{' '}
-        <span ref={criseRef} style={{ color: '#05262e' }}>
-          crise.
+        <span
+          ref={line1Ref}
+          style={{ display: 'block', opacity: 0, transform: 'translateY(12px)' }}
+        >
+          Existe um momento em que
         </span>
-      </span>
-    </h1>
+        <span
+          ref={line2Ref}
+          style={{ display: 'block', opacity: 0, transform: 'translateY(12px)' }}
+        >
+          transformar ainda é
+        </span>
+        <span
+          ref={line3Ref}
+          style={{ display: 'block', opacity: 0, transform: 'translateY(12px)' }}
+        >
+          um processo,
+        </span>
+        <span
+          ref={line4Ref}
+          style={{ display: 'block', opacity: 0, transform: 'translateY(12px)' }}
+        >
+          não uma{' '}
+          <span ref={criseRef} style={{ color: '#05262e' }}>
+            crise.
+          </span>
+        </span>
+      </h1>
+      <p
+        ref={subtitleRef}
+        className="font-display font-light"
+        style={{
+          color: '#05262e',
+          fontSize: 'clamp(17px, 1.5vw, 20px)',
+          lineHeight: 1.6,
+          marginBottom: '40px',
+          opacity: 0,
+        }}
+      >
+        A Pira Labs é uma consultoria boutique brasileira de Creative Business
+        Turnaround para empresas de serviços que precisam transformar sinais
+        fracos em decisão, proteger reputação e voltar a crescer com margem,
+        antes que a janela se feche.
+      </p>
+      <div
+        ref={ctaRef}
+        style={{
+          opacity: 0,
+          transform: 'translateY(8px)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          gap: '16px',
+        }}
+      >
+        <CTAButton href="/contato" variant="primary" theme="light" origin={ORIGINS.HOME}>
+          RESPIRE
+        </CTAButton>
+        <a
+          href="/sobre"
+          className="font-body"
+          style={{
+            color: '#05262e',
+            fontSize: '13px',
+            fontWeight: 600,
+            textTransform: 'uppercase',
+            letterSpacing: '0.10em',
+            textDecoration: 'none',
+            borderBottom: '1px solid transparent',
+            transition: 'border-color 0.2s',
+          }}
+          onMouseEnter={(e) =>
+            ((e.currentTarget as HTMLAnchorElement).style.borderBottomColor =
+              '#05262e')
+          }
+          onMouseLeave={(e) =>
+            ((e.currentTarget as HTMLAnchorElement).style.borderBottomColor =
+              'transparent')
+          }
+        >
+          Conhecer quem opera →
+        </a>
+      </div>
+    </>
   )
 }
