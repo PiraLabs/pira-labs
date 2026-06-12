@@ -151,6 +151,7 @@ export function HeroMotionClient() {
           flexDirection: 'column',
           alignItems: 'flex-start',
           gap: '16px',
+          width: 'fit-content',
         }}
       >
         <CTAButton href="/contato" variant="primary" theme="light" origin={ORIGINS.HOME}>
