@@ -2,8 +2,8 @@ export const dynamic = 'force-static'
 
 import type { Metadata } from "next"
 import { Section } from "@/components/shared/Section"
-import { PageHeader } from "@/components/shared/PageHeader"
-import { CTAButton } from "@/components/shared/CTAButton"
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs"
+import { FinalCTA } from "@/components/shared/FinalCTA"
 import { breadcrumbSchema } from "@/lib/schemas/breadcrumb"
 
 const bcSchema = breadcrumbSchema([
@@ -46,21 +46,80 @@ export default function ComoPensamos() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bcSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([
+        {
+          "@context": "https://schema.org",
+          "@type": "DefinedTerm",
+          "@id": "https://piralabs.com.br/como-pensamos#creative-business-turnaround",
+          name: "Creative Business Turnaround",
+          description: "Categoria de atuação que aplica a inteligência do turnaround antes da emergência, quando a empresa ainda tem clientes, caixa e reputação para agir com clareza e com opções. Não é turnaround reativo. É intervenção preventiva com resultado verificado.",
+          inDefinedTermSet: "https://piralabs.com.br/como-pensamos",
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "DefinedTerm",
+          "@id": "https://piralabs.com.br/como-pensamos#janela-de-oportunidade",
+          name: "Janela de oportunidade",
+          description: "O período em que a empresa ainda tem condições de agir com clareza, opções e margem para testar, corrigir e decidir sem operar no limite. Não é metáfora. É descrição de uma condição real que tem início, duração e fim.",
+          inDefinedTermSet: "https://piralabs.com.br/como-pensamos",
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "DefinedTerm",
+          "@id": "https://piralabs.com.br/como-pensamos#antes",
+          name: "Antes",
+          description: "A palavra de posicionamento da Pira. Não como urgência ou alerta. Como localização no tempo. A Pira atua antes: antes da crise, antes da decisão irreversível, antes que a janela de oportunidade se feche.",
+          inDefinedTermSet: "https://piralabs.com.br/como-pensamos",
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "DefinedTerm",
+          "@id": "https://piralabs.com.br/como-pensamos#julgamento-humano",
+          name: "Julgamento humano",
+          description: "A capacidade de ler contexto, antecipar consequências, integrar informações de naturezas diferentes e decidir com critério calibrado por experiência real. Não é intuição. É competência construída. O diferencial que nenhuma ferramenta substitui.",
+          inDefinedTermSet: "https://piralabs.com.br/como-pensamos",
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "DefinedTerm",
+          "@id": "https://piralabs.com.br/como-pensamos#sistema-pleno",
+          name: "Sistema pleno",
+          description: "O estado em que pessoas, processos, decisões, tecnologias e entregas operam juntos. Quando o sistema não opera em conjunto, a empresa trabalha mais, decide pior e perde margem em silêncio.",
+          inDefinedTermSet: "https://piralabs.com.br/como-pensamos",
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "DefinedTerm",
+          "@id": "https://piralabs.com.br/como-pensamos#respira",
+          name: "RESPIRA",
+          description: "O estado de destino do Creative Business Turnaround. Um negócio que voltou a crescer com margem, que toma decisões antes que virem urgência e que opera sem depender do esforço constante de quem o lidera. Não é produto contratável. É o que acontece quando INSPIRA e TRANSPIRA cumpriram o que prometeram.",
+          inDefinedTermSet: "https://piralabs.com.br/como-pensamos",
+        },
+      ]) }} />
 
-      {/* Header */}
+      {/* Header — tamanho H1 reduzido para página editorial */}
       <div className="bg-ink">
-        <PageHeader
-          breadcrumbs={breadcrumbs}
-          h1="Como pensamos."
-          subtitle="As teses, referências e vocabulário que orientam cada diagnóstico e cada execução."
-        />
+        <div className="pt-20 md:pt-24 mb-6 md:mb-10">
+          <div className="container-site">
+            <Breadcrumbs items={breadcrumbs} />
+            <h1 className="font-display font-semibold leading-none mb-4" style={{ color: "#F5F5F2", fontSize: "clamp(32px, 4.5vw, 56px)", letterSpacing: "-0.02em" }}>
+              Como pensamos.
+            </h1>
+            <p className="font-body leading-relaxed max-w-2xl" style={{ color: "#e8e0d6", fontSize: "clamp(1rem, 1.5vw, 1.2rem)", lineHeight: 1.6 }}>
+              As teses, referências e vocabulário que orientam cada diagnóstico e cada execução.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Abertura */}
-      <Section variant="default" paddingY="lg">
+      <Section variant="default" paddingY="sm">
         <div className="max-w-3xl space-y-6">
+          <p className="font-body" style={{ color: "#e8e0d6", fontSize: "13px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "8px" }}>
+            A Pira Labs opera a partir de cinco teses sobre como empresas de serviços perdem e recuperam margem.
+          </p>
           <p className="font-body leading-relaxed" style={{ color: "#F5F5F2" }}>
-            A maioria das intervenções chega tarde. O problema já virou crise, as opções já diminuíram, o custo de cada decisão já subiu. E o que resta é conter o dano.
+            A maioria das intervenções chega <span style={{ color: "#eb5c2e" }}>tarde</span>. O problema já virou crise, as opções já diminuíram, o custo de cada decisão já subiu. E o que resta é conter o dano.
           </p>
           <p className="font-body leading-relaxed" style={{ color: "#F5F5F2" }}>
             Não é que as empresas não vissem os sinais. É que havia sempre algo mais urgente do que parar para lê-los. O modelo funcionava. A receita entrava. A operação girava.
@@ -81,7 +140,7 @@ export default function ComoPensamos() {
               O mesmo trabalho feito antes produz resultado que o mesmo trabalho feito tarde não consegue mais produzir.
             </p>
             <p className="font-body" style={{ color: "#e8e0d6", fontSize: "15px", fontWeight: 300 }}>
-              Não como princípio abstrato. Como constatação de quem esteve dentro.
+              Não como princípio abstrato. Como constatação de quem trabalhou dentro de operações reais e viu a janela de oportunidade se fechar.
             </p>
           </div>
         </div>
@@ -123,7 +182,9 @@ export default function ComoPensamos() {
               num: "04",
               title: "Governança não é controle posterior. É capacidade competitiva.",
               body: [
-                <>Quando modelos, dados e automações passam a influenciar decisão, risco e performance de negócio, <strong>governança deixa de ser função de compliance e vira estrutura de operação.</strong> O World Economic Forum identificou que os riscos adversos de IA subiram da 30ª para a 5ª posição no ranking de riscos globais no horizonte de dez anos. IA, infraestrutura e governança deixaram de ser agendas separadas e viraram uma equação única de risco e resultado. (The Global Risks Report 2026, WEF)</>,
+                <>Governança de IA para empresas de serviços é a definição de quem decide o que a ferramenta faz, quem revisa o que ela produziu e quem responde quando erra. Não é controle posterior. É capacidade competitiva.</>,
+                <>Empresas de serviços que dependem de julgamento humano para entregar valor estão no centro desse risco, não as grandes corporações com departamentos de compliance. <strong>68,3% das empresas não possuem núcleo dedicado à governança de IA.</strong> (Fundação Dom Cabral, 2026.) No Global Risks Report 2026, o WEF registra que os riscos adversos de IA ocupam a 30ª posição no horizonte de dois anos e a 5ª no horizonte de dez.</>,
+                <><strong>Quando modelos e automações passam a influenciar decisão, escopo e entrega, governança deixa de ser função de compliance e vira estrutura de operação.</strong> Quem define o que a IA faz, quem revisa o que ela produziu e quem responde quando erra não é questão técnica. É questão de sobrevivência comercial.</>,
               ],
             },
             {
@@ -145,7 +206,7 @@ export default function ComoPensamos() {
                 fontSize: "clamp(72px, 9vw, 108px)",
                 lineHeight: 1,
                 color: "#e8e0d6",
-                opacity: 0.08,
+                opacity: 0.16,
                 userSelect: "none",
                 pointerEvents: "none",
               }}>
@@ -154,13 +215,13 @@ export default function ComoPensamos() {
 
               {/* Título — Tese 3 especial */}
               {i === 2 ? (
-                <h2 style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 500, fontSize: "clamp(22px, 3vw, 32px)", lineHeight: 1.25, color: "#F5F5F2", marginBottom: "24px" }}>
+                <h3 style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 500, fontSize: "clamp(22px, 3vw, 32px)", lineHeight: 1.25, color: "#F5F5F2", marginBottom: "24px" }}>
                   IA não corrige bagunça. Escala <span style={{ color: "#eb5c2e" }}>bagunça</span>.
-                </h2>
+                </h3>
               ) : (
-                <h2 style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 500, fontSize: "clamp(22px, 3vw, 32px)", lineHeight: 1.25, color: "#F5F5F2", marginBottom: "24px" }}>
+                <h3 style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 500, fontSize: "clamp(22px, 3vw, 32px)", lineHeight: 1.25, color: "#F5F5F2", marginBottom: "24px" }}>
                   {tese.title}
-                </h2>
+                </h3>
               )}
 
               {/* Corpo */}
@@ -232,52 +293,44 @@ export default function ComoPensamos() {
         </div>
       </Section>
 
-      {/* Vocabulário */}
-      <Section variant="highlighted" paddingY="lg">
-        <div className="max-w-3xl space-y-10">
-          <p className="font-body font-semibold uppercase" style={{ color: "#e8e0d6", fontSize: "10px", letterSpacing: "0.18em" }}>
-            VOCABULÁRIO
-          </p>
-          <p className="font-body leading-relaxed" style={{ color: "#F5F5F2" }}>
-            A Pira usa algumas palavras de forma específica. O significado que damos a elas não é o uso de mercado.
-          </p>
-          <div className="space-y-8">
-            {[
-              { term: "Creative Business Turnaround", def: "Categoria de atuação que aplica a inteligência do turnaround antes da emergência, quando a empresa ainda tem clientes, caixa e reputação para agir com clareza e com opções. Não é turnaround reativo. É intervenção preventiva com resultado verificado.", tier: 1 },
-              { term: "Antes", def: "A palavra de posicionamento da Pira. Não como urgência ou alerta. Como localização no tempo. A Pira atua antes: antes da crise, antes da decisão irreversível, antes que a janela de oportunidade se feche.", tier: 2 },
-              { term: "Janela de oportunidade", def: "O período em que a empresa ainda tem condições de agir com clareza, opções e margem para testar, corrigir e decidir sem operar no limite. Não é metáfora. É descrição de uma condição real que tem início, duração e fim.", tier: 1 },
-              { term: "Julgamento humano", def: "A capacidade de ler contexto, antecipar consequências, integrar informações de naturezas diferentes e decidir com critério calibrado por experiência real. Não é intuição. É competência construída. O diferencial que nenhuma ferramenta substitui.", tier: 2 },
-              { term: "Sistema pleno", def: "O estado em que pessoas, processos, decisões, tecnologias e entregas operam juntos. Quando o sistema não opera em conjunto, a empresa trabalha mais, decide pior e perde margem em silêncio.", tier: 2 },
-              { term: "RESPIRA", def: "O estado de destino do Creative Business Turnaround. Um negócio que voltou a crescer com margem, que toma decisões antes que virem urgência e que opera sem depender do esforço constante de quem o lidera. Não é produto contratável. É o que acontece quando INSPIRA e TRANSPIRA cumpriram o que prometeram.", tier: 1 },
-            ].map(({ term, def, tier }, i) => (
-              <div key={i} style={{ borderTop: "1px solid rgba(232,224,214,0.10)", paddingTop: "24px", paddingBottom: "8px" }}>
-                {tier === 1 ? (
-                  <p style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 400, fontSize: "20px", color: "#F5F5F2", marginBottom: "8px" }}>{term}</p>
-                ) : (
-                  <p style={{ fontFamily: "var(--font-atyp-text), sans-serif", fontWeight: 600, fontSize: "15px", color: "#F5F5F2", marginBottom: "6px" }}>{term}</p>
-                )}
-                <p className="font-body leading-relaxed" style={{ color: "#e8e0d6", fontSize: "14px", fontWeight: 300 }}>{def}</p>
-              </div>
-            ))}
+      {/* Vocabulário — fundo Sand */}
+      <section style={{ backgroundColor: "#e8e0d6" }} className="py-16 md:py-24">
+        <div className="container-site">
+          <div className="max-w-3xl space-y-10">
+            <p className="font-body font-semibold uppercase" style={{ color: "#05262e", fontSize: "10px", letterSpacing: "0.18em", marginBottom: "16px" }}>
+              VOCABULÁRIO
+            </p>
+            <p className="font-body leading-relaxed" style={{ color: "#05262e", fontSize: "16px" }}>
+              A Pira usa algumas palavras de forma específica. O significado que damos a elas não é o uso de mercado.
+            </p>
+            <div className="space-y-8">
+              {[
+                { term: "Creative Business Turnaround", def: "Categoria de atuação que aplica a inteligência do turnaround antes da emergência, quando a empresa ainda tem clientes, caixa e reputação para agir com clareza e com opções. Não é turnaround reativo. É intervenção preventiva com resultado verificado.", tier: 1 },
+                { term: "Antes", def: "A palavra de posicionamento da Pira. Não como urgência ou alerta. Como localização no tempo. A Pira atua antes: antes da crise, antes da decisão irreversível, antes que a janela de oportunidade se feche.", tier: 2 },
+                { term: "Janela de oportunidade", def: "O período em que a empresa ainda tem condições de agir com clareza, opções e margem para testar, corrigir e decidir sem operar no limite. Não é metáfora. É descrição de uma condição real que tem início, duração e fim.", tier: 1 },
+                { term: "Julgamento humano", def: "A capacidade de ler contexto, antecipar consequências, integrar informações de naturezas diferentes e decidir com critério calibrado por experiência real. Não é intuição. É competência construída. O diferencial que nenhuma ferramenta substitui.", tier: 2 },
+                { term: "Sistema pleno", def: "O estado em que pessoas, processos, decisões, tecnologias e entregas operam juntos. Quando o sistema não opera em conjunto, a empresa trabalha mais, decide pior e perde margem em silêncio.", tier: 2 },
+                { term: "RESPIRA", def: "O estado de destino do Creative Business Turnaround. Um negócio que voltou a crescer com margem, que toma decisões antes que virem urgência e que opera sem depender do esforço constante de quem o lidera. Não é produto contratável. É o que acontece quando INSPIRA e TRANSPIRA cumpriram o que prometeram.", tier: 1 },
+              ].map(({ term, def, tier }, i) => (
+                <div key={i} style={{ borderTop: "1px solid rgba(5,38,46,0.12)", paddingTop: "24px", paddingBottom: "8px" }}>
+                  {tier === 1 ? (
+                    <p style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 400, fontSize: "20px", color: "#05262e", marginBottom: "8px" }}>{term}</p>
+                  ) : (
+                    <p style={{ fontFamily: "var(--font-atyp-text), sans-serif", fontWeight: 600, fontSize: "15px", color: "#05262e", marginBottom: "6px" }}>{term}</p>
+                  )}
+                  <p className="font-body leading-relaxed" style={{ color: "rgba(5,38,46,0.65)", fontSize: "14px", fontWeight: 300 }}>{def}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </Section>
+      </section>
 
-      {/* CTA */}
-      <Section variant="default" paddingY="lg">
-        <div className="max-w-2xl space-y-6">
-          <p style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 300, fontSize: "clamp(26px, 3.5vw, 42px)", lineHeight: 1.35, color: "#F5F5F2" }}>
-            Se alguma dessas teses pareceu familiar, é porque provavelmente vale uma conversa.
-          </p>
-          <CTAButton
-            href="/contato"
-            origin="como_pensamos"
-            variant="primary"
-          >
-            RESPIRE
-          </CTAButton>
-        </div>
-      </Section>
+      <FinalCTA
+        heading="Se alguma dessas teses pareceu familiar, é porque provavelmente vale uma conversa."
+        origin="como_pensamos"
+        ctaLabel="RESPIRE"
+      />
     </>
   )
 }
