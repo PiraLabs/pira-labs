@@ -338,7 +338,8 @@ export default function SobrePage() {
             </p>
           </div>
           <p className="font-display" style={{ fontSize: "clamp(1.25rem, 2.5vw, 1.75rem)", fontWeight: 500, lineHeight: 1.3, color: "#05262e", letterSpacing: "-0.02em", maxWidth: "720px", marginBottom: "48px" }}>
-            Não é divisão de trabalho. <span style={{ color: "#eb5c2e" }}>É metodologia.</span>
+            Não é divisão de trabalho.<br />
+            <span style={{ color: "#eb5c2e" }}>É metodologia.</span>
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: "32px", flexWrap: "wrap", marginBottom: "0" }}>
             <a href="/inspira" className="font-body font-semibold uppercase" style={{ fontSize: "13px", letterSpacing: "0.10em", color: "#e8e0d6", backgroundColor: "#05262e", padding: "14px 28px", borderRadius: "2px", textDecoration: "none" }}>
