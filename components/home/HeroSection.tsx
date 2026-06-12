@@ -30,12 +30,13 @@ export function HeroSection() {
           </p>
           <HeroMotionClient />
           <p
-            className="font-display font-light"
+            className="font-display"
             style={{
               color: '#05262e',
               fontSize: 'clamp(17px, 1.5vw, 20px)',
               lineHeight: 1.6,
               marginBottom: '40px',
+              fontWeight: 400,
             }}
           >
             A Pira Labs é uma consultoria boutique brasileira de Creative Business
