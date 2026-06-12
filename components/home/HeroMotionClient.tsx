@@ -4,7 +4,6 @@ import gsap from 'gsap'
 import { CTAButton } from '@/components/shared/CTAButton'
 import { ORIGINS } from '@/lib/constants'
 
-
 export function HeroMotionClient() {
   const line1Ref = useRef<HTMLSpanElement>(null)
   const line2Ref = useRef<HTMLSpanElement>(null)
@@ -18,18 +17,26 @@ export function HeroMotionClient() {
     let raf1: number, raf2: number
     raf1 = requestAnimationFrame(() => {
       raf2 = requestAnimationFrame(() => {
+        const isMobile = window.matchMedia('(max-width: 768px)').matches
         const prefersReducedMotion = window.matchMedia(
           '(prefers-reduced-motion: reduce)'
         ).matches
 
-        if (prefersReducedMotion) {
-          ;[line1Ref, line2Ref, line3Ref, line4Ref, subtitleRef, ctaRef].forEach(
-            (ref) => {
-              if (ref.current) ref.current.style.opacity = '1'
-            }
-          )
+        if (isMobile || prefersReducedMotion) {
           return
         }
+
+        gsap.set(
+          [
+            line1Ref.current,
+            line2Ref.current,
+            line3Ref.current,
+            line4Ref.current,
+          ],
+          { opacity: 0, y: 12 }
+        )
+        gsap.set(subtitleRef.current, { opacity: 0 })
+        gsap.set(ctaRef.current, { opacity: 0, y: 8 })
 
         const tl = gsap.timeline()
 
@@ -106,28 +113,16 @@ export function HeroMotionClient() {
           letterSpacing: '-0.02em',
         }}
       >
-        <span
-          ref={line1Ref}
-          style={{ display: 'block', opacity: 0, transform: 'translateY(12px)' }}
-        >
+        <span ref={line1Ref} style={{ display: 'block' }}>
           Existe um momento em que
         </span>
-        <span
-          ref={line2Ref}
-          style={{ display: 'block', opacity: 0, transform: 'translateY(12px)' }}
-        >
+        <span ref={line2Ref} style={{ display: 'block' }}>
           transformar ainda é
         </span>
-        <span
-          ref={line3Ref}
-          style={{ display: 'block', opacity: 0, transform: 'translateY(12px)' }}
-        >
+        <span ref={line3Ref} style={{ display: 'block' }}>
           um processo,
         </span>
-        <span
-          ref={line4Ref}
-          style={{ display: 'block', opacity: 0, transform: 'translateY(12px)' }}
-        >
+        <span ref={line4Ref} style={{ display: 'block' }}>
           não uma{' '}
           <span ref={criseRef} style={{ color: '#05262e' }}>
             crise.
@@ -142,7 +137,6 @@ export function HeroMotionClient() {
           fontSize: 'clamp(17px, 1.5vw, 20px)',
           lineHeight: 1.6,
           marginBottom: '40px',
-          opacity: 0,
         }}
       >
         A Pira Labs é uma consultoria boutique brasileira de Creative Business
@@ -153,8 +147,6 @@ export function HeroMotionClient() {
       <div
         ref={ctaRef}
         style={{
-          opacity: 0,
-          transform: 'translateY(8px)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'flex-start',

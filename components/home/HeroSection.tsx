@@ -1,9 +1,4 @@
-import dynamic from 'next/dynamic'
-
-const HeroMotionClient = dynamic(
-  () => import('./HeroMotionClient').then((mod) => mod.HeroMotionClient),
-  { ssr: false }
-)
+import { HeroMotionClient } from './HeroMotionClient'
 
 export function HeroSection() {
   return (
