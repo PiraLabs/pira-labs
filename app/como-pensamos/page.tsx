@@ -108,6 +108,17 @@ export default function ComoPensamos() {
             <p className="font-body leading-relaxed max-w-2xl" style={{ color: "#e8e0d6", fontSize: "clamp(1rem, 1.5vw, 1.2rem)", lineHeight: 1.6 }}>
               As teses, referências e vocabulário que orientam cada diagnóstico e cada execução.
             </p>
+            <p className="font-display" style={{
+              fontFamily: "var(--font-atyp-display), sans-serif",
+              fontWeight: 300,
+              fontSize: "clamp(20px, 2.5vw, 32px)",
+              lineHeight: 1.35,
+              color: "#e8e0d6",
+              maxWidth: "640px",
+              marginTop: "24px",
+            }}>
+              A Pira Labs opera a partir de cinco teses sobre como empresas de serviços perdem e recuperam margem.
+            </p>
           </div>
         </div>
       </div>
@@ -115,9 +126,6 @@ export default function ComoPensamos() {
       {/* Abertura */}
       <Section variant="default" paddingY="sm">
         <div className="max-w-3xl space-y-6">
-          <p className="font-body" style={{ color: "#e8e0d6", fontSize: "13px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "8px" }}>
-            A Pira Labs opera a partir de cinco teses sobre como empresas de serviços perdem e recuperam margem.
-          </p>
           <p className="font-body leading-relaxed" style={{ color: "#F5F5F2" }}>
             A maioria das intervenções chega <span style={{ color: "#eb5c2e" }}>tarde</span>. O problema já virou crise, as opções já diminuíram, o custo de cada decisão já subiu. E o que resta é conter o dano.
           </p>
@@ -285,8 +293,8 @@ export default function ComoPensamos() {
               },
             ].map(({ title, body }, i) => (
               <div key={i} className="space-y-2 pl-6" style={{ borderLeft: "2px solid rgba(232,224,214,0.20)" }}>
-                <p className="text-off-white font-body font-semibold leading-snug" style={{ fontSize: "14px" }}>{title}</p>
-                <p className="font-body leading-relaxed" style={{ color: "#e8e0d6", fontSize: "14px" }}>{body}</p>
+                <p className="font-body font-semibold leading-snug" style={{ fontSize: "16px", color: "#F5F5F2" }}>{title}</p>
+                <p className="font-body leading-relaxed" style={{ color: "#e8e0d6", fontSize: "16px" }}>{body}</p>
               </div>
             ))}
           </div>
@@ -300,7 +308,7 @@ export default function ComoPensamos() {
             <p className="font-body font-semibold uppercase" style={{ color: "#05262e", fontSize: "10px", letterSpacing: "0.18em", marginBottom: "16px" }}>
               VOCABULÁRIO
             </p>
-            <p className="font-body leading-relaxed" style={{ color: "#05262e", fontSize: "16px" }}>
+            <p className="font-body leading-relaxed" style={{ color: "#05262e", fontSize: "17px" }}>
               A Pira usa algumas palavras de forma específica. O significado que damos a elas não é o uso de mercado.
             </p>
             <div className="space-y-8">
@@ -314,11 +322,11 @@ export default function ComoPensamos() {
               ].map(({ term, def, tier }, i) => (
                 <div key={i} style={{ borderTop: "1px solid rgba(5,38,46,0.12)", paddingTop: "24px", paddingBottom: "8px" }}>
                   {tier === 1 ? (
-                    <p style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 400, fontSize: "20px", color: "#05262e", marginBottom: "8px" }}>{term}</p>
+                    <p style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 400, fontSize: "22px", color: "#05262e", marginBottom: "8px" }}>{term}</p>
                   ) : (
-                    <p style={{ fontFamily: "var(--font-atyp-text), sans-serif", fontWeight: 600, fontSize: "15px", color: "#05262e", marginBottom: "6px" }}>{term}</p>
+                    <p style={{ fontFamily: "var(--font-atyp-text), sans-serif", fontWeight: 600, fontSize: "17px", color: "#05262e", marginBottom: "6px" }}>{term}</p>
                   )}
-                  <p className="font-body leading-relaxed" style={{ color: "rgba(5,38,46,0.65)", fontSize: "14px", fontWeight: 300 }}>{def}</p>
+                  <p className="font-body leading-relaxed" style={{ color: "rgba(5,38,46,0.65)", fontSize: "16px", fontWeight: 300 }}>{def}</p>
                 </div>
               ))}
             </div>
