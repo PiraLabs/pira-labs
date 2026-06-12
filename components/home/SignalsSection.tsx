@@ -1,14 +1,5 @@
-"use client"
-
-import { useState } from "react"
-
-/* HOME-3 · Sinais · fundo Sand #e8e0d6
-   Lista tipográfica com 6 sinais. Hover desktop / tap mobile expande detalhe.
-   Regra Schindler: única ocorrência Ember é a palavra "antes" no H2. */
-
 const INK   = "#05262e"
 const SAND  = "#e8e0d6"
-const EMBER = "#eb5c2e"
 
 const SIGNALS = [
   {
@@ -37,86 +28,6 @@ const SIGNALS = [
   },
 ]
 
-function SignalItem({
-  index,
-  main,
-  detail,
-}: {
-  index:  number
-  main:   string
-  detail: string
-}) {
-  const [expanded, setExpanded] = useState(false)
-  const num = String(index + 1).padStart(2, "0")
-
-  return (
-    <li
-      onMouseEnter={() => setExpanded(true)}
-      onMouseLeave={() => setExpanded(false)}
-      onClick={() => setExpanded((v) => !v)}
-      style={{
-        borderTop: "1px solid rgba(5,38,46,0.15)",
-        padding: "20px 0",
-        cursor: "default",
-        listStyle: "none",
-      }}
-    >
-      {/* Número + texto principal */}
-      <div style={{ display: "flex", gap: "16px", alignItems: "baseline" }}>
-        <span
-          style={{
-            fontFamily: "var(--font-atyp-text)",
-            fontWeight: 600,
-            fontSize: "15px",
-            color: "#1A5568",
-            minWidth: "24px",
-            flexShrink: 0,
-          }}
-        >
-          {num}
-        </span>
-        <p
-          style={{
-            fontFamily: "var(--font-atyp-display), sans-serif",
-            fontWeight: 400,
-            fontSize: "clamp(18px, 1.8vw, 24px)",
-            color: INK,
-            lineHeight: 1.3,
-            margin: 0,
-          }}
-        >
-          {main}
-        </p>
-      </div>
-
-      {/* Detalhe — colapsado por padrão, expande no hover/tap */}
-      <div
-        style={{
-          maxHeight: expanded ? "80px" : "0",
-          opacity: expanded ? 1 : 0,
-          overflow: "hidden",
-          transition: "max-height 0.3s ease, opacity 0.3s ease",
-          paddingLeft: "40px",
-        }}
-      >
-        <p
-          style={{
-            fontFamily: "var(--font-atyp-text), sans-serif",
-            fontWeight: 300,
-            fontSize: "16px",
-            color: "#05262e",
-            lineHeight: 1.6,
-            marginTop: "8px",
-            marginBottom: 0,
-          }}
-        >
-          {detail}
-        </p>
-      </div>
-    </li>
-  )
-}
-
 export function SignalsSection() {
   return (
     <section id="sinais" style={{ backgroundColor: SAND }}>
@@ -130,7 +41,7 @@ export function SignalsSection() {
             fontSize: "10px",
             letterSpacing: "0.18em",
             textTransform: "uppercase",
-            color: "#05262e",
+            color: INK,
             marginBottom: "24px",
           }}
         >
@@ -196,7 +107,7 @@ export function SignalsSection() {
           </p>
         </div>
 
-        {/* Lista tipográfica */}
+        {/* Lista tipográfica — details/summary: zero JS, server component, acessível */}
         <ul
           style={{
             margin: 0,
@@ -204,12 +115,74 @@ export function SignalsSection() {
             borderBottom: "1px solid rgba(5,38,46,0.15)",
           }}
         >
-          {SIGNALS.map((s, i) => (
-            <SignalItem key={i} index={i} main={s.main} detail={s.detail} />
-          ))}
+          {SIGNALS.map((s, i) => {
+            const num = String(i + 1).padStart(2, "0")
+            return (
+              <li
+                key={i}
+                style={{
+                  borderTop: "1px solid rgba(5,38,46,0.15)",
+                  listStyle: "none",
+                }}
+              >
+                <details
+                  style={{ padding: "20px 0", cursor: "default" }}
+                >
+                  <summary
+                    style={{
+                      display: "flex",
+                      gap: "16px",
+                      alignItems: "baseline",
+                      listStyle: "none",
+                      WebkitAppearance: "none",
+                      MozAppearance: "none",
+                      appearance: "none",
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontFamily: "var(--font-atyp-text)",
+                        fontWeight: 600,
+                        fontSize: "15px",
+                        color: "#1A5568",
+                        minWidth: "24px",
+                        flexShrink: 0,
+                      }}
+                    >
+                      {num}
+                    </span>
+                    <p
+                      style={{
+                        fontFamily: "var(--font-atyp-display), sans-serif",
+                        fontWeight: 400,
+                        fontSize: "clamp(18px, 1.8vw, 24px)",
+                        color: INK,
+                        lineHeight: 1.3,
+                        margin: 0,
+                      }}
+                    >
+                      {s.main}
+                    </p>
+                  </summary>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-atyp-text), sans-serif",
+                      fontWeight: 300,
+                      fontSize: "16px",
+                      color: INK,
+                      lineHeight: 1.6,
+                      marginTop: "8px",
+                      marginBottom: 0,
+                      paddingLeft: "40px",
+                    }}
+                  >
+                    {s.detail}
+                  </p>
+                </details>
+              </li>
+            )
+          })}
         </ul>
-
-        {/* Fechamento */}
 
       </div>
     </section>
