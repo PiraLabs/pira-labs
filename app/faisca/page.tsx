@@ -94,15 +94,15 @@ export default function FaiscaPage() {
               </p>
             </div>
             {/* Nó Faísca — asset KZ canônico */}
-            <div className="hidden md:flex items-start justify-center flex-shrink-0" style={{ width: "360px", opacity: 0.3 }}>
-              <img
-                src="/brand/FAISCA_Ink_transp.svg"
-                alt=""
-                aria-hidden="true"
-                width={360}
-                height={411}
-                style={{ display: "block" }}
-              />
+            <div className="hidden md:flex items-start justify-center flex-shrink-0" aria-hidden="true" style={{ width: "280px" }}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 160" width="280" height="320" aria-hidden="true">
+                <g transform="translate(70,72)">
+                  <circle cx="0" cy="0" r="18" fill="none" stroke="#05262e" strokeWidth="6.3"/>
+                  <line x1="0" y1="-18" x2="0" y2="-41" stroke="#05262e" strokeWidth="1" strokeLinecap="square"/>
+                  <circle cx="0" cy="-52" r="11" fill="none" stroke="#05262e" strokeWidth="1.5"/>
+                  <text x="0" y="46" textAnchor="middle" fontSize="12" fontWeight="500" fontFamily="var(--font-atyp-display), sans-serif" fill="#05262e">Faísca</text>
+                </g>
+              </svg>
             </div>
           </div>
         </div>
@@ -119,18 +119,6 @@ export default function FaiscaPage() {
           <p className="font-body" style={{ fontSize: "1rem", fontWeight: 300, color: SAND, marginBottom: "48px" }}>
             Preço fixo, entrega definida, sem atrito de entrada.
           </p>
-
-          {/* Nó Faísca — asset KZ canônico */}
-          <div className="hidden md:block mb-12" style={{ opacity: 0.35 }}>
-            <img
-              src="/brand/FAISCA_Sand_transp.svg"
-              alt=""
-              aria-hidden="true"
-              width={200}
-              height={229}
-              style={{ display: "block" }}
-            />
-          </div>
 
           {/* Cards Grupo 1 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
