@@ -64,25 +64,46 @@ export default function FaiscaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bcSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
-      {/* F1 · Header (Ink) */}
-      <div style={{ backgroundColor: INK, position: "relative", overflow: "hidden" }}>
-        <PageHeader
-          breadcrumbs={breadcrumbs}
-          h1="Faísca"
-          subtitle="Faísca reúne as portas de entrada da Pira Labs: formatos de escopo definido para experimentar o método antes de qualquer compromisso maior."
-        />
-        <div
-          className="hidden md:block"
-          aria-hidden="true"
-          style={{ position: "absolute", right: "80px", top: "50%", transform: "translateY(-50%)" }}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 160" width="220" height="251" aria-hidden="true">
-            <g transform="translate(70,72)">
-              <circle cx="0" cy="0" r="18" fill="none" stroke="#e8e0d6" strokeWidth="6.3"/>
-              <line x1="0" y1="-18" x2="0" y2="-41" stroke="#e8e0d6" strokeWidth="1" strokeLinecap="square"/>
-              <circle cx="0" cy="-52" r="11" fill="none" stroke="#e8e0d6" strokeWidth="1.5"/>
-            </g>
-          </svg>
+      {/* F1 · Header (Ink) — layout próprio com nó KZ */}
+      <div style={{ backgroundColor: INK }}>
+        <div className="container-site pt-20 md:pt-24 mb-10 md:mb-16">
+          {/* Breadcrumb */}
+          <nav aria-label="Breadcrumb" className="mb-4">
+            <ol style={{ display: "flex", gap: "8px", listStyle: "none", padding: 0, margin: 0 }}>
+              <li>
+                <a href="/" className="font-body" style={{ fontSize: "0.75rem", color: "rgba(232,224,214,0.5)", textDecoration: "none" }}>
+                  Home
+                </a>
+              </li>
+              <li style={{ color: "rgba(232,224,214,0.3)", fontSize: "0.75rem" }}>·</li>
+              <li>
+                <span className="font-body" style={{ fontSize: "0.75rem", color: "rgba(232,224,214,0.5)" }}>
+                  Faísca
+                </span>
+              </li>
+            </ol>
+          </nav>
+          {/* H1 + nó lado a lado */}
+          <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: "40px" }}>
+            <div style={{ flex: 1 }}>
+              <h1 className="font-display font-semibold leading-none mb-4" style={{ color: "#F5F5F2", fontSize: "clamp(48px, 6vw, 88px)", letterSpacing: "-0.02em" }}>
+                Faísca
+              </h1>
+              <p className="font-body leading-relaxed max-w-2xl" style={{ color: "#e8e0d6", fontSize: "clamp(1rem, 1.5vw, 1.25rem)", lineHeight: 1.6 }}>
+                Faísca reúne as portas de entrada da Pira Labs: formatos de escopo definido para experimentar o método antes de qualquer compromisso maior.
+              </p>
+            </div>
+            {/* Nó Faísca — Sand sobre Ink, sem label, alinhado ao baseline do H1 */}
+            <div className="hidden md:block flex-shrink-0" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 130" width="200" height="186" aria-hidden="true">
+                <g transform="translate(70,72)">
+                  <circle cx="0" cy="0" r="18" fill="none" stroke="#e8e0d6" strokeWidth="6.3"/>
+                  <line x1="0" y1="-18" x2="0" y2="-41" stroke="#e8e0d6" strokeWidth="1" strokeLinecap="square"/>
+                  <circle cx="0" cy="-52" r="11" fill="none" stroke="#e8e0d6" strokeWidth="1.5"/>
+                </g>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
 
