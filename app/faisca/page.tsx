@@ -83,27 +83,12 @@ export default function FaiscaPage() {
               </li>
             </ol>
           </nav>
-          {/* H1 + nó lado a lado */}
-          <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: "40px" }}>
-            <div style={{ flex: 1 }}>
-              <h1 className="font-display font-semibold leading-none mb-4" style={{ color: "#F5F5F2", fontSize: "clamp(48px, 6vw, 88px)", letterSpacing: "-0.02em" }}>
-                Faísca
-              </h1>
-              <p className="font-body leading-relaxed max-w-2xl" style={{ color: "#e8e0d6", fontSize: "clamp(1rem, 1.5vw, 1.25rem)", lineHeight: 1.6 }}>
-                Faísca reúne as portas de entrada da Pira Labs: formatos de escopo definido para experimentar o método antes de qualquer compromisso maior.
-              </p>
-            </div>
-            {/* Nó Faísca — Sand sobre Ink, sem label, alinhado ao baseline do H1 */}
-            <div className="hidden md:block flex-shrink-0" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 130" width="200" height="186" aria-hidden="true">
-                <g transform="translate(70,72)">
-                  <circle cx="0" cy="0" r="18" fill="none" stroke="#e8e0d6" strokeWidth="6.3"/>
-                  <line x1="0" y1="-18" x2="0" y2="-41" stroke="#e8e0d6" strokeWidth="1" strokeLinecap="square"/>
-                  <circle cx="0" cy="-52" r="11" fill="none" stroke="#e8e0d6" strokeWidth="1.5"/>
-                </g>
-              </svg>
-            </div>
-          </div>
+          <h1 className="font-display font-semibold leading-none mb-4" style={{ color: "#F5F5F2", fontSize: "clamp(48px, 6vw, 88px)", letterSpacing: "-0.02em" }}>
+            Faísca
+          </h1>
+          <p className="font-body leading-relaxed max-w-2xl" style={{ color: "#e8e0d6", fontSize: "clamp(1rem, 1.5vw, 1.25rem)", lineHeight: 1.6 }}>
+            Faísca reúne as portas de entrada da Pira Labs: formatos de escopo definido para experimentar o método antes de qualquer compromisso maior.
+          </p>
         </div>
       </div>
 
