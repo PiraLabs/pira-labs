@@ -74,7 +74,9 @@ export default function CLevelPage() {
       <section style={{ backgroundColor: TEAL }}>
         <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 py-16 md:py-24">
           <h2 className="font-display" style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: WHITE, marginBottom: "40px" }}>
-            C-level fracionado com presença no processo
+            C-level fracionado com{" "}
+            <span style={{ color: "#eb5c2e" }}>presença</span>{" "}
+            no processo
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12" style={{ maxWidth: "960px" }}>
             <div>
@@ -100,44 +102,68 @@ export default function CLevelPage() {
       {/* C3 · Case Pipa (Sand) */}
       <section style={{ backgroundColor: SAND }}>
         <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 py-16 md:py-24">
-          <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: INK, marginBottom: "24px" }}>
+
+          {/* Eyebrow + H2 */}
+          <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(5,38,46,0.5)", marginBottom: "16px" }}>
             Como funciona na prática
           </p>
-          <h2 className="font-display" style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: INK, marginBottom: "40px" }}>
+          <h2 className="font-display" style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: INK, marginBottom: "48px" }}>
             Case Pipa
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12" style={{ maxWidth: "960px", marginBottom: "48px" }}>
-            <div>
-              <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(5,38,46,0.5)", marginBottom: "8px" }}>
-                Cliente
-              </p>
-              <p className="font-body" style={{ fontSize: "1rem", fontWeight: 400, color: INK, marginBottom: "4px" }}>
-                Pipa
-              </p>
-              <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 300, color: "rgba(5,38,46,0.7)", marginBottom: "24px" }}>
-                Ateliê de confeitaria artesanal · São Paulo
-              </p>
-              <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(5,38,46,0.5)", marginBottom: "8px" }}>
-                Fundadora
-              </p>
-              <p className="font-body" style={{ fontSize: "1rem", fontWeight: 400, color: INK, marginBottom: "24px" }}>
-                Kika Hernandes
-              </p>
-              <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(5,38,46,0.5)", marginBottom: "8px" }}>
-                Período
-              </p>
-              <p className="font-body" style={{ fontSize: "1rem", fontWeight: 400, color: INK, marginBottom: "32px" }}>
-                Fevereiro a maio de 2025
-              </p>
+          {/* Depoimento principal — topo, grande, para o ICP que chegou pelo depoimento */}
+          <div style={{ maxWidth: "800px", marginBottom: "64px" }}>
+            <blockquote className="font-display" style={{ fontSize: "clamp(1.375rem, 2.5vw, 1.875rem)", fontWeight: 400, lineHeight: 1.5, color: INK, margin: 0, padding: 0, marginBottom: "24px" }}>
+              &ldquo;Me deu muito foco de como direcionar melhor um produto que é tão rico e monetizar de uma maneira estratégica sem perder o valor da marca. Encaixou de maneira bem clara, com ferramentas fáceis, trazendo conhecimento para problemas que pareciam tão complexos.&rdquo;
+            </blockquote>
+            {/* Identidade do cliente */}
+            <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+              <img
+                src="/pipa-logo.png"
+                alt="Logo Pipa"
+                style={{ height: "48px", width: "auto", borderRadius: "4px" }}
+              />
+              <div>
+                <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 600, color: INK, marginBottom: "2px" }}>
+                  Kika Hernandes
+                </p>
+                <p className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 300, color: "rgba(5,38,46,0.6)" }}>
+                  Fundadora e CEO da Pipa ·{" "}
+                  <a
+                    href="https://www.instagram.com/pausapipa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#eb5c2e", textDecoration: "none", fontWeight: 400 }}
+                  >
+                    @pausapipa
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
 
-              <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 300, color: "rgba(5,38,46,0.8)", lineHeight: 1.75 }}>
+          {/* Grid: contexto + o que foi feito */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12" style={{ maxWidth: "960px", marginBottom: "64px" }}>
+            <div>
+              <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(5,38,46,0.5)", marginBottom: "20px" }}>
+                O contexto
+              </p>
+              {/* Identidade resumida */}
+              <div style={{ marginBottom: "24px", paddingBottom: "24px", borderBottom: "1px solid rgba(5,38,46,0.1)" }}>
+                <p className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 400, color: INK, marginBottom: "2px" }}>
+                  Pipa — ateliê de confeitaria artesanal
+                </p>
+                <p className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 300, color: "rgba(5,38,46,0.6)", marginBottom: "2px" }}>
+                  São Paulo · Fevereiro a maio de 2025
+                </p>
+              </div>
+              <p className="font-body" style={{ fontSize: "0.9375rem", fontWeight: 300, color: "rgba(5,38,46,0.8)", lineHeight: 1.75 }}>
                 A Pipa chegou com um produto central forte e posicionamento ainda indefinido. O portfólio tinha escopo estreito, a precificação não refletia o valor percebido e a estrutura digital não sustentava o crescimento que o produto merecia.
               </p>
             </div>
 
             <div>
-              <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(5,38,46,0.5)", marginBottom: "16px" }}>
+              <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(5,38,46,0.5)", marginBottom: "20px" }}>
                 O que foi feito
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0 }} className="space-y-3">
@@ -155,43 +181,48 @@ export default function CLevelPage() {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
 
-              <div style={{ marginTop: "32px", borderTop: "1px solid rgba(5,38,46,0.15)", paddingTop: "32px" }}>
-                <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(5,38,46,0.5)", marginBottom: "16px" }}>
-                  Resultados verificados
+          {/* Resultados — escala de evidência */}
+          <div style={{ marginBottom: "64px" }}>
+            <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(5,38,46,0.5)", marginBottom: "32px" }}>
+              Resultados verificados
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={{ maxWidth: "960px" }}>
+              <div style={{ borderTop: "2px solid #eb5c2e", paddingTop: "20px" }}>
+                <p className="font-display" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 600, color: INK, lineHeight: 1, marginBottom: "8px", letterSpacing: "-0.02em" }}>
+                  2 → 4
                 </p>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0 }} className="space-y-2">
-                  {[
-                    "Portfólio dobrado: de 2 para 4 produtos",
-                    "Reposicionamento de preço: de R$280 para arquitetura entre R$350 e R$530",
-                    "Estruturação digital: site e LinkedIn",
-                  ].map((item) => (
-                    <li key={item} className="font-body flex items-start gap-3" style={{ fontSize: "0.875rem", fontWeight: 400, color: INK, lineHeight: 1.6 }}>
-                      <span style={{ color: EMBER, flexShrink: 0, marginTop: "2px" }}>·</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 300, color: "rgba(5,38,46,0.7)", lineHeight: 1.5 }}>
+                  produtos no portfólio
+                </p>
+              </div>
+              <div style={{ borderTop: "2px solid #eb5c2e", paddingTop: "20px" }}>
+                <p className="font-display" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 600, color: INK, lineHeight: 1, marginBottom: "8px", letterSpacing: "-0.02em" }}>
+                  R$280
+                </p>
+                <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 300, color: "rgba(5,38,46,0.7)", lineHeight: 1.5 }}>
+                  para arquitetura entre R$350 e R$530
+                </p>
+              </div>
+              <div style={{ borderTop: "2px solid #eb5c2e", paddingTop: "20px" }}>
+                <p className="font-display" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 600, color: INK, lineHeight: 1, marginBottom: "8px", letterSpacing: "-0.02em" }}>
+                  ↑
+                </p>
+                <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 300, color: "rgba(5,38,46,0.7)", lineHeight: 1.5 }}>
+                  estruturação digital: site e LinkedIn
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Depoimento principal */}
-          <div style={{ maxWidth: "720px", borderLeft: "2px solid rgba(5,38,46,0.2)", paddingLeft: "32px", marginBottom: "24px" }}>
-            <blockquote className="font-display" style={{ fontSize: "clamp(1.125rem, 2vw, 1.375rem)", fontWeight: 400, lineHeight: 1.6, color: INK, margin: 0, padding: 0 }}>
-              &ldquo;Me deu muito foco de como direcionar melhor um produto que é tão rico e monetizar de uma maneira estratégica sem perder o valor da marca. Encaixou de maneira bem clara, com ferramentas fáceis, trazendo conhecimento para problemas que pareciam tão complexos.&rdquo;
-            </blockquote>
-            <p className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 600, color: "rgba(5,38,46,0.6)", marginTop: "16px", letterSpacing: "0.05em" }}>
-              Kika Hernandes, fundadora e CEO da Pipa
-            </p>
-          </div>
-
           {/* Depoimento secundário */}
-          <div style={{ maxWidth: "720px", borderLeft: "2px solid rgba(5,38,46,0.1)", paddingLeft: "32px" }}>
+          <div style={{ maxWidth: "720px", borderLeft: "2px solid rgba(5,38,46,0.15)", paddingLeft: "32px" }}>
             <blockquote className="font-display" style={{ fontSize: "clamp(1rem, 1.8vw, 1.25rem)", fontWeight: 300, lineHeight: 1.6, color: "rgba(5,38,46,0.7)", margin: 0, padding: 0 }}>
               &ldquo;Como se todo aquele medo de empreender aliviasse. A Pira Labs apresenta possibilidades para encarar os desafios reais. É como se apresentasse o mapa do caminho das pedras, e ficasse mais fácil caminhar nessa jornada.&rdquo;
             </blockquote>
-            <p className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 400, color: "rgba(5,38,46,0.5)", marginTop: "12px", letterSpacing: "0.05em" }}>
+            <p className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 400, color: "rgba(5,38,46,0.5)", marginTop: "12px" }}>
               Kika Hernandes, fundadora e CEO da Pipa
             </p>
           </div>
