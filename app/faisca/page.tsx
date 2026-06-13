@@ -94,13 +94,13 @@ export default function FaiscaPage() {
               </p>
             </div>
             {/* Nó Faísca — asset KZ canônico */}
-            <div className="hidden md:flex items-center justify-center flex-shrink-0" style={{ width: "160px", opacity: 0.35 }}>
+            <div className="hidden md:flex items-start justify-center flex-shrink-0" style={{ width: "360px", opacity: 0.3 }}>
               <img
                 src="/brand/FAISCA_Ink_transp.svg"
                 alt=""
                 aria-hidden="true"
-                width={160}
-                height={183}
+                width={360}
+                height={411}
                 style={{ display: "block" }}
               />
             </div>
@@ -121,13 +121,13 @@ export default function FaiscaPage() {
           </p>
 
           {/* Nó Faísca — asset KZ canônico */}
-          <div className="hidden md:block mb-10" style={{ opacity: 0.25 }}>
+          <div className="hidden md:block mb-12" style={{ opacity: 0.35 }}>
             <img
               src="/brand/FAISCA_Sand_transp.svg"
               alt=""
               aria-hidden="true"
-              width={100}
-              height={115}
+              width={200}
+              height={229}
               style={{ display: "block" }}
             />
           </div>
@@ -162,7 +162,7 @@ export default function FaiscaPage() {
                   aria-label="Ver produto Imersão em IA"
                 >
                   Ver Imersão em IA
-                  <span aria-hidden="true">→</span>
+                  <span aria-hidden="true">&#8594;</span>
                 </Link>
               </div>
             </div>
@@ -194,7 +194,7 @@ export default function FaiscaPage() {
                   aria-label="Ver produto Oxigênio IA Search"
                 >
                   Ver Oxigênio IA Search
-                  <span aria-hidden="true">→</span>
+                  <span aria-hidden="true">&#8594;</span>
                 </Link>
               </div>
             </div>
@@ -226,7 +226,7 @@ export default function FaiscaPage() {
                   aria-label="Ver produto pocket do INSPIRA"
                 >
                   Ver pocket do INSPIRA
-                  <span aria-hidden="true">→</span>
+                  <span aria-hidden="true">&#8594;</span>
                 </Link>
               </div>
             </div>
@@ -283,7 +283,7 @@ export default function FaiscaPage() {
                   aria-label="Ver produto C-level as a Service"
                 >
                   Ver C-level as a Service
-                  <span aria-hidden="true">→</span>
+                  <span aria-hidden="true">&#8594;</span>
                 </Link>
               </div>
             </div>
@@ -321,7 +321,7 @@ export default function FaiscaPage() {
                   aria-label="Ver produto Faísca Jurídica"
                 >
                   Ver Faísca Jurídica
-                  <span aria-hidden="true">→</span>
+                  <span aria-hidden="true">&#8594;</span>
                 </Link>
               </div>
             </div>

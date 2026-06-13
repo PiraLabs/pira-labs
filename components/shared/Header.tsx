@@ -24,7 +24,7 @@ const NAV_ITEMS = [
       { label: 'Oxigênio IA Search', href: '/inspira/oxigenio' },
       { label: 'pocket do INSPIRA', href: '/faisca/pocket' },
       { label: 'Faísca Jurídica', href: '/faisca/juridica' },
-      { label: 'C-level as a Service', href: '/faisca#clevel' },
+      { label: 'C-level as a Service', href: '/faisca/c-level-as-a-service' },
     ],
   },
   {
