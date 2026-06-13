@@ -76,16 +76,34 @@ export default function FaiscaPage() {
       {/* F2 · Declaração (Sand) */}
       <section style={{ backgroundColor: SAND }}>
         <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 py-16 md:py-24">
-          <div style={{ maxWidth: "680px" }} className="space-y-5">
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: INK }}>
-              Faísca reúne as portas de entrada da Pira Labs. Algumas têm escopo fechado e preço fixo. Outras exigem conversa prévia, porque dependem de escopo, disponibilidade e contexto.
-            </p>
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: INK }}>
-              Em todos os casos, a lógica é a mesma: antes de comprometer um projeto maior, você experimenta o método da Pira Labs na prática e sai com algo concreto, mesmo que nada venha depois.
-            </p>
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: INK }}>
-              O ponto de entrada certo depende do que você está vivendo agora. Se não tiver certeza, a conversa de triagem resolve.
-            </p>
+          <div className="flex items-start justify-between gap-16">
+            <div style={{ maxWidth: "680px" }} className="space-y-6 flex-1">
+              {/* Frase manifesto */}
+              <p className="font-display" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 600, lineHeight: 1.05, letterSpacing: "-0.02em", color: INK }}>
+                Antes de comprometer um projeto maior,{" "}
+                <span style={{ color: "#eb5c2e" }}>experimenta.</span>
+              </p>
+              <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: INK }}>
+                Faísca reúne as portas de entrada da Pira Labs. Algumas têm escopo fechado e preço fixo. Outras exigem conversa prévia, porque dependem de escopo, disponibilidade e contexto.
+              </p>
+              <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: INK }}>
+                Em todos os casos, a lógica é a mesma: você experimenta o método da Pira Labs na prática e sai com algo concreto, mesmo que nada venha depois.
+              </p>
+              <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: INK }}>
+                O ponto de entrada certo depende do que você está vivendo agora. Se não tiver certeza, a conversa de triagem resolve.
+              </p>
+            </div>
+            {/* Nó Faísca — asset KZ canônico */}
+            <div className="hidden md:flex items-center justify-center flex-shrink-0" style={{ width: "160px", opacity: 0.35 }}>
+              <img
+                src="/brand/FAISCA_Ink_transp.svg"
+                alt=""
+                aria-hidden="true"
+                width={160}
+                height={183}
+                style={{ display: "block" }}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -94,17 +112,25 @@ export default function FaiscaPage() {
       <section style={{ backgroundColor: TEAL }}>
         <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 py-16 md:py-24">
 
-          {/* Eyebrow */}
-          <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: SAND, marginBottom: "24px" }}>
-            Para começar com escopo fechado
-          </p>
-
           <h2 className="font-display" style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: WHITE, marginBottom: "8px" }}>
-            Para começar com escopo fechado
+            Para começar com{" "}
+            <span style={{ color: "#eb5c2e" }}>escopo fechado</span>
           </h2>
           <p className="font-body" style={{ fontSize: "1rem", fontWeight: 300, color: SAND, marginBottom: "48px" }}>
             Preço fixo, entrega definida, sem atrito de entrada.
           </p>
+
+          {/* Nó Faísca — asset KZ canônico */}
+          <div className="hidden md:block mb-10" style={{ opacity: 0.25 }}>
+            <img
+              src="/brand/FAISCA_Sand_transp.svg"
+              alt=""
+              aria-hidden="true"
+              width={100}
+              height={115}
+              style={{ display: "block" }}
+            />
+          </div>
 
           {/* Cards Grupo 1 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -219,13 +245,9 @@ export default function FaiscaPage() {
       <section style={{ backgroundColor: INK }}>
         <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 py-16 md:py-24">
 
-          {/* Eyebrow */}
-          <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(232,224,214,0.5)", marginBottom: "24px" }}>
-            Para demandas que exigem alinhamento prévio
-          </p>
-
           <h2 className="font-display" style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: WHITE, marginBottom: "8px" }}>
-            Para demandas que exigem alinhamento prévio
+            Para demandas que exigem{" "}
+            <span style={{ color: "#eb5c2e" }}>alinhamento prévio</span>
           </h2>
           <p className="font-body" style={{ fontSize: "1rem", fontWeight: 300, color: "rgba(245,245,242,0.7)", marginBottom: "48px" }}>
             Algumas entradas não podem ser contratadas diretamente. Exigem conversa prévia porque dependem de escopo, presença e contexto.
@@ -310,7 +332,7 @@ export default function FaiscaPage() {
 
       {/* F5 · CTA final (Sand) */}
       <FinalCTA
-        heading="O ponto de entrada certo depende do momento. Conte o contexto."
+        heading="Não sabe por onde começar. É exatamente aí que a conversa começa."
         ctaLabel="RESPIRE"
         origin={ORIGINS.FAISCA}
         theme="light"
