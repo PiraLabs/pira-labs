@@ -200,18 +200,18 @@ export default function CLevelPage() {
               </div>
               <div style={{ borderTop: "2px solid #eb5c2e", paddingTop: "20px" }}>
                 <p className="font-display" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 600, color: INK, lineHeight: 1, marginBottom: "8px", letterSpacing: "-0.02em" }}>
-                  R$280
+                  +90%
                 </p>
                 <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 300, color: "rgba(5,38,46,0.7)", lineHeight: 1.5 }}>
-                  para arquitetura entre R$350 e R$530
+                  ticket médio: de R$280 para R$530
                 </p>
               </div>
               <div style={{ borderTop: "2px solid #eb5c2e", paddingTop: "20px" }}>
                 <p className="font-display" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 600, color: INK, lineHeight: 1, marginBottom: "8px", letterSpacing: "-0.02em" }}>
-                  ↑
+                  Oxigênio
                 </p>
                 <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 300, color: "rgba(5,38,46,0.7)", lineHeight: 1.5 }}>
-                  estruturação digital: site e LinkedIn
+                  estruturação digital: Instagram e LinkedIn · site em breve
                 </p>
               </div>
             </div>
@@ -234,7 +234,7 @@ export default function CLevelPage() {
       <section style={{ backgroundColor: INK }}>
         <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 py-16 md:py-24">
           <h2 className="font-display" style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: WHITE, marginBottom: "40px" }}>
-            Para quem é este produto
+            Para quem <span style={{ color: "#eb5c2e" }}>é</span> este produto
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12" style={{ maxWidth: "960px" }}>
             <div>
@@ -265,7 +265,7 @@ export default function CLevelPage() {
           </h2>
           <div style={{ maxWidth: "680px" }}>
             <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: WHITE, marginBottom: "16px" }}>
-              O engajamento é desenhado por resultado, com período, carga e critérios de verificação acordados antes do início. Sessões semanais até o primeiro marco acordado, quinzenais para acompanhamento e ajuste de rota.
+              O engajamento é desenhado por <span style={{ color: "#eb5c2e" }}>resultado</span>, com período, carga e critérios de verificação acordados antes do início. Sessões semanais até o primeiro marco acordado, quinzenais para acompanhamento e ajuste de rota.
             </p>
             <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: WHITE, marginBottom: "32px" }}>
               Quando o escopo exige continuidade, a extensão é pactuada antes do encerramento.
