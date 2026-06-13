@@ -65,19 +65,31 @@ export default function FaiscaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
       {/* F1 · Header (Ink) */}
-      <div style={{ backgroundColor: INK }}>
+      <div style={{ backgroundColor: INK, position: "relative", overflow: "hidden" }}>
         <PageHeader
           breadcrumbs={breadcrumbs}
           h1="Faísca"
           subtitle="Faísca reúne as portas de entrada da Pira Labs: formatos de escopo definido para experimentar o método antes de qualquer compromisso maior."
         />
+        <div
+          className="hidden md:block"
+          aria-hidden="true"
+          style={{ position: "absolute", right: "80px", top: "50%", transform: "translateY(-50%)" }}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 160" width="220" height="251" aria-hidden="true">
+            <g transform="translate(70,72)">
+              <circle cx="0" cy="0" r="18" fill="none" stroke="#e8e0d6" strokeWidth="6.3"/>
+              <line x1="0" y1="-18" x2="0" y2="-41" stroke="#e8e0d6" strokeWidth="1" strokeLinecap="square"/>
+              <circle cx="0" cy="-52" r="11" fill="none" stroke="#e8e0d6" strokeWidth="1.5"/>
+            </g>
+          </svg>
+        </div>
       </div>
 
       {/* F2 · Declaração (Sand) */}
       <section style={{ backgroundColor: SAND }}>
         <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 py-16 md:py-24">
-          <div className="flex items-start justify-between gap-16">
-            <div style={{ maxWidth: "680px" }} className="space-y-6 flex-1">
+          <div style={{ maxWidth: "680px" }} className="space-y-6">
               {/* Frase manifesto */}
               <p className="font-display" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 600, lineHeight: 1.05, letterSpacing: "-0.02em", color: INK }}>
                 Antes de comprometer um projeto maior,{" "}
@@ -93,18 +105,6 @@ export default function FaiscaPage() {
                 O ponto de entrada certo depende do que você está vivendo agora. Se não tiver certeza, a conversa de triagem resolve.
               </p>
             </div>
-            {/* Nó Faísca — asset KZ canônico */}
-            <div className="hidden md:flex items-start justify-center flex-shrink-0" aria-hidden="true" style={{ width: "280px" }}>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 160" width="280" height="320" aria-hidden="true">
-                <g transform="translate(70,72)">
-                  <circle cx="0" cy="0" r="18" fill="none" stroke="#05262e" strokeWidth="6.3"/>
-                  <line x1="0" y1="-18" x2="0" y2="-41" stroke="#05262e" strokeWidth="1" strokeLinecap="square"/>
-                  <circle cx="0" cy="-52" r="11" fill="none" stroke="#05262e" strokeWidth="1.5"/>
-                  <text x="0" y="46" textAnchor="middle" fontSize="12" fontWeight="500" fontFamily="var(--font-atyp-display), sans-serif" fill="#05262e">Faísca</text>
-                </g>
-              </svg>
-            </div>
-          </div>
         </div>
       </section>
 
