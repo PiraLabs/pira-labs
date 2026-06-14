@@ -14,7 +14,7 @@ export const FILLOUT_URL_HEADER =
 export const FILLOUT_URL_CONTATO =
   `${FILL_OUT_FORM_URL}?origem=contato&${UTM_BASE}&utm_content=pagina_contato`;
 
-// 18 origens oficiais do sistema de rastreamento de CTAs (v4).
+// 19 origens oficiais do sistema de rastreamento de CTAs (v5).
 // Todos os CTAs que apontam para /contato incluem ?origem=[valor].
 export const ORIGINS = {
   HOME:                         "home",
@@ -22,6 +22,7 @@ export const ORIGINS = {
   INSPIRA:                      "inspira",
   INSPIRA_JURIDICO:             "inspira_juridico",
   OXIGENIO:                     "oxigenio",
+  OXIGENIO_IA_SEARCH:           "oxigenio-ia-search",
   TRANSPIRA:                    "transpira",
   TRANSPIRA_JURIDICO:           "transpira_juridico",
   TRANSPIRA_UNIFICADO:          "transpira_unificado",
