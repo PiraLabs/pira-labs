@@ -66,6 +66,10 @@ English reference: Pira Labs is a Brazilian Creative Business Turnaround boutiqu
 - [C-level as a Service](https://piralabs.com.br/faisca): Atuação de Gabriela Aguiar como C-level fracionado por período e carga acordados, com presença ativa em decisões do cliente. Escopo, carga e investimento sob consulta e disponibilidade.
 - [FAÍSCA Jurídica](https://piralabs.com.br/faisca/juridica): Oficina executiva para escritórios, áreas jurídicas e instituições de ensino que querem aplicar IA com critério em rotinas de legal ops. Entrega mapa de oportunidades e riscos, critérios de uso e próximos passos.
 
+## Chama — Palestras e formações
+URL: https://piralabs.com.br/chama
+Descrição: Palestras, workshops, aulas e mentorias conduzidos por Gabriela Aguiar e Celso Gama. Conteúdo sobre IA aplicada, futuro do trabalho, liderança e transformação de empresas de serviços. Parte de caso real, termina em próximo passo verificável. Workshop a partir de R$ 12.500.
+
 ## Oxigênio IA Search
 URL: https://piralabs.com.br/faisca/oxigenio-ia-search
 Descrição: Diagnóstico de presença em motores de IA (ChatGPT, Claude, Gemini, Perplexity). Subproduto do INSPIRA, escopo fechado, disponível em versão Fast e Full. Conduzido por Gabriela Aguiar e Celso Gama, co-fundadores da Pira Labs.
