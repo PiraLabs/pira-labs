@@ -156,7 +156,7 @@ export default function SobrePage() {
       </section>
 
       {/* SOBRE-3 · Gabriela Aguiar (Teal) */}
-      <section className="bg-teal w-full" aria-labelledby="sobre-gabriela-heading">
+      <section className="bg-teal w-full" aria-labelledby="sobre-gabriela">
         <div className="mx-auto px-6 py-20 md:py-28" style={{ maxWidth: "720px" }}>
 
           {/* Eyebrow */}
@@ -178,7 +178,7 @@ export default function SobrePage() {
           </div>
 
           {/* NOME */}
-          <h2 id="sobre-gabriela-heading" className="font-display mt-8 mb-1" style={{ fontWeight: 600, fontSize: "clamp(2rem, 4vw, 2.75rem)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
+          <h2 id="sobre-gabriela" className="font-display mt-8 mb-1" style={{ fontWeight: 600, fontSize: "clamp(2rem, 4vw, 2.75rem)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
             Gabriela Aguiar
           </h2>
 
@@ -206,7 +206,7 @@ export default function SobrePage() {
             </li>
             <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "#e8e0d6", fontWeight: 300 }}>
               <span style={{ color: "#e8e0d6", flexShrink: 0, marginTop: "2px" }}>·</span>
-              <span>Mentora na FGV Ventures, German Accelerator, FINEP e Empreendedoras Tech (Sebrae)</span>
+              <span>Mentora na FGV Ventures e na FINEP por três anos em cada programa. Na FINEP, mentoradas conquistaram primeiro e segundo lugar no ranking nacional em anos consecutivos. Também mentora no German Accelerator e Empreendedoras Tech (Sebrae)</span>
             </li>
             <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "#e8e0d6", fontWeight: 300 }}>
               <span style={{ color: "#e8e0d6", flexShrink: 0, marginTop: "2px" }}>·</span>
@@ -234,7 +234,7 @@ export default function SobrePage() {
       </section>
 
       {/* SOBRE-4 · Celso Gama (Ink) */}
-      <section className="bg-ink w-full" aria-labelledby="sobre-celso-heading">
+      <section className="bg-ink w-full" aria-labelledby="sobre-celso">
         <div className="mx-auto px-6 py-20 md:py-28" style={{ maxWidth: "720px" }}>
 
           {/* Eyebrow */}
@@ -255,7 +255,7 @@ export default function SobrePage() {
           </div>
 
           {/* NOME */}
-          <h2 id="sobre-celso-heading" className="font-display mt-8 mb-1" style={{ fontWeight: 600, fontSize: "clamp(2rem, 4vw, 2.75rem)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
+          <h2 id="sobre-celso" className="font-display mt-8 mb-1" style={{ fontWeight: 600, fontSize: "clamp(2rem, 4vw, 2.75rem)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
             Celso Gama
           </h2>
 
@@ -283,6 +283,10 @@ export default function SobrePage() {
             <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "#e8e0d6", fontWeight: 300 }}>
               <span style={{ color: "#e8e0d6", flexShrink: 0, marginTop: "2px" }}>·</span>
               <span>Bacharelando em Direito (Mackenzie)</span>
+            </li>
+            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "#e8e0d6", fontWeight: 300 }}>
+              <span style={{ color: "#e8e0d6", flexShrink: 0, marginTop: "2px" }}>·</span>
+              <span>PMO da operação olímpica de multinacional do setor de tecnologia de consumo, Rio 2016. 622 profissionais coordenados e mais de 100 fornecedores externos</span>
             </li>
             <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "#e8e0d6", fontWeight: 300 }}>
               <span style={{ color: "#e8e0d6", flexShrink: 0, marginTop: "2px" }}>·</span>
@@ -366,6 +370,9 @@ export default function SobrePage() {
             </p>
             <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
               Boutique é o modelo deliberado. O ecossistema é o que torna isso possível: uma rede de especialistas, parceiros e referências que entra quando o projeto pede, sem virar overhead fixo.
+            </p>
+            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
+              Nos primeiros seis meses de operação, cinco projetos entregues para cinco clientes: KZ Inteligência em Comunicação, Concordia DPS LLC, Pipa e Sordilli.com. O quinto cliente é um escritório de advocacia com nome preservado a pedido.
             </p>
           </div>
           <p className="font-body font-semibold uppercase mb-6" style={{ fontSize: "10px", letterSpacing: "0.18em", color: "#e8e0d6" }}>
