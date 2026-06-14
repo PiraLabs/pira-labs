@@ -7,10 +7,13 @@ const nextConfig = {
     },
   async redirects() {
     return [
+      // Migração de rota canônica — Oxigênio IA Search
+      { source: "/inspira/oxigenio", destination: "/faisca/oxigenio-ia-search", permanent: true },
+
       // URLs curtas para campanhas
-      { source: "/oxigenio", destination: "/inspira/oxigenio", permanent: true },
-      { source: "/oxigenio-ia-search", destination: "/inspira/oxigenio", permanent: true },
-      { source: "/faisca/ia-search", destination: "/inspira/oxigenio", permanent: true },
+      { source: "/oxigenio", destination: "/faisca/oxigenio-ia-search", permanent: true },
+      { source: "/oxigenio-ia-search", destination: "/faisca/oxigenio-ia-search", permanent: true },
+      { source: "/faisca/ia-search", destination: "/faisca/oxigenio-ia-search", permanent: true },
       { source: "/turnaround", destination: "/creative-business-turnaround", permanent: true },
       { source: "/cbt", destination: "/creative-business-turnaround", permanent: true },
       // Resíduos do site provisório anterior
