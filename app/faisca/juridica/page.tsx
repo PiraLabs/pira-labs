@@ -121,10 +121,10 @@ export default function FaiscaJuridicaPage() {
           h1="Faísca Jurídica"
           subtitle={
             <>
-              <span style={{ display: "block" }}>
+              <span style={{ display: "block", fontSize: "clamp(1.125rem, 2.5vw, 1.5rem)", fontWeight: 400, color: "#e8e0d6", marginBottom: "20px", lineHeight: 1.4, fontStyle: "normal" }}>
                 &ldquo;O risco não está no futuro. Está no navegador aberto agora no computador do estagiário.&rdquo;
               </span>
-              <span style={{ display: "block", marginTop: "12px" }}>
+              <span style={{ display: "block", fontSize: "0.9375rem", fontWeight: 300, color: "#e8e0d6", opacity: 0.7, lineHeight: 1.6 }}>
                 Antes de ensinar prompt para o time jurídico, vale saber o que não pode entrar na ferramenta.
               </span>
             </>
@@ -153,16 +153,16 @@ export default function FaiscaJuridicaPage() {
           </h2>
           <div style={{ maxWidth: "720px" }}>
             <p style={{ color: "#05262e", fontSize: "15px", fontWeight: 300, lineHeight: 1.75, marginBottom: "20px" }}>
-              Alguém no seu escritório já usou ChatGPT, Claude ou Gemini para resumir um contrato, pesquisar jurisprudência ou rascunhar uma peça. Provavelmente mais de uma pessoa. Provavelmente sem política interna, sem critério de anonimização e sem que a sócia ou o head jurídico soubesse exatamente o que foi inserido onde.
+              Alguém no seu escritório já usou ChatGPT, Claude ou Gemini para resumir um contrato, pesquisar jurisprudência ou rascunhar uma peça. Provavelmente mais de uma pessoa. <strong style={{ fontWeight: 600 }}>Provavelmente sem política interna, sem critério de anonimização</strong> e sem que a sócia ou o head jurídico soubesse exatamente o que foi inserido onde.
             </p>
             <p style={{ color: "#05262e", fontSize: "15px", fontWeight: 300, lineHeight: 1.75, marginBottom: "20px" }}>
-              O problema não é usar IA. O problema é usar IA com documento jurídico real, em conta pessoal, sem método e sem controle institucional.
+              <strong style={{ fontWeight: 600 }}>O problema não é usar IA.</strong> O problema é usar IA com documento jurídico real, em conta pessoal, sem método e sem controle institucional.
             </p>
             <p style={{ color: "#05262e", fontSize: "15px", fontWeight: 300, lineHeight: 1.75, marginBottom: "20px" }}>
-              68,3% das empresas não possuem núcleo dedicado à governança de IA. (Fundação Dom Cabral, 2026.) No setor jurídico, onde cada documento pode conter dados pessoais de clientes sob sigilo profissional, operar sem critério de uso não é só risco operacional. É exposição regulatória.
+              <strong style={{ fontWeight: 600 }}>68,3% das empresas não possuem núcleo dedicado à governança de IA.</strong> (Fundação Dom Cabral, 2026.) No setor jurídico, onde cada documento pode conter dados pessoais de clientes sob sigilo profissional, operar sem critério de uso não é só risco operacional. É exposição regulatória.
             </p>
             <p style={{ color: "#05262e", fontSize: "15px", fontWeight: 300, lineHeight: 1.75, marginBottom: "20px" }}>
-              Quando um profissional cola uma petição, um contrato ou uma procuração com dados pessoais de cliente em uma ferramenta de IA, pode estar realizando tratamento ou compartilhamento de dados pessoais nos termos da LGPD. Se não há política interna, critério de anonimização, controle de ferramenta e orientação clara sobre o que pode ou não entrar no modelo, o escritório opera com uma exposição que muitas vezes ainda não mapeou.
+              Quando um profissional cola uma petição, um contrato ou uma procuração com dados pessoais de cliente em uma ferramenta de IA, <strong style={{ fontWeight: 600 }}>pode estar realizando tratamento ou compartilhamento de dados pessoais nos termos da LGPD</strong>. Se não há política interna, critério de anonimização, controle de ferramenta e orientação clara sobre o que pode ou não entrar no modelo, o escritório opera com uma exposição que muitas vezes ainda não mapeou.
             </p>
             <p style={{ color: "#05262e", fontSize: "15px", fontWeight: 300, lineHeight: 1.75, marginBottom: "20px" }}>
               A Faísca Jurídica existe para nomear esse problema e dar ao time critérios para começar a tratá-lo.
@@ -186,8 +186,8 @@ export default function FaiscaJuridicaPage() {
               lineHeight: 1.1,
             }}
           >
-            O que é a{" "}
-            <span style={{ color: "#eb5c2e" }}>Faísca Jurídica</span>
+            O que é a Faísca{" "}
+            <span style={{ color: "#eb5c2e" }}>Jurídica</span>
           </h2>
           <div style={{ maxWidth: "720px" }}>
             <p style={{ color: "#e8e0d6", fontSize: "15px", fontWeight: 300, lineHeight: 1.75, marginBottom: "16px" }}>
@@ -367,7 +367,7 @@ export default function FaiscaJuridicaPage() {
               lineHeight: 1.1,
             }}
           >
-            Para quem <span style={{ color: "#eb5c2e" }}>faz sentido</span>
+            Para quem <span style={{ color: "#eb5c2e" }}>faz</span> sentido
           </h2>
           <div style={{ maxWidth: "720px" }}>
             {[
@@ -501,10 +501,10 @@ export default function FaiscaJuridicaPage() {
                 q: "Como é a precificação?",
                 a: "Sob consulta e disponibilidade. Depende do formato, da audiência, do deslocamento e do nível de customização. Por sermos uma consultoria boutique, mantemos agenda limitada de palestras e workshops simultâneos para preservar a qualidade da conversa de calibragem prévia.",
               },
-            ].map(({ q, a }) => (
+            ].map(({ q, a }, i, arr) => (
               <details
                 key={q}
-                style={{ borderBottom: "1px solid rgba(245,245,242,0.12)" }}
+                style={{ borderBottom: i < arr.length - 1 ? "1px solid rgba(245,245,242,0.12)" : "none" }}
               >
                 <summary
                   style={{
