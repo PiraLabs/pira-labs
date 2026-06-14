@@ -512,7 +512,7 @@ export default function FaiscaJuridicaPage() {
                     color: "#F5F5F2",
                     fontSize: "16px",
                     fontWeight: 600,
-                    padding: "20px 0",
+                    padding: "20px 0 0 0",
                     listStyle: "none",
                   }}
                 >
