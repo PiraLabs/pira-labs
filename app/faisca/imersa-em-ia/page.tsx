@@ -152,8 +152,8 @@ export default function ImersaEmIaPage() {
 
           <a
             href="/contato?origem=faisca_imersa"
-            className="font-body uppercase"
-            style={{ display: "inline-block", border: "1.5px solid #05262e", color: "#05262e", padding: "14px 32px", fontSize: "13px", fontWeight: 600, letterSpacing: "0.10em", textDecoration: "none", borderRadius: "2px" }}
+            className="font-body"
+            style={{ display: "inline-block", backgroundColor: "#05262e", color: "#F5F5F2", padding: "14px 32px", fontSize: "13px", fontWeight: 600, letterSpacing: "0.10em", textDecoration: "none", borderRadius: "2px", textTransform: "uppercase" as const }}
           >
             RESPIRE
           </a>
@@ -176,8 +176,8 @@ export default function ImersaEmIaPage() {
           <div className="space-y-0">
 
             {/* Sessão 1 */}
-            <div style={{ display: "grid", gridTemplateColumns: "80px 1fr", gap: "0 32px", borderBottom: "1px solid rgba(245,245,242,0.12)", paddingBottom: "40px", marginBottom: "40px", alignItems: "start" }}>
-              <div style={{ fontSize: "clamp(4rem, 8vw, 7rem)", fontWeight: 300, lineHeight: 1, color: "#eb5c2e", fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "120px 1fr", gap: "0 32px", borderBottom: "1px solid rgba(245,245,242,0.12)", paddingBottom: "40px", marginBottom: "40px", alignItems: "start" }}>
+              <div style={{ fontSize: "clamp(4rem, 8vw, 7rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
                 01
               </div>
               <div>
@@ -191,7 +191,7 @@ export default function ImersaEmIaPage() {
             </div>
 
             {/* Sessão 2 */}
-            <div style={{ display: "grid", gridTemplateColumns: "80px 1fr", gap: "0 32px", borderBottom: "1px solid rgba(245,245,242,0.12)", paddingBottom: "40px", marginBottom: "40px", alignItems: "start" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "120px 1fr", gap: "0 32px", borderBottom: "1px solid rgba(245,245,242,0.12)", paddingBottom: "40px", marginBottom: "40px", alignItems: "start" }}>
               <div style={{ fontSize: "clamp(4rem, 8vw, 7rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
                 02
               </div>
@@ -206,7 +206,7 @@ export default function ImersaEmIaPage() {
             </div>
 
             {/* Sessão 3 */}
-            <div style={{ display: "grid", gridTemplateColumns: "80px 1fr", gap: "0 32px", alignItems: "start" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "120px 1fr", gap: "0 32px", alignItems: "start" }}>
               <div style={{ fontSize: "clamp(4rem, 8vw, 7rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
                 03
               </div>
