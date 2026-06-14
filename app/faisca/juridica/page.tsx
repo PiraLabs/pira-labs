@@ -529,8 +529,8 @@ export default function FaiscaJuridicaPage() {
           <div
             style={{
               maxWidth: "720px",
-              marginTop: "64px",
-              paddingTop: "48px",
+              marginTop: "40px",
+              paddingTop: "32px",
               borderTop: "1px solid rgba(245,245,242,0.15)",
             }}
           >
