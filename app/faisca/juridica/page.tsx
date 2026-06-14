@@ -529,9 +529,8 @@ export default function FaiscaJuridicaPage() {
           <div
             style={{
               maxWidth: "720px",
-              marginTop: "24px",
+              marginTop: "0px",
               paddingTop: "32px",
-              borderTop: "1px solid rgba(245,245,242,0.15)",
             }}
           >
             <p style={{ ...EYEBROW, color: "#e8e0d6", marginBottom: "24px" }}>
