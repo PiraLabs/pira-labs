@@ -116,6 +116,9 @@ export default function ImersaEmIaPage() {
       {/* I2 · O que é + Ficha técnica + CTA (Sand) */}
       <section style={{ backgroundColor: '#E8E0D6' }} className="py-16 md:py-24">
         <div className="container-site">
+          <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A5568", marginBottom: "24px" }}>
+            O QUE É
+          </p>
           <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#05262e", maxWidth: "680px", marginBottom: "40px" }}>
             Saber o que é IA é diferente de saber o que ela faz nos seus processos específicos. A Imersão em IA não usa exemplos genéricos. Trabalha sobre os processos, os documentos e os casos reais da empresa, nos três blocos de trabalho.
           </p>
@@ -177,7 +180,7 @@ export default function ImersaEmIaPage() {
 
             {/* Sessão 1 */}
             <div style={{ display: "grid", gridTemplateColumns: "120px 1fr", gap: "0 32px", borderBottom: "1px solid rgba(245,245,242,0.12)", paddingBottom: "40px", marginBottom: "40px", alignItems: "start" }}>
-              <div style={{ fontSize: "clamp(4rem, 8vw, 7rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
+              <div style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
                 01
               </div>
               <div>
@@ -192,7 +195,7 @@ export default function ImersaEmIaPage() {
 
             {/* Sessão 2 */}
             <div style={{ display: "grid", gridTemplateColumns: "120px 1fr", gap: "0 32px", borderBottom: "1px solid rgba(245,245,242,0.12)", paddingBottom: "40px", marginBottom: "40px", alignItems: "start" }}>
-              <div style={{ fontSize: "clamp(4rem, 8vw, 7rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
+              <div style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
                 02
               </div>
               <div>
@@ -207,7 +210,7 @@ export default function ImersaEmIaPage() {
 
             {/* Sessão 3 */}
             <div style={{ display: "grid", gridTemplateColumns: "120px 1fr", gap: "0 32px", alignItems: "start" }}>
-              <div style={{ fontSize: "clamp(4rem, 8vw, 7rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
+              <div style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
                 03
               </div>
               <div>
