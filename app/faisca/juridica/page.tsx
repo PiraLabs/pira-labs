@@ -504,7 +504,7 @@ export default function FaiscaJuridicaPage() {
             ].map(({ q, a }, i, arr) => (
               <details
                 key={q}
-                style={{ borderBottom: i < arr.length - 1 ? "1px solid rgba(245,245,242,0.12)" : "none" }}
+                style={{ borderBottom: "1px solid rgba(245,245,242,0.12)" }}
               >
                 <summary
                   style={{
@@ -512,7 +512,7 @@ export default function FaiscaJuridicaPage() {
                     color: "#F5F5F2",
                     fontSize: "16px",
                     fontWeight: 600,
-                    padding: "20px 0 0 0",
+                    padding: "20px 0",
                     listStyle: "none",
                   }}
                 >
@@ -529,7 +529,7 @@ export default function FaiscaJuridicaPage() {
           <div
             style={{
               maxWidth: "720px",
-              marginTop: "40px",
+              marginTop: "24px",
               paddingTop: "32px",
               borderTop: "1px solid rgba(245,245,242,0.15)",
             }}
