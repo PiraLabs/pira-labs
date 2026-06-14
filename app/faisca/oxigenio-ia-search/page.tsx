@@ -145,12 +145,10 @@ export default function OxigenioIASearchPage() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <a
               href="/contato?origem=oxigenio-ia-search"
-              className="font-body text-[13px] font-semibold uppercase tracking-wider px-6 py-3 border-2 inline-block"
+              className="font-body text-[13px] font-semibold uppercase tracking-wider px-6 py-3 inline-block"
               style={{
-                color: '#05262e',
-                borderColor: '#05262e',
-                boxShadow: '2px 2px 0px #05262e',
-                textDecoration: 'none',
+                backgroundColor: '#05262e',
+                color: '#F5F5F2',
               }}
             >
               Aplicar agora
@@ -159,7 +157,7 @@ export default function OxigenioIASearchPage() {
               className="font-body"
               style={{ color: '#05262e', fontSize: '0.8125rem' }}
             >
-              5 vagas Fast · 3 vagas Full. Respondemos em até 24h.
+              5 vagas Fast · 3 vagas Full. Respondemos em até 1 dia útil.
             </p>
           </div>
         </div>
@@ -183,7 +181,7 @@ export default function OxigenioIASearchPage() {
               fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             }}
           >
-            Um diagnóstico. Não uma solução.
+            Um <span style={{ color: '#eb5c2e' }}>diagnóstico</span>. Não uma solução.
           </h2>
           <div
             className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0"
@@ -203,16 +201,19 @@ export default function OxigenioIASearchPage() {
                 O Oxigênio IA Search é um diagnóstico de presença em plataformas de
                 inteligência artificial: ChatGPT, Claude, Gemini e Perplexity. A Pira
                 Labs executa queries estruturadas com rodadas metodológicas de coleta,
-                classifica as respostas e entrega uma leitura de onde a sua empresa
-                aparece, como aparece e o que está impedindo que apareça melhor.
+                classifica as respostas e entrega{' '}
+                <strong style={{ fontWeight: 600 }}>uma leitura de onde a sua empresa
+                aparece, como aparece e o que está impedindo que apareça melhor.</strong>
               </p>
               <p
                 className="font-body font-light leading-relaxed"
                 style={{ color: '#F5F5F2', fontSize: '1rem' }}
               >
-                O produto termina com evidência literal, não com impressão. Você recebe
-                o que as plataformas responderam, o gap identificado com causa específica
-                e os próximos passos derivados da leitura, não de suposição.
+                O produto termina com{' '}
+                <strong style={{ fontWeight: 600 }}>evidência literal, não com impressão.</strong>{' '}
+                Você recebe o que as plataformas responderam, o gap identificado com
+                causa específica e os próximos passos derivados da leitura, não de
+                suposição.
               </p>
             </div>
             {/* Col 2 — O que não é */}
@@ -227,9 +228,11 @@ export default function OxigenioIASearchPage() {
                 className="font-body font-light leading-relaxed"
                 style={{ color: '#e8e0d6', fontSize: '1rem' }}
               >
-                O Oxigênio IA Search não é SEO técnico. Não otimiza meta tags, não
-                rastreia backlinks e não ajusta estrutura de código. Não é gestão de
-                mídia paga. Não é criação de conteúdo. Não é gestão de redes sociais.
+                <strong style={{ fontWeight: 600 }}>O Oxigênio IA Search não é SEO
+                técnico.</strong> Não otimiza meta tags, não rastreia backlinks e não
+                ajusta estrutura de código.{' '}
+                <strong style={{ fontWeight: 600 }}>Não é gestão de mídia paga. Não
+                é criação de conteúdo. Não é gestão de redes sociais.</strong>{' '}
                 Se o que você precisa é de qualquer uma dessas coisas, o Oxigênio IA
                 Search não é o produto certo.
               </p>
@@ -252,11 +255,11 @@ export default function OxigenioIASearchPage() {
           <h2
             className="font-display font-normal leading-tight mb-8"
             style={{
-              color: '#eb5c2e',
+              color: '#F5F5F2',
               fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             }}
           >
-            Quem chega aqui e por quê.
+            Quem <span style={{ color: '#eb5c2e' }}>Chega</span> aqui e por quê.
           </h2>
           <p
             className="font-body font-light leading-relaxed mb-12 max-w-3xl"
@@ -284,23 +287,26 @@ export default function OxigenioIASearchPage() {
                   className="font-body font-light leading-relaxed"
                   style={{ color: '#F5F5F2', fontSize: '1rem' }}
                 >
-                  Você sente que a empresa não aparece onde o cliente pesquisa, mas não
-                  tem evidência concreta para sustentar essa percepção, ou para refutá-la.
+                  Você sente que a empresa não aparece onde o cliente pesquisa, mas{' '}
+                  <strong style={{ fontWeight: 600 }}>não tem evidência concreta</strong>{' '}
+                  para sustentar essa percepção, ou para refutá-la.
                 </p>
                 <p
                   className="font-body font-light leading-relaxed"
                   style={{ color: '#F5F5F2', fontSize: '1rem' }}
                 >
-                  Você investiu em site, conteúdo ou presença digital e não consegue
-                  explicar por que o retorno não chegou. Quer entender o que as
-                  plataformas de IA estão lendo sobre o seu negócio antes de investir mais.
+                  Você investiu em site, conteúdo ou presença digital e{' '}
+                  <strong style={{ fontWeight: 600 }}>não consegue explicar por que
+                  o retorno não chegou.</strong> Quer entender o que as plataformas
+                  de IA estão lendo sobre o seu negócio antes de investir mais.
                 </p>
                 <p
                   className="font-body font-light leading-relaxed"
                   style={{ color: '#F5F5F2', fontSize: '1rem' }}
                 >
-                  Você está em movimento: rebrand, novo produto, expansão de setor. Quer
-                  saber de qual ponto está partindo antes de agir.
+                  Você está em movimento: rebrand, novo produto, expansão de setor.{' '}
+                  <strong style={{ fontWeight: 600 }}>Quer saber de qual ponto está
+                  partindo antes de agir.</strong>
                 </p>
               </div>
             </div>
@@ -368,7 +374,7 @@ export default function OxigenioIASearchPage() {
               fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             }}
           >
-            Fast ou Full: qual leitura você precisa agora?
+            Fast ou Full: qual <span style={{ color: '#eb5c2e' }}>leitura</span> você precisa agora?
           </h2>
           <p
             className="font-body font-light leading-relaxed mb-12 max-w-3xl"
@@ -407,7 +413,7 @@ export default function OxigenioIASearchPage() {
                   />
                   <th
                     className="font-body font-semibold text-left py-3 pr-8"
-                    style={{ color: '#eb5c2e', fontSize: '1rem', borderBottom: '1px solid rgba(232,224,214,0.2)' }}
+                    style={{ color: '#F5F5F2', fontSize: '1rem', borderBottom: '1px solid rgba(232,224,214,0.2)' }}
                   >
                     Fast
                   </th>
@@ -477,11 +483,11 @@ export default function OxigenioIASearchPage() {
           <h2
             className="font-display font-normal leading-tight mb-16"
             style={{
-              color: '#C4421A',
+              color: '#05262e',
               fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             }}
           >
-            Do formulário ao diagnóstico.
+            Do formulário ao <span style={{ color: '#C4421A' }}>diagnóstico</span>.
           </h2>
           <div className="flex flex-col gap-10">
             {[
@@ -563,7 +569,7 @@ export default function OxigenioIASearchPage() {
               fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             }}
           >
-            Quem analisa é quem entrega.
+            Quem <span style={{ color: '#eb5c2e' }}>analisa</span> é quem entrega.
           </h2>
           <p
             className="font-body font-light leading-relaxed mb-12 max-w-3xl"
@@ -666,7 +672,7 @@ export default function OxigenioIASearchPage() {
               fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             }}
           >
-            Escolha a versão e aplique.
+            Escolha a versão e <span style={{ color: '#eb5c2e' }}>aplique</span>.
           </h2>
           <div style={{ overflowX: 'auto', marginBottom: '3rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', maxWidth: '36rem' }}>
@@ -681,7 +687,7 @@ export default function OxigenioIASearchPage() {
                   <th style={{ borderBottom: '1px solid rgba(232,224,214,0.2)', paddingBottom: '0.75rem', width: '40%' }} />
                   <th
                     className="font-body font-semibold text-left pb-3"
-                    style={{ color: '#eb5c2e', fontSize: '1rem', borderBottom: '1px solid rgba(232,224,214,0.2)' }}
+                    style={{ color: '#F5F5F2', fontSize: '1rem', borderBottom: '1px solid rgba(232,224,214,0.2)' }}
                   >
                     Fast
                   </th>
@@ -764,7 +770,8 @@ export default function OxigenioIASearchPage() {
               fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             }}
           >
-            O Oxigênio IA Search termina num próximo passo, não num relatório.
+            O <span style={{ color: '#eb5c2e' }}>Oxigênio</span> IA Search termina
+            num próximo passo, não num relatório.
           </h2>
           <p
             className="font-body font-light leading-relaxed mb-12 max-w-3xl"
@@ -833,7 +840,7 @@ export default function OxigenioIASearchPage() {
               fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             }}
           >
-            O que você ainda quer saber antes de aplicar.
+            O que você ainda quer <span style={{ color: '#C4421A' }}>saber</span> antes de aplicar.
           </h2>
           <div>
             {[
@@ -891,7 +898,7 @@ export default function OxigenioIASearchPage() {
       </main>
       <FinalCTA
         theme="dark"
-        heading="Pronto para saber onde sua empresa está partindo?"
+        heading="Pronto para saber o que seu cliente encontra quando pesquisa?"
         origin="oxigenio-ia-search"
       />
     </>
