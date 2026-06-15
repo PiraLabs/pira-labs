@@ -1,305 +1,742 @@
-export const dynamic = 'force-static';
-
-import type { Metadata } from "next";
-import { Section } from "@/components/shared/Section";
-import { PageHeader } from "@/components/shared/PageHeader";
-import { ProcessSteps } from "@/components/shared/ProcessSteps";
-import { FAQ } from "@/components/shared/FAQ";
-import { CTAButton } from "@/components/shared/CTAButton";
-import { LegalNotice } from "@/components/shared/LegalNotice";
-import { ORIGINS } from "@/lib/constants";
-import { serviceSchema, faqPageSchema } from "@/lib/schemas/service";
-
-const schemas = {
-  breadcrumb: {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": "https://piralabs.com.br/inspira/juridico#breadcrumb",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://piralabs.com.br" },
-      { "@type": "ListItem", position: 2, name: "Inspira", item: "https://piralabs.com.br/inspira" },
-      { "@type": "ListItem", position: 3, name: "INSPIRA Jurídico", item: "https://piralabs.com.br/inspira/juridico" },
-    ],
-  },
-  service: serviceSchema({
-    name: "INSPIRA Jurídico",
-    description:
-      "Diagnóstico operacional de como o escritório ou departamento jurídico usa IA, onde está a exposição real e o que fazer primeiro. Entrega mapeamento de uso atual, matriz de risco, política mínima de uso de IA e plano de ação priorizado.",
-    url: "https://piralabs.com.br/inspira/juridico",
-    serviceType: "Diagnóstico de governança de IA para o setor jurídico",
-  }),
-};
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: {
-    absolute:
-      "INSPIRA Jurídico · Diagnóstico de uso de IA para escritórios · Pira Labs",
-  },
-  description:
-    "Diagnóstico de 2 a 3 semanas. Mapeamos como o escritório usa IA hoje, onde está a exposição, e entregamos política mínima e plano de ação priorizado.",
+  title: 'INSPIRA Jurídico — Diagnóstico de IA para escritórios | Pira Labs',
+  description: 'O INSPIRA Jurídico é o diagnóstico da Pira Labs para escritórios e departamentos jurídicos: mapeia como o time usa IA hoje, onde pode estar exposto e entrega política mínima e plano de ação em 2 a 3 semanas. Conduzido por Gabriela Aguiar e Celso Gama.',
   alternates: {
-    canonical: "https://piralabs.com.br/inspira/juridico",
+    canonical: 'https://piralabs.com.br/inspira/juridico',
   },
   robots: { index: true, follow: true },
   openGraph: {
-    title:
-      "INSPIRA Jurídico · Diagnóstico de risco de IA para escritórios · Pira Labs",
-    description:
-      "Mapeamos como o escritório usa IA hoje, onde está a exposição, e entregamos política mínima e plano de ação priorizado.",
-    url: "https://piralabs.com.br/inspira/juridico",
-    images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
+    title: 'INSPIRA Jurídico — Diagnóstico de IA para escritórios | Pira Labs',
+    description: 'O INSPIRA Jurídico é o diagnóstico da Pira Labs para escritórios e departamentos jurídicos: mapeia como o time usa IA hoje, onde pode estar exposto e entrega política mínima e plano de ação em 2 a 3 semanas.',
+    url: 'https://piralabs.com.br/inspira/juridico',
+    images: [{ url: 'https://piralabs.com.br/piralabs-og-image.png', width: 1200, height: 630, alt: 'Pira Labs' }],
   },
-};
-
-const breadcrumbs = [
-  { label: "Home", href: "/" },
-  { label: "Inspira", href: "/inspira" },
-  { label: "Jurídico" },
-];
-
-const entregas = [
-  {
-    title: "Mapeamento de uso atual",
-    description:
-      "Levantamento de como a equipe usa IA hoje: quais ferramentas, em quais planos, com quais tipos de dado, com qual frequência. Feito via entrevistas estruturadas e análise documental.",
-  },
-  {
-    title: "Matriz de risco por tipo de uso",
-    description:
-      "Classificação dos usos identificados em três zonas: permitido, permitido com controle (anonimização, revisão humana, ferramentas adequadas), e exposto sem política específica.",
-  },
-  {
-    title: "Política mínima de uso de IA",
-    description:
-      "Documento prático para o escritório: o que o time pode fazer com IA, o que não pode sem protocolo específico, como anonimizar documentos antes de inserir em ferramenta externa, quais ferramentas e planos são adequados para uso com dados de cliente, quem aprova exceções. Calibrada para o perfil do escritório, não genérica.",
-  },
-  {
-    title: "Plano de ação priorizado",
-    description:
-      "Lista de 5 a 10 ações ordenadas por urgência e esforço. Onde o escritório tem exposição imediata. Onde há oportunidade de ganho rápido com IA bem aplicada. O que pode esperar o próximo ciclo.",
-  },
-  {
-    title: "Sessão de leitura conjunta",
-    description:
-      "Encontro de 45 a 60 minutos com os decisores para apresentar o diagnóstico, discutir a política mínima e definir o próximo passo.",
-  },
-];
-
-const faqItems = [
-  {
-    question: "Isso é consultoria jurídica?",
-    answer:
-      "Não. É diagnóstico operacional de governança de uso de IA. Não emite parecer jurídico, não define estratégia de caso e não substitui advogado habilitado.",
-  },
-  {
-    question: "Quanto tempo leva?",
-    answer:
-      "2 a 3 semanas da abertura até a sessão de leitura conjunta.",
-  },
-  {
-    question: "Como é a precificação?",
-    answer:
-      "R$12.500 a R$26.000 conforme tamanho do escritório e escopo do mapeamento. Sob consulta e disponibilidade.",
-  },
-  {
-    question: "O que acontece depois?",
-    answer:
-      "Você decide. O INSPIRA Jurídico entrega o diagnóstico e o plano. Para quem quer apoio na execução, o próximo passo natural é o TRANSPIRA Jurídico.",
-  },
-  {
-    question: "Vocês assinam NDA?",
-    answer:
-      "Sempre. NDA assinado antes de qualquer conversa com a equipe ou acesso a documentos.",
-  },
-];
-
-const faqSchema = faqPageSchema(faqItems);
+}
 
 export default function InspiraJuridicoPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://piralabs.com.br/inspira/juridico',
+        url: 'https://piralabs.com.br/inspira/juridico',
+        name: 'INSPIRA Jurídico — Diagnóstico de IA para escritórios',
+        description: 'O INSPIRA Jurídico é o diagnóstico da Pira Labs para escritórios e departamentos jurídicos: mapeia como o time usa IA hoje, onde pode estar exposto e entrega política mínima e plano de ação em 2 a 3 semanas.',
+        inLanguage: 'pt-BR',
+        isPartOf: { '@id': 'https://piralabs.com.br' },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://piralabs.com.br' },
+          { '@type': 'ListItem', position: 2, name: 'INSPIRA', item: 'https://piralabs.com.br/inspira' },
+          { '@type': 'ListItem', position: 3, name: 'INSPIRA Jurídico', item: 'https://piralabs.com.br/inspira/juridico' },
+        ],
+      },
+      {
+        '@type': 'Service',
+        name: 'INSPIRA Jurídico',
+        description: 'Diagnóstico operacional de como o escritório ou departamento jurídico usa IA, onde pode estar exposto e o que fazer primeiro. Entrega mapeamento de uso atual, matriz de risco, política mínima de uso de IA e plano de ação priorizado em 2 a 3 semanas.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Pira Labs',
+          url: 'https://piralabs.com.br',
+        },
+        areaServed: 'BR',
+        serviceType: 'Diagnóstico jurídico operacional de IA',
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Isso é consultoria jurídica?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Não. O INSPIRA Jurídico é diagnóstico operacional de como o escritório usa IA e onde pode estar exposto. Não emite parecer. Não define estratégia de caso. Não substitui advogada ou advogado habilitados. A Pira Labs não presta consultoria jurídica. O que o INSPIRA Jurídico entrega é mapeamento, classificação de exposição por tipo de uso, minuta operacional de política mínima e plano de ação — tudo para ser validado e implementado com o suporte jurídico interno ou externo do escritório.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quanto tempo leva?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'De 2 a 3 semanas a partir do início do diagnóstico. O prazo começa após a conversa de calibragem e assinatura do NDA. Cada etapa tem aprovação dos decisores antes de avançar. O prazo final depende da disponibilidade de quem decide e da profundidade necessária para o perfil do escritório.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Como é a precificação?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sob consulta após a conversa inicial. O investimento depende do tamanho do escritório, do número de áreas e da profundidade necessária. Não há valor fixo nem tabela pública. A conversa de calibragem define o escopo antes de qualquer proposta.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Como vocês tratam os dados do escritório durante o diagnóstico?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'O NDA é assinado antes de qualquer acesso a documentos, sistemas ou informações do escritório. Durante o diagnóstico, a Pira Labs acessa apenas o que é necessário para cada etapa específica, com aprovação dos decisores antes de avançar. Nenhum dado identificável do escritório ou de seus clientes entra na base setorial da Pira Labs. O que alimenta essa base são padrões anonimizados e aprendizados não confidenciais — nunca dados, documentos ou informações que possam ser atribuídas ao cliente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'O que acontece depois?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'O cliente recebe o diagnóstico completo com os cinco entregáveis. O que o escritório faz com ele é decisão própria. O diagnóstico é de propriedade do cliente e pode ser executado internamente ou com qualquer parceiro. Para quem quer ir além do diagnóstico e implementar o que foi mapeado, existe o TRANSPIRA Jurídico. Mas não é compromisso antecipado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Vocês assinam NDA?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sempre. O NDA é assinado antes de qualquer conversa com a equipe e antes de qualquer acesso a documentos, sistemas ou informações do escritório. Confidencialidade não é protocolo. É condição de trabalho. Se o seu contexto exige cláusulas específicas além do NDA padrão, mencione na conversa de calibragem.',
+            },
+          },
+        ],
+      },
+    ],
+  }
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.breadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.service) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
-      {/* INSPIRA-JUR-1 · Header */}
-      <div className="bg-ink">
-        <PageHeader
-          breadcrumbs={breadcrumbs}
-          h1="INSPIRA Jurídico"
-          subtitle="Diagnóstico de como o escritório usa IA hoje, onde está exposto e o que fazer primeiro."
-        />
-      </div>
+      {/* BREADCRUMB */}
+      <nav aria-label="Breadcrumb" style={{ backgroundColor: '#e8e0d6', padding: '12px 80px' }}>
+        <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: 0, padding: 0, fontSize: '0.75rem', color: '#05262e' }}>
+          <li><a href="/" style={{ color: '#05262e', textDecoration: 'none' }}>Home</a></li>
+          <li style={{ opacity: 0.4 }}>/</li>
+          <li><a href="/inspira" style={{ color: '#05262e', textDecoration: 'none' }}>INSPIRA</a></li>
+          <li style={{ opacity: 0.4 }}>/</li>
+          <li style={{ opacity: 0.6 }}>Jurídico</li>
+        </ol>
+      </nav>
 
-      {/* INSPIRA-JUR-2 · O problema */}
-      <Section variant="default" paddingY="lg">
-        <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
-          O que a maioria dos escritórios ainda não sabe sobre si mesmo
-        </h2>
-        <div className="max-w-3xl space-y-4">
-          <p className="text-off-white/85 font-body leading-relaxed">
-            Saber que o time usa IA é diferente de saber o que o time insere
-            nas ferramentas.
+      {/* S1 — HERO | Sand */}
+      <section style={{ backgroundColor: '#e8e0d6', padding: '120px 80px' }}>
+        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+          <p style={{
+            fontFamily: 'AtypText, sans-serif',
+            fontWeight: 600,
+            fontSize: '0.625rem',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            color: '#1A5568',
+            marginBottom: '24px',
+          }}>
+            INSPIRA Jurídico · Diagnóstico de IA para escritórios e departamentos jurídicos
           </p>
-          <p className="text-off-white/85 font-body leading-relaxed">
-            A maioria dos sócios e heads jurídicos já percebeu que IA está na
-            rotina do escritório. Mas quando perguntam com detalhe, a resposta
-            costuma ser vaga: &quot;a gente usa para pesquisa&quot;, &quot;para rascunho de
-            emails&quot;, &quot;para resumir documentos&quot;.
+          <h1 style={{
+            fontFamily: 'AtypDisplay, sans-serif',
+            fontWeight: 600,
+            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+            lineHeight: 1.1,
+            color: '#05262e',
+            marginBottom: '32px',
+            maxWidth: '800px',
+          }}>
+            O que a maioria dos escritórios ainda não sabe sobre{' '}
+            <span style={{ color: '#C4421A' }}>si mesmo</span>.
+          </h1>
+          <p style={{
+            fontFamily: 'AtypText, sans-serif',
+            fontWeight: 300,
+            fontSize: '1.125rem',
+            lineHeight: 1.6,
+            color: '#05262e',
+            maxWidth: '600px',
+            marginBottom: '40px',
+          }}>
+            O INSPIRA Jurídico mapeia como o escritório ou departamento jurídico usa IA hoje, onde pode estar exposto e o que fazer primeiro. Conduzido por Gabriela Aguiar e Celso Gama em 2 a 3 semanas. O NDA é assinado antes de qualquer conversa com a equipe, acesso a documentos, sistemas ou informações sensíveis.
           </p>
-          <p className="text-off-white/85 font-body leading-relaxed">
-            O que raramente está mapeado é quais ferramentas, em quais planos,
-            com quais dados, com qual critério de revisão, com qual controle de
-            acesso e com qual base legal. Sem esse mapeamento, o escritório não
-            tem governança. Tem improviso individual.
-          </p>
-          <p className="text-off-white/85 font-body leading-relaxed">
-            O improviso tem custo. Dependendo da ferramenta, do plano
-            contratado e das configurações, dado de cliente inserido em
-            ferramenta de IA pode ser usado para treinamento, retenção ou
-            melhoria do serviço. Peça com informação estratégica colada em
-            ferramenta pública pode vazar contexto confidencial. Decisão
-            jurídica tomada com base em output de IA sem revisão técnica pode
-            ser contestada.
-          </p>
-          <p className="text-off-white/85 font-body leading-relaxed">
-            O INSPIRA Jurídico mapeia isso. Com precisão, sem julgamento e com
-            plano de ação concreto ao final.
-          </p>
-        </div>
-      </Section>
-
-      {/* INSPIRA-JUR-3 · O que é */}
-      <Section variant="highlighted" paddingY="lg">
-        <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
-          O que é o INSPIRA Jurídico
-        </h2>
-        <div className="max-w-3xl space-y-4">
-          <p className="text-off-white/85 font-body leading-relaxed">
-            Diagnóstico conduzido pela Pira Labs em 2 a 3 semanas. Mapeamos
-            como o escritório ou departamento jurídico usa IA hoje, onde está a
-            exposição real, e entregamos política mínima de uso de IA e plano
-            de ação priorizado.
-          </p>
-          <p className="text-off-white/85 font-body leading-relaxed">
-            É o método INSPIRA da Pira Labs aplicado com lente jurídica. As
-            seis camadas do INSPIRA com lente jurídica: confidencialidade,
-            sigilo profissional, LGPD aplicada ao tratamento de dados de
-            clientes, responsabilidade técnica do advogado, governança de uso
-            de IA e exposição operacional do escritório.
-          </p>
-          <p className="text-off-white/85 font-body leading-relaxed">
-            Cada projeto da vertical jurídica alimenta a base própria de
-            conhecimento setorial que a Pira Labs está construindo desde 2026.
-            Isso significa que cada novo INSPIRA Jurídico chega ao cliente mais
-            calibrado do que o anterior, com referências reais do mercado
-            jurídico brasileiro acumuladas ao longo do tempo.
-          </p>
-          <p className="text-off-white/85 font-body leading-relaxed">
-            Não é auditoria de conformidade. Não é consultoria jurídica. É
-            diagnóstico operacional de como o escritório lida com IA hoje, e o
-            que precisa mudar para operar com menos exposição e mais
-            produtividade.
-          </p>
-        </div>
-      </Section>
-
-      {/* INSPIRA-JUR-4 · O que você recebe */}
-      <Section variant="default" paddingY="lg">
-        <div className="max-w-2xl">
-          <ProcessSteps heading="O que você recebe" steps={entregas} />
-        </div>
-      </Section>
-
-      {/* INSPIRA-JUR-5 · Para quem faz sentido */}
-      <Section variant="highlighted" paddingY="lg">
-        <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
-          Para quem faz sentido
-        </h2>
-        <div className="max-w-3xl space-y-3 mb-10">
-          <p className="text-off-white/85 font-body leading-relaxed">
-            Sócios e heads jurídicos que sabem que a equipe usa IA mas não têm
-            clareza de onde estão expostos.
-          </p>
-          <p className="text-off-white/85 font-body leading-relaxed">
-            Escritórios em crescimento que estão contratando novos advogados e
-            estagiários e querem estabelecer critérios claros antes de escalar
-            o problema.
-          </p>
-          <p className="text-off-white/85 font-body leading-relaxed">
-            Departamentos jurídicos de empresas com múltiplas áreas usando IA
-            de forma descentralizada.
-          </p>
-          <p className="text-off-white/85 font-body leading-relaxed">
-            Escritórios que contrataram o Faísca Jurídica e querem ir além da
-            educação para o diagnóstico estruturado.
-          </p>
-        </div>
-
-        <div className="border-l-2 border-off-white/20 pl-6 max-w-2xl">
-          <p className="text-xs font-body font-semibold uppercase tracking-widest text-off-white/40 mb-2">
-            Quem não deveria contratar
-          </p>
-          <p className="text-off-white/60 font-body text-sm leading-relaxed">
-            Quem busca laudo de conformidade LGPD ou certificação de
-            compliance. O INSPIRA Jurídico entrega governança operacional.
-            Adequação legal completa é trabalho de advogado especializado em
-            proteção de dados.
-          </p>
-        </div>
-      </Section>
-
-      {/* INSPIRA-JUR-6 · Quem conduz */}
-      <Section variant="default" paddingY="lg">
-        <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
-          Quem conduz
-        </h2>
-        <div className="max-w-3xl space-y-4">
-          <p className="text-off-white/85 font-body leading-relaxed">
-            Gabriela Aguiar conduz a leitura institucional. Celso Gama,
-            bacharelando em Direito (Mackenzie) com Applied AI Certificate
-            Program (MIT, em andamento, 2026), conduz a leitura de governança
-            e exposição operacional.
-          </p>
-          <p className="text-off-white/85 font-body leading-relaxed">
-            Os dois juntos, como em todo diagnóstico da Pira Labs. Sem equipe
-            júnior entre o dado e a interpretação.
-          </p>
-        </div>
-      </Section>
-
-      {/* INSPIRA-JUR-7 · FAQ */}
-      <Section variant="highlighted" paddingY="lg">
-        <FAQ heading="Perguntas frequentes" items={faqItems} />
-      </Section>
-
-      {/* INSPIRA-JUR-8 · CTAs */}
-      <section className="bg-ink section-padding">
-        <div className="container-site text-center">
-          <p className="font-display text-2xl md:text-3xl italic text-off-white/70 mb-8 leading-snug max-w-2xl mx-auto">
-            Saber onde está a exposição já é metade do trabalho. A outra metade
-            é decidir o que fazer com isso.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <CTAButton
-              variant="primary"
-              href="/contato"
-              origin={ORIGINS.INSPIRA_JURIDICO}
+          <div>
+            <a
+              href="/contato?origem=inspira-juridico"
+              style={{
+                display: 'inline-block',
+                fontFamily: 'AtypText, sans-serif',
+                fontWeight: 600,
+                fontSize: '0.8125rem',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                color: '#F5F5F2',
+                backgroundColor: '#05262e',
+                padding: '14px 28px',
+                textDecoration: 'none',
+              }}
             >
-              Respire
-            </CTAButton>
-            <CTAButton variant="secondary" href="/transpira/juridico">
-              Conheça o TRANSPIRA Jurídico
-            </CTAButton>
-          </div>
-          <p className="mt-4 text-sm text-off-white/60 font-body">
-            Conversa inicial sem compromisso. Respondemos em até 2 dias úteis.
-          </p>
-          <div className="max-w-2xl mx-auto mt-8">
-            <LegalNotice variant="inspira_juridico" />
+              Conversar com a Pira Labs
+            </a>
+            <p style={{
+              fontFamily: 'AtypText, sans-serif',
+              fontWeight: 300,
+              fontSize: '0.75rem',
+              color: '#05262e',
+              opacity: 0.6,
+              marginTop: '12px',
+            }}>
+              Investimento sob consulta. A conversa de calibragem vem antes da proposta.
+            </p>
           </div>
         </div>
       </section>
+
+      {/* S2 — O PROBLEMA | Ink */}
+      <section style={{ backgroundColor: '#05262e', padding: '120px 80px' }}>
+        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+          <p style={{
+            fontFamily: 'AtypText, sans-serif',
+            fontWeight: 600,
+            fontSize: '0.625rem',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            color: '#e8e0d6',
+            marginBottom: '24px',
+          }}>
+            O que está em jogo
+          </p>
+          <h2 style={{
+            fontFamily: 'AtypDisplay, sans-serif',
+            fontWeight: 400,
+            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+            lineHeight: 1.15,
+            color: '#F5F5F2',
+            marginBottom: '48px',
+            maxWidth: '700px',
+          }}>
+            IA já está na rotina. O <span style={{ color: '#eb5c2e' }}>mapeamento</span> ainda não.
+          </h2>
+          <div style={{ maxWidth: '720px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
+            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
+              A maioria dos sócios e heads jurídicos já percebeu que IA está na rotina do escritório. Mas quando perguntam com detalhe, a resposta costuma ser vaga: &#8220;a gente usa para pesquisa&#8221;, &#8220;para rascunho de emails&#8221;, &#8220;para resumir documentos&#8221;. O que raramente está mapeado é <strong style={{ fontWeight: 600 }}>quais ferramentas, em quais planos, com quais dados, com qual critério de revisão, com qual controle de acesso e se há validação jurídica, critério de governança e registro do uso.</strong>
+            </p>
+            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
+              Dependendo da ferramenta, do plano contratado e das configurações, dado de cliente inserido em ferramenta de IA pode ser usado para treinamento, retenção ou melhoria do serviço. Peça com informação estratégica colada em ferramenta pública pode vazar contexto confidencial. <strong style={{ fontWeight: 600 }}>Decisão jurídica tomada com base em output de IA sem revisão técnica pode ser contestada.</strong> O improviso tem custo. E o custo raramente aparece antes de ser tarde.
+            </p>
+            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
+              Em um escritório de advocacia, a Pira Labs identificou que o trabalho estimado internamente em 400 horas mensais de equipe estava sendo executado com gargalo de método, não de capacidade. Com processo redesenhado, o mesmo trabalho passou a rodar em 36 horas mensais, liberando R$160 mil de capacidade adicional de faturamento por mês com o mesmo time. O diagnóstico foi o que tornou essa leitura possível.
+            </p>
+            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
+              O INSPIRA Jurídico mapeia isso. Com precisão, sem julgamento e com plano de ação concreto ao final.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* S3 — O QUE É O INSPIRA JURÍDICO | Teal */}
+      <section style={{ backgroundColor: '#004757', padding: '120px 80px' }}>
+        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+          <p style={{
+            fontFamily: 'AtypText, sans-serif',
+            fontWeight: 600,
+            fontSize: '0.625rem',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            color: '#e8e0d6',
+            marginBottom: '24px',
+          }}>
+            O método
+          </p>
+          <h2 style={{
+            fontFamily: 'AtypDisplay, sans-serif',
+            fontWeight: 400,
+            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+            lineHeight: 1.15,
+            color: '#F5F5F2',
+            marginBottom: '48px',
+            maxWidth: '700px',
+          }}>
+            Seis camadas. Lente <span style={{ color: '#eb5c2e' }}>jurídica</span>.
+          </h2>
+          <div style={{ maxWidth: '720px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
+            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
+              O INSPIRA Jurídico é o diagnóstico da Pira Labs aplicado com lente jurídica: mapeia como o escritório ou departamento jurídico usa IA hoje, onde pode estar exposto e entrega cinco entregáveis concretos em 2 a 3 semanas. Não é consultoria jurídica. Não é adequação legal completa. É diagnóstico operacional de como o time lida com IA e o que precisa mudar para operar com menos exposição e mais produtividade.
+            </p>
+            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
+              O método são as seis camadas do{' '}
+              <a href="/inspira" style={{ color: '#F5F5F2', textDecoration: 'underline' }}>INSPIRA</a>{' '}
+              com foco nas dimensões específicas do contexto jurídico: confidencialidade e sigilo profissional, dimensões operacionais associadas à Lei Geral de Proteção de Dados no tratamento de dados de clientes sempre sujeitas à validação jurídica do cliente, responsabilidade técnica da advogada ou do advogado, governança de uso de IA na operação do escritório e exposição operacional por tipo de ferramenta e plano contratado.
+            </p>
+            <div style={{ borderLeft: '2px solid rgba(232,224,214,0.3)', paddingLeft: '24px', marginTop: '8px' }}>
+              <p style={{
+                fontFamily: 'AtypText, sans-serif',
+                fontWeight: 600,
+                fontSize: '0.75rem',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                color: '#e8e0d6',
+                marginBottom: '12px',
+              }}>
+                Base setorial própria
+              </p>
+              <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.9375rem', lineHeight: 1.7, color: '#e8e0d6' }}>
+                A Pira Labs constrói uma base setorial própria a partir de padrões anonimizados e aprendizados não confidenciais observados desde 2026. Nenhum dado, documento ou informação identificável de cliente entra nessa base. Isso significa que cada novo INSPIRA Jurídico chega ao cliente mais calibrado que o anterior, com referências reais do mercado jurídico brasileiro acumuladas ao longo do tempo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* S4 — O QUE VOCÊ RECEBE | Sand */}
+      <section style={{ backgroundColor: '#e8e0d6', padding: '120px 80px' }}>
+        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+          <p style={{
+            fontFamily: 'AtypText, sans-serif',
+            fontWeight: 600,
+            fontSize: '0.625rem',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            color: '#1A5568',
+            marginBottom: '24px',
+          }}>
+            Os entregáveis
+          </p>
+          <h2 style={{
+            fontFamily: 'AtypDisplay, sans-serif',
+            fontWeight: 400,
+            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+            lineHeight: 1.15,
+            color: '#05262e',
+            marginBottom: '64px',
+            maxWidth: '700px',
+          }}>
+            Cinco entregáveis. Diagnóstico que <span style={{ color: '#C4421A' }}>orienta</span>.
+          </h2>
+          <div style={{ maxWidth: '800px', display: 'flex', flexDirection: 'column', gap: '40px' }}>
+            {[
+              {
+                titulo: 'Mapeamento de uso atual',
+                texto: 'Mapeamento de uso atual é o primeiro entregável do INSPIRA Jurídico. Levantamento de como a equipe usa IA hoje: quais ferramentas, em quais planos, com quais tipos de dado, com qual frequência. Feito via entrevistas estruturadas e análise documental. Sem suposição, sem generalização.',
+              },
+              {
+                titulo: 'Matriz de risco por tipo de uso',
+                texto: 'Matriz de risco por tipo de uso é o segundo entregável do INSPIRA Jurídico. Classificação dos usos identificados em três zonas: uso liberado pela política interna, uso condicionado a controles específicos (anonimização, revisão humana, ferramentas adequadas ao contexto), e uso não mapeado ou exposto sem política específica. O escritório sai sabendo onde pode estar exposto e por quê.',
+              },
+              {
+                titulo: 'Minuta operacional de política mínima de uso de IA',
+                texto: 'Minuta operacional de política mínima de uso de IA é o terceiro entregável do INSPIRA Jurídico. Rascunho prático para validação do jurídico responsável, DPO ou assessoria jurídica do cliente: critérios para o que pode ser autorizado, o que exige protocolo específico, como anonimizar documentos antes de inserir em ferramenta externa, quais critérios considerar para avaliar ferramentas e planos quando houver dados de cliente e quem aprova exceções. Calibrada para o perfil do escritório, não genérica.',
+              },
+              {
+                titulo: 'Plano de ação priorizado',
+                texto: 'Plano de ação priorizado é o quarto entregável do INSPIRA Jurídico. Lista de 5 a 10 ações ordenadas por urgência e esforço: onde o escritório pode ter exposição imediata, onde há oportunidade de ganho rápido com IA bem aplicada e o que pode esperar o próximo ciclo.',
+              },
+              {
+                titulo: 'Sessão de leitura conjunta',
+                texto: 'Sessão de leitura conjunta é o quinto entregável do INSPIRA Jurídico. Encontro de 45 a 60 minutos com os decisores para apresentar o diagnóstico, discutir a minuta de política mínima e definir o próximo passo. O diagnóstico é de propriedade do cliente e pode ser usado com qualquer parceiro ou internamente.',
+              },
+            ].map((item) => (
+              <div key={item.titulo} style={{ borderTop: '1px solid rgba(5,38,46,0.15)', paddingTop: '32px' }}>
+                <h3 style={{
+                  fontFamily: 'AtypDisplay, sans-serif',
+                  fontWeight: 600,
+                  fontSize: '1.125rem',
+                  color: '#05262e',
+                  marginBottom: '12px',
+                }}>
+                  {item.titulo}
+                </h3>
+                <p style={{
+                  fontFamily: 'AtypText, sans-serif',
+                  fontWeight: 300,
+                  fontSize: '1rem',
+                  lineHeight: 1.7,
+                  color: '#05262e',
+                }}>
+                  {item.texto}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* S5 — PARA QUEM É | Ink */}
+      <section style={{ backgroundColor: '#05262e', padding: '120px 80px' }}>
+        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+          <p style={{
+            fontFamily: 'AtypText, sans-serif',
+            fontWeight: 600,
+            fontSize: '0.625rem',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            color: '#e8e0d6',
+            marginBottom: '24px',
+          }}>
+            Qualificação
+          </p>
+          <h2 style={{
+            fontFamily: 'AtypDisplay, sans-serif',
+            fontWeight: 400,
+            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+            lineHeight: 1.15,
+            color: '#F5F5F2',
+            marginBottom: '64px',
+            maxWidth: '700px',
+          }}>
+            Para quem faz sentido e para quem <span style={{ color: '#eb5c2e' }}>não faz</span>.
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', maxWidth: '1000px' }}>
+
+            {/* Coluna esquerda */}
+            <div>
+              <p style={{
+                fontFamily: 'AtypText, sans-serif',
+                fontWeight: 600,
+                fontSize: '0.75rem',
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+                color: '#e8e0d6',
+                marginBottom: '32px',
+              }}>
+                Para quem é
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+                {[
+                  'Sócias e sócios e heads jurídicos que sabem que a equipe usa IA mas não têm clareza de onde podem estar expostos. O uso já acontece. O mapeamento ainda não.',
+                  'Escritórios em crescimento que estão contratando novas advogadas e novos advogados e estagiárias e estagiários e querem estabelecer critérios claros antes de escalar o problema.',
+                  'Departamentos jurídicos de empresas com múltiplas áreas usando IA de forma descentralizada, sem política comum e sem critério de revisão.',
+                  'Escritórios que passaram pela Faísca Jurídica e querem ir além da educação para o diagnóstico estruturado da operação.',
+                ].map((texto, i) => (
+                  <div key={i} style={{ display: 'flex', gap: '16px' }}>
+                    <span style={{ color: '#F5F5F2', marginTop: '4px', flexShrink: 0 }}>&#8594;</span>
+                    <p style={{
+                      fontFamily: 'AtypText, sans-serif',
+                      fontWeight: 300,
+                      fontSize: '0.9375rem',
+                      lineHeight: 1.7,
+                      color: '#F5F5F2',
+                    }}>
+                      {texto}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Coluna direita */}
+            <div>
+              <p style={{
+                fontFamily: 'AtypText, sans-serif',
+                fontWeight: 600,
+                fontSize: '0.75rem',
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+                color: '#e8e0d6',
+                marginBottom: '32px',
+              }}>
+                Não faz sentido se
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+                {[
+                  'Quem busca laudo de conformidade com a Lei Geral de Proteção de Dados ou certificação de compliance. O INSPIRA Jurídico entrega governança operacional. Adequação legal completa é trabalho de advogada ou advogado especializado em proteção de dados.',
+                  'Quem quer consultoria jurídica, emissão de parecer ou definição de estratégia de caso. O INSPIRA Jurídico não emite parecer e não substitui profissional habilitado.',
+                  'Quem não tem autonomia para mudar como o time usa IA após o diagnóstico. O resultado aponta o que precisa mudar. Se a decisão de agir não está na mesa de quem vai receber o diagnóstico, ele não tem onde pousar.',
+                ].map((texto, i) => (
+                  <div key={i} style={{ display: 'flex', gap: '16px' }}>
+                    <span style={{ color: '#e8e0d6', marginTop: '4px', flexShrink: 0 }}>&#8212;</span>
+                    <p style={{
+                      fontFamily: 'AtypText, sans-serif',
+                      fontWeight: 300,
+                      fontSize: '0.9375rem',
+                      lineHeight: 1.7,
+                      color: '#e8e0d6',
+                    }}>
+                      {texto}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* CTA intermediário */}
+          <div style={{ marginTop: '64px', paddingTop: '48px', borderTop: '1px solid rgba(232,224,214,0.15)' }}>
+            <a
+              href="/contato?origem=inspira-juridico"
+              style={{
+                display: 'inline-block',
+                fontFamily: 'AtypText, sans-serif',
+                fontWeight: 600,
+                fontSize: '0.8125rem',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                color: '#F5F5F2',
+                backgroundColor: '#eb5c2e',
+                padding: '14px 28px',
+                textDecoration: 'none',
+              }}
+            >
+              Faz sentido conversar
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* S6 — QUEM CONDUZ | Teal */}
+      <section style={{ backgroundColor: '#004757', padding: '120px 80px' }}>
+        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+          <p style={{
+            fontFamily: 'AtypText, sans-serif',
+            fontWeight: 600,
+            fontSize: '0.625rem',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            color: '#e8e0d6',
+            marginBottom: '24px',
+          }}>
+            Execução direta
+          </p>
+          <h2 style={{
+            fontFamily: 'AtypDisplay, sans-serif',
+            fontWeight: 400,
+            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+            lineHeight: 1.15,
+            color: '#F5F5F2',
+            marginBottom: '48px',
+            maxWidth: '700px',
+          }}>
+            Quem lê é quem <span style={{ color: '#eb5c2e' }}>entrega</span>.
+          </h2>
+          <p style={{
+            fontFamily: 'AtypText, sans-serif',
+            fontWeight: 300,
+            fontSize: '1rem',
+            lineHeight: 1.7,
+            color: '#F5F5F2',
+            maxWidth: '720px',
+            marginBottom: '64px',
+          }}>
+            Não há equipe júnior entre o dado e a interpretação. Gabriela Aguiar e Celso Gama conduzem o INSPIRA Jurídico do início ao fim.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', maxWidth: '1000px' }}>
+            <div>
+              <h3 style={{
+                fontFamily: 'AtypDisplay, sans-serif',
+                fontWeight: 600,
+                fontSize: '1.25rem',
+                color: '#F5F5F2',
+                marginBottom: '16px',
+              }}>
+                Gabriela Aguiar
+              </h3>
+              <p style={{
+                fontFamily: 'AtypText, sans-serif',
+                fontWeight: 300,
+                fontSize: '0.9375rem',
+                lineHeight: 1.7,
+                color: '#e8e0d6',
+              }}>
+                CEO e Co-founder da Pira Labs. Com mais de uma década em ecossistemas globais de inovação e diagnósticos reais de empresas de serviços no Brasil. Responsável pela leitura institucional: como o escritório está posicionado, que sinais projeta para o mercado e o que os motores de inteligência artificial refletem sobre sua presença e reputação.
+              </p>
+            </div>
+            <div>
+              <h3 style={{
+                fontFamily: 'AtypDisplay, sans-serif',
+                fontWeight: 600,
+                fontSize: '1.25rem',
+                color: '#F5F5F2',
+                marginBottom: '16px',
+              }}>
+                Celso Gama
+              </h3>
+              <p style={{
+                fontFamily: 'AtypText, sans-serif',
+                fontWeight: 300,
+                fontSize: '0.9375rem',
+                lineHeight: 1.7,
+                color: '#e8e0d6',
+              }}>
+                COO e Co-founder da Pira Labs. Bacharelando em Direito (Mackenzie). Applied AI Certificate Program (MIT, em andamento, 2026). MBA pelo Insper. Responsável pela leitura de governança e exposição operacional: quais ferramentas o time usa, em quais condições, com quais dados e onde o uso atual pode criar exposição operacional, reputacional ou pontos de atenção a serem validados pelo responsável jurídico do cliente.
+              </p>
+            </div>
+          </div>
+          <div style={{ marginTop: '48px' }}>
+            <a
+              href="/sobre"
+              style={{
+                fontFamily: 'AtypText, sans-serif',
+                fontWeight: 600,
+                fontSize: '0.75rem',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                color: '#e8e0d6',
+                textDecoration: 'none',
+                opacity: 0.7,
+              }}
+            >
+              Saiba mais sobre os fundadores →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* S7 — FAQ | Sand */}
+      <section style={{ backgroundColor: '#e8e0d6', padding: '120px 80px' }}>
+        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+          <p style={{
+            fontFamily: 'AtypText, sans-serif',
+            fontWeight: 600,
+            fontSize: '0.625rem',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            color: '#1A5568',
+            marginBottom: '24px',
+          }}>
+            Perguntas frequentes
+          </p>
+          <h2 style={{
+            fontFamily: 'AtypDisplay, sans-serif',
+            fontWeight: 400,
+            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+            lineHeight: 1.15,
+            color: '#05262e',
+            marginBottom: '64px',
+            maxWidth: '700px',
+          }}>
+            O que você ainda quer saber antes de <span style={{ color: '#C4421A' }}>conversar</span>.
+          </h2>
+          <div style={{ maxWidth: '800px', display: 'flex', flexDirection: 'column' }}>
+            {[
+              {
+                pergunta: 'Isso é consultoria jurídica?',
+                resposta: 'Não. O INSPIRA Jurídico é diagnóstico operacional de como o escritório usa IA e onde pode estar exposto. Não emite parecer. Não define estratégia de caso. Não substitui advogada ou advogado habilitados. A Pira Labs não presta consultoria jurídica. O que o INSPIRA Jurídico entrega é mapeamento, classificação de exposição por tipo de uso, minuta operacional de política mínima e plano de ação — tudo para ser validado e implementado com o suporte jurídico interno ou externo do escritório.',
+              },
+              {
+                pergunta: 'Quanto tempo leva?',
+                resposta: 'De 2 a 3 semanas a partir do início do diagnóstico. O prazo começa após a conversa de calibragem e assinatura do NDA. Cada etapa tem aprovação dos decisores antes de avançar. O prazo final depende da disponibilidade de quem decide e da profundidade necessária para o perfil do escritório.',
+              },
+              {
+                pergunta: 'Como é a precificação?',
+                resposta: 'Sob consulta após a conversa inicial. O investimento depende do tamanho do escritório, do número de áreas e da profundidade necessária. Não há valor fixo nem tabela pública. A conversa de calibragem define o escopo antes de qualquer proposta.',
+              },
+              {
+                pergunta: 'Como vocês tratam os dados do escritório durante o diagnóstico?',
+                resposta: 'O NDA é assinado antes de qualquer acesso a documentos, sistemas ou informações do escritório. Durante o diagnóstico, a Pira Labs acessa apenas o que é necessário para cada etapa específica, com aprovação dos decisores antes de avançar. Nenhum dado identificável do escritório ou de seus clientes entra na base setorial da Pira Labs. O que alimenta essa base são padrões anonimizados e aprendizados não confidenciais — nunca dados, documentos ou informações que possam ser atribuídas ao cliente.',
+              },
+              {
+                pergunta: 'O que acontece depois?',
+                resposta: 'O cliente recebe o diagnóstico completo com os cinco entregáveis. O que o escritório faz com ele é decisão própria. O diagnóstico é de propriedade do cliente e pode ser executado internamente ou com qualquer parceiro. Para quem quer ir além do diagnóstico e implementar o que foi mapeado, existe o TRANSPIRA Jurídico. Mas não é compromisso antecipado.',
+              },
+              {
+                pergunta: 'Vocês assinam NDA?',
+                resposta: 'Sempre. O NDA é assinado antes de qualquer conversa com a equipe e antes de qualquer acesso a documentos, sistemas ou informações do escritório. Confidencialidade não é protocolo. É condição de trabalho. Se o seu contexto exige cláusulas específicas além do NDA padrão, mencione na conversa de calibragem.',
+              },
+            ].map((item) => (
+              <details key={item.pergunta} style={{ borderBottom: '1px solid rgba(5,38,46,0.15)' }}>
+                <summary style={{
+                  fontFamily: 'AtypText, sans-serif',
+                  fontWeight: 400,
+                  fontSize: '1rem',
+                  color: '#05262e',
+                  padding: '24px 0',
+                  cursor: 'pointer',
+                  listStyle: 'none',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                }}>
+                  {item.pergunta}
+                  <span style={{ color: '#1A5568', fontSize: '1.25rem', fontWeight: 300, flexShrink: 0, marginLeft: '16px' }}>+</span>
+                </summary>
+                <p style={{
+                  fontFamily: 'AtypText, sans-serif',
+                  fontWeight: 300,
+                  fontSize: '0.9375rem',
+                  lineHeight: 1.7,
+                  color: '#05262e',
+                  paddingBottom: '24px',
+                  maxWidth: '680px',
+                }}>
+                  {item.resposta}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FINALCTA | Ink */}
+      <section style={{ backgroundColor: '#05262e', padding: '120px 80px', textAlign: 'center' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h2 style={{
+            fontFamily: 'AtypDisplay, sans-serif',
+            fontWeight: 300,
+            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+            lineHeight: 1.2,
+            color: '#F5F5F2',
+            marginBottom: '40px',
+          }}>
+            Saber onde pode estar a exposição já é metade do trabalho. A outra metade é{' '}
+            <span style={{ color: '#eb5c2e' }}>decidir</span> o que fazer com isso.
+          </h2>
+          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '24px' }}>
+            <a
+              href="/contato?origem=inspira-juridico"
+              style={{
+                display: 'inline-block',
+                fontFamily: 'AtypText, sans-serif',
+                fontWeight: 600,
+                fontSize: '0.8125rem',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                color: '#F5F5F2',
+                backgroundColor: '#eb5c2e',
+                padding: '16px 40px',
+                textDecoration: 'none',
+              }}
+            >
+              RESPIRE
+            </a>
+            <a
+              href="/transpira/juridico"
+              style={{
+                display: 'inline-block',
+                fontFamily: 'AtypText, sans-serif',
+                fontWeight: 600,
+                fontSize: '0.8125rem',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                color: '#F5F5F2',
+                border: '1px solid rgba(245,245,242,0.4)',
+                padding: '16px 40px',
+                textDecoration: 'none',
+              }}
+            >
+              Conhecer o TRANSPIRA Jurídico
+            </a>
+          </div>
+          <p style={{
+            fontFamily: 'AtypText, sans-serif',
+            fontWeight: 300,
+            fontSize: '0.75rem',
+            color: '#e8e0d6',
+            marginBottom: '32px',
+          }}>
+            Conversa inicial sem compromisso. Respondemos em até 2 dias úteis.
+          </p>
+          <p style={{
+            fontFamily: 'AtypText, sans-serif',
+            fontWeight: 300,
+            fontSize: '0.8125rem',
+            lineHeight: 1.6,
+            color: 'rgba(245,245,242,0.7)',
+            maxWidth: '640px',
+            margin: '0 auto',
+          }}>
+            A Pira Labs não presta consultoria jurídica, não emite parecer e não substitui advogada ou advogado habilitados. NDA assinado antes de qualquer acesso a documentos, sistemas ou informações do escritório.
+          </p>
+        </div>
+      </section>
     </>
-  );
+  )
 }
