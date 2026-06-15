@@ -90,7 +90,7 @@ export default function OxigenioIASearchPage() {
       <main>
 
       <nav aria-label="Breadcrumb" style={{ backgroundColor: '#e8e0d6', paddingTop: '6rem', paddingBottom: '0' }}>
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <ol className="flex items-center gap-2 flex-wrap">
             {[
               { label: 'Home', href: '/' },
@@ -116,7 +116,7 @@ export default function OxigenioIASearchPage() {
           S1 — HERO — Sand #e8e0d6
           ============================================================ */}
       <section style={{ backgroundColor: '#e8e0d6', paddingTop: '3rem', paddingBottom: '6rem' }}>
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
             className="font-body text-[10px] font-semibold uppercase tracking-widest mb-6"
             style={{ color: '#1A5568' }}
@@ -167,7 +167,7 @@ export default function OxigenioIASearchPage() {
           S2 — O QUE É E O QUE NÃO É — Ink #05262e
           ============================================================ */}
       <section style={{ backgroundColor: '#05262e', paddingTop: '5rem', paddingBottom: '5rem' }}>
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
             className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
             style={{ color: '#e8e0d6' }}
@@ -245,7 +245,7 @@ export default function OxigenioIASearchPage() {
           S3 — PARA QUEM — Teal #004757
           ============================================================ */}
       <section style={{ backgroundColor: '#004757', paddingTop: '5rem', paddingBottom: '5rem' }}>
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
             className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
             style={{ color: '#e8e0d6' }}
@@ -360,7 +360,7 @@ export default function OxigenioIASearchPage() {
           S4 — FAST OU FULL — Ink #05262e
           ============================================================ */}
       <section style={{ backgroundColor: '#05262e', paddingTop: '5rem', paddingBottom: '5rem' }}>
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
             className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
             style={{ color: '#e8e0d6' }}
@@ -473,7 +473,7 @@ export default function OxigenioIASearchPage() {
           S5 — COMO FUNCIONA — Sand #e8e0d6
           ============================================================ */}
       <section style={{ backgroundColor: '#e8e0d6', paddingTop: '5rem', paddingBottom: '5rem' }}>
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
             className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
             style={{ color: '#1A5568' }}
@@ -555,7 +555,7 @@ export default function OxigenioIASearchPage() {
           S6 — QUEM CONDUZ — Teal #004757
           ============================================================ */}
       <section style={{ backgroundColor: '#004757', paddingTop: '5rem', paddingBottom: '5rem' }}>
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
             className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
             style={{ color: '#e8e0d6' }}
@@ -658,7 +658,7 @@ export default function OxigenioIASearchPage() {
           S7 — APLICAR — Ink #05262e
           ============================================================ */}
       <section style={{ backgroundColor: '#05262e', paddingTop: '5rem', paddingBottom: '5rem' }}>
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
             className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
             style={{ color: '#e8e0d6' }}
@@ -756,7 +756,7 @@ export default function OxigenioIASearchPage() {
           S8 — TRÊS CAMINHOS — Teal #004757
           ============================================================ */}
       <section style={{ backgroundColor: '#004757', paddingTop: '5rem', paddingBottom: '5rem' }}>
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
             className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
             style={{ color: '#e8e0d6' }}
@@ -826,7 +826,7 @@ export default function OxigenioIASearchPage() {
           S9 — FAQ — Sand #e8e0d6
           ============================================================ */}
       <section style={{ backgroundColor: '#e8e0d6', paddingTop: '5rem', paddingBottom: '5rem' }}>
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
             className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
             style={{ color: '#1A5568' }}

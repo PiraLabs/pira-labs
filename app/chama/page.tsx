@@ -80,7 +80,7 @@ export default function ChamaPage() {
             S1 — HERO — Sand #e8e0d6
             ============================================================ */}
         <section style={{ backgroundColor: '#e8e0d6', paddingTop: '6rem', paddingBottom: '6rem' }}>
-          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
             <nav aria-label="Breadcrumb" style={{ marginBottom: '3rem' }}>
               <ol className="flex items-center gap-2 flex-wrap">
                 {[
@@ -135,7 +135,7 @@ export default function ChamaPage() {
             S2 — POR QUE CONHECIMENTO SEM CONSEQUÊNCIA NÃO FUNCIONA — Ink #05262e
             ============================================================ */}
         <section style={{ backgroundColor: '#05262e', paddingTop: '5rem', paddingBottom: '5rem' }}>
-          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
             <p
               className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
               style={{ color: '#e8e0d6' }}
@@ -180,7 +180,7 @@ export default function ChamaPage() {
             S3 — O DIFERENCIAL DA CHAMA — Teal #004757
             ============================================================ */}
         <section style={{ backgroundColor: '#004757', paddingTop: '5rem', paddingBottom: '5rem' }}>
-          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
             <p
               className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
               style={{ color: '#e8e0d6' }}
@@ -236,7 +236,7 @@ export default function ChamaPage() {
             S4 — FORMATOS — Sand #e8e0d6
             ============================================================ */}
         <section style={{ backgroundColor: '#e8e0d6', paddingTop: '5rem', paddingBottom: '5rem' }}>
-          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
             <p className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4" style={{ color: '#1A5568' }}>
               Como trabalhamos
             </p>
@@ -285,7 +285,7 @@ export default function ChamaPage() {
             S5 — TEMAS GABRIELA — Ink #05262e
             ============================================================ */}
         <section style={{ backgroundColor: '#05262e', paddingTop: '5rem', paddingBottom: '5rem' }}>
-          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
             <p className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4" style={{ color: '#e8e0d6' }}>
               Gabriela Aguiar
             </p>
@@ -344,7 +344,7 @@ export default function ChamaPage() {
             S6 — TEMAS CELSO — Teal #004757
             ============================================================ */}
         <section style={{ backgroundColor: '#004757', paddingTop: '5rem', paddingBottom: '5rem' }}>
-          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
             <p className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4" style={{ color: '#e8e0d6' }}>
               Celso Gama
             </p>
@@ -409,7 +409,7 @@ export default function ChamaPage() {
             S7 — ONDE JÁ ESTIVEMOS — Sand #e8e0d6
             ============================================================ */}
         <section style={{ backgroundColor: '#e8e0d6', paddingTop: '5rem', paddingBottom: '5rem' }}>
-          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
             <p className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4" style={{ color: '#1A5568' }}>
               Histórico
             </p>
@@ -456,7 +456,7 @@ export default function ChamaPage() {
             S8 — COMO FUNCIONA — Ink #05262e
             ============================================================ */}
         <section style={{ backgroundColor: '#05262e', paddingTop: '5rem', paddingBottom: '5rem' }}>
-          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
             <p className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4" style={{ color: '#e8e0d6' }}>
               Processo
             </p>
