@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 }
 
 export default async function AntesPiraPage() {
-  const posts = await buscarPostsSubstack(6)
+  const posts = await buscarPostsSubstack(8)
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -91,7 +91,7 @@ export default async function AntesPiraPage() {
             marginBottom: '32px',
             maxWidth: '800px',
           }}>
-            Antes, <span style={{ color: '#C4421A' }}>Pira</span>.
+            Antes<span style={{ color: '#C4421A' }}>,</span> Pira.
           </h1>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
@@ -289,6 +289,22 @@ export default async function AntesPiraPage() {
                 </div>
               ))}
               <div style={{ borderTop: '1px solid rgba(5,38,46,0.15)' }} />
+              <div style={{ marginTop: '40px' }}>
+                <a
+                  href="/antes-pira/arquivo"
+                  style={{
+                    fontFamily: 'AtypText, sans-serif',
+                    fontWeight: 600,
+                    fontSize: '0.8125rem',
+                    letterSpacing: '0.08em',
+                    textTransform: 'uppercase',
+                    color: '#1A5568',
+                    textDecoration: 'none',
+                  }}
+                >
+                  Ver todas as edições →
+                </a>
+              </div>
             </div>
           ) : (
             <div style={{ maxWidth: '560px' }}>
