@@ -167,7 +167,7 @@ export default function SobrePage() {
           {/* FOTO */}
           <div className="w-full overflow-hidden mb-8" style={{ aspectRatio: "4/5", borderRadius: "2px", maxHeight: "560px" }}>
             <Image
-              src="/gabriela-aguiar.jpg"
+              src="/gabriela-aguiar.png"
               alt="Gabriela Aguiar, CEO e cofundadora da Pira Labs"
               width={640}
               height={800}
@@ -245,7 +245,7 @@ export default function SobrePage() {
           {/* FOTO */}
           <div className="w-full overflow-hidden mb-8" style={{ aspectRatio: "4/5", borderRadius: "2px", maxHeight: "560px" }}>
             <Image
-              src="/celso-gama.jpg"
+              src="/celso-gama.png"
               alt="Celso Gama, COO e cofundador da Pira Labs"
               width={640}
               height={800}

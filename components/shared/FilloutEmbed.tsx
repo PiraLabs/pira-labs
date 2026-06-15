@@ -22,7 +22,7 @@ export default function FilloutEmbed() {
       height="700"
       style={{ border: "none" }}
       title="Formulário de contato Pira Labs"
-      loading="lazy"
+      loading="eager"
     />
   );
 }

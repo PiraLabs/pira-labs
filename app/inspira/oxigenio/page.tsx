@@ -398,7 +398,7 @@ export default function OxigenioPage() {
         <div className="flex flex-col md:flex-row gap-8 items-start max-w-3xl">
           <div className="shrink-0">
             <Image
-              src="/nos.png"
+              src="/nos2.png"
               alt="Gabriela Aguiar e Celso Gama, cofundadores da Pira Labs"
               width={200}
               height={133}

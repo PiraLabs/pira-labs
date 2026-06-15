@@ -363,7 +363,7 @@ export default function EnHomePage() {
       <Section variant="default" paddingY="lg">
         <div className="max-w-2xl">
           <Image
-            src="/nos.png"
+            src="/nos2.png"
             alt="Gabriela Aguiar and Celso Gama, co-founders of Pira Labs"
             width={800}
             height={533}

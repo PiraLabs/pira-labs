@@ -19,7 +19,11 @@ const PAGES = [
   { name: '11-faisca-juridica', path: '/faisca/juridica' },
   { name: '12-faisca-oxigenio', path: '/faisca/oxigenio-ia-search' },
   { name: '13-antes-pira', path: '/antes-pira' },
-  { name: '14-contato', path: '/contato' },
+  { name: '14-antes-pira-arquivo', path: '/antes-pira/arquivo' },
+  { name: '15-inspira-oxigenio', path: '/inspira/oxigenio' },
+  { name: '16-faisca', path: '/faisca' },
+  { name: '17-faisca-clevel', path: '/faisca/c-level-as-a-service' },
+  { name: '18-contato', path: '/contato' },
 ];
 
 const VIEWPORTS = [
@@ -29,7 +33,7 @@ const VIEWPORTS = [
 
 async function takeScreenshots() {
   const browser = await chromium.launch();
-  const timestamp = new Date().toISOString().slice(0, 10);
+  const timestamp = new Date().toISOString().slice(0, 16).replace('T', '_').replace(':', 'h');
   const outDir = join(process.cwd(), 'screenshots', timestamp);
   mkdirSync(outDir, { recursive: true });
 
