@@ -353,7 +353,7 @@ export default function TranspiraJuridicoPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))', gap: '32px' }}>
 
             {/* MODELO A */}
-            <div style={{ backgroundColor: '#F5F5F2', padding: '48px', borderTop: '3px solid #1A5568' }}>
+            <div style={{ backgroundColor: '#F5F5F2', padding: 'clamp(24px, 4vw, 48px)', borderTop: '3px solid #1A5568' }}>
               <p style={{
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
@@ -414,7 +414,7 @@ export default function TranspiraJuridicoPage() {
             </div>
 
             {/* MODELO B */}
-            <div style={{ backgroundColor: '#F5F5F2', padding: '48px', borderTop: '3px solid #1A5568' }}>
+            <div style={{ backgroundColor: '#F5F5F2', padding: 'clamp(24px, 4vw, 48px)', borderTop: '3px solid #1A5568' }}>
               <p style={{
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
