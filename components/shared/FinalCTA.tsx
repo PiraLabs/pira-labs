@@ -27,12 +27,12 @@ export function FinalCTA({
   return (
     <section className={`section-padding ${className}`} style={{ backgroundColor: bg }}>
       <div className="container-site text-center">
-        <p
+        <h2
           className="font-display mb-8 leading-snug max-w-2xl mx-auto"
-          style={{ fontSize: "clamp(22px, 2.5vw, 32px)", color: headingColor, fontStyle: "normal" }}
+          style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)", fontWeight: 300, lineHeight: 1.2, color: headingColor, fontStyle: "normal" }}
         >
           {heading}
-        </p>
+        </h2>
         <CTAButton
           variant={ctaVariant}
           href="/contato"

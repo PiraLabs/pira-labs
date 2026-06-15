@@ -129,16 +129,13 @@ export default function TranspiraJuridicoPage() {
       />
 
       {/* BREADCRUMB */}
-      <nav
-        aria-label="Breadcrumb"
-        style={{ backgroundColor: '#e8e0d6', padding: '12px 80px' }}
-      >
-        <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: '0 auto', padding: 0, fontFamily: 'AtypText, sans-serif', fontSize: '0.8125rem', color: '#05262e', maxWidth: '1280px' }}>
+      <nav aria-label="Breadcrumb" style={{ backgroundColor: '#e8e0d6', padding: '12px 80px' }}>
+        <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: '0 auto', padding: 0, fontSize: '0.75rem', color: '#05262e', maxWidth: '1280px' }}>
           <li><a href="/" style={{ color: '#05262e', textDecoration: 'none' }}>Início</a></li>
-          <li style={{ color: '#1A5568' }}>·</li>
+          <li style={{ opacity: 0.4 }}>/</li>
           <li><a href="/transpira" style={{ color: '#05262e', textDecoration: 'none' }}>TRANSPIRA</a></li>
-          <li style={{ color: '#1A5568' }}>·</li>
-          <li style={{ color: '#1A5568', fontWeight: 600 }}>TRANSPIRA Jurídico</li>
+          <li style={{ opacity: 0.4 }}>/</li>
+          <li style={{ opacity: 0.6 }}>TRANSPIRA Jurídico</li>
         </ol>
       </nav>
 
@@ -187,8 +184,8 @@ export default function TranspiraJuridicoPage() {
               fontSize: '0.8125rem',
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
-              color: '#05262e',
-              border: '1px solid #05262e',
+              color: '#F5F5F2',
+              backgroundColor: '#05262e',
               padding: '14px 32px',
               textDecoration: 'none',
             }}
@@ -225,13 +222,13 @@ export default function TranspiraJuridicoPage() {
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginBottom: '48px' }}>
             <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
-              Escritórios de advocacia têm uma camada de complexidade que outras empresas de serviços não têm. Confidencialidade rigorosa. Responsabilidade técnica intransferível do advogado. Volume de trabalho mecânico que cresceu nos últimos anos sem que a estrutura de entrega tenha acompanhado.
+              Escritórios de advocacia têm uma camada de complexidade que outras empresas de serviços não têm. <strong style={{ fontWeight: 600 }}>Confidencialidade rigorosa. Responsabilidade técnica intransferível do advogado.</strong> Volume de trabalho mecânico que cresceu nos últimos anos sem que a estrutura de entrega tenha acompanhado.
             </p>
             <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
-              A maioria das tentativas de IA jurídica entra pelo lado errado. Ferramenta primeiro, processo depois. Um relatório do MIT Project NANDA divulgado em 2025 apontou que 95% das organizações analisadas não obtiveram retorno financeiro mensurável com IA generativa. No jurídico, a causa é a mesma: sem método antes da ferramenta, o resultado é mais uma camada de retrabalho sobre um fluxo que já estava quebrado.
+              A maioria das tentativas de IA jurídica entra pelo lado errado. <strong style={{ fontWeight: 600 }}>Ferramenta primeiro, processo depois.</strong> Um relatório do MIT Project NANDA divulgado em 2025 apontou que <strong style={{ fontWeight: 600 }}>95% das organizações analisadas não obtiveram retorno financeiro mensurável com IA generativa.</strong> No jurídico, a causa é a mesma: sem método antes da ferramenta, o resultado é mais uma camada de retrabalho sobre um fluxo que já estava quebrado.
             </p>
             <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
-              Com o TRANSPIRA Jurídico, um escritório de advocacia executou em 36 horas mensais o que estimava que ocupava 400 horas da equipe. O tempo liberado resultou em R$160 mil de capacidade adicional de faturamento por mês, com a mesma equipe. Não foi substituição. Foi o julgamento do advogado operando sem o peso do trabalho mecânico.
+              Com o TRANSPIRA Jurídico, um escritório de advocacia executou em <strong style={{ fontWeight: 600 }}>36 horas mensais</strong> o que estimava que ocupava <strong style={{ fontWeight: 600 }}>400 horas da equipe.</strong> O tempo liberado resultou em <strong style={{ fontWeight: 600 }}>R$160 mil de capacidade adicional de faturamento por mês,</strong> com a mesma equipe. Não foi substituição. Foi o julgamento do advogado operando sem o peso do trabalho mecânico.
             </p>
           </div>
           <blockquote style={{ borderLeft: '2px solid #eb5c2e', paddingLeft: '24px', marginTop: '16px' }}>
@@ -287,10 +284,10 @@ export default function TranspiraJuridicoPage() {
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '48px' }}>
             <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
-              O TRANSPIRA Jurídico é a frente de execução da Pira Labs para operações jurídicas com alto volume de trabalho mecânico repetitivo. Entra no fluxo de trabalho real do escritório ou departamento, identifica onde a IA amplifica capacidade e executa essa amplificação sob supervisão humana obrigatória em cada entrega.
+              O TRANSPIRA Jurídico é a frente de execução da Pira Labs para operações jurídicas com <strong style={{ fontWeight: 600 }}>alto volume de trabalho mecânico repetitivo.</strong> Entra no fluxo de trabalho real do escritório ou departamento, identifica onde a IA amplifica capacidade e <strong style={{ fontWeight: 600 }}>executa essa amplificação sob supervisão humana obrigatória em cada entrega.</strong>
             </p>
             <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
-              Não é diagnóstico. Não é relatório. É o trabalho sendo feito de forma diferente, com a responsabilidade jurídica onde ela pertence: com o advogado habilitado do cliente.
+              Não é diagnóstico. Não é relatório. <strong style={{ fontWeight: 600 }}>É o trabalho sendo feito de forma diferente,</strong> com a responsabilidade jurídica onde ela pertence: com o advogado habilitado do cliente.
             </p>
           </div>
           <div style={{ borderTop: '1px solid rgba(232,224,214,0.2)', paddingTop: '40px' }}>
@@ -314,7 +311,7 @@ export default function TranspiraJuridicoPage() {
 
       {/* S4 — OS DOIS MODELOS | Sand */}
       <section style={{ backgroundColor: '#e8e0d6', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -337,7 +334,7 @@ export default function TranspiraJuridicoPage() {
             Dois modelos. Um critério único: a responsabilidade jurídica não sai do{' '}
             <span style={{ color: '#C4421A' }}>advogado</span>.
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))', gap: '32px' }}>
 
             {/* MODELO A */}
             <div style={{ backgroundColor: '#F5F5F2', padding: '48px', borderTop: '3px solid #1A5568' }}>
@@ -493,20 +490,28 @@ export default function TranspiraJuridicoPage() {
             Escritórios e departamentos jurídicos com volume. Decisores com autonomia real para mudar o funcionamento da{' '}
             <span style={{ color: '#eb5c2e' }}>operação</span>.
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', marginBottom: '64px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '64px', marginBottom: '64px' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-              {[
-                'Escritórios de advocacia com trabalho mecânico que consome equipe qualificada em tarefas que não exigem formação jurídica para executar.',
-                'Departamentos jurídicos em empresas B2B com produção repetitiva de alto volume e pressão para reduzir custo sem reduzir qualidade.',
-                'Decisores que sabem onde está o problema e têm autoridade para mudar como o trabalho é feito.',
-                'Quem veio do INSPIRA Jurídico com diagnóstico pronto e quer partir para execução.',
-                'Quem não veio do INSPIRA Jurídico pode fazer o diagnóstico como parte da abertura do projeto.',
-              ].map((item) => (
-                <div key={item} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                  <span style={{ color: '#F5F5F2', fontSize: '1rem', flexShrink: 0, marginTop: '2px' }}>&#8594;</span>
-                  <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.9375rem', lineHeight: 1.6, color: '#F5F5F2' }}>{item}</p>
-                </div>
-              ))}
+              <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                <span style={{ color: '#F5F5F2', fontSize: '1rem', flexShrink: 0, marginTop: '2px' }}>&#8594;</span>
+                <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.9375rem', lineHeight: 1.6, color: '#F5F5F2' }}>Escritórios de advocacia com <strong style={{ fontWeight: 600 }}>trabalho mecânico que consome equipe qualificada</strong> em tarefas que não exigem formação jurídica para executar.</p>
+              </div>
+              <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                <span style={{ color: '#F5F5F2', fontSize: '1rem', flexShrink: 0, marginTop: '2px' }}>&#8594;</span>
+                <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.9375rem', lineHeight: 1.6, color: '#F5F5F2' }}>Departamentos jurídicos em empresas B2B com <strong style={{ fontWeight: 600 }}>produção repetitiva de alto volume</strong> e pressão para reduzir custo sem reduzir qualidade.</p>
+              </div>
+              <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                <span style={{ color: '#F5F5F2', fontSize: '1rem', flexShrink: 0, marginTop: '2px' }}>&#8594;</span>
+                <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.9375rem', lineHeight: 1.6, color: '#F5F5F2' }}>Decisores que <strong style={{ fontWeight: 600 }}>sabem onde está o problema</strong> e têm autoridade para mudar como o trabalho é feito.</p>
+              </div>
+              <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                <span style={{ color: '#F5F5F2', fontSize: '1rem', flexShrink: 0, marginTop: '2px' }}>&#8594;</span>
+                <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.9375rem', lineHeight: 1.6, color: '#F5F5F2' }}>Quem veio do INSPIRA Jurídico com <strong style={{ fontWeight: 600 }}>diagnóstico pronto</strong> e quer partir para execução.</p>
+              </div>
+              <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                <span style={{ color: '#F5F5F2', fontSize: '1rem', flexShrink: 0, marginTop: '2px' }}>&#8594;</span>
+                <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.9375rem', lineHeight: 1.6, color: '#F5F5F2' }}>Quem não veio do INSPIRA Jurídico pode fazer o diagnóstico <strong style={{ fontWeight: 600 }}>como parte da abertura do projeto.</strong></p>
+              </div>
             </div>
             <div>
               <p style={{
@@ -522,21 +527,26 @@ export default function TranspiraJuridicoPage() {
                 NÃO FAZ SENTIDO SE
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {[
-                  'O escritório busca terceirizar a responsabilidade jurídica. O TRANSPIRA Jurídico opera dentro da operação, não no lugar da equipe jurídica.',
-                  'Não há advogado habilitado disponível para revisar cada entrega. A supervisão humana não é protocolo. É condição de funcionamento.',
-                  'O objetivo é resultado sem mudar o fluxo de trabalho que existe hoje. O TRANSPIRA Jurídico redesenha o fluxo.',
-                  'O escritório está em colapso operacional sem estrutura mínima para absorver mudança.',
-                ].map((item) => (
-                  <div key={item} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                    <span style={{ color: '#e8e0d6', fontSize: '0.875rem', flexShrink: 0, marginTop: '3px' }}>&#8212;</span>
-                    <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.875rem', lineHeight: 1.6, color: '#e8e0d6' }}>{item}</p>
-                  </div>
-                ))}
+                <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                  <span style={{ color: '#e8e0d6', fontSize: '0.875rem', flexShrink: 0, marginTop: '3px' }}>&#8212;</span>
+                  <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.875rem', lineHeight: 1.6, color: '#e8e0d6' }}>O escritório busca <strong style={{ fontWeight: 600, color: '#F5F5F2' }}>terceirizar a responsabilidade jurídica.</strong> O TRANSPIRA Jurídico opera dentro da operação, não no lugar da equipe jurídica.</p>
+                </div>
+                <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                  <span style={{ color: '#e8e0d6', fontSize: '0.875rem', flexShrink: 0, marginTop: '3px' }}>&#8212;</span>
+                  <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.875rem', lineHeight: 1.6, color: '#e8e0d6' }}>Não há advogado habilitado disponível para revisar cada entrega. <strong style={{ fontWeight: 600, color: '#F5F5F2' }}>A supervisão humana não é protocolo. É condição de funcionamento.</strong></p>
+                </div>
+                <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                  <span style={{ color: '#e8e0d6', fontSize: '0.875rem', flexShrink: 0, marginTop: '3px' }}>&#8212;</span>
+                  <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.875rem', lineHeight: 1.6, color: '#e8e0d6' }}>O objetivo é resultado <strong style={{ fontWeight: 600, color: '#F5F5F2' }}>sem mudar o fluxo de trabalho que existe hoje.</strong> O TRANSPIRA Jurídico redesenha o fluxo.</p>
+                </div>
+                <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                  <span style={{ color: '#e8e0d6', fontSize: '0.875rem', flexShrink: 0, marginTop: '3px' }}>&#8212;</span>
+                  <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.875rem', lineHeight: 1.6, color: '#e8e0d6' }}>O escritório está em <strong style={{ fontWeight: 600, color: '#F5F5F2' }}>colapso operacional</strong> sem estrutura mínima para absorver mudança.</p>
+                </div>
               </div>
             </div>
           </div>
-          <div style={{ textAlign: 'center' }}>
+          <div style={{ marginTop: '64px', paddingTop: '48px', borderTop: '1px solid rgba(232,224,214,0.15)' }}>
             <a
               href="/contato?origem=transpira-juridico"
               style={{
@@ -547,14 +557,14 @@ export default function TranspiraJuridicoPage() {
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
                 color: '#F5F5F2',
-                border: '1px solid #F5F5F2',
-                padding: '14px 32px',
+                backgroundColor: '#eb5c2e',
+                padding: '14px 28px',
                 textDecoration: 'none',
               }}
             >
               CONVERSAR COM A PIRA LABS
             </a>
-            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.75rem', color: '#e8e0d6', marginTop: '12px' }}>
+            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.75rem', color: '#e8e0d6', marginTop: '12px', opacity: 0.6 }}>
               Conversa de qualificação mútua. Investimento sob consulta após alinhamento de escopo.
             </p>
           </div>
@@ -596,10 +606,10 @@ export default function TranspiraJuridicoPage() {
             Celso Gama
           </h3>
           <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.9375rem', lineHeight: 1.7, color: '#F5F5F2', marginBottom: '8px' }}>
-            COO e Co-founder da Pira Labs. Bacharelando em Direito (Mackenzie). MIT Applied AI Certificate Program, em andamento (2026). MBA pelo Insper. Conduziu o projeto que resultou na evidência 400h&#8594;36h referenciada nesta página.
+            COO e Co-founder da Pira Labs. <strong style={{ fontWeight: 600 }}>Bacharelando em Direito (Mackenzie). MIT Applied AI Certificate Program, em andamento (2026). MBA pelo Insper.</strong> Conduziu o projeto que resultou na evidência <strong style={{ fontWeight: 600 }}>400h&#8594;36h</strong> referenciada nesta página.
           </p>
           <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.9375rem', lineHeight: 1.7, color: '#F5F5F2', marginBottom: '40px' }}>
-            O diferencial não é a ferramenta. É quem opera a ferramenta entendendo o que está em jogo em cada decisão jurídica.
+            O diferencial não é a ferramenta. <strong style={{ fontWeight: 600 }}>É quem opera a ferramenta entendendo o que está em jogo em cada decisão jurídica.</strong>
           </p>
           <div style={{
             borderLeft: '2px solid rgba(232,224,214,0.4)',
@@ -641,31 +651,31 @@ export default function TranspiraJuridicoPage() {
             {[
               {
                 q: 'Vocês prestam consultoria jurídica?',
-                a: 'Não. A Pira Labs não presta consultoria jurídica, não emite parecer e não substitui advogada ou advogado habilitados. Atuamos dentro da operação, não no lugar da equipe jurídica. Todo material produzido é insumo operacional para revisão e validação do advogado habilitado do próprio escritório. Nenhum material é entregue como peça final nem enviado a destinatário sem essa revisão.',
+                a: <><strong style={{ fontWeight: 600 }}>Não.</strong> A Pira Labs não presta consultoria jurídica, não emite parecer e não substitui advogada ou advogado habilitados. Atuamos dentro da operação, não no lugar da equipe jurídica. <strong style={{ fontWeight: 600 }}>Todo material produzido é insumo operacional para revisão e validação do advogado habilitado do próprio escritório.</strong> Nenhum material é entregue como peça final nem enviado a destinatário sem essa revisão.</>,
               },
               {
                 q: 'Como vocês protegem a confidencialidade?',
-                a: 'NDA assinado antes de qualquer acesso a documentos, sistemas ou informações do escritório. A Pira Labs só utiliza ferramentas de IA no projeto após validação prévia das condições de uso, tratamento de dados e restrições de treinamento aplicáveis ao cliente. Nenhum material preparado é enviado diretamente para destinatário final sem aprovação do responsável jurídico do cliente.',
+                a: <><strong style={{ fontWeight: 600 }}>NDA assinado antes de qualquer acesso</strong> a documentos, sistemas ou informações do escritório. A Pira Labs só utiliza ferramentas de IA no projeto após <strong style={{ fontWeight: 600 }}>validação prévia das condições de uso, tratamento de dados e restrições de treinamento</strong> aplicáveis ao cliente. Nenhum material preparado é enviado diretamente para destinatário final sem aprovação do responsável jurídico do cliente.</>,
               },
               {
                 q: 'Qual a qualificação de quem executa o trabalho?',
-                a: 'O TRANSPIRA Jurídico é conduzido por Celso Gama, COO e Co-founder da Pira Labs. Bacharelando em Direito (Mackenzie). MIT Applied AI Certificate Program, em andamento (2026). MBA pelo Insper. Celso conduziu o projeto que resultou em 36 horas mensais de execução sobre um fluxo que o próprio escritório estimava em 400 horas.',
+                a: <>O TRANSPIRA Jurídico é conduzido por <strong style={{ fontWeight: 600 }}>Celso Gama, COO e Co-founder da Pira Labs.</strong> Bacharelando em Direito (Mackenzie). MIT Applied AI Certificate Program, em andamento (2026). MBA pelo Insper. Celso conduziu o projeto que resultou em <strong style={{ fontWeight: 600 }}>36 horas mensais de execução</strong> sobre um fluxo que o próprio escritório estimava em 400 horas.</>,
               },
               {
                 q: 'Como começa um projeto?',
-                a: 'Com uma conversa de qualificação mútua. A Pira Labs verifica se o escritório tem as condições necessárias para o projeto. O escritório verifica se a abordagem faz sentido para a operação. Se houver alinhamento, definimos escopo e assinamos NDA antes de qualquer avanço. O investimento é definido após esse alinhamento, por consulta.',
+                a: <>Com uma conversa de qualificação mútua. A Pira Labs verifica se o escritório tem as condições necessárias para o projeto. O escritório verifica se a abordagem faz sentido para a operação. <strong style={{ fontWeight: 600 }}>Se houver alinhamento, definimos escopo e assinamos NDA antes de qualquer avanço.</strong> O investimento é definido após esse alinhamento, por consulta.</>,
               },
               {
                 q: 'Qual a diferença entre Modelo A e Modelo B?',
-                a: 'O Modelo A constrói capacidade interna. A equipe do TRANSPIRA Jurídico redesenha os fluxos, implementa IA com supervisão e capacita o time para operar sem depender da Pira Labs ao final. O Modelo B apoia a execução operacional sob demanda: organização, sistematização, triagem, estruturação de informação e preparação de materiais preliminares para revisão da equipe jurídica. Em ambos, a responsabilidade jurídica permanece com o advogado habilitado do cliente. A conversa de entrada define qual modelo faz sentido para cada escritório.',
+                a: <><strong style={{ fontWeight: 600 }}>O Modelo A constrói capacidade interna:</strong> redesenha os fluxos, implementa IA com supervisão e capacita o time para operar sem depender da Pira Labs ao final. <strong style={{ fontWeight: 600 }}>O Modelo B apoia a execução operacional sob demanda:</strong> organização, sistematização, triagem, estruturação de informação e preparação de materiais preliminares para revisão da equipe jurídica. Em ambos, a responsabilidade jurídica permanece com o advogado habilitado do cliente.</>,
               },
               {
                 q: 'O resultado de 400h para 36h é típico?',
-                a: 'É o resultado documentado de um projeto específico. Nenhum resultado futuro é garantido — cada escritório tem uma operação diferente e um ponto de partida diferente. O que é consistente: quando há volume alto de trabalho mecânico e método de implementação correto, a redução de tempo é significativa e mensurável.',
+                a: <>É o resultado documentado de um projeto específico. <strong style={{ fontWeight: 600 }}>Nenhum resultado futuro é garantido</strong> — cada escritório tem uma operação diferente e um ponto de partida diferente. O que é consistente: quando há volume alto de trabalho mecânico e método de implementação correto, <strong style={{ fontWeight: 600 }}>a redução de tempo é significativa e mensurável.</strong></>,
               },
               {
                 q: 'É possível começar pelo TRANSPIRA Jurídico sem ter feito o INSPIRA Jurídico?',
-                a: 'Sim. Quem já tem clareza sobre o problema e quer ir direto para execução pode começar pelo TRANSPIRA Jurídico. Nesses casos, incluímos uma fase de leitura no início do projeto para garantir que a Pira Labs entende o contexto antes de construir qualquer coisa. Quem não tem esse diagnóstico pronto pode fazer o INSPIRA Jurídico como parte da abertura do projeto.',
+                a: <>Sim. Quem já tem clareza sobre o problema e quer ir direto para execução pode começar pelo TRANSPIRA Jurídico. Nesses casos, <strong style={{ fontWeight: 600 }}>incluímos uma fase de leitura no início do projeto</strong> para garantir que a Pira Labs entende o contexto antes de construir qualquer coisa. Quem não tem esse diagnóstico pronto pode fazer o INSPIRA Jurídico como parte da abertura do projeto.</>,
               },
             ].map((item) => (
               <details
@@ -740,12 +750,12 @@ export default function TranspiraJuridicoPage() {
               style={{
                 display: 'inline-block',
                 fontFamily: 'AtypText, sans-serif',
-                fontWeight: 400,
+                fontWeight: 600,
                 fontSize: '0.8125rem',
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
                 color: '#F5F5F2',
-                border: '1px solid #F5F5F2',
+                border: '1px solid rgba(245,245,242,0.4)',
                 padding: '16px 40px',
                 textDecoration: 'none',
               }}
