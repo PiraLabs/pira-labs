@@ -385,7 +385,7 @@ export default function InspiraJuridicoPage() {
           }}>
             Para quem faz sentido e para quem <span style={{ color: '#eb5c2e' }}>não faz</span>.
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', maxWidth: '1000px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '80px', maxWidth: '1000px' }}>
 
             {/* Coluna esquerda */}
             <div>
@@ -518,7 +518,7 @@ export default function InspiraJuridicoPage() {
           }}>
             Não há equipe júnior entre o dado e a interpretação. Gabriela Aguiar e Celso Gama conduzem o INSPIRA Jurídico do início ao fim.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', maxWidth: '1000px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '64px', maxWidth: '1000px' }}>
             <div>
               <h3 style={{
                 fontFamily: 'AtypDisplay, sans-serif',

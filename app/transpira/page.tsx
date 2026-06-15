@@ -291,7 +291,7 @@ export default function TranspiraPage() {
           }}>
             O TRANSPIRA produz quatro entregáveis em cada projeto. São os pontos em que a operação muda de estado, não documentos para arquivar.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', maxWidth: '1100px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '48px', maxWidth: '1100px' }}>
             {[
               {
                 nome: 'Redesenho de trabalho',
@@ -361,7 +361,7 @@ export default function TranspiraPage() {
           }}>
             Dois modos de entrada. Um <span style={{ color: '#C4421A' }}>critério</span> de saída.
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', maxWidth: '1000px', marginBottom: '64px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '64px', maxWidth: '1000px', marginBottom: '64px' }}>
 
             {/* Configuração A */}
             <div>
@@ -507,7 +507,7 @@ export default function TranspiraPage() {
           }}>
             Para quem faz sentido e para quem <span style={{ color: '#eb5c2e' }}>não faz</span>.
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', maxWidth: '1000px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '80px', maxWidth: '1000px' }}>
 
             {/* Coluna esquerda */}
             <div>
@@ -648,7 +648,7 @@ export default function TranspiraPage() {
           <div style={{ borderTop: '1px solid rgba(232,224,214,0.2)', marginBottom: '64px' }} />
 
           {/* Duas fases */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', maxWidth: '1000px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '64px', maxWidth: '1000px' }}>
             <div>
               <p style={{
                 fontFamily: 'AtypText, sans-serif',

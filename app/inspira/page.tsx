@@ -464,7 +464,7 @@ export default function InspiraPage() {
             Para quem faz sentido e para quem{' '}
             <span style={{ color: '#eb5c2e' }}>não faz</span>.
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', maxWidth: '1000px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '80px', maxWidth: '1000px' }}>
 
             {/* Coluna esquerda — Para quem é */}
             <div>
