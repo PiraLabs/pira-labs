@@ -29,7 +29,7 @@ export function FinalCTA({
       <div className="container-site text-center">
         <h2
           className="font-display mb-8 leading-snug mx-auto"
-          style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)", fontWeight: 300, lineHeight: 1.2, color: headingColor, fontStyle: "normal", maxWidth: '560px' }}
+          style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)", fontWeight: 300, lineHeight: 1.2, color: headingColor, fontStyle: "normal", maxWidth: '680px' }}
         >
           {heading}
         </h2>
