@@ -19,7 +19,7 @@ export default async function AntesPiraArquivoPage() {
         <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: 0, padding: 0, fontSize: '0.75rem', color: '#05262e' }}>
           <li><a href="/" style={{ color: '#05262e', textDecoration: 'none' }}>Home</a></li>
           <li style={{ opacity: 0.4 }}>/</li>
-          <li><a href="/antes-pira" style={{ color: '#05262e', textDecoration: 'none' }}>Antes, Pira</a></li>
+          <li><a href="/antes-pira" style={{ color: '#05262e', textDecoration: 'none' }}>Antes<span style={{ color: '#C4421A' }}>,</span> Pira</a></li>
           <li style={{ opacity: 0.4 }}>/</li>
           <li style={{ opacity: 0.6 }}>Arquivo</li>
         </ol>
