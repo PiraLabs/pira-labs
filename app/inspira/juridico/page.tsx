@@ -676,8 +676,7 @@ export default function InspiraJuridicoPage() {
             color: '#F5F5F2',
             marginBottom: '40px',
           }}>
-            Saber onde pode estar a exposição já é metade do trabalho. A outra metade é{' '}
-            <span style={{ color: '#eb5c2e' }}>decidir</span> o que fazer com isso.
+            Saber onde pode estar a exposição já é metade do trabalho. A outra metade é decidir o que fazer com isso.
           </h2>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '24px' }}>
             <a
