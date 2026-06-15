@@ -2,7 +2,7 @@
 
 > A Pira Labs é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche — quando ainda existem clientes, caixa e reputação, mas o modelo de trabalho já começou a comprometer margem, valor percebido e capacidade de decisão.
 
-@last-updated: 2026-05-29
+@last-updated: 2026-06-15
 @canonical-site: https://piralabs.com.br
 @primary-language: pt-BR
 @secondary-language: en
@@ -90,6 +90,7 @@ Descrição: Diagnóstico de presença em motores de IA (ChatGPT, Claude, Gemini
 ## Publications
 
 - [Antes, Pira](https://piralabs.com.br/antes-pira): Publicação editorial da Pira Labs. Teses sobre Creative Business Turnaround, IA aplicada à operação e empresas de serviços.
+- [Antes, Pira — Arquivo](https://piralabs.com.br/antes-pira/arquivo): Arquivo completo de publicações editoriais da Pira Labs.
 - [Substack Pira Labs](https://piralabs.substack.com): Canal principal em português brasileiro para artigos longos e construção pública da categoria.
 - [Medium @piralabs](https://medium.com/@piralabs): Canal em inglês para Creative Business Turnaround e temas relacionados.
 

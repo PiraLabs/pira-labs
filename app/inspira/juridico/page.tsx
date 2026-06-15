@@ -676,7 +676,7 @@ export default function InspiraJuridicoPage() {
             color: '#F5F5F2',
             marginBottom: '40px',
           }}>
-            Saber onde pode estar a exposição já é metade do trabalho. A outra metade é decidir o que fazer com isso.
+            O diagnóstico nomeia. O que fazer pertence a você.
           </h2>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '24px' }}>
             <a

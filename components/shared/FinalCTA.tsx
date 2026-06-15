@@ -28,8 +28,8 @@ export function FinalCTA({
     <section className={`section-padding ${className}`} style={{ backgroundColor: bg }}>
       <div className="container-site text-center">
         <h2
-          className="font-display mb-8 leading-snug max-w-2xl mx-auto"
-          style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)", fontWeight: 300, lineHeight: 1.2, color: headingColor, fontStyle: "normal" }}
+          className="font-display mb-8 leading-snug mx-auto"
+          style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)", fontWeight: 300, lineHeight: 1.2, color: headingColor, fontStyle: "normal", maxWidth: '560px' }}
         >
           {heading}
         </h2>
