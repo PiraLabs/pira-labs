@@ -291,7 +291,7 @@ export default function TranspiraPage() {
           }}>
             O TRANSPIRA produz quatro entregáveis em cada projeto. São os pontos em que a operação muda de estado, não documentos para arquivar.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '48px', maxWidth: '1100px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', maxWidth: '1100px' }}>
             {[
               {
                 nome: 'Redesenho de trabalho',
@@ -401,18 +401,8 @@ export default function TranspiraPage() {
                 fontSize: '0.8125rem',
                 color: '#05262e',
                 opacity: 0.6,
-                marginBottom: '8px',
               }}>
                 Duração típica: 2 a 3 meses de imersão.
-              </p>
-              <p style={{
-                fontFamily: 'AtypText, sans-serif',
-                fontWeight: 300,
-                fontSize: '0.8125rem',
-                color: '#05262e',
-                opacity: 0.6,
-              }}>
-                Referência: KZ Inteligência em Comunicação.
               </p>
             </div>
 
@@ -454,18 +444,8 @@ export default function TranspiraPage() {
                 fontSize: '0.8125rem',
                 color: '#05262e',
                 opacity: 0.6,
-                marginBottom: '8px',
               }}>
                 Duração típica: 45 a 60 dias de estruturação com acompanhamento.
-              </p>
-              <p style={{
-                fontFamily: 'AtypText, sans-serif',
-                fontWeight: 300,
-                fontSize: '0.8125rem',
-                color: '#05262e',
-                opacity: 0.6,
-              }}>
-                Referência: Concordia DPS LLC.
               </p>
             </div>
           </div>
