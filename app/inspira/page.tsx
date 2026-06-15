@@ -486,7 +486,7 @@ export default function InspiraPage() {
                   'A empresa investiu em tecnologia ou em IA e o resultado foi acelerar o ruído que já existia. Um relatório do MIT Media Lab (Project NANDA, julho de 2025) analisou mais de 300 implementações corporativas de IA generativa e encontrou que 95% não geraram impacto financeiro mensurável. Sem método antes da ferramenta, a tecnologia tende a escalar o problema.',
                 ].map((texto, i) => (
                   <div key={i} style={{ display: 'flex', gap: '16px' }}>
-                    <span style={{ color: '#eb5c2e', marginTop: '4px', flexShrink: 0 }}>&#8594;</span>
+                    <span style={{ color: '#F5F5F2', marginTop: '4px', flexShrink: 0 }}>&#8594;</span>
                     <p style={{
                       fontFamily: 'AtypText, sans-serif',
                       fontWeight: 300,
@@ -521,13 +521,13 @@ export default function InspiraPage() {
                   'Quem busca validação de decisão já tomada. O INSPIRA não confirma o que o fundador já decidiu. Lê o sistema e diz o que encontrou, mesmo quando é diferente do esperado.',
                 ].map((texto, i) => (
                   <div key={i} style={{ display: 'flex', gap: '16px' }}>
-                    <span style={{ color: 'rgba(232,224,214,0.4)', marginTop: '4px', flexShrink: 0 }}>&#8212;</span>
+                    <span style={{ color: '#e8e0d6', marginTop: '4px', flexShrink: 0 }}>&#8212;</span>
                     <p style={{
                       fontFamily: 'AtypText, sans-serif',
                       fontWeight: 300,
                       fontSize: '0.9375rem',
                       lineHeight: 1.7,
-                      color: 'rgba(245,245,242,0.6)',
+                      color: '#e8e0d6',
                     }}>
                       {texto}
                     </p>
