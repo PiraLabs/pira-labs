@@ -133,7 +133,7 @@ export default function TranspiraJuridicoPage() {
         aria-label="Breadcrumb"
         style={{ backgroundColor: '#e8e0d6', padding: '12px 80px' }}
       >
-        <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: 0, padding: 0, fontFamily: 'AtypText, sans-serif', fontSize: '0.8125rem', color: '#05262e' }}>
+        <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: '0 auto', padding: 0, fontFamily: 'AtypText, sans-serif', fontSize: '0.8125rem', color: '#05262e', maxWidth: '1280px' }}>
           <li><a href="/" style={{ color: '#05262e', textDecoration: 'none' }}>Início</a></li>
           <li style={{ color: '#1A5568' }}>·</li>
           <li><a href="/transpira" style={{ color: '#05262e', textDecoration: 'none' }}>TRANSPIRA</a></li>
@@ -144,7 +144,7 @@ export default function TranspiraJuridicoPage() {
 
       {/* S1 — HERO | Sand */}
       <section style={{ backgroundColor: '#e8e0d6', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '800px' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -200,7 +200,7 @@ export default function TranspiraJuridicoPage() {
 
       {/* S2 — O PROBLEMA | Ink */}
       <section style={{ backgroundColor: '#05262e', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '800px' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -262,7 +262,7 @@ export default function TranspiraJuridicoPage() {
 
       {/* S3 — O QUE É | Teal */}
       <section style={{ backgroundColor: '#004757', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '800px' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -314,7 +314,7 @@ export default function TranspiraJuridicoPage() {
 
       {/* S4 — OS DOIS MODELOS | Sand */}
       <section style={{ backgroundColor: '#e8e0d6', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1200px' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -470,7 +470,7 @@ export default function TranspiraJuridicoPage() {
 
       {/* S5 — PARA QUEM É + CTA INTERMEDIÁRIO | Ink */}
       <section style={{ backgroundColor: '#05262e', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1000px' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -563,7 +563,7 @@ export default function TranspiraJuridicoPage() {
 
       {/* S6 — QUEM CONDUZ | Teal */}
       <section style={{ backgroundColor: '#004757', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '800px' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -614,7 +614,7 @@ export default function TranspiraJuridicoPage() {
 
       {/* S7 — FAQ | Sand */}
       <section style={{ backgroundColor: '#e8e0d6', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '800px' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
