@@ -279,7 +279,9 @@ Não adicionar redirect para `/sobre` nem `/contato` (essas rotas existem com o 
 - Etapa por etapa. Nunca avançar sem OK explícito do Celso.
 - Não inventar copy. Bloco sem copy aprovada → `<!-- COPY PENDENTE: [bloco-id] -->`.
 - Não alterar pricing sem confirmação. Preços canônicos: Oxigênio Fast R$3.500 / Full R$5.300 · pocket R$3.900 · Imersão em IA R$7.100.
-- Não nomear Diageo nem Samsung em nenhum texto público.
+- Não nomear Diageo nem Johnnie Walker em nenhum texto público.
+- Samsung: pode ser nomeada exclusivamente no contexto factual e histórico da operação dos Jogos Olímpicos Rio 2016 (registro público). Fora desse contexto, não nomear.
+- Cheil: pode ser nomeada.
 - Antes de editar arquivo existente, mostrar o diff e aguardar confirmação.
 - Nunca deletar arquivo sem confirmação explícita.
 - Após cada fase concluída, commitar com mensagem descritiva.
@@ -391,3 +393,26 @@ CNPJ:    46.954.891/0001-16
 Email:   inspira@piralabs.com.br
 Site:    piralabs.com.br
 ```
+
+---
+
+## TypeScript e configuração de path
+
+`tsconfig.json` usa `"strict": true` com target ES2017. O alias `@/` é resolvido via `paths: { "@/*": ["./*"] }` no tsconfig e espelhado em `next.config.js` → `turbopack.resolveAlias`. Ao criar novos arquivos, importar sempre com `@/` e nunca com caminhos relativos além de um nível.
+
+---
+
+## Padrão `'use client'` no projeto
+
+Componentes com GSAP ou estado de browser são sempre `'use client'`. O padrão de par na home (`*SectionClient.tsx` + `*Section.tsx`) existe para manter SSG puro: o `*SectionClient.tsx` usa `dynamic(() => import('./NomeSection'), { ssr: false })` e é o único arquivo com `'use client'`. Nunca adicionar `'use client'` ao arquivo `*Section.tsx` real.
+
+Componentes shared que precisam de estado (ex: `CookieBanner.tsx`, `MobileMenu.tsx`, `LangSetter.tsx`) declaram `'use client'` no próprio arquivo — não usam o padrão de par duplo.
+
+---
+
+## Armadilhas conhecidas
+
+- **CSP quebra embeds silenciosamente:** ao adicionar qualquer iframe/script externo novo, atualizar `next.config.js` antes do deploy. Não há erro de build — só falha no browser.
+- **`ScrollTrigger` no SSR:** nunca importar `gsap/ScrollTrigger` em componente sem `'use client'` e sem o double-RAF. O plugin acessa `window` e quebra o build estático.
+- **`lib/i18n.ts` legado:** o arquivo existe mas não é usado. Não importar em novos componentes.
+- **Fontes Atyp:** `AtypText-Regular` (400) não está disponível — usar `AtypText-Medium` (500) como substituto. Não criar fallback para peso 400 no CSS.
