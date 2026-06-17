@@ -244,7 +244,7 @@ export default function SobrePage() {
             <div className="w-full md:flex-1">
 
               {/* NOME */}
-              <h2 id="sobre-gabriela" className="font-display mt-8 mb-3" style={{ fontWeight: 600, fontSize: "clamp(2.5rem, 5vw, 3.5rem)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
+              <h2 id="sobre-gabriela" className="font-display mb-3" style={{ fontWeight: 600, fontSize: "clamp(2.5rem, 5vw, 3.5rem)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
                 Gabriela Aguiar
               </h2>
 
@@ -263,12 +263,12 @@ export default function SobrePage() {
 
               {/* QUOTE */}
               <blockquote className="font-display" style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 400, lineHeight: 1.6, color: "#F5F5F2", fontStyle: "normal", marginTop: "2rem", marginBottom: "2rem", padding: 0 }}>
-                &ldquo;O diagnóstico não inventa o problema. <span style={{ color: "#eb5c2e" }}>Revela</span> o que a fundadora ou o fundador já sentia mas ainda não havia encontrado palavras para nomear.&rdquo;
+                &ldquo;O diagnóstico não inventa o problema. <span style={{ color: "#eb5c2e" }}>Revela</span>{" "}o que a fundadora ou o fundador já sentia mas ainda não havia encontrado palavras para nomear.&rdquo;
               </blockquote>
 
               {/* TRAJETÓRIA COMPLETA */}
               <details className="details-clean" style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}>
-                <summary className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#eb5c2e", cursor: "pointer", listStyle: "none" }}>
+                <summary className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", cursor: "pointer", listStyle: "none" }}>
                   Trajetória completa →
                 </summary>
                 <div style={{ marginTop: "1.5rem" }}>
@@ -296,7 +296,7 @@ export default function SobrePage() {
               </a>
 
               {/* MICRO-CTA */}
-              <a href="/inspira" className="font-body" style={{ display: "block", marginTop: "2rem", fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#eb5c2e", textDecoration: "none" }}>
+              <a href="/inspira" className="font-body" style={{ display: "block", marginTop: "2rem", fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }}>
                 Ver o INSPIRA →
               </a>
 
