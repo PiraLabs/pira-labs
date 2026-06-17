@@ -11,9 +11,11 @@ export type MobileNavItem =
 function MobileAccordionItem({
   item,
   pathname,
+  onClose,
 }: {
   item: MobileNavItem
   pathname: string
+  onClose: () => void
 }) {
   const [open, setOpen] = useState(false)
 
@@ -24,6 +26,7 @@ function MobileAccordionItem({
         <Link
           href={item.href}
           aria-current={isCurrent ? 'page' : undefined}
+          onClick={onClose}
           className="flex items-center py-4 font-body font-semibold uppercase tracking-[0.08em] transition-opacity duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
           style={{
             fontSize: '16px',
@@ -89,6 +92,7 @@ function MobileAccordionItem({
               <li key={child.href}>
                 <Link
                   href={child.href}
+                  onClick={onClose}
                   className="flex items-center py-2 font-body transition-opacity duration-150 focus-visible:outline-none focus-visible:ring-2"
                   style={{
                     fontSize: '15px',
@@ -246,6 +250,7 @@ export function MobileMenu({
                 key={item.kind === 'link' ? item.href : item.label}
                 item={item}
                 pathname={pathname}
+                onClose={onClose}
               />
             ))}
           </ul>
