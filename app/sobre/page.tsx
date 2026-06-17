@@ -222,83 +222,86 @@ export default function SobrePage() {
 
       {/* SOBRE-3 · Gabriela Aguiar (Teal) */}
       <section className="bg-teal w-full" aria-labelledby="sobre-gabriela">
-        <div className="mx-auto px-6 py-20 md:py-28" style={{ maxWidth: "720px" }}>
+        <div className="container-site py-20 md:py-28">
+          <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
 
-          {/* Eyebrow */}
-          <p className="font-body mb-12" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#e8e0d6" }}>
-            Fundadora
-          </p>
-
-          {/* FOTO */}
-          <div className="w-full overflow-hidden mb-8" style={{ aspectRatio: "4/5", borderRadius: "2px", maxHeight: "560px" }}>
-            <Image
-              src="/gabriela-aguiar.png"
-              alt="Gabriela Aguiar, CEO e cofundadora da Pira Labs"
-              width={640}
-              height={800}
-              className="w-full h-full object-cover"
-              style={{ objectPosition: "center 10%" }}
-              priority
-            />
-          </div>
-
-          {/* NOME */}
-          <h2 id="sobre-gabriela" className="font-display mt-8 mb-1" style={{ fontWeight: 600, fontSize: "clamp(2.5rem, 5vw, 3.5rem)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
-            Gabriela Aguiar
-          </h2>
-
-          {/* PAPEL */}
-          <p className="font-body mb-6" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase" }}>
-            <span style={{ color: "#eb5c2e" }}>CEO e cofundadora</span>
-            <a href="/inspira" style={{ color: "#e8e0d6", textDecoration: "none" }}> · Conduz o INSPIRA</a>
-          </p>
-
-          {/* BIO CURTA */}
-          <div className="space-y-4 mb-8">
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
-              Gabriela conduz o INSPIRA na Pira Labs: o diagnóstico que lê seis camadas do negócio antes de nomear qualquer problema. Com mais de uma década em ecossistemas globais de inovação e formação em andamento no MIT Universal AI Foundational Modules, ela chega antes de o mapa existir. A trajetória completa explica por quê.
-            </p>
-          </div>
-
-          {/* QUOTE */}
-          <blockquote className="font-display" style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 400, lineHeight: 1.6, color: "#F5F5F2", fontStyle: "normal", marginTop: "2rem", marginBottom: "2rem", padding: 0 }}>
-            &ldquo;O diagnóstico não inventa o problema. Revela o que a fundadora ou o fundador já sentia mas ainda não havia encontrado palavras para nomear.&rdquo;
-          </blockquote>
-
-          {/* TRAJETÓRIA COMPLETA */}
-          <details className="details-clean" style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}>
-            <summary className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#eb5c2e", cursor: "pointer", listStyle: "none" }}>
-              Trajetória completa →
-            </summary>
-            <div style={{ marginTop: "1.5rem" }}>
-              <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
-                São mais de dez anos em ecossistemas de inovação, parcerias estratégicas e desenvolvimento de negócios. Entre 2019 e 2025, como Executiva de Inovação, Ecossistemas e Parcerias na Plug and Play Tech Center Brasil, conectou startups, corporações, investidores, universidades e governo em programas de inovação aberta. Antes disso, entre 2012 e 2019, atuou como Senior Project Manager na CBRE e na JLL, alocada junto aos times de clientes como Google, Amazon, Meta e X em projetos corporativos de expansão e workplace.
-              </p>
-              <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
-                É professora e mentora em inovação e empreendedorismo na FIAP e no Instituto Cidades Responsivas, e atua em programas de aceleração de empreendedorismo e tecnologia ligados ao ITA e à USP. Como mentora de startups e empreendedoras, passou por FGV Ventures, FINEP, German Accelerator, Unicamp e Casa B2Mommy.
-              </p>
-              <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
-                Palestrante, moderadora e curadora em eventos de inovação, tecnologia e ecossistemas, incluindo Web Summit, Global Summit, ClimateHack, ABES Summit e o Festival Cidade do Futuro. Foi selecionada para o 90 Day Finn, programa internacional da Helsinki Partners na edição Deep Tech.
-              </p>
-              <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
-                Cursa educação executiva em uso estratégico de IA para negócios no MIT, em andamento. Tem MBA em Gerenciamento de Marketing pelo Insper e graduação em Relações Internacionais pela ESAMC. É certificada PMP pelo PMI e LEED Green Associate pelo GBC. Fala português e inglês.
-              </p>
+            {/* COLUNA ESQUERDA — FOTO */}
+            <div className="w-full md:w-[42%] shrink-0">
+              <div className="w-full overflow-hidden" style={{ aspectRatio: "4/5", borderRadius: "2px", maxHeight: "560px" }}>
+                <Image
+                  src="/gabriela-aguiar.png"
+                  alt="Gabriela Aguiar, CEO e cofundadora da Pira Labs"
+                  width={640}
+                  height={800}
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: "center 10%" }}
+                  priority
+                />
+              </div>
             </div>
-          </details>
 
-          {/* LINKEDIN */}
-          <a href="https://www.linkedin.com/in/gabrielaaguiarvs/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mt-6 mb-4" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }} aria-label="LinkedIn de Gabriela Aguiar">
-            LinkedIn
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </a>
+            {/* COLUNA DIREITA — TEXTO */}
+            <div className="w-full md:flex-1">
 
-          {/* MICRO-CTA */}
-          <a href="/inspira" className="font-body" style={{ display: "block", marginTop: "2rem", fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#eb5c2e", textDecoration: "none" }}>
-            Ver o INSPIRA →
-          </a>
+              {/* NOME */}
+              <h2 id="sobre-gabriela" className="font-display mt-8 mb-3" style={{ fontWeight: 600, fontSize: "clamp(2.5rem, 5vw, 3.5rem)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
+                Gabriela Aguiar
+              </h2>
 
+              {/* PAPEL */}
+              <p className="font-body mb-6" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase" }}>
+                <span style={{ color: "#e8e0d6" }}>CEO e cofundadora</span>
+                <a href="/inspira" style={{ color: "#e8e0d6", textDecoration: "none" }}> · Conduz o INSPIRA</a>
+              </p>
+
+              {/* BIO CURTA */}
+              <div className="space-y-4 mb-8">
+                <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
+                  Gabriela conduz o INSPIRA na Pira Labs: o diagnóstico que lê seis camadas do negócio antes de nomear qualquer problema. Com mais de uma década em ecossistemas globais de inovação e formação em andamento no MIT Universal AI Foundational Modules, ela chega antes de o mapa existir. A trajetória completa explica por quê.
+                </p>
+              </div>
+
+              {/* QUOTE */}
+              <blockquote className="font-display" style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 400, lineHeight: 1.6, color: "#F5F5F2", fontStyle: "normal", marginTop: "2rem", marginBottom: "2rem", padding: 0 }}>
+                &ldquo;O diagnóstico não inventa o problema. <span style={{ color: "#eb5c2e" }}>Revela</span> o que a fundadora ou o fundador já sentia mas ainda não havia encontrado palavras para nomear.&rdquo;
+              </blockquote>
+
+              {/* TRAJETÓRIA COMPLETA */}
+              <details className="details-clean" style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}>
+                <summary className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#eb5c2e", cursor: "pointer", listStyle: "none" }}>
+                  Trajetória completa →
+                </summary>
+                <div style={{ marginTop: "1.5rem" }}>
+                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
+                    São mais de dez anos em ecossistemas de inovação, parcerias estratégicas e desenvolvimento de negócios. Entre 2019 e 2025, como Executiva de Inovação, Ecossistemas e Parcerias na Plug and Play Tech Center Brasil, conectou startups, corporações, investidores, universidades e governo em programas de inovação aberta. Antes disso, entre 2012 e 2019, atuou como Senior Project Manager na CBRE e na JLL, alocada junto aos times de clientes como Google, Amazon, Meta e X em projetos corporativos de expansão e workplace.
+                  </p>
+                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
+                    É professora e mentora em inovação e empreendedorismo na FIAP e no Instituto Cidades Responsivas, e atua em programas de aceleração de empreendedorismo e tecnologia ligados ao ITA e à USP. Como mentora de startups e empreendedoras, passou por FGV Ventures, FINEP, German Accelerator, Unicamp e Casa B2Mommy.
+                  </p>
+                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
+                    Palestrante, moderadora e curadora em eventos de inovação, tecnologia e ecossistemas, incluindo Web Summit, Global Summit, ClimateHack, ABES Summit e o Festival Cidade do Futuro. Foi selecionada para o 90 Day Finn, programa internacional da Helsinki Partners na edição Deep Tech.
+                  </p>
+                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
+                    Cursa educação executiva em uso estratégico de IA para negócios no MIT, em andamento. Tem MBA em Gerenciamento de Marketing pelo Insper e graduação em Relações Internacionais pela ESAMC. É certificada PMP pelo PMI e LEED Green Associate pelo GBC. Fala português e inglês.
+                  </p>
+                </div>
+              </details>
+
+              {/* LINKEDIN */}
+              <a href="https://www.linkedin.com/in/gabrielaaguiarvs/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mt-6 mb-4" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }} aria-label="LinkedIn de Gabriela Aguiar">
+                LinkedIn
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+
+              {/* MICRO-CTA */}
+              <a href="/inspira" className="font-body" style={{ display: "block", marginTop: "2rem", fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#eb5c2e", textDecoration: "none" }}>
+                Ver o INSPIRA →
+              </a>
+
+            </div>
+          </div>
         </div>
       </section>
 
