@@ -4,10 +4,14 @@
 
 @layer base {
   :root {
-    --color-ink: #05262e;
-    --color-teal: #004757;
-    --color-orange: #EB5C2E;
-    --color-off-white: #E8E0D6;
+    --color-ink:      #05262e;
+    --color-teal:     #004757;
+    --color-teal-mid: #1A5568;
+    --color-sand:     #e8e0d6;
+    --color-white:    #F5F5F2;
+    --color-taupe:    #b0a596;
+    --color-ember:    #eb5c2e;
+    --color-ember-deep: #C4421A;
   }
 
   html,
@@ -21,11 +25,12 @@
 
   /* AtypText — body, nav, UI, forms, FAQs. */
   body {
-    background-color: var(--color-deep-teal);
-    color: var(--color-off-white);
+    background-color: var(--color-ink);
+    color: var(--color-sand);
     font-family: var(--font-atyp-text), sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   /* AtypDisplay — H1–H4, wordmark. */
@@ -40,8 +45,8 @@
     position: absolute;
     top: -40px;
     left: 0;
-    background: var(--color-orange);
-    color: var(--color-ink);
+    background: var(--color-ember);
+    color: var(--color-white);
     padding: 8px 16px;
     z-index: 100;
     font-family: var(--font-atyp-text), sans-serif;
@@ -54,7 +59,7 @@
 
   /* Foco visível — WCAG 2.1 AA */
   :focus-visible {
-    outline: 2px solid var(--color-orange);
+    outline: 2px solid var(--color-ember);
     outline-offset: 2px;
   }
 }
@@ -71,42 +76,79 @@
     font-family: var(--font-atyp-display), sans-serif;
   }
 
-  /* ATENÇÃO: botão primário usa ink (#0C0F16) como texto.
-     off-white sobre orange falha WCAG AA (contraste ~2.54:1).
-     ink sobre orange passa WCAG AA (contraste ~4.7:1). */
+  /* BTN-1 — ember bg, branco, uppercase, tracking 0.14em, inline-flex com seta.
+     Contraste #F5F5F2 sobre #EB5C2E: 3.4:1 (WCAG AA large text / UI components). */
   .btn-primary {
-    background-color: var(--color-orange);
-    color: var(--color-ink);
+    background-color: var(--color-ember);
+    color: var(--color-white);
     font-family: var(--font-atyp-text), sans-serif;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     padding: 0.75rem 1.5rem;
     border-radius: 0.25rem;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     text-decoration: none;
-    transition: opacity 0.15s ease;
+    transition: gap 0.2s ease, transform 0.2s ease;
     min-height: 44px;
   }
 
   .btn-primary:hover {
-    opacity: 0.9;
+    gap: 0.75rem;
+    transform: translateX(2px);
   }
 
+  /* BTN-2 — outline sand, fundo transparente (fundos escuros: ink, teal). */
   .btn-secondary {
     background-color: transparent;
-    border: 1px solid var(--color-off-white);
-    color: var(--color-off-white);
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
     font-family: var(--font-atyp-text), sans-serif;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     padding: 0.75rem 1.5rem;
     border-radius: 0.25rem;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     text-decoration: none;
-    transition: background-color 0.15s ease;
+    transition: background-color 0.2s ease, gap 0.2s ease;
     min-height: 44px;
   }
 
   .btn-secondary:hover {
-    background-color: rgba(232, 224, 214, 0.1);
+    background-color: rgba(232, 224, 214, 0.08);
+    gap: 0.75rem;
+  }
+
+  /* BTN-2-light — outline ink (fundos claros: sand, white). */
+  .btn-secondary-light {
+    background-color: transparent;
+    border: 1px solid var(--color-ink);
+    color: var(--color-ink);
+    font-family: var(--font-atyp-text), sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease, gap 0.2s ease;
+    min-height: 44px;
+  }
+
+  .btn-secondary-light:hover {
+    background-color: rgba(5, 38, 46, 0.06);
+    gap: 0.75rem;
   }
 
   /* Container padrão */

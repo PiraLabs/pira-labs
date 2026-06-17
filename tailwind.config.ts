@@ -8,16 +8,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#05262e",
-        "deep-teal": "#05262E",
-        teal: "#004757",
-        tealMid: "#1A5568",
-        orange: "#EB5C2E",
-        ember: "#eb5c2e",
-        emberDeep: "#C4421A",
-        sand: "#e8e0d6",
-        "off-white": "#E8E0D6",
-        white: "#F5F5F2",
+        ink:        '#05262e',
+        'deep-teal':'#05262e',
+        teal:       '#004757',
+        tealMid:    '#1A5568',
+        sand:       '#e8e0d6',
+        'off-white':'#e8e0d6',
+        white:      '#F5F5F2',
+        taupe:      '#b0a596',
+        ember:      '#eb5c2e',
+        orange:     '#eb5c2e',
+        emberDeep:  '#C4421A',
+        black:      '#000000',
       },
       fontFamily: {
         /* Sistema tipográfico KZ (decisão D10):
