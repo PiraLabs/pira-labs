@@ -307,85 +307,85 @@ export default function SobrePage() {
 
       {/* SOBRE-4 · Celso Gama (Ink) */}
       <section className="bg-ink w-full" aria-labelledby="sobre-celso">
-        <div className="mx-auto px-6 py-20 md:py-28" style={{ maxWidth: "720px" }}>
+        <div className="container-site py-20 md:py-28">
+          <div className="flex flex-col md:flex-row-reverse gap-10 md:gap-16 items-start">
 
-          {/* Eyebrow */}
-          <p className="font-body mb-12" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#e8e0d6" }}>
-            Fundador
-          </p>
+            {/* COLUNA DIREITA — FOTO (primeiro no DOM para mobile em cima) */}
+            <div className="w-full md:w-[42%] shrink-0">
+              <div className="w-full overflow-hidden" style={{ aspectRatio: "4/5", borderRadius: "2px" }}>
+                <Image
+                  src="/celso-gama.png"
+                  alt="Celso Gama, COO e cofundador da Pira Labs"
+                  width={640}
+                  height={800}
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: "center top" }}
+                />
+              </div>
+            </div>
 
-          {/* FOTO */}
-          <div className="w-full overflow-hidden mb-8" style={{ aspectRatio: "4/5", borderRadius: "2px", maxHeight: "560px" }}>
-            <Image
-              src="/celso-gama.png"
-              alt="Celso Gama, COO e cofundador da Pira Labs"
-              width={640}
-              height={800}
-              className="w-full h-full object-cover"
-              style={{ objectPosition: "center top" }}
-            />
+            {/* COLUNA ESQUERDA — TEXTO */}
+            <div className="w-full md:flex-1">
+
+              {/* NOME */}
+              <h2 id="sobre-celso" className="font-display mb-3" style={{ fontWeight: 600, fontSize: "clamp(2.5rem, 5vw, 3.5rem)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
+                Celso Gama
+              </h2>
+
+              {/* PAPEL */}
+              <p className="font-body mb-6" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase" }}>
+                <span style={{ color: "#e8e0d6" }}>COO e cofundador</span>
+                <a href="/transpira" style={{ color: "#e8e0d6", textDecoration: "none" }}> · Conduz o TRANSPIRA</a>
+              </p>
+
+              {/* BIO CURTA */}
+              <div className="space-y-4 mb-8">
+                <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
+                  Celso conduz o TRANSPIRA na Pira Labs: a execução que entra na operação e sai quando os resultados acordados são verificados. Vinte e cinco anos dentro de operações complexas, bacharelando em Direito (Mackenzie) e MIT Applied AI Certificate Program em andamento. O que o número não diz, a trajetória conta.
+                </p>
+              </div>
+
+              {/* QUOTE */}
+              <blockquote className="font-display" style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 400, lineHeight: 1.6, color: "#F5F5F2", fontStyle: "normal", marginTop: "2rem", marginBottom: "2rem", padding: 0 }}>
+                &ldquo;A Pira Labs não sai quando o prazo acaba. Sai quando os resultados acordados são <span style={{ color: "#eb5c2e" }}>verificados</span>.&rdquo;
+              </blockquote>
+
+              {/* TRAJETÓRIA COMPLETA */}
+              <details className="details-clean" style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}>
+                <summary className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", cursor: "pointer", listStyle: "none" }}>
+                  Trajetória completa →
+                </summary>
+                <div style={{ marginTop: "1.5rem" }}>
+                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
+                    São mais de 25 anos dentro de operações complexas. Entre 2014 e 2017, como Diretor de Ativação de Marcas e Eventos na Cheil, liderou a operação brasileira da Samsung nos Jogos Olímpicos Rio 2016 em parceria com o time da Coréia, coordenando 622 profissionais e mais de 100 fornecedores. Sob sua gestão estavam PMO, produção, planejamento, atendimento e operação. Na mesma passagem, escalou a receita da unidade de R$ 16 milhões para R$ 163 milhões em 24 meses.
+                  </p>
+                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
+                    A carreira passou por operações de marca, agências e reestruturação de margem em empresas de serviços. Em um dos projetos, reverteu uma operação de margem negativa de 64% para positiva de 15% em seis meses. Sabe onde colocar tecnologia e onde colocar gente porque já acertou e errou nos dois.
+                  </p>
+                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
+                    É bacharelando no último semestre de Direito (Mackenzie). Cursa o MIT Applied AI Certificate Program (em andamento até o final de 2026). Tem MBA Executivo pelo Insper, pós-graduação em Marketing pela ESPM e formação em Publicidade e Cinema pela FAAP.
+                  </p>
+                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
+                    Ao longo da carreira, recebeu reconhecimentos como Cannes Lions, Effie, MMA, Wave Festival e Profissionais do Ano. Fala português, inglês, espanhol e italiano.
+                  </p>
+                </div>
+              </details>
+
+              {/* LINKEDIN */}
+              <a href="https://www.linkedin.com/in/celsogama/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mt-6 mb-4" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }} aria-label="LinkedIn de Celso Gama">
+                LinkedIn
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+
+              {/* MICRO-CTA */}
+              <a href="/transpira" className="font-body" style={{ display: "block", marginTop: "2rem", fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }}>
+                Ver o TRANSPIRA →
+              </a>
+
+            </div>
           </div>
-
-          {/* NOME */}
-          <h2 id="sobre-celso" className="font-display mt-8 mb-1" style={{ fontWeight: 600, fontSize: "clamp(2rem, 4vw, 2.75rem)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
-            Celso Gama
-          </h2>
-
-          {/* PAPEL */}
-          <p className="font-body mb-6" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase" }}>
-            <span style={{ color: "#eb5c2e" }}>COO e cofundador</span>
-            <a href="/transpira" style={{ color: "#e8e0d6", textDecoration: "none" }}> · Conduz o TRANSPIRA</a>
-          </p>
-
-          {/* BIO */}
-          <div className="space-y-4 mb-8">
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
-              Celso entra quando a operação precisa de alguém que já viu isso antes. E já viu muita coisa.
-            </p>
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
-              Vinte e cinco anos dentro de operações complexas: de hubs regionais de multinacionais a empresas de serviços que cresceram, travaram, viraram e, algumas, não voltaram.
-            </p>
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
-              Sabe onde colocar tecnologia e onde colocar gente porque já errou nos dois. Conduz o TRANSPIRA. Entra na operação, trabalha junto com o time, sai quando os resultados acordados são verificados. Não quando o prazo acaba.
-            </p>
-          </div>
-
-          {/* CREDENCIAIS */}
-          <ul className="mb-3 space-y-2">
-            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "#e8e0d6", fontWeight: 300 }}>
-              <span style={{ color: "#e8e0d6", flexShrink: 0, marginTop: "2px" }}>·</span>
-              <span>Bacharelando em Direito (Mackenzie)</span>
-            </li>
-            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "#e8e0d6", fontWeight: 300 }}>
-              <span style={{ color: "#e8e0d6", flexShrink: 0, marginTop: "2px" }}>·</span>
-              <span>PMO da operação olímpica de multinacional do setor de tecnologia de consumo, Rio 2016. 622 profissionais coordenados e mais de 100 fornecedores externos</span>
-            </li>
-            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "#e8e0d6", fontWeight: 300 }}>
-              <span style={{ color: "#e8e0d6", flexShrink: 0, marginTop: "2px" }}>·</span>
-              <span>MBA Insper · Pós-graduação em Marketing (ESPM) · Publicidade (FAAP)</span>
-            </li>
-            <li className="font-body flex items-start gap-2" style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "#e8e0d6", fontWeight: 300 }}>
-              <span style={{ color: "#e8e0d6", flexShrink: 0, marginTop: "2px" }}>·</span>
-              <span>MIT Applied AI Certificate Program (em andamento, 2026)</span>
-            </li>
-          </ul>
-
-          {/* LINKEDIN */}
-          <a href="https://www.linkedin.com/in/celsogama/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mt-6 mb-12" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }} aria-label="LinkedIn de Celso Gama">
-            LinkedIn
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </a>
-
-          {/* SEPARADOR */}
-          <hr style={{ borderColor: "rgba(232,224,214,0.15)", borderTopWidth: 1, margin: "2.5rem 0" }} />
-
-          {/* QUOTE */}
-          <blockquote className="font-display" style={{ fontSize: "clamp(1.125rem, 2.5vw, 1.375rem)", fontWeight: 400, lineHeight: 1.6, color: "#F5F5F2", fontStyle: "normal", margin: 0, padding: 0 }}>
-            &ldquo;A Pira Labs não sai quando o prazo acaba. Sai quando os resultados acordados são verificados.&rdquo;
-          </blockquote>
-
         </div>
       </section>
 
