@@ -227,7 +227,7 @@ export default function SobrePage() {
 
             {/* COLUNA ESQUERDA — FOTO */}
             <div className="w-full md:w-[42%] shrink-0">
-              <div className="w-full overflow-hidden" style={{ aspectRatio: "4/5", borderRadius: "2px", maxHeight: "560px" }}>
+              <div className="w-full overflow-hidden" style={{ aspectRatio: "4/5", borderRadius: "2px" }}>
                 <Image
                   src="/gabriela-aguiar.png"
                   alt="Gabriela Aguiar, CEO e cofundadora da Pira Labs"
