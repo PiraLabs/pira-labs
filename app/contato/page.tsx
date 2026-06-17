@@ -63,7 +63,7 @@ export default function ContatoPage() {
 
       {/* CONTATO-2 + 3 · Texto introdutório + Formulário Fillout */}
       <Section variant="default" paddingY="lg">
-        <p className="text-off-white/70 font-body mb-8 max-w-xl">
+        <p className="font-body mb-8 max-w-xl" style={{ color: '#e8e0d6' }}>
           Quanto mais contexto você compartilhar agora, mais útil é a resposta.
         </p>
         <Suspense
@@ -87,12 +87,13 @@ export default function ContatoPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl">
           {/* Email */}
           <div>
-            <p className="text-xs font-body font-semibold uppercase tracking-widest text-orange/80 mb-2">
+            <p className="font-body font-semibold uppercase tracking-widest mb-2" style={{ fontSize: '12px', letterSpacing: '0.14em', color: '#b0a596' }}>
               Email
             </p>
             <a
               href={`mailto:${SOCIAL.EMAIL}`}
-              className="text-off-white/85 font-body hover:text-orange transition-colors"
+              className="font-body transition-colors"
+              style={{ color: '#F5F5F2' }}
               aria-label="Enviar email para a Pira Labs"
             >
               {SOCIAL.EMAIL}
@@ -101,15 +102,15 @@ export default function ContatoPage() {
 
           {/* Localização */}
           <div>
-            <p className="text-xs font-body font-semibold uppercase tracking-widest text-orange/80 mb-2">
+            <p className="font-body font-semibold uppercase tracking-widest mb-2" style={{ fontSize: '12px', letterSpacing: '0.14em', color: '#b0a596' }}>
               Localização
             </p>
-            <p className="text-off-white/85 font-body">São Paulo, Brasil</p>
+            <p className="font-body" style={{ color: '#F5F5F2' }}>São Paulo, Brasil</p>
           </div>
 
           {/* LinkedIn */}
           <div>
-            <p className="text-xs font-body font-semibold uppercase tracking-widest text-orange/80 mb-2">
+            <p className="font-body font-semibold uppercase tracking-widest mb-2" style={{ fontSize: '12px', letterSpacing: '0.14em', color: '#b0a596' }}>
               LinkedIn
             </p>
             <ul className="space-y-2">
@@ -118,7 +119,8 @@ export default function ContatoPage() {
                   href={SOCIAL.PIRA_LINKEDIN}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-body text-off-white/70 hover:text-orange transition-colors"
+                  className="text-sm font-body transition-colors"
+                  style={{ color: '#e8e0d6' }}
                   aria-label="LinkedIn da Pira Labs (abre em nova aba)"
                 >
                   Pira Labs
@@ -130,7 +132,8 @@ export default function ContatoPage() {
                   href={SOCIAL.GABRIELA_LINKEDIN}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-body text-off-white/70 hover:text-orange transition-colors"
+                  className="text-sm font-body transition-colors"
+                  style={{ color: '#e8e0d6' }}
                   aria-label="LinkedIn de Gabriela Aguiar (abre em nova aba)"
                 >
                   Gabriela Aguiar
@@ -142,7 +145,8 @@ export default function ContatoPage() {
                   href={SOCIAL.CELSO_LINKEDIN}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-body text-off-white/70 hover:text-orange transition-colors"
+                  className="text-sm font-body transition-colors"
+                  style={{ color: '#e8e0d6' }}
                   aria-label="LinkedIn de Celso Gama (abre em nova aba)"
                 >
                   Celso Gama
@@ -154,10 +158,10 @@ export default function ContatoPage() {
 
           {/* Imprensa */}
           <div>
-            <p className="text-xs font-body font-semibold uppercase tracking-widest text-orange/80 mb-2">
+            <p className="font-body font-semibold uppercase tracking-widest mb-2" style={{ fontSize: '12px', letterSpacing: '0.14em', color: '#b0a596' }}>
               Imprensa e parcerias
             </p>
-            <p className="text-sm text-off-white/60 font-body leading-relaxed">
+            <p className="font-body leading-relaxed" style={{ fontSize: '14px', color: '#b0a596' }}>
               Para imprensa e parcerias institucionais, o email acima é o canal
               principal.
             </p>

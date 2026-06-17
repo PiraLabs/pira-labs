@@ -4,6 +4,9 @@ import { FinalCTA } from '@/components/shared/FinalCTA'
 export const metadata: Metadata = {
   title: 'Oxigênio IA Search | Pira Labs',
   description: 'Diagnóstico de presença em motores de IA. O que ChatGPT, Claude, Gemini e Perplexity respondem quando alguém pesquisa sobre o seu setor.',
+  alternates: {
+    canonical: 'https://piralabs.com.br/faisca/oxigenio-ia-search',
+  },
 }
 
 export default function OxigenioIASearchPage() {
