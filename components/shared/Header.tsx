@@ -142,13 +142,13 @@ export function Header() {
                     textTransform: 'uppercase',
                     letterSpacing: '0.06em',
                     color: '#F5F5F2',
-                    opacity: openDropdown === item.label ? 1 : 0.7,
+                    color: openDropdown === item.label ? '#F5F5F2' : '#b0a596',
                     whiteSpace: 'nowrap',
                     padding: '4px 0',
                     transition: 'opacity 0.15s ease',
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
-                  onMouseLeave={(e) => (e.currentTarget.style.opacity = openDropdown === item.label ? '1' : '0.7')}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#F5F5F2')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = openDropdown === item.label ? '#F5F5F2' : '#b0a596')}
                 >
                   {item.label}
                   <span style={{ fontSize: '10px', opacity: 0.6 }}>▾</span>
@@ -164,8 +164,7 @@ export function Header() {
                       marginTop: '8px',
                       backgroundColor: '#05262e',
                       border: '1px solid rgba(245,245,242,0.1)',
-                      borderRadius: '0 0 4px 4px',
-                      boxShadow: '0 8px 24px rgba(0,0,0,0.3)',
+                      borderRadius: 0,
                       padding: '8px 0',
                       minWidth: '220px',
                       zIndex: 100,
@@ -181,17 +180,17 @@ export function Header() {
                           fontFamily: 'var(--font-atyp-text)',
                           fontSize: '13px',
                           color: '#F5F5F2',
-                          opacity: 0.6,
+                          color: '#b0a596',
                           whiteSpace: 'nowrap',
-                          transition: 'opacity 0.15s ease, padding-left 0.15s ease',
+                          transition: 'color 0.15s ease, padding-left 0.15s ease',
                           textDecoration: 'none',
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.opacity = '1'
+                          e.currentTarget.style.color = '#F5F5F2'
                           e.currentTarget.style.paddingLeft = '24px'
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.opacity = '0.6'
+                          e.currentTarget.style.color = '#b0a596'
                           e.currentTarget.style.paddingLeft = '20px'
                         }}
                       >
@@ -212,14 +211,13 @@ export function Header() {
                 fontSize: 'clamp(11px, 1vw, 14px)',
                 textTransform: 'uppercase',
                 letterSpacing: '0.06em',
-                opacity: pathname === '/chama' ? 1 : 0.7,
+                color: pathname === '/chama' ? '#F5F5F2' : '#b0a596',
                 whiteSpace: 'nowrap',
                 textDecoration: 'none',
-                transition: 'opacity 0.15s ease',
-                color: '#F5F5F2',
+                transition: 'color 0.15s ease',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
-              onMouseLeave={(e) => (e.currentTarget.style.opacity = pathname === '/chama' ? '1' : '0.7')}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#F5F5F2')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = pathname === '/chama' ? '#F5F5F2' : '#b0a596')}
             >
               Chama
             </Link>
@@ -233,13 +231,21 @@ export function Header() {
                 fontSize: 'clamp(11px, 1vw, 14px)',
                 textTransform: 'uppercase',
                 letterSpacing: '0.06em',
-                opacity: pathname === '/antes-pira' ? 1 : 0.7,
                 whiteSpace: 'nowrap',
                 textDecoration: 'none',
-                transition: 'opacity 0.15s ease',
+                transition: 'color 0.15s ease',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
-              onMouseLeave={(e) => (e.currentTarget.style.opacity = pathname === '/antes-pira' ? '1' : '0.7')}
+              onMouseEnter={(e) => {
+                const spans = e.currentTarget.querySelectorAll('span')
+                spans[0].style.color = '#F5F5F2'
+                spans[2].style.color = '#F5F5F2'
+              }}
+              onMouseLeave={(e) => {
+                const isActive = pathname === '/antes-pira'
+                const spans = e.currentTarget.querySelectorAll('span')
+                spans[0].style.color = isActive ? '#F5F5F2' : '#b0a596'
+                spans[2].style.color = isActive ? '#F5F5F2' : '#b0a596'
+              }}
             >
               <span style={{ color: '#F5F5F2' }}>Antes</span>
               <span style={{ color: '#eb5c2e' }}>,</span>
@@ -265,18 +271,18 @@ export function Header() {
                 fontWeight: 600,
                 fontSize: '12px',
                 textTransform: 'uppercase',
-                letterSpacing: '0.10em',
+                letterSpacing: '0.14em',
                 padding: '8px 18px',
-                borderRadius: '2px',
+                borderRadius: 0,
                 textDecoration: 'none',
                 whiteSpace: 'nowrap',
-                transition: 'background-color 0.15s ease',
+                transition: 'transform 0.15s ease',
                 flexShrink: 0,
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#C4421A')}
-              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#eb5c2e')}
+              onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
+              onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
             >
-              Chame
+              Respire
             </Link>
 
             {/* Hamburguer mobile */}
