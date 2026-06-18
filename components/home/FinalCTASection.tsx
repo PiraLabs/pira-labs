@@ -49,18 +49,18 @@ export function FinalCTASection() {
           className="cta-respire"
           style={{
             fontFamily: "var(--font-atyp-text), sans-serif",
-            fontSize: "13px",
+            fontSize: "16px",
             fontWeight: 600,
-            letterSpacing: "0.14em",
+            letterSpacing: "0.08em",
             textTransform: "uppercase",
             color: WHITE,
             textDecoration: "none",
             backgroundColor: EMBER,
-            padding: "1.125rem 3.5rem",
+            padding: "1.125rem 3rem",
             display: "inline-flex",
             alignItems: "center",
-            gap: "0.625rem",
-            marginBottom: "1.5rem",
+            gap: "0.75rem",
+            marginBottom: "2rem",
           }}
         >
           Respire
