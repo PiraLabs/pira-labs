@@ -205,7 +205,7 @@ export default function SobrePage() {
       </div>
 
       {/* SOBRE-2 · Por que a Pira Labs existe (Sand) */}
-      <section className="bg-sand py-16 md:py-24">
+      <section className="bg-sand py-20 md:py-28">
         <div className="container-site">
           <div className="max-w-3xl space-y-5">
             <p className="font-body leading-relaxed text-lg" style={{ color: "#05262e" }}>
@@ -213,7 +213,7 @@ export default function SobrePage() {
             </p>
             <p className="font-body leading-relaxed text-lg" style={{ color: "#05262e" }}>
               Boutique não é eufemismo para pequeno. É{" "}
-              <span style={{ color: "#eb5c2e" }}>escolha</span>{" "}
+              <span style={{ color: "#C4421A" }}>escolha</span>{" "}
               deliberada. Cada projeto tem Gabriela e Celso do diagnóstico à entrega. Sem camada intermediária entre quem entende o problema e quem resolve.
             </p>
           </div>
@@ -244,19 +244,19 @@ export default function SobrePage() {
             <div className="w-full md:flex-1">
 
               {/* NOME */}
-              <h2 id="sobre-gabriela" className="font-display mb-3" style={{ fontWeight: 600, fontSize: "clamp(2.5rem, 5vw, 3.5rem)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
+              <h2 id="sobre-gabriela" className="font-display mb-3" style={{ fontWeight: 600, fontSize: "clamp(38px, 6.5vw, 72px)", lineHeight: 1.05, color: "#F5F5F2", letterSpacing: "-0.025em" }}>
                 Gabriela Aguiar
               </h2>
 
               {/* PAPEL */}
-              <p className="font-body mb-6" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase" }}>
+              <p className="font-body mb-6" style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase" }}>
                 <span style={{ color: "#e8e0d6" }}>CEO e cofundadora</span>
                 <a href="/inspira" style={{ color: "#e8e0d6", textDecoration: "none" }}> · Conduz o INSPIRA</a>
               </p>
 
               {/* BIO CURTA */}
               <div className="space-y-4 mb-8">
-                <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
+                <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2" }}>
                   Gabriela conduz o INSPIRA na Pira Labs: o diagnóstico que lê seis camadas do negócio antes de nomear qualquer problema. Com mais de uma década em ecossistemas globais de inovação e formação em andamento no MIT Universal AI Foundational Modules, ela chega antes de o mapa existir. A trajetória completa explica por quê.
                 </p>
               </div>
@@ -268,27 +268,27 @@ export default function SobrePage() {
 
               {/* TRAJETÓRIA COMPLETA */}
               <details className="details-clean" style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}>
-                <summary className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", cursor: "pointer", listStyle: "none" }}>
+                <summary className="font-body" style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#e8e0d6", cursor: "pointer", listStyle: "none" }}>
                   Trajetória completa →
                 </summary>
                 <div style={{ marginTop: "1.5rem" }}>
-                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
+                  <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2", marginBottom: "1rem" }}>
                     São mais de dez anos em ecossistemas de inovação, parcerias estratégicas e desenvolvimento de negócios. Entre 2019 e 2025, como Executiva de Inovação, Ecossistemas e Parcerias na Plug and Play Tech Center Brasil, conectou startups, corporações, investidores, universidades e governo em programas de inovação aberta. Antes disso, entre 2012 e 2019, atuou como Senior Project Manager na CBRE e na JLL, alocada junto aos times de clientes como Google, Amazon, Meta e X em projetos corporativos de expansão e workplace.
                   </p>
-                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
+                  <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2", marginBottom: "1rem" }}>
                     É professora e mentora em inovação e empreendedorismo na FIAP e no Instituto Cidades Responsivas, e atua em programas de aceleração de empreendedorismo e tecnologia ligados ao ITA e à USP. Como mentora de startups e empreendedoras, passou por FGV Ventures, FINEP, German Accelerator, Unicamp e Casa B2Mommy.
                   </p>
-                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
+                  <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2", marginBottom: "1rem" }}>
                     Palestrante, moderadora e curadora em eventos de inovação, tecnologia e ecossistemas, incluindo Web Summit, Global Summit, ClimateHack, ABES Summit e o Festival Cidade do Futuro. Foi selecionada para o 90 Day Finn, programa internacional da Helsinki Partners na edição Deep Tech.
                   </p>
-                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
+                  <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2", marginBottom: "1rem" }}>
                     Cursa educação executiva em uso estratégico de IA para negócios no MIT, em andamento. Tem MBA em Gerenciamento de Marketing pelo Insper e graduação em Relações Internacionais pela ESAMC. É certificada PMP pelo PMI e LEED Green Associate pelo GBC. Fala português e inglês.
                   </p>
                 </div>
               </details>
 
               {/* LINKEDIN */}
-              <a href="https://www.linkedin.com/in/gabrielaaguiarvs/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mt-6 mb-4" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }} aria-label="LinkedIn de Gabriela Aguiar">
+              <a href="https://www.linkedin.com/in/gabrielaaguiarvs/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mt-6 mb-4" style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }} aria-label="LinkedIn de Gabriela Aguiar">
                 LinkedIn
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -296,7 +296,7 @@ export default function SobrePage() {
               </a>
 
               {/* MICRO-CTA */}
-              <a href="/inspira" className="font-body" style={{ display: "block", marginTop: "2rem", fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }}>
+              <a href="/inspira" className="font-body" style={{ display: "block", marginTop: "2rem", fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }}>
                 Ver o INSPIRA →
               </a>
 
@@ -328,19 +328,19 @@ export default function SobrePage() {
             <div className="w-full md:flex-1">
 
               {/* NOME */}
-              <h2 id="sobre-celso" className="font-display mb-3" style={{ fontWeight: 600, fontSize: "clamp(2.5rem, 5vw, 3.5rem)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
+              <h2 id="sobre-celso" className="font-display mb-3" style={{ fontWeight: 600, fontSize: "clamp(38px, 6.5vw, 72px)", lineHeight: 1.05, color: "#F5F5F2", letterSpacing: "-0.025em" }}>
                 Celso Gama
               </h2>
 
               {/* PAPEL */}
-              <p className="font-body mb-6" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase" }}>
+              <p className="font-body mb-6" style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase" }}>
                 <span style={{ color: "#e8e0d6" }}>COO e cofundador</span>
                 <a href="/transpira" style={{ color: "#e8e0d6", textDecoration: "none" }}> · Conduz o TRANSPIRA</a>
               </p>
 
               {/* BIO CURTA */}
               <div className="space-y-4 mb-8">
-                <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
+                <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2" }}>
                   Celso conduz o TRANSPIRA na Pira Labs: a execução que entra na operação e sai quando os resultados acordados são verificados. Vinte e cinco anos dentro de operações complexas, bacharelando em Direito (Mackenzie) e MIT Applied AI Certificate Program em andamento. O que o número não diz, a trajetória conta.
                 </p>
               </div>
@@ -352,27 +352,27 @@ export default function SobrePage() {
 
               {/* TRAJETÓRIA COMPLETA */}
               <details className="details-clean" style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}>
-                <summary className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", cursor: "pointer", listStyle: "none" }}>
+                <summary className="font-body" style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#e8e0d6", cursor: "pointer", listStyle: "none" }}>
                   Trajetória completa →
                 </summary>
                 <div style={{ marginTop: "1.5rem" }}>
-                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
+                  <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2", marginBottom: "1rem" }}>
                     São mais de 25 anos dentro de operações complexas. Entre 2014 e 2017, como Diretor de Ativação de Marcas e Eventos na Cheil, liderou a operação brasileira da Samsung nos Jogos Olímpicos Rio 2016 em parceria com o time da Coréia, coordenando 622 profissionais e mais de 100 fornecedores. Sob sua gestão estavam PMO, produção, planejamento, atendimento e operação. Na mesma passagem, escalou a receita da unidade de R$ 16 milhões para R$ 163 milhões em 24 meses.
                   </p>
-                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
+                  <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2", marginBottom: "1rem" }}>
                     A carreira passou por operações de marca, agências e reestruturação de margem em empresas de serviços. Em um dos projetos, reverteu uma operação de margem negativa de 64% para positiva de 15% em seis meses. Sabe onde colocar tecnologia e onde colocar gente porque já acertou e errou nos dois.
                   </p>
-                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
+                  <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2", marginBottom: "1rem" }}>
                     É bacharelando no último semestre de Direito (Mackenzie). Cursa o MIT Applied AI Certificate Program (em andamento até o final de 2026). Tem MBA Executivo pelo Insper, pós-graduação em Marketing pela ESPM e formação em Publicidade e Cinema pela FAAP.
                   </p>
-                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", marginBottom: "1rem" }}>
+                  <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2", marginBottom: "1rem" }}>
                     Ao longo da carreira, recebeu reconhecimentos como Cannes Lions, Effie, MMA, Wave Festival e Profissionais do Ano. Fala português, inglês, espanhol e italiano.
                   </p>
                 </div>
               </details>
 
               {/* LINKEDIN */}
-              <a href="https://www.linkedin.com/in/celsogama/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mt-6 mb-4" style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }} aria-label="LinkedIn de Celso Gama">
+              <a href="https://www.linkedin.com/in/celsogama/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 mt-6 mb-4" style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }} aria-label="LinkedIn de Celso Gama">
                 LinkedIn
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -380,7 +380,7 @@ export default function SobrePage() {
               </a>
 
               {/* MICRO-CTA */}
-              <a href="/transpira" className="font-body" style={{ display: "block", marginTop: "2rem", fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }}>
+              <a href="/transpira" className="font-body" style={{ display: "block", marginTop: "2rem", fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }}>
                 Ver o TRANSPIRA →
               </a>
 
@@ -390,9 +390,9 @@ export default function SobrePage() {
       </section>
 
       {/* SOBRE-5 · Como as duas lentes trabalham juntas (Sand) */}
-      <section className="bg-sand py-16 md:py-24">
+      <section className="bg-sand py-20 md:py-28">
         <div className="container-site">
-          <h2 className="font-display font-semibold mb-10" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)", lineHeight: 1.2, color: "#05262e" }}>
+          <h2 className="font-display font-semibold mb-10" style={{ fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.1, color: "#05262e", letterSpacing: "-0.02em" }}>
             Como as duas lentes trabalham juntas
           </h2>
           <div className="max-w-3xl mb-10 overflow-hidden" style={{ aspectRatio: "16/9", borderRadius: "2px" }}>
@@ -407,21 +407,21 @@ export default function SobrePage() {
             />
           </div>
           <div className="max-w-3xl space-y-5 mb-4">
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#05262e" }}>
+            <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#05262e" }}>
               Gabriela lê contexto, sinais e movimentos de mercado antes de virarem demanda óbvia. Celso lê operação, gargalo e consequência antes de virarem perda visível. Separadas, essas lentes geram diagnóstico parcial.{" "}
-              <span style={{ color: "#eb5c2e" }}>Juntas</span>,
+              Juntas,
               mostram onde o negócio está travado e o que precisa mudar para avançar sem quebrar o que já funciona.
             </p>
           </div>
           <p className="font-display" style={{ fontSize: "clamp(1.25rem, 2.5vw, 1.75rem)", fontWeight: 500, lineHeight: 1.3, color: "#05262e", letterSpacing: "-0.02em", maxWidth: "720px", marginBottom: "48px" }}>
             Não é divisão de trabalho.<br />
-            <span style={{ color: "#eb5c2e" }}>É metodologia.</span>
+            É <span style={{ color: "#C4421A" }}>metodologia.</span>
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: "32px", flexWrap: "wrap", marginBottom: "0" }}>
-            <a href="/inspira" className="font-body font-semibold uppercase" style={{ fontSize: "13px", letterSpacing: "0.10em", color: "#e8e0d6", backgroundColor: "#05262e", padding: "14px 28px", borderRadius: "2px", textDecoration: "none" }}>
+            <a href="/inspira" className="font-body font-semibold uppercase" style={{ fontSize: "12px", letterSpacing: "0.14em", color: "#05262e", backgroundColor: "transparent", border: "1px solid #05262e", padding: "14px 28px", borderRadius: "2px", textDecoration: "none" }}>
               VER O INSPIRA →
             </a>
-            <a href="/transpira" className="font-body font-semibold uppercase" style={{ fontSize: "13px", letterSpacing: "0.10em", color: "#05262e", backgroundColor: "#e8e0d6", border: "1px solid #05262e", padding: "14px 28px", borderRadius: "2px", textDecoration: "none" }}>
+            <a href="/transpira" className="font-body font-semibold uppercase" style={{ fontSize: "12px", letterSpacing: "0.14em", color: "#05262e", backgroundColor: "transparent", border: "1px solid #05262e", padding: "14px 28px", borderRadius: "2px", textDecoration: "none" }}>
               VER O TRANSPIRA →
             </a>
           </div>
@@ -429,25 +429,25 @@ export default function SobrePage() {
       </section>
 
       {/* SOBRE-6+7 · Boutique por dentro. Ecossistema por fora. (Teal) */}
-      <section className="bg-teal py-16 md:py-24">
+      <section className="bg-ink py-20 md:py-28">
         <div className="container-site">
-          <h2 className="font-display font-semibold mb-8" style={{ fontSize: "clamp(24px, 2.8vw, 36px)", color: "#F5F5F2" }}>
+          <h2 className="font-display font-semibold mb-8" style={{ fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
             Boutique por dentro.{" "}
             <span style={{ color: "#eb5c2e" }}>Ecossistema</span>{" "}
             por fora.
           </h2>
           <div className="max-w-3xl space-y-4 mb-12">
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
+            <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2" }}>
               Quem contrata a Pira Labs não recebe um sócio na venda e um analista na entrega. Recebe Gabriela e Celso do diagnóstico ao encerramento.
             </p>
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
+            <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2" }}>
               Boutique é o modelo deliberado. O ecossistema é o que torna isso possível: uma rede de especialistas, parceiros e referências que entra quando o projeto pede, sem virar overhead fixo.
             </p>
-            <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
+            <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2" }}>
               Nos primeiros seis meses de operação, cinco projetos entregues para cinco clientes: KZ Inteligência em Comunicação, Concordia DPS LLC, Pipa e Sordilli.com. O quinto cliente é um escritório de advocacia com nome preservado a pedido.
             </p>
           </div>
-          <p className="font-body font-semibold uppercase mb-6" style={{ fontSize: "10px", letterSpacing: "0.18em", color: "#e8e0d6" }}>
+          <p className="font-body font-semibold uppercase mb-6" style={{ fontSize: "12px", letterSpacing: "0.14em", color: "#e8e0d6" }}>
             PARA IMPRENSA, PALESTRAS E PARCERIAS
           </p>
           <MediaKit className="max-w-2xl" />

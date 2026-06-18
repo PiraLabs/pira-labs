@@ -11,7 +11,7 @@ export function PageHeader({ breadcrumbs, h1, subtitle }: PageHeaderProps) {
     <div className="pt-20 md:pt-24 mb-10 md:mb-16">
       <div className="container-site">
         <Breadcrumbs items={breadcrumbs} />
-        <h1 className="font-display font-semibold leading-none mb-4" style={{ color: "#F5F5F2", fontSize: "clamp(48px, 6vw, 88px)", letterSpacing: "-0.02em" }}>
+        <h1 className="font-display leading-none mb-4" style={{ color: "#F5F5F2", fontSize: "clamp(52px, 10.2vw, 112px)", fontWeight: 700, letterSpacing: "-0.035em" }}>
           {h1}
         </h1>
         {subtitle && (
