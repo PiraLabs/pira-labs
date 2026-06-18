@@ -39,12 +39,11 @@ export function HeroSection() {
               letterSpacing: '-0.035em',
               fontWeight: 700,
               marginBottom: '32px',
+              maxWidth: '14ch',
+              textWrap: 'balance',
             }}
           >
-            <span style={{ display: 'block' }}>Existe um momento em que</span>
-            <span style={{ display: 'block' }}>transformar ainda é</span>
-            <span style={{ display: 'block' }}>um processo,</span>
-            <span style={{ display: 'block' }}>não uma crise.</span>
+            Existe um momento em que transformar ainda é um processo, não uma crise.
           </h1>
 
           <p
