@@ -5,7 +5,6 @@ import { HeroSectionClient } from "@/components/home/HeroSectionClient";
 import { SystemSectionClient } from "@/components/home/SystemSectionClient";
 import { SignalsSectionClient } from "@/components/home/SignalsSectionClient";
 import { CBTSectionClient } from "@/components/home/CBTSectionClient";
-import { MethodSectionClient } from "@/components/home/MethodSectionClient";
 import { FaiscaSectionClient } from "@/components/home/FaiscaSectionClient"
 import { ProofsSectionClient } from "@/components/home/ProofsSectionClient"
 import { FoundersSectionClient } from "@/components/home/FoundersSectionClient"
@@ -113,10 +112,7 @@ export default function HomePage() {
       {/* HOME-5 · CBT CATEGORIA */}
       <CBTSectionClient />
 
-      {/* HOME-6 · MÉTODO */}
-      <MethodSectionClient />
-
-      {/* HOME-7 · SISTEMA */}
+      {/* HOME-7 · SISTEMA (funde Método + Sistema) */}
       <SystemSectionClient />
 
       {/* HOME-8 · FAÍSCA TEASER */}
