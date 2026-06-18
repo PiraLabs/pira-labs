@@ -1,134 +1,109 @@
-import { useEffect, useRef, useState } from 'react'
+/* HOME-11 · CTA Final · fundo Ink #05262e
+   Server component estático · frase de fecho White (sem Ember span, proibido)
+   Botão RESPIRE = BTN-1 Ember sólido, hover por movimento (Eixo 6)
+   Único Ember da seção = o botão (Schindler) */
+
+const INK = "#05262e"
+const WHITE = "#F5F5F2"
+const SAND = "#e8e0d6"
+const EMBER = "#eb5c2e"
 
 export function FinalCTASection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true)
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.15 }
-    )
-    if (sectionRef.current) observer.observe(sectionRef.current)
-    return () => observer.disconnect()
-  }, [])
-
-  const entry = (delay: string): React.CSSProperties => ({
-    opacity: visible ? 1 : 0,
-    transform: visible ? 'translateY(0)' : 'translateY(24px)',
-    transition: `opacity 0.6s cubic-bezier(0.16,1,0.3,1) ${delay}, transform 0.6s cubic-bezier(0.16,1,0.3,1) ${delay}`,
-  })
-
   return (
     <section
-      ref={sectionRef}
       id="cta-final"
       aria-label="Contato"
-      style={{ backgroundColor: '#05262e' }}
+      style={{ backgroundColor: INK }}
     >
       <div
         style={{
-          maxWidth: '1280px',
-          margin: '0 auto',
-          padding: '160px 80px',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          textAlign: 'center',
+          maxWidth: "1280px",
+          margin: "0 auto",
+          padding: "clamp(6rem, 14vw, 11rem) clamp(1.5rem, 4vw, 3rem)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
         }}
       >
-        {/* Frase central */}
-        <div style={{ ...entry('0s'), marginBottom: '56px' }}>
-          <p
-            className="font-display font-light leading-tight"
-            style={{
-              fontSize: 'clamp(36px, 5vw, 72px)',
-              color: '#F5F5F2',
-              letterSpacing: '-0.03em',
-              maxWidth: '760px',
-            }}
-          >
-            O negócio ainda pode escolher. Essa é a{' '}
-            <span>janela</span>.
-          </p>
-        </div>
+        {/* Frase de fecho */}
+        <p
+          style={{
+            fontFamily: "var(--font-atyp-display), serif",
+            fontSize: "clamp(38px, 6.5vw, 72px)",
+            fontWeight: 600,
+            lineHeight: 1.05,
+            letterSpacing: "-0.025em",
+            color: WHITE,
+            maxWidth: "16ch",
+            textWrap: "balance",
+            margin: "0 0 clamp(2.5rem, 5vw, 3.5rem) 0",
+          }}
+        >
+          O negócio ainda pode escolher. Essa é a janela.
+        </p>
 
-        {/* CTA */}
-        <div style={{ ...entry('0.15s'), marginBottom: '24px' }}>
-          <a
-            href="/contato?origem=home"
-            className="font-body font-semibold uppercase tracking-widest"
-            style={{
-              fontSize: '13px',
-              color: '#F5F5F2',
-              textDecoration: 'none',
-              backgroundColor: '#eb5c2e',
-              border: 'none',
-              padding: '18px 56px',
-              borderRadius: '2px',
-              letterSpacing: '0.12em',
-              display: 'inline-block',
-              transition: 'opacity 0.2s, transform 0.2s',
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.opacity = '0.9'
-              e.currentTarget.style.transform = 'translateY(-1px)'
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.opacity = '1'
-              e.currentTarget.style.transform = 'translateY(0)'
-            }}
-          >
-            RESPIRE
-          </a>
-        </div>
+        {/* CTA RESPIRE — BTN-1 */}
+        <a
+          href="/contato?origem=home"
+          className="cta-respire"
+          style={{
+            fontFamily: "var(--font-atyp-text), sans-serif",
+            fontSize: "13px",
+            fontWeight: 600,
+            letterSpacing: "0.14em",
+            textTransform: "uppercase",
+            color: WHITE,
+            textDecoration: "none",
+            backgroundColor: EMBER,
+            padding: "1.125rem 3.5rem",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "0.625rem",
+            marginBottom: "1.5rem",
+          }}
+        >
+          Respire
+          <span className="cta-arrow" aria-hidden="true" style={{ display: "inline-block" }}>→</span>
+        </a>
 
         {/* Microcopy */}
-        <div style={entry('0.25s')}>
-          <p
-            className="font-body font-light"
-            style={{
-              fontSize: '13px',
-              color: '#e8e0d6',
-              marginBottom: '64px',
-            }}
-          >
-            Conte onde a operação começou a pesar. Respondemos em até dois dias úteis.
-          </p>
-        </div>
+        <p
+          style={{
+            fontFamily: "var(--font-atyp-text), sans-serif",
+            fontSize: "14px",
+            fontWeight: 400,
+            lineHeight: 1.55,
+            color: SAND,
+            maxWidth: "420px",
+            margin: "0 0 clamp(3rem, 6vw, 4rem) 0",
+          }}
+        >
+          Conte onde a operação começou a pesar. Respondemos em até dois dias úteis.
+        </p>
 
         {/* Fechamento */}
-        <div style={entry('0.4s')}>
-          <p
-            className="font-display font-light"
-            style={{
-              fontSize: '20px',
-              color: '#e8e0d6',
-              letterSpacing: '0.05em',
-            }}
-          >
-            Inspira. Transpira. Respira.
-          </p>
-        </div>
+        <p
+          style={{
+            fontFamily: "var(--font-atyp-display), serif",
+            fontSize: "20px",
+            fontWeight: 400,
+            letterSpacing: "0.05em",
+            color: SAND,
+            margin: 0,
+          }}
+        >
+          Inspira. Transpira. Respira.
+        </p>
       </div>
 
       <style>{`
-        @media (max-width: 1023px) {
-          #cta-final > div {
-            padding: 100px 24px !important;
-          }
-        }
+        .cta-respire { transition: transform 0.2s ease; }
+        .cta-respire:hover { transform: translateY(-2px); }
+        .cta-arrow { transition: transform 0.25s ease; }
+        .cta-respire:hover .cta-arrow { transform: translateX(4px); }
         @media (prefers-reduced-motion: reduce) {
-          #cta-final * {
-            transition: none !important;
-            opacity: 1 !important;
-            transform: none !important;
-          }
+          .cta-respire, .cta-arrow { transition: none !important; }
         }
       `}</style>
     </section>
