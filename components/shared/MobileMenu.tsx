@@ -31,7 +31,8 @@ function MobileAccordionItem({
           style={{
             fontSize: '16px',
             minHeight: '56px',
-            color: isCurrent ? '#eb5c2e' : '#F5F5F2',
+            color: '#F5F5F2',
+            fontWeight: isCurrent ? 700 : 600,
             outlineColor: '#eb5c2e',
           }}
         >
@@ -64,7 +65,8 @@ function MobileAccordionItem({
         style={{
           fontSize: '16px',
           minHeight: '56px',
-          color: anyActive ? '#eb5c2e' : '#F5F5F2',
+          color: '#F5F5F2',
+          fontWeight: anyActive ? 700 : 600,
           outlineColor: '#eb5c2e',
         }}
       >
@@ -266,23 +268,19 @@ export function MobileMenu({
           <Link
             href={ctaHref}
             onClick={onClose}
-            className="flex items-center justify-center w-full font-body font-semibold uppercase tracking-[0.10em] transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+            className="flex items-center justify-center w-full font-body font-semibold uppercase tracking-[0.14em] transition-transform duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
             style={{
               fontSize: '13px',
               minHeight: '52px',
               backgroundColor: '#eb5c2e',
               color: '#F5F5F2',
-              borderRadius: '2px',
+              borderRadius: 0,
               outlineColor: '#eb5c2e',
             }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.backgroundColor = '#C4421A')
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.backgroundColor = '#eb5c2e')
-            }
+            onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
+            onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
           >
-            Chama
+            Respire
           </Link>
         </div>
       </div>
