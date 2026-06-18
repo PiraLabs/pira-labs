@@ -1,10 +1,11 @@
 // lib/substack-rss.ts
 // Busca e parseia o RSS do Substack da Pira Labs.
-// Usado pela página /antes-da-crise como Server Component.
+// Usado por /antes-pira (data longa) e pela home (dataCurta).
 
 export interface SubstackPost {
   titulo: string;
   data: string;
+  dataCurta: string;
   previa: string;
   href: string;
 }
@@ -18,6 +19,14 @@ function formatarData(pubDate: string): string {
     month: "long",
     year: "numeric",
   });
+}
+
+function formatarDataCurta(pubDate: string): string {
+  const d = new Date(pubDate);
+  const dia = d.toLocaleDateString("pt-BR", { day: "numeric" });
+  const mes = d.toLocaleDateString("pt-BR", { month: "short" }).replace(".", "");
+  const ano = d.toLocaleDateString("pt-BR", { year: "numeric" });
+  return `${dia} ${mes} ${ano}`;
 }
 
 function extrairTexto(str: string): string {
@@ -41,14 +50,13 @@ function extrairCampo(xml: string, tag: string): string {
 export async function buscarPostsSubstack(limite = 5): Promise<SubstackPost[]> {
   try {
     const res = await fetch(FEED_URL, {
-      next: { revalidate: 3600 }, // revalida a cada 1 hora
+      next: { revalidate: 3600 },
     });
 
     if (!res.ok) return [];
 
     const xml = await res.text();
 
-    // Extrai cada <item>
     const itemRegex = /<item>([\s\S]*?)<\/item>/g;
     const posts: SubstackPost[] = [];
     let match;
@@ -64,6 +72,7 @@ export async function buscarPostsSubstack(limite = 5): Promise<SubstackPost[]> {
         posts.push({
           titulo,
           data: formatarData(pubDate),
+          dataCurta: formatarDataCurta(pubDate),
           previa,
           href,
         });

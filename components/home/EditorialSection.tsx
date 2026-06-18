@@ -87,7 +87,7 @@ export async function EditorialSection() {
                   style={{
                     display: "flex",
                     justifyContent: "space-between",
-                    alignItems: "baseline",
+                    alignItems: "flex-start",
                     gap: "1.5rem",
                     textDecoration: "none",
                     borderTop: "1px solid rgba(245,245,242,0.15)",
@@ -112,12 +112,14 @@ export async function EditorialSection() {
                       fontFamily: "var(--font-atyp-text), sans-serif",
                       fontSize: "13px",
                       fontWeight: 400,
+                      lineHeight: 1.3,
                       color: TAUPE,
                       whiteSpace: "nowrap",
                       flexShrink: 0,
+                      marginTop: "0.25rem",
                     }}
                   >
-                    {post.data}
+                    {post.dataCurta}
                   </span>
                 </a>
               ))}
