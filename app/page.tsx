@@ -10,7 +10,7 @@ import { ProofsSectionClient } from "@/components/home/ProofsSectionClient"
 import { FoundersSectionClient } from "@/components/home/FoundersSectionClient"
 import { EditorialSection } from "@/components/home/EditorialSection"
 import { FAQSectionClient } from "@/components/home/FAQSectionClient";
-import { FinalCTASectionClient } from "@/components/home/FinalCTASectionClient";
+import { FinalCTASection } from "@/components/home/FinalCTASection";
 import { organizationSchema } from "@/lib/schemas/organization";
 import { websiteSchema } from "@/lib/schemas/website";
 import { faqPageSchema } from "@/lib/schemas/service";
@@ -108,7 +108,7 @@ export default function HomePage() {
       <ManifestoSection />
 
       {/* HOME-11 · CTA FINAL */}
-      <FinalCTASectionClient />
+      <FinalCTASection />
 
     </>
   );
