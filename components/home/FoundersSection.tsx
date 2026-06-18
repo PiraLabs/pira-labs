@@ -6,7 +6,6 @@ import Image from "next/image"
 
 const INK     = "#05262e"
 const SAND    = "#e8e0d6"
-const WHITE   = "#F5F5F2"
 const TEALMID = "#1A5568"
 const EMBER   = "#eb5c2e"
 
