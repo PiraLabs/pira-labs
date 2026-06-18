@@ -1,5 +1,6 @@
-const INK   = "#05262e"
-const SAND  = "#e8e0d6"
+const INK     = "#05262e"
+const SAND    = "#e8e0d6"
+const TEALMID = "#1A5568"
 
 const SIGNALS = [
   {
@@ -31,6 +32,11 @@ const SIGNALS = [
 export function SignalsSection() {
   return (
     <section id="sinais" style={{ backgroundColor: SAND }}>
+      {/* Fronteira de topo — marca ruptura com o Hero (ambos Sand) */}
+      <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20">
+        <div style={{ borderTop: "1px solid rgba(5,38,46,0.15)" }} />
+      </div>
+
       <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 pt-20 pb-16">
 
         {/* Eyebrow */}
@@ -38,10 +44,10 @@ export function SignalsSection() {
           style={{
             fontFamily: "var(--font-atyp-text)",
             fontWeight: 600,
-            fontSize: "10px",
-            letterSpacing: "0.18em",
+            fontSize: "12px",
+            letterSpacing: "0.14em",
             textTransform: "uppercase",
-            color: INK,
+            color: TEALMID,
             marginBottom: "24px",
           }}
         >
@@ -53,12 +59,12 @@ export function SignalsSection() {
           className="font-display"
           style={{
             color: INK,
-            fontSize: "clamp(32px, 4vw, 56px)",
-            fontWeight: 500,
-            lineHeight: 1.15,
-            marginBottom: "24px",
+            fontSize: "clamp(30px, 4.4vw, 48px)",
+            fontWeight: 600,
+            lineHeight: 1.1,
+            marginBottom: "20px",
             letterSpacing: "-0.02em",
-            fontFamily: "var(--font-atyp-display), sans-serif",
+            maxWidth: "16ch",
           }}
         >
           O problema não está onde você está olhando.
@@ -68,9 +74,9 @@ export function SignalsSection() {
         <p
           className="font-body"
           style={{
-            fontSize: "clamp(17px, 1.8vw, 22px)",
-            fontWeight: 300,
-            color: INK,
+            fontSize: "18px",
+            fontWeight: 400,
+            color: TEALMID,
             lineHeight: 1.6,
             marginBottom: "40px",
             maxWidth: "640px",
@@ -84,10 +90,10 @@ export function SignalsSection() {
           <p
             className="font-body"
             style={{
-              fontSize: "16px",
-              fontWeight: 300,
+              fontSize: "18px",
+              fontWeight: 400,
               color: INK,
-              lineHeight: 1.75,
+              lineHeight: 1.6,
               marginBottom: "24px",
             }}
           >
@@ -96,10 +102,10 @@ export function SignalsSection() {
           <p
             className="font-body"
             style={{
-              fontSize: "16px",
-              fontWeight: 300,
+              fontSize: "18px",
+              fontWeight: 400,
               color: INK,
-              lineHeight: 1.75,
+              lineHeight: 1.6,
               marginBottom: 0,
             }}
           >
@@ -107,14 +113,8 @@ export function SignalsSection() {
           </p>
         </div>
 
-        {/* Lista tipográfica — details/summary: zero JS, server component, acessível */}
-        <ul
-          style={{
-            margin: 0,
-            padding: 0,
-            borderBottom: "1px solid rgba(5,38,46,0.15)",
-          }}
-        >
+        {/* Lista de sintomas — estática, tudo visível, zero JS */}
+        <ul style={{ margin: 0, padding: 0, borderBottom: "1px solid rgba(5,38,46,0.15)", listStyle: "none" }}>
           {SIGNALS.map((s, i) => {
             const num = String(i + 1).padStart(2, "0")
             return (
@@ -122,67 +122,71 @@ export function SignalsSection() {
                 key={i}
                 style={{
                   borderTop: "1px solid rgba(5,38,46,0.15)",
-                  listStyle: "none",
+                  padding: "20px 0",
+                  display: "flex",
+                  gap: "16px",
+                  alignItems: "baseline",
                 }}
               >
-                <details
-                  style={{ padding: "20px 0", cursor: "default" }}
+                <span
+                  style={{
+                    fontFamily: "var(--font-atyp-text)",
+                    fontWeight: 600,
+                    fontSize: "15px",
+                    color: TEALMID,
+                    minWidth: "24px",
+                    flexShrink: 0,
+                  }}
                 >
-                  <summary
+                  {num}
+                </span>
+                <div>
+                  <p
+                    className="font-display"
                     style={{
-                      display: "flex",
-                      gap: "16px",
-                      alignItems: "baseline",
-                      listStyle: "none",
-                      WebkitAppearance: "none",
-                      MozAppearance: "none",
-                      appearance: "none",
+                      fontWeight: 500,
+                      fontSize: "clamp(20px, 2vw, 26px)",
+                      color: INK,
+                      lineHeight: 1.25,
+                      margin: 0,
                     }}
                   >
-                    <span
-                      style={{
-                        fontFamily: "var(--font-atyp-text)",
-                        fontWeight: 600,
-                        fontSize: "15px",
-                        color: "#1A5568",
-                        minWidth: "24px",
-                        flexShrink: 0,
-                      }}
-                    >
-                      {num}
-                    </span>
-                    <p
-                      style={{
-                        fontFamily: "var(--font-atyp-display), sans-serif",
-                        fontWeight: 400,
-                        fontSize: "clamp(18px, 1.8vw, 24px)",
-                        color: INK,
-                        lineHeight: 1.3,
-                        margin: 0,
-                      }}
-                    >
-                      {s.main}
-                    </p>
-                  </summary>
+                    {s.main}
+                  </p>
                   <p
+                    className="font-body"
                     style={{
-                      fontFamily: "var(--font-atyp-text), sans-serif",
-                      fontWeight: 300,
+                      fontWeight: 400,
                       fontSize: "16px",
-                      color: INK,
-                      lineHeight: 1.6,
+                      color: TEALMID,
+                      lineHeight: 1.55,
                       marginTop: "8px",
                       marginBottom: 0,
-                      paddingLeft: "40px",
                     }}
                   >
                     {s.detail}
                   </p>
-                </details>
+                </div>
               </li>
             )
           })}
         </ul>
+
+        {/* Fecho — dado de mercado (Projeto 1), separado da lista */}
+        <div style={{ maxWidth: "680px", marginTop: "56px" }}>
+          <p
+            className="font-body"
+            style={{
+              fontSize: "18px",
+              fontWeight: 400,
+              color: INK,
+              lineHeight: 1.6,
+              margin: 0,
+            }}
+          >
+            Não é um problema isolado de uma empresa. Uma pesquisa da Fundação Dom Cabral de 2026 identificou que 68,3% das empresas brasileiras não possuem núcleo dedicado à governança de IA. O sintoma é individual. O padrão é estrutural.
+          </p>
+        </div>
 
       </div>
     </section>
