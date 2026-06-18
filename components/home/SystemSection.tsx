@@ -44,10 +44,10 @@ function LogoKZ() {
   // Nó direito (disco cheio) com fill EMBER — único Ember desta seção.
   return (
     <svg
-      viewBox="0 0 831.39 293.51"
+      viewBox="40.7 42.8 749.9 207.8"
       aria-hidden="true"
       role="presentation"
-      style={{ width: "clamp(300px, 46vw, 520px)", height: "auto", display: "block" }}
+      style={{ width: "clamp(280px, 70vw, 920px)", height: "auto", display: "block" }}
     >
       {/* nó esquerdo — anel duplo — fill SAND */}
       <path fill={SAND} d="M144.67,242.66c48.42,0,88.43-35.9,94.95-82.53h81.12c-.61-4.38-.95-8.82-.95-13.37s.34-8.99.95-13.37h-81.12c-6.51-46.65-46.53-82.55-94.95-82.55-52.97,0-95.92,42.95-95.92,95.92s42.95,95.9,95.92,95.9ZM144.67,79.43c32.6,0,59.77,23.19,66,53.96.85,4.33,1.31,8.78,1.31,13.37s-.46,9.04-1.31,13.37c-6.22,30.77-33.4,53.96-66,53.96-37.19,0-67.33-30.14-67.33-67.33s30.14-67.33,67.33-67.33Z" />
