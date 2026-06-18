@@ -150,7 +150,7 @@ app/
 | `HowFirstContact.tsx` | Bloco "como funciona o primeiro contato" |
 | `MobileMenu.tsx` | Menu mobile full-screen (drawer), invocado pelo Header |
 
-Home-specific (`/components/home/`): cada seção usa par duplo de arquivos. `*SectionClient.tsx` é um thin wrapper `'use client'` que usa `dynamic()` com `{ ssr: false }` para desabilitar SSR do componente GSAP. `*Section.tsx` contém o conteúdo real com as animações. Exemplo: `HeroSectionClient.tsx` importa dinamicamente `HeroSection.tsx`. Seções existentes: Hero · System · Signals · CBT · Method · Faisca · Proofs · Founders · Editorial · FAQ · FinalCTA. `CountUp.tsx` é componente auxiliar de contador animado.
+Home-specific (`/components/home/`): cada seção usa par duplo de arquivos. `*SectionClient.tsx` é um thin wrapper `'use client'` que usa `dynamic()` com `{ ssr: false }` para desabilitar SSR do componente GSAP. `*Section.tsx` contém o conteúdo real com as animações. Exemplo: `HeroSectionClient.tsx` importa dinamicamente `HeroSection.tsx`. Seções existentes: Hero · System (fundida com Method — `MethodSection.tsx` é legado, não usar) · Signals · CBT · Faisca · Proofs · Founders · Editorial · FAQ · FinalCTA. `CountUp.tsx` é componente auxiliar de contador animado.
 
 `components/Nav.tsx` e `components/Footer.tsx` na raiz de components são legado — os ativos são `components/shared/Header.tsx` e `components/shared/Footer.tsx`.
 
