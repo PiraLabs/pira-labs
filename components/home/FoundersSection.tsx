@@ -29,7 +29,7 @@ export function FoundersSection() {
           fill
           sizes="52vw"
           quality={80}
-          style={{ objectFit: "cover", objectPosition: "center" }}
+          style={{ objectFit: "cover", objectPosition: "30% center" }}
         />
         <div
           style={{
@@ -53,7 +53,7 @@ export function FoundersSection() {
         className="px-6 md:px-20 py-20 md:py-28"
       >
         {/* Header */}
-        <div style={{ maxWidth: "580px", marginBottom: "72px" }}>
+        <div style={{ maxWidth: "480px", marginBottom: "72px" }}>
           <p
             style={{
               fontFamily: "var(--font-atyp-text)",
@@ -95,7 +95,7 @@ export function FoundersSection() {
         </div>
 
         {/* Gabriela */}
-        <div style={{ maxWidth: "580px", paddingBottom: "48px", borderBottom: "1px solid rgba(5,38,46,0.15)" }}>
+        <div style={{ maxWidth: "480px", paddingBottom: "48px", borderBottom: "1px solid rgba(5,38,46,0.15)" }}>
           <h3
             className="font-display"
             style={{ fontWeight: 600, fontSize: "clamp(23px, 2.9vw, 32px)", color: INK, marginBottom: "16px", letterSpacing: "-0.01em", lineHeight: 1.2 }}
@@ -125,7 +125,7 @@ export function FoundersSection() {
         </div>
 
         {/* Celso */}
-        <div style={{ maxWidth: "580px", paddingTop: "48px" }}>
+        <div style={{ maxWidth: "480px", paddingTop: "48px" }}>
           <h3
             className="font-display"
             style={{ fontWeight: 600, fontSize: "clamp(23px, 2.9vw, 32px)", color: INK, marginBottom: "16px", letterSpacing: "-0.01em", lineHeight: 1.2 }}
