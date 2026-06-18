@@ -83,28 +83,28 @@ export default function HomePage() {
       {/* HOME-2 · SINAIS */}
       <SignalsSectionClient />
 
-      {/* HOME-3 · PROVAS */}
-      <ProofsSectionClient />
-
-      {/* HOME-4 · FUNDADORES */}
-      <FoundersSectionClient />
-
-      {/* HOME-5 · CBT CATEGORIA */}
+      {/* HOME-3 · CBT CATEGORIA */}
       <CBTSectionClient />
 
-      {/* HOME-7 · SISTEMA (funde Método + Sistema) */}
+      {/* HOME-4 · PROVAS */}
+      <ProofsSectionClient />
+
+      {/* HOME-5 · FUNDADORES */}
+      <FoundersSectionClient />
+
+      {/* HOME-6 · SISTEMA (funde Método + Sistema) */}
       <SystemSectionClient />
 
-      {/* HOME-8 · FAÍSCA TEASER */}
+      {/* HOME-7 · FAÍSCA TEASER */}
       <FaiscaSectionClient />
 
-      {/* HOME-9 · ANTES, PIRA */}
+      {/* HOME-8 · ANTES, PIRA */}
       <EditorialSection />
 
-      {/* HOME-10 · FAQ */}
+      {/* HOME-9 · FAQ */}
       <FAQSectionClient />
 
-      {/* HOME-10b · MANIFESTO (provisório — posição final na reordenação) */}
+      {/* HOME-10 · MANIFESTO */}
       <ManifestoSection />
 
       {/* HOME-11 · CTA FINAL */}
