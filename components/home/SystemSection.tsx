@@ -1,218 +1,117 @@
-"use client"
+const INK     = "#05262e"
+const WHITE   = "#F5F5F2"
+const SAND    = "#e8e0d6"
+const TEALMID = "#1A5568"
+const EMBER   = "#eb5c2e"
 
-import { useEffect, useRef } from "react"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+interface Pilar {
+  nome: string
+  estado: string
+  descricao: string
+  condutor?: string
+  href?: string
+  linkLabel?: string
+}
 
-gsap.registerPlugin(ScrollTrigger)
-
-/* HOME-2 · Sistema · Ink #05262e
-   Path 3 do Artboard_6 usado como elemento único: nó central + dois conectores.
-   Refs: leftNodeRef (g), centerRef (path), rightRef (circle).
-   prefers-reduced-motion: estado 3 estático. */
-
-const SAND  = "#e8e0d6"
-const INK   = "#05262e"
-const EMBER = "#eb5c2e"
-
-const LABELS = [
+const pilares: Pilar[] = [
   {
-    label: "Sistema disperso",
-    desc:  "A janela ainda está aberta, antes de virar urgência. A empresa opera, mas o modelo está custando caro demais.",
+    nome: "INSPIRA",
+    estado: "Sistema disperso",
+    descricao: "Analisa o negócio inteiro e detecta onde o modelo de trabalho começou a custar mais do que entrega. Nomeia o que está disperso e o que precisa entrar em ordem.",
+    condutor: "Gabriela Aguiar conduz.",
+    href: "/inspira",
+    linkLabel: "Conhecer o INSPIRA",
   },
   {
-    label: "Sistema em operação",
-    desc:  "Cada parte do negócio opera sem precisar do centro. Quem lidera para de ser passagem obrigatória para tudo.",
+    nome: "TRANSPIRA",
+    estado: "Sistema em operação",
+    descricao: "Junta as peças, corrige as rotas e organiza a execução. Reorganiza trabalho, margem e cadência até o sistema operar sem depender de quem o lidera.",
+    condutor: "Celso Gama conduz.",
+    href: "/transpira",
+    linkLabel: "Conhecer o TRANSPIRA",
   },
   {
-    label: "Sistema pleno",
-    desc:  "Clareza chegou. Margem voltou. O negócio respira e pode ir pro próximo nível.",
+    nome: "RESPIRA",
+    estado: "Sistema pleno",
+    descricao: "O sistema entrou no eixo e opera. A margem voltou, a decisão se distribuiu, o negócio respira. Não é produto que se contrata. É o que sobra quando os dois primeiros funcionaram.",
   },
 ]
 
-export function SystemSection() {
-  const sectionRef  = useRef<HTMLElement>(null)
-  const leftNodeRef = useRef<SVGGElement>(null)
-  const centerRef   = useRef<SVGGElement>(null)
-  const rightRef    = useRef<SVGCircleElement>(null)
-
-  useEffect(() => {
-    let raf1: number, raf2: number
-
-    raf1 = requestAnimationFrame(() => {
-      raf2 = requestAnimationFrame(() => {
-        const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-
-        if (reduced) {
-          gsap.set(leftNodeRef.current,  { opacity: 1 })
-          gsap.set(centerRef.current,    { opacity: 1 })
-          gsap.set(rightRef.current,     { opacity: 1, fill: EMBER })
-          return
-        }
-
-        // Fase 1 — seção entra na viewport: acende nós esquerdo e centro
-        ScrollTrigger.create({
-          trigger: sectionRef.current,
-          start: "top 65%",
-          once: true,
-          onEnter: () => {
-            gsap.to([leftNodeRef.current, centerRef.current], {
-              opacity: 1,
-              duration: 0.8,
-              ease: "power2.out",
-            })
-          },
-        })
-
-        // Fase 2 — seção mais visível: acende RESPIRA em Ember e trava
-        ScrollTrigger.create({
-          trigger: sectionRef.current,
-          start: "top 35%",
-          once: true,
-          onEnter: () => {
-            gsap.to(rightRef.current, {
-              opacity: 1,
-              fill: EMBER,
-              duration: 1.2,
-              ease: "power3.out",
-            })
-          },
-        })
-      })
-    })
-
-    return () => {
-      cancelAnimationFrame(raf1)
-      cancelAnimationFrame(raf2)
-      ScrollTrigger.getAll().forEach(t => t.kill())
-    }
-  }, [])
-
+function LogoKZ() {
+  // Paths reais do ICONE_SAND.svg — viewBox "0 0 831.39 293.51".
+  // Nó esquerdo (anel duplo) e central (meias-luas) com fill SAND.
+  // Nó direito (disco cheio) com fill EMBER — único Ember desta seção.
   return (
-    <section ref={sectionRef} style={{ backgroundColor: INK, position: "relative", overflow: "hidden" }}>
-      {/* Artboard KZ — nós sobre Ink, layer de fundo */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          inset: 0,
-          zIndex: 0,
-          pointerEvents: "none",
-        }}
-      >
-        <img
-          src="/brand/Artboard_2.svg"
-          alt=""
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center top",
-            opacity: 0.18,
-          }}
-        />
-      </div>
-      <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 pt-20 pb-16" style={{ position: "relative", zIndex: 1 }}>
+    <svg
+      viewBox="0 0 831.39 293.51"
+      aria-hidden="true"
+      role="presentation"
+      style={{ width: "clamp(220px, 32vw, 340px)", height: "auto", display: "block" }}
+    >
+      {/* nó esquerdo — anel duplo — fill SAND */}
+      <path fill={SAND} d="M144.67,242.66c48.42,0,88.43-35.9,94.95-82.53h81.12c-.61-4.38-.95-8.82-.95-13.37s.34-8.99.95-13.37h-81.12c-6.51-46.65-46.53-82.55-94.95-82.55-52.97,0-95.92,42.95-95.92,95.92s42.95,95.9,95.92,95.9ZM144.67,79.43c32.6,0,59.77,23.19,66,53.96.85,4.33,1.31,8.78,1.31,13.37s-.46,9.04-1.31,13.37c-6.22,30.77-33.4,53.96-66,53.96-37.19,0-67.33-30.14-67.33-67.33s30.14-67.33,67.33-67.33Z" />
+      {/* nó central — meia-lua inferior — fill SAND */}
+      <path fill={SAND} d="M415.7,242.67c48.43,0,88.45-35.9,94.96-82.54h-189.92c6.51,46.64,46.53,82.54,94.96,82.54Z" />
+      {/* nó central — meia-lua superior — fill SAND */}
+      <path fill={SAND} d="M510.66,133.39h-189.92c6.51-46.65,46.53-82.55,94.97-82.55s88.43,35.9,94.95,82.55Z" />
+      {/* nó direito — disco cheio — fill EMBER */}
+      <path fill={EMBER} d="M511.6,146.76c0-4.55-.34-8.99-.95-13.37h81.12c6.51-46.65,46.53-82.55,94.97-82.55c52.97,0,95.9,42.95,95.9,95.92s-42.93,95.9-95.9,95.9c-48.45,0-88.46-35.9-94.97-82.53h-81.12c.61-4.38.95-8.82.95-13.37Z" />
+    </svg>
+  )
+}
 
-        {/* Eyebrow */}
-        <p className="font-body font-semibold uppercase mb-6"
-          style={{ color: SAND, fontSize: "10px", letterSpacing: "0.18em" }}>
-          COMO OPERAMOS
+export function SystemSection() {
+  return (
+    <section id="sistema" aria-label="Como opera" style={{ backgroundColor: INK }}>
+      <div style={{ maxWidth: "1280px", margin: "0 auto" }} className="px-6 md:px-20 py-20 md:py-28">
+
+        {/* Logo grande centralizado */}
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: "72px" }}>
+          <LogoKZ />
+        </div>
+
+        {/* Header */}
+        <p style={{ fontFamily: "var(--font-atyp-text)", fontWeight: 600, fontSize: "12px", letterSpacing: "0.14em", textTransform: "uppercase", color: SAND, marginBottom: "32px" }}>
+          COMO OPERA
         </p>
-
-        {/* H2 */}
-        <h2 className="font-display"
-          style={{ color: SAND, fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 500, marginBottom: "24px", fontFamily: "var(--font-atyp-display), sans-serif" }}>
-          A Pira Labs opera por sistema.
+        <h2 className="font-display" style={{ fontWeight: 600, fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: WHITE, marginBottom: "24px", maxWidth: "16ch" }}>
+          Dois métodos. Um destino.
         </h2>
-
-        {/* Corpo */}
-        <p className="font-body font-light max-w-2xl"
-          style={{ color: "#e8e0d6", fontSize: "16px", lineHeight: 1.75, marginBottom: "64px", fontFamily: "var(--font-atyp-text), sans-serif" }}>
-          Cada nó representa pessoas, processos, decisões, tecnologias e entregas. Quando não
-          operam juntos, a empresa trabalha mais, decide pior e perde margem em silêncio.
+        <p className="font-body" style={{ fontSize: "18px", fontWeight: 400, color: WHITE, lineHeight: 1.6, maxWidth: "600px", marginBottom: "72px" }}>
+          O logo da Pira Labs é formado por três nós que se conectam num caminho linear. Eles traduzem como um negócio disperso vira pleno: é o método de trabalho que tira a empresa do esforço constante e a deixa respirar.
         </p>
 
-          {/* Desktop */}
-          <div className="hidden md:block" style={{ marginTop: "56px" }}>
-
-            {/* SVG — apenas as formas, sem texto */}
-            <svg viewBox="280 468 1380 148"
-              style={{ width: "100%", height: "auto", display: "block" }}
-              aria-hidden="true" focusable="false"
-              xmlns="http://www.w3.org/2000/svg">
-              <g ref={leftNodeRef} opacity={0.35}>
-                <path fill={SAND} d="M480.14,540c0,17.71-14.36,32.07-32.07,32.07s-32.07-14.36-32.07-32.07,14.36-32.07,32.07-32.07,32.07,14.36,32.07,32.07M497.38,540c0-27.23-22.08-49.31-49.31-49.31s-49.31,22.08-49.31,49.31,22.07,49.31,49.31,49.31,49.31-22.07,49.31-49.31"/>
-              </g>
-              <g ref={centerRef} opacity={0.35}>
-                <path fill={SAND} d="M1008.93,546h-97.86c2.96,24.4,23.73,43.31,48.93,43.31s45.97-18.91,48.93-43.31M911.07,534h97.86c-2.96-24.4-23.73-43.31-48.93-43.31s-45.97,18.91-48.93,43.31M1009.31,540c0,2.03-.14,4.03-.38,6h413.69v-12h-413.69c.24,1.97.38,3.97.38,6M496.37,546h414.7c-.24-1.97-.38-3.97-.38-6s.14-4.03.38-6h-414.7v12Z"/>
-              </g>
-              <path fill={EMBER} opacity={0.9} d="M1471.93,490.69c-27.23,0-49.31,22.08-49.31,49.31s22.08,49.31,49.31,49.31,49.31-22.07,49.31-49.31-22.08-49.31-49.31-49.31"/>
-            </svg>
-
-            {/* Labels e descrições em HTML — alinhamento CSS preciso */}
-            <div className="grid grid-cols-3" style={{ marginTop: "16px" }}>
-              {LABELS.map(({ label, desc }, i) => (
-                <div key={i} style={{ textAlign: "center", padding: "0 12px" }}>
-                  <p style={{
-                    color: "#e8e0d6",
-                    fontSize: "13px",
-                    fontWeight: 400,
-                    letterSpacing: "0.04em",
-                    marginBottom: "8px",
-                    fontFamily: "var(--font-atyp-text), sans-serif",
-                  }}>
-                    {label}
-                  </p>
-                  <p style={{
-                    color: "#e8e0d6",
-                    fontSize: "12px",
-                    lineHeight: 1.65,
-                    fontFamily: "var(--font-atyp-text), sans-serif",
-                    fontWeight: 300,
-                  }}>
-                    {desc}
-                  </p>
-                </div>
-              ))}
+        {/* Três pilares — empilhados, divisores entre eles */}
+        <div>
+          {pilares.map((p, i) => (
+            <div
+              key={p.nome}
+              style={{
+                paddingTop: i === 0 ? 0 : "40px",
+                paddingBottom: i === pilares.length - 1 ? 0 : "40px",
+                borderTop: i === 0 ? "none" : "1px solid rgba(245,245,242,0.12)",
+                maxWidth: "640px",
+              }}
+            >
+              <h3 className="font-display" style={{ fontWeight: 600, fontSize: "clamp(23px, 2.9vw, 32px)", lineHeight: 1.2, letterSpacing: "-0.01em", color: WHITE, marginBottom: "16px" }}>
+                {p.nome} <span style={{ color: TEALMID }}>·</span> {p.estado}
+              </h3>
+              <p className="font-body" style={{ fontSize: "18px", fontWeight: 400, color: WHITE, lineHeight: 1.6, marginBottom: p.condutor ? "16px" : 0 }}>
+                {p.descricao}
+              </p>
+              {p.condutor && (
+                <p style={{ fontFamily: "var(--font-atyp-text)", fontWeight: 400, fontSize: "14px", color: TEALMID, lineHeight: 1.55, marginBottom: "20px" }}>
+                  {p.condutor}
+                </p>
+              )}
+              {p.href && p.linkLabel && (
+                <a href={p.href} className="btn-tertiary" style={{ color: SAND }}>
+                  {p.linkLabel}<span aria-hidden="true">→</span>
+                </a>
+              )}
             </div>
-          </div>
-
-          {/* Mobile: três estados empilhados verticalmente — paths canônicos do desktop isolados por nó */}
-          <div className="flex flex-col gap-10 md:hidden" style={{ marginTop: "48px" }}>
-            {LABELS.map(({ label, desc }, i) => (
-              <div key={i} className="flex items-start gap-5">
-                <div style={{ flexShrink: 0, marginTop: "2px" }}>
-                  {i === 0 && (
-                    /* DISPERSO — anel duplo, opacidade via style no svg pai */
-                    <svg width="40" height="40" viewBox="399 507 98 66" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" style={{ opacity: 0.35 }}>
-                      <path fill={SAND} d="M480.14,540c0,17.71-14.36,32.07-32.07,32.07s-32.07-14.36-32.07-32.07,14.36-32.07,32.07-32.07,32.07,14.36,32.07,32.07M497.38,540c0-27.23-22.08-49.31-49.31-49.31s-49.31,22.08-49.31,49.31,22.07,49.31,49.31,49.31,49.31-22.07,49.31-49.31"/>
-                    </svg>
-                  )}
-                  {i === 1 && (
-                    /* EM OPERAÇÃO — meias-luas, viewBox quadrado centrado no nó, opacidade via style */
-                    <svg width="40" height="40" viewBox="911 491 98 98" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" style={{ opacity: 0.35 }}>
-                      <path fill={SAND} d="M1008.93,546h-97.86c2.96,24.4,23.73,43.31,48.93,43.31s45.97-18.91,48.93-43.31M911.07,534h97.86c-2.96-24.4-23.73-43.31-48.93-43.31s-45.97,18.91-48.93,43.31"/>
-                    </svg>
-                  )}
-                  {i === 2 && (
-                    /* PLENO — disco Ember sólido */
-                    <svg width="40" height="40" viewBox="1422 491 99 99" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                      <path fill={EMBER} d="M1471.93,490.69c-27.23,0-49.31,22.08-49.31,49.31s22.08,49.31,49.31,49.31,49.31-22.07,49.31-49.31-22.08-49.31-49.31-49.31"/>
-                    </svg>
-                  )}
-                </div>
-                <div style={{ paddingTop: "4px" }}>
-                  <p style={{ color: SAND, fontSize: "13px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "6px", fontFamily: "var(--font-atyp-text), sans-serif" }}>
-                    {label}
-                  </p>
-                  <p style={{ color: "#e8e0d6", fontSize: "15px", lineHeight: 1.7, fontFamily: "var(--font-atyp-text), sans-serif", fontWeight: 300 }}>
-                    {desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          ))}
+        </div>
 
       </div>
     </section>
