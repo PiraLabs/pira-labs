@@ -9,6 +9,8 @@ export const organizationSchema = {
   email: "inspira@piralabs.com.br",
   description:
     "A Pira Labs é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes da crise.",
+  slogan:
+    "O trabalho não acabou. O modelo de trabalho das empresas de serviços é que envelheceu.",
   sameAs: [
     "https://www.linkedin.com/company/piralabs",
     "https://www.wikidata.org/wiki/Q138846707",

@@ -14,6 +14,8 @@ import { FinalCTASectionClient } from "@/components/home/FinalCTASectionClient";
 import { organizationSchema } from "@/lib/schemas/organization";
 import { websiteSchema } from "@/lib/schemas/website";
 import { faqPageSchema } from "@/lib/schemas/service";
+import { faqHome } from "@/lib/faq-home";
+import { ManifestoSection } from "@/components/home/ManifestoSection";
 
 export const metadata: Metadata = {
   title: { absolute: "Creative Business Turnaround · Pira Labs" },
@@ -35,32 +37,10 @@ export const metadata: Metadata = {
   },
 };
 
-const faqItems = [
-  {
-    question: "Quanto custa trabalhar com a Pira Labs?",
-    answer:
-      "Cada projeto é dimensionado individualmente. Os produtos de entrada têm preço público: Oxigênio IA Search Fast R$3.500 / Full R$5.300. Pocket do INSPIRA R$3.900. Imersão em IA R$7.100. Para INSPIRA e TRANSPIRA, o investimento é definido após a primeira conversa.",
-  },
-  {
-    question: "Quanto tempo demora?",
-    answer:
-      "Depende do produto. Oxigênio: até 5 dias úteis. Pocket do INSPIRA: sessão única de 1,5h. Imersão em IA: 3 sessões, 5,5h no total. INSPIRA completo: 4 a 6 semanas. TRANSPIRA: entre 2 e 6 meses conforme escopo e configuração.",
-  },
-  {
-    question: "E se eu não sei exatamente o que preciso?",
-    answer:
-      "A primeira conversa é justamente isso. Sem compromisso. Ajudamos a nomear o problema antes de propor qualquer solução.",
-  },
-  {
-    question: "Como começa o primeiro contato?",
-    answer:
-      "Você manda mensagem pelo formulário. Em até 2 dias úteis Gabriela e Celso respondem. Conversa inicial de 30 a 45 minutos. Se fizer sentido para os dois lados, proposta em até 5 dias úteis.",
-  },
-  {
-    question: "Vocês atendem empresas internacionais?",
-    answer: "Sim. Atendemos em português e inglês.",
-  },
-];
+const faqItems = faqHome.map((item) => ({
+  question: item.pergunta,
+  answer: item.resposta,
+}));
 
 const webPageSchema = {
   "@context": "https://schema.org",
@@ -123,6 +103,9 @@ export default function HomePage() {
 
       {/* HOME-10 · FAQ */}
       <FAQSectionClient />
+
+      {/* HOME-10b · MANIFESTO (provisório — posição final na reordenação) */}
+      <ManifestoSection />
 
       {/* HOME-11 · CTA FINAL */}
       <FinalCTASectionClient />
