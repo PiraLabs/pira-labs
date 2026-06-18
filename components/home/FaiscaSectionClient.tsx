@@ -1,10 +1,5 @@
 "use client"
-import dynamic from "next/dynamic"
-
-const FaiscaSection = dynamic(
-  () => import("./FaiscaSection").then((mod) => mod.FaiscaSection),
-  { ssr: false }
-)
+import { FaiscaSection } from "./FaiscaSection"
 
 export function FaiscaSectionClient() {
   return <FaiscaSection />

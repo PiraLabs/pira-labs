@@ -1,297 +1,97 @@
-"use client"
+const INK     = "#05262e"
+const SAND    = "#e8e0d6"
+const TEALMID = "#1A5568"
 
-import { useEffect, useRef, useState } from "react"
-import Link from "next/link"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { CTAButton } from '@/components/ui/CTAButton'
+interface Produto { nome: string; href: string }
+interface Bloco {
+  problema: string
+  eyebrow?: string
+  produtos: Produto[]
+}
 
-gsap.registerPlugin(ScrollTrigger)
-
-/* HOME-6 · Faísca · fundo Sand #e8e0d6
-   Lista vertical com divisores de categoria, numeração e hover por linha.
-   GSAP ScrollTrigger: stagger 0.08s por grupo.
-   Ember exclusivo: palavra "respirar" no H2. */
-
-const INK      = "#05262e"
-const TEAL_MID = "#1A5568"
-const EMBER    = "#eb5c2e"
-
-interface Product { num: string; name: string; price: string; href: string }
-
-interface Group { situation: string; items: Product[] }
-
-const GROUPS: Group[] = [
+const blocos: Bloco[] = [
   {
-    situation: "Precisa entender o que está acontecendo antes de assumir qualquer compromisso maior.",
-    items: [
-      { num: "", name: "Oxigênio",          price: "R$3.500 / R$5.300", href: "/inspira/oxigenio" },
-      { num: "", name: "pocket do INSPIRA", price: "R$3.900",           href: "/faisca/pocket" },
+    problema: "Precisa entender o que está acontecendo antes de assumir qualquer compromisso maior.",
+    produtos: [
+      { nome: "Oxigênio", href: "/faisca/oxigenio-ia-search" },
+      { nome: "pocket do INSPIRA", href: "/faisca/pocket" },
     ],
   },
   {
-    situation: "A IA já entrou na operação, mas ainda não entrou no modelo.",
-    items: [
-      { num: "", name: "Imersão em IA", price: "R$7.100", href: "/faisca/imersa-em-ia" },
+    problema: "A IA já entrou na operação, mas ainda não entrou no modelo.",
+    produtos: [
+      { nome: "Imersão em IA", href: "/faisca/imersa-em-ia" },
     ],
   },
   {
-    situation: "Quer levar essa leitura para uma liderança, empresa ou evento.",
-    items: [
-      { num: "", name: "Palestras",  price: "sob consulta",         href: "/chama" },
-      { num: "", name: "Workshops",  price: "a partir de R$12.500", href: "/chama" },
+    problema: "Quer levar essa leitura para uma liderança, empresa ou evento.",
+    produtos: [
+      { nome: "Palestras", href: "/chama" },
+      { nome: "Workshops", href: "/chama" },
+    ],
+  },
+  {
+    eyebrow: "OFERTAS SELETIVAS",
+    problema: "Se nenhum dos grupos acima descreve o seu momento, pode ser um destes.",
+    produtos: [
+      { nome: "C-level as a Service", href: "/faisca" },
+      { nome: "Faísca Jurídica", href: "/faisca/juridica" },
     ],
   },
 ]
-
-const SELECTIVE: Product[] = [
-  { num: "", name: "C-level as a Service", price: "sob consulta", href: "/faisca" },
-  { num: "", name: "Faísca Jurídica",      price: "sob consulta", href: "/faisca/juridica" },
-]
-
-function SituationDivider({ label }: { label: string }) {
-  return (
-    <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "32px 0 16px" }}>
-      <div style={{ flexShrink: 0, width: "32px", height: "1px", background: TEAL_MID }} />
-      <span style={{
-        fontSize: "12px", fontWeight: 300, fontStyle: "italic",
-        color: TEAL_MID, fontFamily: "var(--font-atyp-text)",
-        lineHeight: 1.4,
-      }}>
-        {label}
-      </span>
-      <div style={{ flex: 1, height: "1px", background: TEAL_MID, opacity: 0.25 }} />
-    </div>
-  )
-}
-
-
-function ProductRow({
-  item,
-  rowRef,
-}: {
-  item: Product
-  rowRef: (el: HTMLAnchorElement | null) => void
-}) {
-  const [hovered, setHovered] = useState(false)
-
-  return (
-    <Link
-      href={item.href}
-      ref={rowRef}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={{
-        display: "grid",
-        gridTemplateColumns: item.num ? "36px 1fr auto 20px" : "1fr auto 20px",
-        gap: "20px",
-        padding: "22px 0",
-        borderBottom: "1px solid rgba(5,38,46,0.1)",
-        position: "relative",
-        overflow: "hidden",
-        textDecoration: "none",
-        alignItems: "center",
-      }}
-    >
-      {/* Overlay slide-in da esquerda */}
-      <div style={{
-        position: "absolute",
-        inset: 0,
-        backgroundColor: "rgba(5,38,46,0.035)",
-        transform: hovered ? "translateX(0)" : "translateX(-100%)",
-        transition: "transform 0.35s ease",
-        pointerEvents: "none",
-      }} />
-
-      {/* Número — oculto quando vazio */}
-      {item.num && (
-        <span style={{
-          fontFamily: "var(--font-atyp-text)",
-          fontWeight: 600,
-          fontSize: "10px",
-          color: TEAL_MID,
-          letterSpacing: "0.08em",
-        }}>
-          {item.num}
-        </span>
-      )}
-
-      {/* Nome */}
-      <span style={{
-        fontFamily: "var(--font-atyp-display)",
-        fontWeight: 400,
-        fontSize: "clamp(28px, 3vw, 48px)",
-        color: INK,
-        letterSpacing: hovered ? "-0.015em" : "-0.02em",
-        transition: "letter-spacing 0.35s",
-      }}>
-        {item.name}
-      </span>
-
-      {/* Preço */}
-      <span style={{
-        fontFamily: "var(--font-atyp-text)",
-        fontWeight: 300,
-        fontSize: "13px",
-        color: "#05262e",
-        textAlign: "right",
-        whiteSpace: "nowrap",
-      }}>
-        {item.price}
-      </span>
-
-      {/* Seta */}
-      <span style={{
-        fontSize: "16px",
-        color: hovered ? TEAL_MID : "#05262e",
-        transform: hovered ? "translateX(5px)" : "translateX(0)",
-        transition: "color 0.25s, transform 0.25s",
-      }}>
-        →
-      </span>
-    </Link>
-  )
-}
 
 export function FaiscaSection() {
-  const rowRefs = useRef<(HTMLAnchorElement | null)[]>([])
-
-  useEffect(() => {
-    let raf1: number, raf2: number
-
-    raf1 = requestAnimationFrame(() => {
-      raf2 = requestAnimationFrame(() => {
-        const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-        const all = rowRefs.current.filter(Boolean)
-
-        if (reduced) {
-          gsap.set(all, { opacity: 1, y: 0 })
-          return
-        }
-
-        gsap.set(all, { opacity: 0, y: 16 })
-
-        // Stagger por grupo: linhas 0-2 | 3-4 | 5-6
-        const groupBounds: [number, number][] = [[0, 3], [3, 5], [5, 7]]
-
-        groupBounds.forEach(([start, end]) => {
-          const rows = rowRefs.current.slice(start, end).filter(Boolean)
-          if (!rows.length || !rows[0]) return
-          gsap.to(rows, {
-            opacity: 1,
-            y: 0,
-            duration: 0.55,
-            stagger: 0.08,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: rows[0],
-              start: "top 80%",
-              toggleActions: "play none none none",
-            },
-          })
-        })
-      })
-    })
-
-    return () => {
-      cancelAnimationFrame(raf1)
-      cancelAnimationFrame(raf2)
-    }
-  }, [])
-
-  let globalIdx = 0
-
   return (
-    <section style={{ backgroundColor: "#e8e0d6" }}>
-      <div className="max-w-[1280px] mx-auto px-6 md:px-20 pt-12 md:pt-20 pb-12 md:pb-20">
+    <section id="faisca" aria-label="Faísca" style={{ backgroundColor: SAND }}>
+      <div style={{ maxWidth: "1280px", margin: "0 auto" }} className="px-6 md:px-20 py-20 md:py-28">
 
-        {/* Eyebrow */}
-        <p style={{
-          fontFamily: "var(--font-atyp-text)",
-          fontWeight: 600,
-          fontSize: "10px",
-          letterSpacing: "0.18em",
-          textTransform: "uppercase",
-          color: "#05262e",
-          marginBottom: "24px",
-        }}>
-          ONDE VOCÊ ESTÁ AGORA
+        {/* Header */}
+        <p style={{ fontFamily: "var(--font-atyp-text)", fontWeight: 600, fontSize: "12px", letterSpacing: "0.14em", textTransform: "uppercase", color: TEALMID, marginBottom: "32px" }}>
+          FAÍSCA
+        </p>
+        <h2 className="font-display" style={{ fontWeight: 600, fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: INK, marginBottom: "24px", maxWidth: "16ch" }}>
+          O primeiro passo não precisa ser o maior.
+        </h2>
+        <p className="font-body" style={{ fontSize: "18px", fontWeight: 400, color: INK, lineHeight: 1.6, maxWidth: "600px", marginBottom: "72px" }}>
+          A Faísca é a porta de entrada da Pira Labs: formatos curtos para entender o seu momento antes de decidir o tamanho do passo seguinte. Encontre onde você está.
         </p>
 
-        {/* H2 */}
-        <h2 style={{
-          fontFamily: "var(--font-atyp-display)",
-          fontWeight: 300,
-          fontSize: "clamp(44px, 5vw, 68px)",
-          lineHeight: 1.1,
-          letterSpacing: "-0.015em",
-          color: INK,
-          marginBottom: "72px",
-        }}>
-          Entradas diferentes.<br />
-          O mesmo destino:{" "}
-          <span style={{ color: EMBER, fontWeight: 600 }}>respirar.</span>
-        </h2>
-
-        {/* Lista de produtos por situação */}
-        {GROUPS.map((group) => (
-          <div key={group.situation}>
-            <SituationDivider label={group.situation} />
-            {group.items.map((item) => {
-              const idx = globalIdx++
-              return (
-                <ProductRow
-                  key={item.name}
-                  item={item}
-                  rowRef={(el) => { rowRefs.current[idx] = el }}
-                />
-              )
-            })}
-          </div>
-        ))}
-
-        {/* Ofertas seletivas */}
-        <div style={{
-          marginTop: "48px",
-          paddingTop: "32px",
-          borderTop: "1px solid rgba(5,38,46,0.15)",
-        }}>
-          <p style={{
-            fontFamily: "var(--font-atyp-text)",
-            fontWeight: 600,
-            fontSize: "10px",
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            color: "#1A5568",
-            marginBottom: "4px",
-          }}>
-            OFERTAS SELETIVAS
-          </p>
-          <p style={{
-            fontFamily: "var(--font-atyp-text)",
-            fontWeight: 300,
-            fontSize: "13px",
-            color: "#05262e",
-            marginBottom: "16px",
-            lineHeight: 1.5,
-          }}>
-            Se nenhum dos grupos acima descreve o seu momento, pode ser um destes.
-          </p>
-          {SELECTIVE.map((item) => {
-            const idx = globalIdx++
-            return (
-              <ProductRow
-                key={item.name}
-                item={item}
-                rowRef={(el) => { rowRefs.current[idx] = el }}
-              />
-            )
-          })}
+        {/* 4 blocos */}
+        <div>
+          {blocos.map((b, i) => (
+            <div
+              key={i}
+              style={{
+                paddingTop: i === 0 ? 0 : "40px",
+                paddingBottom: i === blocos.length - 1 ? 0 : "40px",
+                borderTop: i === 0 ? "none" : "1px solid rgba(5,38,46,0.15)",
+                maxWidth: "720px",
+              }}
+            >
+              {b.eyebrow && (
+                <p style={{ fontFamily: "var(--font-atyp-text)", fontWeight: 600, fontSize: "12px", letterSpacing: "0.14em", textTransform: "uppercase", color: TEALMID, marginBottom: "16px" }}>
+                  {b.eyebrow}
+                </p>
+              )}
+              <p className="font-display" style={{ fontWeight: 500, fontSize: "clamp(20px, 2.6vw, 26px)", lineHeight: 1.25, letterSpacing: "-0.01em", color: INK, marginBottom: "20px", maxWidth: "28ch" }}>
+                {b.problema}
+              </p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 20px" }}>
+                {b.produtos.map((p) => (
+                  <a key={p.nome} href={p.href} className="btn-tertiary" style={{ color: TEALMID }}>
+                    {p.nome}<span aria-hidden="true">→</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* CTA */}
-        <div style={{ marginTop: "56px", display: "flex", justifyContent: "center" }}>
-          <CTAButton href="/faisca" label="VER PORTAS DE ENTRADA →" theme="light" />
+        {/* CTA final */}
+        <div style={{ marginTop: "72px" }}>
+          <a href="/faisca" className="btn-secondary-light">
+            Ver todas as portas de entrada<span aria-hidden="true">→</span>
+          </a>
         </div>
 
       </div>
