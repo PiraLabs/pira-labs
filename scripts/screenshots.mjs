@@ -34,7 +34,7 @@ async function scrollFull(page) {
   await page.evaluate(async () => {
     await new Promise((resolve) => {
       let totalHeight = 0;
-      const distance = 400;
+      const distance = 300;
       const timer = setInterval(() => {
         window.scrollBy(0, distance);
         totalHeight += distance;
@@ -43,9 +43,34 @@ async function scrollFull(page) {
           window.scrollTo(0, 0);
           resolve();
         }
-      }, 80);
+      }, 100);
     });
   });
+}
+
+async function cropScreenshot(page, outDir, baseName, viewportHeight) {
+  // Obtém altura total da página
+  const totalHeight = await page.evaluate(() => document.body.scrollHeight);
+  const third = Math.ceil(totalHeight / 3);
+
+  const crops = [
+    { label: 'top',    clip: { x: 0, y: 0,           width: 99999, height: third } },
+    { label: 'mid',    clip: { x: 0, y: third,        width: 99999, height: third } },
+    { label: 'bottom', clip: { x: 0, y: third * 2,    width: 99999, height: totalHeight - (third * 2) } },
+  ];
+
+  for (const crop of crops) {
+    await page.screenshot({
+      path: join(outDir, `${baseName}-${crop.label}.png`),
+      fullPage: false,
+      clip: {
+        x: crop.clip.x,
+        y: crop.clip.y,
+        width: await page.evaluate(() => document.body.scrollWidth),
+        height: crop.clip.height,
+      },
+    });
+  }
 }
 
 async function takeScreenshots() {
@@ -61,25 +86,25 @@ async function takeScreenshots() {
   for (const viewport of VIEWPORTS) {
     const context = await browser.newContext({
       viewport: { width: viewport.width, height: viewport.height },
+      deviceScaleFactor: 1,
     });
     const page = await context.newPage();
 
     for (const pg of PAGES) {
       const url = `${BASE_URL}${pg.path}`;
-      const filename = `${pg.name}-${viewport.suffix}.png`;
+      const baseName = `${pg.name}-${viewport.suffix}`;
       console.log(`📸 ${viewport.suffix} — ${url}`);
       try {
         await page.goto(url, { waitUntil: 'networkidle', timeout: 45000 });
         await page.evaluate(() => document.fonts.ready);
         await scrollFull(page);
-        await page.waitForTimeout(2500);
-        await page.screenshot({
-          path: join(outDir, filename),
-          fullPage: true,
-        });
-        console.log(`   ✅ ${filename}`);
+        await page.waitForTimeout(5000);
+
+        await cropScreenshot(page, outDir, baseName, viewport.height);
+
+        console.log(`   ✅ ${baseName}-top/mid/bottom.png`);
       } catch (err) {
-        console.log(`   ❌ erro em ${filename}: ${err.message}`);
+        console.log(`   ❌ erro em ${baseName}: ${err.message}`);
       }
     }
 
