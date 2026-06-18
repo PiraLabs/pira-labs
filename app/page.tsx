@@ -8,7 +8,7 @@ import { CBTSectionClient } from "@/components/home/CBTSectionClient";
 import { FaiscaSectionClient } from "@/components/home/FaiscaSectionClient"
 import { ProofsSectionClient } from "@/components/home/ProofsSectionClient"
 import { FoundersSectionClient } from "@/components/home/FoundersSectionClient"
-import { EditorialSectionClient } from "@/components/home/EditorialSectionClient"
+import { EditorialSection } from "@/components/home/EditorialSection"
 import { FAQSectionClient } from "@/components/home/FAQSectionClient";
 import { FinalCTASectionClient } from "@/components/home/FinalCTASectionClient";
 import { organizationSchema } from "@/lib/schemas/organization";
@@ -119,7 +119,7 @@ export default function HomePage() {
       <FaiscaSectionClient />
 
       {/* HOME-9 · ANTES, PIRA */}
-      <EditorialSectionClient />
+      <EditorialSection />
 
       {/* HOME-10 · FAQ */}
       <FAQSectionClient />
