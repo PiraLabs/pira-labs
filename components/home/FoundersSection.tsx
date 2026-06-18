@@ -24,12 +24,12 @@ export function FoundersSection() {
         style={{ position: "absolute", top: 0, right: 0, width: "52%", height: "100%", zIndex: 0 }}
       >
         <Image
-          src="/nos2.png"
+          src="/nos-vertical.png"
           alt=""
           fill
           sizes="52vw"
           quality={80}
-          style={{ objectFit: "cover", objectPosition: "center top" }}
+          style={{ objectFit: "cover", objectPosition: "center" }}
         />
         <div
           style={{

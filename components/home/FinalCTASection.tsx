@@ -99,7 +99,7 @@ export function FinalCTASection() {
 
       <style>{`
         .cta-respire { transition: transform 0.2s ease; }
-        .cta-respire:hover { transform: translateY(-2px); }
+        .cta-respire:hover { transform: translateY(-4px); }
         .cta-arrow { transition: transform 0.25s ease; }
         .cta-respire:hover .cta-arrow { transform: translateX(4px); }
         @media (prefers-reduced-motion: reduce) {
