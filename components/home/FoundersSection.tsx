@@ -1,57 +1,27 @@
-"use client"
-
-import { useEffect, useRef, useState } from "react"
-import type { CSSProperties } from "react"
 import Image from "next/image"
 
-/* HOME-8 · Fundadores · fundo Teal #004757
-   Imagem /nos2.png na metade direita com gradiente de transição.
-   Fade-in por IntersectionObserver.
-   font-body = alias para var(--font-atyp-text) no tailwind.config. */
+/* HOME · Fundadores · fundo Sand #e8e0d6
+   Server Component — sem animação, sem 'use client'.
+   Imagem /nos2.png na metade direita com gradiente de transição para Sand. */
+
+const INK     = "#05262e"
+const SAND    = "#e8e0d6"
+const WHITE   = "#F5F5F2"
+const TEALMID = "#1A5568"
+const EMBER   = "#eb5c2e"
 
 export function FoundersSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true)
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.1 }
-    )
-    if (sectionRef.current) observer.observe(sectionRef.current)
-    return () => observer.disconnect()
-  }, [])
-
-  const entry = (delay: string): CSSProperties => ({
-    opacity: visible ? 1 : 0,
-    transform: visible ? "translateY(0)" : "translateY(24px)",
-    transition: `opacity 0.6s cubic-bezier(0.16,1,0.3,1) ${delay}, transform 0.6s cubic-bezier(0.16,1,0.3,1) ${delay}`,
-  })
-
   return (
     <section
-      ref={sectionRef}
       id="fundadores"
       aria-label="Fundadores"
-      style={{ position: "relative", backgroundColor: "#004757", overflow: "hidden" }}
+      style={{ position: "relative", backgroundColor: SAND, overflow: "hidden" }}
     >
-      {/* Imagem de fundo — metade direita */}
+      {/* Imagem de fundo — metade direita, funde no Sand */}
       <div
         aria-hidden="true"
         className="hidden md:block"
-        style={{
-          position: "absolute",
-          top: 0,
-          right: 0,
-          width: "52%",
-          height: "100%",
-          zIndex: 0,
-        }}
+        style={{ position: "absolute", top: 0, right: 0, width: "52%", height: "100%", zIndex: 0 }}
       >
         <Image
           src="/nos2.png"
@@ -61,162 +31,130 @@ export function FoundersSection() {
           quality={80}
           style={{ objectFit: "cover", objectPosition: "center top" }}
         />
-        <div style={{
-          position: "absolute",
-          inset: 0,
-          background: "linear-gradient(to right, #004757 0%, rgba(0,71,87,0.95) 8%, rgba(0,71,87,0.5) 18%, rgba(0,71,87,0) 28%)",
-        }} />
-        <div style={{
-          position: "absolute",
-          inset: 0,
-          background: "linear-gradient(to bottom, #004757 0%, rgba(0,71,87,0) 8%, rgba(0,71,87,0) 92%, #004757 100%)",
-        }} />
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(to right, #e8e0d6 0%, rgba(232,224,214,0.95) 8%, rgba(232,224,214,0.5) 18%, rgba(232,224,214,0) 28%)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(to bottom, #e8e0d6 0%, rgba(232,224,214,0) 8%, rgba(232,224,214,0) 92%, #e8e0d6 100%)",
+          }}
+        />
       </div>
 
       {/* Conteúdo */}
       <div
-        style={{
-          position: "relative",
-          zIndex: 1,
-          maxWidth: "1280px",
-          margin: "0 auto",
-          padding: "120px 80px",
-        }}
+        style={{ position: "relative", zIndex: 1, maxWidth: "1280px", margin: "0 auto" }}
+        className="px-6 md:px-20 py-20 md:py-28"
       >
         {/* Header */}
-        <div style={{ ...entry("0s"), maxWidth: "580px", marginBottom: "80px" }}>
+        <div style={{ maxWidth: "580px", marginBottom: "72px" }}>
           <p
-            className="font-body font-semibold uppercase tracking-widest"
-            style={{ fontSize: "10px", color: "#e8e0d6", marginBottom: "16px" }}
+            style={{
+              fontFamily: "var(--font-atyp-text)",
+              fontWeight: 600,
+              fontSize: "12px",
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+              color: TEALMID,
+              marginBottom: "24px",
+            }}
           >
             QUEM CONDUZ
           </p>
           <h2
-            className="font-display font-medium leading-tight"
-            style={{ fontSize: "clamp(48px, 5.5vw, 80px)", color: "#F5F5F2" }}
-          >
-            Consultoria <span style={{ color: "#eb5c2e" }}>boutique</span> por decisão.
-          </h2>
-          <p
-            className="font-body font-light"
+            className="font-display"
             style={{
-              fontSize: "17px",
-              color: "#e8e0d6",
-              marginTop: "24px",
-              maxWidth: "480px",
-              lineHeight: 1.75,
+              fontWeight: 600,
+              fontSize: "clamp(30px, 4.4vw, 48px)",
+              lineHeight: 1.1,
+              letterSpacing: "-0.02em",
+              color: INK,
             }}
           >
-            Cada projeto tem Gabriela e Celso do diagnóstico à entrega. Sem camada intermediária
-            entre quem entende o problema e quem resolve.
+            Consultoria <span style={{ color: EMBER }}>boutique</span> por decisão.
+          </h2>
+          <p
+            className="font-body"
+            style={{
+              fontSize: "18px",
+              fontWeight: 400,
+              color: INK,
+              marginTop: "20px",
+              maxWidth: "480px",
+              lineHeight: 1.6,
+            }}
+          >
+            Cada projeto tem Gabriela e Celso do diagnóstico à entrega. Sem camada intermediária entre quem entende o problema e quem resolve.
           </p>
         </div>
 
-        {/* Fundadores — coluna única com separador */}
-        <div style={{ maxWidth: "520px" }}>
-
-          {/* Gabriela */}
-          <div style={{ ...entry("0.15s"), paddingBottom: "48px", borderBottom: "1px solid rgba(245,245,242,0.1)" }}>
-            <p
-              className="font-display font-semibold"
-              style={{ fontSize: "22px", color: "#F5F5F2", marginBottom: "14px", letterSpacing: "-0.01em" }}
-            >
-              Gabriela Aguiar
-            </p>
-            <p
-              className="font-body font-light leading-relaxed"
-              style={{ fontSize: "17px", color: "#F5F5F2", marginBottom: "20px" }}
-            >
-              Lê o que a empresa não está conseguindo nomear. Conduz o INSPIRA: cruza mercado,
-              tecnologia, ecossistema e decisão para identificar onde o modelo de trabalho começou
-              a custar caro.
-            </p>
-            <p
-              className="font-body font-light"
-              style={{ fontSize: "14px", color: "#e8e0d6", lineHeight: 1.7, marginBottom: "20px" }}
-            >
-              Docente em educação executiva.{" "}
-              MIT Universal AI Foundational Modules (em andamento, 2026).
-            </p>
-            <a
-              href="/sobre"
-              className="font-body font-light"
-              style={{
-                fontSize: "13px",
-                color: "#e8e0d6",
-                textDecoration: "none",
-                transition: "color 0.25s",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#F5F5F2")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#e8e0d6")}
-            >
-              Conhecer Gabriela →
-            </a>
-          </div>
-
-          {/* Celso */}
-          <div style={{ ...entry("0.28s"), paddingTop: "48px" }}>
-            <p
-              className="font-display font-semibold"
-              style={{ fontSize: "22px", color: "#F5F5F2", marginBottom: "14px", letterSpacing: "-0.01em" }}
-            >
-              Celso Gama
-            </p>
-            <p
-              className="font-body font-light leading-relaxed"
-              style={{ fontSize: "17px", color: "#F5F5F2", marginBottom: "20px" }}
-            >
-              Entra quando o diagnóstico precisa virar movimento. Conduz o TRANSPIRA: reorganiza
-              trabalho, margem, cadência e execução até o resultado ser verificável.
-            </p>
-            <p
-              className="font-body font-light"
-              style={{ fontSize: "14px", color: "#e8e0d6", lineHeight: 1.7, marginBottom: "20px" }}
-            >
-              Bacharelando em Direito (Mackenzie).{" "}
-              MIT Applied AI Certificate Program (em andamento, 2026).
-            </p>
-            <a
-              href="/sobre"
-              className="font-body font-light"
-              style={{
-                fontSize: "13px",
-                color: "#e8e0d6",
-                textDecoration: "none",
-                transition: "color 0.25s",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#F5F5F2")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#e8e0d6")}
-            >
-              Conhecer Celso →
-            </a>
-          </div>
-
+        {/* Gabriela */}
+        <div style={{ maxWidth: "580px", paddingBottom: "48px", borderBottom: "1px solid rgba(5,38,46,0.15)" }}>
+          <h3
+            className="font-display"
+            style={{ fontWeight: 600, fontSize: "clamp(23px, 2.9vw, 32px)", color: INK, marginBottom: "16px", letterSpacing: "-0.01em", lineHeight: 1.2 }}
+          >
+            Gabriela Aguiar
+          </h3>
+          <p
+            className="font-body"
+            style={{ fontSize: "18px", fontWeight: 400, color: INK, lineHeight: 1.6, marginBottom: "16px" }}
+          >
+            Lê o que a empresa não está conseguindo nomear. Conduz o INSPIRA: cruza mercado, tecnologia, ecossistema e decisão para identificar onde o modelo de trabalho começou a custar caro.
+          </p>
+          <p
+            className="font-body"
+            style={{ fontSize: "14px", fontWeight: 400, color: TEALMID, lineHeight: 1.55, marginBottom: "20px" }}
+          >
+            Docente em educação executiva. MIT Universal AI Foundational Modules (em andamento, 2026).
+          </p>
+          <a
+            href="/sobre"
+            className="btn-tertiary"
+            style={{ color: TEALMID }}
+          >
+            Conhecer Gabriela
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
-      </div>
 
-      {/* Mobile */}
-      <style>{`
-        @media (max-width: 767px) {
-          #fundadores [aria-hidden="true"] {
-            position: relative !important;
-            width: 100% !important;
-            height: 280px !important;
-            top: auto !important;
-            right: auto !important;
-          }
-          #fundadores > div:last-of-type {
-            padding: 56px 24px 80px !important;
-          }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          #fundadores * {
-            transition: none !important;
-            opacity: 1 !important;
-            transform: none !important;
-          }
-        }
-      `}</style>
+        {/* Celso */}
+        <div style={{ maxWidth: "580px", paddingTop: "48px" }}>
+          <h3
+            className="font-display"
+            style={{ fontWeight: 600, fontSize: "clamp(23px, 2.9vw, 32px)", color: INK, marginBottom: "16px", letterSpacing: "-0.01em", lineHeight: 1.2 }}
+          >
+            Celso Gama
+          </h3>
+          <p
+            className="font-body"
+            style={{ fontSize: "18px", fontWeight: 400, color: INK, lineHeight: 1.6, marginBottom: "16px" }}
+          >
+            Entra quando o diagnóstico precisa virar movimento. Conduz o TRANSPIRA: reorganiza trabalho, margem, cadência e execução até o resultado ser verificável.
+          </p>
+          <p
+            className="font-body"
+            style={{ fontSize: "14px", fontWeight: 400, color: TEALMID, lineHeight: 1.55, marginBottom: "20px" }}
+          >
+            Bacharelando em Direito (Mackenzie). MIT Applied AI Certificate Program (em andamento, 2026).
+          </p>
+          <a
+            href="/sobre"
+            className="btn-tertiary"
+            style={{ color: TEALMID }}
+          >
+            Conhecer Celso
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+      </div>
     </section>
   )
 }
