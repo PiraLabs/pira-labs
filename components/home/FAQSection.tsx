@@ -2,7 +2,8 @@
    details/summary nativo · zero JS · server component
    Perguntas como H3 (GEO) · Schema FAQPage inline
    Sem Ember (Eixo 4: sem fato único a destacar nesta seção;
-   marcador gira +→× por movimento, nunca por cor — Eixo 5) */
+   marcador gira +→× por movimento, nunca por cor — Eixo 5)
+   Lista em coluna de leitura 720px à esquerda (Eixo 7) */
 
 const INK = "#05262e"
 const SAND = "#e8e0d6"
@@ -65,99 +66,101 @@ export function FAQSection() {
           padding: "clamp(4rem, 8vw, 7rem) clamp(1.5rem, 4vw, 3rem)",
         }}
       >
-        <p
-          style={{
-            fontFamily: "var(--font-atyp-text), sans-serif",
-            fontSize: "12px",
-            fontWeight: 600,
-            letterSpacing: "0.14em",
-            textTransform: "uppercase",
-            color: SAND,
-            margin: "0 0 1.25rem 0",
-          }}
-        >
-          PERGUNTAS DE QUEM ESTÁ CHEGANDO AGORA
-        </p>
+        <div style={{ maxWidth: "720px" }}>
+          <p
+            style={{
+              fontFamily: "var(--font-atyp-text), sans-serif",
+              fontSize: "12px",
+              fontWeight: 600,
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+              color: SAND,
+              margin: "0 0 1.25rem 0",
+            }}
+          >
+            PERGUNTAS DE QUEM ESTÁ CHEGANDO AGORA
+          </p>
 
-        <h2
-          style={{
-            fontFamily: "var(--font-atyp-display), serif",
-            fontSize: "clamp(30px, 4.4vw, 48px)",
-            fontWeight: 600,
-            lineHeight: 1.1,
-            letterSpacing: "-0.02em",
-            color: WHITE,
-            margin: "0 0 clamp(3rem, 6vw, 5rem) 0",
-          }}
-        >
-          Sem rodeios.
-        </h2>
+          <h2
+            style={{
+              fontFamily: "var(--font-atyp-display), serif",
+              fontSize: "clamp(30px, 4.4vw, 48px)",
+              fontWeight: 600,
+              lineHeight: 1.1,
+              letterSpacing: "-0.02em",
+              color: WHITE,
+              margin: "0 0 clamp(3rem, 6vw, 5rem) 0",
+            }}
+          >
+            Sem rodeios.
+          </h2>
 
-        <div>
-          {faqs.map((faq, i) => (
-            <details
-              key={i}
-              style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}
-            >
-              <summary
-                style={{
-                  listStyle: "none",
-                  cursor: "pointer",
-                  padding: "1.5rem 0",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "flex-start",
-                  gap: "1.5rem",
-                }}
+          <div>
+            {faqs.map((faq, i) => (
+              <details
+                key={i}
+                style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}
               >
-                <h3
+                <summary
                   style={{
-                    fontFamily: "var(--font-atyp-display), serif",
-                    fontSize: "clamp(18px, 1.8vw, 24px)",
-                    fontWeight: 500,
-                    lineHeight: 1.3,
-                    letterSpacing: "-0.01em",
-                    color: WHITE,
+                    listStyle: "none",
+                    cursor: "pointer",
+                    padding: "1.5rem 0",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "flex-start",
+                    gap: "1.5rem",
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontFamily: "var(--font-atyp-display), serif",
+                      fontSize: "clamp(18px, 1.8vw, 24px)",
+                      fontWeight: 500,
+                      lineHeight: 1.3,
+                      letterSpacing: "-0.01em",
+                      color: WHITE,
+                      margin: 0,
+                    }}
+                  >
+                    {faq.pergunta}
+                  </h3>
+                  <span
+                    aria-hidden="true"
+                    className="faq-marker"
+                    style={{
+                      flexShrink: 0,
+                      fontSize: "1.375rem",
+                      fontWeight: 400,
+                      lineHeight: 1,
+                      marginTop: "2px",
+                      color: SAND,
+                      display: "inline-block",
+                      fontFamily: "var(--font-atyp-text), sans-serif",
+                      transition: "transform 0.25s ease",
+                    }}
+                  >
+                    +
+                  </span>
+                </summary>
+                <p
+                  style={{
+                    fontFamily: "var(--font-atyp-text), sans-serif",
+                    fontSize: "18px",
+                    fontWeight: 400,
+                    lineHeight: 1.6,
+                    color: SAND,
+                    maxWidth: "680px",
+                    padding: "0 0 1.5rem 0",
                     margin: 0,
                   }}
                 >
-                  {faq.pergunta}
-                </h3>
-                <span
-                  aria-hidden="true"
-                  className="faq-marker"
-                  style={{
-                    flexShrink: 0,
-                    fontSize: "1.375rem",
-                    fontWeight: 400,
-                    lineHeight: 1,
-                    marginTop: "2px",
-                    color: SAND,
-                    display: "inline-block",
-                    fontFamily: "var(--font-atyp-text), sans-serif",
-                    transition: "transform 0.25s ease",
-                  }}
-                >
-                  +
-                </span>
-              </summary>
-              <p
-                style={{
-                  fontFamily: "var(--font-atyp-text), sans-serif",
-                  fontSize: "18px",
-                  fontWeight: 400,
-                  lineHeight: 1.6,
-                  color: SAND,
-                  maxWidth: "680px",
-                  padding: "0 0 1.5rem 0",
-                  margin: 0,
-                }}
-              >
-                {faq.resposta}
-              </p>
-            </details>
-          ))}
-          <div style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }} />
+                  {faq.resposta}
+                </p>
+              </details>
+            ))}
+            <div style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }} />
+          </div>
         </div>
       </div>
 
