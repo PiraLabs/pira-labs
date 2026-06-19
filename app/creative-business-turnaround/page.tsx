@@ -162,9 +162,9 @@ const evidencias = [
 
 // Shared style helpers
 const eyebrow = (light = false): React.CSSProperties => ({
-  fontSize: "0.625rem",
+  fontSize: "0.75rem",
   fontWeight: 600,
-  letterSpacing: "0.18em",
+  letterSpacing: "0.14em",
   textTransform: "uppercase" as const,
   color: light ? "#1A5568" : "#e8e0d6",
   marginBottom: "2rem",
@@ -173,8 +173,8 @@ const eyebrow = (light = false): React.CSSProperties => ({
 
 const h2Dark: React.CSSProperties = {
   fontWeight: 600,
-  fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
-  lineHeight: 1.15,
+  fontSize: "clamp(1.875rem, 4.4vw, 3rem)",
+  lineHeight: 1.1,
   letterSpacing: "-0.02em",
   color: "#F5F5F2",
   marginBottom: "2rem",
@@ -182,29 +182,29 @@ const h2Dark: React.CSSProperties = {
 
 const h2Light: React.CSSProperties = {
   fontWeight: 600,
-  fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
-  lineHeight: 1.15,
+  fontSize: "clamp(1.875rem, 4.4vw, 3rem)",
+  lineHeight: 1.1,
   letterSpacing: "-0.02em",
   color: "#05262e",
   marginBottom: "2rem",
 };
 
 const bodyDark: React.CSSProperties = {
-  fontSize: "1rem",
-  lineHeight: 1.75,
-  fontWeight: 300,
+  fontSize: "1.125rem",
+  lineHeight: 1.6,
+  fontWeight: 400,
   color: "#F5F5F2",
 };
 
 const bodyLight: React.CSSProperties = {
-  fontSize: "1rem",
-  lineHeight: 1.75,
-  fontWeight: 300,
+  fontSize: "1.125rem",
+  lineHeight: 1.6,
+  fontWeight: 400,
   color: "#05262e",
 };
 
 const hrDark: React.CSSProperties = {
-  borderColor: "rgba(245,245,242,0.10)",
+  borderColor: "rgba(245,245,242,0.12)",
   borderTopWidth: 1,
   margin: "0",
 };
@@ -231,10 +231,10 @@ export default function CreativeBusinessTurnaroundPage() {
               <li style={{ color: "#a8b8bb" }}>Creative Business Turnaround</li>
             </ol>
           </nav>
-          <h1 className="font-display mb-6" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: "#F5F5F2" }}>
+          <h1 className="font-display mb-6" style={{ fontSize: "clamp(3.25rem, 10.2vw, 7rem)", fontWeight: 700, lineHeight: 1.0, letterSpacing: "-0.035em", color: "#F5F5F2" }}>
             Creative Business Turnaround
           </h1>
-          <p className="font-body max-w-2xl" style={{ fontSize: "clamp(1.0625rem, 1.8vw, 1.25rem)", lineHeight: 1.65, fontWeight: 300, color: "#e8e0d6" }}>
+          <p className="font-body max-w-2xl" style={{ fontSize: "clamp(1.125rem, 1.8vw, 1.375rem)", lineHeight: 1.6, fontWeight: 400, color: "#e8e0d6" }}>
             O processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes que a janela de oportunidade se feche: quando clientes, caixa e reputação ainda existem, mas o modelo de trabalho começou a comprometer margem, valor percebido e capacidade de decisão.
           </p>
         </div>
@@ -274,7 +274,7 @@ export default function CreativeBusinessTurnaroundPage() {
               </p>
             </div>
 
-            <p className="font-body mt-10" style={{ fontSize: "1rem", fontWeight: 500, lineHeight: 1.6, color: "#05262e" }}>
+            <p className="font-body mt-10" style={{ fontSize: "1.125rem", fontWeight: 500, lineHeight: 1.6, color: "#05262e" }}>
               A Pira Labs nomeou, define e opera o Creative Business Turnaround no Brasil.
             </p>
           </div>
@@ -288,20 +288,20 @@ export default function CreativeBusinessTurnaroundPage() {
           <h2 className="font-display" style={h2Dark}>
             Turnaround tradicional vs Creative Business Turnaround
           </h2>
-          <p className="font-body mb-12 max-w-2xl" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#e8e0d6" }}>
+          <p className="font-body mb-12 max-w-2xl" style={{ fontSize: "1.125rem", lineHeight: 1.6, fontWeight: 400, color: "#e8e0d6" }}>
             A diferença central é o momento de entrada: o turnaround tradicional atua na crise, quando as opções já estão reduzidas. O Creative Business Turnaround atua antes, quando a empresa ainda tem clientes, caixa e reputação para agir com clareza.
           </p>
           <div className="overflow-x-auto max-w-4xl">
             <table className="w-full font-body" style={{ borderCollapse: "collapse" }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(245,245,242,0.12)" }}>
-                  <th className="text-left pb-4 pr-8" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#e8e0d6", width: "180px" }}>
+                  <th className="text-left pb-4 pr-8" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#e8e0d6", width: "180px" }}>
                     Dimensão
                   </th>
-                  <th className="text-left pb-4 pr-8" style={{ fontSize: "0.8125rem", fontWeight: 400, color: "#e8e0d6" }}>
+                  <th className="text-left pb-4 pr-8" style={{ fontSize: "0.875rem", fontWeight: 400, color: "#e8e0d6" }}>
                     Sem intervenção agora
                   </th>
-                  <th className="text-left pb-4" style={{ fontSize: "0.8125rem", fontWeight: 600, color: "#F5F5F2" }}>
+                  <th className="text-left pb-4" style={{ fontSize: "0.875rem", fontWeight: 600, color: "#F5F5F2" }}>
                     Creative Business Turnaround
                   </th>
                 </tr>
@@ -309,13 +309,13 @@ export default function CreativeBusinessTurnaroundPage() {
               <tbody>
                 {comparativo.map((row, i) => (
                   <tr key={i} style={{ borderBottom: "1px solid rgba(245,245,242,0.07)" }}>
-                    <td className="py-4 pr-8 align-top font-body" style={{ fontSize: "0.8125rem", fontWeight: 500, color: "#e8e0d6" }}>
+                    <td className="py-4 pr-8 align-top font-body" style={{ fontSize: "0.875rem", fontWeight: 500, color: "#e8e0d6" }}>
                       {row.dimensao}
                     </td>
-                    <td className="py-4 pr-8 align-top font-body" style={{ fontSize: "0.9375rem", lineHeight: 1.6, fontWeight: 300, color: "#e8e0d6" }}>
+                    <td className="py-4 pr-8 align-top font-body" style={{ fontSize: "0.875rem", lineHeight: 1.55, fontWeight: 400, color: "#e8e0d6" }}>
                       {row.tradicional}
                     </td>
-                    <td className="py-4 align-top font-body" style={{ fontSize: "0.9375rem", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2" }}>
+                    <td className="py-4 align-top font-body" style={{ fontSize: "0.875rem", lineHeight: 1.55, fontWeight: 400, color: "#F5F5F2" }}>
                       {row.cbt}
                     </td>
                   </tr>
@@ -339,15 +339,15 @@ export default function CreativeBusinessTurnaroundPage() {
               A janela de oportunidade está aberta quando o negócio ainda tem clientes, caixa e reputação ao mesmo tempo. Quando um dos três começa a faltar, a janela começa a fechar.
             </p>
             <hr style={hrLight} />
-            <p className="font-body pt-4" style={{ ...bodyLight, fontSize: "0.8125rem", fontWeight: 400 }}>
+            <p className="font-body pt-4" style={{ ...bodyLight, fontSize: "0.875rem", fontWeight: 400 }}>
               <span style={{ fontWeight: 500, color: "#05262e" }}>Setores com maior aplicação:</span>{" "}
               jurídico, comunicação e marketing, consultorias especializadas e educação corporativa. Expansão natural: saúde, RH, engenharia, arquitetura e outros serviços profissionais intensivos em conhecimento.
             </p>
-            <p className="font-body" style={{ ...bodyLight, fontSize: "0.8125rem", fontWeight: 400 }}>
+            <p className="font-body" style={{ ...bodyLight, fontSize: "0.875rem", fontWeight: 400 }}>
               <span style={{ fontWeight: 500, color: "#05262e" }}>O perfil do decisor:</span>{" "}
               sócia ou sócio, CEO ou presidente com autonomia real para mudar. Alguém que reconhece o problema, tem abertura genuína para repensar o modelo e não está procurando validação para decisão já tomada.
             </p>
-            <p className="font-body pt-2" style={{ fontSize: "0.8125rem", fontWeight: 300, color: "#05262e" }}>
+            <p className="font-body pt-2" style={{ fontSize: "0.875rem", fontWeight: 400, color: "#05262e" }}>
               Não tem certeza se o momento é agora?{" "}
               <a href="/faisca/oxigenio-ia-search" style={{ fontWeight: 500, color: "#1A5568", textDecoration: "underline", textUnderlineOffset: "3px" }}>
                 O Oxigênio existe para isso.
@@ -363,7 +363,7 @@ export default function CreativeBusinessTurnaroundPage() {
         <div className="container-site">
           <span className="font-body" style={eyebrow()}>Os sinais</span>
           <h2 className="font-display" style={h2Dark}>Os sinais que indicam o momento certo</h2>
-          <p className="font-body mb-14 max-w-xl" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#e8e0d6" }}>
+          <p className="font-body mb-14 max-w-xl" style={{ fontSize: "1.125rem", lineHeight: 1.6, fontWeight: 400, color: "#e8e0d6" }}>
             Cinco sinais que aparecem antes da crise. Quanto mais presentes, mais próximo está o momento de agir.
           </p>
           <div className="max-w-3xl">
@@ -380,10 +380,10 @@ export default function CreativeBusinessTurnaroundPage() {
                     {sinal.num}
                   </span>
                   <div>
-                    <p className="font-body mb-2" style={{ fontSize: "1rem", fontWeight: 500, color: "#F5F5F2" }}>
+                    <p className="font-body mb-2" style={{ fontSize: "1.125rem", fontWeight: 500, color: "#F5F5F2" }}>
                       {sinal.titulo}
                     </p>
-                    <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#e8e0d6" }}>
+                    <p className="font-body" style={{ fontSize: "1.125rem", lineHeight: 1.6, fontWeight: 400, color: "#e8e0d6" }}>
                       {sinal.texto}
                     </p>
                   </div>
@@ -393,7 +393,7 @@ export default function CreativeBusinessTurnaroundPage() {
             ))}
           </div>
           <div className="max-w-3xl mt-12 pt-10" style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
-            <p className="font-body mb-6" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
+            <p className="font-body mb-6" style={{ fontSize: "1.125rem", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2" }}>
               Se você reconheceu <span style={{ color: "#eb5c2e" }}>três</span> ou mais desses sinais, a janela de oportunidade ainda está aberta.
             </p>
             <CTAButton variant="secondary" href="/contato" origin={ORIGINS.CREATIVE_BUSINESS_TURNAROUND}>
@@ -408,17 +408,17 @@ export default function CreativeBusinessTurnaroundPage() {
         <div className="container-site">
           <span className="font-body" style={eyebrow()}>O que não é</span>
           <h2 className="font-display" style={h2Dark}>O Creative Business Turnaround não é</h2>
-          <p className="font-body mb-12 max-w-2xl" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#e8e0d6" }}>
+          <p className="font-body mb-12 max-w-2xl" style={{ fontSize: "1.125rem", lineHeight: 1.6, fontWeight: 400, color: "#e8e0d6" }}>
             O Creative Business Turnaround não se confunde com consultoria estratégica, agência criativa, mentoria ou intervenção de crise porque nenhum desses resolve o negócio como sistema antes do problema virar <span style={{ color: "#eb5c2e" }}>urgência</span>.
           </p>
           <div className="max-w-3xl">
             {naoE.map((row, i) => (
               <div key={i}>
                 <div className="py-7 grid grid-cols-1 md:grid-cols-[220px_1fr] gap-3 md:gap-8">
-                  <p className="font-body" style={{ fontSize: "0.9375rem", fontWeight: 500, color: "#F5F5F2" }}>
+                  <p className="font-body" style={{ fontSize: "1.125rem", fontWeight: 500, color: "#F5F5F2" }}>
                     {row.categoria}
                   </p>
-                  <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#e8e0d6" }}>
+                  <p className="font-body" style={{ fontSize: "1.125rem", lineHeight: 1.6, fontWeight: 400, color: "#e8e0d6" }}>
                     {row.motivo}
                   </p>
                 </div>
@@ -434,14 +434,14 @@ export default function CreativeBusinessTurnaroundPage() {
         <div className="container-site">
           <span className="font-body" style={eyebrow(true)}>O método</span>
           <h2 className="font-display" style={h2Light}>Como o Creative Business Turnaround funciona na prática</h2>
-          <p className="font-body mb-14 max-w-2xl" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#05262e" }}>
+          <p className="font-body mb-14 max-w-2xl" style={{ fontSize: "1.125rem", lineHeight: 1.6, fontWeight: 400, color: "#05262e" }}>
             A sequência natural é diagnóstico, execução e resultado verificado. O ponto de entrada pode variar conforme o momento.
           </p>
 
           <div className="max-w-3xl space-y-0">
             {/* INSPIRA */}
             <div className="py-10" style={{ borderTop: "1px solid rgba(5,38,46,0.12)" }}>
-              <p className="font-body mb-1" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A5568" }}>
+              <p className="font-body mb-1" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1A5568" }}>
                 INSPIRA
               </p>
               <p className="font-display mb-4" style={{ fontSize: "1.25rem", fontWeight: 500, color: "#05262e" }}>
@@ -457,7 +457,7 @@ export default function CreativeBusinessTurnaroundPage() {
 
             {/* TRANSPIRA */}
             <div className="py-10" style={{ borderTop: "1px solid rgba(5,38,46,0.12)" }}>
-              <p className="font-body mb-1" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A5568" }}>
+              <p className="font-body mb-1" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1A5568" }}>
                 TRANSPIRA
               </p>
               <p className="font-display mb-4" style={{ fontSize: "1.25rem", fontWeight: 500, color: "#05262e" }}>
@@ -473,7 +473,7 @@ export default function CreativeBusinessTurnaroundPage() {
 
             {/* RESPIRA */}
             <div className="py-10" style={{ borderTop: "1px solid rgba(5,38,46,0.12)" }}>
-              <p className="font-body mb-1" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A5568" }}>
+              <p className="font-body mb-1" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1A5568" }}>
                 RESPIRA
               </p>
               <p className="font-display mb-4" style={{ fontSize: "1.25rem", fontWeight: 300, color: "#05262e", letterSpacing: "0.01em" }}>
@@ -487,7 +487,7 @@ export default function CreativeBusinessTurnaroundPage() {
 
             {/* Ponto de entrada */}
             <div className="py-10" style={{ borderTop: "1px solid rgba(5,38,46,0.12)", borderBottom: "1px solid rgba(5,38,46,0.12)" }}>
-              <p className="font-body mb-1" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A5568" }}>
+              <p className="font-body mb-1" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1A5568" }}>
                 Ponto de entrada
               </p>
               <p className="font-body mb-6" style={bodyLight}>
@@ -527,7 +527,7 @@ export default function CreativeBusinessTurnaroundPage() {
             ))}
           </div>
 
-          <p className="font-body mb-10" style={{ fontSize: "0.75rem", color: "#e8e0d6", fontWeight: 300 }}>
+          <p className="font-body mb-10" style={{ fontSize: "0.875rem", color: "#b0a596", fontWeight: 400 }}>
             Estas não são cases da Pira Labs. São registros do julgamento calibrado por consequência real.
           </p>
 
@@ -551,14 +551,14 @@ export default function CreativeBusinessTurnaroundPage() {
                   className="w-full flex items-start justify-between gap-6 py-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden"
                   style={{ outline: "none" }}
                 >
-                  <span className="font-body" style={{ fontSize: "1rem", fontWeight: 400, color: "#F5F5F2", lineHeight: 1.5 }}>
+                  <span className="font-body" style={{ fontSize: "1.125rem", fontWeight: 400, color: "#F5F5F2", lineHeight: 1.5 }}>
                     {item.question}
                   </span>
                   <span className="shrink-0 transition-transform duration-200 group-open:rotate-45 font-body" style={{ color: "#e8e0d6", fontSize: "1.25rem", fontWeight: 300, marginTop: "2px" }} aria-hidden="true">
                     +
                   </span>
                 </summary>
-                <p className="font-body pb-6" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2", paddingTop: "0.25rem" }}>
+                <p className="font-body pb-6" style={{ fontSize: "1.125rem", lineHeight: 1.6, fontWeight: 400, color: "#F5F5F2", paddingTop: "0.25rem" }}>
                   {item.answer}
                 </p>
               </details>
