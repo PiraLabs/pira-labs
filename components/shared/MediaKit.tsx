@@ -18,7 +18,7 @@ export function MediaKit({
 }: MediaKitProps) {
   return (
     <div className={className}>
-      <p className="font-body text-base leading-relaxed mb-6" style={{ color: "#F5F5F2" }}>
+      <p className="font-body text-lg leading-relaxed mb-6" style={{ color: "#e8e0d6" }}>
         Para entrevistas, palestras, eventos ou parcerias institucionais, escrever para{" "}
         <a
           href="mailto:inspira@piralabs.com.br"
@@ -33,7 +33,7 @@ export function MediaKit({
 
       {appearances.length > 0 && (
         <div className="mb-6">
-          <p className="font-body font-semibold uppercase mb-3" style={{ fontSize: "0.625rem", letterSpacing: "0.18em", color: "#e8e0d6" }}>
+          <p className="font-body font-semibold uppercase mb-3" style={{ fontSize: "12px", letterSpacing: "0.14em", color: "#b0a596" }}>
             Aparições recentes
           </p>
           <ul className="space-y-2">
@@ -45,13 +45,13 @@ export function MediaKit({
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm font-body transition-colors"
-                    style={{ color: "#e8e0d6" }}
+                    style={{ color: "#b0a596" }}
                   >
                     {item.label}
                     <span className="sr-only"> (abre em nova aba)</span>
                   </a>
                 ) : (
-                  <span className="text-sm font-body" style={{ color: "#e8e0d6" }}>{item.label}</span>
+                  <span className="text-sm font-body" style={{ color: "#b0a596" }}>{item.label}</span>
                 )}
               </li>
             ))}
@@ -66,7 +66,7 @@ export function MediaKit({
             target="_blank"
             rel="noopener noreferrer"
             className="font-body"
-            style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#e8e0d6", textDecoration: "none" }}
+            style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#b0a596", textDecoration: "none" }}
           >
             Download de bios e fotos em alta resolução
             <span className="sr-only"> (abre em nova aba)</span>
@@ -77,7 +77,7 @@ export function MediaKit({
           target="_blank"
           rel="noopener noreferrer"
           className="font-body inline-flex items-center gap-2"
-          style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(245,245,242,0.60)", textDecoration: "none" }}
+          style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#b0a596", textDecoration: "none" }}
           aria-label="LinkedIn Pira Labs (abre em nova aba)"
         >
           LinkedIn Pira Labs
@@ -90,7 +90,7 @@ export function MediaKit({
           target="_blank"
           rel="noopener noreferrer"
           className="font-body inline-flex items-center gap-2"
-          style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(245,245,242,0.60)", textDecoration: "none" }}
+          style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#b0a596", textDecoration: "none" }}
           aria-label="LinkedIn Gabriela Aguiar (abre em nova aba)"
         >
           LinkedIn Gabriela Aguiar
@@ -103,7 +103,7 @@ export function MediaKit({
           target="_blank"
           rel="noopener noreferrer"
           className="font-body inline-flex items-center gap-2"
-          style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(245,245,242,0.60)", textDecoration: "none" }}
+          style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#b0a596", textDecoration: "none" }}
           aria-label="LinkedIn Celso Gama (abre em nova aba)"
         >
           LinkedIn Celso Gama

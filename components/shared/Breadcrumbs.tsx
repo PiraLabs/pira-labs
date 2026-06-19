@@ -7,9 +7,12 @@ export type BreadcrumbItem = {
 
 type BreadcrumbsProps = {
   items: BreadcrumbItem[];
+  theme?: "light" | "dark";
 };
 
-export function Breadcrumbs({ items }: BreadcrumbsProps) {
+export function Breadcrumbs({ items, theme = "dark" }: BreadcrumbsProps) {
+  const color = theme === "light" ? "#1A5568" : "#e8e0d6";
+
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -28,7 +31,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
       <nav aria-label="Breadcrumb" className="mb-6">
-        <ol className="flex flex-wrap items-center gap-1 font-body" style={{ fontSize: "0.75rem", color: "#e8e0d6" }}>
+        <ol className="flex flex-wrap items-center gap-1 font-body" style={{ fontSize: "0.75rem", color }}>
           {items.map((item, index) => {
             const isLast = index === items.length - 1;
             return (
@@ -45,7 +48,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
                 ) : (
                   <Link
                     href={item.href}
-                    style={{ color: "#e8e0d6", textDecoration: "none" }}
+                    style={{ color, textDecoration: "none" }}
                     className="transition-colors"
                   >
                     {item.label}

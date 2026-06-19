@@ -20,7 +20,7 @@ export function FinalCTA({
 }: FinalCTAProps) {
   const bg      = theme === "light" ? "#e8e0d6" : "#05262e"
   const headingColor = theme === "light" ? "#05262e" : "#F5F5F2"
-  const microColor   = theme === "light" ? "rgba(5,38,46,0.6)" : "#e8e0d6"
+  const microColor   = theme === "light" ? "#1A5568" : "#e8e0d6"
   const ctaVariant   = "primary" as const
   const ctaTheme     = theme === "light" ? "light" : "dark" as const
 
