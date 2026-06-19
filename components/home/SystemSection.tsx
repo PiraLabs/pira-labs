@@ -66,7 +66,7 @@ function LogoKZ() {
 export function SystemSection() {
   return (
     <section id="sistema" aria-label="Como opera" style={{ backgroundColor: INK }}>
-      <div style={{ maxWidth: "1280px", margin: "0 auto" }} className="px-6 md:px-20 py-20 md:py-28">
+      <div className="container-site py-20 md:py-28">
 
         {/* Logo grande centralizado */}
         <div style={{ display: "flex", justifyContent: "center", marginBottom: "72px" }}>

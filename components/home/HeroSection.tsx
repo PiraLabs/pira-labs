@@ -14,7 +14,7 @@ export function HeroSection() {
         minHeight: 'clamp(480px, 60vw, 680px)',
       }}
     >
-      <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 pt-20 pb-16">
+      <div className="container-site pt-20 pb-16">
         <div style={{ maxWidth: 'min(92vw, 1100px)' }}>
           <p
             className="font-body"

@@ -33,11 +33,11 @@ export function SignalsSection() {
   return (
     <section id="sinais" style={{ backgroundColor: SAND }}>
       {/* Fronteira de topo — marca ruptura com o Hero (ambos Sand) */}
-      <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20">
+      <div className="container-site">
         <div style={{ borderTop: "1px solid rgba(5,38,46,0.12)" }} />
       </div>
 
-      <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 pt-20 pb-16">
+      <div className="container-site pt-20 pb-16">
 
         {/* Eyebrow */}
         <p

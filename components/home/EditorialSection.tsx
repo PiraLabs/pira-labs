@@ -21,13 +21,7 @@ export async function EditorialSection() {
       aria-label="Antes, Pira"
       style={{ backgroundColor: TEAL }}
     >
-      <div
-        style={{
-          maxWidth: "1280px",
-          margin: "0 auto",
-          padding: "clamp(4rem, 8vw, 7rem) clamp(1.5rem, 4vw, 3rem)",
-        }}
-      >
+      <div className="container-site" style={{ paddingTop: "clamp(4rem, 8vw, 7rem)", paddingBottom: "clamp(4rem, 8vw, 7rem)" }}>
         <div style={{ maxWidth: "720px" }}>
           {/* Wordmark da publicação */}
           <p

@@ -36,14 +36,11 @@ export function ProofsSection() {
   return (
     <section style={{ backgroundColor: INK }}>
       {/* Fronteira de topo — marca ruptura com o CBT (ambos Ink) */}
-      <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20">
+      <div className="container-site">
         <div style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }} />
       </div>
 
-      <div
-        style={{ maxWidth: "1280px", margin: "0 auto" }}
-        className="px-6 md:px-20 py-20 md:py-28"
-      >
+      <div className="container-site py-20 md:py-28">
         {/* Header */}
         <p
           style={{

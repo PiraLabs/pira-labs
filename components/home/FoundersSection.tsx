@@ -47,10 +47,7 @@ export function FoundersSection() {
       </div>
 
       {/* Conteúdo */}
-      <div
-        style={{ position: "relative", zIndex: 1, maxWidth: "1280px", margin: "0 auto" }}
-        className="px-6 md:px-20 py-20 md:py-28"
-      >
+      <div style={{ position: "relative", zIndex: 1 }} className="container-site py-20 md:py-28">
         {/* Header */}
         <div style={{ maxWidth: "480px", marginBottom: "72px" }}>
           <p

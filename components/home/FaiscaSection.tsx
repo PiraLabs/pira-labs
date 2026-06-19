@@ -43,7 +43,7 @@ const blocos: Bloco[] = [
 export function FaiscaSection() {
   return (
     <section id="faisca" aria-label="Faísca" style={{ backgroundColor: SAND }}>
-      <div style={{ maxWidth: "1280px", margin: "0 auto" }} className="px-6 md:px-20 py-20 md:py-28">
+      <div className="container-site py-20 md:py-28">
 
         {/* Header */}
         <p style={{ fontFamily: "var(--font-atyp-text)", fontWeight: 600, fontSize: "12px", letterSpacing: "0.14em", color: TEALMID, marginBottom: "32px" }}>
