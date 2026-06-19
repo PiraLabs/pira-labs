@@ -76,7 +76,7 @@ export function FoundersSection() {
               color: INK,
             }}
           >
-            Consultoria <span style={{ color: EMBER }}>boutique</span> por decisão.
+            Consultoria <span style={{ color: "#C4421A" }}>boutique</span> por decisão.
           </h2>
           <p
             className="font-body"

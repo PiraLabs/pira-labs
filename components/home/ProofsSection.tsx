@@ -21,7 +21,7 @@ const proofs: ProofBlock[] = [
   {
     metric: "R$16M → R$163M",
     label: "PRÉ-PIRA LABS · PRÉ-IA",
-    body: "Reestruturação da área de ativação e eventos de uma agência multinacional. Dois anos culminando na coordenação de 600 pessoas e 100 fornecedores para o patrocínio global de uma grande marca de tecnologia nos Jogos Rio 2016.",
+    body: "Reestruturação da área de ativação e eventos de uma agência multinacional. Dois anos culminando na coordenação de 622 profissionais e 100+ fornecedores para o patrocínio global de uma grande marca de tecnologia nos Jogos Rio 2016.",
     isEmber: false,
   },
   {
@@ -95,7 +95,7 @@ export function ProofsSection() {
                 className="font-display"
                 style={{
                   fontWeight: 700,
-                  fontSize: "clamp(44px, 9vw, 104px)",
+                  fontSize: "clamp(52px, 10.2vw, 112px)",
                   lineHeight: 1.0,
                   letterSpacing: "-0.035em",
                   color: proof.isEmber ? EMBER : WHITE,

@@ -46,8 +46,8 @@ export function FaiscaSection() {
       <div style={{ maxWidth: "1280px", margin: "0 auto" }} className="px-6 md:px-20 py-20 md:py-28">
 
         {/* Header */}
-        <p style={{ fontFamily: "var(--font-atyp-text)", fontWeight: 600, fontSize: "12px", letterSpacing: "0.14em", textTransform: "uppercase", color: TEALMID, marginBottom: "32px" }}>
-          FAÍSCA
+        <p style={{ fontFamily: "var(--font-atyp-text)", fontWeight: 600, fontSize: "12px", letterSpacing: "0.14em", color: TEALMID, marginBottom: "32px" }}>
+          Faísca
         </p>
         <h2 className="font-display" style={{ fontWeight: 600, fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: INK, marginBottom: "24px", maxWidth: "16ch" }}>
           O primeiro passo não precisa ser o maior.

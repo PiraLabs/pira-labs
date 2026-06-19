@@ -96,7 +96,7 @@ export function SystemSection() {
                 maxWidth: "640px",
               }}
             >
-              <h3 className="font-display" style={{ fontWeight: 600, fontSize: "clamp(23px, 2.9vw, 32px)", lineHeight: 1.2, letterSpacing: "-0.01em", color: WHITE, marginBottom: "16px" }}>
+              <h3 className="font-display" style={{ fontWeight: p.nome === "RESPIRA" ? 300 : 600, fontSize: "clamp(23px, 2.9vw, 32px)", lineHeight: 1.2, letterSpacing: "-0.01em", color: WHITE, marginBottom: "16px" }}>
                 {p.nome} <span style={{ color: TAUPE }}>·</span> {p.estado}
               </h3>
               <p className="font-body" style={{ fontSize: "18px", fontWeight: 400, color: WHITE, lineHeight: 1.6, marginBottom: p.condutor ? "16px" : 0 }}>

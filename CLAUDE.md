@@ -201,8 +201,10 @@ export const metadata: Metadata = {
 - `.emphasis-italic` — AtypDisplay italic weight 500 (frases canônicas, citações, números de destaque)
 - `.container-site` — max-width 1200px com padding fluid via clamp
 - `.section-padding` — padding-top/bottom 80px mobile / 120px desktop
-- `.btn-primary` — botão laranja, texto ink (WCAG AA verificado: contraste 4.7:1)
-- `.btn-secondary` — botão outline off-white
+- `.btn-primary` (BTN-1) — ember bg, texto off-white, uppercase, tracking 0.14em; contraste 3.4:1 (AA large)
+- `.btn-secondary` (BTN-2) — outline off-white, fundo transparente; para fundos escuros (ink, teal)
+- `.btn-secondary-light` (BTN-2-light) — outline ink; para fundos claros (sand, white)
+- `.btn-tertiary` (BTN-3) — link de texto com seta, sem fundo nem borda
 
 **`components/ui/CTAButton.tsx`:** CTAButton alternativo com API diferente do `shared/CTAButton.tsx`. Props: `href`, `label`, `theme: 'light'|'dark'`, `external`. Não usa `origin`. Renderiza texto + seta animada via inline styles. Usar `shared/CTAButton.tsx` para CTAs com rastreamento de origem; usar `ui/CTAButton.tsx` para links simples sem UTM.
 
@@ -312,6 +314,7 @@ Não adicionar redirect para `/sobre` nem `/contato` (essas rotas existem com o 
 | deep-teal | `#05262E` | `bg-deep-teal` / `text-deep-teal` (alias legado de ink — preferir `ink`) |
 | emberDeep | `#C4421A` | — (uso inline) |
 | white | `#F5F5F2` | — (uso inline) |
+| taupe | `#B0A596` | `bg-taupe` / `text-taupe` (metadados, texto secundário sobre fundo claro) |
 
 > O Tailwind usa `orange` para ember e `off-white` para sand — nomes distintos do manual de marca. Usar as classes Tailwind no código, os nomes do manual no copy e documentação.
 
@@ -333,6 +336,24 @@ CSS vars: `--font-atyp-display` · `--font-atyp-text`
 Classes Tailwind: `font-display` / `font-body` (aliases para as vars acima; `font-atypDisplay` e `font-atypText` também disponíveis)
 
 Nota: `AtypText-Regular` ainda não disponível — `AtypText-Medium (500)` serve como 400 até chegar.
+
+### Escala tipográfica canônica (Design System v1)
+
+Classes utilitárias em `globals.css` — usar em vez de compor manualmente font-size + line-height:
+
+| Classe | Tamanho (clamp) | Peso | Uso |
+|---|---|---|---|
+| `.type-display-xl` | 54px → 120px | 700 | Hero home principal |
+| `.type-display` | 52px → 112px | 700 | Hero de página (PageHeader) |
+| `.type-h1` | 38px → 72px | 600 | Título principal de seção |
+| `.type-h2` | 30px → 48px | 600 | Subtítulo de seção |
+| `.type-h3` | 23px → 32px | 600 | Títulos de cards/blocos |
+| `.type-h4` | 18px → 22px | 400 | Títulos menores, rótulos |
+| `.type-body` | 18px fixo | 400 | Corpo de texto |
+| `.type-support` | 14px fixo | 400 | Texto de suporte, legendas |
+| `.type-micro` | 12px fixo, uppercase, tracking 0.14em | 600 | Eyebrows, labels de categoria |
+
+Nos commits o `.type-display` é chamado de "DISPLAY" e `.type-micro` de "MICRO".
 
 ---
 
