@@ -291,7 +291,7 @@ export default function CreativeBusinessTurnaroundPage() {
           <p className="font-body mb-12 max-w-2xl" style={{ fontSize: "1.125rem", lineHeight: 1.6, fontWeight: 400, color: "#e8e0d6" }}>
             A diferença central é o momento de entrada: o turnaround tradicional atua na crise, quando as opções já estão reduzidas. O Creative Business Turnaround atua antes, quando a empresa ainda tem clientes, caixa e reputação para agir com clareza.
           </p>
-          <div className="overflow-x-auto max-w-4xl">
+          <div className="overflow-x-auto max-w-3xl">
             <table className="w-full font-body" style={{ borderCollapse: "collapse" }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(245,245,242,0.12)" }}>
@@ -308,7 +308,7 @@ export default function CreativeBusinessTurnaroundPage() {
               </thead>
               <tbody>
                 {comparativo.map((row, i) => (
-                  <tr key={i} style={{ borderBottom: "1px solid rgba(245,245,242,0.07)" }}>
+                  <tr key={i} style={{ borderBottom: "1px solid rgba(245,245,242,0.12)" }}>
                     <td className="py-4 pr-8 align-top font-body" style={{ fontSize: "0.875rem", fontWeight: 500, color: "#e8e0d6" }}>
                       {row.dimensao}
                     </td>
@@ -388,7 +388,7 @@ export default function CreativeBusinessTurnaroundPage() {
                     </p>
                   </div>
                 </div>
-                {i < sinais.length - 1 && <hr style={{ borderColor: "rgba(245,245,242,0.08)", borderTopWidth: 1 }} />}
+                {i < sinais.length - 1 && <hr style={{ borderColor: "rgba(245,245,242,0.12)", borderTopWidth: 1 }} />}
               </div>
             ))}
           </div>
@@ -512,7 +512,7 @@ export default function CreativeBusinessTurnaroundPage() {
             A Pira Labs é a empresa que nomeou, define e opera o Creative Business Turnaround no Brasil. Cada projeto tem os dois fundadores do diagnóstico à entrega. <span style={{ color: "#eb5c2e" }}>Boutique</span> por escolha, não por limitação.
           </p>
 
-          <div className="max-w-4xl mb-4">
+          <div className="max-w-3xl mb-4">
             {evidencias.map((ev, i) => (
               <div key={i} className="py-10" style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
                 <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-5 md:gap-12 items-start">

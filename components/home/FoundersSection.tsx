@@ -94,7 +94,7 @@ export function FoundersSection() {
         </div>
 
         {/* Gabriela */}
-        <div style={{ maxWidth: "480px", paddingBottom: "48px", borderBottom: "1px solid rgba(5,38,46,0.15)" }}>
+        <div style={{ maxWidth: "480px", paddingBottom: "48px", borderBottom: "1px solid rgba(5,38,46,0.12)" }}>
           <h3
             className="font-display"
             style={{ fontWeight: 600, fontSize: "clamp(23px, 2.9vw, 32px)", color: INK, marginBottom: "16px", letterSpacing: "-0.01em", lineHeight: 1.2 }}

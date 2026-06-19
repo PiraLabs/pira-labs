@@ -64,7 +64,7 @@ export function FaiscaSection() {
               style={{
                 paddingTop: i === 0 ? 0 : "40px",
                 paddingBottom: i === blocos.length - 1 ? 0 : "40px",
-                borderTop: i === 0 ? "none" : "1px solid rgba(5,38,46,0.15)",
+                borderTop: i === 0 ? "none" : "1px solid rgba(5,38,46,0.12)",
                 maxWidth: "720px",
               }}
             >

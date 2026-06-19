@@ -90,7 +90,7 @@ export async function EditorialSection() {
                     alignItems: "flex-start",
                     gap: "1.5rem",
                     textDecoration: "none",
-                    borderTop: "1px solid rgba(245,245,242,0.15)",
+                    borderTop: "1px solid rgba(245,245,242,0.12)",
                     padding: "1.5rem 0",
                   }}
                 >
@@ -123,7 +123,7 @@ export async function EditorialSection() {
                   </span>
                 </a>
               ))}
-              <div style={{ borderTop: "1px solid rgba(245,245,242,0.15)" }} />
+              <div style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }} />
             </div>
           ) : (
             <p

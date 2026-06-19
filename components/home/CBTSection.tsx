@@ -56,7 +56,7 @@ export function CBTSection() {
         </h2>
 
         {/* Separador */}
-        <hr style={{ border: "none", borderTop: "1px solid rgba(245,245,242,0.2)", width: "100%", marginBottom: "48px" }} />
+        <hr style={{ border: "none", borderTop: "1px solid rgba(245,245,242,0.12)", width: "100%", marginBottom: "48px" }} />
 
         {/* Coluna de leitura — texto corrido à esquerda */}
         <div style={{ maxWidth: "680px", display: "flex", flexDirection: "column", gap: "24px" }}>

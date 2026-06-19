@@ -34,7 +34,7 @@ export function SignalsSection() {
     <section id="sinais" style={{ backgroundColor: SAND }}>
       {/* Fronteira de topo — marca ruptura com o Hero (ambos Sand) */}
       <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20">
-        <div style={{ borderTop: "1px solid rgba(5,38,46,0.15)" }} />
+        <div style={{ borderTop: "1px solid rgba(5,38,46,0.12)" }} />
       </div>
 
       <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 pt-20 pb-16">
@@ -114,14 +114,14 @@ export function SignalsSection() {
         </div>
 
         {/* Lista de sintomas — estática, tudo visível, zero JS */}
-        <ul style={{ margin: 0, padding: 0, borderBottom: "1px solid rgba(5,38,46,0.15)", listStyle: "none" }}>
+        <ul style={{ margin: 0, padding: 0, borderBottom: "1px solid rgba(5,38,46,0.12)", listStyle: "none" }}>
           {SIGNALS.map((s, i) => {
             const num = String(i + 1).padStart(2, "0")
             return (
               <li
                 key={i}
                 style={{
-                  borderTop: "1px solid rgba(5,38,46,0.15)",
+                  borderTop: "1px solid rgba(5,38,46,0.12)",
                   padding: "20px 0",
                   display: "flex",
                   gap: "16px",
