@@ -75,7 +75,7 @@ const faqItems = [
   {
     question: "Como saber se ainda estou dentro da janela de oportunidade?",
     answer:
-      "A janela de oportunidade está aberta quando o negócio ainda tem clientes, caixa e reputação ao mesmo tempo. Quando um dos três começa a faltar, a janela começa a fechar. O diagnóstico INSPIRA existe exatamente para medir isso — não para confirmar que a janela está aberta, mas para identificar por quanto tempo ainda estará.",
+      "A janela de oportunidade está aberta quando o negócio ainda tem clientes, caixa e reputação ao mesmo tempo. Quando um dos três começa a faltar, a janela começa a fechar. O diagnóstico INSPIRA existe exatamente para medir isso, não para confirmar que a janela está aberta, mas para identificar por quanto tempo ainda estará.",
   },
 ];
 
@@ -133,25 +133,28 @@ const comparativo = [
 
 const naoE = [
   { categoria: "Consultoria estratégica", motivo: "Entrega relatório e sai. O Creative Business Turnaround conecta diagnóstico à rota executável e, quando contratado como execução, acompanha até resultado verificado. A diferença central é que o método resolve o negócio como sistema, não uma área isolada." },
-  { categoria: "Agência criativa", motivo: "Resolve comunicação ou canal. O Creative Business Turnaround resolve o negócio como sistema." },
-  { categoria: "Empresa de tecnologia ou IA", motivo: "Vende ferramenta. O Creative Business Turnaround não tem produto tecnológico próprio." },
-  { categoria: "Mentoria ou coaching", motivo: "Trabalha com o decisor individualmente. O Creative Business Turnaround trabalha com o negócio como sistema." },
+  { categoria: "Agência criativa", motivo: "Resolve comunicação ou canal. O método resolve o negócio inteiro como sistema." },
+  { categoria: "Empresa de tecnologia ou IA", motivo: "Vende ferramenta. Aqui não há produto tecnológico próprio: a tecnologia entra a serviço do redesenho, não como fim." },
+  { categoria: "Mentoria ou coaching", motivo: "Trabalha com o decisor individualmente. O trabalho aqui é com o negócio inteiro, não com uma pessoa." },
   { categoria: "Intervenção de crise", motivo: "Chega depois da ruptura. O Creative Business Turnaround atua antes, quando a janela de oportunidade ainda está aberta." },
 ];
 
 const evidencias = [
   {
-    numero: "R$16M para R$163M em 24 meses",
+    numero: "R$16M → R$163M",
+    periodo: "Receita, em 24 meses",
     contexto: "Reestruturação da área de ativação e eventos de uma agência multinacional para o patrocínio global de uma grande marca de tecnologia nos Jogos Rio 2016.",
     tag: "Pré-IA",
   },
   {
-    numero: "-64% para +15% de margem em 6 meses",
+    numero: "-64% → +15%",
+    periodo: "Margem, em 6 meses",
     contexto: "Conta publicitária de multinacional do setor de bebidas. Revisão de processos e métricas recuperou 79pp de margem sem aumento de receita.",
     tag: "Pré-IA",
   },
   {
-    numero: "400h para 36h mensais",
+    numero: "400h → 36h",
+    periodo: "Operação mensal, mesma equipe",
     contexto: "Operação jurídica de alto volume. IA aplicada com supervisão humana liberou R$160 mil de capacidade adicional de faturamento por mês com a mesma equipe.",
     tag: "Pós-IA · supervisão humana",
   },
@@ -250,8 +253,7 @@ export default function CreativeBusinessTurnaroundPage() {
               letterSpacing: "-0.01em",
             }}>
               <strong style={{ fontWeight: 600 }}>Creative Business Turnaround</strong> é o processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes que a{" "}
-              <span style={{ color: "#eb5c2e" }}>janela de oportunidade</span>{" "}
-              se feche.
+              <span style={{ color: "#C4421A" }}>janela</span> de oportunidade se feche.
             </p>
 
             <div className="space-y-5 mb-10">
@@ -265,7 +267,7 @@ export default function CreativeBusinessTurnaroundPage() {
                 <strong style={{ fontWeight: 500, color: "#05262e" }}>&ldquo;Turnaround&rdquo;</strong> porque é virada real com resultado verificável. Não relatório de prateleira. Não plano que pressupõe implementação por conta própria. Virada. O negócio estava de uma forma. Passou a ser de outra. A diferença é mensurável.
               </p>
               <p className="font-body" style={bodyLight}>
-                É a diferença entre medicina preventiva, medicina responsiva e medicina paliativa. As três tratam o mesmo paciente. O que muda é o momento, e o momento muda tudo: o que é possível fazer, quanto custa fazer e o que sobra depois. O Creative Business Turnaround atua no primeiro momento — quando ainda há opções, velocidade e margem para decidir.
+                É a diferença entre medicina preventiva, medicina responsiva e medicina paliativa. As três tratam o mesmo paciente. O que muda é o momento, e o momento muda tudo: o que é possível fazer, quanto custa fazer e o que sobra depois. O Creative Business Turnaround atua no primeiro momento, quando ainda há opções, velocidade e margem para decidir.
               </p>
               <p className="font-body" style={bodyLight}>
                 O resultado não é a ausência de crise. É um negócio que voltou a crescer com margem, que toma decisões antes que virem urgência e que opera sem depender do esforço constante de quem o lidera. Um negócio que respira.
@@ -284,8 +286,7 @@ export default function CreativeBusinessTurnaroundPage() {
         <div className="container-site">
           <span className="font-body" style={eyebrow()}>Comparativo</span>
           <h2 className="font-display" style={h2Dark}>
-            Turnaround tradicional vs{" "}
-            <span style={{ color: "#eb5c2e" }}>Creative Business Turnaround</span>
+            Turnaround tradicional vs Creative Business Turnaround
           </h2>
           <p className="font-body mb-12 max-w-2xl" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#e8e0d6" }}>
             A diferença central é o momento de entrada: o turnaround tradicional atua na crise, quando as opções já estão reduzidas. O Creative Business Turnaround atua antes, quando a empresa ainda tem clientes, caixa e reputação para agir com clareza.
@@ -300,7 +301,7 @@ export default function CreativeBusinessTurnaroundPage() {
                   <th className="text-left pb-4 pr-8" style={{ fontSize: "0.8125rem", fontWeight: 400, color: "#e8e0d6" }}>
                     Sem intervenção agora
                   </th>
-                  <th className="text-left pb-4" style={{ fontSize: "0.8125rem", fontWeight: 600, color: "#eb5c2e" }}>
+                  <th className="text-left pb-4" style={{ fontSize: "0.8125rem", fontWeight: 600, color: "#F5F5F2" }}>
                     Creative Business Turnaround
                   </th>
                 </tr>
@@ -332,8 +333,7 @@ export default function CreativeBusinessTurnaroundPage() {
           <h2 className="font-display" style={h2Light}>Para quais empresas serve</h2>
           <div className="max-w-3xl space-y-5">
             <p className="font-body" style={bodyLight}>
-              Creative Business Turnaround serve para empresas de serviços que chegaram a um ponto onde o crescimento parou, a margem sumiu ou o fundador virou gargalo, mas a janela de oportunidade ainda está{" "}
-              <span style={{ color: "#eb5c2e" }}>aberta</span>.
+              Creative Business Turnaround serve para empresas de serviços que chegaram a um ponto onde o crescimento parou, a margem sumiu ou o fundador virou gargalo, mas a janela de oportunidade ainda está aberta.
             </p>
             <p className="font-body" style={bodyLight}>
               A janela de oportunidade está aberta quando o negócio ainda tem clientes, caixa e reputação ao mesmo tempo. Quando um dos três começa a faltar, a janela começa a fechar.
@@ -349,7 +349,7 @@ export default function CreativeBusinessTurnaroundPage() {
             </p>
             <p className="font-body pt-2" style={{ fontSize: "0.8125rem", fontWeight: 300, color: "#05262e" }}>
               Não tem certeza se o momento é agora?{" "}
-              <a href="/inspira/oxigenio" style={{ fontWeight: 500, color: "#1A5568", textDecoration: "underline", textUnderlineOffset: "3px" }}>
+              <a href="/faisca/oxigenio-ia-search" style={{ fontWeight: 500, color: "#1A5568", textDecoration: "underline", textUnderlineOffset: "3px" }}>
                 O Oxigênio existe para isso.
               </a>{" "}
               Fast R$3.500 · Full R$5.300.
@@ -362,7 +362,7 @@ export default function CreativeBusinessTurnaroundPage() {
       <section className="bg-teal py-20 md:py-28">
         <div className="container-site">
           <span className="font-body" style={eyebrow()}>Os sinais</span>
-          <h2 className="font-display" style={h2Dark}>Os <span style={{ color: "#eb5c2e" }}>sinais</span> que indicam o momento certo</h2>
+          <h2 className="font-display" style={h2Dark}>Os sinais que indicam o momento certo</h2>
           <p className="font-body mb-14 max-w-xl" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#e8e0d6" }}>
             Cinco sinais que aparecem antes da crise. Quanto mais presentes, mais próximo está o momento de agir.
           </p>
@@ -394,7 +394,7 @@ export default function CreativeBusinessTurnaroundPage() {
           </div>
           <div className="max-w-3xl mt-12 pt-10" style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
             <p className="font-body mb-6" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#F5F5F2" }}>
-              Se você reconheceu três ou mais desses sinais, a janela de oportunidade ainda está aberta.
+              Se você reconheceu <span style={{ color: "#eb5c2e" }}>três</span> ou mais desses sinais, a janela de oportunidade ainda está aberta.
             </p>
             <CTAButton variant="secondary" href="/contato" origin={ORIGINS.CREATIVE_BUSINESS_TURNAROUND}>
               Entender o próximo passo
@@ -481,7 +481,7 @@ export default function CreativeBusinessTurnaroundPage() {
               </p>
               <p className="font-body" style={bodyLight}>
                 Quando o redesenho está verificado, o negócio opera com clareza. Decisão mais distribuída. Capacidade de avançar sem improviso constante.{" "}
-                <span style={{ color: "#eb5c2e", fontWeight: 400 }}>RESPIRA</span> é o estado alcançado, não um produto entregue.
+                <span style={{ fontWeight: 600, color: "#05262e" }}>RESPIRA</span> é o estado alcançado, não um produto entregue.
               </p>
             </div>
 
@@ -491,11 +491,11 @@ export default function CreativeBusinessTurnaroundPage() {
                 Ponto de entrada
               </p>
               <p className="font-body mb-6" style={bodyLight}>
-                Para quem quer começar com escopo fechado, a Pira Labs tem a Faísca — produtos de entrada com entrega verificável e preço fixo, sem compromisso longo. O Oxigênio é o diagnóstico de presença em motores de IA: como a empresa aparece quando o ICP busca o problema que ela resolve no ChatGPT, Claude, Gemini ou Perplexity.{" "}
+                Para quem quer começar com escopo fechado, a Pira Labs tem a Faísca: produtos de entrada com entrega verificável e preço fixo, sem compromisso longo. O Oxigênio é o diagnóstico de presença em motores de IA: como a empresa aparece quando o ICP busca o problema que ela resolve no ChatGPT, Claude, Gemini ou Perplexity.{" "}
                 <span style={{ fontWeight: 500, color: "#05262e" }}>Fast R$3.500 · Full R$5.300.</span>{" "}
                 Até 5 dias úteis.
               </p>
-              <CTAButton variant="secondary" theme="light" href="/inspira/oxigenio">
+              <CTAButton variant="secondary" theme="light" href="/faisca/oxigenio-ia-search">
                 Conhecer Oxigênio
               </CTAButton>
             </div>
@@ -513,16 +513,16 @@ export default function CreativeBusinessTurnaroundPage() {
           </p>
 
           <div className="max-w-4xl mb-4">
-            <div style={{ borderBottom: "1px solid rgba(245,245,242,0.12)", paddingBottom: "1rem", marginBottom: "0", display: "grid", gridTemplateColumns: "1fr 2fr 120px", gap: "2rem" }}>
-              <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#e8e0d6" }}>Evidência</p>
-              <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#e8e0d6" }}>O que aconteceu</p>
-              <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#e8e0d6" }}>Contexto</p>
-            </div>
             {evidencias.map((ev, i) => (
-              <div key={i} style={{ borderBottom: "1px solid rgba(245,245,242,0.07)", display: "grid", gridTemplateColumns: "1fr 2fr 120px", gap: "2rem", padding: "1.5rem 0" }}>
-                <p className="font-display" style={{ fontSize: "clamp(1.125rem, 2vw, 1.5rem)", fontWeight: 600, lineHeight: 1.2, color: "#F5F5F2" }}>{ev.numero}</p>
-                <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#e8e0d6" }}>{ev.contexto}</p>
-                <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 300, color: "#e8e0d6", lineHeight: 1.5 }}>{ev.tag}</p>
+              <div key={i} className="py-10" style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
+                <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-5 md:gap-12 items-start">
+                  <div>
+                    <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#b0a596", marginBottom: "1rem" }}>{ev.tag}</p>
+                    <p className="font-display" style={{ fontSize: "clamp(2.75rem, 6.5vw, 5rem)", fontWeight: 700, lineHeight: 1.0, letterSpacing: "-0.035em", color: "#F5F5F2" }}>{ev.numero}</p>
+                    <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 400, color: "#b0a596", marginTop: "0.75rem" }}>{ev.periodo}</p>
+                  </div>
+                  <p className="font-body" style={{ fontSize: "1.125rem", lineHeight: 1.6, fontWeight: 400, color: "#e8e0d6" }}>{ev.contexto}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -532,7 +532,7 @@ export default function CreativeBusinessTurnaroundPage() {
           </p>
 
           <CTAButton variant="secondary" href="/sobre">
-            Os dois fundadores em cada projeto
+            Conhecer os dois fundadores
           </CTAButton>
         </div>
       </section>
@@ -542,7 +542,7 @@ export default function CreativeBusinessTurnaroundPage() {
         <div className="container-site max-w-3xl">
           <span className="font-body" style={eyebrow()}>FAQ</span>
           <h2 className="font-display mb-12" style={h2Dark}>
-            Perguntas que as <span style={{ color: "#eb5c2e" }}>IAs</span> já respondem sobre Creative Business Turnaround
+            Perguntas que as IAs já respondem sobre Creative Business Turnaround
           </h2>
           <div>
             {faqItems.map((item, i) => (

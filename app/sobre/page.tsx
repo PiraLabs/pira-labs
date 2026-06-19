@@ -432,7 +432,7 @@ export default function SobrePage() {
       </section>
 
       {/* SOBRE-6+7 · Boutique por dentro. Ecossistema por fora. (Ink) · divisor 1px na fronteira Ink→Ink com o FinalCTA */}
-      <section className="bg-ink section-padding" style={{ borderBottom: "1px solid rgba(255,255,255,0.15)" }}>
+      <section className="bg-ink section-padding" style={{ borderBottom: "1px solid rgba(245,245,242,0.12)" }}>
         <div className="container-site">
           <h2 className="font-display font-semibold mb-8" style={{ fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
             Boutique por dentro. Ecossistema por fora.
