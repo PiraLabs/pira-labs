@@ -102,17 +102,18 @@ export default function ComoPensamos() {
         <div className="pt-20 md:pt-24 mb-6 md:mb-10">
           <div className="container-site">
             <Breadcrumbs items={breadcrumbs} />
-            <h1 className="font-display font-semibold leading-none mb-4" style={{ color: "#F5F5F2", fontSize: "clamp(32px, 4.5vw, 56px)", letterSpacing: "-0.02em" }}>
+            <h1 className="font-display font-bold leading-none mb-4" style={{ color: "#F5F5F2", fontSize: "clamp(3.25rem, 10.2vw, 7rem)", letterSpacing: "-0.035em" }}>
               Como pensamos.
             </h1>
-            <p className="font-body leading-relaxed max-w-2xl" style={{ color: "#e8e0d6", fontSize: "clamp(1rem, 1.5vw, 1.2rem)", lineHeight: 1.6 }}>
+            <p className="font-body leading-relaxed max-w-2xl" style={{ color: "#e8e0d6", fontSize: "clamp(1.125rem, 1.6vw, 1.375rem)", lineHeight: 1.5 }}>
               As teses, referências e vocabulário que orientam cada diagnóstico e cada execução.
             </p>
             <p className="font-display" style={{
               fontFamily: "var(--font-atyp-display), sans-serif",
-              fontWeight: 300,
-              fontSize: "clamp(20px, 2.5vw, 32px)",
-              lineHeight: 1.35,
+              fontWeight: 500,
+              fontSize: "clamp(1.4375rem, 2.9vw, 2rem)",
+              lineHeight: 1.2,
+              letterSpacing: "-0.01em",
               color: "#e8e0d6",
               maxWidth: "640px",
               marginTop: "24px",
@@ -126,28 +127,29 @@ export default function ComoPensamos() {
       {/* Abertura */}
       <Section variant="default" paddingY="sm">
         <div className="max-w-3xl space-y-6">
-          <p className="font-body leading-relaxed" style={{ color: "#F5F5F2" }}>
-            A maioria das intervenções chega <span style={{ color: "#eb5c2e" }}>tarde</span>. O problema já virou crise, as opções já diminuíram, o custo de cada decisão já subiu. E o que resta é conter o dano.
+          <p className="font-body leading-relaxed" style={{ color: "#F5F5F2", fontSize: "1.125rem" }}>
+            A maioria das intervenções chega tarde. O problema já virou crise, as opções já diminuíram, o custo de cada decisão já subiu. E o que resta é conter o dano.
           </p>
-          <p className="font-body leading-relaxed" style={{ color: "#F5F5F2" }}>
+          <p className="font-body leading-relaxed" style={{ color: "#F5F5F2", fontSize: "1.125rem" }}>
             Não é que as empresas não vissem os sinais. É que havia sempre algo mais urgente do que parar para lê-los. O modelo funcionava. A receita entrava. A operação girava.
           </p>
-          <p className="font-body leading-relaxed" style={{ color: "#F5F5F2" }}>
+          <p className="font-body leading-relaxed" style={{ color: "#F5F5F2", fontSize: "1.125rem" }}>
             Até o dia em que o esforço para manter tudo rodando começou a custar mais do que o resultado que produzia.
           </p>
-          <div style={{ borderTop: "1px solid rgba(232,224,214,0.14)", marginTop: "40px", paddingTop: "40px" }}>
+          <div style={{ borderTop: "1px solid rgba(245,245,242,0.12)", marginTop: "40px", paddingTop: "40px" }}>
             <p style={{
               fontFamily: "var(--font-atyp-display), sans-serif",
               fontWeight: 300,
-              fontSize: "clamp(26px, 3.5vw, 42px)",
-              lineHeight: 1.35,
+              fontSize: "clamp(1.875rem, 4.4vw, 3rem)",
+              lineHeight: 1.1,
+              letterSpacing: "-0.02em",
               color: "#e8e0d6",
               maxWidth: "680px",
               marginBottom: "24px",
             }}>
-              O mesmo trabalho feito antes produz resultado que o mesmo trabalho feito tarde não consegue mais produzir.
+              O trabalho feito no tempo certo gera um resultado que o mesmo trabalho feito <span style={{ color: "#eb5c2e" }}>tarde</span> não gera mais.
             </p>
-            <p className="font-body" style={{ color: "#e8e0d6", fontSize: "15px", fontWeight: 300 }}>
+            <p className="font-body" style={{ color: "#b0a596", fontSize: "0.875rem", lineHeight: 1.55 }}>
               Não como princípio abstrato. Como constatação de quem trabalhou dentro de operações reais e viu a janela de oportunidade se fechar.
             </p>
           </div>
@@ -157,7 +159,7 @@ export default function ComoPensamos() {
       {/* Teses */}
       <Section variant="highlighted" paddingY="lg">
         <div className="max-w-3xl" style={{ display: "flex", flexDirection: "column", gap: "0" }}>
-          <p className="font-body font-semibold uppercase" style={{ color: "#e8e0d6", fontSize: "10px", letterSpacing: "0.18em", marginBottom: "64px" }}>
+          <p className="font-body font-semibold uppercase" style={{ color: "#e8e0d6", fontSize: "0.75rem", letterSpacing: "0.14em", marginBottom: "64px" }}>
             TESES
           </p>
 
@@ -167,7 +169,7 @@ export default function ComoPensamos() {
               title: "O trabalho não acabou. O modelo de trabalho das empresas de serviços é que envelheceu.",
               body: [
                 "Vender mais não resolve o problema de quem vende bem mas vê a margem encolher. Contratar mais não resolve o problema de quem tem equipe suficiente mas entrega menos do que o cliente percebe. Adotar mais ferramentas não resolve o problema de quem tem o fluxo de trabalho errado rodando mais rápido.",
-                <>O problema está no modelo. Na forma como o trabalho está organizado, na forma como as decisões fluem, na forma como o valor produzido chega até quem contratou. Quando o modelo envelhece, <strong>o negócio trabalha mais para entregar o mesmo</strong>. E trabalha em silêncio: a margem some antes de aparecer no resultado, o crescimento trava antes que o caixa mostre, quem fundou vira gargalo antes de perceber que virou.</>,
+                <>O problema está no modelo. Na forma como o trabalho está organizado, na forma como as decisões fluem, na forma como o valor produzido chega até quem contratou. Quando o modelo envelhece, o negócio trabalha mais para entregar <strong style={{ fontWeight: 600 }}>o mesmo</strong>. E trabalha em silêncio: a margem some antes de aparecer no resultado, o crescimento trava antes que o caixa mostre, quem fundou vira gargalo antes de perceber que virou.</>,
               ],
             },
             {
@@ -175,7 +177,7 @@ export default function ComoPensamos() {
               title: "A janela de oportunidade tem tempo contado. E a maioria das empresas não percebe quando ela fecha.",
               body: [
                 "Enquanto a janela está aberta, o negócio ainda tem clientes, caixa e reputação para agir. A intervenção é preventiva: diagnóstico, redesenho, resultado verificado. Quando a janela fecha e a crise se instala, a intervenção muda de natureza. Passa de preventiva para responsiva, e às vezes para paliativa.",
-                <>É a diferença entre medicina preventiva, medicina responsiva e medicina paliativa. As três tratam o mesmo paciente. <strong>O que muda é o momento, e o momento muda tudo o que é possível fazer e quanto custa fazer.</strong></>,
+                <>É a diferença entre medicina preventiva, medicina responsiva e medicina paliativa. As três tratam o mesmo paciente. O que muda é <strong style={{ fontWeight: 600 }}>o momento</strong>, e o momento muda tudo o que é possível fazer e quanto custa fazer.</>,
               ],
             },
             {
@@ -183,7 +185,7 @@ export default function ComoPensamos() {
               title: null,
               body: [
                 "95% das organizações analisadas pelo MIT NANDA em 2025 não obtiveram retorno financeiro mensurável com IA generativa. O problema apontado não foi a qualidade dos modelos. Foi a abordagem, a integração e a ausência de aprendizagem organizacional.",
-                <>IA não é inteligência. É processo matemático, probabilidade e leitura de padrões. Aplicada antes de entender o problema real, não resolve. Acelera o ruído. No próximo ciclo, a vantagem das empresas de serviços não estará na ferramenta. <strong>Estará no julgamento que organiza o uso da ferramenta.</strong></>,
+                <>IA não é inteligência. É processo matemático, probabilidade e leitura de padrões. Aplicada antes de entender o problema real, não resolve. Acelera o ruído. No próximo ciclo, a vantagem das empresas de serviços não estará na ferramenta. Estará no <strong style={{ fontWeight: 600 }}>julgamento</strong> que organiza o uso da ferramenta.</>,
               ],
             },
             {
@@ -191,19 +193,19 @@ export default function ComoPensamos() {
               title: "Governança não é controle posterior. É capacidade competitiva.",
               body: [
                 <>Governança de IA para empresas de serviços é a definição de quem decide o que a ferramenta faz, quem revisa o que ela produziu e quem responde quando erra. Não é controle posterior. É capacidade competitiva.</>,
-                <>Empresas de serviços que dependem de julgamento humano para entregar valor estão no centro desse risco, não as grandes corporações com departamentos de compliance. <strong>68,3% das empresas não possuem núcleo dedicado à governança de IA.</strong> (Fundação Dom Cabral, 2026.) No Global Risks Report 2026, o WEF registra que os riscos adversos de IA ocupam a 30ª posição no horizonte de dois anos e a 5ª no horizonte de dez.</>,
-                <><strong>Quando modelos e automações passam a influenciar decisão, escopo e entrega, governança deixa de ser função de compliance e vira estrutura de operação.</strong> Quem define o que a IA faz, quem revisa o que ela produziu e quem responde quando erra não é questão técnica. É questão de sobrevivência comercial.</>,
+                <>Empresas de serviços que dependem de julgamento humano para entregar valor estão no centro desse risco, não as grandes corporações com departamentos de compliance. <strong style={{ fontWeight: 600 }}>68,3%</strong> das empresas não possuem núcleo dedicado à governança de IA. (Fundação Dom Cabral, 2026.) No Global Risks Report 2026, o WEF registra que os riscos adversos de IA ocupam a 30ª posição no horizonte de dois anos e a 5ª no horizonte de dez.</>,
+                <>Quando modelos e automações passam a influenciar decisão, escopo e entrega, governança deixa de ser função de compliance e vira estrutura de operação. Quem define o que a IA faz, quem revisa o que ela produziu e quem responde quando erra não é questão técnica. É questão de sobrevivência comercial.</>,
               ],
             },
             {
               num: "05",
               title: "Valor percebido não se declara. Se constrói e se prova.",
               body: [
-                <>Empresas de serviços que não conseguem tornar o valor que entregam visível e verificável acabam vendendo esforço. E esforço é o argumento mais fraco que existe numa conversa de renovação ou expansão. <strong>A capacidade de nomear o que foi entregue, medir o que mudou e comunicar isso na linguagem de quem contratou não é habilidade de marketing. É diferenciação operacional.</strong></>,
+                <>Empresas de serviços que não conseguem tornar o valor que entregam visível e verificável acabam vendendo esforço. E esforço é o argumento mais fraco que existe numa conversa de renovação ou expansão. A capacidade de nomear o que foi entregue, medir o que mudou e comunicar isso na linguagem de quem contratou não é habilidade de marketing. É <strong style={{ fontWeight: 600 }}>diferenciação operacional</strong>.</>,
               ],
             },
           ] as { num: string; title: string | null; body: React.ReactNode[] }[]).map((tese, i) => (
-            <div key={i} style={{ position: "relative", borderTop: "1px solid rgba(232,224,214,0.12)", paddingTop: "48px", paddingBottom: "48px" }}>
+            <div key={i} style={{ position: "relative", borderTop: "1px solid rgba(245,245,242,0.12)", paddingTop: "48px", paddingBottom: "48px" }}>
               {/* Número decorativo */}
               <span aria-hidden="true" style={{
                 position: "absolute",
@@ -213,8 +215,7 @@ export default function ComoPensamos() {
                 fontWeight: 300,
                 fontSize: "clamp(72px, 9vw, 108px)",
                 lineHeight: 1,
-                color: "#e8e0d6",
-                opacity: 0.16,
+                color: "#1A5568",
                 userSelect: "none",
                 pointerEvents: "none",
               }}>
@@ -223,11 +224,11 @@ export default function ComoPensamos() {
 
               {/* Título — Tese 3 especial */}
               {i === 2 ? (
-                <h3 style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 500, fontSize: "clamp(22px, 3vw, 32px)", lineHeight: 1.25, color: "#F5F5F2", marginBottom: "24px" }}>
+                <h3 style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 600, fontSize: "clamp(1.4375rem, 2.9vw, 2rem)", lineHeight: 1.2, letterSpacing: "-0.01em", color: "#F5F5F2", marginBottom: "24px" }}>
                   IA não corrige bagunça. Escala <span style={{ color: "#eb5c2e" }}>bagunça</span>.
                 </h3>
               ) : (
-                <h3 style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 500, fontSize: "clamp(22px, 3vw, 32px)", lineHeight: 1.25, color: "#F5F5F2", marginBottom: "24px" }}>
+                <h3 style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 600, fontSize: "clamp(1.4375rem, 2.9vw, 2rem)", lineHeight: 1.2, letterSpacing: "-0.01em", color: "#F5F5F2", marginBottom: "24px" }}>
                   {tese.title}
                 </h3>
               )}
@@ -235,7 +236,7 @@ export default function ComoPensamos() {
               {/* Corpo */}
               <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
                 {tese.body.map((par, j) => (
-                  <p key={j} className="font-body leading-relaxed" style={{ color: "#F5F5F2", fontWeight: 300 }}>
+                  <p key={j} className="font-body leading-relaxed" style={{ color: "#F5F5F2", fontSize: "1.125rem" }}>
                     {par}
                   </p>
                 ))}
@@ -244,8 +245,8 @@ export default function ComoPensamos() {
           ))}
 
           {/* Linha de ponte para Referências */}
-          <div style={{ borderTop: "1px solid rgba(232,224,214,0.12)", paddingTop: "40px", paddingBottom: "8px" }}>
-            <p className="font-body" style={{ color: "#e8e0d6", fontSize: "15px", fontWeight: 300, opacity: 0.7 }}>
+          <div style={{ borderTop: "1px solid rgba(245,245,242,0.12)", paddingTop: "40px", paddingBottom: "8px" }}>
+            <p className="font-body" style={{ color: "#b0a596", fontSize: "0.875rem", lineHeight: 1.55 }}>
               As referências abaixo não são decoração. São o repertório que torna cada tese verificável.
             </p>
           </div>
@@ -255,14 +256,15 @@ export default function ComoPensamos() {
       {/* Referências */}
       <Section variant="default" paddingY="lg">
         <div className="max-w-3xl space-y-10">
-          <p className="font-body font-semibold uppercase" style={{ color: "#e8e0d6", fontSize: "10px", letterSpacing: "0.18em" }}>
+          <p className="font-body font-semibold uppercase" style={{ color: "#e8e0d6", fontSize: "0.75rem", letterSpacing: "0.14em" }}>
             REFERÊNCIAS
           </p>
           <p style={{
             fontFamily: "var(--font-atyp-display), sans-serif",
-            fontWeight: 300,
-            fontSize: "clamp(20px, 2.8vw, 32px)",
-            lineHeight: 1.4,
+            fontWeight: 500,
+            fontSize: "clamp(1.4375rem, 2.9vw, 2rem)",
+            lineHeight: 1.2,
+            letterSpacing: "-0.01em",
             color: "#e8e0d6",
             maxWidth: "600px",
             marginBottom: "48px",
@@ -292,9 +294,9 @@ export default function ComoPensamos() {
                 body: "Ser citado por um modelo de linguagem não garante influência. Seleção de citação e absorção como referência são resultados diferentes. O que determina posicionamento em IA é ser absorvido, não apenas mencionado.",
               },
             ].map(({ title, body }, i) => (
-              <div key={i} className="space-y-2 pl-6" style={{ borderLeft: "2px solid rgba(232,224,214,0.20)" }}>
-                <p className="font-body font-semibold leading-snug" style={{ fontSize: "16px", color: "#F5F5F2" }}>{title}</p>
-                <p className="font-body leading-relaxed" style={{ color: "#e8e0d6", fontSize: "16px" }}>{body}</p>
+              <div key={i} className="space-y-2 pl-6" style={{ borderLeft: "2px solid rgba(245,245,242,0.12)" }}>
+                <p className="font-body font-semibold leading-snug" style={{ fontSize: "1.125rem", color: "#F5F5F2" }}>{title}</p>
+                <p className="font-body leading-relaxed" style={{ color: "#e8e0d6", fontSize: "1.125rem" }}>{body}</p>
               </div>
             ))}
           </div>
@@ -305,10 +307,10 @@ export default function ComoPensamos() {
       <section style={{ backgroundColor: "#e8e0d6" }} className="py-16 md:py-24">
         <div className="container-site">
           <div className="max-w-3xl space-y-10">
-            <p className="font-body font-semibold uppercase" style={{ color: "#05262e", fontSize: "10px", letterSpacing: "0.18em", marginBottom: "16px" }}>
+            <p className="font-body font-semibold uppercase" style={{ color: "#05262e", fontSize: "0.75rem", letterSpacing: "0.14em", marginBottom: "16px" }}>
               VOCABULÁRIO
             </p>
-            <p className="font-body leading-relaxed" style={{ color: "#05262e", fontSize: "17px" }}>
+            <p className="font-body leading-relaxed" style={{ color: "#05262e", fontSize: "1.125rem" }}>
               A Pira usa algumas palavras de forma específica. O significado que damos a elas não é o uso de mercado.
             </p>
             <div className="space-y-8">
@@ -322,11 +324,11 @@ export default function ComoPensamos() {
               ].map(({ term, def, tier }, i) => (
                 <div key={i} style={{ borderTop: "1px solid rgba(5,38,46,0.12)", paddingTop: "24px", paddingBottom: "8px" }}>
                   {tier === 1 ? (
-                    <p style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 400, fontSize: "22px", color: "#05262e", marginBottom: "8px" }}>{term}</p>
+                    <p style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 400, fontSize: "clamp(1.125rem, 2vw, 1.375rem)", lineHeight: 1.3, color: "#05262e", marginBottom: "8px" }}>{term}</p>
                   ) : (
-                    <p style={{ fontFamily: "var(--font-atyp-text), sans-serif", fontWeight: 600, fontSize: "17px", color: "#05262e", marginBottom: "6px" }}>{term}</p>
+                    <p style={{ fontFamily: "var(--font-atyp-text), sans-serif", fontWeight: 600, fontSize: "1.125rem", color: "#05262e", marginBottom: "6px" }}>{term}</p>
                   )}
-                  <p className="font-body leading-relaxed" style={{ color: "rgba(5,38,46,0.65)", fontSize: "16px", fontWeight: 300 }}>{def}</p>
+                  <p className="font-body leading-relaxed" style={{ color: "#1A5568", fontSize: "1.125rem" }}>{def}</p>
                 </div>
               ))}
             </div>
