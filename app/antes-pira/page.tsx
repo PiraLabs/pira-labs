@@ -2,18 +2,21 @@ import type { Metadata } from 'next'
 import { buscarPostsSubstack } from '@/lib/substack-rss'
 
 export const metadata: Metadata = {
-  title: 'Antes, Pira — Publicação editorial da Pira Labs',
+  title: 'Antes, Pira · Publicação editorial da Pira Labs',
   description: 'Antes, Pira é a publicação editorial da Pira Labs no Substack. Teses sobre Creative Business Turnaround, modelo de trabalho em empresas de serviços, IA aplicada à operação e o que aprendemos operando, incluindo o que não funcionou.',
   alternates: {
     canonical: 'https://piralabs.com.br/antes-pira',
   },
   openGraph: {
-    title: 'Antes, Pira — Publicação editorial da Pira Labs',
+    title: 'Antes, Pira · Publicação editorial da Pira Labs',
     description: 'Teses sobre Creative Business Turnaround, modelo de trabalho em empresas de serviços, IA aplicada à operação e o que aprendemos operando.',
     url: 'https://piralabs.com.br/antes-pira',
     images: [{ url: 'https://piralabs.com.br/piralabs-og-image.png', width: 1200, height: 630, alt: 'Pira Labs' }],
   },
 }
+
+const PAD = 'clamp(5rem, 10vw, 7.5rem) clamp(1.5rem, 4vw, 5rem)'
+const PAD_BREAD = '12px clamp(1.5rem, 4vw, 5rem)'
 
 export default async function AntesPiraPage() {
   const posts = await buscarPostsSubstack(8)
@@ -25,7 +28,7 @@ export default async function AntesPiraPage() {
         '@type': 'WebPage',
         '@id': 'https://piralabs.com.br/antes-pira',
         url: 'https://piralabs.com.br/antes-pira',
-        name: 'Antes, Pira — Publicação editorial da Pira Labs',
+        name: 'Antes, Pira · Publicação editorial da Pira Labs',
         description: 'Antes, Pira é a publicação editorial da Pira Labs no Substack. Teses sobre Creative Business Turnaround, modelo de trabalho em empresas de serviços, IA aplicada à operação e o que aprendemos operando.',
         inLanguage: 'pt-BR',
         isPartOf: { '@id': 'https://piralabs.com.br' },
@@ -60,24 +63,24 @@ export default async function AntesPiraPage() {
       />
 
       {/* BREADCRUMB */}
-      <nav aria-label="Breadcrumb" style={{ backgroundColor: '#e8e0d6', padding: '12px 80px' }}>
+      <nav aria-label="Breadcrumb" style={{ backgroundColor: '#e8e0d6', padding: PAD_BREAD }}>
         <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: 0, padding: 0, fontSize: '0.75rem', color: '#05262e' }}>
           <li><a href="/" style={{ color: '#05262e', textDecoration: 'none' }}>Home</a></li>
-          <li style={{ opacity: 0.4 }}>/</li>
-          <li style={{ opacity: 0.6 }}>Antes, Pira</li>
+          <li style={{ color: '#1A5568' }}>/</li>
+          <li style={{ color: '#1A5568' }}>Antes, Pira</li>
         </ol>
       </nav>
 
       {/* S1 — HERO | Sand */}
-      <section style={{ backgroundColor: '#e8e0d6', padding: '120px 80px' }}>
+      <section style={{ backgroundColor: '#e8e0d6', padding: PAD }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
-            color: '#1A5568',
+            color: '#05262e',
             marginBottom: '24px',
           }}>
             Publicação editorial · Substack
@@ -85,8 +88,9 @@ export default async function AntesPiraPage() {
           <h1 style={{
             fontFamily: 'AtypDisplay, sans-serif',
             fontWeight: 600,
-            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+            fontSize: 'clamp(2.375rem, 6.5vw, 4.5rem)',
             lineHeight: 1.1,
+            letterSpacing: '-0.025em',
             color: '#05262e',
             marginBottom: '32px',
             maxWidth: '800px',
@@ -95,7 +99,7 @@ export default async function AntesPiraPage() {
           </h1>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
-            fontWeight: 300,
+            fontWeight: 400,
             fontSize: '1.125rem',
             lineHeight: 1.6,
             color: '#05262e',
@@ -107,13 +111,13 @@ export default async function AntesPiraPage() {
       </section>
 
       {/* S2 — SOBRE A PUBLICAÇÃO | Ink */}
-      <section style={{ backgroundColor: '#05262e', padding: '120px 80px' }}>
+      <section style={{ backgroundColor: '#05262e', padding: PAD }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
             color: '#e8e0d6',
             marginBottom: '24px',
@@ -132,13 +136,13 @@ export default async function AntesPiraPage() {
             O que não cabe em post. O que não sai sem <span style={{ color: '#eb5c2e' }}>argumento</span>.
           </h2>
           <div style={{ maxWidth: '720px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
+            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 400, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
               Antes, Pira é a publicação editorial da Pira Labs. Vive no Substack porque é lá que conteúdo de profundidade encontra quem escolhe ler.
             </p>
-            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
-              Publicamos teses sobre Creative Business Turnaround, estudos sobre o modelo de trabalho em empresas de serviços, observações sobre IA aplicada à operação, governança de risco em ambientes de IA, e o que aprendemos operando — incluindo o que não funcionou.
+            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 400, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
+              Publicamos teses sobre Creative Business Turnaround, estudos sobre o modelo de trabalho em empresas de serviços, observações sobre IA aplicada à operação, governança de risco em ambientes de IA, e o que aprendemos operando, incluindo o que não funcionou.
             </p>
-            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 600, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
+            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 400, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
               Cada edição assina Gabriela, Celso ou ambos, dependendo do tema. A periodicidade é determinada pela existência de algo que mereça ser publicado, não por calendário fixo.
             </p>
           </div>
@@ -154,7 +158,7 @@ export default async function AntesPiraPage() {
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
                 fontSize: '0.8125rem',
-                letterSpacing: '0.08em',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#F5F5F2',
                 backgroundColor: '#eb5c2e',
@@ -173,7 +177,7 @@ export default async function AntesPiraPage() {
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
                 fontSize: '0.8125rem',
-                letterSpacing: '0.08em',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#F5F5F2',
                 border: '1px solid rgba(245,245,242,0.3)',
@@ -188,15 +192,15 @@ export default async function AntesPiraPage() {
       </section>
 
       {/* S3 — EDIÇÕES RECENTES | Sand */}
-      <section style={{ backgroundColor: '#e8e0d6', padding: '120px 80px' }}>
+      <section style={{ backgroundColor: '#e8e0d6', padding: PAD }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
-            color: '#1A5568',
+            color: '#05262e',
             marginBottom: '24px',
           }}>
             Edições recentes
@@ -215,51 +219,51 @@ export default async function AntesPiraPage() {
 
           {posts.length > 0 ? (
             <div style={{ maxWidth: '800px', display: 'flex', flexDirection: 'column' }}>
-              {posts.map((post, i) => (
+              {posts.map((post) => (
                 <div
                   key={post.href}
                   style={{
-                    borderTop: '1px solid rgba(5,38,46,0.15)',
+                    borderTop: '1px solid rgba(5,38,46,0.12)',
                     paddingTop: '32px',
                     paddingBottom: '32px',
                   }}
                 >
                   <p style={{
                     fontFamily: 'AtypText, sans-serif',
-                    fontWeight: 300,
+                    fontWeight: 400,
                     fontSize: '0.75rem',
-                    color: '#05262e',
-                    opacity: 0.5,
+                    color: '#1A5568',
                     marginBottom: '8px',
                     letterSpacing: '0.05em',
                   }}>
                     {post.data}
                   </p>
-                  <a
-                    href={post.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      fontFamily: 'AtypDisplay, sans-serif',
-                      fontWeight: 400,
-                      fontSize: '1.25rem',
-                      lineHeight: 1.25,
-                      color: '#05262e',
-                      textDecoration: 'none',
-                      display: 'block',
-                      marginBottom: '12px',
-                    }}
-                  >
-                    {post.titulo}
-                  </a>
+                  <h3 style={{ margin: 0, marginBottom: '12px' }}>
+                    <a
+                      href={post.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        fontFamily: 'AtypDisplay, sans-serif',
+                        fontWeight: 500,
+                        fontSize: 'clamp(1.125rem, 2vw, 1.5rem)',
+                        lineHeight: 1.25,
+                        letterSpacing: '-0.01em',
+                        color: '#05262e',
+                        textDecoration: 'none',
+                        display: 'block',
+                      }}
+                    >
+                      {post.titulo}
+                    </a>
+                  </h3>
                   {post.previa && (
                     <p style={{
                       fontFamily: 'AtypText, sans-serif',
-                      fontWeight: 300,
+                      fontWeight: 400,
                       fontSize: '0.9375rem',
                       lineHeight: 1.7,
                       color: '#05262e',
-                      opacity: 0.75,
                       marginBottom: '16px',
                       maxWidth: '640px',
                       display: '-webkit-box',
@@ -278,7 +282,7 @@ export default async function AntesPiraPage() {
                       fontFamily: 'AtypText, sans-serif',
                       fontWeight: 600,
                       fontSize: '0.75rem',
-                      letterSpacing: '0.08em',
+                      letterSpacing: '0.14em',
                       textTransform: 'uppercase',
                       color: '#1A5568',
                       textDecoration: 'none',
@@ -288,7 +292,7 @@ export default async function AntesPiraPage() {
                   </a>
                 </div>
               ))}
-              <div style={{ borderTop: '1px solid rgba(5,38,46,0.15)' }} />
+              <div style={{ borderTop: '1px solid rgba(5,38,46,0.12)' }} />
               <div style={{ marginTop: '40px' }}>
                 <a
                   href="/antes-pira/arquivo"
@@ -296,7 +300,7 @@ export default async function AntesPiraPage() {
                     fontFamily: 'AtypText, sans-serif',
                     fontWeight: 600,
                     fontSize: '0.8125rem',
-                    letterSpacing: '0.08em',
+                    letterSpacing: '0.14em',
                     textTransform: 'uppercase',
                     color: '#1A5568',
                     textDecoration: 'none',
@@ -310,11 +314,10 @@ export default async function AntesPiraPage() {
             <div style={{ maxWidth: '560px' }}>
               <p style={{
                 fontFamily: 'AtypText, sans-serif',
-                fontWeight: 300,
+                fontWeight: 400,
                 fontSize: '1rem',
                 lineHeight: 1.7,
                 color: '#05262e',
-                opacity: 0.6,
               }}>
                 As edições mais recentes estão disponíveis diretamente no Substack.
               </p>
@@ -328,7 +331,7 @@ export default async function AntesPiraPage() {
                   fontFamily: 'AtypText, sans-serif',
                   fontWeight: 600,
                   fontSize: '0.8125rem',
-                  letterSpacing: '0.08em',
+                  letterSpacing: '0.14em',
                   textTransform: 'uppercase',
                   color: '#1A5568',
                   textDecoration: 'none',
@@ -342,7 +345,7 @@ export default async function AntesPiraPage() {
       </section>
 
       {/* S4 — CTA FINAL | Ink */}
-      <section style={{ backgroundColor: '#05262e', padding: '120px 80px', textAlign: 'center' }}>
+      <section style={{ backgroundColor: '#05262e', padding: PAD, textAlign: 'center' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <h2 style={{
             fontFamily: 'AtypDisplay, sans-serif',
@@ -364,7 +367,7 @@ export default async function AntesPiraPage() {
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
                 fontSize: '0.8125rem',
-                letterSpacing: '0.08em',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#F5F5F2',
                 backgroundColor: '#eb5c2e',
@@ -383,7 +386,7 @@ export default async function AntesPiraPage() {
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
                 fontSize: '0.8125rem',
-                letterSpacing: '0.08em',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#F5F5F2',
                 border: '1px solid rgba(245,245,242,0.3)',
