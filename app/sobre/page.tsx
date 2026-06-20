@@ -393,8 +393,11 @@ export default function SobrePage() {
       {/* SOBRE-5 · Como as duas lentes trabalham juntas (Sand) */}
       <section className="bg-sand section-padding">
         <div className="container-site">
+          <p className="font-body font-semibold uppercase mb-4" style={{ fontSize: "12px", letterSpacing: "0.14em", color: "#1A5568" }}>
+            O método das duas lentes
+          </p>
           <h2 className="font-display font-semibold mb-10" style={{ fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.1, color: "#05262e", letterSpacing: "-0.02em" }}>
-            Como as duas lentes trabalham juntas
+            Não é divisão de trabalho.<br />É <span style={{ color: "#C4421A" }}>metodologia.</span>
           </h2>
           <div className="max-w-3xl mb-10 overflow-hidden" style={{ aspectRatio: "16/9", borderRadius: "2px" }}>
             <Image
@@ -407,17 +410,13 @@ export default function SobrePage() {
               priority={false}
             />
           </div>
-          <div className="max-w-3xl space-y-5 mb-4">
+          <div className="max-w-3xl space-y-5 mb-12">
             <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#05262e" }}>
               Gabriela lê contexto, sinais e movimentos de mercado antes de virarem demanda óbvia. Celso lê operação, gargalo e consequência antes de virarem perda visível. Separadas, essas lentes geram diagnóstico parcial.{" "}
               Juntas,
               mostram onde o negócio está travado e o que precisa mudar para avançar sem quebrar o que já funciona.
             </p>
           </div>
-          <p className="font-display" style={{ fontSize: "clamp(1.25rem, 2.5vw, 1.75rem)", fontWeight: 500, lineHeight: 1.3, color: "#05262e", letterSpacing: "-0.02em", maxWidth: "720px", marginBottom: "48px" }}>
-            Não é divisão de trabalho.<br />
-            É <span style={{ color: "#C4421A" }}>metodologia.</span>
-          </p>
           <div style={{ display: "flex", alignItems: "center", gap: "32px", flexWrap: "wrap" }}>
             <a href="/inspira" className="btn-secondary-light">
               Ver o INSPIRA
@@ -445,13 +444,15 @@ export default function SobrePage() {
               Boutique é o modelo deliberado. O ecossistema é o que torna isso possível: uma rede de especialistas, parceiros e referências que entra quando o projeto pede, sem virar overhead fixo.
             </p>
             <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#e8e0d6" }}>
-              Nos primeiros seis meses de operação, cinco projetos entregues para cinco clientes: KZ Inteligência em Comunicação, Concordia DPS LLC, Pipa e Sordilli.com. O quinto cliente é um escritório de advocacia com nome preservado a pedido.
+              Cinco projetos entregues para cinco clientes nos primeiros seis meses: KZ Inteligência em Comunicação, Concordia DPS LLC, Pipa, Sordilli.com e German Accelerator.
             </p>
           </div>
-          <p className="font-body font-semibold uppercase mb-6" style={{ fontSize: "12px", letterSpacing: "0.14em", color: "#e8e0d6" }}>
-            PARA IMPRENSA, PALESTRAS E PARCERIAS
-          </p>
-          <MediaKit className="max-w-2xl" />
+          <div className="hr-on-dark seam-pt">
+            <p className="font-body font-semibold uppercase mb-6" style={{ fontSize: "12px", letterSpacing: "0.14em", color: "#e8e0d6" }}>
+              PARA IMPRENSA, PALESTRAS E PARCERIAS
+            </p>
+            <MediaKit className="max-w-2xl" />
+          </div>
         </div>
       </section>
 
