@@ -21,7 +21,7 @@ const blocos: Bloco[] = [
   {
     problema: "A IA já entrou na operação, mas ainda não entrou no modelo.",
     produtos: [
-      { nome: "Imersão em IA", href: "/faisca/imersa-em-ia" },
+      { nome: "Imersão em IA", href: "/faisca/imersao-em-ia" },
     ],
   },
   {

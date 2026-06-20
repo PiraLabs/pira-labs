@@ -61,7 +61,7 @@ export const FLAGS = {
 } as const;
 
 // Vagas disponíveis na primeira rodada do Oxigênio IA Search.
-// Controla o número exibido na página /inspira/oxigenio.
+// Controla o número exibido na página /faisca/oxigenio-ia-search.
 export const VAGAS_OXIGENIO = parseInt(
   process.env.NEXT_PUBLIC_VAGAS_OXIGENIO || "5",
   10

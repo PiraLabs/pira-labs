@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     // PT — rotas principais
     { url: `${base}/`,                               changeFrequency: "weekly",  priority: 1.0 },
-    { url: `${base}/inspira/oxigenio`,               changeFrequency: "weekly",  priority: 0.9 },
+    { url: `${base}/faisca/oxigenio-ia-search`,       changeFrequency: "weekly",  priority: 0.9 },
     { url: `${base}/sobre`,                          changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/inspira`,                        changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/transpira`,                      changeFrequency: "monthly", priority: 0.8 },
@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/inspira/juridico`,               changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/faisca`,                         changeFrequency: "weekly",  priority: 0.7 },
     { url: `${base}/faisca/juridica`,                changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/faisca/imersa-em-ia`,            changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/faisca/imersao-em-ia`,            changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/faisca/pocket`,                  changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/antes-pira`,                     changeFrequency: "weekly",  priority: 0.6 },
     { url: `${base}/antes-pira/arquivo`,             changeFrequency: "monthly", priority: 0.5 },

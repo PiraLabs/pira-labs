@@ -20,11 +20,11 @@ const footerColumns = [
     heading: "O que fazemos",
     links: [
       { label: "INSPIRA", href: "/inspira", main: true },
-      { label: "Oxigênio", href: "/inspira/oxigenio", sub: true },
+      { label: "Oxigênio", href: "/faisca/oxigenio-ia-search", sub: true },
       { label: "pocket do INSPIRA", href: "/faisca/pocket", sub: true },
       { label: "TRANSPIRA", href: "/transpira", main: true },
       { label: "Faísca", href: "/faisca", main: true },
-      { label: "Imersão em IA", href: "/faisca/imersa-em-ia", sub: true },
+      { label: "Imersão em IA", href: "/faisca/imersao-em-ia", sub: true },
       { label: "Chama", href: "/chama", main: true },
     ],
   },

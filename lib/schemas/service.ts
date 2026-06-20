@@ -38,7 +38,7 @@ export function serviceSchema({
 }
 
 // Helper para FAQPage — aceita array de Q&A.
-// Usado em /inspira, /transpira, /faisca, /transpira/juridico e /inspira/oxigenio.
+// Usado em /inspira, /transpira, /faisca, /transpira/juridico e /faisca/oxigenio-ia-search.
 export function faqPageSchema(items: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",

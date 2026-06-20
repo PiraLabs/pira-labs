@@ -9,7 +9,7 @@ import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://piralabs.com.br/faisca/imersa-em-ia#service",
+  "@id": "https://piralabs.com.br/faisca/imersao-em-ia#service",
   name: "Imersão em IA",
   description: "Sessão de trabalho com IA sobre os processos reais da empresa. Três sessões, 5,5 horas total. Conduzido por Celso Gama.",
   provider: { "@id": "https://piralabs.com.br/#organization" },
@@ -65,7 +65,7 @@ const faqSchema = {
 const bcSchema = breadcrumbSchema([
   { name: "Home", url: "https://piralabs.com.br/" },
   { name: "Faísca", url: "https://piralabs.com.br/faisca" },
-  { name: "Imersão em IA", url: "https://piralabs.com.br/faisca/imersa-em-ia" },
+  { name: "Imersão em IA", url: "https://piralabs.com.br/faisca/imersao-em-ia" },
 ]);
 
 export const metadata: Metadata = {
@@ -74,12 +74,12 @@ export const metadata: Metadata = {
   },
   description: "Não é curso. É sessão de trabalho com os casos reais da sua empresa. Celso Gama conduz. R$7.100. Três sessões, 5,5 horas no total.",
   alternates: {
-    canonical: "https://piralabs.com.br/faisca/imersa-em-ia",
+    canonical: "https://piralabs.com.br/faisca/imersao-em-ia",
   },
   openGraph: {
     title: "Imersão em IA · Pira Labs",
     description: "Sessão de trabalho com IA sobre os processos reais da empresa. R$7.100. Três sessões.",
-    url: "https://piralabs.com.br/faisca/imersa-em-ia",
+    url: "https://piralabs.com.br/faisca/imersao-em-ia",
     images: [{ url: "/piralabs-og-image.png", width: 1200, height: 630, alt: "Pira Labs" }],
   },
 };

@@ -62,7 +62,8 @@ const nextConfig = {
       { source: "/empresa-cresce-margem-some", destination: "/crescimento-sem-margem", permanent: true },
 
       // Pocket e Imersão
-      { source: "/imersa", destination: "/faisca/imersa-em-ia", permanent: true },
+      { source: "/imersa", destination: "/faisca/imersao-em-ia", permanent: true },
+      { source: "/faisca/imersa-em-ia", destination: "/faisca/imersao-em-ia", permanent: true },
       { source: "/pocket", destination: "/faisca/pocket", permanent: true },
     ];
   },

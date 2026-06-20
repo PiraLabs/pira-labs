@@ -20,7 +20,7 @@ const NAV_ITEMS = [
     label: 'Entre',
     items: [
       { label: 'Faísca', href: '/faisca' },
-      { label: 'Imersão em IA', href: '/faisca/imersa-em-ia' },
+      { label: 'Imersão em IA', href: '/faisca/imersao-em-ia' },
       { label: 'Oxigênio IA Search', href: '/faisca/oxigenio-ia-search' },
       { label: 'pocket do INSPIRA', href: '/faisca/pocket' },
       { label: 'Faísca Jurídica', href: '/faisca/juridica' },

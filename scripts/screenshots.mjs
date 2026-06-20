@@ -14,7 +14,7 @@ const PAGES = [
   { name: '06-transpira',                    path: '/transpira' },
   { name: '07-inspira-juridico',             path: '/inspira/juridico' },
   { name: '08-transpira-juridico',           path: '/transpira/juridico' },
-  { name: '09-faisca-imersa-em-ia',          path: '/faisca/imersa-em-ia' },
+  { name: '09-faisca-imersao-em-ia',          path: '/faisca/imersao-em-ia' },
   { name: '10-faisca-pocket',                path: '/faisca/pocket' },
   { name: '11-faisca-juridica',              path: '/faisca/juridica' },
   { name: '12-faisca-oxigenio',              path: '/faisca/oxigenio-ia-search' },

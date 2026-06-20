@@ -101,7 +101,7 @@
       {
         "@type": "Offer",
         "name": "Oxigênio Fast",
-        "url": "https://piralabs.com.br/inspira/oxigenio",
+        "url": "https://piralabs.com.br/faisca/oxigenio-ia-search",
         "price": 3500,
         "priceCurrency": "BRL",
         "itemOffered": {
@@ -113,7 +113,7 @@
       {
         "@type": "Offer",
         "name": "Oxigênio Full",
-        "url": "https://piralabs.com.br/inspira/oxigenio",
+        "url": "https://piralabs.com.br/faisca/oxigenio-ia-search",
         "price": 5300,
         "priceCurrency": "BRL",
         "itemOffered": {
@@ -137,7 +137,7 @@
       {
         "@type": "Offer",
         "name": "Imersão em IA",
-        "url": "https://piralabs.com.br/faisca/imersa-em-ia",
+        "url": "https://piralabs.com.br/faisca/imersao-em-ia",
         "price": 7100,
         "priceCurrency": "BRL",
         "itemOffered": {
@@ -258,7 +258,7 @@
       "description": "INSPIRA: diagnóstico de Creative Business Turnaround em seis camadas"
     },
     {
-      "url": "https://piralabs.com.br/inspira/oxigenio",
+      "url": "https://piralabs.com.br/faisca/oxigenio-ia-search",
       "description": "Oxigênio IA Search: diagnóstico de presença em motores de IA. Fast R$3.500 / Full R$5.300"
     },
     {

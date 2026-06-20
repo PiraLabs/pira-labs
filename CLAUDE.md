@@ -102,7 +102,7 @@ app/
 │   ├── layout.tsx          # layout específico do Faisca
 │   ├── page.tsx
 │   ├── oxigenio-ia-search/
-│   ├── imersa-em-ia/
+│   ├── imersao-em-ia/
 │   ├── pocket/
 │   └── juridica/
 ├── creative-business-turnaround/
@@ -258,7 +258,7 @@ Ao adicionar qualquer novo embed, analytics ou fonte externa, atualizar o array 
 
 ### Redirects em next.config.js
 
-Atalhos de campanha: `/oxigenio` · `/oxigenio-ia-search` · `/faisca/ia-search` · `/inspira/oxigenio` → `/faisca/oxigenio-ia-search` · `/turnaround` e `/cbt` → `/creative-business-turnaround` · `/imersa` → `/faisca/imersa-em-ia` · `/pocket` → `/faisca/pocket`.
+Atalhos de campanha: `/oxigenio` · `/oxigenio-ia-search` · `/faisca/ia-search` · `/inspira/oxigenio` → `/faisca/oxigenio-ia-search` · `/turnaround` e `/cbt` → `/creative-business-turnaround` · `/imersa` → `/faisca/imersao-em-ia` · `/pocket` → `/faisca/pocket`.
 
 Resíduos do site provisório: `/servicos` → `/inspira` · `/cases` → `/#provas` · `/blog` e `/news` e `/antes-da-crise` e `/antesdacrise` → `/antes-pira` · `/index.html` e `/home` → `/` · rotas `/en/*` e `/es/*` antigas · `/about`, `/services`, `/contact` sem prefixo → equivalentes PT.
 

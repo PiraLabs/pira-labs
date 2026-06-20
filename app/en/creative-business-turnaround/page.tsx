@@ -412,7 +412,7 @@ export default function EnCBTPage() {
             <strong className="text-off-white">Fast R$3,500 · Full R$5,300.</strong>{" "}
             Up to 5 business days.
           </p>
-          <CTAButton variant="secondary" href="/inspira/oxigenio">
+          <CTAButton variant="secondary" href="/faisca/oxigenio-ia-search">
             Learn about Oxigênio IA Search
           </CTAButton>
         </div>

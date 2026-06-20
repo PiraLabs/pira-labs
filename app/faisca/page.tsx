@@ -22,8 +22,8 @@ const itemListSchema = {
   url: "https://piralabs.com.br/faisca",
   numberOfItems: 5,
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Imersão em IA", url: "https://piralabs.com.br/faisca/imersa-em-ia" },
-    { "@type": "ListItem", position: 2, name: "Oxigênio IA Search", url: "https://piralabs.com.br/inspira/oxigenio" },
+    { "@type": "ListItem", position: 1, name: "Imersão em IA", url: "https://piralabs.com.br/faisca/imersao-em-ia" },
+    { "@type": "ListItem", position: 2, name: "Oxigênio IA Search", url: "https://piralabs.com.br/faisca/oxigenio-ia-search" },
     { "@type": "ListItem", position: 3, name: "pocket do INSPIRA", url: "https://piralabs.com.br/faisca/pocket" },
     { "@type": "ListItem", position: 4, name: "C-level as a Service", url: "https://piralabs.com.br/faisca/c-level-as-a-service" },
     { "@type": "ListItem", position: 5, name: "Faísca Jurídica", url: "https://piralabs.com.br/faisca/juridica" },
@@ -150,7 +150,7 @@ export default function FaiscaPage() {
               </div>
               <div style={{ marginTop: "32px" }}>
                 <Link
-                  href="/faisca/imersa-em-ia"
+                  href="/faisca/imersao-em-ia"
                   className="font-body"
                   style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: WHITE, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}
                   aria-label="Ver produto Imersão em IA"
@@ -182,7 +182,7 @@ export default function FaiscaPage() {
               </div>
               <div style={{ marginTop: "32px" }}>
                 <Link
-                  href="/inspira/oxigenio"
+                  href="/faisca/oxigenio-ia-search"
                   className="font-body"
                   style={{ fontSize: "0.8125rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: WHITE, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}
                   aria-label="Ver produto Oxigênio IA Search"

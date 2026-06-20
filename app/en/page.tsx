@@ -218,7 +218,7 @@ export default function EnHomePage() {
                 Delivered in up to 5 business days.
               </p>
               <Link
-                href="/inspira/oxigenio"
+                href="/faisca/oxigenio-ia-search"
                 className="text-sm font-body font-medium text-off-white hover:text-orange transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
               >
                 Learn about Oxigênio →
