@@ -158,7 +158,7 @@ export default function ChamaPage() {
             </p>
             <h1
               className="font-display mb-8"
-              style={{ color: '#05262e', fontSize: 'clamp(3.25rem, 8vw, 6rem)', lineHeight: 1.0, letterSpacing: '-0.03em', fontWeight: 600, maxWidth: '15ch' }}
+              style={{ color: '#05262e', fontSize: 'clamp(2rem, 10.5vw, 6rem)', lineHeight: 1.0, letterSpacing: '-0.03em', fontWeight: 600, maxWidth: '15ch' }}
             >
               Conhecimento é a chama que move, não que informa.
             </h1>
