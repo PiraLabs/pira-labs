@@ -154,7 +154,7 @@ export default function ImersaEmIaPage() {
           </div>
 
           <a
-            href="/contato?origem=faisca_imersa"
+            href="/contato?origem=faisca_imersao"
             className="font-body"
             style={{ display: "inline-block", backgroundColor: "#05262e", color: "#F5F5F2", padding: "14px 32px", fontSize: "13px", fontWeight: 600, letterSpacing: "0.10em", textDecoration: "none", borderRadius: "2px", textTransform: "uppercase" as const }}
           >
@@ -227,7 +227,7 @@ export default function ImersaEmIaPage() {
 
           <div style={{ marginTop: "48px", paddingTop: "32px", borderTop: "1px solid rgba(245,245,242,0.12)" }}>
             <a
-              href="/contato?origem=faisca_imersa"
+              href="/contato?origem=faisca_imersao"
               className="font-body"
               style={{ color: "#F5F5F2", fontSize: "13px", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", textDecoration: "none" }}
             >
@@ -298,7 +298,7 @@ export default function ImersaEmIaPage() {
 
           <div style={{ marginTop: "48px" }}>
             <a
-              href="/contato?origem=faisca_imersa"
+              href="/contato?origem=faisca_imersao"
               className="font-body"
               style={{ color: "#F5F5F2", fontSize: "13px", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", textDecoration: "none" }}
             >

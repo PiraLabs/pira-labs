@@ -28,7 +28,7 @@ export const ORIGINS = {
   TRANSPIRA_UNIFICADO:          "transpira_unificado",
   FAISCA:                       "faisca",
   FAISCA_JURIDICA:              "faisca_juridica",
-  FAISCA_IMERSA:                "faisca_imersa",
+  FAISCA_IMERSA:                "faisca_imersao",
   FAISCA_POCKET:                "faisca_pocket",
   FAISCA_PALESTRAS:             "faisca_palestras",
   FAISCA_WORKSHOPS:             "faisca_workshops",
