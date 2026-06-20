@@ -40,6 +40,7 @@
 
     --hairline-on-dark: rgba(245, 245, 242, 0.12);
     --hairline-on-light: rgba(5, 38, 46, 0.12);
+    --seam-gap: clamp(3rem, 6vw, 4rem);
   }
 
   html,
@@ -219,6 +220,10 @@
   .hr-on-dark-b  { border-bottom: 1px solid var(--hairline-on-dark); }
   .hr-on-light   { border-top: 1px solid var(--hairline-on-light); }
   .hr-on-light-b { border-bottom: 1px solid var(--hairline-on-light); }
+  .seam-pt  { padding-top: var(--seam-gap); }
+  .seam-pb  { padding-bottom: var(--seam-gap); }
+  .section-pt { padding-top: clamp(5rem, 10vw, 7.5rem); }
+  .section-pb { padding-bottom: clamp(5rem, 10vw, 7.5rem); }
 
   /* <details>/<summary> — garantir comportamento nativo em todos os browsers.
      list-style: revert restaura o triângulo de disclosure que Tailwind preflight

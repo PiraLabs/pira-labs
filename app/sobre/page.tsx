@@ -200,8 +200,8 @@ export default function SobrePage() {
       </div>
 
       {/* SOBRE-2 · Por que a Pira Labs existe (Sand) · divisor 1px na fronteira Sand→Sand com o hero */}
-      <section className="bg-sand section-padding">
-        <div className="container-site" style={{ borderTop: "1px solid rgba(5,38,46,0.12)" }}>
+      <section className="bg-sand section-pb">
+        <div className="container-site hr-on-light seam-pt">
           <div className="max-w-3xl space-y-5">
             <p className="font-body leading-relaxed text-lg" style={{ color: "#05262e" }}>
               A Pira Labs existe para o momento em que o fundador percebe que o modelo de trabalho começou a custar mais do que entrega, e que mudar enquanto a empresa ainda tem clientes, caixa e reputação é diferente de mudar quando não há mais escolha.
@@ -432,8 +432,8 @@ export default function SobrePage() {
       </section>
 
       {/* SOBRE-6+7 · Boutique por dentro. Ecossistema por fora. (Ink) · divisor 1px na fronteira Ink→Ink com o FinalCTA */}
-      <section className="bg-ink section-padding">
-        <div className="container-site" style={{ borderBottom: "1px solid rgba(245,245,242,0.12)" }}>
+      <section className="bg-ink section-pt">
+        <div className="container-site hr-on-dark-b seam-pb">
           <h2 className="font-display font-semibold mb-8" style={{ fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.1, color: "#F5F5F2", letterSpacing: "-0.02em" }}>
             Boutique por dentro. Ecossistema por fora.
           </h2>
