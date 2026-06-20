@@ -15,15 +15,15 @@ export function PageHeader({ breadcrumbs, h1, subtitle, theme = "dark" }: PageHe
       <div className="container-site">
         <Breadcrumbs items={breadcrumbs} theme={theme} />
         <h1
-          className="font-display leading-none mb-6 md:mb-8"
-          style={{ color: isLight ? "#05262e" : "#F5F5F2", fontSize: "clamp(52px, 10.2vw, 112px)", fontWeight: 700, letterSpacing: "-0.035em" }}
+          className="type-display mb-6 md:mb-8"
+          style={{ color: isLight ? "#05262e" : "#F5F5F2" }}
         >
           {h1}
         </h1>
         {subtitle && (
           <p
-            className="font-body leading-relaxed max-w-2xl"
-            style={{ color: isLight ? "#1A5568" : "#e8e0d6", fontSize: "clamp(1rem, 1.5vw, 1.25rem)", lineHeight: 1.6 }}
+            className="type-body max-w-2xl"
+            style={{ color: isLight ? "#1A5568" : "#e8e0d6" }}
           >
             {subtitle}
           </p>

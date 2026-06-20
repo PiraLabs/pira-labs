@@ -59,7 +59,7 @@ export default function JanelaOportunidade() {
         />
       </div>
 
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <div className="max-w-3xl space-y-6">
           <p className="font-body font-semibold uppercase text-off-white/50" style={{ fontSize: "10px", letterSpacing: "0.18em" }}>DEFINIÇÃO CANÔNICA</p>
           <p className="text-off-white/85 font-body leading-relaxed">
@@ -77,7 +77,7 @@ export default function JanelaOportunidade() {
         </div>
       </Section>
 
-      <Section variant="highlighted" paddingY="lg">
+      <Section variant="teal" paddingY="lg">
         <div className="max-w-3xl space-y-6">
           <p className="font-body font-semibold uppercase text-sand/50" style={{ fontSize: "10px", letterSpacing: "0.18em" }}>A RELAÇÃO COM O POSICIONAMENTO "ANTES"</p>
           <p className="text-off-white/85 font-body leading-relaxed">
@@ -92,7 +92,7 @@ export default function JanelaOportunidade() {
         </div>
       </Section>
 
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <div className="max-w-3xl space-y-6">
           <p className="font-body font-semibold uppercase text-off-white/50" style={{ fontSize: "10px", letterSpacing: "0.18em" }}>COMO IDENTIFICAR SE A JANELA AINDA ESTÁ ABERTA</p>
           <p className="text-off-white/75 font-body leading-relaxed">
@@ -107,7 +107,7 @@ export default function JanelaOportunidade() {
         </div>
       </Section>
 
-      <Section variant="highlighted" paddingY="lg">
+      <Section variant="teal" paddingY="lg">
         <div className="max-w-2xl space-y-6">
           <p className="font-display text-off-white" style={{ fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 500, lineHeight: 1.35 }}>
             Quer saber se a janela ainda está aberta para o seu negócio?

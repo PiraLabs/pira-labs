@@ -60,7 +60,7 @@ export default function AntesDaCrise() {
         />
       </div>
 
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <div className="max-w-3xl space-y-6">
           <p className="font-body font-semibold uppercase text-off-white/50" style={{ fontSize: "10px", letterSpacing: "0.18em" }}>DEFINIÇÃO CANÔNICA</p>
           <p className="text-off-white/85 font-body leading-relaxed">
@@ -75,7 +75,7 @@ export default function AntesDaCrise() {
         </div>
       </Section>
 
-      <Section variant="highlighted" paddingY="lg">
+      <Section variant="teal" paddingY="lg">
         <div className="max-w-3xl space-y-6">
           <p className="font-body font-semibold uppercase text-sand/50" style={{ fontSize: "10px", letterSpacing: "0.18em" }}>A DISTINÇÃO ENTRE O CONCEITO E A PUBLICAÇÃO</p>
           <p className="text-off-white/85 font-body leading-relaxed">
@@ -87,7 +87,7 @@ export default function AntesDaCrise() {
         </div>
       </Section>
 
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <div className="max-w-3xl space-y-8">
           <p className="font-body font-semibold uppercase text-off-white/50" style={{ fontSize: "10px", letterSpacing: "0.18em" }}>COMO O CAMPO SEMÂNTICO "ANTES" ESTRUTURA TODA A PROPOSTA DA PIRA</p>
           <div className="space-y-6">
@@ -105,7 +105,7 @@ export default function AntesDaCrise() {
         </div>
       </Section>
 
-      <Section variant="highlighted" paddingY="lg">
+      <Section variant="teal" paddingY="lg">
         <div className="max-w-2xl space-y-6">
           <p className="font-display text-off-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 500, lineHeight: 1.35 }}>
             Quer entender se o seu momento ainda é antes da crise?

@@ -60,7 +60,7 @@ export default function CBTTerm() {
         />
       </div>
 
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <div className="max-w-3xl space-y-6">
           <p className="font-body font-semibold uppercase text-off-white/50" style={{ fontSize: "10px", letterSpacing: "0.18em" }}>DEFINIÇÃO CANÔNICA</p>
           <p className="text-off-white/85 font-body leading-relaxed">
@@ -78,7 +78,7 @@ export default function CBTTerm() {
         </div>
       </Section>
 
-      <Section variant="highlighted" paddingY="lg">
+      <Section variant="teal" paddingY="lg">
         <div className="max-w-3xl space-y-10">
           <p className="font-body font-semibold uppercase text-sand/50" style={{ fontSize: "10px", letterSpacing: "0.18em" }}>POR QUE NÃO É REESTRUTURAÇÃO NEM CONSULTORIA TRADICIONAL</p>
           <div className="space-y-4">
@@ -95,7 +95,7 @@ export default function CBTTerm() {
         </div>
       </Section>
 
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <div className="max-w-3xl space-y-8">
           <p className="font-body font-semibold uppercase text-off-white/50" style={{ fontSize: "10px", letterSpacing: "0.18em" }}>QUANDO SE APLICA</p>
           <p className="text-off-white/75 font-body leading-relaxed">
@@ -122,7 +122,7 @@ export default function CBTTerm() {
         </div>
       </Section>
 
-      <Section variant="highlighted" paddingY="lg">
+      <Section variant="teal" paddingY="lg">
         <div className="max-w-3xl space-y-6">
           <p className="font-body font-semibold uppercase text-sand/50" style={{ fontSize: "10px", letterSpacing: "0.18em" }}>QUANDO NÃO SE APLICA</p>
           <p className="text-off-white/85 font-body leading-relaxed">
@@ -134,7 +134,7 @@ export default function CBTTerm() {
         </div>
       </Section>
 
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <div className="max-w-2xl space-y-6">
           <p className="font-display text-off-white" style={{ fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 500, lineHeight: 1.35 }}>
             Quer entender se o seu momento é o momento da Pira?

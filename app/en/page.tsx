@@ -85,7 +85,7 @@ export default function EnHomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* HOME-1 · HERO */}
-      <Section variant="dark" paddingY="xl" id="hero">
+      <Section variant="ink" paddingY="xl" id="hero">
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
             <NodeSystem density="sparse" />
@@ -112,7 +112,7 @@ export default function EnHomePage() {
       </Section>
 
       {/* HOME-2 · SIGNALS */}
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <p className="text-sm font-body font-medium text-orange uppercase tracking-widest mb-4">
           When the operation starts costing more than it should
         </p>
@@ -147,7 +147,7 @@ export default function EnHomePage() {
       </Section>
 
       {/* HOME-3 · METHOD */}
-      <Section variant="highlighted" paddingY="lg" id="method">
+      <Section variant="teal" paddingY="lg" id="method">
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
             <NodeSystem density="medium" />
@@ -229,7 +229,7 @@ export default function EnHomePage() {
       </Section>
 
       {/* HOME-4 · PROOFS */}
-      <Section variant="default" paddingY="lg" id="proofs">
+      <Section variant="ink" paddingY="lg" id="proofs">
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
             <NodeSystem density="dense" />
@@ -309,7 +309,7 @@ export default function EnHomePage() {
       </Section>
 
       {/* HOME-5 · Faísca teaser */}
-      <Section variant="dark" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <h2 className="text-3xl md:text-4xl font-body font-semibold text-off-white mb-3">
           Faísca · the entry point
         </h2>
@@ -360,7 +360,7 @@ export default function EnHomePage() {
       </Section>
 
       {/* HOME-6 · FOUNDERS teaser */}
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <div className="max-w-2xl">
           <Image
             src="/nos2.png"
@@ -390,7 +390,7 @@ export default function EnHomePage() {
       </Section>
 
       {/* HOME-7 · FAQ */}
-      <Section variant="dark" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <FAQ heading="Questions from those arriving now" items={faqItems} />
       </Section>
 

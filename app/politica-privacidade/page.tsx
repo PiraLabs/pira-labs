@@ -51,7 +51,7 @@ export default function PoliticaPrivacidadePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
-      <Section variant="dark" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <PageHeader
           breadcrumbs={[
             { label: "Home", href: "/" },
@@ -62,7 +62,7 @@ export default function PoliticaPrivacidadePage() {
         />
       </Section>
 
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <div className="max-w-2xl font-body text-off-white/85 leading-relaxed space-y-8">
 
           {/* 1. Quem somos */}

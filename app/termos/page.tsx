@@ -50,7 +50,7 @@ export default function TermosPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
-      <Section variant="dark" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <PageHeader
           breadcrumbs={[
             { label: "Home", href: "/" },
@@ -61,7 +61,7 @@ export default function TermosPage() {
         />
       </Section>
 
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <div className="max-w-2xl font-body text-off-white/85 leading-relaxed space-y-8">
 
           {/* 1. Aceitação dos termos */}

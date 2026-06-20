@@ -33,7 +33,7 @@ export function FounderProfile({
         </div>
       )}
       <div className="flex-1">
-        <h2 className="text-2xl font-semibold text-off-white mb-1">{name}</h2>
+        <h2 className="type-h3 text-sand mb-1">{name}</h2>
         <p className="text-orange font-medium font-body mb-4">{role}</p>
         <div className="space-y-3 mb-6">
           {bio.map((paragraph, index) => (

@@ -28,10 +28,10 @@ export function OfferHero({
   return (
     <div className={`flex flex-col gap-6 ${className}`}>
       <div>
-        <h1 className="text-3xl md:text-5xl font-body font-semibold text-off-white leading-tight mb-4">
+        <h1 className="type-h2 text-off-white mb-4">
           {name}
         </h1>
-        <p className="text-lg md:text-xl text-off-white/80 font-body leading-relaxed max-w-2xl">
+        <p className="type-body text-taupe max-w-2xl">
           {subtitle}
         </p>
         {conductor && (
@@ -44,7 +44,7 @@ export function OfferHero({
         {priceTiers.map((tier) => (
           <div
             key={tier.label}
-            className="border border-teal/40 rounded-lg px-6 py-4 bg-deep-teal min-w-[160px]"
+            className="border border-teal/40 px-6 py-4 bg-ink min-w-[160px]"
           >
             <p className="text-xs font-body font-semibold uppercase tracking-widest text-off-white/40 mb-1">
               {tier.label}

@@ -62,7 +62,7 @@ export default function ContatoPage() {
       </div>
 
       {/* CONTATO-2 + 3 · Texto introdutório + Formulário Fillout */}
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <p className="font-body mb-8 max-w-xl" style={{ color: '#e8e0d6' }}>
           Quanto mais contexto você compartilhar agora, mais útil é a resposta.
         </p>
@@ -80,7 +80,7 @@ export default function ContatoPage() {
       </Section>
 
       {/* CONTATO-4 · Contato direto */}
-      <Section variant="dark" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <h2 className="text-xl font-semibold text-off-white mb-8">
           Contato direto
         </h2>

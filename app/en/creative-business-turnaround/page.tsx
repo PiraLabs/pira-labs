@@ -93,7 +93,7 @@ export default function EnCBTPage() {
       </div>
 
       {/* CBT-2 · What it is */}
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
           What is Creative Business Turnaround
         </h2>
@@ -135,7 +135,7 @@ export default function EnCBTPage() {
       </Section>
 
       {/* CBT-2B · Traditional turnaround vs Creative Business Turnaround */}
-      <Section variant="highlighted" paddingY="lg">
+      <Section variant="teal" paddingY="lg">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-4">
           Traditional turnaround vs Creative Business Turnaround
         </h2>
@@ -197,7 +197,7 @@ export default function EnCBTPage() {
       </Section>
 
       {/* CBT-3 · For which companies */}
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
           For which companies it works
         </h2>
@@ -233,7 +233,7 @@ export default function EnCBTPage() {
       </Section>
 
       {/* CBT-4 · Signals */}
-      <Section variant="highlighted" paddingY="lg">
+      <Section variant="teal" paddingY="lg">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-3">
           The signals that indicate the right moment
         </h2>
@@ -282,7 +282,7 @@ export default function EnCBTPage() {
       </Section>
 
       {/* CBT-5 · What CBT is not */}
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-4">
           What Creative Business Turnaround is not
         </h2>
@@ -345,7 +345,7 @@ export default function EnCBTPage() {
       </Section>
 
       {/* CBT-6 · How it works */}
-      <Section variant="highlighted" paddingY="lg">
+      <Section variant="teal" paddingY="lg">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-4">
           How Creative Business Turnaround works in practice
         </h2>
@@ -419,7 +419,7 @@ export default function EnCBTPage() {
       </Section>
 
       {/* CBT-7 · Who operates this category in Brazil */}
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-6">
           Who operates this category in Brazil
         </h2>
@@ -490,7 +490,7 @@ export default function EnCBTPage() {
       </Section>
 
       {/* CBT-8 · FAQ */}
-      <Section variant="highlighted" paddingY="lg">
+      <Section variant="teal" paddingY="lg">
         <FAQ
           heading="Questions about Creative Business Turnaround"
           items={faqItems}

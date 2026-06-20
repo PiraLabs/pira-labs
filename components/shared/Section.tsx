@@ -1,5 +1,5 @@
 type SectionProps = {
-  variant?: "default" | "highlighted" | "dark";
+  variant?: "ink" | "teal" | "sand" | "white";
   fullBleed?: boolean;
   paddingY?: "sm" | "md" | "lg" | "xl";
   id?: string;
@@ -15,13 +15,14 @@ const paddingMap = {
 };
 
 const variantMap = {
-  default: "bg-deep-teal",
-  highlighted: "bg-teal",
-  dark: "bg-ink",
+  ink: "bg-ink",
+  teal: "bg-teal",
+  sand: "bg-sand",
+  white: "bg-white",
 };
 
 export function Section({
-  variant = "default",
+  variant = "ink",
   fullBleed = false,
   paddingY = "lg",
   id,

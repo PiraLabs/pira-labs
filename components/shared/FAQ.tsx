@@ -30,13 +30,13 @@ export function FAQ({ items, heading = "Perguntas frequentes" }: FAQProps) {
       />
       <div>
         {heading && (
-          <h2 className="text-2xl md:text-3xl font-semibold text-off-white mb-8">
+          <h2 className="type-h2 text-sand mb-8">
             {heading}
           </h2>
         )}
         <div className="space-y-1">
           {items.map((item, index) => (
-            <details key={index} className="border-b border-off-white/10 group">
+            <details key={index} className="hr-on-dark-b group">
               <summary className="w-full flex items-start justify-between gap-4 py-5 text-left text-off-white font-body font-medium text-base md:text-lg hover:text-orange transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange">
                 <span>{item.question}</span>
                 <span

@@ -125,7 +125,7 @@ export default function ComoPensamos() {
       </div>
 
       {/* Abertura */}
-      <Section variant="default" paddingY="sm">
+      <Section variant="ink" paddingY="sm">
         <div className="max-w-3xl space-y-6">
           <p className="font-body leading-relaxed" style={{ color: "#F5F5F2", fontSize: "1.125rem" }}>
             A maioria das intervenções chega tarde. O problema já virou crise, as opções já diminuíram, o custo de cada decisão já subiu. E o que resta é conter o dano.
@@ -157,7 +157,7 @@ export default function ComoPensamos() {
       </Section>
 
       {/* Teses */}
-      <Section variant="highlighted" paddingY="lg">
+      <Section variant="teal" paddingY="lg">
         <div className="max-w-3xl" style={{ display: "flex", flexDirection: "column", gap: "0" }}>
           <p className="font-body font-semibold uppercase" style={{ color: "#e8e0d6", fontSize: "0.75rem", letterSpacing: "0.14em", marginBottom: "64px" }}>
             TESES
@@ -254,7 +254,7 @@ export default function ComoPensamos() {
       </Section>
 
       {/* Referências */}
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <div className="max-w-3xl space-y-10">
           <p className="font-body font-semibold uppercase" style={{ color: "#e8e0d6", fontSize: "0.75rem", letterSpacing: "0.14em" }}>
             REFERÊNCIAS

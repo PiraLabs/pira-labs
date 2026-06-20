@@ -83,7 +83,7 @@ export default function Glossario() {
         />
       </div>
 
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <div className="max-w-3xl space-y-4">
           <p className="text-off-white/75 font-body leading-relaxed">
             Algumas palavras usadas em consultoria, transformação e tecnologia carregam décadas de uso impreciso. Quando a Pira Labs usa um termo, usa com definição própria. Esta página registra o que cada palavra significa aqui, e o que ela não significa.
@@ -91,7 +91,7 @@ export default function Glossario() {
         </div>
       </Section>
 
-      <Section variant="highlighted" paddingY="lg">
+      <Section variant="teal" paddingY="lg">
         <div className="max-w-3xl space-y-2">
           {termos.map(({ slug, label, resumo }) => (
             <Link
@@ -113,7 +113,7 @@ export default function Glossario() {
         </div>
       </Section>
 
-      <Section variant="default" paddingY="lg">
+      <Section variant="ink" paddingY="lg">
         <div className="max-w-2xl space-y-6">
           <p className="font-display text-off-white" style={{ fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 500, lineHeight: 1.35 }}>
             Quer entender se o vocabulário da Pira descreve o que você está vivendo?
