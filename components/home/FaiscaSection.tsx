@@ -7,6 +7,7 @@ interface Bloco {
   problema: string
   eyebrow?: string
   produtos: Produto[]
+  aviso?: string
 }
 
 const blocos: Bloco[] = [
@@ -37,6 +38,7 @@ const blocos: Bloco[] = [
       { nome: "C-level as a Service", href: "/faisca" },
       { nome: "Faísca Jurídica", href: "/faisca/juridica" },
     ],
+    aviso: "A Faísca Jurídica não presta consultoria jurídica e não substitui advogada ou advogado habilitados. NDA assinado antes de qualquer conversa com a equipe.",
   },
 ]
 
@@ -83,6 +85,11 @@ export function FaiscaSection() {
                   </a>
                 ))}
               </div>
+              {b.aviso && (
+                <p style={{ fontFamily: "var(--font-atyp-text)", fontWeight: 400, fontSize: "13px", lineHeight: 1.5, color: TEALMID, marginTop: "16px", maxWidth: "560px" }}>
+                  {b.aviso}
+                </p>
+              )}
             </div>
           ))}
         </div>

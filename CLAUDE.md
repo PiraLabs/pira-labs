@@ -94,7 +94,6 @@ app/
 ├── contato/                # formulário Fillout embed
 ├── inspira/
 │   ├── page.tsx
-│   ├── oxigenio/
 │   └── juridico/
 ├── transpira/
 │   ├── page.tsx
@@ -102,6 +101,7 @@ app/
 ├── faisca/
 │   ├── layout.tsx          # layout específico do Faisca
 │   ├── page.tsx
+│   ├── oxigenio-ia-search/
 │   ├── imersa-em-ia/
 │   ├── pocket/
 │   └── juridica/
@@ -239,7 +239,7 @@ Props: `density: "sparse"(5) | "medium"(10) | "dense"(19)` · `variant: "dark" |
 | `NEXT_PUBLIC_FLAG_D1` | ausente (default `false`) | Feature flag produto D1 |
 | `FLAG_D4` | ausente (default `false`) | Feature flag produto D4 (server-side) |
 | `FLAG_PULSO` | ausente (default `false`) | Feature flag produto Pulso (server-side) |
-| `NEXT_PUBLIC_VAGAS_OXIGENIO` | ausente (default `"5"`) | Vagas exibidas em `/inspira/oxigenio` |
+| `NEXT_PUBLIC_VAGAS_OXIGENIO` | ausente (default `"5"`) | Vagas exibidas em `/faisca/oxigenio-ia-search` |
 
 Flags ausentes na Vercel resultam em produto oculto (comportamento esperado). Não adicionar valor `"false"` explícito — ausência já desativa. Para ativar um produto, adicionar a var com valor `"true"` no painel da Vercel em Environment Variables → Production.
 
@@ -258,7 +258,7 @@ Ao adicionar qualquer novo embed, analytics ou fonte externa, atualizar o array 
 
 ### Redirects em next.config.js
 
-Atalhos de campanha: `/oxigenio` · `/oxigenio-ia-search` · `/faisca/ia-search` → `/inspira/oxigenio` · `/turnaround` e `/cbt` → `/creative-business-turnaround` · `/imersa` → `/faisca/imersa-em-ia` · `/pocket` → `/faisca/pocket`.
+Atalhos de campanha: `/oxigenio` · `/oxigenio-ia-search` · `/faisca/ia-search` · `/inspira/oxigenio` → `/faisca/oxigenio-ia-search` · `/turnaround` e `/cbt` → `/creative-business-turnaround` · `/imersa` → `/faisca/imersa-em-ia` · `/pocket` → `/faisca/pocket`.
 
 Resíduos do site provisório: `/servicos` → `/inspira` · `/cases` → `/#provas` · `/blog` e `/news` e `/antes-da-crise` e `/antesdacrise` → `/antes-pira` · `/index.html` e `/home` → `/` · rotas `/en/*` e `/es/*` antigas · `/about`, `/services`, `/contact` sem prefixo → equivalentes PT.
 
@@ -272,7 +272,7 @@ Não adicionar redirect para `/sobre` nem `/contato` (essas rotas existem com o 
 - `FILL_OUT_FORM_URL` / `FILLOUT_URL_HEADER` / `FILLOUT_URL_CONTATO` — URLs Fillout com UTMs embutidos
 - `SOCIAL` — links LinkedIn (empresa + Gabriela + Celso), email, Substack
 - `FLAGS` — feature flags D1 / D4 / PULSO (controle via env vars)
-- `VAGAS_OXIGENIO` — vagas exibidas em `/inspira/oxigenio` (default 5)
+- `VAGAS_OXIGENIO` — vagas exibidas em `/faisca/oxigenio-ia-search` (default 5)
 
 ---
 

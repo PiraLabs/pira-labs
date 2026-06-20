@@ -184,7 +184,7 @@ export function SignalsSection() {
               margin: 0,
             }}
           >
-            Não é um problema isolado de uma empresa. Uma pesquisa da Fundação Dom Cabral de 2026 identificou que 68,3% das empresas brasileiras não possuem núcleo dedicado à governança de IA. O sintoma é individual. O padrão é estrutural.
+            Não é um problema isolado de uma empresa. Um estudo da Meta em parceria com a Fundação Dom Cabral, de 2026, identificou que 68,3% das grandes empresas e multinacionais analisadas não possuem núcleo dedicado à governança de IA. O sintoma é individual. O padrão é estrutural.
           </p>
         </div>
 

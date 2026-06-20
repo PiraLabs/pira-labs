@@ -16,7 +16,7 @@ export const faqHome: FaqHomeItem[] = [
   {
     pergunta: "A Pira Labs é para empresas em crise?",
     resposta:
-      "Não necessariamente. A Pira entra melhor quando o negócio ainda pode escolher. Se os sinais já estão presentes mas a empresa ainda tem fôlego para agir, esse é o momento. Crise reduz opções. A Pira trabalha antes que as opções diminuam. Para empresas já em crise aguda, sem caixa para os próximos 30 dias ou em paralisia operacional, indicamos especialistas em turnaround tradicional.",
+      "A Pira Labs não necessariamente atende empresas em crise. A Pira Labs entra melhor quando o negócio ainda pode escolher. Se os sinais já estão presentes mas a empresa ainda tem fôlego para agir, esse é o momento. Crise reduz opções. A Pira Labs trabalha antes que as opções diminuam. Para empresas já em crise aguda, sem caixa para os próximos 30 dias ou em paralisia operacional, indicamos especialistas em turnaround tradicional.",
   },
   {
     pergunta: "Quanto custa trabalhar com a Pira Labs?",
@@ -36,7 +36,7 @@ export const faqHome: FaqHomeItem[] = [
   {
     pergunta: "Como eu começo?",
     resposta:
-      "Pelo formulário de contato. Conte onde a operação começou a pesar. Respondemos em até dois dias úteis para entender se faz sentido avançar.",
+      "Pelo formulário de contato. Conte onde a operação começou a pesar. A partir daí, indicamos a porta de entrada que faz sentido para o seu momento, sem compromisso antecipado.",
   },
   {
     pergunta: "Vocês implementam IA?",

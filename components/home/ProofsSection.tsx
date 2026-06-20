@@ -2,6 +2,7 @@ const INK     = "#05262e"
 const WHITE   = "#F5F5F2"
 const SAND    = "#e8e0d6"
 const TEALMID = "#1A5568"
+const TAUPE   = "#b0a596"
 const EMBER   = "#eb5c2e"
 
 interface ProofBlock {
@@ -111,7 +112,7 @@ export function ProofsSection() {
                   fontSize: "12px",
                   letterSpacing: "0.14em",
                   textTransform: "uppercase",
-                  color: TEALMID,
+                  color: TAUPE,
                   marginBottom: "16px",
                 }}
               >
