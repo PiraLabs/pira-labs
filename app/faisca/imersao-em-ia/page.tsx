@@ -90,11 +90,26 @@ const breadcrumbs = [
   { label: "Imersão em IA" },
 ];
 
+const INK       = "#05262e"
+const TEAL      = "#004757"
+const SAND      = "#e8e0d6"
+const WHITE     = "#F5F5F2"
+const TEALMID   = "#1A5568"
+const EMBER     = "#eb5c2e"
+const EMBERDEEP = "#C4421A"
+
 const EYEBROW = {
-  fontSize: "10px",
+  fontSize: "0.75rem",
   fontWeight: 600,
-  letterSpacing: "0.18em",
+  letterSpacing: "0.14em",
   textTransform: "uppercase" as const,
+};
+
+const H2 = {
+  fontWeight: 600,
+  fontSize: "clamp(1.875rem, 4.4vw, 3rem)",
+  lineHeight: 1.1,
+  letterSpacing: "-0.02em",
 };
 
 export default function ImersaEmIaPage() {
@@ -109,85 +124,85 @@ export default function ImersaEmIaPage() {
         <PageHeader
           breadcrumbs={breadcrumbs}
           h1="Imersão em IA"
-          subtitle="Não é curso. É trabalho com IA dentro da operação real da sua empresa."
+          lead="Não é curso. É trabalho com IA dentro da operação real da sua empresa."
         />
       </div>
 
       {/* I2 · O que é + Ficha técnica + CTA (Sand) */}
-      <section style={{ backgroundColor: '#E8E0D6' }} className="py-16 md:py-24">
+      <section style={{ backgroundColor: SAND }} className="py-16 md:py-24">
         <div className="container-site">
-          <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A5568", marginBottom: "24px" }}>
+          <p className="font-body" style={{ ...EYEBROW, color: INK, marginBottom: "24px" }}>
             O QUE É
           </p>
-          <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: "#05262e", maxWidth: "680px", marginBottom: "40px" }}>
+          <p className="font-body" style={{ fontSize: "1.125rem", lineHeight: 1.6, fontWeight: 400, color: INK, maxWidth: "720px", marginBottom: "40px" }}>
             Saber o que é IA é diferente de saber o que ela faz nos seus processos específicos. A Imersão em IA não usa exemplos genéricos. Trabalha sobre os processos, os documentos e os casos reais da empresa, nos três blocos de trabalho.
           </p>
 
-          {/* Preço isolado */}
-          <div style={{ marginBottom: "32px", paddingBottom: "24px", borderBottom: "1px solid rgba(5,38,46,0.15)" }}>
-            <p className="font-body" style={{ fontSize: "0.6875rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#05262e", opacity: 0.5, marginBottom: "8px" }}>
+          {/* Preço isolado (acento Ember da seção) */}
+          <div style={{ marginBottom: "32px", paddingBottom: "24px", borderBottom: "1px solid rgba(5,38,46,0.12)" }}>
+            <p className="font-body" style={{ ...EYEBROW, color: INK, marginBottom: "8px" }}>
               INVESTIMENTO
             </p>
-            <p className="font-display" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 600, lineHeight: 1, color: "#eb5c2e", letterSpacing: "-0.02em" }}>
+            <p className="font-display" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 600, lineHeight: 1, color: EMBERDEEP, letterSpacing: "-0.02em" }}>
               R$ 7.100
             </p>
           </div>
 
           {/* Ficha técnica */}
-          <div style={{ maxWidth: "480px", border: "1px solid rgba(5,38,46,0.15)", borderRadius: "2px", marginBottom: "32px" }}>
+          <div style={{ maxWidth: "480px", border: "1px solid rgba(5,38,46,0.12)", borderRadius: "2px", marginBottom: "32px" }}>
             <div style={{ borderBottom: "1px solid rgba(5,38,46,0.12)", padding: "14px 20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span className="font-body" style={{ fontSize: "13px", fontWeight: 300, color: "#05262e", opacity: 0.5 }}>Formato</span>
-              <span className="font-body" style={{ fontSize: "13px", fontWeight: 600, color: "#05262e" }}>3 blocos de trabalho, online ou presenciais</span>
+              <span className="font-body" style={{ fontSize: "0.875rem", fontWeight: 400, color: TEALMID }}>Formato</span>
+              <span className="font-body" style={{ fontSize: "0.875rem", fontWeight: 600, color: INK }}>3 blocos de trabalho, online ou presenciais</span>
             </div>
             <div style={{ borderBottom: "1px solid rgba(5,38,46,0.12)", padding: "14px 20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span className="font-body" style={{ fontSize: "13px", fontWeight: 300, color: "#05262e", opacity: 0.5 }}>Duração total</span>
-              <span className="font-body" style={{ fontSize: "13px", fontWeight: 600, color: "#05262e" }}>5,5 horas</span>
+              <span className="font-body" style={{ fontSize: "0.875rem", fontWeight: 400, color: TEALMID }}>Duração total</span>
+              <span className="font-body" style={{ fontSize: "0.875rem", fontWeight: 600, color: INK }}>5,5 horas</span>
             </div>
             <div style={{ borderBottom: "1px solid rgba(5,38,46,0.12)", padding: "14px 20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span className="font-body" style={{ fontSize: "13px", fontWeight: 300, color: "#05262e", opacity: 0.5 }}>Condução</span>
-              <span className="font-body" style={{ fontSize: "13px", fontWeight: 600, color: "#05262e" }}>Celso Gama</span>
+              <span className="font-body" style={{ fontSize: "0.875rem", fontWeight: 400, color: TEALMID }}>Condução</span>
+              <span className="font-body" style={{ fontSize: "0.875rem", fontWeight: 600, color: INK }}>Celso Gama</span>
             </div>
             <div style={{ padding: "14px 20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span className="font-body" style={{ fontSize: "13px", fontWeight: 300, color: "#05262e", opacity: 0.5 }}>Início</span>
-              <span className="font-body" style={{ fontSize: "13px", fontWeight: 600, color: "#05262e" }}>Agendamento após conversa inicial</span>
+              <span className="font-body" style={{ fontSize: "0.875rem", fontWeight: 400, color: TEALMID }}>Início</span>
+              <span className="font-body" style={{ fontSize: "0.875rem", fontWeight: 600, color: INK }}>Agendamento após conversa inicial</span>
             </div>
           </div>
 
           <a
             href="/contato?origem=faisca_imersao"
             className="font-body"
-            style={{ display: "inline-block", backgroundColor: "#05262e", color: "#F5F5F2", padding: "14px 32px", fontSize: "13px", fontWeight: 600, letterSpacing: "0.10em", textDecoration: "none", borderRadius: "2px", textTransform: "uppercase" as const }}
+            style={{ display: "inline-block", border: `1px solid ${INK}`, color: INK, backgroundColor: "transparent", padding: "14px 32px", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textDecoration: "none", borderRadius: "2px", textTransform: "uppercase" as const }}
           >
             RESPIRE
           </a>
-          <p className="font-body" style={{ color: "#05262e", opacity: 0.5, fontSize: "12px", marginTop: "8px" }}>
+          <p className="font-body" style={{ color: TEALMID, fontSize: "0.75rem", fontWeight: 400, marginTop: "12px" }}>
             Conversa inicial para confirmar encaixe. Respondemos em até 2 dias úteis.
           </p>
         </div>
       </section>
 
       {/* I3 · Três sessões (Teal) */}
-      <section style={{ backgroundColor: '#004757' }} className="py-16 md:py-24">
+      <section style={{ backgroundColor: TEAL }} className="py-16 md:py-24">
         <div className="container-site">
-          <p className="font-body" style={{ ...EYEBROW, color: "#e8e0d6", marginBottom: "32px" }}>
+          <p className="font-body" style={{ ...EYEBROW, color: SAND, marginBottom: "32px" }}>
             O QUE ACONTECE
           </p>
-          <h2 className="font-display" style={{ color: "#F5F5F2", fontWeight: 600, fontSize: "clamp(2.25rem, 5vw, 4rem)", marginBottom: "40px" }}>
-            Três <span style={{ color: "#eb5c2e" }}>sessões</span>. Um negócio diferente.
+          <h2 className="font-display" style={{ fontSize: "clamp(2.75rem, 7vw, 5rem)", fontWeight: 600, lineHeight: 1.05, letterSpacing: "-0.025em", color: WHITE, maxWidth: "900px", marginBottom: "2.5rem" }}>
+            Três sessões. Um negócio <span style={{ color: EMBER }}>diferente</span>.
           </h2>
 
           <div className="space-y-0">
 
             {/* Sessão 1 */}
             <div style={{ display: "grid", gridTemplateColumns: "120px 1fr", gap: "0 32px", borderBottom: "1px solid rgba(245,245,242,0.12)", paddingBottom: "40px", marginBottom: "40px", alignItems: "start" }}>
-              <div style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
+              <div style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: 300, lineHeight: 1, color: SAND, fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
                 01
               </div>
               <div>
-                <h3 className="font-display" style={{ fontSize: "clamp(1.125rem, 2vw, 1.375rem)", fontWeight: 600, color: "#F5F5F2", marginBottom: "12px", lineHeight: 1.2 }}>
+                <h3 className="font-display" style={{ fontSize: "clamp(1.125rem, 2vw, 1.5rem)", fontWeight: 600, color: WHITE, marginBottom: "12px", lineHeight: 1.25, letterSpacing: "-0.01em" }}>
                   Cultura e adaptação · 2 horas
                 </h3>
-                <p className="font-body" style={{ fontSize: "15px", fontWeight: 300, lineHeight: 1.75, color: "#e8e0d6" }}>
+                <p className="font-body" style={{ fontSize: "1.125rem", fontWeight: 400, lineHeight: 1.6, color: SAND, maxWidth: "720px" }}>
                   O que está funcionando no setor, o que não funciona, exemplos reais de uso correto e de mau uso. Exploração direta de ferramentas como ChatGPT, Claude, Gemini e Perplexity, com foco nos processos da empresa. A sessão termina com leitura clara de onde a empresa está em relação ao setor e com os primeiros casos mapeados para a Sessão 2.
                 </p>
               </div>
@@ -195,14 +210,14 @@ export default function ImersaEmIaPage() {
 
             {/* Sessão 2 */}
             <div style={{ display: "grid", gridTemplateColumns: "120px 1fr", gap: "0 32px", borderBottom: "1px solid rgba(245,245,242,0.12)", paddingBottom: "40px", marginBottom: "40px", alignItems: "start" }}>
-              <div style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
+              <div style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: 300, lineHeight: 1, color: SAND, fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
                 02
               </div>
               <div>
-                <h3 className="font-display" style={{ fontSize: "clamp(1.125rem, 2vw, 1.375rem)", fontWeight: 600, color: "#F5F5F2", marginBottom: "12px", lineHeight: 1.2 }}>
+                <h3 className="font-display" style={{ fontSize: "clamp(1.125rem, 2vw, 1.5rem)", fontWeight: 600, color: WHITE, marginBottom: "12px", lineHeight: 1.25, letterSpacing: "-0.01em" }}>
                   Execução de processos · 2 horas
                 </h3>
-                <p className="font-body" style={{ fontSize: "15px", fontWeight: 300, lineHeight: 1.75, color: "#e8e0d6" }}>
+                <p className="font-body" style={{ fontSize: "1.125rem", fontWeight: 400, lineHeight: 1.6, color: SAND, maxWidth: "720px" }}>
                   Trabalho com os casos reais enviados pelo cliente com pelo menos três dias úteis de antecedência. Prompts de base para rotinas do dia a dia, checklists, modelos de comunicação e aplicações específicas para o contexto da empresa. A sessão termina com as primeiras aplicações testadas sobre os próprios processos, não sobre exemplos fabricados.
                 </p>
               </div>
@@ -210,14 +225,14 @@ export default function ImersaEmIaPage() {
 
             {/* Sessão 3 */}
             <div style={{ display: "grid", gridTemplateColumns: "120px 1fr", gap: "0 32px", alignItems: "start" }}>
-              <div style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
+              <div style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: 300, lineHeight: 1, color: SAND, fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
                 03
               </div>
               <div>
-                <h3 className="font-display" style={{ fontSize: "clamp(1.125rem, 2vw, 1.375rem)", fontWeight: 600, color: "#F5F5F2", marginBottom: "12px", lineHeight: 1.2 }}>
+                <h3 className="font-display" style={{ fontSize: "clamp(1.125rem, 2vw, 1.5rem)", fontWeight: 600, color: WHITE, marginBottom: "12px", lineHeight: 1.25, letterSpacing: "-0.01em" }}>
                   Ajustes e próximos passos · 1,5 hora
                 </h3>
-                <p className="font-body" style={{ fontSize: "15px", fontWeight: 300, lineHeight: 1.75, color: "#e8e0d6" }}>
+                <p className="font-body" style={{ fontSize: "1.125rem", fontWeight: 400, lineHeight: 1.6, color: SAND, maxWidth: "720px" }}>
                   Dúvidas abertas da Sessão 2, refinamento do que ficou para trás e definição dos próximos passos de implementação. O que o time vai testar, o que depende de decisão interna, o que pode escalar. A sessão termina com plano de implementação priorizado.
                 </p>
               </div>
@@ -229,7 +244,7 @@ export default function ImersaEmIaPage() {
             <a
               href="/contato?origem=faisca_imersao"
               className="font-body"
-              style={{ color: "#F5F5F2", fontSize: "13px", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", textDecoration: "none" }}
+              style={{ color: SAND, fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", textDecoration: "none" }}
             >
               Reservar uma conversa &#8594;
             </a>
@@ -238,60 +253,60 @@ export default function ImersaEmIaPage() {
       </section>
 
       {/* I4 · Para quem é (Ink) */}
-      <section style={{ backgroundColor: '#05262e' }} className="py-16 md:py-24">
+      <section style={{ backgroundColor: INK }} className="py-16 md:py-24">
         <div className="container-site">
-          <p className="font-body" style={{ ...EYEBROW, color: "#e8e0d6", marginBottom: "32px" }}>
+          <p className="font-body" style={{ ...EYEBROW, color: SAND, marginBottom: "32px" }}>
             PARA QUEM É
           </p>
-          <h2 className="font-display" style={{ color: "#F5F5F2", fontWeight: 600, fontSize: "clamp(2.25rem, 5vw, 4rem)", marginBottom: "40px" }}>
-            Para quem <span style={{ color: "#eb5c2e" }}>é</span>
+          <h2 className="font-display" style={{ ...H2, color: WHITE, marginBottom: "40px" }}>
+            Para quem <span style={{ color: EMBER }}>é</span>
           </h2>
 
           <div style={{ borderBottom: "1px solid rgba(245,245,242,0.12)", paddingBottom: "24px", marginBottom: "24px" }}>
-            <p className="font-body" style={{ fontSize: "15px", fontWeight: 300, color: "#F5F5F2", lineHeight: 1.75 }}>
+            <p className="font-body" style={{ fontSize: "1.125rem", fontWeight: 400, color: WHITE, lineHeight: 1.6, maxWidth: "720px" }}>
               Empresa que já usa IA de forma informal e quer estruturar o uso antes de escalar. Sem método, a ferramenta escala o erro junto com a velocidade.
             </p>
           </div>
           <div style={{ borderBottom: "1px solid rgba(245,245,242,0.12)", paddingBottom: "24px", marginBottom: "24px" }}>
-            <p className="font-body" style={{ fontSize: "15px", fontWeight: 300, color: "#F5F5F2", lineHeight: 1.75 }}>
+            <p className="font-body" style={{ fontSize: "1.125rem", fontWeight: 400, color: WHITE, lineHeight: 1.6, maxWidth: "720px" }}>
               Fundadora ou fundador que quer entender o que é possível fazer com IA nos processos da empresa antes de tomar decisão de investimento maior.
             </p>
           </div>
           <div>
-            <p className="font-body" style={{ fontSize: "15px", fontWeight: 300, color: "#F5F5F2", lineHeight: 1.75 }}>
+            <p className="font-body" style={{ fontSize: "1.125rem", fontWeight: 400, color: WHITE, lineHeight: 1.6, maxWidth: "720px" }}>
               Time que recebeu instrução para adotar IA mas não recebeu critério: onde usar, onde não usar, o que revisar antes de enviar, o que nunca colocar na ferramenta.
             </p>
           </div>
 
           <div style={{ marginTop: "48px" }}>
-            <p className="font-body" style={{ ...EYEBROW, color: "#e8e0d6", marginBottom: "16px" }}>
+            <p className="font-body" style={{ ...EYEBROW, color: SAND, marginBottom: "16px" }}>
               NÃO FAZ SENTIDO SE
             </p>
-            <p className="font-body" style={{ fontSize: "15px", fontWeight: 300, color: "#e8e0d6", lineHeight: 1.75, marginBottom: "12px" }}>
+            <p className="font-body" style={{ fontSize: "1.125rem", fontWeight: 400, color: SAND, lineHeight: 1.6, marginBottom: "12px", maxWidth: "720px" }}>
               Você quer curso genérico de ferramentas ou onboarding de plataforma.
             </p>
-            <p className="font-body" style={{ fontSize: "15px", fontWeight: 300, color: "#e8e0d6", lineHeight: 1.75 }}>
+            <p className="font-body" style={{ fontSize: "1.125rem", fontWeight: 400, color: SAND, lineHeight: 1.6, maxWidth: "720px" }}>
               Você precisa de redesenho profundo de operação. Para esse caso, o caminho é o TRANSPIRA ou o INSPIRA primeiro.
             </p>
           </div>
 
           <div style={{ marginTop: "48px" }}>
-            <p className="font-body" style={{ ...EYEBROW, color: "#e8e0d6", marginBottom: "16px" }}>
+            <p className="font-body" style={{ ...EYEBROW, color: SAND, marginBottom: "16px" }}>
               O QUE NÃO É
             </p>
-            <p className="font-body" style={{ fontSize: "15px", fontWeight: 300, color: "#e8e0d6", lineHeight: 1.75 }}>
+            <p className="font-body" style={{ fontSize: "1.125rem", fontWeight: 400, color: SAND, lineHeight: 1.6, maxWidth: "720px" }}>
               A Imersão em IA não substitui o TRANSPIRA. Saber usar IA não resolve gargalo de delegação, não documenta processos e não instala critério de decisão. Quando o que falta é execução profunda e redesenho de operação, o próximo passo é o TRANSPIRA.
             </p>
           </div>
 
           <div style={{ marginTop: "48px" }}>
-            <p className="font-body" style={{ ...EYEBROW, color: "#e8e0d6", marginBottom: "16px" }}>
+            <p className="font-body" style={{ ...EYEBROW, color: SAND, marginBottom: "16px" }}>
               DADOS E CONFIDENCIALIDADE
             </p>
-            <p className="font-body" style={{ fontSize: "15px", fontWeight: 300, color: "#e8e0d6", lineHeight: 1.75, marginBottom: "16px" }}>
+            <p className="font-body" style={{ fontSize: "1.125rem", fontWeight: 400, color: SAND, lineHeight: 1.6, marginBottom: "16px", maxWidth: "720px" }}>
               Empresas que operam com dados sensíveis costumam chegar com uma dúvida antes de qualquer outra: o que posso colocar numa ferramenta de IA e o que não posso. Essa pergunta tem resposta, e respondê-la faz parte do trabalho.
             </p>
-            <p className="font-body" style={{ fontSize: "15px", fontWeight: 300, color: "#e8e0d6", lineHeight: 1.75, marginBottom: "16px" }}>
+            <p className="font-body" style={{ fontSize: "1.125rem", fontWeight: 400, color: SAND, lineHeight: 1.6, marginBottom: "16px", maxWidth: "720px" }}>
               Materiais sensíveis, dados pessoais, informações de clientes e documentos confidenciais só devem entrar nas sessões com anonimização, critério de uso e alinhamento prévio. Quando o material não puder ser anonimizado, trabalhamos com versões simuladas, recortes seguros ou descrição do fluxo, sem exposição do conteúdo sensível. A Imersão em IA ensina a usar IA com julgamento: o que a ferramenta pode processar, onde o olho humano é inegociável e como construir critério para o time decidir isso sozinho depois.
             </p>
           </div>
@@ -300,7 +315,7 @@ export default function ImersaEmIaPage() {
             <a
               href="/contato?origem=faisca_imersao"
               className="font-body"
-              style={{ color: "#F5F5F2", fontSize: "13px", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", textDecoration: "none" }}
+              style={{ color: SAND, fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", textDecoration: "none" }}
             >
               Falar sobre o momento da empresa &#8594;
             </a>
@@ -309,50 +324,50 @@ export default function ImersaEmIaPage() {
       </section>
 
       {/* I5 · Quem conduz (Sand) */}
-      <section style={{ backgroundColor: '#E8E0D6' }} className="py-16 md:py-24">
+      <section style={{ backgroundColor: SAND }} className="py-16 md:py-24">
         <div className="container-site">
-          <p className="font-body" style={{ ...EYEBROW, color: "#1A5568", marginBottom: "32px" }}>
+          <p className="font-body" style={{ ...EYEBROW, color: INK, marginBottom: "32px" }}>
             CONDUÇÃO
           </p>
-          <h2 className="font-display" style={{ color: "#05262e", fontWeight: 600, fontSize: "clamp(2.25rem, 5vw, 4rem)", marginBottom: "32px" }}>
-            Quem <span style={{ color: "#eb5c2e" }}>conduz</span>
+          <h2 className="font-display" style={{ ...H2, color: INK, marginBottom: "32px" }}>
+            Quem <span style={{ color: EMBERDEEP }}>conduz</span>
           </h2>
-          <p className="font-body" style={{ fontSize: "15px", fontWeight: 300, color: "#05262e", lineHeight: 1.75, marginBottom: "16px" }}>
+          <p className="font-body" style={{ fontSize: "1.125rem", fontWeight: 400, color: INK, lineHeight: 1.6, marginBottom: "16px", maxWidth: "720px" }}>
             Celso Gama conduz as três sessões. Cursa o Applied AI Certificate Program do MIT em 2026, é bacharelando em Direito pelo Mackenzie e tem MBA pelo Insper.
           </p>
-          <p className="font-body" style={{ fontSize: "15px", fontWeight: 300, color: "#05262e", lineHeight: 1.75, marginBottom: "16px" }}>
+          <p className="font-body" style={{ fontSize: "1.125rem", fontWeight: 400, color: INK, lineHeight: 1.6, marginBottom: "16px", maxWidth: "720px" }}>
             Não há equipe intermediária. Quem confirma o encaixe é quem executa as sessões.
           </p>
           <a
             href="/sobre#sobre-celso"
             className="font-body"
-            style={{ color: "#05262e", fontSize: "13px", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", textDecoration: "none", display: "inline-block", marginTop: "24px" }}
+            style={{ color: TEALMID, fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", textDecoration: "none", display: "inline-block", marginTop: "24px" }}
           >
             Conhecer Celso &#8594;
           </a>
         </div>
       </section>
 
-      {/* I6 · FAQ (Ink) */}
-      <section style={{ backgroundColor: '#05262e' }} className="py-16 md:py-24">
+      {/* I6 · FAQ (Ink) — divisor inferior 1px para o fecho Ink->Ink */}
+      <section style={{ backgroundColor: INK, borderBottom: "1px solid rgba(245,245,242,0.12)" }} className="py-16 md:py-24">
         <div className="container-site">
-          <p className="font-body" style={{ ...EYEBROW, color: "#e8e0d6", marginBottom: "32px" }}>
+          <p className="font-body" style={{ ...EYEBROW, color: SAND, marginBottom: "32px" }}>
             DÚVIDAS COMUNS
           </p>
-          <h2 className="font-display" style={{ color: "#F5F5F2", fontWeight: 600, fontSize: "clamp(2.25rem, 5vw, 4rem)", marginBottom: "40px" }}>
+          <h2 className="font-display" style={{ ...H2, color: WHITE, marginBottom: "40px" }}>
             Perguntas frequentes
           </h2>
           {faqItems.map((item, i) => (
-            <details key={i} style={{ borderBottom: "1px solid rgba(245,245,242,0.12)" }}>
+            <details key={i} className="details-clean" style={{ borderBottom: "1px solid rgba(245,245,242,0.12)" }}>
               <summary
                 className="font-body"
-                style={{ cursor: "pointer", color: "#F5F5F2", fontSize: "16px", fontWeight: 600, padding: "20px 0", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}
+                style={{ cursor: "pointer", color: WHITE, fontSize: "1.125rem", fontWeight: 600, padding: "20px 0", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}
               >
                 {item.question}
               </summary>
               <p
                 className="font-body"
-                style={{ color: "#e8e0d6", fontSize: "15px", fontWeight: 300, lineHeight: 1.75, padding: "0 0 24px 0" }}
+                style={{ color: SAND, fontSize: "0.875rem", fontWeight: 400, lineHeight: 1.6, padding: "0 0 24px 0", maxWidth: "720px" }}
               >
                 {item.answer}
               </p>
@@ -361,12 +376,11 @@ export default function ImersaEmIaPage() {
         </div>
       </section>
 
-      {/* I7 · FinalCTA (Sand) */}
+      {/* I7 · FinalCTA (Ink, fecho) */}
       <FinalCTA
-        heading="Antes de confirmar, fazemos uma conversa inicial para garantir que a Imersão em IA é o produto certo para o momento da empresa."
+        heading="Traga os seus processos reais. No dia seguinte, você opera diferente."
         ctaLabel="RESPIRE"
         origin={ORIGINS.FAISCA_IMERSA}
-        theme="light"
       />
     </>
   );
