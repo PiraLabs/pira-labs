@@ -187,8 +187,8 @@ export default function ImersaEmIaPage() {
           <p className="font-body" style={{ ...EYEBROW, color: SAND, marginBottom: "32px" }}>
             O QUE ACONTECE
           </p>
-          <h2 className="font-display" style={{ fontSize: "clamp(2.75rem, 7vw, 5rem)", fontWeight: 600, lineHeight: 1.05, letterSpacing: "-0.025em", color: WHITE, maxWidth: "900px", marginBottom: "2.5rem" }}>
-            Três sessões. Um negócio <span style={{ color: EMBER }}>diferente</span>.
+          <h2 className="font-display" style={{ fontSize: "clamp(2.75rem, 7vw, 5rem)", fontWeight: 600, lineHeight: 1.05, letterSpacing: "-0.025em", color: WHITE, marginBottom: "2.5rem" }}>
+            Três sessões.<br />Um negócio <span style={{ color: EMBER }}>diferente</span>.
           </h2>
 
           <div className="space-y-0">
