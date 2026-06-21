@@ -180,9 +180,9 @@ export default function ChamaPage() {
         </section>
 
         {/* ============================================================
-            S2 — POR QUE CONHECIMENTO SEM CONSEQUÊNCIA NÃO FUNCIONA — Ink #05262e
+            S2 — POR QUE CONHECIMENTO SEM CONSEQUÊNCIA NÃO FUNCIONA — Teal #004757
             ============================================================ */}
-        <section style={{ backgroundColor: '#05262e', ...PAD }}>
+        <section style={{ backgroundColor: '#004757', ...PAD }}>
           <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
             <p className="font-body uppercase mb-4" style={{ ...EYEBROW, color: '#e8e0d6' }}>
               O problema do mercado
@@ -217,9 +217,9 @@ export default function ChamaPage() {
         </section>
 
         {/* ============================================================
-            S3 — O DIFERENCIAL DA CHAMA — Teal #004757
+            S3 — O DIFERENCIAL DA CHAMA — Ink #05262e
             ============================================================ */}
-        <section style={{ backgroundColor: '#004757', ...PAD }}>
+        <section style={{ backgroundColor: '#05262e', ...PAD }}>
           <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
             <p className="font-body uppercase mb-4" style={{ ...EYEBROW, color: '#e8e0d6' }}>
               Por que faz diferença
@@ -474,7 +474,7 @@ export default function ChamaPage() {
         {/* ============================================================
             S8 — COMO FUNCIONA — Ink #05262e
             ============================================================ */}
-        <section style={{ backgroundColor: '#05262e', ...PAD }}>
+        <section style={{ backgroundColor: '#05262e', borderBottom: '1px solid rgba(245,245,242,0.12)', ...PAD }}>
           <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
             <p className="font-body uppercase mb-4" style={{ ...EYEBROW, color: '#e8e0d6' }}>
               Processo
