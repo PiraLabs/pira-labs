@@ -121,7 +121,7 @@ export default function OxigenioIASearchPage() {
       <section style={{ backgroundColor: '#e8e0d6', paddingTop: '3rem', paddingBottom: '6rem' }}>
         <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
-            className="font-body text-[10px] font-semibold uppercase tracking-widest mb-6"
+            className="font-body text-[12px] font-semibold uppercase tracking-[0.14em] mb-6"
             style={{ color: '#1A5568' }}
           >
             Diagnóstico de presença em IA
@@ -130,14 +130,14 @@ export default function OxigenioIASearchPage() {
             className="font-display font-semibold leading-tight mb-6"
             style={{
               color: '#05262e',
-              fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+              fontSize: 'clamp(2.375rem, 6.5vw, 4.5rem)', lineHeight: 1.05, letterSpacing: '-0.025em',
             }}
           >
             Oxigênio IA Search
           </h1>
           <p
-            className="font-body font-light leading-relaxed mb-10 max-w-2xl"
-            style={{ color: '#05262e', fontSize: '1rem' }}
+            className="font-body font-normal leading-relaxed mb-10 max-w-2xl"
+            style={{ color: '#05262e', fontSize: '1.125rem' }}
           >
             O Oxigênio IA Search é o diagnóstico que mostra o que ChatGPT, Claude,
             Gemini e Perplexity respondem quando alguém pesquisa sobre o seu setor,
@@ -150,7 +150,7 @@ export default function OxigenioIASearchPage() {
               href="/contato?origem=oxigenio-ia-search"
               className="font-body text-[13px] font-semibold uppercase tracking-wider px-6 py-3 inline-block"
               style={{
-                backgroundColor: '#05262e',
+                backgroundColor: '#eb5c2e',
                 color: '#F5F5F2',
               }}
             >
@@ -172,34 +172,34 @@ export default function OxigenioIASearchPage() {
       <section style={{ backgroundColor: '#05262e', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
-            className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
+            className="font-body text-[12px] font-semibold uppercase tracking-[0.14em] mb-4"
             style={{ color: '#e8e0d6' }}
           >
             Delimitação
           </p>
           <h2
-            className="font-display font-normal leading-tight mb-12"
+            className="font-display font-semibold leading-tight mb-12"
             style={{
               color: '#F5F5F2',
-              fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+              fontSize: 'clamp(1.875rem, 4.4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em',
             }}
           >
-            Um <span style={{ color: '#eb5c2e' }}>diagnóstico</span>. Não uma solução.
+            Um diagnóstico. Não uma solução.
           </h2>
           <div
             className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0"
           >
             {/* Col 1 — O que é */}
-            <div className="lg:pr-12" style={{ borderRight: '1px solid rgba(232,224,214,0.2)' }}>
+            <div className="lg:pr-12" style={{ borderRight: '1px solid rgba(245,245,242,0.12)' }}>
               <p
-                className="font-body text-[10px] font-semibold uppercase tracking-widest mb-6"
+                className="font-body text-[12px] font-semibold uppercase tracking-[0.14em] mb-6"
                 style={{ color: '#e8e0d6' }}
               >
                 O que é
               </p>
               <p
-                className="font-body font-light leading-relaxed mb-4"
-                style={{ color: '#F5F5F2', fontSize: '1rem' }}
+                className="font-body font-normal leading-relaxed mb-4"
+                style={{ color: '#F5F5F2', fontSize: '1.125rem' }}
               >
                 O Oxigênio IA Search é um diagnóstico de presença em plataformas de
                 inteligência artificial: ChatGPT, Claude, Gemini e Perplexity. A Pira
@@ -209,8 +209,8 @@ export default function OxigenioIASearchPage() {
                 aparece, como aparece e o que está impedindo que apareça melhor.</strong>
               </p>
               <p
-                className="font-body font-light leading-relaxed"
-                style={{ color: '#F5F5F2', fontSize: '1rem' }}
+                className="font-body font-normal leading-relaxed"
+                style={{ color: '#F5F5F2', fontSize: '1.125rem' }}
               >
                 O produto termina com{' '}
                 <strong style={{ fontWeight: 600 }}>evidência literal, não com impressão.</strong>{' '}
@@ -222,14 +222,14 @@ export default function OxigenioIASearchPage() {
             {/* Col 2 — O que não é */}
             <div className="lg:pl-12">
               <p
-                className="font-body text-[10px] font-semibold uppercase tracking-widest mb-6"
+                className="font-body text-[12px] font-semibold uppercase tracking-[0.14em] mb-6"
                 style={{ color: '#e8e0d6' }}
               >
                 O que não é
               </p>
               <p
-                className="font-body font-light leading-relaxed"
-                style={{ color: '#e8e0d6', fontSize: '1rem' }}
+                className="font-body font-normal leading-relaxed"
+                style={{ color: '#e8e0d6', fontSize: '1.125rem' }}
               >
                 <strong style={{ fontWeight: 600 }}>O Oxigênio IA Search não é SEO
                 técnico.</strong> Não otimiza meta tags, não rastreia backlinks e não
@@ -250,26 +250,27 @@ export default function OxigenioIASearchPage() {
       <section style={{ backgroundColor: '#004757', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
-            className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
+            className="font-body text-[12px] font-semibold uppercase tracking-[0.14em] mb-4"
             style={{ color: '#e8e0d6' }}
           >
             Qualificação
           </p>
           <h2
-            className="font-display font-normal leading-tight mb-8"
+            className="font-display font-semibold leading-tight mb-8"
             style={{
               color: '#F5F5F2',
-              fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+              fontSize: 'clamp(1.875rem, 4.4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em',
             }}
           >
-            Quem <span style={{ color: '#eb5c2e' }}>Chega</span> aqui e por quê.
+            Quem Chega aqui e por quê.
           </h2>
           <p
-            className="font-body font-light leading-relaxed mb-12 max-w-3xl"
-            style={{ color: '#F5F5F2', fontSize: '1rem' }}
+            className="font-body font-normal leading-relaxed mb-12 max-w-3xl"
+            style={{ color: '#F5F5F2', fontSize: '1.125rem' }}
           >
-            Uma pesquisa da Fundação Dom Cabral de 2026 identificou que 68,3% das
-            empresas brasileiras não possuem núcleo dedicado à governança de IA. Esse
+            Um estudo da Meta em parceria com a Fundação Dom Cabral, de 2026,
+            identificou que 68,3% das grandes empresas e multinacionais analisadas
+            não possuem núcleo dedicado à governança de IA. Esse
             dado não prova como as plataformas de IA leem essas empresas, mas mostra
             uma lacuna maior: muitas organizações avançam no uso de IA sem estrutura
             clara para entender, medir e governar seus impactos. O Oxigênio IA Search
@@ -280,23 +281,23 @@ export default function OxigenioIASearchPage() {
             {/* Col 1 — Faz sentido */}
             <div>
               <p
-                className="font-body text-[10px] font-semibold uppercase tracking-widest mb-8"
+                className="font-body text-[12px] font-semibold uppercase tracking-[0.14em] mb-8"
                 style={{ color: '#e8e0d6' }}
               >
                 Faz sentido para quem
               </p>
               <div className="flex flex-col gap-6">
                 <p
-                  className="font-body font-light leading-relaxed"
-                  style={{ color: '#F5F5F2', fontSize: '1rem' }}
+                  className="font-body font-normal leading-relaxed"
+                  style={{ color: '#F5F5F2', fontSize: '1.125rem' }}
                 >
                   Você sente que a empresa não aparece onde o cliente pesquisa, mas{' '}
                   <strong style={{ fontWeight: 600 }}>não tem evidência concreta</strong>{' '}
                   para sustentar essa percepção, ou para refutá-la.
                 </p>
                 <p
-                  className="font-body font-light leading-relaxed"
-                  style={{ color: '#F5F5F2', fontSize: '1rem' }}
+                  className="font-body font-normal leading-relaxed"
+                  style={{ color: '#F5F5F2', fontSize: '1.125rem' }}
                 >
                   Você investiu em site, conteúdo ou presença digital e{' '}
                   <strong style={{ fontWeight: 600 }}>não consegue explicar por que
@@ -304,8 +305,8 @@ export default function OxigenioIASearchPage() {
                   de IA estão lendo sobre o seu negócio antes de investir mais.
                 </p>
                 <p
-                  className="font-body font-light leading-relaxed"
-                  style={{ color: '#F5F5F2', fontSize: '1rem' }}
+                  className="font-body font-normal leading-relaxed"
+                  style={{ color: '#F5F5F2', fontSize: '1.125rem' }}
                 >
                   Você está em movimento: rebrand, novo produto, expansão de setor.{' '}
                   <strong style={{ fontWeight: 600 }}>Quer saber de qual ponto está
@@ -316,38 +317,38 @@ export default function OxigenioIASearchPage() {
             {/* Col 2 — Não faz sentido */}
             <div>
               <p
-                className="font-body text-[10px] font-semibold uppercase tracking-widest mb-8"
+                className="font-body text-[12px] font-semibold uppercase tracking-[0.14em] mb-8"
                 style={{ color: '#e8e0d6' }}
               >
                 Não faz sentido para quem
               </p>
               <div className="flex flex-col gap-6">
                 <p
-                  className="font-body font-light leading-relaxed"
-                  style={{ color: '#e8e0d6', fontSize: '1rem' }}
+                  className="font-body font-normal leading-relaxed"
+                  style={{ color: '#e8e0d6', fontSize: '1.125rem' }}
                 >
                   Você ainda não tem ICP minimamente definido. Sem esse recorte, as
                   queries não têm objeto e o diagnóstico não tem critério de avaliação.
                 </p>
                 <p
-                  className="font-body font-light leading-relaxed"
-                  style={{ color: '#e8e0d6', fontSize: '1rem' }}
+                  className="font-body font-normal leading-relaxed"
+                  style={{ color: '#e8e0d6', fontSize: '1.125rem' }}
                 >
                   Você não tem presença pública mínima: nenhum site, nenhum conteúdo
                   indexado, nenhuma menção verificável. O diagnóstico leria ausência
                   total, não gap acionável.
                 </p>
                 <p
-                  className="font-body font-light leading-relaxed"
-                  style={{ color: '#e8e0d6', fontSize: '1rem' }}
+                  className="font-body font-normal leading-relaxed"
+                  style={{ color: '#e8e0d6', fontSize: '1.125rem' }}
                 >
                   Você está buscando execução imediata: alguém que crie conteúdo, ajuste
                   o site ou gerencie as suas redes. O Oxigênio IA Search não executa.
                   Entrega leitura e rota.
                 </p>
                 <p
-                  className="font-body font-light leading-relaxed"
-                  style={{ color: '#e8e0d6', fontSize: '1rem' }}
+                  className="font-body font-normal leading-relaxed"
+                  style={{ color: '#e8e0d6', fontSize: '1.125rem' }}
                 >
                   Você não pretende fazer nada com o resultado. O diagnóstico termina em
                   próximos passos específicos. Se não há intenção de agir, o investimento
@@ -365,23 +366,23 @@ export default function OxigenioIASearchPage() {
       <section style={{ backgroundColor: '#05262e', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
-            className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
+            className="font-body text-[12px] font-semibold uppercase tracking-[0.14em] mb-4"
             style={{ color: '#e8e0d6' }}
           >
             Versões
           </p>
           <h2
-            className="font-display font-normal leading-tight mb-8"
+            className="font-display font-semibold leading-tight mb-8"
             style={{
               color: '#F5F5F2',
-              fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+              fontSize: 'clamp(1.875rem, 4.4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em',
             }}
           >
-            Fast ou Full: qual <span style={{ color: '#eb5c2e' }}>leitura</span> você precisa agora?
+            Fast ou Full: qual leitura você precisa agora?
           </h2>
           <p
-            className="font-body font-light leading-relaxed mb-12 max-w-3xl"
-            style={{ color: '#F5F5F2', fontSize: '1rem' }}
+            className="font-body font-normal leading-relaxed mb-12 max-w-3xl"
+            style={{ color: '#F5F5F2', fontSize: '1.125rem' }}
           >
             No Oxigênio IA Search, a diferença entre a versão Fast e a versão Full não
             é qualidade. É profundidade e horizonte. O Fast entrega o que o seu ICP
@@ -392,8 +393,8 @@ export default function OxigenioIASearchPage() {
             metodológica para verificar o avanço.
           </p>
           <p
-            className="font-body font-light leading-relaxed mb-10 max-w-3xl"
-            style={{ color: '#e8e0d6', fontSize: '1rem' }}
+            className="font-body font-normal leading-relaxed mb-10 max-w-3xl"
+            style={{ color: '#e8e0d6', fontSize: '1.125rem' }}
           >
             Se você está mapeando o terreno pela primeira vez, o Fast resolve. Se você
             já sabe que tem um concorrente ganhando espaço que deveria ser seu, o Full
@@ -403,7 +404,7 @@ export default function OxigenioIASearchPage() {
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
               <caption
-                className="font-body text-[10px] font-semibold uppercase tracking-widest text-left mb-4"
+                className="font-body text-[12px] font-semibold uppercase tracking-[0.14em] text-left mb-4"
                 style={{ color: '#e8e0d6', captionSide: 'top', paddingBottom: '1rem' }}
               >
                 Comparativo Fast e Full
@@ -411,18 +412,18 @@ export default function OxigenioIASearchPage() {
               <thead>
                 <tr>
                   <th
-                    className="font-body font-light text-left py-3 pr-8"
-                    style={{ color: '#e8e0d6', fontSize: '0.875rem', borderBottom: '1px solid rgba(232,224,214,0.2)', width: '35%' }}
+                    className="font-body font-normal text-left py-3 pr-8"
+                    style={{ color: '#e8e0d6', fontSize: '0.875rem', borderBottom: '1px solid rgba(245,245,242,0.12)', width: '35%' }}
                   />
                   <th
                     className="font-body font-semibold text-left py-3 pr-8"
-                    style={{ color: '#F5F5F2', fontSize: '1rem', borderBottom: '1px solid rgba(232,224,214,0.2)' }}
+                    style={{ color: '#F5F5F2', fontSize: '1.125rem', borderBottom: '1px solid rgba(245,245,242,0.12)' }}
                   >
                     Fast
                   </th>
                   <th
                     className="font-body font-semibold text-left py-3"
-                    style={{ color: '#e8e0d6', fontSize: '1rem', borderBottom: '1px solid rgba(232,224,214,0.2)' }}
+                    style={{ color: '#e8e0d6', fontSize: '1.125rem', borderBottom: '1px solid rgba(245,245,242,0.12)' }}
                   >
                     Full
                   </th>
@@ -435,25 +436,25 @@ export default function OxigenioIASearchPage() {
                   ['Respostas coletadas', 'Até 60 respostas classificadas', '60 base + até 200 adicionais'],
                   ['Entrega', 'Relatório de 2 páginas com evidência literal', 'Tudo do Fast + gap com causa específica + 3 ações customizadas + âncora financeira'],
                   ['Prazo do diagnóstico', 'Até 3 dias úteis', 'Até 2 semanas'],
-                  ['Reexecução', '—', 'Nova rodada metodológica em 60 dias'],
+                  ['Reexecução', '', 'Nova rodada metodológica em 60 dias'],
                   ['Sessão de leitura', '45 minutos', '60 minutos'],
                 ].map(([label, fast, full], i) => (
                   <tr key={i}>
                     <td
-                      className="font-body font-light py-4 pr-8"
-                      style={{ color: '#e8e0d6', fontSize: '0.875rem', borderBottom: '1px solid rgba(232,224,214,0.1)' }}
+                      className="font-body font-normal py-4 pr-8"
+                      style={{ color: '#e8e0d6', fontSize: '0.875rem', borderBottom: '1px solid rgba(245,245,242,0.12)' }}
                     >
                       {label}
                     </td>
                     <td
-                      className="font-body font-light py-4 pr-8"
-                      style={{ color: '#F5F5F2', fontSize: '0.9375rem', borderBottom: '1px solid rgba(232,224,214,0.1)' }}
+                      className="font-body font-normal py-4 pr-8"
+                      style={{ color: '#F5F5F2', fontSize: '0.9375rem', borderBottom: '1px solid rgba(245,245,242,0.12)' }}
                     >
                       {fast}
                     </td>
                     <td
-                      className="font-body font-light py-4"
-                      style={{ color: '#F5F5F2', fontSize: '0.9375rem', borderBottom: '1px solid rgba(232,224,214,0.1)' }}
+                      className="font-body font-normal py-4"
+                      style={{ color: '#F5F5F2', fontSize: '0.9375rem', borderBottom: '1px solid rgba(245,245,242,0.12)' }}
                     >
                       {full}
                     </td>
@@ -463,7 +464,7 @@ export default function OxigenioIASearchPage() {
             </table>
           </div>
           <p
-            className="font-body font-light mt-8"
+            className="font-body font-normal mt-8"
             style={{ color: '#e8e0d6', fontSize: '0.8125rem' }}
           >
             Dúvida entre Fast e Full? Diga no formulário. Na confirmação, indicamos
@@ -478,19 +479,19 @@ export default function OxigenioIASearchPage() {
       <section style={{ backgroundColor: '#e8e0d6', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
-            className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
+            className="font-body text-[12px] font-semibold uppercase tracking-[0.14em] mb-4"
             style={{ color: '#1A5568' }}
           >
             Processo
           </p>
           <h2
-            className="font-display font-normal leading-tight mb-16"
+            className="font-display font-semibold leading-tight mb-16"
             style={{
               color: '#05262e',
-              fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+              fontSize: 'clamp(1.875rem, 4.4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em',
             }}
           >
-            Do formulário ao <span style={{ color: '#C4421A' }}>diagnóstico</span>.
+            Do formulário ao diagnóstico.
           </h2>
           <div className="flex flex-col gap-10">
             {[
@@ -542,8 +543,8 @@ export default function OxigenioIASearchPage() {
                     {titulo}
                   </p>
                   <p
-                    className="font-body font-light leading-relaxed"
-                    style={{ color: '#05262e', fontSize: '1rem' }}
+                    className="font-body font-normal leading-relaxed"
+                    style={{ color: '#05262e', fontSize: '1.125rem' }}
                   >
                     {corpo}
                   </p>
@@ -555,28 +556,28 @@ export default function OxigenioIASearchPage() {
       </section>
 
       {/* ============================================================
-          S6 — QUEM CONDUZ — Teal #004757
+          S6 — QUEM CONDUZ — Ink #05262e
           ============================================================ */}
-      <section style={{ backgroundColor: '#004757', paddingTop: '5rem', paddingBottom: '5rem' }}>
+      <section style={{ backgroundColor: '#05262e', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
-            className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
+            className="font-body text-[12px] font-semibold uppercase tracking-[0.14em] mb-4"
             style={{ color: '#e8e0d6' }}
           >
             Execução direta
           </p>
           <h2
-            className="font-display font-normal leading-tight mb-8"
+            className="font-display font-semibold leading-tight mb-8"
             style={{
               color: '#F5F5F2',
-              fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+              fontSize: 'clamp(1.875rem, 4.4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em',
             }}
           >
-            Quem <span style={{ color: '#eb5c2e' }}>analisa</span> é quem entrega.
+            Quem analisa é quem entrega.
           </h2>
           <p
-            className="font-body font-light leading-relaxed mb-12 max-w-3xl"
-            style={{ color: '#F5F5F2', fontSize: '1rem' }}
+            className="font-body font-normal leading-relaxed mb-12 max-w-3xl"
+            style={{ color: '#F5F5F2', fontSize: '1.125rem' }}
           >
             <strong style={{ fontWeight: 600 }}>Não há equipe intermediária.</strong>{' '}
             Gabriela Aguiar e Celso Gama conduzem a execução do diagnóstico e
@@ -584,8 +585,8 @@ export default function OxigenioIASearchPage() {
             quem aparece na sessão.
           </p>
           <p
-            className="font-body font-light leading-relaxed mb-16 max-w-3xl"
-            style={{ color: '#e8e0d6', fontSize: '1rem' }}
+            className="font-body font-normal leading-relaxed mb-16 max-w-3xl"
+            style={{ color: '#e8e0d6', fontSize: '1.125rem' }}
           >
             A Pira Labs é uma consultoria boutique que usa o Creative Business
             Turnaround para nomear sua forma de atuação: aplicar a inteligência do
@@ -609,8 +610,8 @@ export default function OxigenioIASearchPage() {
                 CEO e Co-founder
               </p>
               <p
-                className="font-body font-light leading-relaxed"
-                style={{ color: '#F5F5F2', fontSize: '1rem' }}
+                className="font-body font-normal leading-relaxed"
+                style={{ color: '#F5F5F2', fontSize: '1.125rem' }}
               >
                 MIT Universal AI Foundational Modules (em andamento, 2026). Docente em
                 educação executiva. Responsável pela leitura institucional e de
@@ -634,8 +635,8 @@ export default function OxigenioIASearchPage() {
                 COO e Co-founder
               </p>
               <p
-                className="font-body font-light leading-relaxed"
-                style={{ color: '#F5F5F2', fontSize: '1rem' }}
+                className="font-body font-normal leading-relaxed"
+                style={{ color: '#F5F5F2', fontSize: '1.125rem' }}
               >
                 MIT Applied AI Certificate Program (em andamento, 2026). MBA Insper.
                 Bacharelando em Direito (Mackenzie). Responsável pela leitura de
@@ -648,12 +649,13 @@ export default function OxigenioIASearchPage() {
           <div className="mt-10">
             <a
               href="/sobre"
-              className="font-body font-light underline"
+              className="font-body font-normal underline"
               style={{ color: '#e8e0d6', fontSize: '0.9375rem' }}
             >
               Saiba mais sobre os fundadores
             </a>
           </div>
+          <hr style={{ borderColor: 'rgba(245,245,242,0.12)', borderTopWidth: 1, margin: '4rem 0 0 0' }} />
         </div>
       </section>
 
@@ -663,40 +665,40 @@ export default function OxigenioIASearchPage() {
       <section style={{ backgroundColor: '#05262e', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
-            className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
+            className="font-body text-[12px] font-semibold uppercase tracking-[0.14em] mb-4"
             style={{ color: '#e8e0d6' }}
           >
             Próximo passo
           </p>
           <h2
-            className="font-display font-normal leading-tight mb-12"
+            className="font-display font-semibold leading-tight mb-12"
             style={{
               color: '#F5F5F2',
-              fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+              fontSize: 'clamp(1.875rem, 4.4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em',
             }}
           >
-            Escolha a versão e <span style={{ color: '#eb5c2e' }}>aplique</span>.
+            Escolha a versão e aplique.
           </h2>
           <div style={{ overflowX: 'auto', marginBottom: '3rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', maxWidth: '36rem' }}>
               <caption
-                className="font-body text-[10px] font-semibold uppercase tracking-widest text-left"
+                className="font-body text-[12px] font-semibold uppercase tracking-[0.14em] text-left"
                 style={{ color: '#e8e0d6', captionSide: 'top', paddingBottom: '1rem' }}
               >
                 Resumo das versões
               </caption>
               <thead>
                 <tr>
-                  <th style={{ borderBottom: '1px solid rgba(232,224,214,0.2)', paddingBottom: '0.75rem', width: '40%' }} />
+                  <th style={{ borderBottom: '1px solid rgba(245,245,242,0.12)', paddingBottom: '0.75rem', width: '40%' }} />
                   <th
                     className="font-body font-semibold text-left pb-3"
-                    style={{ color: '#F5F5F2', fontSize: '1rem', borderBottom: '1px solid rgba(232,224,214,0.2)' }}
+                    style={{ color: '#F5F5F2', fontSize: '1.125rem', borderBottom: '1px solid rgba(245,245,242,0.12)' }}
                   >
                     Fast
                   </th>
                   <th
                     className="font-body font-semibold text-left pb-3 pl-6"
-                    style={{ color: '#e8e0d6', fontSize: '1rem', borderBottom: '1px solid rgba(232,224,214,0.2)' }}
+                    style={{ color: '#e8e0d6', fontSize: '1.125rem', borderBottom: '1px solid rgba(245,245,242,0.12)' }}
                   >
                     Full
                   </th>
@@ -710,20 +712,20 @@ export default function OxigenioIASearchPage() {
                 ].map(([label, fast, full], i) => (
                   <tr key={i}>
                     <td
-                      className="font-body font-light py-3 pr-6"
-                      style={{ color: '#e8e0d6', fontSize: '0.875rem', borderBottom: '1px solid rgba(232,224,214,0.1)' }}
+                      className="font-body font-normal py-3 pr-6"
+                      style={{ color: '#e8e0d6', fontSize: '0.875rem', borderBottom: '1px solid rgba(245,245,242,0.12)' }}
                     >
                       {label}
                     </td>
                     <td
-                      className="font-body font-light py-3 pr-6"
-                      style={{ color: '#F5F5F2', fontSize: '0.9375rem', borderBottom: '1px solid rgba(232,224,214,0.1)' }}
+                      className="font-body font-normal py-3 pr-6"
+                      style={{ color: '#F5F5F2', fontSize: '0.9375rem', borderBottom: '1px solid rgba(245,245,242,0.12)' }}
                     >
                       {fast}
                     </td>
                     <td
-                      className="font-body font-light py-3 pl-6"
-                      style={{ color: '#F5F5F2', fontSize: '0.9375rem', borderBottom: '1px solid rgba(232,224,214,0.1)' }}
+                      className="font-body font-normal py-3 pl-6"
+                      style={{ color: '#F5F5F2', fontSize: '0.9375rem', borderBottom: '1px solid rgba(245,245,242,0.12)' }}
                     >
                       {full}
                     </td>
@@ -744,7 +746,7 @@ export default function OxigenioIASearchPage() {
               Aplicar agora
             </a>
             <p
-              className="font-body font-light"
+              className="font-body font-normal"
               style={{ color: '#e8e0d6', fontSize: '0.8125rem' }}
             >
               Quanto mais contexto você compartilhar na aplicação, mais útil é a
@@ -761,24 +763,24 @@ export default function OxigenioIASearchPage() {
       <section style={{ backgroundColor: '#004757', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
-            className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
+            className="font-body text-[12px] font-semibold uppercase tracking-[0.14em] mb-4"
             style={{ color: '#e8e0d6' }}
           >
             Depois do diagnóstico
           </p>
           <h2
-            className="font-display font-normal leading-tight mb-6"
+            className="font-display font-semibold leading-tight mb-6"
             style={{
               color: '#F5F5F2',
-              fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+              fontSize: 'clamp(1.875rem, 4.4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em',
             }}
           >
-            O <span style={{ color: '#eb5c2e' }}>Oxigênio</span> IA Search termina
+            O Oxigênio IA Search termina
             num próximo passo, não num relatório.
           </h2>
           <p
-            className="font-body font-light leading-relaxed mb-12 max-w-3xl"
-            style={{ color: '#e8e0d6', fontSize: '1rem' }}
+            className="font-body font-normal leading-relaxed mb-12 max-w-3xl"
+            style={{ color: '#e8e0d6', fontSize: '1.125rem' }}
           >
             A sessão de leitura não fecha o ciclo: ela abre a rota. O que fazer
             depois depende do que o diagnóstico encontrou.
@@ -803,7 +805,7 @@ export default function OxigenioIASearchPage() {
                 className="py-8"
                 style={{
                   borderBottom: i < arr.length - 1
-                    ? '1px solid rgba(232,224,214,0.2)'
+                    ? '1px solid rgba(245,245,242,0.12)'
                     : 'none',
                 }}
               >
@@ -814,8 +816,8 @@ export default function OxigenioIASearchPage() {
                   <strong style={{ fontWeight: 600 }}>{titulo}</strong>
                 </p>
                 <p
-                  className="font-body font-light leading-relaxed max-w-3xl"
-                  style={{ color: '#e8e0d6', fontSize: '1rem' }}
+                  className="font-body font-normal leading-relaxed max-w-3xl"
+                  style={{ color: '#e8e0d6', fontSize: '1.125rem' }}
                 >
                   {corpo}
                 </p>
@@ -831,19 +833,19 @@ export default function OxigenioIASearchPage() {
       <section style={{ backgroundColor: '#e8e0d6', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <p
-            className="font-body text-[10px] font-semibold uppercase tracking-widest mb-4"
+            className="font-body text-[12px] font-semibold uppercase tracking-[0.14em] mb-4"
             style={{ color: '#1A5568' }}
           >
             Perguntas frequentes
           </p>
           <h2
-            className="font-display font-normal leading-tight mb-12"
+            className="font-display font-semibold leading-tight mb-12"
             style={{
               color: '#05262e',
-              fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+              fontSize: 'clamp(1.875rem, 4.4vw, 3rem)', lineHeight: 1.1, letterSpacing: '-0.02em',
             }}
           >
-            O que você ainda quer <span style={{ color: '#C4421A' }}>saber</span> antes de aplicar.
+            O que você ainda quer saber antes de aplicar.
           </h2>
           <div>
             {[
@@ -878,7 +880,7 @@ export default function OxigenioIASearchPage() {
             ].map(({ pergunta, resposta }, i) => (
               <details
                 key={i}
-                style={{ borderBottom: '1px solid rgba(5,38,46,0.2)' }}
+                style={{ borderBottom: '1px solid rgba(5,38,46,0.12)' }}
               >
                 <summary
                   className="font-display font-normal cursor-pointer list-none py-5"
@@ -887,8 +889,8 @@ export default function OxigenioIASearchPage() {
                   {pergunta}
                 </summary>
                 <p
-                  className="font-body font-light leading-relaxed pb-6"
-                  style={{ color: '#05262e', fontSize: '1rem', maxWidth: '48rem' }}
+                  className="font-body font-normal leading-relaxed pb-6"
+                  style={{ color: '#05262e', fontSize: '1.125rem', maxWidth: '48rem' }}
                 >
                   {resposta}
                 </p>
