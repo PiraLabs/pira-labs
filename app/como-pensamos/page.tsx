@@ -102,9 +102,6 @@ export default function ComoPensamos() {
         <div className="pt-20 md:pt-24 mb-6 md:mb-10">
           <div className="container-site">
             <Breadcrumbs items={breadcrumbs} />
-            <p className="font-body font-semibold uppercase mb-4" style={{ color: "#e8e0d6", fontSize: "0.75rem", letterSpacing: "0.14em" }}>
-              Como pensamos
-            </p>
             <h1 className="font-display font-semibold mb-4" style={{ color: "#F5F5F2", fontSize: "clamp(2.375rem, 6.5vw, 4.5rem)", lineHeight: 1.05, letterSpacing: "-0.025em" }}>
               Toda empresa de serviços tem uma <span style={{ color: "#eb5c2e" }}>janela</span>. Quase ninguém a vê fechar.
             </h1>
