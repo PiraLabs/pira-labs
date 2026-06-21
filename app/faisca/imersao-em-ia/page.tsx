@@ -349,7 +349,7 @@ export default function ImersaEmIaPage() {
       </section>
 
       {/* I6 · FAQ (Ink) — divisor inferior 1px para o fecho Ink->Ink */}
-      <section style={{ backgroundColor: INK, borderBottom: "1px solid rgba(245,245,242,0.12)" }} className="py-16 md:py-24">
+      <section style={{ backgroundColor: INK }} className="py-16 md:py-24">
         <div className="container-site">
           <p className="font-body" style={{ ...EYEBROW, color: SAND, marginBottom: "32px" }}>
             DÚVIDAS COMUNS

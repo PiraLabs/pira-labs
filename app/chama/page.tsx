@@ -25,6 +25,12 @@ const ITEM = { fontSize: 'clamp(1.125rem, 2vw, 1.5rem)', lineHeight: 1.25, lette
 const EYEBROW = { fontSize: '12px', fontWeight: 600, letterSpacing: '0.14em' }
 const READING = '720px'
 
+const hrDark: React.CSSProperties = {
+  borderColor: 'rgba(245,245,242,0.12)',
+  borderTopWidth: 1,
+  margin: '0',
+}
+
 const temasGabriela = [
   { titulo: 'Macro Tendências', desc: 'O que os ecossistemas globais de inovação já mostram sobre o futuro do trabalho em serviços antes que esse futuro chegue ao Brasil como exigência. Quem participa da palestra ou workshop da Gabriela Aguiar sobre este tema consegue ler sinal fraco antes de virar pauta.' },
   { titulo: 'Inteligência de Mercado com IA', desc: 'Como usar ferramentas de inteligência artificial para ler o que o mercado ainda não tornou óbvio. Quem participa consegue identificar oportunidade antes que o concorrente estruture a resposta.' },
@@ -474,7 +480,7 @@ export default function ChamaPage() {
         {/* ============================================================
             S8 — COMO FUNCIONA — Ink #05262e
             ============================================================ */}
-        <section style={{ backgroundColor: '#05262e', borderBottom: '1px solid rgba(245,245,242,0.12)', ...PAD }}>
+        <section style={{ backgroundColor: '#05262e', ...PAD }}>
           <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
             <p className="font-body uppercase mb-4" style={{ ...EYEBROW, color: '#e8e0d6' }}>
               Processo
@@ -501,6 +507,7 @@ export default function ChamaPage() {
                 </div>
               ))}
             </div>
+            <hr style={{ ...hrDark, marginTop: '3.5rem' }} />
           </div>
         </section>
 
