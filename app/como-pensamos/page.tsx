@@ -102,8 +102,11 @@ export default function ComoPensamos() {
         <div className="pt-20 md:pt-24 mb-6 md:mb-10">
           <div className="container-site">
             <Breadcrumbs items={breadcrumbs} />
-            <h1 className="font-display font-bold leading-none mb-4" style={{ color: "#F5F5F2", fontSize: "clamp(3.25rem, 10.2vw, 7rem)", letterSpacing: "-0.035em" }}>
-              Como pensamos.
+            <p className="font-body font-semibold uppercase mb-4" style={{ color: "#e8e0d6", fontSize: "0.75rem", letterSpacing: "0.14em" }}>
+              Como pensamos
+            </p>
+            <h1 className="font-display font-semibold mb-4" style={{ color: "#F5F5F2", fontSize: "clamp(2.375rem, 6.5vw, 4.5rem)", lineHeight: 1.05, letterSpacing: "-0.025em" }}>
+              Toda empresa de serviços tem uma <span style={{ color: "#eb5c2e" }}>janela</span>. Quase ninguém a vê fechar.
             </h1>
             <p className="font-body leading-relaxed max-w-2xl" style={{ color: "#e8e0d6", fontSize: "clamp(1.125rem, 1.6vw, 1.375rem)", lineHeight: 1.5 }}>
               As teses, referências e vocabulário que orientam cada diagnóstico e cada execução.
@@ -111,8 +114,8 @@ export default function ComoPensamos() {
             <p className="font-display" style={{
               fontFamily: "var(--font-atyp-display), sans-serif",
               fontWeight: 500,
-              fontSize: "clamp(1.4375rem, 2.9vw, 2rem)",
-              lineHeight: 1.2,
+              fontSize: "clamp(1.125rem, 2vw, 1.375rem)",
+              lineHeight: 1.3,
               letterSpacing: "-0.01em",
               color: "#e8e0d6",
               maxWidth: "640px",
@@ -125,7 +128,7 @@ export default function ComoPensamos() {
       </div>
 
       {/* Abertura */}
-      <Section variant="ink" paddingY="sm">
+      <Section variant="ink" paddingY="lg">
         <div className="max-w-3xl space-y-6">
           <p className="font-body leading-relaxed" style={{ color: "#F5F5F2", fontSize: "1.125rem" }}>
             A maioria das intervenções chega tarde. O problema já virou crise, as opções já diminuíram, o custo de cada decisão já subiu. E o que resta é conter o dano.
@@ -166,7 +169,7 @@ export default function ComoPensamos() {
           {([
             {
               num: "01",
-              title: "O trabalho não acabou. O modelo de trabalho das empresas de serviços é que envelheceu.",
+              title: "O que envelheceu não foi o trabalho. Foi o modelo.",
               body: [
                 "Vender mais não resolve o problema de quem vende bem mas vê a margem encolher. Contratar mais não resolve o problema de quem tem equipe suficiente mas entrega menos do que o cliente percebe. Adotar mais ferramentas não resolve o problema de quem tem o fluxo de trabalho errado rodando mais rápido.",
                 <>O problema está no modelo. Na forma como o trabalho está organizado, na forma como as decisões fluem, na forma como o valor produzido chega até quem contratou. Quando o modelo envelhece, o negócio trabalha mais para entregar <strong style={{ fontWeight: 600 }}>o mesmo</strong>. E trabalha em silêncio: a margem some antes de aparecer no resultado, o crescimento trava antes que o caixa mostre, quem fundou vira gargalo antes de perceber que virou.</>,
@@ -174,7 +177,7 @@ export default function ComoPensamos() {
             },
             {
               num: "02",
-              title: "A janela de oportunidade tem tempo contado. E a maioria das empresas não percebe quando ela fecha.",
+              title: "Quanto mais tarde a intervenção, menos opções e maior o custo de cada uma.",
               body: [
                 "Enquanto a janela está aberta, o negócio ainda tem clientes, caixa e reputação para agir. A intervenção é preventiva: diagnóstico, redesenho, resultado verificado. Quando a janela fecha e a crise se instala, a intervenção muda de natureza. Passa de preventiva para responsiva, e às vezes para paliativa.",
                 <>É a diferença entre medicina preventiva, medicina responsiva e medicina paliativa. As três tratam o mesmo paciente. O que muda é <strong style={{ fontWeight: 600 }}>o momento</strong>, e o momento muda tudo o que é possível fazer e quanto custa fazer.</>,
@@ -190,10 +193,10 @@ export default function ComoPensamos() {
             },
             {
               num: "04",
-              title: "Governança não é controle posterior. É capacidade competitiva.",
+              title: "Governança de IA deixou de ser compliance. Virou operação.",
               body: [
                 <>Governança de IA para empresas de serviços é a definição de quem decide o que a ferramenta faz, quem revisa o que ela produziu e quem responde quando erra. Não é controle posterior. É capacidade competitiva.</>,
-                <>Empresas de serviços que dependem de julgamento humano para entregar valor estão no centro desse risco, não as grandes corporações com departamentos de compliance. <strong style={{ fontWeight: 600 }}>68,3%</strong> das empresas não possuem núcleo dedicado à governança de IA. (Fundação Dom Cabral, 2026.) No Global Risks Report 2026, o WEF registra que os riscos adversos de IA ocupam a 30ª posição no horizonte de dois anos e a 5ª no horizonte de dez.</>,
+                <>Empresas de serviços que dependem de julgamento humano para entregar valor estão no centro desse risco. Um estudo da Meta em parceria com a Fundação Dom Cabral, de 2026, identificou que <strong style={{ fontWeight: 600 }}>68,3%</strong> das grandes empresas e multinacionais analisadas não possuem núcleo dedicado à governança de IA. Se nem as organizações com mais recursos e estrutura de compliance montaram essa governança, a empresa de serviços que opera no improviso está ainda mais exposta. No Global Risks Report 2026, o WEF registra que os riscos adversos de IA saltaram da 30ª posição no horizonte de dois anos para a 5ª no horizonte de dez.</>,
                 <>Quando modelos e automações passam a influenciar decisão, escopo e entrega, governança deixa de ser função de compliance e vira estrutura de operação. Quem define o que a IA faz, quem revisa o que ela produziu e quem responde quando erra não é questão técnica. É questão de sobrevivência comercial.</>,
               ],
             },
@@ -205,30 +208,19 @@ export default function ComoPensamos() {
               ],
             },
           ] as { num: string; title: string | null; body: React.ReactNode[] }[]).map((tese, i) => (
-            <div key={i} style={{ position: "relative", borderTop: "1px solid rgba(245,245,242,0.12)", paddingTop: "48px", paddingBottom: "48px" }}>
-              {/* Número decorativo */}
-              <span aria-hidden="true" style={{
-                position: "absolute",
-                top: "32px",
-                right: "0",
-                fontFamily: "var(--font-atyp-display), sans-serif",
-                fontWeight: 300,
-                fontSize: "clamp(72px, 9vw, 108px)",
-                lineHeight: 1,
-                color: "#1A5568",
-                userSelect: "none",
-                pointerEvents: "none",
-              }}>
+            <div key={i} style={{ borderTop: "1px solid rgba(245,245,242,0.12)", paddingTop: "48px", paddingBottom: "48px" }}>
+              {/* Índice de seção — MICRO em fluxo, acima do título (Eixo 6, v2 linha 315). Sand sobre Teal por contraste e Eixo 5. */}
+              <p className="font-body font-semibold" style={{ color: "#e8e0d6", fontSize: "0.75rem", letterSpacing: "0.14em", marginBottom: "16px" }}>
                 {tese.num}
-              </span>
+              </p>
 
               {/* Título — Tese 3 especial */}
               {i === 2 ? (
-                <h3 style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 600, fontSize: "clamp(1.4375rem, 2.9vw, 2rem)", lineHeight: 1.2, letterSpacing: "-0.01em", color: "#F5F5F2", marginBottom: "24px" }}>
+                <h3 style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 600, fontSize: "clamp(1.875rem, 4.4vw, 3rem)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "#F5F5F2", marginBottom: "24px" }}>
                   IA não corrige bagunça. Escala <span style={{ color: "#eb5c2e" }}>bagunça</span>.
                 </h3>
               ) : (
-                <h3 style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 600, fontSize: "clamp(1.4375rem, 2.9vw, 2rem)", lineHeight: 1.2, letterSpacing: "-0.01em", color: "#F5F5F2", marginBottom: "24px" }}>
+                <h3 style={{ fontFamily: "var(--font-atyp-display), sans-serif", fontWeight: 600, fontSize: "clamp(1.875rem, 4.4vw, 3rem)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "#F5F5F2", marginBottom: "24px" }}>
                   {tese.title}
                 </h3>
               )}
@@ -246,7 +238,7 @@ export default function ComoPensamos() {
 
           {/* Linha de ponte para Referências */}
           <div style={{ borderTop: "1px solid rgba(245,245,242,0.12)", paddingTop: "40px", paddingBottom: "8px" }}>
-            <p className="font-body" style={{ color: "#b0a596", fontSize: "0.875rem", lineHeight: 1.55 }}>
+            <p className="font-body" style={{ color: "#e8e0d6", fontSize: "0.875rem", lineHeight: 1.55 }}>
               As referências abaixo não são decoração. São o repertório que torna cada tese verificável.
             </p>
           </div>
@@ -337,7 +329,7 @@ export default function ComoPensamos() {
       </section>
 
       <FinalCTA
-        heading="Se alguma dessas teses pareceu familiar, é porque provavelmente vale uma conversa."
+        heading="Reconheceu seu negócio em alguma tese? A janela ainda está aberta. Vale conversar."
         origin="como_pensamos"
         ctaLabel="RESPIRE"
       />
