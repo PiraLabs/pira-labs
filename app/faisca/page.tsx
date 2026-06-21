@@ -94,11 +94,11 @@ export default function FaiscaPage() {
       {/* F2 · Declaração (Sand) */}
       <section style={{ backgroundColor: SAND }}>
         <div className="mx-auto w-full max-w-[1280px]" style={{ padding: SECTION_PAD }}>
+          <h2 className="font-display" style={{ fontSize: "clamp(2.75rem, 7vw, 5rem)", fontWeight: 600, lineHeight: 1.05, letterSpacing: "-0.025em", color: INK, maxWidth: "900px", marginBottom: "2.5rem" }}>
+            Antes de comprometer um projeto maior,{" "}
+            <span style={{ color: EMBERDEEP }}>experimenta.</span>
+          </h2>
           <div style={{ maxWidth: "680px" }} className="space-y-6">
-            <h2 className="font-display" style={{ fontSize: "clamp(1.875rem, 4.4vw, 3rem)", fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: INK }}>
-              Antes de comprometer um projeto maior,{" "}
-              <span style={{ color: EMBERDEEP }}>experimenta.</span>
-            </h2>
             <p className="font-body" style={{ fontSize: "1.125rem", lineHeight: 1.6, fontWeight: 400, color: INK }}>
               Faísca reúne as portas de entrada da Pira Labs. Algumas têm escopo fechado e preço fixo. Outras exigem conversa prévia, porque dependem de escopo, disponibilidade e contexto.
             </p>
