@@ -245,9 +245,9 @@ export function Header() {
                 spans[2].style.color = isActive ? '#F5F5F2' : '#b0a596'
               }}
             >
-              <span style={{ color: '#F5F5F2' }}>Antes</span>
+              <span style={{ color: pathname === '/antes-pira' ? '#F5F5F2' : '#b0a596' }}>Antes</span>
               <span style={{ color: '#eb5c2e' }}>,</span>
-              <span style={{ color: '#F5F5F2' }}> Pira</span>
+              <span style={{ color: pathname === '/antes-pira' ? '#F5F5F2' : '#b0a596' }}> Pira</span>
             </Link>
           </nav>
 
