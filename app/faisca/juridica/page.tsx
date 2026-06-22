@@ -463,7 +463,7 @@ export default function FaiscaJuridicaPage() {
 
       {/* J7 · Ink · FAQ + Postura declarada */}
       <section style={{ backgroundColor: "#05262e", padding: "80px 0" }}>
-        <div className="container-site hr-on-dark-b">
+        <div className="container-site hr-on-dark-b" style={{ paddingBottom: "64px" }}>
           <p style={{ ...EYEBROW, color: "#e8e0d6", marginBottom: "32px" }}>
             Dúvidas comuns
           </p>
@@ -555,11 +555,11 @@ export default function FaiscaJuridicaPage() {
         origin={ORIGINS.FAISCA_JURIDICA}
         theme="dark"
       />
-      <div style={{ backgroundColor: "#e8e0d6", textAlign: "center", paddingBottom: "48px" }}>
+      <div style={{ backgroundColor: "#05262e", textAlign: "center", paddingTop: "48px", paddingBottom: "48px" }}>
         <a
           href="/inspira/juridico"
           style={{
-            color: "#05262e",
+            color: "#e8e0d6",
             fontSize: "13px",
             fontWeight: 600,
             letterSpacing: "0.10em",
