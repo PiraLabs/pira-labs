@@ -356,7 +356,7 @@ export default function PocketPage() {
 
       {/* P6 · FAQ (Ink) */}
       <section style={{ backgroundColor: '#05262e' }} className="py-16 md:py-24">
-        <div className="container-site">
+        <div className="container-site hr-on-dark-b">
           <p className="font-body" style={{ ...EYEBROW, color: "#e8e0d6", marginBottom: "32px" }}>
             DÚVIDAS COMUNS
           </p>
@@ -364,7 +364,7 @@ export default function PocketPage() {
             Perguntas frequentes
           </h2>
           {faqItems.map((item, i) => (
-            <details key={i} style={{ borderBottom: "1px solid rgba(245,245,242,0.12)" }}>
+            <details key={i} style={{ borderBottom: i === faqItems.length - 1 ? "none" : "1px solid rgba(245,245,242,0.12)" }}>
               <summary
                 className="font-body"
                 style={{ cursor: "pointer", color: "#F5F5F2", fontSize: "16px", fontWeight: 600, padding: "20px 0", listStyle: "none" }}
@@ -384,7 +384,7 @@ export default function PocketPage() {
 
       {/* P7 · FinalCTA (Sand) */}
       <FinalCTA
-        heading="Antes de confirmar, fazemos uma conversa inicial para garantir que o pocket do INSPIRA é o produto certo para o momento da empresa. A conversa é parte do processo, não uma etapa burocrática."
+        heading="Antes de confirmar, conversamos para garantir que o pocket do INSPIRA é o produto certo para o momento."
         ctaLabel="RESPIRE"
         origin={ORIGINS.FAISCA_POCKET}
         theme="dark"
