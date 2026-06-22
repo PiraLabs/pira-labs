@@ -704,7 +704,7 @@ export default function InspiraPage() {
       {/* FINALCTA | Ink */}
       <section style={{ backgroundColor: '#05262e', padding: '120px 80px', textAlign: 'center' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h2 className="type-h1" style={{
+          <h2 className="type-h2" style={{
             fontWeight: 300,
             lineHeight: 1.2,
             color: '#F5F5F2',
