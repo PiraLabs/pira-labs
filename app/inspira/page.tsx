@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: 'INSPIRA — Diagnóstico de Creative Business Turnaround | Pira Labs',
   description: 'O INSPIRA é o diagnóstico de Creative Business Turnaround da Pira Labs: seis camadas lidas em sequência antes de nomear qualquer problema, conduzido por Gabriela Aguiar, sempre terminando com rota executável.',
@@ -132,10 +134,8 @@ export default function InspiraPage() {
           }}>
             Diagnóstico de Creative Business Turnaround
           </p>
-          <h1 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
+          <h1 className="type-display" style={{
             fontWeight: 600,
-            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
             lineHeight: 1.1,
             color: '#05262e',
             marginBottom: '32px',
@@ -166,7 +166,7 @@ export default function InspiraPage() {
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
                 color: '#F5F5F2',
-                backgroundColor: '#05262e',
+                backgroundColor: '#eb5c2e',
                 padding: '14px 28px',
                 textDecoration: 'none',
               }}
@@ -201,10 +201,8 @@ export default function InspiraPage() {
           }}>
             O método
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
+          <h2 className="type-h1" style={{
             fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             lineHeight: 1.15,
             color: '#F5F5F2',
             marginBottom: '48px',
@@ -269,10 +267,8 @@ export default function InspiraPage() {
           }}>
             O diagnóstico
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
+          <h2 className="type-h1" style={{
             fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             lineHeight: 1.15,
             color: '#F5F5F2',
             marginBottom: '24px',
@@ -342,10 +338,8 @@ export default function InspiraPage() {
           }}>
             O output
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
+          <h2 className="type-h1" style={{
             fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             lineHeight: 1.15,
             color: '#F5F5F2',
             marginBottom: '24px',
@@ -380,10 +374,8 @@ export default function InspiraPage() {
           }}>
             O que você recebe
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
+          <h2 className="type-h1" style={{
             fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             lineHeight: 1.15,
             color: '#05262e',
             marginBottom: '64px',
@@ -452,17 +444,14 @@ export default function InspiraPage() {
           }}>
             Qualificação
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
+          <h2 className="type-h1" style={{
             fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             lineHeight: 1.15,
             color: '#F5F5F2',
             marginBottom: '64px',
             maxWidth: '700px',
           }}>
-            Para quem faz sentido e para quem{' '}
-            <span style={{ color: '#eb5c2e' }}>não faz</span>.
+            Para quem faz sentido e para quem não faz.
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '80px', maxWidth: '1000px' }}>
 
@@ -483,7 +472,7 @@ export default function InspiraPage() {
                 {[
                   'A empresa cresceu mais rápido do que a estrutura. O time aumentou, o faturamento subiu, mas a operação ficou dependente de pessoas-chave e de improviso constante. Qualquer crescimento adicional exige resolver o que está embaixo antes.',
                   'A receita continua, mas o resultado não acompanha. Custos invisíveis, escopo não cobrado, precificação desalinhada com custo real. A empresa trabalha mais para entregar o mesmo valor percebido.',
-                  'A empresa investiu em tecnologia ou em IA e o resultado foi acelerar o ruído que já existia. Um relatório do MIT Media Lab (Project NANDA, julho de 2025) analisou mais de 300 implementações corporativas de IA generativa e encontrou que 95% não geraram impacto financeiro mensurável. Sem método antes da ferramenta, a tecnologia tende a escalar o problema.',
+                  'A empresa investiu em tecnologia ou em IA e o resultado foi acelerar o ruído que já existia. O relatório 'The GenAI Divide: State of AI in Business 2025', do MIT Media Lab, iniciativa NANDA, publicado em julho de 2025, identificou que 95% dos pilotos de IA generativa estagnam na fase piloto, sem impacto mensurável no resultado financeiro. Sem método antes da ferramenta, a tecnologia tende a escalar o problema.',
                 ].map((texto, i) => (
                   <div key={i} style={{ display: 'flex', gap: '16px' }}>
                     <span style={{ color: '#F5F5F2', marginTop: '4px', flexShrink: 0 }}>&#8594;</span>
@@ -521,7 +510,7 @@ export default function InspiraPage() {
                   'Quem busca validação de decisão já tomada. O INSPIRA não confirma o que o fundador já decidiu. Lê o sistema e diz o que encontrou, mesmo quando é diferente do esperado.',
                 ].map((texto, i) => (
                   <div key={i} style={{ display: 'flex', gap: '16px' }}>
-                    <span style={{ color: '#e8e0d6', marginTop: '4px', flexShrink: 0 }}>&#8212;</span>
+                    <span style={{ color: '#e8e0d6', marginTop: '4px', flexShrink: 0 }}>&#183;</span>
                     <p style={{
                       fontFamily: 'AtypText, sans-serif',
                       fontWeight: 300,
@@ -542,15 +531,18 @@ export default function InspiraPage() {
             <a
               href="/contato?origem=inspira"
               style={{
-                display: 'inline-block',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
-                fontSize: '0.8125rem',
-                letterSpacing: '0.08em',
+                fontSize: '13px',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#F5F5F2',
-                backgroundColor: '#eb5c2e',
-                padding: '14px 28px',
+                border: '1px solid #F5F5F2',
+                padding: '0.75rem 1.5rem',
+                borderRadius: 0,
                 textDecoration: 'none',
               }}
             >
@@ -574,10 +566,8 @@ export default function InspiraPage() {
           }}>
             Processo
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
+          <h2 className="type-h1" style={{
             fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             lineHeight: 1.15,
             color: '#F5F5F2',
             marginBottom: '32px',
@@ -595,7 +585,7 @@ export default function InspiraPage() {
             maxWidth: '680px',
             marginBottom: '80px',
           }}>
-            Gabriela Aguiar conduz o INSPIRA do início ao fim. Com mais de uma década em ecossistemas globais de inovação e diagnósticos reais de empresas de serviços no Brasil, é ela quem verifica as condições, propõe o escopo e integra as seis camadas em síntese. O INSPIRA é a metodologia de diagnóstico da Pira Labs dentro do{' '}
+            Gabriela Aguiar conduz o INSPIRA do início ao fim. Com mais de uma década em ecossistemas globais de inovação e diagnósticos reais de empresas de serviços no Brasil, é ela quem verifica as condições, propõe o escopo e integra as seis camadas em síntese. MIT Universal AI Foundational Modules (em andamento, 2026). O INSPIRA é a metodologia de diagnóstico da Pira Labs dentro do{' '}
             <a href="/creative-business-turnaround" style={{ color: '#F5F5F2', textDecoration: 'underline' }}>
               Creative Business Turnaround
             </a>.
@@ -656,10 +646,8 @@ export default function InspiraPage() {
           }}>
             Perguntas frequentes
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
+          <h2 className="type-h1" style={{
             fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             lineHeight: 1.15,
             color: '#05262e',
             marginBottom: '64px',
@@ -713,10 +701,8 @@ export default function InspiraPage() {
       {/* FINALCTA | Ink */}
       <section style={{ backgroundColor: '#05262e', padding: '120px 80px', textAlign: 'center' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
+          <h2 className="type-h1" style={{
             fontWeight: 300,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             lineHeight: 1.2,
             color: '#F5F5F2',
             marginBottom: '40px',
