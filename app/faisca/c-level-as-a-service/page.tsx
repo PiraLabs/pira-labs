@@ -73,7 +73,7 @@ export default function CLevelPage() {
       {/* C2 · O que é + o que não é (Teal) */}
       <section style={{ backgroundColor: TEAL }}>
         <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 py-16 md:py-24">
-          <h2 className="font-display" style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: WHITE, marginBottom: "40px" }}>
+          <h2 className="type-h1" style={{ fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: WHITE, marginBottom: "40px" }}>
             C-level fracionado com{" "}
             <span style={{ color: "#eb5c2e" }}>presença</span>{" "}
             no processo
@@ -107,7 +107,7 @@ export default function CLevelPage() {
           <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(5,38,46,0.5)", marginBottom: "16px" }}>
             Como funciona na prática
           </p>
-          <h2 className="font-display" style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: INK, marginBottom: "48px" }}>
+          <h2 className="type-h1" style={{ fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: INK, marginBottom: "48px" }}>
             Case Pipa
           </h2>
 
@@ -151,7 +151,7 @@ export default function CLevelPage() {
               {/* Identidade resumida */}
               <div style={{ marginBottom: "24px", paddingBottom: "24px", borderBottom: "1px solid rgba(5,38,46,0.1)" }}>
                 <p className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 400, color: INK, marginBottom: "2px" }}>
-                  Pipa — ateliê de confeitaria artesanal
+                  Pipa: ateliê de confeitaria artesanal
                 </p>
                 <p className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 300, color: "rgba(5,38,46,0.6)", marginBottom: "2px" }}>
                   São Paulo · Fevereiro a maio de 2025
@@ -233,8 +233,8 @@ export default function CLevelPage() {
       {/* C4 · Para quem é (Ink) */}
       <section style={{ backgroundColor: INK }}>
         <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 py-16 md:py-24">
-          <h2 className="font-display" style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: WHITE, marginBottom: "40px" }}>
-            Para quem <span style={{ color: "#eb5c2e" }}>é</span> este produto
+          <h2 className="type-h1" style={{ fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: WHITE, marginBottom: "40px" }}>
+            Para quem é este produto
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12" style={{ maxWidth: "960px" }}>
             <div>
@@ -260,7 +260,7 @@ export default function CLevelPage() {
       {/* C5 · Formato e dedicação (Teal) */}
       <section style={{ backgroundColor: TEAL }}>
         <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 py-16 md:py-24">
-          <h2 className="font-display" style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: WHITE, marginBottom: "32px" }}>
+          <h2 className="type-h1" style={{ fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: WHITE, marginBottom: "32px" }}>
             Formato e dedicação
           </h2>
           <div style={{ maxWidth: "680px" }}>
@@ -282,7 +282,7 @@ export default function CLevelPage() {
         heading="Se o que você leu aqui descreve o que você precisa, o próximo passo é uma conversa, não um compromisso."
         ctaLabel="RESPIRE"
         origin={ORIGINS.FAISCA}
-        theme="light"
+        theme="dark"
       />
     </>
   );

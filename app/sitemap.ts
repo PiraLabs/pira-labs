@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/faisca/juridica`,                changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/faisca/imersao-em-ia`,            changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/faisca/pocket`,                  changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/faisca/c-level-as-a-service`,    changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/antes-pira`,                     changeFrequency: "weekly",  priority: 0.6 },
     { url: `${base}/antes-pira/arquivo`,             changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/contato`,                        changeFrequency: "yearly",  priority: 0.5 },
