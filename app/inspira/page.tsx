@@ -472,7 +472,7 @@ export default function InspiraPage() {
                 {[
                   'A empresa cresceu mais rápido do que a estrutura. O time aumentou, o faturamento subiu, mas a operação ficou dependente de pessoas-chave e de improviso constante. Qualquer crescimento adicional exige resolver o que está embaixo antes.',
                   'A receita continua, mas o resultado não acompanha. Custos invisíveis, escopo não cobrado, precificação desalinhada com custo real. A empresa trabalha mais para entregar o mesmo valor percebido.',
-                  'A empresa investiu em tecnologia ou em IA e o resultado foi acelerar o ruído que já existia. O relatório 'The GenAI Divide: State of AI in Business 2025', do MIT Media Lab, iniciativa NANDA, publicado em julho de 2025, identificou que 95% dos pilotos de IA generativa estagnam na fase piloto, sem impacto mensurável no resultado financeiro. Sem método antes da ferramenta, a tecnologia tende a escalar o problema.',
+                  'A empresa investiu em tecnologia ou em IA e o resultado foi acelerar o ruído que já existia. O relatório “The GenAI Divide: State of AI in Business 2025”, do MIT Media Lab, iniciativa NANDA, publicado em julho de 2025, identificou que 95% dos pilotos de IA generativa estagnam na fase piloto, sem impacto mensurável no resultado financeiro. Sem método antes da ferramenta, a tecnologia tende a escalar o problema.',
                 ].map((texto, i) => (
                   <div key={i} style={{ display: 'flex', gap: '16px' }}>
                     <span style={{ color: '#F5F5F2', marginTop: '4px', flexShrink: 0 }}>&#8594;</span>
