@@ -209,6 +209,12 @@ export default function OxigenioIASearchPage() {
                 aparece, como aparece e o que está impedindo que apareça melhor.</strong>
               </p>
               <p
+                className="font-body font-normal leading-relaxed mb-4"
+                style={{ color: '#F5F5F2', fontSize: '1.125rem' }}
+              >
+                Um estudo de Kamruzzaman, Nguyen e Kim, apresentado na EMNLP 2024, documentou um padrão consistente em modelos de linguagem de grande escala: em tarefas de recomendação e análise de mercado, esses modelos associam marcas globais estabelecidas a atributos positivos com frequência desproporcional, enquanto marcas locais aparecem em desvantagem. A leitura da Pira Labs a partir desse achado é direta: uma marca de serviços que não constrói sua presença nos motores de IA não disputa em igualdade com as que já têm visibilidade consolidada. A ausência não é neutra. É uma posição que outro ocupa.
+              </p>
+              <p
                 className="font-body font-normal leading-relaxed"
                 style={{ color: '#F5F5F2', fontSize: '1.125rem' }}
               >

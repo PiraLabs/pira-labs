@@ -11,7 +11,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 1. `PiraLabs_ManualDeMarca_v3.md` — visual, grafia, paleta, tipografia, logo, sistema de nós, voz pública
 2. `PiraLabs_Documento_Mestre_v15.md` — estratégia, portfólio, ICP, fundadores, evidências, limites
-3. `wireframe-completo-site-pira-labs-v5.md` — rotas, blocos, stack, schemas, deploy
+3. O wireframe v5 foi removido do KB e nao e mais fonte de nada. A estrutura do site vive no site implementado, no design-system-pira-labs-v2.md e no PiraLabs_Documento_Mestre_v15.md.
 4. Este CLAUDE.md — regras de execução desta sessão
 
 Em conflito entre qualquer arquivo e o Manual v3, o Manual v3 prevalece.
@@ -21,22 +21,23 @@ Em conflito entre este CLAUDE.md e o wireframe v5, comunicar ao Celso antes de r
 
 ## Ambiente de desenvolvimento
 
-**Shell Bash:** inoperante neste ambiente Windows — nunca tente rodar comandos shell.
-**Ferramentas que funcionam:** Read, Write, Edit, Glob, Grep (ferramentas nativas do Code).
-**Diagnóstico de build:** `npm run capture-win` (abre Node.js diretamente, funciona no Windows).
-**Deploy:** via `deploy.bat "mensagem de commit"` — executa em sequência:
+**Shell Bash:** ambiente primario, Ubuntu via WSL2. Comandos shell operam normalmente. O Code pode usar shell para leitura, grep e diagnostico.
+**Repositorio:** `~/projects/piralabs/site` (branch `rebuild-v2`).
+**Ferramentas do Code:** Read, Write, Edit, Glob, Grep nativas, mais shell quando ajudar a inspecionar.
+**Deploy:** via `./deploy.sh "mensagem de commit"`, executado pelo Celso, nunca pelo Code, executa em sequencia:
 1. `git add -A`
-2. `git commit -m "<mensagem>"`
+2. `git commit -m "$1"`
 3. `git push origin rebuild-v2`
 4. `npx vercel --prod --yes`
 
-O argumento `%~1` é a mensagem do commit. Sem argumento, o commit fica sem mensagem e falha. Exemplo: `deploy.bat "fix: ajuste hero mobile"`.
+O argumento `$1` e a mensagem do commit. Sem argumento, o commit fica sem mensagem e falha. Exemplo: `./deploy.sh "fix: ajuste hero mobile"`.
 
-Scripts disponíveis (referência — não executar via bash):
+**Diagnostico de build:** o build local segue quebrado pelo bug do Next 16, entao o Vercel CI e o unico criterio de pronto. Para capturar output no Ubuntu existe `npm run build 2>&1 | tee build.log`, mas dado o bug conhecido isso nao resolve o build local.
+
+Scripts npm de referencia:
 - `npm run dev` — servidor local (porta 3000), Turbopack desabilitado
-- `npm run build` — build de produção Next.js
+- `npm run build` — build de producao Next.js
 - `npm run lint` — ESLint com Next.js config
-- `npm run capture-win` — captura métricas de build no Windows
 
 ---
 
@@ -287,6 +288,7 @@ Não adicionar redirect para `/sobre` nem `/contato` (essas rotas existem com o 
 - Antes de editar arquivo existente, mostrar o diff e aguardar confirmação.
 - Nunca deletar arquivo sem confirmação explícita.
 - Após cada fase concluída, commitar com mensagem descritiva.
+- O Code nunca roda git nem deploy. Quem executa `./deploy.sh` é o Celso.
 
 ---
 
