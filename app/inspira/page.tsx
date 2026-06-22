@@ -159,15 +159,18 @@ export default function InspiraPage() {
             <a
               href="/contato?origem=inspira"
               style={{
-                display: 'inline-block',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
-                fontSize: '0.8125rem',
-                letterSpacing: '0.08em',
+                fontSize: '15px',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#F5F5F2',
                 backgroundColor: '#eb5c2e',
-                padding: '14px 28px',
+                padding: '0.75rem 1.5rem',
+                borderRadius: 0,
                 textDecoration: 'none',
               }}
             >
@@ -712,15 +715,18 @@ export default function InspiraPage() {
           <a
             href="/contato?origem=inspira"
             style={{
-              display: 'inline-block',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
               fontFamily: 'AtypText, sans-serif',
               fontWeight: 600,
-              fontSize: '0.8125rem',
-              letterSpacing: '0.08em',
+              fontSize: '15px',
+              letterSpacing: '0.14em',
               textTransform: 'uppercase',
               color: '#F5F5F2',
               backgroundColor: '#eb5c2e',
-              padding: '16px 40px',
+              padding: '0.75rem 1.5rem',
+              borderRadius: 0,
               textDecoration: 'none',
             }}
           >
