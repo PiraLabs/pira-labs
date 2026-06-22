@@ -61,7 +61,7 @@ const faqSchemaData = {
       name: "Vocês assinam NDA quando é workshop fechado para um escritório?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sim. Quando há calibragem prévia ou conteúdo customizado, o NDA é assinado antes da conversa.",
+        text: "Sim. O NDA é assinado antes de qualquer conversa com a equipe. Sem exceção.",
       },
     },
     {
@@ -139,10 +139,10 @@ export default function FaiscaJuridicaPage() {
             O que está acontecendo
           </p>
           <h2
+            className="type-h1"
             style={{
               color: "#05262e",
               fontWeight: 600,
-              fontSize: "clamp(2.25rem, 5vw, 4rem)",
               marginBottom: "40px",
               lineHeight: 1.1,
             }}
@@ -159,7 +159,7 @@ export default function FaiscaJuridicaPage() {
               <strong style={{ fontWeight: 600 }}>O problema não é usar IA.</strong> O problema é usar IA com documento jurídico real, em conta pessoal, sem método e sem controle institucional.
             </p>
             <p style={{ color: "#05262e", fontSize: "15px", fontWeight: 300, lineHeight: 1.75, marginBottom: "20px" }}>
-              <strong style={{ fontWeight: 600 }}>68,3% das empresas não possuem núcleo dedicado à governança de IA.</strong> (Fundação Dom Cabral, 2026.) No setor jurídico, onde cada documento pode conter dados pessoais de clientes sob sigilo profissional, operar sem critério de uso não é só risco operacional. É exposição regulatória.
+              Um estudo da Meta em parceria com a Fundação Dom Cabral, de 2026, identificou que <strong style={{ fontWeight: 600 }}>68,3% das grandes empresas e multinacionais analisadas não possuem núcleo dedicado à governança de IA.</strong> No setor jurídico, onde cada documento pode conter dados pessoais de clientes sob sigilo profissional, operar sem critério de uso não é só risco operacional. É exposição regulatória.
             </p>
             <p style={{ color: "#05262e", fontSize: "15px", fontWeight: 300, lineHeight: 1.75, marginBottom: "20px" }}>
               Quando um profissional cola uma petição, um contrato ou uma procuração com dados pessoais de cliente em uma ferramenta de IA, <strong style={{ fontWeight: 600 }}>pode estar realizando tratamento ou compartilhamento de dados pessoais nos termos da LGPD</strong>. Se não há política interna, critério de anonimização, controle de ferramenta e orientação clara sobre o que pode ou não entrar no modelo, o escritório opera com uma exposição que muitas vezes ainda não mapeou.
@@ -178,10 +178,10 @@ export default function FaiscaJuridicaPage() {
             O que é
           </p>
           <h2
+            className="type-h1"
             style={{
               color: "#F5F5F2",
               fontWeight: 600,
-              fontSize: "clamp(2.25rem, 5vw, 4rem)",
               marginBottom: "40px",
               lineHeight: 1.1,
             }}
@@ -223,10 +223,10 @@ export default function FaiscaJuridicaPage() {
             Como acontece
           </p>
           <h2
+            className="type-h1"
             style={{
               color: "#F5F5F2",
               fontWeight: 600,
-              fontSize: "clamp(2.25rem, 5vw, 4rem)",
               marginBottom: "40px",
               lineHeight: 1.1,
             }}
@@ -277,7 +277,7 @@ export default function FaiscaJuridicaPage() {
                     key={item}
                     style={{ color: "#e8e0d6", fontSize: "14px", fontWeight: 300, lineHeight: 1.6, marginBottom: "10px", display: "flex", gap: "10px" }}
                   >
-                    <span style={{ color: "#eb5c2e", flexShrink: 0 }}>·</span>
+                    <span style={{ color: "#e8e0d6", flexShrink: 0 }}>·</span>
                     {item}
                   </p>
                 ))}
@@ -325,7 +325,7 @@ export default function FaiscaJuridicaPage() {
                     key={item}
                     style={{ color: "#e8e0d6", fontSize: "14px", fontWeight: 300, lineHeight: 1.6, marginBottom: "10px", display: "flex", gap: "10px" }}
                   >
-                    <span style={{ color: "#eb5c2e", flexShrink: 0 }}>·</span>
+                    <span style={{ color: "#e8e0d6", flexShrink: 0 }}>·</span>
                     {item}
                   </p>
                 ))}
@@ -359,15 +359,15 @@ export default function FaiscaJuridicaPage() {
             Para quem faz sentido
           </p>
           <h2
+            className="type-h1"
             style={{
               color: "#05262e",
               fontWeight: 600,
-              fontSize: "clamp(2.25rem, 5vw, 4rem)",
               marginBottom: "40px",
               lineHeight: 1.1,
             }}
           >
-            Para quem <span style={{ color: "#eb5c2e" }}>faz</span> sentido
+            Para quem faz sentido
           </h2>
           <div style={{ maxWidth: "720px" }}>
             {[
@@ -402,10 +402,10 @@ export default function FaiscaJuridicaPage() {
             Condução
           </p>
           <h2
+            className="type-h1"
             style={{
               color: "#F5F5F2",
               fontWeight: 600,
-              fontSize: "clamp(2.25rem, 5vw, 4rem)",
               marginBottom: "40px",
               lineHeight: 1.1,
             }}
@@ -418,7 +418,7 @@ export default function FaiscaJuridicaPage() {
                 Celso Gama
               </p>
               <p style={{ color: "#e8e0d6", fontSize: "15px", fontWeight: 300, lineHeight: 1.75, marginBottom: "16px" }}>
-                Conduz o conteúdo técnico-operacional sobre uso de IA em fluxos jurídicos. Bacharelando em Direito pelo Mackenzie e cursando o Applied AI Certificate Program do MIT em 2026. O que essa combinação entrega na prática: a leitura de onde a IA interfere em fluxos jurídicos não vem de quem conhece só tecnologia, nem de quem conhece só Direito. Vem de quem lê os dois ao mesmo tempo e consegue nomear o risco no vocabulário de quem precisa tomar a decisão.
+                Conduz o conteúdo técnico-operacional sobre uso de IA em fluxos jurídicos. Bacharelando em Direito (Mackenzie) e cursando o Applied AI Certificate Program do MIT em 2026. O que essa combinação entrega na prática: a leitura de onde a IA interfere em fluxos jurídicos não vem de quem conhece só tecnologia, nem de quem conhece só Direito. Vem de quem lê os dois ao mesmo tempo e consegue nomear o risco no vocabulário de quem precisa tomar a decisão.
               </p>
               <a
                 href="/sobre#sobre-celso"
@@ -463,15 +463,15 @@ export default function FaiscaJuridicaPage() {
 
       {/* J7 · Ink · FAQ + Postura declarada */}
       <section style={{ backgroundColor: "#05262e", padding: "80px 0" }}>
-        <div className="container-site">
+        <div className="container-site hr-on-dark-b">
           <p style={{ ...EYEBROW, color: "#e8e0d6", marginBottom: "32px" }}>
             Dúvidas comuns
           </p>
           <h2
+            className="type-h1"
             style={{
               color: "#F5F5F2",
               fontWeight: 600,
-              fontSize: "clamp(2.25rem, 5vw, 4rem)",
               marginBottom: "40px",
               lineHeight: 1.1,
             }}
@@ -495,7 +495,7 @@ export default function FaiscaJuridicaPage() {
               },
               {
                 q: "Vocês assinam NDA quando é workshop fechado para um escritório?",
-                a: "Sim. Quando há calibragem prévia ou conteúdo customizado, o NDA é assinado antes da conversa.",
+                a: "Sim. O NDA é assinado antes de qualquer conversa com a equipe. Sem exceção.",
               },
               {
                 q: "Como é a precificação?",
@@ -553,7 +553,7 @@ export default function FaiscaJuridicaPage() {
         heading="Se o risco já está ativo, o momento de tratar é agora."
         ctaLabel="RESPIRE"
         origin={ORIGINS.FAISCA_JURIDICA}
-        theme="light"
+        theme="dark"
       />
       <div style={{ backgroundColor: "#e8e0d6", textAlign: "center", paddingBottom: "48px" }}>
         <a
