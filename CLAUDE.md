@@ -86,7 +86,9 @@ app/
 ├── page.tsx                # home PT
 ├── robots.ts               # 21 crawlers de IA permitidos explicitamente
 ├── sitemap.ts              # 19 rotas indexáveis com prioridades
-├── api/indexnow/route.ts   # POST endpoint para reindexação rápida
+├── api/
+│   ├── indexnow/route.ts   # POST endpoint para reindexação rápida
+│   └── feed/route.ts       # proxy do RSS Substack → application/rss+xml, revalidate 1h
 ├── en/
 │   ├── layout.tsx          # define document.lang="en" via LangSetter
 │   ├── page.tsx            # home EN
@@ -105,6 +107,7 @@ app/
 │   ├── oxigenio-ia-search/
 │   ├── imersao-em-ia/
 │   ├── pocket/
+│   ├── c-level-as-a-service/  # no ar, fora do sitemap, decisão de indexação pendente
 │   └── juridica/
 ├── creative-business-turnaround/
 ├── chama/                  # palestras, workshops, aulas e mentorias (Gabriela + Celso)
@@ -147,11 +150,11 @@ app/
 | `SkipLink.tsx` | Link de acessibilidade "pular para conteúdo" |
 | `LangSetter.tsx` | Client component que seta `document.documentElement.lang` |
 | `CookieBanner.tsx` | Banner LGPD/GDPR |
-| `CookieBannerLoader.tsx` | Lazy loader do CookieBanner (importado no root layout) |
+| `CookieBannerLoader.tsx` | Lazy loader do CookieBanner (importado no root layout). **Fica em `components/` (raiz), não em `shared/`.** |
 | `HowFirstContact.tsx` | Bloco "como funciona o primeiro contato" |
 | `MobileMenu.tsx` | Menu mobile full-screen (drawer), invocado pelo Header |
 
-Home-specific (`/components/home/`): cada seção usa par duplo de arquivos. `*SectionClient.tsx` é um thin wrapper `'use client'` que usa `dynamic()` com `{ ssr: false }` para desabilitar SSR do componente GSAP. `*Section.tsx` contém o conteúdo real com as animações. Exemplo: `HeroSectionClient.tsx` importa dinamicamente `HeroSection.tsx`. Seções existentes: Hero · System (fundida com Method — `MethodSection.tsx` é legado, não usar) · Signals · CBT · Faisca · Proofs · Founders · Editorial · FAQ · FinalCTA. `CountUp.tsx` é componente auxiliar de contador animado.
+Home-specific (`/components/home/`): cada seção usa par duplo de arquivos. `*SectionClient.tsx` é um thin wrapper `'use client'` que usa `dynamic()` com `{ ssr: false }` para desabilitar SSR do componente GSAP. `*Section.tsx` contém o conteúdo real com as animações. Exemplo: `HeroSectionClient.tsx` importa dinamicamente `HeroSection.tsx`. Seções existentes: Hero · System (fundida com Method — `MethodSection.tsx` é legado, não usar) · Signals · CBT · Faisca · Proofs · Founders · Editorial · FAQ · FinalCTA · Manifesto (`ManifestoSection.tsx`). `CountUp.tsx` é componente auxiliar de contador animado.
 
 `components/Nav.tsx` e `components/Footer.tsx` na raiz de components são legado — os ativos são `components/shared/Header.tsx` e `components/shared/Footer.tsx`.
 
@@ -200,12 +203,19 @@ export const metadata: Metadata = {
 
 **CSS utilities customizadas (globals.css — não recriar via Tailwind):**
 - `.emphasis-italic` — AtypDisplay italic weight 500 (frases canônicas, citações, números de destaque)
-- `.container-site` — max-width 1200px com padding fluid via clamp
+- `.container-site` — max-width 1280px com padding fluid via clamp
 - `.section-padding` — padding-top/bottom 80px mobile / 120px desktop
 - `.btn-primary` (BTN-1) — ember bg, texto off-white, uppercase, tracking 0.14em; contraste 3.4:1 (AA large)
 - `.btn-secondary` (BTN-2) — outline off-white, fundo transparente; para fundos escuros (ink, teal)
 - `.btn-secondary-light` (BTN-2-light) — outline ink; para fundos claros (sand, white)
 - `.btn-tertiary` (BTN-3) — link de texto com seta, sem fundo nem borda
+- `.hr-on-dark` / `.hr-on-dark-b` — borda 1px com `var(--hairline-on-dark)`, divisor sobre fundo escuro (top / bottom)
+- `.hr-on-light` / `.hr-on-light-b` — borda 1px com `var(--hairline-on-light)`, divisor sobre fundo claro (top / bottom)
+- `.seam-pt` / `.seam-pb` — padding com `var(--seam-gap)`, costura entre seções de mesmo fundo (top / bottom)
+- `.section-pt` / `.section-pb` — padding `clamp(5rem, 10vw, 7.5rem)`, ritmo de seção unilateral (top / bottom)
+- `.details-clean` — `<details>` sem o triângulo nativo de disclosure
+
+Variáveis CSS (globals.css): `--hairline-on-dark` = White da paleta a 12% · `--hairline-on-light` = Ink a 12% · `--seam-gap` = `clamp(3.5rem, 7vw, 5rem)`. Conformes ao Eixo 6 do design system v2.
 
 **`components/ui/CTAButton.tsx`:** CTAButton alternativo com API diferente do `shared/CTAButton.tsx`. Props: `href`, `label`, `theme: 'light'|'dark'`, `external`. Não usa `origin`. Renderiza texto + seta animada via inline styles. Usar `shared/CTAButton.tsx` para CTAs com rastreamento de origem; usar `ui/CTAButton.tsx` para links simples sem UTM.
 
@@ -218,11 +228,12 @@ export const metadata: Metadata = {
 
 `lib/substack-rss.ts` — busca e parseia RSS do Substack (`piralabs.substack.com/feed`) via `fetch` com revalidação de 1h. Exporta `buscarPostsSubstack(limite)` e tipo `SubstackPost`. Usado pela página `/antes-pira` como Server Component.
 
+`lib/faq-home.ts` — itens do FAQ da home, consumidos junto de `faqPageSchema()` de `service.ts`.
+
 Todos injetados via `<script type="application/ld+json">` no corpo dos componentes. A home injeta Organization + WebSite + WebPage + FAQPage simultaneamente.
 
 ### i18n
 
-`lib/i18n.ts` é legado — não usar para novas implementações, não deletar sem confirmação.
 O padrão atual é conteúdo duplicado em componentes PT e EN separados (não dicionário dinâmico).
 Rotas EN: arquivos existentes são apenas `app/en/page.tsx` e `app/en/creative-business-turnaround/`. O sitemap referencia `/en/about` e `/en/contact` mas esses arquivos de rota não existem — causam 404 se acessados diretamente.
 
@@ -399,10 +410,10 @@ Arquivos antigos `logo-completo-*.svg` e `logo-icone-*.svg` foram deletados. Nã
 ## Estado atual do repositório
 
 - Build: passando
-- Rotas no ar: 27 no sitemap (estado jun/2026); /en/about e /en/contact no sitemap mas sem arquivos de rota (404)
+- Rotas no ar: 26 URLs no sitemap (estado jun 2026)
+- Pendência de rotas: /faisca/c-level-as-a-service existe mas está fora do sitemap (decisão de indexação pendente); /en/about e /en/contact constam no sitemap mas não têm arquivo de rota, retornam 404, corrigir na fase EN/ES (FASE 2)
 - Branch ativo: rebuild-v2
 - Formulário Fillout: NEXT_PUBLIC_FILLOUT_URL não configurado na Vercel
-- lib/i18n.ts: legado — não usar, não deletar sem confirmação
 - Foto home: /nos.png (aprovada, não substituir)
 - Fotos /sobre: placeholder intencional — não gerar nem substituir sem instrução do Celso
 - Playwright (`^1.59.1`): instalado como devDep, sem testes escritos até jun/2026
@@ -437,5 +448,4 @@ Componentes shared que precisam de estado (ex: `CookieBanner.tsx`, `MobileMenu.t
 
 - **CSP quebra embeds silenciosamente:** ao adicionar qualquer iframe/script externo novo, atualizar `next.config.js` antes do deploy. Não há erro de build — só falha no browser.
 - **`ScrollTrigger` no SSR:** nunca importar `gsap/ScrollTrigger` em componente sem `'use client'` e sem o double-RAF. O plugin acessa `window` e quebra o build estático.
-- **`lib/i18n.ts` legado:** o arquivo existe mas não é usado. Não importar em novos componentes.
 - **Fontes Atyp:** `AtypText-Regular` (400) não está disponível — usar `AtypText-Medium` (500) como substituto. Não criar fallback para peso 400 no CSS.

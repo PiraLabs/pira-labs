@@ -115,9 +115,9 @@ export default function PocketPage() {
           <p className="font-body" style={{ ...EYEBROW, color: "#1A5568", marginBottom: "24px" }}>
             O QUE É
           </p>
-          <p className="font-display" style={{ fontWeight: 400, fontSize: "clamp(1.25rem, 2.5vw, 1.625rem)", color: "#05262e", marginBottom: "24px", lineHeight: 1.4 }}>
+          <h2 className="type-h1" style={{ fontWeight: 400, color: "#05262e", marginBottom: "24px", lineHeight: 1.4 }}>
             A pergunta que o pocket responde é uma só: por onde começo?
-          </p>
+          </h2>
           <p className="font-body" style={{ fontSize: "15px", fontWeight: 300, color: "#05262e", lineHeight: 1.75, marginBottom: "16px" }}>
             Uma sessão de 1,5 hora com leitura estruturada de três dimensões do negócio: mercado, financeiro e presença em IA. Gabriela Aguiar conduz. Celso Gama opera os agentes de IA em tempo real. Você sai com uma síntese integrada das três dimensões e os próximos passos prioritários.
           </p>
@@ -131,7 +131,7 @@ export default function PocketPage() {
               <p className="font-body" style={{ fontSize: "10px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#05262e", opacity: 0.5, marginBottom: "8px" }}>
                 INVESTIMENTO
               </p>
-              <p className="font-display" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 600, lineHeight: 1, color: "#eb5c2e", letterSpacing: "-0.02em" }}>
+              <p className="font-display" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 600, lineHeight: 1, color: "#C4421A", letterSpacing: "-0.02em" }}>
                 R$ 3.900
               </p>
             </div>
@@ -172,7 +172,7 @@ export default function PocketPage() {
           <p className="font-body" style={{ ...EYEBROW, color: "#e8e0d6", marginBottom: "32px" }}>
             O QUE ACONTECE
           </p>
-          <h2 className="font-display" style={{ color: "#F5F5F2", fontWeight: 600, fontSize: "clamp(2.25rem, 5vw, 4rem)", marginBottom: "40px", lineHeight: 1.1 }}>
+          <h2 className="type-h1" style={{ color: "#F5F5F2", fontWeight: 600, marginBottom: "40px", lineHeight: 1.1 }}>
             Três <span style={{ color: "#eb5c2e" }}>formulários</span>. Uma síntese.
           </h2>
 
@@ -248,8 +248,8 @@ export default function PocketPage() {
           <p className="font-body" style={{ ...EYEBROW, color: "#e8e0d6", marginBottom: "32px" }}>
             PARA QUEM É
           </p>
-          <h2 className="font-display" style={{ color: "#F5F5F2", fontWeight: 600, fontSize: "clamp(2.25rem, 5vw, 4rem)", marginBottom: "40px", lineHeight: 1.1 }}>
-            Para quem <span style={{ color: "#eb5c2e" }}>é</span>
+          <h2 className="type-h1" style={{ color: "#F5F5F2", fontWeight: 600, marginBottom: "40px", lineHeight: 1.1 }}>
+            Para quem é
           </h2>
 
           <div style={{ borderBottom: "1px solid rgba(245,245,242,0.12)", paddingBottom: "24px", marginBottom: "24px" }}>
@@ -316,8 +316,8 @@ export default function PocketPage() {
           <p className="font-body" style={{ ...EYEBROW, color: "#1A5568", marginBottom: "32px" }}>
             CONDUÇÃO
           </p>
-          <h2 className="font-display" style={{ color: "#05262e", fontWeight: 600, fontSize: "clamp(2.25rem, 5vw, 4rem)", marginBottom: "40px", lineHeight: 1.1 }}>
-            Quem <span style={{ color: "#eb5c2e" }}>conduz</span>
+          <h2 className="type-h1" style={{ color: "#05262e", fontWeight: 600, marginBottom: "40px", lineHeight: 1.1 }}>
+            Quem <span style={{ color: "#C4421A" }}>conduz</span>
           </h2>
 
           <div style={{ borderBottom: "1px solid rgba(5,38,46,0.12)", paddingBottom: "32px", marginBottom: "32px" }}>
@@ -360,7 +360,7 @@ export default function PocketPage() {
           <p className="font-body" style={{ ...EYEBROW, color: "#e8e0d6", marginBottom: "32px" }}>
             DÚVIDAS COMUNS
           </p>
-          <h2 className="font-display" style={{ color: "#F5F5F2", fontWeight: 600, fontSize: "clamp(2.25rem, 5vw, 4rem)", marginBottom: "40px" }}>
+          <h2 className="type-h1" style={{ color: "#F5F5F2", fontWeight: 600, marginBottom: "40px" }}>
             Perguntas frequentes
           </h2>
           {faqItems.map((item, i) => (
@@ -387,7 +387,7 @@ export default function PocketPage() {
         heading="Antes de confirmar, fazemos uma conversa inicial para garantir que o pocket do INSPIRA é o produto certo para o momento da empresa. A conversa é parte do processo, não uma etapa burocrática."
         ctaLabel="RESPIRE"
         origin={ORIGINS.FAISCA_POCKET}
-        theme="light"
+        theme="dark"
       />
     </>
   );
