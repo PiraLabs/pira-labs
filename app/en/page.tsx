@@ -379,7 +379,7 @@ export default function EnHomePage() {
             combination is not common. It is what sustains every decision.
           </p>
           <Link
-            href="/en/about"
+            href="/sobre"
             className="inline-flex items-center justify-center min-h-[44px] px-6 py-3 rounded border border-off-white text-off-white bg-transparent font-body font-medium text-base transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
           >
             Meet Gabriela and Celso
@@ -400,7 +400,7 @@ export default function EnHomePage() {
             discover together.
           </p>
           <div className="flex flex-col items-center gap-2">
-            <a href={`/en/contact?origem=${ORIGINS.HOME_EN}`} className="btn-primary">
+            <a href={`/contato?origem=${ORIGINS.HOME_EN}`} className="btn-primary">
               Breathe →
             </a>
             <p className="text-sm font-body text-off-white/60">

@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
 
-// 32 rotas indexáveis do site Pira Labs — jun 2026.
+// 30 rotas indexáveis do site Pira Labs — jun 2026.
 // Rotas antigas (/servicos, /cases, /es/*, etc.) cobertas por redirects 301 no next.config.js.
-// EN: /en, /en/creative-business-turnaround, /en/about e /en/contact têm página real.
+// EN: /en e /en/creative-business-turnaround têm página real. /en/about e /en/contact suspensos.
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://piralabs.com.br";
   return [
@@ -44,7 +44,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // EN — páginas reais
     { url: `${base}/en`,                                      changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/en/creative-business-turnaround`,         changeFrequency: "monthly", priority: 0.5 },
-    { url: `${base}/en/about`,                                changeFrequency: "monthly", priority: 0.5 },
-    { url: `${base}/en/contact`,                              changeFrequency: "yearly",  priority: 0.4 },
   ];
 }

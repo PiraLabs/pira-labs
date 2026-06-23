@@ -70,14 +70,10 @@ export function Header() {
 
   const EN_PT_MAP: Record<string, string> = {
     '/en': '/',
-    '/en/about': '/sobre',
-    '/en/contact': '/contato',
     '/en/creative-business-turnaround': '/creative-business-turnaround',
   }
   const PT_EN_MAP: Record<string, string> = {
     '/': '/en',
-    '/sobre': '/en/about',
-    '/contato': '/en/contact',
     '/creative-business-turnaround': '/en/creative-business-turnaround',
   }
 

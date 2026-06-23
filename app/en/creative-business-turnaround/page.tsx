@@ -276,7 +276,7 @@ export default function EnCBTPage() {
             <p className="font-body" style={{ fontSize: "1rem", fontWeight: 300, color: SAND, marginBottom: "24px" }}>
               If you recognized three or more of these signals, the window of opportunity is still open.
             </p>
-            <a href={`/en/contact?origem=${ORIGINS.CREATIVE_BUSINESS_TURNAROUND_EN}`} className="btn-primary">
+            <a href={`/contato?origem=${ORIGINS.CREATIVE_BUSINESS_TURNAROUND_EN}`} className="btn-primary">
               Understand the next step &rarr;
             </a>
           </div>

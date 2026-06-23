@@ -33,8 +33,9 @@ const nextConfig = {
 
       // URLs em inglês do site provisório (5 rotas /en/* do sitemap antigo)
       { source: "/en/services", destination: "/inspira", permanent: true },
+      { source: "/en/about", destination: "/sobre", permanent: true },
       { source: "/en/cases", destination: "/#provas", permanent: true },
-      // /en/about e /en/contact têm páginas reais — sem redirect
+      { source: "/en/contact", destination: "/contato", permanent: true },
 
       // Proteção extra — EN sem prefixo /en/ (caso alguém tenha linkado sem prefixo)
       { source: "/services", destination: "/inspira", permanent: true },
