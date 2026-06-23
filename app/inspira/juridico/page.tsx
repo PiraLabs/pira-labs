@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: 'INSPIRA Jurídico — Diagnóstico de IA para escritórios | Pira Labs',
   description: 'O INSPIRA Jurídico é o diagnóstico da Pira Labs para escritórios e departamentos jurídicos: mapeia como o time usa IA hoje, onde pode estar exposto e entrega política mínima e plano de ação em 2 a 3 semanas. Conduzido por Gabriela Aguiar e Celso Gama.',
@@ -128,22 +130,19 @@ export default function InspiraJuridicoPage() {
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
             color: '#1A5568',
             marginBottom: '24px',
           }}>
             INSPIRA Jurídico · Diagnóstico de IA para escritórios e departamentos jurídicos
           </p>
-          <h1 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
-            fontWeight: 600,
-            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-            lineHeight: 1.1,
+          <h1 className="type-display" style={{
             color: '#05262e',
             marginBottom: '32px',
             maxWidth: '800px',
+            fontWeight: 700,
           }}>
             O que a maioria dos escritórios ainda não sabe sobre{' '}
             <span style={{ color: '#C4421A' }}>si mesmo</span>.
@@ -162,27 +161,15 @@ export default function InspiraJuridicoPage() {
           <div>
             <a
               href="/contato?origem=inspira-juridico"
-              style={{
-                display: 'inline-block',
-                fontFamily: 'AtypText, sans-serif',
-                fontWeight: 600,
-                fontSize: '0.8125rem',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                color: '#F5F5F2',
-                backgroundColor: '#05262e',
-                padding: '14px 28px',
-                textDecoration: 'none',
-              }}
+              className="btn-primary"
             >
-              Conversar com a Pira Labs
+              Conversar com a Pira Labs →
             </a>
             <p style={{
               fontFamily: 'AtypText, sans-serif',
-              fontWeight: 300,
+              fontWeight: 400,
               fontSize: '0.75rem',
-              color: '#05262e',
-              opacity: 0.6,
+              color: '#b0a596',
               marginTop: '12px',
             }}>
               Investimento sob consulta. A conversa de calibragem vem antes da proposta.
@@ -197,22 +184,19 @@ export default function InspiraJuridicoPage() {
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
             color: '#e8e0d6',
             marginBottom: '24px',
           }}>
             O que está em jogo
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
-            fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-            lineHeight: 1.15,
+          <h2 className="type-h1" style={{
             color: '#F5F5F2',
             marginBottom: '48px',
             maxWidth: '700px',
+            fontWeight: 400,
           }}>
             IA já está na rotina. O <span style={{ color: '#eb5c2e' }}>mapeamento</span> ainda não.
           </h2>
@@ -223,9 +207,17 @@ export default function InspiraJuridicoPage() {
             <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
               Dependendo da ferramenta, do plano contratado e das configurações, dado de cliente inserido em ferramenta de IA pode ser usado para treinamento, retenção ou melhoria do serviço. Peça com informação estratégica colada em ferramenta pública pode vazar contexto confidencial. <strong style={{ fontWeight: 600 }}>Decisão jurídica tomada com base em output de IA sem revisão técnica pode ser contestada.</strong> O improviso tem custo. E o custo raramente aparece antes de ser tarde.
             </p>
-            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
-              Em um escritório de advocacia, a Pira Labs identificou que o trabalho estimado internamente em 400 horas mensais de equipe estava sendo executado com gargalo de método, não de capacidade. Com processo redesenhado, o mesmo trabalho passou a rodar em 36 horas mensais, liberando R$160 mil de capacidade adicional de faturamento por mês com o mesmo time. O diagnóstico foi o que tornou essa leitura possível.
-            </p>
+            <div style={{ borderTop: '1px solid rgba(245,245,242,0.12)', paddingTop: '48px', marginTop: '8px', marginBottom: '8px' }}>
+              <p className="type-display" style={{ color: '#F5F5F2', fontWeight: 700, lineHeight: 1.0, marginBottom: '8px' }}>
+                400h <span style={{ color: '#b0a596', fontWeight: 400 }}>→</span> 36h
+              </p>
+              <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 400, fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#b0a596', marginBottom: '24px' }}>
+                mensais · mesmo time · R$160k de capacidade adicional estimada pelo cliente
+              </p>
+              <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
+                Em um escritório de advocacia, a Pira Labs identificou que o trabalho estimado internamente em 400 horas mensais de equipe estava sendo executado com gargalo de método, não de capacidade. Com processo redesenhado, o mesmo trabalho passou a rodar em 36 horas mensais. O diagnóstico foi o que tornou essa leitura possível.
+              </p>
+            </div>
             <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
               O INSPIRA Jurídico mapeia isso. Com precisão, sem julgamento e com plano de ação concreto ao final.
             </p>
@@ -239,22 +231,19 @@ export default function InspiraJuridicoPage() {
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
             color: '#e8e0d6',
             marginBottom: '24px',
           }}>
             O método
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
-            fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-            lineHeight: 1.15,
+          <h2 className="type-h1" style={{
             color: '#F5F5F2',
             marginBottom: '48px',
             maxWidth: '700px',
+            fontWeight: 400,
           }}>
             Seis camadas. Lente <span style={{ color: '#eb5c2e' }}>jurídica</span>.
           </h2>
@@ -293,67 +282,82 @@ export default function InspiraJuridicoPage() {
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
             color: '#1A5568',
             marginBottom: '24px',
           }}>
             Os entregáveis
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
-            fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-            lineHeight: 1.15,
+          <h2 className="type-h1" style={{
             color: '#05262e',
             marginBottom: '64px',
             maxWidth: '700px',
+            fontWeight: 400,
           }}>
             Cinco entregáveis. Diagnóstico que <span style={{ color: '#C4421A' }}>orienta</span>.
           </h2>
-          <div style={{ maxWidth: '800px', display: 'flex', flexDirection: 'column', gap: '40px' }}>
+          <div style={{ maxWidth: '960px' }}>
             {[
               {
+                num: '01',
                 titulo: 'Mapeamento de uso atual',
                 texto: 'Mapeamento de uso atual é o primeiro entregável do INSPIRA Jurídico. Levantamento de como a equipe usa IA hoje: quais ferramentas, em quais planos, com quais tipos de dado, com qual frequência. Feito via entrevistas estruturadas e análise documental. Sem suposição, sem generalização.',
               },
               {
+                num: '02',
                 titulo: 'Matriz de risco por tipo de uso',
                 texto: 'Matriz de risco por tipo de uso é o segundo entregável do INSPIRA Jurídico. Classificação dos usos identificados em três zonas: uso liberado pela política interna, uso condicionado a controles específicos (anonimização, revisão humana, ferramentas adequadas ao contexto), e uso não mapeado ou exposto sem política específica. O escritório sai sabendo onde pode estar exposto e por quê.',
               },
               {
+                num: '03',
                 titulo: 'Minuta operacional de política mínima de uso de IA',
                 texto: 'Minuta operacional de política mínima de uso de IA é o terceiro entregável do INSPIRA Jurídico. Rascunho prático para validação do jurídico responsável, DPO ou assessoria jurídica do cliente: critérios para o que pode ser autorizado, o que exige protocolo específico, como anonimizar documentos antes de inserir em ferramenta externa, quais critérios considerar para avaliar ferramentas e planos quando houver dados de cliente e quem aprova exceções. Calibrada para o perfil do escritório, não genérica.',
               },
               {
+                num: '04',
                 titulo: 'Plano de ação priorizado',
                 texto: 'Plano de ação priorizado é o quarto entregável do INSPIRA Jurídico. Lista de 5 a 10 ações ordenadas por urgência e esforço: onde o escritório pode ter exposição imediata, onde há oportunidade de ganho rápido com IA bem aplicada e o que pode esperar o próximo ciclo.',
               },
               {
+                num: '05',
                 titulo: 'Sessão de leitura conjunta',
                 texto: 'Sessão de leitura conjunta é o quinto entregável do INSPIRA Jurídico. Encontro de 45 a 60 minutos com os decisores para apresentar o diagnóstico, discutir a minuta de política mínima e definir o próximo passo. O diagnóstico é de propriedade do cliente e pode ser usado com qualquer parceiro ou internamente.',
               },
             ].map((item) => (
-              <div key={item.titulo} style={{ borderTop: '1px solid rgba(5,38,46,0.15)', paddingTop: '32px' }}>
-                <h3 style={{
-                  fontFamily: 'AtypDisplay, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '1.125rem',
-                  color: '#05262e',
-                  marginBottom: '12px',
-                }}>
-                  {item.titulo}
-                </h3>
-                <p style={{
-                  fontFamily: 'AtypText, sans-serif',
-                  fontWeight: 300,
-                  fontSize: '1rem',
-                  lineHeight: 1.7,
-                  color: '#05262e',
-                }}>
-                  {item.texto}
-                </p>
+              <div
+                key={item.titulo}
+                style={{ borderTop: '1px solid rgba(5,38,46,0.12)', paddingTop: '40px', paddingBottom: '40px' }}
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+                  <div>
+                    <p style={{
+                      fontFamily: 'AtypText, sans-serif',
+                      fontWeight: 400,
+                      fontSize: '0.75rem',
+                      letterSpacing: '0.14em',
+                      textTransform: 'uppercase',
+                      color: '#b0a596',
+                      marginBottom: '16px',
+                    }}>
+                      {item.num}
+                    </p>
+                    <h3 className="type-h1" style={{ color: '#05262e', fontWeight: 400 }}>
+                      {item.titulo}
+                    </h3>
+                  </div>
+                  <p style={{
+                    fontFamily: 'AtypText, sans-serif',
+                    fontWeight: 300,
+                    fontSize: '1rem',
+                    lineHeight: 1.7,
+                    color: '#05262e',
+                    paddingTop: '0',
+                  }}>
+                    {item.texto}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -366,22 +370,19 @@ export default function InspiraJuridicoPage() {
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
             color: '#e8e0d6',
             marginBottom: '24px',
           }}>
             Qualificação
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
-            fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-            lineHeight: 1.15,
+          <h2 className="type-h1" style={{
             color: '#F5F5F2',
             marginBottom: '64px',
             maxWidth: '700px',
+            fontWeight: 400,
           }}>
             Para quem faz sentido e para quem <span style={{ color: '#eb5c2e' }}>não faz</span>.
           </h2>
@@ -393,7 +394,7 @@ export default function InspiraJuridicoPage() {
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
                 fontSize: '0.75rem',
-                letterSpacing: '0.1em',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#e8e0d6',
                 marginBottom: '32px',
@@ -429,7 +430,7 @@ export default function InspiraJuridicoPage() {
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
                 fontSize: '0.75rem',
-                letterSpacing: '0.1em',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#e8e0d6',
                 marginBottom: '32px',
@@ -443,7 +444,7 @@ export default function InspiraJuridicoPage() {
                   'Quem não tem autonomia para mudar como o time usa IA após o diagnóstico. O resultado aponta o que precisa mudar. Se a decisão de agir não está na mesa de quem vai receber o diagnóstico, ele não tem onde pousar.',
                 ].map((texto, i) => (
                   <div key={i} style={{ display: 'flex', gap: '16px' }}>
-                    <span style={{ color: '#e8e0d6', marginTop: '4px', flexShrink: 0 }}>&#8212;</span>
+                    <span style={{ color: '#e8e0d6', marginTop: '4px', flexShrink: 0 }}>·</span>
                     <p style={{
                       fontFamily: 'AtypText, sans-serif',
                       fontWeight: 300,
@@ -460,23 +461,12 @@ export default function InspiraJuridicoPage() {
           </div>
 
           {/* CTA intermediário */}
-          <div style={{ marginTop: '64px', paddingTop: '48px', borderTop: '1px solid rgba(232,224,214,0.15)' }}>
+          <div style={{ marginTop: '64px', paddingTop: '48px', borderTop: '1px solid rgba(232,224,214,0.12)' }}>
             <a
               href="/contato?origem=inspira-juridico"
-              style={{
-                display: 'inline-block',
-                fontFamily: 'AtypText, sans-serif',
-                fontWeight: 600,
-                fontSize: '0.8125rem',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                color: '#F5F5F2',
-                backgroundColor: '#eb5c2e',
-                padding: '14px 28px',
-                textDecoration: 'none',
-              }}
+              className="btn-primary"
             >
-              Faz sentido conversar
+              Faz sentido conversar →
             </a>
           </div>
         </div>
@@ -488,22 +478,19 @@ export default function InspiraJuridicoPage() {
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
             color: '#e8e0d6',
             marginBottom: '24px',
           }}>
             Execução direta
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
-            fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-            lineHeight: 1.15,
+          <h2 className="type-h1" style={{
             color: '#F5F5F2',
             marginBottom: '48px',
             maxWidth: '700px',
+            fontWeight: 400,
           }}>
             Quem lê é quem <span style={{ color: '#eb5c2e' }}>entrega</span>.
           </h2>
@@ -567,11 +554,10 @@ export default function InspiraJuridicoPage() {
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
                 fontSize: '0.75rem',
-                letterSpacing: '0.08em',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
-                color: '#e8e0d6',
+                color: '#b0a596',
                 textDecoration: 'none',
-                opacity: 0.7,
               }}
             >
               Saiba mais sobre os fundadores →
@@ -586,22 +572,19 @@ export default function InspiraJuridicoPage() {
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
             color: '#1A5568',
             marginBottom: '24px',
           }}>
             Perguntas frequentes
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
-            fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-            lineHeight: 1.15,
+          <h2 className="type-h1" style={{
             color: '#05262e',
             marginBottom: '64px',
             maxWidth: '700px',
+            fontWeight: 400,
           }}>
             O que você ainda quer saber antes de <span style={{ color: '#C4421A' }}>conversar</span>.
           </h2>
@@ -632,7 +615,7 @@ export default function InspiraJuridicoPage() {
                 resposta: 'Sempre. O NDA é assinado antes de qualquer conversa com a equipe e antes de qualquer acesso a documentos, sistemas ou informações do escritório. Confidencialidade não é protocolo. É condição de trabalho. Se o seu contexto exige cláusulas específicas além do NDA padrão, mencione na conversa de calibragem.',
               },
             ].map((item) => (
-              <details key={item.pergunta} style={{ borderBottom: '1px solid rgba(5,38,46,0.15)' }}>
+              <details key={item.pergunta} className="details-clean" style={{ borderBottom: '1px solid rgba(5,38,46,0.12)' }}>
                 <summary style={{
                   fontFamily: 'AtypText, sans-serif',
                   fontWeight: 400,
@@ -668,57 +651,32 @@ export default function InspiraJuridicoPage() {
       {/* FINALCTA | Ink */}
       <section style={{ backgroundColor: '#05262e', padding: '120px 80px', textAlign: 'center' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
-            fontWeight: 300,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-            lineHeight: 1.2,
+          <h2 className="type-h2" style={{
             color: '#F5F5F2',
             marginBottom: '40px',
+            fontWeight: 400,
           }}>
             O diagnóstico nomeia. O que fazer pertence a você.
           </h2>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '24px' }}>
             <a
               href="/contato?origem=inspira-juridico"
-              style={{
-                display: 'inline-block',
-                fontFamily: 'AtypText, sans-serif',
-                fontWeight: 600,
-                fontSize: '0.8125rem',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                color: '#F5F5F2',
-                backgroundColor: '#eb5c2e',
-                padding: '16px 40px',
-                textDecoration: 'none',
-              }}
+              className="btn-primary"
             >
-              RESPIRE
+              Conversar com a Pira Labs →
             </a>
             <a
               href="/transpira/juridico"
-              style={{
-                display: 'inline-block',
-                fontFamily: 'AtypText, sans-serif',
-                fontWeight: 600,
-                fontSize: '0.8125rem',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                color: '#F5F5F2',
-                border: '1px solid rgba(245,245,242,0.4)',
-                padding: '16px 40px',
-                textDecoration: 'none',
-              }}
+              className="btn-secondary"
             >
-              Conhecer o TRANSPIRA Jurídico
+              Ver o TRANSPIRA Jurídico
             </a>
           </div>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
-            fontWeight: 300,
+            fontWeight: 400,
             fontSize: '0.75rem',
-            color: '#e8e0d6',
+            color: '#b0a596',
             marginBottom: '32px',
           }}>
             Conversa inicial sem compromisso. Respondemos em até 2 dias úteis.
@@ -728,7 +686,7 @@ export default function InspiraJuridicoPage() {
             fontWeight: 300,
             fontSize: '0.8125rem',
             lineHeight: 1.6,
-            color: 'rgba(245,245,242,0.7)',
+            color: '#b0a596',
             maxWidth: '640px',
             margin: '0 auto',
           }}>
