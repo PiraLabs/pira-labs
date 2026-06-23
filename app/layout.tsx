@@ -21,7 +21,7 @@ const atypDisplay = localFont({
     { path: "../public/fonts/AtypDisplay-Bold.woff2",     weight: "700", style: "normal" },
   ],
   variable: "--font-atyp-display",
-  display: "fallback",
+  display: "swap",
   preload: true,
   adjustFontFallback: "Arial",
   fallback: ["Arial", "sans-serif"],
