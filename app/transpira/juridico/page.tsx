@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: 'TRANSPIRA Jurídico · Execução operacional de legal ops · Pira Labs',
   description: 'O TRANSPIRA Jurídico é a frente de execução da Pira Labs para operações jurídicas: implementa legal ops com supervisão humana obrigatória em cada entrega, sem substituir advogado habilitado. Conduzido por Celso Gama.',
@@ -145,25 +147,21 @@ export default function TranspiraJuridicoPage() {
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
             color: '#1A5568',
             marginBottom: '24px',
           }}>
             TRANSPIRA JURÍDICO · Execução operacional de legal ops
           </p>
-          <h1 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
-            fontWeight: 600,
-            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-            lineHeight: 1.1,
+          <h1 className="type-display" style={{
             color: '#05262e',
             marginBottom: '32px',
             maxWidth: '800px',
+            fontWeight: 700,
           }}>
-            O trabalho jurídico que consome sua equipe hoje pode ser feito de outra{' '}
-            <span style={{ color: '#C4421A' }}>forma</span>.
+            O trabalho <span style={{ color: '#C4421A' }}>mecânico</span> que consome sua equipe pode ser feito de outra forma.
           </h1>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
@@ -179,20 +177,9 @@ export default function TranspiraJuridicoPage() {
           <div>
             <a
               href="/contato?origem=transpira-juridico"
-              style={{
-                display: 'inline-block',
-                fontFamily: 'AtypText, sans-serif',
-                fontWeight: 600,
-                fontSize: '0.8125rem',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                color: '#F5F5F2',
-                backgroundColor: '#05262e',
-                padding: '14px 28px',
-                textDecoration: 'none',
-              }}
+              className="btn-primary"
             >
-              CONVERSAR COM A PIRA LABS
+              Conversar com a Pira Labs →
             </a>
             <p style={{
               fontFamily: 'AtypText, sans-serif',
@@ -214,22 +201,19 @@ export default function TranspiraJuridicoPage() {
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
             color: '#e8e0d6',
             marginBottom: '24px',
           }}>
             O QUE O MERCADO NÃO RESOLVEU
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
-            fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-            lineHeight: 1.15,
+          <h2 className="type-h1" style={{
             color: '#F5F5F2',
             marginBottom: '48px',
             maxWidth: '700px',
+            fontWeight: 400,
           }}>
             IA jurídica sem método escala o ruído que já{' '}
             <span style={{ color: '#eb5c2e' }}>existia</span>.
@@ -239,21 +223,26 @@ export default function TranspiraJuridicoPage() {
               Escritórios de advocacia têm uma camada de complexidade que outras empresas de serviços não têm. <strong style={{ fontWeight: 600 }}>Confidencialidade rigorosa. Responsabilidade técnica intransferível do advogado.</strong> Volume de trabalho mecânico que cresceu nos últimos anos sem que a estrutura de entrega tenha acompanhado.
             </p>
             <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
-              A maioria das tentativas de IA jurídica entra pelo lado errado. <strong style={{ fontWeight: 600 }}>Ferramenta primeiro, processo depois.</strong> Um relatório do MIT Project NANDA divulgado em 2025 apontou que <strong style={{ fontWeight: 600 }}>95% das organizações analisadas não obtiveram retorno financeiro mensurável com IA generativa.</strong> No jurídico, a causa é a mesma: sem método antes da ferramenta, o resultado é mais uma camada de retrabalho sobre um fluxo que já estava quebrado.
-            </p>
-            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
-              Com o TRANSPIRA Jurídico, um escritório de advocacia executou em <strong style={{ fontWeight: 600 }}>36 horas mensais</strong> o que estimava que ocupava <strong style={{ fontWeight: 600 }}>400 horas da equipe.</strong> O tempo liberado resultou em <strong style={{ fontWeight: 600 }}>R$160 mil de capacidade adicional de faturamento por mês,</strong> com a mesma equipe. Não foi substituição. Foi o julgamento do advogado operando sem o peso do trabalho mecânico.
+              A maioria das tentativas de IA jurídica entra pelo lado errado. <strong style={{ fontWeight: 600 }}>Ferramenta primeiro, processo depois.</strong> O relatório &#8220;The GenAI Divide: State of AI in Business 2025&#8221;, do MIT Media Lab, iniciativa NANDA, publicado em julho de 2025, identificou que <strong style={{ fontWeight: 600 }}>95% dos pilotos de IA generativa estagnam na fase piloto, sem impacto mensurável no resultado financeiro.</strong> No jurídico, a causa é a mesma: sem método antes da ferramenta, o resultado é mais uma camada de retrabalho sobre um fluxo que já estava quebrado.
             </p>
           </div>
-          <blockquote style={{ borderLeft: '2px solid #eb5c2e', paddingLeft: '24px', marginTop: '16px', maxWidth: '720px' }}>
-            <p style={{
-              fontFamily: 'AtypDisplay, sans-serif',
-              fontWeight: 300,
-              fontSize: '1.25rem',
+          <div style={{ borderTop: '1px solid rgba(245,245,242,0.12)', paddingTop: '48px', marginTop: '8px', marginBottom: '8px' }}>
+            <p className="type-display" style={{ color: '#F5F5F2', fontWeight: 700, lineHeight: 1.0, marginBottom: '8px' }}>
+              400h <span style={{ color: '#b0a596', fontWeight: 400 }}>→</span> 36h
+            </p>
+            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 400, fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#b0a596', marginBottom: '24px' }}>
+              mensais · mesmo time · R$160k de capacidade adicional estimada pelo cliente
+            </p>
+            <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2', marginBottom: '48px' }}>
+              Com o TRANSPIRA Jurídico, um escritório de advocacia executou em 36 horas mensais o que estimava que ocupava 400 horas da equipe. Não foi substituição. Foi o julgamento do advogado operando sem o peso do trabalho mecânico.
+            </p>
+          </div>
+          <blockquote style={{ borderLeft: '2px solid #eb5c2e', paddingLeft: '32px', marginTop: '0', maxWidth: '720px' }}>
+            <p className="type-h2" style={{
               fontStyle: 'italic',
-              lineHeight: 1.5,
               color: '#F5F5F2',
-              marginBottom: '12px',
+              marginBottom: '16px',
+              fontWeight: 300,
             }}>
               &#8220;O escritório que entra no TRANSPIRA Jurídico não terceiriza a responsabilidade jurídica. Libera a equipe jurídica para exercer o que só ela pode exercer.&#8221;
             </p>
@@ -261,11 +250,11 @@ export default function TranspiraJuridicoPage() {
               fontFamily: 'AtypText, sans-serif',
               fontWeight: 600,
               fontSize: '0.75rem',
-              letterSpacing: '0.08em',
+              letterSpacing: '0.14em',
               textTransform: 'uppercase',
-              color: '#e8e0d6',
+              color: '#b0a596',
             }}>
-              Celso Gama, COO e Co-founder da Pira Labs
+              Celso Gama · COO e Co-founder da Pira Labs
             </p>
           </blockquote>
         </div>
@@ -277,22 +266,19 @@ export default function TranspiraJuridicoPage() {
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
             color: '#e8e0d6',
             marginBottom: '24px',
           }}>
             O método
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
-            fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-            lineHeight: 1.15,
+          <h2 className="type-h1" style={{
             color: '#F5F5F2',
             marginBottom: '40px',
             maxWidth: '700px',
+            fontWeight: 400,
           }}>
             Execução operacional de legal ops. Quem conduz entende de processo jurídico, não só de{' '}
             <span style={{ color: '#eb5c2e' }}>ferramenta</span>.
@@ -309,8 +295,8 @@ export default function TranspiraJuridicoPage() {
             <p style={{
               fontFamily: 'AtypText, sans-serif',
               fontWeight: 600,
-              fontSize: '0.625rem',
-              letterSpacing: '0.12em',
+              fontSize: '0.75rem',
+              letterSpacing: '0.14em',
               textTransform: 'uppercase',
               color: '#e8e0d6',
               marginBottom: '16px',
@@ -330,22 +316,19 @@ export default function TranspiraJuridicoPage() {
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
             color: '#1A5568',
             marginBottom: '24px',
           }}>
             COMO TRABALHAMOS
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
-            fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-            lineHeight: 1.15,
+          <h2 className="type-h1" style={{
             color: '#05262e',
             marginBottom: '64px',
             maxWidth: '700px',
+            fontWeight: 400,
           }}>
             Dois modelos. Um critério único: a responsabilidade jurídica não sai do{' '}
             <span style={{ color: '#C4421A' }}>advogado</span>.
@@ -353,12 +336,12 @@ export default function TranspiraJuridicoPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))', gap: '32px' }}>
 
             {/* MODELO A */}
-            <div style={{ backgroundColor: '#F5F5F2', padding: 'clamp(24px, 4vw, 48px)', borderTop: '3px solid #1A5568' }}>
+            <div style={{ backgroundColor: '#F5F5F2', padding: 'clamp(24px, 4vw, 48px)', borderTop: '1px solid rgba(5,38,46,0.12)' }}>
               <p style={{
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
-                fontSize: '0.625rem',
-                letterSpacing: '0.12em',
+                fontSize: '0.75rem',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#1A5568',
                 marginBottom: '16px',
@@ -381,8 +364,8 @@ export default function TranspiraJuridicoPage() {
               <p style={{
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
-                fontSize: '0.625rem',
-                letterSpacing: '0.10em',
+                fontSize: '0.75rem',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#1A5568',
                 marginBottom: '12px',
@@ -398,7 +381,7 @@ export default function TranspiraJuridicoPage() {
                   'Gates de aprovação humana em cada etapa',
                 ].map((item) => (
                   <li key={item} style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.875rem', lineHeight: 1.6, color: '#05262e', display: 'flex', gap: '10px' }}>
-                    <span style={{ color: '#1A5568', flexShrink: 0 }}>&#8212;</span>
+                    <span style={{ color: '#1A5568', flexShrink: 0 }}>·</span>
                     {item}
                   </li>
                 ))}
@@ -414,12 +397,12 @@ export default function TranspiraJuridicoPage() {
             </div>
 
             {/* MODELO B */}
-            <div style={{ backgroundColor: '#F5F5F2', padding: 'clamp(24px, 4vw, 48px)', borderTop: '3px solid #1A5568' }}>
+            <div style={{ backgroundColor: '#F5F5F2', padding: 'clamp(24px, 4vw, 48px)', borderTop: '1px solid rgba(5,38,46,0.12)' }}>
               <p style={{
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
-                fontSize: '0.625rem',
-                letterSpacing: '0.12em',
+                fontSize: '0.75rem',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#1A5568',
                 marginBottom: '16px',
@@ -442,8 +425,8 @@ export default function TranspiraJuridicoPage() {
               <p style={{
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
-                fontSize: '0.625rem',
-                letterSpacing: '0.10em',
+                fontSize: '0.75rem',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#1A5568',
                 marginBottom: '12px',
@@ -459,7 +442,7 @@ export default function TranspiraJuridicoPage() {
                   'Preparação de materiais preliminares para revisão e validação do advogado',
                 ].map((item) => (
                   <li key={item} style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.875rem', lineHeight: 1.6, color: '#05262e', display: 'flex', gap: '10px' }}>
-                    <span style={{ color: '#1A5568', flexShrink: 0 }}>&#8212;</span>
+                    <span style={{ color: '#1A5568', flexShrink: 0 }}>·</span>
                     {item}
                   </li>
                 ))}
@@ -475,7 +458,7 @@ export default function TranspiraJuridicoPage() {
             </div>
 
           </div>
-          <p style={{ marginTop: '24px', fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.75rem', color: '#05262e', opacity: 0.5 }}>
+          <p style={{ marginTop: '24px', fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.75rem', color: '#b0a596' }}>
             * Mediante consulta e disponibilidade. Por sermos uma boutique, trabalhamos com agenda limitada de projetos simultâneos no Modelo B.
           </p>
         </div>
@@ -487,22 +470,19 @@ export default function TranspiraJuridicoPage() {
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
             color: '#e8e0d6',
             marginBottom: '24px',
           }}>
             PARA QUEM É O TRANSPIRA JURÍDICO
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
-            fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-            lineHeight: 1.15,
+          <h2 className="type-h1" style={{
             color: '#F5F5F2',
             marginBottom: '64px',
             maxWidth: '700px',
+            fontWeight: 400,
           }}>
             Escritórios e departamentos jurídicos com volume. Decisores com autonomia real para mudar o funcionamento da{' '}
             <span style={{ color: '#eb5c2e' }}>operação</span>.
@@ -527,7 +507,7 @@ export default function TranspiraJuridicoPage() {
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
                 fontSize: '0.75rem',
-                letterSpacing: '0.1em',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#e8e0d6',
                 marginBottom: '32px',
@@ -542,37 +522,25 @@ export default function TranspiraJuridicoPage() {
                   { texto: <>O escritório está em <strong style={{ fontWeight: 600, color: '#F5F5F2' }}>colapso operacional</strong> sem estrutura mínima para absorver mudança.</> },
                 ].map((item, i) => (
                   <div key={i} style={{ display: 'flex', gap: '16px' }}>
-                    <span style={{ color: '#e8e0d6', marginTop: '4px', flexShrink: 0 }}>&#8212;</span>
+                    <span style={{ color: '#e8e0d6', marginTop: '4px', flexShrink: 0 }}>·</span>
                     <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.9375rem', lineHeight: 1.7, color: '#e8e0d6' }}>{item.texto}</p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
-          <div style={{ marginTop: '64px', paddingTop: '48px', borderTop: '1px solid rgba(232,224,214,0.15)' }}>
+          <div style={{ marginTop: '64px', paddingTop: '48px', borderTop: '1px solid rgba(232,224,214,0.12)' }}>
             <a
               href="/contato?origem=transpira-juridico"
-              style={{
-                display: 'inline-block',
-                fontFamily: 'AtypText, sans-serif',
-                fontWeight: 600,
-                fontSize: '0.8125rem',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                color: '#F5F5F2',
-                backgroundColor: '#eb5c2e',
-                padding: '14px 28px',
-                textDecoration: 'none',
-              }}
+              className="btn-primary"
             >
-              CONVERSAR COM A PIRA LABS
+              Conversar com a Pira Labs →
             </a>
             <p style={{
               fontFamily: 'AtypText, sans-serif',
-              fontWeight: 300,
+              fontWeight: 400,
               fontSize: '0.75rem',
-              color: '#e8e0d6',
-              opacity: 0.6,
+              color: '#b0a596',
               marginTop: '12px',
             }}>
               Conversa de qualificação mútua. Investimento sob consulta após alinhamento de escopo.
@@ -587,22 +555,19 @@ export default function TranspiraJuridicoPage() {
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
             color: '#e8e0d6',
             marginBottom: '24px',
           }}>
             Execução direta
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
-            fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-            lineHeight: 1.15,
+          <h2 className="type-h1" style={{
             color: '#F5F5F2',
             marginBottom: '48px',
             maxWidth: '700px',
+            fontWeight: 400,
           }}>
             Celso Gama entra na operação. Sai quando o resultado acordado é{' '}
             <span style={{ color: '#eb5c2e' }}>verificado</span>.
@@ -649,22 +614,19 @@ export default function TranspiraJuridicoPage() {
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
-            fontSize: '0.625rem',
-            letterSpacing: '0.12em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.14em',
             textTransform: 'uppercase',
             color: '#1A5568',
             marginBottom: '24px',
           }}>
             Perguntas frequentes
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
-            fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-            lineHeight: 1.15,
+          <h2 className="type-h1" style={{
             color: '#05262e',
             marginBottom: '64px',
             maxWidth: '700px',
+            fontWeight: 400,
           }}>
             O que escritórios perguntam antes de{' '}
             <span style={{ color: '#C4421A' }}>conversar</span>.
@@ -700,7 +662,7 @@ export default function TranspiraJuridicoPage() {
                 a: <>Sim. Quem já tem clareza sobre o problema e quer ir direto para execução pode começar pelo TRANSPIRA Jurídico. Nesses casos, <strong style={{ fontWeight: 600 }}>incluímos uma fase de leitura no início do projeto</strong> para garantir que a Pira Labs entende o contexto antes de construir qualquer coisa. Quem não tem esse diagnóstico pronto pode fazer o INSPIRA Jurídico como parte da abertura do projeto.</>,
               },
             ].map((item) => (
-              <details key={item.q} style={{ borderBottom: '1px solid rgba(5,38,46,0.15)' }}>
+              <details key={item.q} className="details-clean" style={{ borderBottom: '1px solid rgba(5,38,46,0.12)' }}>
                 <summary style={{
                   fontFamily: 'AtypText, sans-serif',
                   fontWeight: 400,
@@ -736,57 +698,32 @@ export default function TranspiraJuridicoPage() {
       {/* FINALCTA | Ink */}
       <section style={{ backgroundColor: '#05262e', padding: '120px 80px', textAlign: 'center' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
-            fontWeight: 300,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-            lineHeight: 1.2,
+          <h2 className="type-h2" style={{
             color: '#F5F5F2',
             marginBottom: '40px',
+            fontWeight: 400,
           }}>
             O julgamento jurídico fica com você. O trabalho mecânico, não precisa.
           </h2>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '24px' }}>
             <a
               href="/contato?origem=transpira-juridico"
-              style={{
-                display: 'inline-block',
-                fontFamily: 'AtypText, sans-serif',
-                fontWeight: 600,
-                fontSize: '0.8125rem',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                color: '#F5F5F2',
-                backgroundColor: '#eb5c2e',
-                padding: '16px 40px',
-                textDecoration: 'none',
-              }}
+              className="btn-primary"
             >
-              RESPIRE
+              Conversar com a Pira Labs →
             </a>
             <a
               href="/inspira/juridico"
-              style={{
-                display: 'inline-block',
-                fontFamily: 'AtypText, sans-serif',
-                fontWeight: 600,
-                fontSize: '0.8125rem',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                color: '#F5F5F2',
-                border: '1px solid rgba(245,245,242,0.4)',
-                padding: '16px 40px',
-                textDecoration: 'none',
-              }}
+              className="btn-secondary"
             >
-              CONHECER O INSPIRA JURÍDICO
+              Ver o INSPIRA Jurídico
             </a>
           </div>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
-            fontWeight: 300,
+            fontWeight: 400,
             fontSize: '0.75rem',
-            color: '#e8e0d6',
+            color: '#b0a596',
             marginBottom: '32px',
           }}>
             Conversa inicial sem compromisso.
@@ -796,7 +733,7 @@ export default function TranspiraJuridicoPage() {
             fontWeight: 300,
             fontSize: '0.8125rem',
             lineHeight: 1.6,
-            color: 'rgba(245,245,242,0.7)',
+            color: '#b0a596',
             maxWidth: '640px',
             margin: '0 auto',
           }}>
