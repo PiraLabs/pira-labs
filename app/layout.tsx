@@ -90,21 +90,20 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <CookieBannerLoader />
+        {/* Google Analytics G-Q9W3V4GPQ8 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Q9W3V4GPQ8"
+          strategy="lazyOnload"
+        />
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Q9W3V4GPQ8');
+          `}
+        </Script>
       </body>
-
-      {/* Google Analytics G-Q9W3V4GPQ8 */}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-Q9W3V4GPQ8"
-        strategy="lazyOnload"
-      />
-      <Script id="google-analytics" strategy="lazyOnload">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-Q9W3V4GPQ8');
-        `}
-      </Script>
     </html>
   );
 }
