@@ -59,7 +59,7 @@ const nextConfig = {
       { source: "/news", destination: "/antes-pira", permanent: true },
 
       // Migração editorial
-      { source: "/empresa-cresce-margem-some", destination: "/crescimento-sem-margem", permanent: true },
+      { source: "/empresa-cresce-margem-some", destination: "/creative-business-turnaround", permanent: true },
 
       // Pocket e Imersão
       { source: "/imersa", destination: "/faisca/imersao-em-ia", permanent: true },
