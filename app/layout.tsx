@@ -21,7 +21,7 @@ const atypDisplay = localFont({
     { path: "../public/fonts/AtypDisplay-Bold.woff2",     weight: "700", style: "normal" },
   ],
   variable: "--font-atyp-display",
-  display: "swap",
+  display: "fallback",
   preload: true,
   adjustFontFallback: "Arial",
   fallback: ["Arial", "sans-serif"],
@@ -89,8 +89,6 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <CookieBannerLoader />
-        {/* Google Analytics G-Q9W3V4GPQ8 — desativado temporariamente para performance mobile */}
-        {/* Reativar quando houver dados reais a coletar */}
       </body>
     </html>
   );

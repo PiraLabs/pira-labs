@@ -309,6 +309,3 @@
     text-transform: uppercase;
   }
 }
-
-/* Hero HOME-1 — float dos nós gerenciado por GSAP (ver HeroSection.tsx).
-   prefers-reduced-motion: desabilitado no useEffect antes de iniciar os tweens. */
