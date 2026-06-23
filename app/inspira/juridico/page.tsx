@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { ORIGINS } from '@/lib/constants'
 
 export const dynamic = 'force-static'
 
@@ -114,7 +115,8 @@ export default function InspiraJuridicoPage() {
       />
 
       {/* BREADCRUMB */}
-      <nav aria-label="Breadcrumb" style={{ backgroundColor: '#e8e0d6', padding: '12px 80px' }}>
+      <nav aria-label="Breadcrumb" style={{ backgroundColor: '#e8e0d6' }}>
+        <div className="container-site" style={{ paddingTop: '12px', paddingBottom: '12px' }}>
         <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: 0, padding: 0, fontSize: '0.75rem', color: '#05262e' }}>
           <li><a href="/" style={{ color: '#05262e', textDecoration: 'none' }}>Home</a></li>
           <li style={{ opacity: 0.4 }}>/</li>
@@ -122,11 +124,12 @@ export default function InspiraJuridicoPage() {
           <li style={{ opacity: 0.4 }}>/</li>
           <li style={{ opacity: 0.6 }}>Jurídico</li>
         </ol>
+        </div>
       </nav>
 
       {/* S1 — HERO | Sand */}
-      <section style={{ backgroundColor: '#e8e0d6', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <section className="section-pt section-pb" style={{ backgroundColor: '#e8e0d6' }}>
+        <div className="container-site">
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -160,7 +163,7 @@ export default function InspiraJuridicoPage() {
           </p>
           <div>
             <a
-              href="/contato?origem=inspira-juridico"
+              href={`/contato?origem=${ORIGINS.INSPIRA_JURIDICO}`}
               className="btn-primary"
             >
               Conversar com a Pira Labs →
@@ -179,8 +182,8 @@ export default function InspiraJuridicoPage() {
       </section>
 
       {/* S2 — O PROBLEMA | Ink */}
-      <section style={{ backgroundColor: '#05262e', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <section className="section-pt section-pb" style={{ backgroundColor: '#05262e' }}>
+        <div className="container-site">
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -226,8 +229,8 @@ export default function InspiraJuridicoPage() {
       </section>
 
       {/* S3 — O QUE É O INSPIRA JURÍDICO | Teal */}
-      <section style={{ backgroundColor: '#004757', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <section className="section-pt section-pb" style={{ backgroundColor: '#004757' }}>
+        <div className="container-site">
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -277,8 +280,8 @@ export default function InspiraJuridicoPage() {
       </section>
 
       {/* S4 — O QUE VOCÊ RECEBE | Sand */}
-      <section style={{ backgroundColor: '#e8e0d6', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <section className="section-pt section-pb" style={{ backgroundColor: '#e8e0d6' }}>
+        <div className="container-site">
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -365,8 +368,8 @@ export default function InspiraJuridicoPage() {
       </section>
 
       {/* S5 — PARA QUEM É | Ink */}
-      <section style={{ backgroundColor: '#05262e', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <section className="section-pt section-pb" style={{ backgroundColor: '#05262e' }}>
+        <div className="container-site">
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -386,7 +389,7 @@ export default function InspiraJuridicoPage() {
           }}>
             Para quem faz sentido e para quem <span style={{ color: '#eb5c2e' }}>não faz</span>.
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '80px', maxWidth: '1000px' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20" style={{ maxWidth: '1000px' }}>
 
             {/* Coluna esquerda */}
             <div>
@@ -463,7 +466,7 @@ export default function InspiraJuridicoPage() {
           {/* CTA intermediário */}
           <div style={{ marginTop: '64px', paddingTop: '48px', borderTop: '1px solid rgba(232,224,214,0.12)' }}>
             <a
-              href="/contato?origem=inspira-juridico"
+              href={`/contato?origem=${ORIGINS.INSPIRA_JURIDICO}`}
               className="btn-primary"
             >
               Faz sentido conversar →
@@ -473,8 +476,8 @@ export default function InspiraJuridicoPage() {
       </section>
 
       {/* S6 — QUEM CONDUZ | Teal */}
-      <section style={{ backgroundColor: '#004757', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <section className="section-pt section-pb" style={{ backgroundColor: '#004757' }}>
+        <div className="container-site">
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -505,15 +508,9 @@ export default function InspiraJuridicoPage() {
           }}>
             Não há equipe júnior entre o dado e a interpretação. Gabriela Aguiar e Celso Gama conduzem o INSPIRA Jurídico do início ao fim.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '64px', maxWidth: '1000px' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16" style={{ maxWidth: '1000px' }}>
             <div>
-              <h3 style={{
-                fontFamily: 'AtypDisplay, sans-serif',
-                fontWeight: 600,
-                fontSize: '1.25rem',
-                color: '#F5F5F2',
-                marginBottom: '16px',
-              }}>
+              <h3 className="type-h3" style={{ color: '#F5F5F2', marginBottom: '16px' }}>
                 Gabriela Aguiar
               </h3>
               <p style={{
@@ -527,13 +524,7 @@ export default function InspiraJuridicoPage() {
               </p>
             </div>
             <div>
-              <h3 style={{
-                fontFamily: 'AtypDisplay, sans-serif',
-                fontWeight: 600,
-                fontSize: '1.25rem',
-                color: '#F5F5F2',
-                marginBottom: '16px',
-              }}>
+              <h3 className="type-h3" style={{ color: '#F5F5F2', marginBottom: '16px' }}>
                 Celso Gama
               </h3>
               <p style={{
@@ -567,8 +558,8 @@ export default function InspiraJuridicoPage() {
       </section>
 
       {/* S7 — FAQ | Sand */}
-      <section style={{ backgroundColor: '#e8e0d6', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <section className="section-pt section-pb" style={{ backgroundColor: '#e8e0d6' }}>
+        <div className="container-site">
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -649,7 +640,7 @@ export default function InspiraJuridicoPage() {
       </section>
 
       {/* FINALCTA | Ink */}
-      <section style={{ backgroundColor: '#05262e', padding: '120px 80px', textAlign: 'center' }}>
+      <section className="section-pt section-pb" style={{ backgroundColor: '#05262e', textAlign: 'center' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <h2 className="type-h2" style={{
             color: '#F5F5F2',
@@ -660,7 +651,7 @@ export default function InspiraJuridicoPage() {
           </h2>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '24px' }}>
             <a
-              href="/contato?origem=inspira-juridico"
+              href={`/contato?origem=${ORIGINS.INSPIRA_JURIDICO}`}
               className="btn-primary"
             >
               Conversar com a Pira Labs →
