@@ -144,8 +144,8 @@ export default function InspiraJuridicoPage() {
             maxWidth: '800px',
             fontWeight: 700,
           }}>
-            O que a maioria dos escritórios ainda não sabe{' '}
-            sobre <span style={{ whiteSpace: 'nowrap' }}><span style={{ color: '#C4421A' }}>si</span> mesmo.</span>
+            O que o seu escritório ainda não{' '}
+            <span style={{ color: '#C4421A' }}>vê</span> sobre si mesmo.
           </h1>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
