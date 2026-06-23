@@ -155,10 +155,9 @@ export default function PocketPage() {
 
           <a
             href="/contato?origem=faisca_pocket"
-            className="font-body"
-            style={{ display: "inline-block", backgroundColor: "#05262e", color: "#F5F5F2", padding: "14px 32px", fontSize: "13px", fontWeight: 600, letterSpacing: "0.10em", textDecoration: "none", borderRadius: "2px", textTransform: "uppercase" as const }}
+            className="btn-primary"
           >
-            RESPIRE
+            RESPIRE →
           </a>
           <span className="font-body" style={{ display: "block", color: "#05262e", opacity: 0.5, fontSize: "12px", marginTop: "8px" }}>
             Sessão de 1,5h online. Respondemos em até 2 dias úteis.
@@ -178,7 +177,7 @@ export default function PocketPage() {
 
           {/* Formulário 01 */}
           <div style={{ display: "grid", gridTemplateColumns: "120px 1fr", gap: "0 32px", borderBottom: "1px solid rgba(245,245,242,0.12)", paddingBottom: "40px", marginBottom: "40px", alignItems: "start" }}>
-            <div style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
+            <div style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-atyp-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
               01
             </div>
             <div>
@@ -193,7 +192,7 @@ export default function PocketPage() {
 
           {/* Formulário 02 */}
           <div style={{ display: "grid", gridTemplateColumns: "120px 1fr", gap: "0 32px", borderBottom: "1px solid rgba(245,245,242,0.12)", paddingBottom: "40px", marginBottom: "40px", alignItems: "start" }}>
-            <div style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
+            <div style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-atyp-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
               02
             </div>
             <div>
@@ -208,7 +207,7 @@ export default function PocketPage() {
 
           {/* Formulário 03 */}
           <div style={{ display: "grid", gridTemplateColumns: "120px 1fr", gap: "0 32px", alignItems: "start" }}>
-            <div style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
+            <div style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: 300, lineHeight: 1, color: "#e8e0d6", fontFamily: "var(--font-atyp-display)", letterSpacing: "-0.04em", paddingTop: "4px" }}>
               03
             </div>
             <div>
@@ -382,7 +381,6 @@ export default function PocketPage() {
         </div>
       </section>
 
-      {/* P7 · FinalCTA (Sand) */}
       <FinalCTA
         heading="Antes de confirmar, conversamos para garantir que o pocket do INSPIRA é o produto certo para o momento."
         ctaLabel="RESPIRE"

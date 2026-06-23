@@ -53,7 +53,6 @@ const INK   = "#05262e"
 const TEAL  = "#004757"
 const SAND  = "#e8e0d6"
 const WHITE = "#F5F5F2"
-const EMBER = "#eb5c2e"
 
 export default function CLevelPage() {
   return (
@@ -190,7 +189,7 @@ export default function CLevelPage() {
               Resultados verificados
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={{ maxWidth: "960px" }}>
-              <div style={{ borderTop: "2px solid #eb5c2e", paddingTop: "20px" }}>
+              <div style={{ borderTop: "1px solid rgba(5,38,46,0.12)", paddingTop: "20px" }}>
                 <p className="font-display" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 600, color: INK, lineHeight: 1, marginBottom: "8px", letterSpacing: "-0.02em" }}>
                   2 → 4
                 </p>
@@ -198,7 +197,7 @@ export default function CLevelPage() {
                   produtos no portfólio
                 </p>
               </div>
-              <div style={{ borderTop: "2px solid #eb5c2e", paddingTop: "20px" }}>
+              <div style={{ borderTop: "1px solid rgba(5,38,46,0.12)", paddingTop: "20px" }}>
                 <p className="font-display" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 600, color: INK, lineHeight: 1, marginBottom: "8px", letterSpacing: "-0.02em" }}>
                   +90%
                 </p>
@@ -206,7 +205,7 @@ export default function CLevelPage() {
                   ticket médio: de R$280 para R$530
                 </p>
               </div>
-              <div style={{ borderTop: "2px solid #eb5c2e", paddingTop: "20px" }}>
+              <div style={{ borderTop: "1px solid rgba(5,38,46,0.12)", paddingTop: "20px" }}>
                 <p className="font-display" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 600, color: INK, lineHeight: 1, marginBottom: "8px", letterSpacing: "-0.02em" }}>
                   Oxigênio
                 </p>
@@ -281,7 +280,7 @@ export default function CLevelPage() {
       <FinalCTA
         heading="Se o que você leu aqui descreve o que você precisa, o próximo passo é uma conversa, não um compromisso."
         ctaLabel="RESPIRE"
-        origin={ORIGINS.FAISCA}
+        origin={ORIGINS.FAISCA_CLEVEL}
         theme="dark"
       />
     </>

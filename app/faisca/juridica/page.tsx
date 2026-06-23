@@ -548,7 +548,6 @@ export default function FaiscaJuridicaPage() {
         </div>
       </section>
 
-      {/* J8 · Sand · FinalCTA */}
       <FinalCTA
         heading="Se o risco já está ativo, o momento de tratar é agora."
         ctaLabel="RESPIRE"
