@@ -14,10 +14,11 @@ export const FILLOUT_URL_HEADER =
 export const FILLOUT_URL_CONTATO =
   `${FILL_OUT_FORM_URL}?origem=contato&${UTM_BASE}&utm_content=pagina_contato`;
 
-// 23 origens oficiais do sistema de rastreamento de CTAs (v6).
+// 26 origens oficiais do sistema de rastreamento de CTAs (v7).
 // Todos os CTAs que apontam para /contato incluem ?origem=[valor].
 export const ORIGINS = {
   HOME:                         "home",
+  HOME_EN:                      "home_en",
   SOBRE:                        "sobre",
   INSPIRA:                      "inspira",
   INSPIRA_JURIDICO:             "inspira_juridico",
@@ -35,8 +36,10 @@ export const ORIGINS = {
   FAISCA_CLEVEL:                "faisca_clevel",
   CHAMA:                        "chama",
   COMO_PENSAMOS:                "como_pensamos",
-  CREATIVE_BUSINESS_TURNAROUND: "creative_business_turnaround",
-  CRESCIMENTO_SEM_MARGEM:       "crescimento_sem_margem",
+  CREATIVE_BUSINESS_TURNAROUND:    "creative_business_turnaround",
+  CREATIVE_BUSINESS_TURNAROUND_EN: "creative_business_turnaround_en",
+  CONTACT_EN:                      "contact_en",
+  CRESCIMENTO_SEM_MARGEM:          "crescimento_sem_margem",
   DIAGNOSTICO_EMPRESA_SERVICOS: "diagnostico_empresa_servicos",
   HEADER_GLOBAL:                "header_global",
   NOT_FOUND:                    "404",

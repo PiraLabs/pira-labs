@@ -10,6 +10,7 @@ import { LogoVideo } from "@/components/shared/LogoVideo";
 import { CountUp } from "@/components/home/CountUp";
 import { breadcrumbSchema } from "@/lib/schemas/breadcrumb";
 import { faqPageSchema } from "@/lib/schemas/service";
+import { ORIGINS } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: { absolute: "Creative Business Turnaround · Pira Labs" },
@@ -40,12 +41,12 @@ const faqItems = [
   {
     question: "How much does it cost to work with Pira Labs?",
     answer:
-      "Each project is sized individually. Entry products have public pricing: Oxigênio IA Search Fast R$3,500 / Full R$5,300. Pocket do INSPIRA R$3,900. Imersão em IA R$7,100. For INSPIRA and TRANSPIRA, the investment is defined after the first conversation.",
+      "Each project is sized individually. Entry products have public pricing: Oxigênio IA Search Fast R$3,500 / Full R$5,300. INSPIRA pocket R$3,900. Imersão em IA R$7,100. For INSPIRA and TRANSPIRA, the investment is defined after the first conversation.",
   },
   {
     question: "How long does it take?",
     answer:
-      "Depends on the product. Oxigênio: up to 5 business days. Pocket do INSPIRA: a single 1.5h session. Imersão em IA: 3 sessions, 5.5h total. Full INSPIRA: 4 to 6 weeks. TRANSPIRA: 2 to 6 months depending on scope and configuration.",
+      "Depends on the product. Oxigênio: up to 5 business days. INSPIRA pocket: a single 1.5h session. Imersão em IA: 3 sessions, 5.5h total. Full INSPIRA: 4 to 6 weeks. TRANSPIRA: 2 to 6 months depending on scope and configuration.",
   },
   {
     question: "What if I don't know exactly what I need?",
@@ -101,12 +102,9 @@ export default function EnHomePage() {
               Pira Labs is a Brazilian boutique of Creative Business Turnaround for service
               businesses that need to act before the window closes.
             </p>
-            <Link
-              href="#method"
-              className="inline-flex items-center justify-center min-h-[44px] px-6 py-3 rounded bg-orange text-ink font-body font-medium text-base transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
-            >
-              Understand the method
-            </Link>
+            <a href="#method" className="btn-primary">
+              Understand the method →
+            </a>
           </div>
         </div>
       </Section>
@@ -128,7 +126,7 @@ export default function EnHomePage() {
             "Every important decision goes through the founder. The team waits.",
             "The operation only works because some people do what isn't their role.",
             "The company adopted AI. The result was accelerating the noise that already existed.",
-            "In AI-powered searches, auto-generated lists and market recommendations, the company doesn't appear — or appears incorrectly.",
+            "In AI-powered searches, auto-generated lists and market recommendations, the company does not appear, or appears incorrectly.",
           ].map((signal, i) => (
             <li key={i} className="flex items-start gap-4">
               <span
@@ -326,7 +324,7 @@ export default function EnHomePage() {
               Fast entry: fixed price, no friction
             </h3>
             <p className="text-off-white/65 font-body text-sm leading-relaxed">
-              Imersão em IA (R$7,100) · Oxigênio IA Search (R$3,500/R$5,300) · Pocket do INSPIRA
+              Imersão em IA (R$7,100) · Oxigênio IA Search (R$3,500/R$5,300) · INSPIRA pocket
               (R$3,900)
             </p>
           </div>
@@ -402,12 +400,9 @@ export default function EnHomePage() {
             discover together.
           </p>
           <div className="flex flex-col items-center gap-2">
-            <Link
-              href="/en/contact?origem=home_en"
-              className="inline-flex items-center justify-center min-h-[44px] px-6 py-3 rounded bg-orange text-ink font-body font-medium text-base transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
-            >
-              Breathe
-            </Link>
+            <a href={`/en/contact?origem=${ORIGINS.HOME_EN}`} className="btn-primary">
+              Breathe →
+            </a>
             <p className="text-sm font-body text-off-white/60">
               Initial conversation, no commitment. We respond within two business days.
             </p>
@@ -415,7 +410,7 @@ export default function EnHomePage() {
           <p className="mt-10 font-display text-lg italic text-off-white/40">
             Inspira. Transpira. Respira.
           </p>
-          <p className="mt-1 font-body text-sm text-off-white/30">We unlock the next level.</p>
+          <p className="mt-1 font-body text-sm text-off-white/30">Where businesses find propulsion to new heights.</p>
         </div>
       </section>
     </>
