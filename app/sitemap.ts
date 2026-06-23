@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-// 28 rotas indexáveis do site Pira Labs — jun 2026.
+// 30 rotas indexáveis do site Pira Labs — jun 2026.
 // Rotas antigas (/servicos, /cases, /es/*, etc.) cobertas por redirects 301 no next.config.js.
 // EN: /en e /en/creative-business-turnaround têm página real. /en/about e /en/contact são redirect 301 — fora do sitemap.
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -23,6 +23,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/faisca/pocket`,                           changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/faisca/c-level-as-a-service`,             changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/chama`,                                   changeFrequency: "monthly", priority: 0.7 },
+    // GEO — páginas de problema
+    { url: `${base}/crescimento-sem-margem`,                  changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/diagnostico-empresa-servicos`,            changeFrequency: "monthly", priority: 0.7 },
     // Glossário
     { url: `${base}/glossario`,                               changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/glossario/creative-business-turnaround`,  changeFrequency: "monthly", priority: 0.6 },
