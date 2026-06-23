@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { ORIGINS } from '@/lib/constants'
 
 export const dynamic = 'force-static'
 
@@ -131,7 +132,8 @@ export default function TranspiraJuridicoPage() {
       />
 
       {/* BREADCRUMB */}
-      <nav aria-label="Breadcrumb" style={{ backgroundColor: '#e8e0d6', padding: '12px 80px' }}>
+      <nav aria-label="Breadcrumb" style={{ backgroundColor: '#e8e0d6' }}>
+        <div className="container-site" style={{ paddingTop: '12px', paddingBottom: '12px' }}>
         <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: 0, padding: 0, fontSize: '0.75rem', color: '#05262e' }}>
           <li><a href="/" style={{ color: '#05262e', textDecoration: 'none' }}>Início</a></li>
           <li style={{ opacity: 0.4 }}>/</li>
@@ -139,11 +141,12 @@ export default function TranspiraJuridicoPage() {
           <li style={{ opacity: 0.4 }}>/</li>
           <li style={{ opacity: 0.6 }}>TRANSPIRA Jurídico</li>
         </ol>
+        </div>
       </nav>
 
       {/* S1 — HERO | Sand */}
-      <section style={{ backgroundColor: '#e8e0d6', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <section className="section-pt section-pb" style={{ backgroundColor: '#e8e0d6' }}>
+        <div className="container-site">
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -176,7 +179,7 @@ export default function TranspiraJuridicoPage() {
           </p>
           <div>
             <a
-              href="/contato?origem=transpira-juridico"
+              href={`/contato?origem=${ORIGINS.TRANSPIRA_JURIDICO}`}
               className="btn-primary"
             >
               Conversar com a Pira Labs →
@@ -185,8 +188,7 @@ export default function TranspiraJuridicoPage() {
               fontFamily: 'AtypText, sans-serif',
               fontWeight: 300,
               fontSize: '0.75rem',
-              color: '#05262e',
-              opacity: 0.6,
+              color: '#b0a596',
               marginTop: '12px',
             }}>
               Investimento sob consulta. A conversa de qualificação vem antes da proposta.
@@ -196,8 +198,8 @@ export default function TranspiraJuridicoPage() {
       </section>
 
       {/* S2 — O PROBLEMA | Ink */}
-      <section style={{ backgroundColor: '#05262e', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <section className="section-pt section-pb" style={{ backgroundColor: '#05262e' }}>
+        <div className="container-site">
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -261,8 +263,8 @@ export default function TranspiraJuridicoPage() {
       </section>
 
       {/* S3 — O QUE É | Teal */}
-      <section style={{ backgroundColor: '#004757', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <section className="section-pt section-pb" style={{ backgroundColor: '#004757' }}>
+        <div className="container-site">
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -311,8 +313,8 @@ export default function TranspiraJuridicoPage() {
       </section>
 
       {/* S4 — OS DOIS MODELOS | Sand */}
-      <section style={{ backgroundColor: '#e8e0d6', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <section className="section-pt section-pb" style={{ backgroundColor: '#e8e0d6' }}>
+        <div className="container-site">
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -333,7 +335,7 @@ export default function TranspiraJuridicoPage() {
             Dois modelos. Um critério único: a responsabilidade jurídica não sai do{' '}
             <span style={{ color: '#C4421A' }}>advogado</span>.
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))', gap: '32px' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             {/* MODELO A */}
             <div style={{ backgroundColor: '#F5F5F2', padding: 'clamp(24px, 4vw, 48px)', borderTop: '1px solid rgba(5,38,46,0.12)' }}>
@@ -348,14 +350,7 @@ export default function TranspiraJuridicoPage() {
               }}>
                 MODELO A
               </p>
-              <h3 style={{
-                fontFamily: 'AtypDisplay, sans-serif',
-                fontWeight: 400,
-                fontSize: '1.375rem',
-                lineHeight: 1.2,
-                color: '#05262e',
-                marginBottom: '20px',
-              }}>
+              <h3 className="type-h3" style={{ color: '#05262e', marginBottom: '20px', fontWeight: 400 }}>
                 Implementação junto ao time
               </h3>
               <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.9375rem', lineHeight: 1.7, color: '#05262e', marginBottom: '28px' }}>
@@ -409,14 +404,7 @@ export default function TranspiraJuridicoPage() {
               }}>
                 MODELO B
               </p>
-              <h3 style={{
-                fontFamily: 'AtypDisplay, sans-serif',
-                fontWeight: 400,
-                fontSize: '1.375rem',
-                lineHeight: 1.2,
-                color: '#05262e',
-                marginBottom: '20px',
-              }}>
+              <h3 className="type-h3" style={{ color: '#05262e', marginBottom: '20px', fontWeight: 400 }}>
                 Capacidade operacional assistida sob demanda
               </h3>
               <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.9375rem', lineHeight: 1.7, color: '#05262e', marginBottom: '28px' }}>
@@ -465,8 +453,8 @@ export default function TranspiraJuridicoPage() {
       </section>
 
       {/* S5 — PARA QUEM É + CTA INTERMEDIÁRIO | Ink */}
-      <section style={{ backgroundColor: '#05262e', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <section className="section-pt section-pb" style={{ backgroundColor: '#05262e' }}>
+        <div className="container-site">
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -487,7 +475,7 @@ export default function TranspiraJuridicoPage() {
             Escritórios e departamentos jurídicos com volume. Decisores com autonomia real para mudar o funcionamento da{' '}
             <span style={{ color: '#eb5c2e' }}>operação</span>.
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '80px', maxWidth: '1000px' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20" style={{ maxWidth: '1000px' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
               {[
                 { texto: <>Escritórios de advocacia com <strong style={{ fontWeight: 600 }}>trabalho mecânico que consome equipe qualificada</strong> em tarefas que não exigem formação jurídica para executar.</> },
@@ -531,7 +519,7 @@ export default function TranspiraJuridicoPage() {
           </div>
           <div style={{ marginTop: '64px', paddingTop: '48px', borderTop: '1px solid rgba(232,224,214,0.12)' }}>
             <a
-              href="/contato?origem=transpira-juridico"
+              href={`/contato?origem=${ORIGINS.TRANSPIRA_JURIDICO}`}
               className="btn-primary"
             >
               Conversar com a Pira Labs →
@@ -550,8 +538,8 @@ export default function TranspiraJuridicoPage() {
       </section>
 
       {/* S6 — QUEM CONDUZ | Teal */}
-      <section style={{ backgroundColor: '#004757', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <section className="section-pt section-pb" style={{ backgroundColor: '#004757' }}>
+        <div className="container-site">
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -584,13 +572,7 @@ export default function TranspiraJuridicoPage() {
             Não há equipe júnior entre o problema e a execução. Celso Gama conduz o TRANSPIRA Jurídico do início ao fim.
           </p>
           <div style={{ maxWidth: '720px' }}>
-            <h3 style={{
-              fontFamily: 'AtypDisplay, sans-serif',
-              fontWeight: 600,
-              fontSize: '1.25rem',
-              color: '#F5F5F2',
-              marginBottom: '16px',
-            }}>
+            <h3 className="type-h3" style={{ color: '#F5F5F2', marginBottom: '16px' }}>
               Celso Gama
             </h3>
             <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.9375rem', lineHeight: 1.7, color: '#e8e0d6', marginBottom: '24px' }}>
@@ -609,8 +591,8 @@ export default function TranspiraJuridicoPage() {
       </section>
 
       {/* S7 — FAQ | Sand */}
-      <section style={{ backgroundColor: '#e8e0d6', padding: '120px 80px' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <section className="section-pt section-pb" style={{ backgroundColor: '#e8e0d6' }}>
+        <div className="container-site">
           <p style={{
             fontFamily: 'AtypText, sans-serif',
             fontWeight: 600,
@@ -696,7 +678,7 @@ export default function TranspiraJuridicoPage() {
       </section>
 
       {/* FINALCTA | Ink */}
-      <section style={{ backgroundColor: '#05262e', padding: '120px 80px', textAlign: 'center' }}>
+      <section className="section-pt section-pb" style={{ backgroundColor: '#05262e', textAlign: 'center' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <h2 className="type-h2" style={{
             color: '#F5F5F2',
@@ -707,7 +689,7 @@ export default function TranspiraJuridicoPage() {
           </h2>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '24px' }}>
             <a
-              href="/contato?origem=transpira-juridico"
+              href={`/contato?origem=${ORIGINS.TRANSPIRA_JURIDICO}`}
               className="btn-primary"
             >
               Conversar com a Pira Labs →
