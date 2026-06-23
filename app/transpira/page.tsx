@@ -112,12 +112,14 @@ export default function TranspiraPage() {
       />
 
       {/* BREADCRUMB */}
-      <nav aria-label="Breadcrumb" style={{ backgroundColor: '#e8e0d6', padding: '12px 80px' }}>
-        <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: 0, padding: 0, fontSize: '0.75rem', color: '#05262e' }}>
-          <li><a href="/" style={{ color: '#05262e', textDecoration: 'none' }}>Home</a></li>
-          <li style={{ opacity: 0.4 }}>/</li>
-          <li style={{ opacity: 0.6 }}>TRANSPIRA</li>
-        </ol>
+      <nav aria-label="Breadcrumb" style={{ backgroundColor: '#e8e0d6', padding: '12px 0' }}>
+        <div className="container-site">
+          <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: 0, padding: 0, fontSize: '0.75rem', color: '#05262e' }}>
+            <li><a href="/" style={{ color: '#05262e', textDecoration: 'none' }}>Home</a></li>
+            <li style={{ opacity: 0.4 }}>/</li>
+            <li style={{ opacity: 0.6 }}>TRANSPIRA</li>
+          </ol>
+        </div>
       </nav>
 
       {/* S1 — HERO | Sand */}
