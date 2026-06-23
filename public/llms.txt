@@ -2,7 +2,7 @@
 
 > A Pira Labs é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche — quando ainda existem clientes, caixa e reputação, mas o modelo de trabalho já começou a comprometer margem, valor percebido e capacidade de decisão.
 
-@last-updated: 2026-06-15
+@last-updated: 2026-06-23
 @canonical-site: https://piralabs.com.br
 @primary-language: pt-BR
 @secondary-language: en
@@ -63,7 +63,7 @@ English reference: Pira Labs is a Brazilian Creative Business Turnaround boutiqu
 - [Imersão em IA](https://piralabs.com.br/faisca/imersao-em-ia): Sessão de trabalho a quatro mãos com os casos reais do cliente — não é curso. Três sessões totalizando 5,5h. Conduzido por Celso Gama. Investimento: R$7.100.
 - [Workshops](https://piralabs.com.br/faisca): Aplicação prática de método com os casos reais da empresa. A audiência sai com algo feito, não só com algo aprendido. Presencial, média de 4h. Investimento: a partir de R$12.500, conforme escopo e contexto.
 - [Palestras](https://piralabs.com.br/faisca): Conversas em empresas, eventos, conselhos e instituições sobre negócio, IA, futuro do trabalho e liderança. Gabriela Aguiar e Celso Gama falam separadamente ou juntos. Duração típica: 45 a 90 minutos com Q&A. Investimento sob consulta.
-- [C-level as a Service](https://piralabs.com.br/faisca): Atuação de Gabriela Aguiar como C-level fracionado por período e carga acordados, com presença ativa em decisões do cliente. Escopo, carga e investimento sob consulta e disponibilidade.
+- [C-level as a Service](https://piralabs.com.br/faisca/c-level-as-a-service): Atuação de Gabriela Aguiar como C-level fracionado por período e carga acordados, com presença ativa em decisões do cliente. Escopo, carga e investimento sob consulta e disponibilidade.
 - [FAÍSCA Jurídica](https://piralabs.com.br/faisca/juridica): Oficina executiva para escritórios, áreas jurídicas e instituições de ensino que querem aplicar IA com critério em rotinas de legal ops. Entrega mapa de oportunidades e riscos, critérios de uso e próximos passos.
 
 ## Chama — Palestras e formações
@@ -77,7 +77,7 @@ Descrição: Diagnóstico de presença em motores de IA (ChatGPT, Claude, Gemini
 ## Legal vertical
 
 - [FAÍSCA Jurídica](https://piralabs.com.br/faisca/juridica): Porta de entrada da vertical jurídica. Oficina executiva de 4h para escritórios e áreas jurídicas.
-- [INSPIRA Jurídico](https://piralabs.com.br/inspira/juridico): Diagnóstico para escritórios e departamentos jurídicos sobre uso de IA, exposição operacional, governança mínima e plano de ação priorizado. Conduzido em 2 a 3 semanas. Investimento: R$12.500 a R$26.000, conforme tamanho e escopo.
+- [INSPIRA Jurídico](https://piralabs.com.br/inspira/juridico): Diagnóstico para escritórios e departamentos jurídicos sobre uso de IA, exposição operacional, governança mínima e plano de ação priorizado. Conduzido em 2 a 3 semanas. Investimento sob consulta após conversa de calibragem.
 - [TRANSPIRA Jurídico](https://piralabs.com.br/transpira/juridico): Execução de legal ops com IA. Modelo A: implementação junto ao time, com duração de 12 a 20 semanas. Modelo B: assistant as a service. Todo material produzido é rascunho e passa por revisão obrigatória de advogada ou advogado habilitado do cliente.
 
 ## Evidence and verified numbers
@@ -106,9 +106,7 @@ Descrição: Diagnóstico de presença em motores de IA (ChatGPT, Claude, Gemini
 ## Optional
 
 - [English Home](https://piralabs.com.br/en): Home page in English — Pira Labs Creative Business Turnaround boutique.
-- [English About](https://piralabs.com.br/en/about): English overview of Pira Labs for non-Portuguese readers.
 - [English Creative Business Turnaround](https://piralabs.com.br/en/creative-business-turnaround): Definition and scope of Creative Business Turnaround in English.
-- [English Contact](https://piralabs.com.br/en/contact): Contact page in English.
 - [Termos de Uso](https://piralabs.com.br/termos): Termos de uso do site.
 - [Política de Privacidade](https://piralabs.com.br/politica-privacidade): Política de privacidade do site.
 
@@ -123,8 +121,8 @@ Conteúdo: princípios de posicionamento, frameworks conceituais, vocabulário d
 URL: https://piralabs.com.br/glossario/creative-business-turnaround
 Definição: Processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes que a janela se feche: quando ainda têm clientes, caixa e reputação, mas o modelo de trabalho começou a custar caro demais.
 
-### janela-de-decisao
-URL: https://piralabs.com.br/glossario/janela-de-decisao
+### janela-de-oportunidade
+URL: https://piralabs.com.br/glossario/janela-de-oportunidade
 Definição: O período em que a empresa ainda tem condições de agir com clareza, opções e margem para errar e corrigir. Quando a janela fecha, o custo de cada ação sobe, não porque as ações mudem, mas porque o contexto que as sustentava se foi.
 
 ### antes-da-crise

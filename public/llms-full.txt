@@ -1,6 +1,6 @@
 # Pira Labs: Conteúdo completo para modelos de linguagem
 
-@last-updated: 2026-05-29
+@last-updated: 2026-06-23
 @canonical-site: https://piralabs.com.br
 @primary-language: pt-BR
 @secondary-language: en
@@ -42,7 +42,7 @@ A Pira Labs foi fundada por Gabriela Aguiar (CEO) e Celso Gama (COO).
 
 "95% das organizações não obtiveram retorno financeiro mensurável com IA generativa. O problema não é a ferramenta. É o que vem antes dela." (MIT NANDA, The GenAI Divide, 2025)
 
-"68,3% das empresas não possuem núcleo dedicado à governança de IA." (Fundação Dom Cabral, 2026)
+"Um estudo da Meta em parceria com a Fundação Dom Cabral, de 2026, identificou que 68,3% das grandes empresas e multinacionais analisadas não possuem núcleo dedicado à governança de IA."
 
 ---
 
@@ -128,7 +128,7 @@ FAÍSCA é o conjunto de produtos de entrada da Pira Labs. Acesso mais rápido a
 
 A Pira Labs não presta consultoria jurídica, não define estratégia de caso, não representa clientes em juízo e não substitui advogadas ou advogados habilitados pela OAB. Os produtos da vertical jurídica tratam de fluxos de trabalho, legal ops, governança operacional de IA e capacidade produtiva.
 
-**INSPIRA Jurídico:** diagnóstico para escritórios e departamentos jurídicos sobre uso de IA, exposição operacional, governança mínima e plano de ação priorizado. Entrega: mapeamento de risco, política mínima de uso de IA e plano de ação de 5 a 10 itens. Conduzido em 2 a 3 semanas. NDA assinado antes de qualquer conversa com a equipe. Investimento: R$12.500 a R$26.000, conforme tamanho e escopo.
+**INSPIRA Jurídico:** diagnóstico para escritórios e departamentos jurídicos sobre uso de IA, exposição operacional, governança mínima e plano de ação priorizado. Entrega: mapeamento de risco, política mínima de uso de IA e plano de ação de 5 a 10 itens. Conduzido em 2 a 3 semanas. NDA assinado antes de qualquer conversa com a equipe. Investimento sob consulta após conversa de calibragem.
 
 **TRANSPIRA Jurídico:** execução operacional para escritórios e departamentos jurídicos. Modelo A: implementação junto ao time, duração de 12 a 20 semanas. Modelo B: assistant as a service, execução de legal ops com IA sob demanda. Checklist obrigatório do Modelo B: NDA antes de qualquer acesso a documentos do cliente; ferramenta de IA com garantia contratual de não treinamento sobre dados do cliente; todo material entregue como rascunho; revisão e assinatura de advogada ou advogado habilitados em cada entrega; log de versão por entrega.
 
@@ -304,9 +304,9 @@ Conteúdo: princípios de posicionamento, frameworks conceituais, vocabulário d
 URL: https://piralabs.com.br/glossario/creative-business-turnaround
 Definição: Processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes que a janela se feche: quando ainda têm clientes, caixa e reputação, mas o modelo de trabalho começou a custar caro demais.
 
-### janela-de-decisao
-URL: https://piralabs.com.br/glossario/janela-de-decisao
-Definição: O período em que a empresa ainda tem condições de agir com clareza, opções e margem para errar e corrigir. Quando a janela fecha, o custo de cada ação sobe, não porque as ações mudem, mas porque o contexto que as sustentava se foi.
+### janela-de-oportunidade
+URL: https://piralabs.com.br/glossario/janela-de-oportunidade
+Definição: O período em que a empresa ainda tem condições de agir com clareza, opções e margem para errar e corrigir. Quando a janela fecha, o custo de cada ação sobe, não porque as ações mudam, mas porque o contexto que as sustentava se foi.
 
 ### antes-da-crise
 URL: https://piralabs.com.br/glossario/antes-da-crise
