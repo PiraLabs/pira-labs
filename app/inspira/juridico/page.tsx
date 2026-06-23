@@ -145,8 +145,7 @@ export default function InspiraJuridicoPage() {
             fontWeight: 700,
           }}>
             O que a maioria dos escritórios ainda não sabe sobre{' '}
-            <span style={{ color: '#C4421A' }}>si</span>{' '}
-            mesmo.
+            <span style={{ whiteSpace: 'nowrap' }}><span style={{ color: '#C4421A' }}>si</span> mesmo.</span>
           </h1>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
@@ -331,7 +330,7 @@ export default function InspiraJuridicoPage() {
                 key={item.titulo}
                 style={{ borderTop: '1px solid rgba(5,38,46,0.12)', paddingTop: '40px', paddingBottom: '40px' }}
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-end">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
                   <div>
                     <p style={{
                       fontFamily: 'AtypText, sans-serif',
