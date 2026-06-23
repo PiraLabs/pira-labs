@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: 'TRANSPIRA — Execução de Creative Business Turnaround | Pira Labs',
   description: 'O TRANSPIRA é a metodologia de execução da Pira Labs: entra na operação com o time, instala processo e governança, e encerra quando os primeiros resultados acordados no escopo são verificados, não quando o prazo acaba.',
@@ -132,17 +134,15 @@ export default function TranspiraPage() {
           }}>
             Execução de Creative Business Turnaround
           </p>
-          <h1 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
+          <h1 className="type-display" style={{
             fontWeight: 600,
-            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
             lineHeight: 1.1,
             color: '#05262e',
             marginBottom: '32px',
             maxWidth: '800px',
           }}>
             Quando o trabalho certo substitui o trabalho{' '}
-            <span style={{ color: '#C4421A' }}>muito</span>.
+            <span style={{ color: '#C4421A' }}>em excesso</span>.
           </h1>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
@@ -159,15 +159,18 @@ export default function TranspiraPage() {
             <a
               href="/contato?origem=transpira"
               style={{
-                display: 'inline-block',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
-                fontSize: '0.8125rem',
-                letterSpacing: '0.08em',
+                fontSize: '15px',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#F5F5F2',
-                backgroundColor: '#05262e',
-                padding: '14px 28px',
+                backgroundColor: '#eb5c2e',
+                padding: '0.75rem 1.5rem',
+                borderRadius: 0,
                 textDecoration: 'none',
               }}
             >
@@ -201,10 +204,8 @@ export default function TranspiraPage() {
           }}>
             O método
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
+          <h2 className="type-h1" style={{
             fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             lineHeight: 1.15,
             color: '#F5F5F2',
             marginBottom: '48px',
@@ -220,7 +221,7 @@ export default function TranspiraPage() {
               A diferença entre consultoria que recomenda e execução que transforma está em quem carrega o trabalho. No TRANSPIRA, a Pira não entrega plano para o cliente executar. Entra junto, redesenha o que precisa ser redesenhado e transfere a capacidade para o time antes de sair. <strong style={{ fontWeight: 600 }}>Com o TRANSPIRA, a operação deixa de depender de heróis. Entra processo que funciona com clareza.</strong>
             </p>
             <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
-              <strong style={{ fontWeight: 600 }}>Tecnologia entra depois de entender o problema, nunca antes.</strong> Um relatório do MIT Media Lab (Project NANDA, julho de 2025) analisou mais de 300 implementações corporativas de IA generativa e encontrou que 95% não geraram impacto financeiro mensurável. IA e automação amplificam o que já existe. Se o que existe é ruído, a tecnologia escala o ruído. O TRANSPIRA instala o método antes de indicar a ferramenta. Quando indica tecnologia, é porque há problema real que ela resolve. Quando indica parceiro, declara qualquer incentivo envolvido.
+              <strong style={{ fontWeight: 600 }}>Tecnologia entra depois de entender o problema, nunca antes.</strong> O relatório &#8220;The GenAI Divide: State of AI in Business 2025&#8221;, do MIT Media Lab, iniciativa NANDA, publicado em julho de 2025, identificou que 95% dos pilotos de IA generativa estagnam na fase piloto, sem impacto mensurável no resultado financeiro. IA e automação amplificam o que já existe. Se o que existe é ruído, a tecnologia escala o ruído. O TRANSPIRA instala o método antes de indicar a ferramenta. Quando indica tecnologia, é porque há problema real que ela resolve. Quando indica parceiro, declara qualquer incentivo envolvido.
             </p>
             <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
               <strong style={{ fontWeight: 600 }}>O TRANSPIRA não encerra pelo calendário. Encerra quando os primeiros resultados acordados no escopo são verificados.</strong> Esse critério é definido antes de começar, não depois. É o que diferencia execução real de projeto com data de entrega.
@@ -228,15 +229,14 @@ export default function TranspiraPage() {
             <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
               Celso Gama conduz o TRANSPIRA com formação em andamento no Applied AI Certificate Program (MIT), MBA pelo Insper e 25 anos operando dentro de contextos complexos de serviços. Em projetos anteriores à Pira Labs, atuou em operações que produziram resultados verificáveis: margem operacional de -64% para +15% em seis meses em uma operação da multinacional do setor de bebidas, e escala de receita de R$16M para R$163M em 24 meses em uma operação de comunicação.
             </p>
-            <blockquote style={{ borderLeft: '2px solid #eb5c2e', paddingLeft: '24px', marginTop: '16px' }}>
-              <p style={{
+            <blockquote style={{ borderLeft: '2px solid #eb5c2e', paddingLeft: '32px', marginTop: '48px' }}>
+              <p className="type-h2" style={{
                 fontFamily: 'AtypDisplay, sans-serif',
                 fontWeight: 300,
-                fontSize: '1.25rem',
                 fontStyle: 'italic',
-                lineHeight: 1.5,
+                lineHeight: 1.25,
                 color: '#F5F5F2',
-                marginBottom: '12px',
+                marginBottom: '20px',
               }}>
                 &#8220;Entro na operação para trabalhar junto com o time, não para o time. Quando saio, o que ficou funcionando foi construído por quem vai operar. Não por mim.&#8221;
               </p>
@@ -278,7 +278,7 @@ export default function TranspiraPage() {
             marginBottom: '24px',
             maxWidth: '700px',
           }}>
-            Quatro entregáveis. Operação que <span style={{ color: '#eb5c2e' }}>sustenta</span>.
+            Quatro entregáveis. Operação que sustenta.
           </h2>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
@@ -291,42 +291,66 @@ export default function TranspiraPage() {
           }}>
             O TRANSPIRA produz quatro entregáveis em cada projeto. São os pontos em que a operação muda de estado, não documentos para arquivar.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '48px', maxWidth: '1100px' }}>
+          <div>
             {[
               {
+                num: '01',
                 nome: 'Redesenho de trabalho',
                 texto: 'Redesenho de trabalho é o primeiro entregável do TRANSPIRA. Mapeamento de fluxos críticos, identificação de gargalos reais e redesenho da relação entre o que é feito, por quem e com qual objetivo. Com o TRANSPIRA, a operação para de depender de pessoas-chave que não podem sair. Entra processo com clareza de responsabilidade e rastreabilidade de resultado.',
               },
               {
+                num: '02',
                 nome: 'Tecnologia curada',
                 texto: 'Tecnologia curada é o segundo entregável do TRANSPIRA. Identificação de onde IA e automação amplificam capacidade real, não onde parecem modernizar a aparência da operação. A Pira Labs não vende tecnologia. Quando indica parceiro, declara qualquer revenue share envolvido. Transparência sobre incentivos é parte do método.',
               },
               {
+                num: '03',
                 nome: 'Governança aplicada',
                 texto: 'Governança aplicada é o terceiro entregável do TRANSPIRA. Processos críticos, pontos de decisão e protocolos de aprovação que sustentam o negócio depois que a Pira Labs sai. Não é manual que ninguém lê. É a estrutura que permite que decisões sejam tomadas sem que o fundador precise ser consultado em cada uma.',
               },
               {
+                num: '04',
                 nome: 'Valor percebido',
                 texto: 'Valor percebido é o quarto entregável do TRANSPIRA. A capacidade de tornar o que a empresa entrega visível e verificável para o cliente. Em projetos anteriores à Pira Labs, esse trabalho produziu resultado mensurável: margem operacional de -64% para +15% em seis meses em uma operação do setor de bebidas. Diferenciação real que o cliente consegue perceber sem depender de explicação excessiva.',
               },
-            ].map((item) => (
-              <div key={item.nome}>
-                <h3 style={{
-                  fontFamily: 'AtypDisplay, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '1rem',
-                  letterSpacing: '0.05em',
-                  color: '#F5F5F2',
-                  marginBottom: '12px',
-                }}>
-                  {item.nome}
-                </h3>
+            ].map((item, i) => (
+              <div
+                key={item.nome}
+                className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start"
+                style={{
+                  padding: '48px 0',
+                  borderTop: i === 0 ? 'none' : '1px solid rgba(232,224,214,0.2)',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '20px' }}>
+                  <span style={{
+                    fontFamily: 'AtypText, sans-serif',
+                    fontWeight: 600,
+                    fontSize: '0.875rem',
+                    letterSpacing: '0.14em',
+                    color: '#b0a596',
+                    flexShrink: 0,
+                  }}>
+                    {item.num}
+                  </span>
+                  <h3 className="type-h1" style={{
+                    fontFamily: 'AtypDisplay, sans-serif',
+                    fontWeight: 600,
+                    lineHeight: 1.05,
+                    letterSpacing: '0.01em',
+                    color: '#F5F5F2',
+                    margin: 0,
+                  }}>
+                    {item.nome}
+                  </h3>
+                </div>
                 <p style={{
                   fontFamily: 'AtypText, sans-serif',
                   fontWeight: 300,
-                  fontSize: '0.9375rem',
+                  fontSize: '1rem',
                   lineHeight: 1.7,
                   color: '#e8e0d6',
+                  maxWidth: '560px',
                 }}>
                   {item.texto}
                 </p>
@@ -350,10 +374,8 @@ export default function TranspiraPage() {
           }}>
             Como entramos
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
+          <h2 className="type-h1" style={{
             fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             lineHeight: 1.15,
             color: '#05262e',
             marginBottom: '64px',
@@ -496,16 +518,14 @@ export default function TranspiraPage() {
           }}>
             Qualificação
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
+          <h2 className="type-h1" style={{
             fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             lineHeight: 1.15,
             color: '#F5F5F2',
             marginBottom: '64px',
             maxWidth: '700px',
           }}>
-            Para quem faz sentido e para quem <span style={{ color: '#eb5c2e' }}>não faz</span>.
+            Para quem faz sentido e para quem não faz.
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '80px', maxWidth: '1000px' }}>
 
@@ -564,7 +584,7 @@ export default function TranspiraPage() {
                   'Quem busca consultoria que entrega plano e sai. O TRANSPIRA acontece dentro da operação. A Pira trabalha junto com o time, não para o time. Quem quer recomendação externa para executar internamente encontra outro produto mais adequado.',
                 ].map((texto, i) => (
                   <div key={i} style={{ display: 'flex', gap: '16px' }}>
-                    <span style={{ color: '#e8e0d6', marginTop: '4px', flexShrink: 0 }}>&#8212;</span>
+                    <span style={{ color: '#e8e0d6', marginTop: '4px', flexShrink: 0 }}>&#183;</span>
                     <p style={{
                       fontFamily: 'AtypText, sans-serif',
                       fontWeight: 300,
@@ -585,15 +605,18 @@ export default function TranspiraPage() {
             <a
               href="/contato?origem=transpira"
               style={{
-                display: 'inline-block',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
-                fontSize: '0.8125rem',
-                letterSpacing: '0.08em',
+                fontSize: '15px',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#F5F5F2',
                 backgroundColor: '#eb5c2e',
-                padding: '14px 28px',
+                padding: '0.75rem 1.5rem',
+                borderRadius: 0,
                 textDecoration: 'none',
               }}
             >
@@ -617,10 +640,8 @@ export default function TranspiraPage() {
           }}>
             Contrato unificado
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
+          <h2 className="type-h1" style={{
             fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             lineHeight: 1.15,
             color: '#F5F5F2',
             marginBottom: '32px',
@@ -771,10 +792,8 @@ export default function TranspiraPage() {
           }}>
             Perguntas frequentes
           </p>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
+          <h2 className="type-h1" style={{
             fontWeight: 400,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             lineHeight: 1.15,
             color: '#05262e',
             marginBottom: '64px',
@@ -845,10 +864,8 @@ export default function TranspiraPage() {
       {/* FINALCTA | Ink */}
       <section style={{ backgroundColor: '#05262e', padding: '120px 80px', textAlign: 'center' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h2 style={{
-            fontFamily: 'AtypDisplay, sans-serif',
+          <h2 className="type-h2" style={{
             fontWeight: 300,
-            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
             lineHeight: 1.2,
             color: '#F5F5F2',
             marginBottom: '40px',
@@ -858,15 +875,18 @@ export default function TranspiraPage() {
           <a
             href="/contato?origem=transpira"
             style={{
-              display: 'inline-block',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
               fontFamily: 'AtypText, sans-serif',
               fontWeight: 600,
-              fontSize: '0.8125rem',
-              letterSpacing: '0.08em',
+              fontSize: '15px',
+              letterSpacing: '0.14em',
               textTransform: 'uppercase',
               color: '#F5F5F2',
               backgroundColor: '#eb5c2e',
-              padding: '16px 40px',
+              padding: '0.75rem 1.5rem',
+              borderRadius: 0,
               textDecoration: 'none',
             }}
           >
