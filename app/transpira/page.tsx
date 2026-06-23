@@ -141,8 +141,8 @@ export default function TranspiraPage() {
             marginBottom: '32px',
             maxWidth: '800px',
           }}>
-            Quando o trabalho certo substitui o trabalho{' '}
-            <span style={{ color: '#C4421A' }}>em excesso</span>.
+            Quando o trabalho certo substitui o trabalho em{' '}
+            <span style={{ color: '#C4421A' }}>excesso</span>.
           </h1>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
