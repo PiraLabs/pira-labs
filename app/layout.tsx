@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Script from "next/script";
 import { Header } from "@/components/shared/Header";
 import { Footer } from "@/components/shared/Footer";
 import { SkipLink } from "@/components/shared/SkipLink";
@@ -90,19 +89,8 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <CookieBannerLoader />
-        {/* Google Analytics G-Q9W3V4GPQ8 */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-Q9W3V4GPQ8"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-Q9W3V4GPQ8');
-          `}
-        </Script>
+        {/* Google Analytics G-Q9W3V4GPQ8 — desativado temporariamente para performance mobile */}
+        {/* Reativar quando houver dados reais a coletar */}
       </body>
     </html>
   );
