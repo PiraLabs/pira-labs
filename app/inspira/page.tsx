@@ -302,11 +302,8 @@ export default function InspiraPage() {
             ].map((camada, i) => (
               <div
                 key={camada.nome}
+                className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start"
                 style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.1fr)',
-                  gap: '48px',
-                  alignItems: 'start',
                   padding: '48px 0',
                   borderTop: i === 0 ? 'none' : '1px solid rgba(232,224,214,0.2)',
                 }}
