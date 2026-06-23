@@ -227,15 +227,14 @@ export default function InspiraPage() {
             <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '1rem', lineHeight: 1.7, color: '#F5F5F2' }}>
               O resultado não é relatório para apresentar na reunião de board. É a clareza de onde o problema realmente está, por que está lá e o que muda quando ele é resolvido. <strong style={{ fontWeight: 600 }}>O diagnóstico é de propriedade do cliente.</strong> O que a empresa faz com ele, e com quem faz, é decisão pós-diagnóstico.
             </p>
-            <blockquote style={{ borderLeft: '2px solid #eb5c2e', paddingLeft: '24px', marginTop: '16px' }}>
-              <p style={{
+            <blockquote style={{ borderLeft: '2px solid #eb5c2e', paddingLeft: '32px', marginTop: '48px' }}>
+              <p className="type-h2" style={{
                 fontFamily: 'AtypDisplay, sans-serif',
                 fontWeight: 300,
-                fontSize: '1.25rem',
                 fontStyle: 'italic',
-                lineHeight: 1.5,
+                lineHeight: 1.25,
                 color: '#F5F5F2',
-                marginBottom: '12px',
+                marginBottom: '20px',
               }}>
                 &#8220;O INSPIRA sempre termina com ação. Não com relatório para arquivar.&#8221;
               </p>
@@ -277,8 +276,7 @@ export default function InspiraPage() {
             marginBottom: '24px',
             maxWidth: '700px',
           }}>
-            Seis camadas antes de qualquer{' '}
-            <span style={{ color: '#eb5c2e' }}>conclusão</span>.
+            Seis camadas antes de qualquer conclusão.
           </h2>
           <p style={{
             fontFamily: 'AtypText, sans-serif',
@@ -292,33 +290,56 @@ export default function InspiraPage() {
             O diagnóstico avança em sequência. Cada camada responde a uma pergunta que o negócio raramente se faz de forma estruturada. Nenhuma é opcional. É a leitura integrada das seis que produz o problema nomeado com causa específica.
           </p>
 
-          {/* Grade das seis camadas */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '48px', maxWidth: '1100px', marginBottom: '96px' }}>
+          {/* Seis camadas — faixas empilhadas */}
+          <div style={{ marginBottom: '96px' }}>
             {[
-              { nome: 'SOPRO', texto: 'SOPRO abre o diagnóstico INSPIRA. De onde a empresa parte e o que declara querer. A leitura do que foi construído até aqui, do que ainda não foi dito em voz alta e do que a fundadora ou o fundador carrega como intenção sem ter transformado em direção.' },
-              { nome: 'FÔLEGO', texto: 'FÔLEGO é a segunda camada do diagnóstico INSPIRA. Como a empresa aparece para o mercado e para os motores de inteligência artificial. O que o ICP encontra quando procura, como a empresa é descrita por quem não está dentro dela e qual território está sendo ocupado por quem chegou antes.' },
-              { nome: 'PULSO', texto: 'PULSO é a terceira camada do diagnóstico INSPIRA. Como as pessoas e os papéis reais funcionam na prática. O organograma real, não o desenhado. Onde as decisões de fato acontecem, quem as toma e o que fica travado quando uma pessoa-chave está fora.' },
-              { nome: 'ACÚSTICA', texto: 'ACÚSTICA é a quarta camada do diagnóstico INSPIRA. Como a governança e os processos realmente operam. O que está documentado e o que vive na cabeça de uma pessoa. Onde o improviso substituiu o processo e qual o custo real disso na operação.' },
-              { nome: 'PRESSÃO', texto: 'PRESSÃO é a quinta camada do diagnóstico INSPIRA. Onde a tensão econômica está concentrada. O que o resultado financeiro esconde e o que a margem real revela. Onde o negócio está gerando valor e onde está trabalhando de graça sem saber.' },
-              { nome: 'SUSPIRO', texto: 'SUSPIRO é a sexta camada do diagnóstico INSPIRA. O que as cinco camadas anteriores revelam quando lidas juntas. A síntese que nenhuma leitura isolada alcança. O problema real nomeado com causa específica, separado dos sintomas que fizeram a empresa chegar até aqui achando que o problema era outro.' },
-            ].map((camada) => (
-              <div key={camada.nome}>
-                <h3 style={{
-                  fontFamily: 'AtypDisplay, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '1rem',
-                  letterSpacing: '0.1em',
-                  color: '#F5F5F2',
-                  marginBottom: '12px',
-                }}>
-                  {camada.nome}
-                </h3>
+              { num: '01', nome: 'SOPRO', texto: 'SOPRO abre o diagnóstico INSPIRA. De onde a empresa parte e o que declara querer. A leitura do que foi construído até aqui, do que ainda não foi dito em voz alta e do que a fundadora ou o fundador carrega como intenção sem ter transformado em direção.' },
+              { num: '02', nome: 'FÔLEGO', texto: 'FÔLEGO é a segunda camada do diagnóstico INSPIRA. Como a empresa aparece para o mercado e para os motores de inteligência artificial. O que o ICP encontra quando procura, como a empresa é descrita por quem não está dentro dela e qual território está sendo ocupado por quem chegou antes.' },
+              { num: '03', nome: 'PULSO', texto: 'PULSO é a terceira camada do diagnóstico INSPIRA. Como as pessoas e os papéis reais funcionam na prática. O organograma real, não o desenhado. Onde as decisões de fato acontecem, quem as toma e o que fica travado quando uma pessoa-chave está fora.' },
+              { num: '04', nome: 'ACÚSTICA', texto: 'ACÚSTICA é a quarta camada do diagnóstico INSPIRA. Como a governança e os processos realmente operam. O que está documentado e o que vive na cabeça de uma pessoa. Onde o improviso substituiu o processo e qual o custo real disso na operação.' },
+              { num: '05', nome: 'PRESSÃO', texto: 'PRESSÃO é a quinta camada do diagnóstico INSPIRA. Onde a tensão econômica está concentrada. O que o resultado financeiro esconde e o que a margem real revela. Onde o negócio está gerando valor e onde está trabalhando de graça sem saber.' },
+              { num: '06', nome: 'SUSPIRO', texto: 'SUSPIRO é a sexta camada do diagnóstico INSPIRA. O que as cinco camadas anteriores revelam quando lidas juntas. A síntese que nenhuma leitura isolada alcança. O problema real nomeado com causa específica, separado dos sintomas que fizeram a empresa chegar até aqui achando que o problema era outro.' },
+            ].map((camada, i) => (
+              <div
+                key={camada.nome}
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.1fr)',
+                  gap: '48px',
+                  alignItems: 'start',
+                  padding: '48px 0',
+                  borderTop: i === 0 ? 'none' : '1px solid rgba(232,224,214,0.2)',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '20px' }}>
+                  <span style={{
+                    fontFamily: 'AtypText, sans-serif',
+                    fontWeight: 600,
+                    fontSize: '0.875rem',
+                    letterSpacing: '0.14em',
+                    color: '#b0a596',
+                    flexShrink: 0,
+                  }}>
+                    {camada.num}
+                  </span>
+                  <h3 className="type-h1" style={{
+                    fontFamily: 'AtypDisplay, sans-serif',
+                    fontWeight: 600,
+                    lineHeight: 1.0,
+                    letterSpacing: '0.01em',
+                    color: '#F5F5F2',
+                    margin: 0,
+                  }}>
+                    {camada.nome}
+                  </h3>
+                </div>
                 <p style={{
                   fontFamily: 'AtypText, sans-serif',
                   fontWeight: 300,
-                  fontSize: '0.9375rem',
+                  fontSize: '1rem',
                   lineHeight: 1.7,
                   color: '#e8e0d6',
+                  maxWidth: '560px',
                 }}>
                   {camada.texto}
                 </p>
