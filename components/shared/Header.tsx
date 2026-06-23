@@ -66,11 +66,43 @@ export function Header() {
     timeoutRef.current = setTimeout(() => setOpenDropdown(null), 80)
   }
 
+  const isEN = pathname.startsWith('/en')
+
+  const EN_PT_MAP: Record<string, string> = {
+    '/en': '/',
+    '/en/about': '/sobre',
+    '/en/contact': '/contato',
+    '/en/creative-business-turnaround': '/creative-business-turnaround',
+  }
+  const PT_EN_MAP: Record<string, string> = {
+    '/': '/en',
+    '/sobre': '/en/about',
+    '/contato': '/en/contact',
+    '/creative-business-turnaround': '/en/creative-business-turnaround',
+  }
+
+  const ptHref = isEN ? (EN_PT_MAP[pathname] ?? '/') : pathname
+  const enHref = isEN ? pathname : (PT_EN_MAP[pathname] ?? '/en')
+
+  const langStyle = (active: boolean): React.CSSProperties => ({
+    background: 'none',
+    border: 'none',
+    cursor: active ? 'default' : 'pointer',
+    fontFamily: 'var(--font-atyp-text)',
+    fontSize: '11px',
+    fontWeight: 600,
+    color: '#F5F5F2',
+    opacity: active ? 1 : 0.4,
+    letterSpacing: '0.06em',
+    textDecoration: 'none',
+    padding: 0,
+  })
+
   const langToggle = (
     <div style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
-      <button style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'var(--font-atyp-text)', fontSize: '11px', fontWeight: 600, color: '#F5F5F2', opacity: 1, letterSpacing: '0.06em' }}>PT</button>
+      <Link href={ptHref} style={langStyle(!isEN)}>PT</Link>
       <span style={{ color: '#F5F5F2', opacity: 0.3, fontSize: '11px' }}>/</span>
-      <button style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'var(--font-atyp-text)', fontSize: '11px', fontWeight: 600, color: '#F5F5F2', opacity: 0.4, letterSpacing: '0.06em' }}>EN</button>
+      <Link href={enHref} style={langStyle(isEN)}>EN</Link>
     </div>
   )
 
