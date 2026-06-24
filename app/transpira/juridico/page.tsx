@@ -293,7 +293,7 @@ export default function TranspiraJuridicoPage() {
               Não é diagnóstico. Não é relatório. <strong style={{ fontWeight: 600 }}>É o trabalho sendo feito de forma diferente,</strong> com a responsabilidade jurídica onde ela pertence: com o advogado habilitado do cliente.
             </p>
           </div>
-          <div style={{ borderTop: '1px solid rgba(232,224,214,0.2)', paddingTop: '40px', maxWidth: '720px' }}>
+          <div style={{ borderTop: '1px solid rgba(232,224,214,0.12)', paddingTop: '40px', maxWidth: '720px' }}>
             <p style={{
               fontFamily: 'AtypText, sans-serif',
               fontWeight: 600,

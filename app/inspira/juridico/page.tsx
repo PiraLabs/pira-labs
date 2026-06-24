@@ -259,12 +259,12 @@ export default function InspiraJuridicoPage() {
               <a href="/inspira" style={{ color: '#F5F5F2', textDecoration: 'underline' }}>INSPIRA</a>{' '}
               com foco nas dimensões específicas do contexto jurídico: confidencialidade e sigilo profissional, dimensões operacionais associadas à Lei Geral de Proteção de Dados no tratamento de dados de clientes sempre sujeitas à validação jurídica do cliente, responsabilidade técnica da advogada ou do advogado, governança de uso de IA na operação do escritório e exposição operacional por tipo de ferramenta e plano contratado.
             </p>
-            <div style={{ borderLeft: '2px solid rgba(232,224,214,0.3)', paddingLeft: '24px', marginTop: '8px' }}>
+            <div style={{ borderLeft: '2px solid rgba(232,224,214,0.12)', paddingLeft: '24px', marginTop: '8px' }}>
               <p style={{
                 fontFamily: 'AtypText, sans-serif',
                 fontWeight: 600,
                 fontSize: '0.75rem',
-                letterSpacing: '0.08em',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#e8e0d6',
                 marginBottom: '12px',
