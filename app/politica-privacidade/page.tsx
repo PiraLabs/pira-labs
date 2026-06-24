@@ -63,18 +63,17 @@ export default function PoliticaPrivacidadePage() {
       </Section>
 
       <Section variant="ink" paddingY="lg">
-        <div className="max-w-2xl font-body text-off-white/85 leading-relaxed space-y-8">
+        <div className="max-w-2xl font-body leading-relaxed space-y-8" style={{ color: "#e8e0d6" }}>
 
-          {/* 1. Quem somos */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">1. Quem somos</h2>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>1. Quem somos</h2>
             <p className="mb-4">
               A Pira Labs é uma consultoria brasileira especializada em Creative Business Turnaround
               para empresas de serviços. Operamos em conformidade com a Lei Geral de Proteção de
               Dados Pessoais (Lei nº 13.709/2018, LGPD).
             </p>
-            <div className="bg-deep-teal/50 rounded-lg p-4 text-sm text-off-white/70 space-y-1">
-              <p className="font-semibold text-off-white/90">Controladora dos dados:</p>
+            <div className="p-4 text-sm space-y-1" style={{ backgroundColor: "#004757", color: "#e8e0d6" }}>
+              <p className="font-semibold" style={{ color: "#F5F5F2" }}>Controladora dos dados:</p>
               <p>Pira Labs Consultoria Ltda.</p>
               <p>CNPJ: 46.954.891/0001-16</p>
               <p>Rua Curuzu, 117, Alto da Lapa, São Paulo/SP, CEP 05084-020</p>
@@ -83,7 +82,8 @@ export default function PoliticaPrivacidadePage() {
                 Contato:{" "}
                 <a
                   href="mailto:inspira@piralabs.com.br"
-                  className="text-orange underline hover:text-orange transition-colors"
+                  className="underline transition-colors"
+                  style={{ color: "#e8e0d6" }}
                 >
                   inspira@piralabs.com.br
                 </a>
@@ -91,12 +91,11 @@ export default function PoliticaPrivacidadePage() {
             </div>
           </div>
 
-          {/* 2. Dados que coletamos */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-4">2. Dados que coletamos</h2>
+            <h2 className="type-h3 mb-4" style={{ color: "#F5F5F2" }}>2. Dados que coletamos</h2>
             <div className="space-y-5">
               <div>
-                <h3 className="text-base font-semibold text-off-white mb-2">
+                <h3 className="font-semibold mb-2" style={{ color: "#F5F5F2", fontSize: "1rem" }}>
                   2.1 Dados fornecidos diretamente por você
                 </h3>
                 <p className="mb-2">
@@ -113,7 +112,7 @@ export default function PoliticaPrivacidadePage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-base font-semibold text-off-white mb-2">
+                <h3 className="font-semibold mb-2" style={{ color: "#F5F5F2", fontSize: "1rem" }}>
                   2.2 Dados coletados automaticamente
                 </h3>
                 <p className="mb-2">
@@ -132,9 +131,8 @@ export default function PoliticaPrivacidadePage() {
             </div>
           </div>
 
-          {/* 3. Como usamos seus dados */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">3. Como usamos seus dados</h2>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>3. Como usamos seus dados</h2>
             <ul className="space-y-1 list-disc list-inside mb-4">
               <li>Responder às suas mensagens e solicitações de contato</li>
               <li>Analisar o desempenho e a usabilidade do site</li>
@@ -147,41 +145,40 @@ export default function PoliticaPrivacidadePage() {
             </p>
           </div>
 
-          {/* 4. Cookies */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-4">4. Cookies</h2>
+            <h2 className="type-h3 mb-4" style={{ color: "#F5F5F2" }}>4. Cookies</h2>
             <p className="mb-4">Utilizamos os seguintes cookies:</p>
             <div className="overflow-x-auto mb-4">
               <table className="w-full text-sm border-collapse">
                 <thead>
-                  <tr className="border-b border-teal/50">
-                    <th className="text-left py-3 pr-4 text-off-white font-medium">Cookie</th>
-                    <th className="text-left py-3 pr-4 text-off-white font-medium">Tipo</th>
-                    <th className="text-left py-3 pr-4 text-off-white font-medium">Finalidade</th>
-                    <th className="text-left py-3 text-off-white font-medium">Duração</th>
+                  <tr style={{ borderBottom: "1px solid rgba(245,245,242,0.12)" }}>
+                    <th className="text-left py-3 pr-4 font-medium" style={{ color: "#F5F5F2" }}>Cookie</th>
+                    <th className="text-left py-3 pr-4 font-medium" style={{ color: "#F5F5F2" }}>Tipo</th>
+                    <th className="text-left py-3 pr-4 font-medium" style={{ color: "#F5F5F2" }}>Finalidade</th>
+                    <th className="text-left py-3 font-medium" style={{ color: "#F5F5F2" }}>Duração</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-teal/20">
-                  <tr>
-                    <td className="py-3 pr-4 font-mono text-orange text-xs">pira_consent</td>
+                <tbody>
+                  <tr style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
+                    <td className="py-3 pr-4 font-mono text-xs" style={{ color: "#b0a596" }}>pira_consent</td>
                     <td className="py-3 pr-4">Essencial</td>
                     <td className="py-3 pr-4">
                       Armazena sua preferência de consentimento de cookies
                     </td>
-                    <td className="py-3">1 ano</td>
+                    <td className="py-3">12 meses</td>
                   </tr>
-                  <tr>
-                    <td className="py-3 pr-4 font-mono text-orange text-xs">_ga, _ga_*</td>
+                  <tr style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
+                    <td className="py-3 pr-4 font-mono text-xs" style={{ color: "#b0a596" }}>_ga, _ga_*</td>
                     <td className="py-3 pr-4">Analítico</td>
                     <td className="py-3 pr-4">
                       Google Analytics: análise de tráfego e comportamento no site
                     </td>
                     <td className="py-3">2 anos</td>
                   </tr>
-                  <tr>
-                    <td className="py-3 pr-4 font-mono text-orange text-xs">Vercel Analytics</td>
+                  <tr style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
+                    <td className="py-3 pr-4 font-mono text-xs" style={{ color: "#b0a596" }}>Vercel Analytics</td>
                     <td className="py-3 pr-4">Analítico</td>
-                    <td className="py-3 pr-4">Métricas de desempenho e acesso ao site</td>
+                    <td className="py-3 pr-4">Analisa tráfego e uso do site de forma anonimizada</td>
                     <td className="py-3">Sessão</td>
                   </tr>
                 </tbody>
@@ -189,7 +186,7 @@ export default function PoliticaPrivacidadePage() {
             </div>
             <p className="mb-2">
               Você pode gerenciar suas preferências de cookies a qualquer momento pela nossa{" "}
-              <Link href="/cookies" className="text-orange underline hover:text-orange transition-colors">
+              <Link href="/cookies" className="underline transition-colors" style={{ color: "#e8e0d6" }}>
                 Política de Cookies
               </Link>
               .
@@ -200,23 +197,22 @@ export default function PoliticaPrivacidadePage() {
             </p>
           </div>
 
-          {/* 5. Compartilhamento de dados */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>
               5. Compartilhamento de dados
             </h2>
             <p className="mb-3">Seus dados podem ser compartilhados com:</p>
             <ul className="space-y-2 list-disc list-inside mb-3">
               <li>
-                <strong className="text-off-white">Fillout</strong> (fillout.com): plataforma de
+                <strong style={{ color: "#F5F5F2" }}>Fillout</strong> (fillout.com): plataforma de
                 formulários que processa as submissões de contato
               </li>
               <li>
-                <strong className="text-off-white">Google</strong> (analytics.google.com): análise
+                <strong style={{ color: "#F5F5F2" }}>Google</strong> (analytics.google.com): análise
                 de tráfego via Google Analytics
               </li>
               <li>
-                <strong className="text-off-white">Vercel</strong> (vercel.com): infraestrutura de
+                <strong style={{ color: "#F5F5F2" }}>Vercel</strong> (vercel.com): infraestrutura de
                 hospedagem do site
               </li>
             </ul>
@@ -227,9 +223,8 @@ export default function PoliticaPrivacidadePage() {
             <p>Não vendemos, alugamos nem cedemos seus dados a terceiros para fins comerciais.</p>
           </div>
 
-          {/* 6. Base legal para o tratamento */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>
               6. Base legal para o tratamento
             </h2>
             <p className="mb-3">
@@ -237,51 +232,46 @@ export default function PoliticaPrivacidadePage() {
             </p>
             <ul className="space-y-2 list-disc list-inside">
               <li>
-                <strong className="text-off-white">Consentimento</strong> (art. 7º, I): para
-                cookies analíticos, coletado via banner de cookies
+                <strong style={{ color: "#F5F5F2" }}>Execução de contrato ou procedimentos preliminares</strong>{" "}
+                (art. 7º, V): para responder às suas solicitações de contato, pois o preenchimento do formulário representa procedimento preliminar à eventual contratação
               </li>
               <li>
-                <strong className="text-off-white">Legítimo interesse</strong> (art. 7º, IX): para
-                análise de desempenho do site e melhoria da experiência
+                <strong style={{ color: "#F5F5F2" }}>Consentimento</strong> (art. 7º, I): para
+                cookies analíticos e comunicações opcionais, coletado via banner de cookies, podendo ser revogado a qualquer momento
               </li>
               <li>
-                <strong className="text-off-white">
-                  Execução de contrato ou procedimentos preliminares
-                </strong>{" "}
-                (art. 7º, V): para responder às suas solicitações de contato
+                <strong style={{ color: "#F5F5F2" }}>Legítimo interesse</strong> (art. 7º, IX): para
+                análise de desempenho do site e melhoria da experiência, desde que não prevaleçam interesses ou direitos fundamentais do titular
               </li>
             </ul>
           </div>
 
-          {/* 7. Seus direitos */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">7. Seus direitos</h2>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>7. Seus direitos</h2>
             <p className="mb-3">Como titular dos dados, você tem direito a:</p>
             <ul className="space-y-2 list-disc list-inside mb-3">
               <li>
-                <strong className="text-off-white">Confirmar</strong> a existência de tratamento
+                <strong style={{ color: "#F5F5F2" }}>Confirmar</strong> a existência de tratamento
                 dos seus dados
               </li>
               <li>
-                <strong className="text-off-white">Acessar</strong> os dados que mantemos sobre
+                <strong style={{ color: "#F5F5F2" }}>Acessar</strong> os dados que mantemos sobre
                 você
               </li>
               <li>
-                <strong className="text-off-white">Corrigir</strong> dados incompletos, inexatos ou
+                <strong style={{ color: "#F5F5F2" }}>Corrigir</strong> dados incompletos, inexatos ou
                 desatualizados
               </li>
               <li>
-                <strong className="text-off-white">
-                  Solicitar a anonimização, bloqueio ou eliminação
-                </strong>{" "}
+                <strong style={{ color: "#F5F5F2" }}>Solicitar a anonimização, bloqueio ou eliminação</strong>{" "}
                 de dados desnecessários ou tratados em desconformidade
               </li>
               <li>
-                <strong className="text-off-white">Revogar o consentimento</strong> a qualquer
+                <strong style={{ color: "#F5F5F2" }}>Revogar o consentimento</strong> a qualquer
                 momento, sem prejuízo à licitude dos tratamentos anteriores
               </li>
               <li>
-                <strong className="text-off-white">Solicitar a portabilidade</strong> dos seus
+                <strong style={{ color: "#F5F5F2" }}>Solicitar a portabilidade</strong> dos seus
                 dados
               </li>
             </ul>
@@ -289,7 +279,8 @@ export default function PoliticaPrivacidadePage() {
               Para exercer qualquer desses direitos, entre em contato pelo e-mail{" "}
               <a
                 href="mailto:inspira@piralabs.com.br"
-                className="text-orange underline hover:text-orange transition-colors"
+                className="underline transition-colors"
+                style={{ color: "#e8e0d6" }}
               >
                 inspira@piralabs.com.br
               </a>
@@ -297,45 +288,43 @@ export default function PoliticaPrivacidadePage() {
             </p>
           </div>
 
-          {/* 8. Retenção dos dados */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-4">8. Retenção dos dados</h2>
+            <h2 className="type-h3 mb-4" style={{ color: "#F5F5F2" }}>8. Retenção dos dados</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
-                  <tr className="border-b border-teal/50">
-                    <th className="text-left py-3 pr-6 text-off-white font-medium">Dado</th>
-                    <th className="text-left py-3 text-off-white font-medium">
+                  <tr style={{ borderBottom: "1px solid rgba(245,245,242,0.12)" }}>
+                    <th className="text-left py-3 pr-6 font-medium" style={{ color: "#F5F5F2" }}>Dado</th>
+                    <th className="text-left py-3 font-medium" style={{ color: "#F5F5F2" }}>
                       Prazo de retenção
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-teal/20">
-                  <tr>
+                <tbody>
+                  <tr style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
                     <td className="py-3 pr-6">Formulários de contato</td>
                     <td className="py-3">
                       Até 5 anos após o último contato, salvo obrigação legal que exija período
                       maior
                     </td>
                   </tr>
-                  <tr>
+                  <tr style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
                     <td className="py-3 pr-6">Dados analíticos (Google Analytics)</td>
                     <td className="py-3">
                       14 meses (configuração padrão com retenção reduzida)
                     </td>
                   </tr>
-                  <tr>
+                  <tr style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
                     <td className="py-3 pr-6">Dados de consentimento de cookies</td>
-                    <td className="py-3">1 ano</td>
+                    <td className="py-3">12 meses</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
 
-          {/* 9. Segurança */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">9. Segurança</h2>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>9. Segurança</h2>
             <p className="mb-3">
               Adotamos medidas técnicas e organizacionais adequadas para proteger seus dados contra
               acesso não autorizado, perda, alteração ou divulgação indevida. Isso inclui:
@@ -346,14 +335,12 @@ export default function PoliticaPrivacidadePage() {
               <li>Acesso restrito aos dados por pessoas autorizadas</li>
             </ul>
             <p>
-              Em caso de incidente de segurança que possa acarretar risco ou dano relevante a você,
-              comunicaremos a ocorrência dentro do prazo previsto pela LGPD.
+              Em caso de incidente de segurança confirmado envolvendo dados pessoais sujeitos à LGPD e capaz de acarretar risco ou dano relevante aos titulares, a Pira Labs avaliará a ocorrência e, quando cabível, comunicará a ANPD e os titulares afetados no prazo regulatório aplicável.
             </p>
           </div>
 
-          {/* 10. Links externos */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">10. Links externos</h2>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>10. Links externos</h2>
             <p>
               Nosso site pode conter links para outros sites. Esta Política de Privacidade se aplica
               exclusivamente ao piralabs.com.br. Não nos responsabilizamos pelas práticas de
@@ -361,10 +348,18 @@ export default function PoliticaPrivacidadePage() {
             </p>
           </div>
 
-          {/* 11. Alterações nesta política */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">
-              11. Alterações nesta política
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>
+              11. Tratamento de dados em projetos contratados
+            </h2>
+            <p>
+              Esta política cobre exclusivamente os dados tratados no contexto da navegação e do contato via site. O tratamento de dados pessoais realizado no âmbito de projetos contratados, incluindo o TRANSPIRA Jurídico e demais engajamentos com acesso a documentos e sistemas do cliente, é disciplinado por instrumento contratual específico celebrado entre as partes, que define regras sobre dados pessoais, dados sensíveis, sigilo, uso de ferramentas de IA, suboperadores, retenção, eliminação e transferência internacional quando aplicável.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>
+              12. Alterações nesta política
             </h2>
             <p>
               Podemos atualizar esta política periodicamente. A data de &quot;última atualização&quot; no
@@ -373,37 +368,39 @@ export default function PoliticaPrivacidadePage() {
             </p>
           </div>
 
-          {/* 12. Contato e canal do encarregado */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">
-              12. Contato e canal do encarregado
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>
+              13. Contato e canal de comunicação com titulares
             </h2>
             <p className="mb-3">
               Para dúvidas, solicitações ou exercício dos seus direitos:
             </p>
-            <div className="bg-deep-teal/50 rounded-lg p-4 text-sm text-off-white/70 space-y-1">
+            <div className="p-4 text-sm space-y-1" style={{ backgroundColor: "#004757", color: "#e8e0d6" }}>
               <p>
-                <strong className="text-off-white/90">E-mail:</strong>{" "}
+                <strong style={{ color: "#F5F5F2" }}>Encarregado pelo tratamento de dados:</strong> Celso Rielli da Gama
+              </p>
+              <p>
+                <strong style={{ color: "#F5F5F2" }}>E-mail:</strong>{" "}
                 <a
                   href="mailto:inspira@piralabs.com.br"
-                  className="text-orange underline hover:text-orange transition-colors"
+                  className="underline transition-colors"
+                  style={{ color: "#e8e0d6" }}
                 >
                   inspira@piralabs.com.br
                 </a>
               </p>
               <p>
-                <strong className="text-off-white/90">Site:</strong> piralabs.com.br
+                <strong style={{ color: "#F5F5F2" }}>Site:</strong> piralabs.com.br
               </p>
               <p>
-                <strong className="text-off-white/90">Endereço:</strong> São Paulo, SP, Brasil
+                <strong style={{ color: "#F5F5F2" }}>Endereço:</strong> Rua Curuzu, 117, Alto da Lapa, São Paulo/SP, CEP 05084-020
               </p>
             </div>
             <p className="mt-3">Respondemos em até 15 dias úteis.</p>
           </div>
 
-          {/* Rodapé legal */}
-          <div className="pt-4 border-t border-teal/20">
-            <p className="text-xs text-off-white/40">
+          <div className="pt-4" style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
+            <p className="text-xs" style={{ color: "#b0a596" }}>
               Pira Labs Consultoria Ltda. · CNPJ 46.954.891/0001-16 · piralabs.com.br · São Paulo, Brasil
             </p>
           </div>

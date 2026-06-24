@@ -62,11 +62,10 @@ export default function TermosPage() {
       </Section>
 
       <Section variant="ink" paddingY="lg">
-        <div className="max-w-2xl font-body text-off-white/85 leading-relaxed space-y-8">
+        <div className="max-w-2xl font-body leading-relaxed space-y-8" style={{ color: "#e8e0d6" }}>
 
-          {/* 1. Aceitação dos termos */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">1. Aceitação dos termos</h2>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>1. Aceitação dos termos</h2>
             <p className="mb-2">
               Ao acessar e utilizar o site piralabs.com.br, você concorda com estes Termos de Uso.
               Se não concordar com qualquer disposição, recomendamos que não utilize o site.
@@ -77,11 +76,10 @@ export default function TermosPage() {
             </p>
           </div>
 
-          {/* 2. Quem somos */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">2. Quem somos</h2>
-            <div className="bg-deep-teal/50 rounded-lg p-4 text-sm text-off-white/70 space-y-1">
-              <p className="font-semibold text-off-white/90">
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>2. Quem somos</h2>
+            <div className="p-4 text-sm space-y-1" style={{ backgroundColor: "#004757", color: "#e8e0d6" }}>
+              <p className="font-semibold" style={{ color: "#F5F5F2" }}>
                 Pira Labs Consultoria Ltda.
               </p>
               <p>CNPJ: 46.954.891/0001-16</p>
@@ -91,7 +89,8 @@ export default function TermosPage() {
                 Contato:{" "}
                 <a
                   href="mailto:inspira@piralabs.com.br"
-                  className="text-orange underline hover:text-orange transition-colors"
+                  className="underline transition-colors"
+                  style={{ color: "#e8e0d6" }}
                 >
                   inspira@piralabs.com.br
                 </a>
@@ -99,9 +98,8 @@ export default function TermosPage() {
             </div>
           </div>
 
-          {/* 3. Uso permitido do site */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">3. Uso permitido do site</h2>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>3. Uso permitido do site</h2>
             <p className="mb-2">Você pode utilizar este site para:</p>
             <ul className="space-y-1 list-disc list-inside">
               <li>Conhecer os serviços e a metodologia da Pira Labs</li>
@@ -110,9 +108,8 @@ export default function TermosPage() {
             </ul>
           </div>
 
-          {/* 4. Uso proibido */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">4. Uso proibido</h2>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>4. Uso proibido</h2>
             <p className="mb-2">É expressamente proibido:</p>
             <ul className="space-y-1 list-disc list-inside">
               <li>
@@ -130,24 +127,20 @@ export default function TermosPage() {
             </ul>
           </div>
 
-          {/* 5. Propriedade intelectual */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>
               5. Propriedade intelectual
             </h2>
             <p className="mb-2">
-              Todo o conteúdo disponível neste site, incluindo textos, metodologias, marcas, nomes,
-              logotipos, imagens, estrutura editorial e nomenclaturas proprietárias (INSPIRA,
-              TRANSPIRA, RESPIRA, Faísca, Oxigênio IA Search, Creative Business Turnaround), é de
-              propriedade exclusiva da Pira Labs ou de seus licenciantes, protegido pela legislação
-              brasileira de propriedade intelectual.
+              O conteúdo disponível no site, incluindo textos, imagens, logotipos, estrutura editorial, materiais, compilações, nomes de produtos, sinais distintivos e elementos de identidade da Pira Labs, é protegido pela legislação aplicável, conforme a natureza de cada ativo. A Pira Labs é titular ou licenciada dos direitos incidentes sobre esses conteúdos e sinais, quando aplicável.
             </p>
-            <p>A consulta e leitura do conteúdo não implica cessão de qualquer direito sobre ele.</p>
+            <p>
+              A consulta, leitura ou navegação no site não implica cessão, licença ampla, autorização de reprodução, exploração comercial ou transferência de qualquer direito, salvo quando houver autorização expressa e por escrito ou hipótese legal de uso permitido.
+            </p>
           </div>
 
-          {/* 6. Serviços e contratação */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>
               6. Serviços e contratação
             </h2>
             <p className="mb-2">
@@ -161,29 +154,20 @@ export default function TermosPage() {
             </p>
           </div>
 
-          {/* 7. Limitação de responsabilidade */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>
               7. Limitação de responsabilidade
             </h2>
-            <p className="mb-2">A Pira Labs não se responsabiliza por:</p>
-            <ul className="space-y-1 list-disc list-inside">
-              <li>
-                Decisões tomadas com base no conteúdo publicado no site, que tem caráter informativo
-                e não substitui consultoria formal
-              </li>
-              <li>
-                Interrupções temporárias no acesso ao site por manutenção, falhas técnicas ou
-                motivos alheios ao nosso controle
-              </li>
-              <li>Conteúdo de sites externos acessados por links presentes neste site</li>
-              <li>Danos decorrentes de uso indevido do site por terceiros</li>
-            </ul>
+            <p className="mb-2">
+              Na extensão permitida pela legislação aplicável, a Pira Labs não se responsabiliza por decisões tomadas exclusivamente com base em conteúdo informativo publicado no site, por uso indevido do site por terceiros, por indisponibilidades temporárias, por alterações de funcionalidades não contratadas ou por conteúdos de terceiros acessados por links externos.
+            </p>
+            <p>
+              Esta limitação não exclui nem restringe responsabilidade que não possa ser afastada por lei, incluindo responsabilidade por dolo, culpa, descumprimento contratual específico, violação de direitos de terceiros, vício ou defeito de serviço quando aplicável, publicidade enganosa ou obrigação legal inderrogável.
+            </p>
           </div>
 
-          {/* 8. Disponibilidade do site */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>
               8. Disponibilidade do site
             </h2>
             <p>
@@ -193,9 +177,8 @@ export default function TermosPage() {
             </p>
           </div>
 
-          {/* 9. Links externos */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">9. Links externos</h2>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>9. Links externos</h2>
             <p>
               O site pode conter links para sites de terceiros. Esses links são fornecidos para
               conveniência e não representam endosso do conteúdo desses sites. A Pira Labs não tem
@@ -203,14 +186,14 @@ export default function TermosPage() {
             </p>
           </div>
 
-          {/* 10. Privacidade */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">10. Privacidade</h2>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>10. Privacidade</h2>
             <p>
               O tratamento dos seus dados pessoais é regido pela nossa{" "}
               <Link
                 href="/politica-privacidade"
-                className="text-orange underline hover:text-orange transition-colors"
+                className="underline transition-colors"
+                style={{ color: "#e8e0d6" }}
               >
                 Política de Privacidade
               </Link>
@@ -218,9 +201,8 @@ export default function TermosPage() {
             </p>
           </div>
 
-          {/* 11. Alterações nestes termos */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>
               11. Alterações nestes termos
             </h2>
             <p>
@@ -230,45 +212,41 @@ export default function TermosPage() {
             </p>
           </div>
 
-          {/* 12. Lei aplicável e foro */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>
               12. Lei aplicável e foro
             </h2>
             <p>
-              Estes Termos de Uso são regidos pelas leis brasileiras. Fica eleito o foro da comarca
-              de São Paulo/SP para dirimir quaisquer controvérsias decorrentes deste documento, com
-              renúncia a qualquer outro, por mais privilegiado que seja.
+              Estes Termos de Uso são regidos pelas leis brasileiras. Para controvérsias decorrentes do uso do site ou de relações não submetidas a foro legal obrigatório, fica eleito o foro da comarca de São Paulo/SP, ressalvadas normas cogentes, hipóteses legais de competência inderrogável e direitos aplicáveis a consumidores quando caracterizada relação de consumo.
             </p>
           </div>
 
-          {/* 13. Contato */}
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">13. Contato</h2>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>13. Contato</h2>
             <p className="mb-3">Para dúvidas sobre estes Termos de Uso:</p>
-            <div className="bg-deep-teal/50 rounded-lg p-4 text-sm text-off-white/70 space-y-1">
+            <div className="p-4 text-sm space-y-1" style={{ backgroundColor: "#004757", color: "#e8e0d6" }}>
               <p>
-                <strong className="text-off-white/90">E-mail:</strong>{" "}
+                <strong style={{ color: "#F5F5F2" }}>E-mail:</strong>{" "}
                 <a
                   href="mailto:inspira@piralabs.com.br"
-                  className="text-orange underline hover:text-orange transition-colors"
+                  className="underline transition-colors"
+                  style={{ color: "#e8e0d6" }}
                 >
                   inspira@piralabs.com.br
                 </a>
               </p>
               <p>
-                <strong className="text-off-white/90">Site:</strong> piralabs.com.br
+                <strong style={{ color: "#F5F5F2" }}>Site:</strong> piralabs.com.br
               </p>
               <p>
-                <strong className="text-off-white/90">Endereço:</strong> Rua Curuzu, 117, Alto da
+                <strong style={{ color: "#F5F5F2" }}>Endereço:</strong> Rua Curuzu, 117, Alto da
                 Lapa, São Paulo/SP, CEP 05084-020
               </p>
             </div>
           </div>
 
-          {/* Rodapé legal */}
-          <div className="pt-4 border-t border-teal/20">
-            <p className="text-xs text-off-white/40">
+          <div className="pt-4" style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
+            <p className="text-xs" style={{ color: "#b0a596" }}>
               Pira Labs Consultoria Ltda. · CNPJ 46.954.891/0001-16 · piralabs.com.br · São Paulo, Brasil
             </p>
           </div>
