@@ -107,16 +107,18 @@ export default function AntesDaCrise() {
         </div>
       </Section>
 
-      <Section variant="teal" paddingY="lg">
-        <div className="max-w-2xl space-y-6">
-          <p className="font-display text-off-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 500, lineHeight: 1.35 }}>
-            Quer entender se o seu momento ainda é antes da crise?
-          </p>
-          <CTAButton href="/contato" origin="glossario_antes_crise" variant="primary">
-            RESPIRE
-          </CTAButton>
+      <section className="bg-ink section-pt section-pb">
+        <div className="container-site hr-on-dark seam-pt">
+          <div className="max-w-2xl space-y-6">
+            <p className="font-display text-off-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 500, lineHeight: 1.35 }}>
+              Quer entender se o seu momento ainda é antes da crise?
+            </p>
+            <CTAButton href="/contato" origin="glossario_antes_crise" variant="primary">
+              RESPIRE
+            </CTAButton>
+          </div>
         </div>
-      </Section>
+      </section>
     </>
   )
 }

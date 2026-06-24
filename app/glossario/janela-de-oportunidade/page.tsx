@@ -109,16 +109,18 @@ export default function JanelaOportunidade() {
         </div>
       </Section>
 
-      <Section variant="teal" paddingY="lg">
-        <div className="max-w-2xl space-y-6">
-          <p className="font-display text-off-white" style={{ fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 500, lineHeight: 1.35 }}>
-            Quer saber se a janela ainda está aberta para o seu negócio?
-          </p>
-          <CTAButton href="/contato" origin="glossario_janela_oportunidade" variant="primary">
-            RESPIRE
-          </CTAButton>
+      <section className="bg-ink section-pt section-pb">
+        <div className="container-site hr-on-dark seam-pt">
+          <div className="max-w-2xl space-y-6">
+            <p className="font-display text-off-white" style={{ fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 500, lineHeight: 1.35 }}>
+              Quer saber se a janela ainda está aberta para o seu negócio?
+            </p>
+            <CTAButton href="/contato" origin="glossario_janela_oportunidade" variant="primary">
+              RESPIRE
+            </CTAButton>
+          </div>
         </div>
-      </Section>
+      </section>
     </>
   )
 }
