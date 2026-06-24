@@ -1,3 +1,5 @@
+export const dynamic = 'force-static'
+
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Section } from "@/components/shared/Section"
@@ -85,7 +87,7 @@ export default function Glossario() {
 
       <Section variant="ink" paddingY="lg">
         <div className="max-w-3xl space-y-4">
-          <p className="text-off-white/75 font-body leading-relaxed">
+          <p className="font-body leading-relaxed" style={{ color: "#e8e0d6" }}>
             Algumas palavras usadas em consultoria, transformação e tecnologia carregam décadas de uso impreciso. Quando a Pira Labs usa um termo, usa com definição própria. Esta página registra o que cada palavra significa aqui, e o que ela não significa.
           </p>
         </div>
@@ -97,15 +99,16 @@ export default function Glossario() {
             <Link
               key={slug}
               href={`/glossario/${slug}`}
-              className="group flex flex-col gap-2 border-b border-sand/10 py-8 hover:border-sand/30 transition-colors"
+              className="group flex flex-col gap-2 py-8"
+              style={{ borderBottom: "1px solid rgba(245,245,242,0.12)" }}
             >
               <span className="font-display text-off-white group-hover:text-orange transition-colors" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", fontWeight: 500 }}>
                 {label}
               </span>
-              <span className="text-off-white/60 font-body leading-relaxed" style={{ fontSize: "15px" }}>
+              <span className="font-body leading-relaxed" style={{ fontSize: "15px", color: "#e8e0d6" }}>
                 {resumo}
               </span>
-              <span className="text-orange font-body font-semibold uppercase mt-1" style={{ fontSize: "11px", letterSpacing: "0.15em" }}>
+              <span className="font-body font-semibold uppercase mt-1" style={{ fontSize: "0.75rem", letterSpacing: "0.14em", color: "#e8e0d6" }}>
                 Ler definição completa →
               </span>
             </Link>
