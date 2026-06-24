@@ -56,15 +56,33 @@ export default function CookiesPage() {
             { label: "Política de Cookies" },
           ]}
           h1="Política de Cookies"
-          subtitle="Última atualização: Maio de 2026"
+          subtitle="Última atualização: maio de 2026"
         />
       </Section>
 
       <Section variant="ink" paddingY="lg">
-        <div className="max-w-2xl font-body text-off-white/85 leading-relaxed space-y-8">
+        <div className="max-w-2xl font-body leading-relaxed space-y-8" style={{ color: "#e8e0d6" }}>
+
+          <div className="p-4 space-y-1 text-sm" style={{ backgroundColor: "#004757", color: "#e8e0d6" }}>
+            <p className="font-semibold" style={{ color: "#F5F5F2" }}>
+              Pira Labs Consultoria Ltda.
+            </p>
+            <p>CNPJ: 46.954.891/0001-16</p>
+            <p>Rua Curuzu, 117, Alto da Lapa, São Paulo/SP, CEP 05084-020</p>
+            <p>
+              Contato:{" "}
+              <a
+                href="mailto:inspira@piralabs.com.br"
+                className="underline transition-colors"
+                style={{ color: "#e8e0d6" }}
+              >
+                inspira@piralabs.com.br
+              </a>
+            </p>
+          </div>
 
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">O que são cookies</h2>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>O que são cookies</h2>
             <p>
               Cookies são pequenos arquivos de texto salvos no seu navegador quando você visita um site.
               Eles permitem que o site reconheça seu navegador em visitas futuras e armazene preferências.
@@ -72,32 +90,32 @@ export default function CookiesPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-4">Cookies que usamos</h2>
+            <h2 className="type-h3 mb-4" style={{ color: "#F5F5F2" }}>Cookies que usamos</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
-                  <tr className="border-b border-teal/50">
-                    <th className="text-left py-3 pr-4 text-off-white font-medium">Nome</th>
-                    <th className="text-left py-3 pr-4 text-off-white font-medium">Tipo</th>
-                    <th className="text-left py-3 pr-4 text-off-white font-medium">Finalidade</th>
-                    <th className="text-left py-3 text-off-white font-medium">Prazo</th>
+                  <tr style={{ borderBottom: "1px solid rgba(245,245,242,0.12)" }}>
+                    <th className="text-left py-3 pr-4 font-medium" style={{ color: "#F5F5F2" }}>Nome</th>
+                    <th className="text-left py-3 pr-4 font-medium" style={{ color: "#F5F5F2" }}>Tipo</th>
+                    <th className="text-left py-3 pr-4 font-medium" style={{ color: "#F5F5F2" }}>Finalidade</th>
+                    <th className="text-left py-3 font-medium" style={{ color: "#F5F5F2" }}>Prazo</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-teal/20">
-                  <tr>
-                    <td className="py-3 pr-4 font-mono text-orange text-xs">pira_consent</td>
+                <tbody>
+                  <tr style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
+                    <td className="py-3 pr-4 font-mono text-xs" style={{ color: "#b0a596" }}>pira_consent</td>
                     <td className="py-3 pr-4">Essencial</td>
                     <td className="py-3 pr-4">Armazena sua escolha de consentimento de cookies</td>
                     <td className="py-3">12 meses</td>
                   </tr>
-                  <tr>
-                    <td className="py-3 pr-4 font-mono text-orange text-xs">_ga, _ga_*</td>
+                  <tr style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
+                    <td className="py-3 pr-4 font-mono text-xs" style={{ color: "#b0a596" }}>_ga, _ga_*</td>
                     <td className="py-3 pr-4">Analítico</td>
                     <td className="py-3 pr-4">Google Analytics: analisa tráfego e uso do site de forma anonimizada</td>
                     <td className="py-3">2 anos</td>
                   </tr>
-                  <tr>
-                    <td className="py-3 pr-4 font-mono text-orange text-xs">Vercel Analytics</td>
+                  <tr style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
+                    <td className="py-3 pr-4 font-mono text-xs" style={{ color: "#b0a596" }}>Vercel Analytics</td>
                     <td className="py-3 pr-4">Analítico</td>
                     <td className="py-3 pr-4">Analisa tráfego e uso do site de forma anonimizada</td>
                     <td className="py-3">Sessão</td>
@@ -108,16 +126,16 @@ export default function CookiesPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">Cookies essenciais</h2>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>Cookies essenciais</h2>
             <p>
-              O cookie <span className="font-mono text-orange text-sm">pira_consent</span> é necessário
+              O cookie <span className="font-mono text-sm" style={{ color: "#b0a596" }}>pira_consent</span> é necessário
               para o funcionamento do banner de consentimento. Ele não rastreia você, não armazena dados
               pessoais e não pode ser desativado.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">Cookies analíticos (opcionais)</h2>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>Cookies analíticos (opcionais)</h2>
             <p>
               Usamos Google Analytics e Vercel Analytics para entender como o site é usado. Esses serviços
               coletam dados anonimizados (páginas visitadas, tempo na página, origem do tráfego). Nenhum
@@ -130,7 +148,7 @@ export default function CookiesPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">Como gerenciar seus cookies</h2>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>Como gerenciar seus cookies</h2>
             <p>
               Você pode alterar sua escolha a qualquer momento clicando em &quot;Gerenciar cookies&quot; no rodapé
               do site. Também pode configurar seu navegador para bloquear todos os cookies, mas isso pode
@@ -139,15 +157,22 @@ export default function CookiesPage() {
           </div>
 
           <div>
-            <h2 className="text-xl font-semibold text-off-white mb-3">Contato</h2>
+            <h2 className="type-h3 mb-3" style={{ color: "#F5F5F2" }}>Contato</h2>
             <p>
               Para dúvidas sobre cookies, escreva para{" "}
               <a
                 href="mailto:inspira@piralabs.com.br"
-                className="text-orange underline hover:text-orange transition-colors"
+                className="underline transition-colors"
+                style={{ color: "#e8e0d6" }}
               >
                 inspira@piralabs.com.br
               </a>
+            </p>
+          </div>
+
+          <div className="pt-4" style={{ borderTop: "1px solid rgba(245,245,242,0.12)" }}>
+            <p className="text-xs" style={{ color: "#b0a596" }}>
+              Pira Labs Consultoria Ltda. · CNPJ 46.954.891/0001-16 · piralabs.com.br · São Paulo, Brasil
             </p>
           </div>
 
