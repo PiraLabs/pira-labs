@@ -247,7 +247,7 @@ Props: `density: "sparse"(5) | "medium"(10) | "dense"(19)` · `variant: "dark" |
 
 | Var | Status na Vercel | Uso |
 |---|---|---|
-| `NEXT_PUBLIC_FILLOUT_URL` | **ausente** | URL do iframe Fillout — formulário inativo até configurar |
+| `NEXT_PUBLIC_FILLOUT_URL` | **configurada** (Production + Preview, Sensitive) | URL do iframe Fillout — formulário ativo em produção |
 | `NEXT_PUBLIC_FLAG_D1` | ausente (default `false`) | Feature flag produto D1 |
 | `FLAG_D4` | ausente (default `false`) | Feature flag produto D4 (server-side) |
 | `FLAG_PULSO` | ausente (default `false`) | Feature flag produto Pulso (server-side) |
@@ -413,7 +413,7 @@ Arquivos antigos `logo-completo-*.svg` e `logo-icone-*.svg` foram deletados. Nã
 - Rotas no ar: 26 URLs no sitemap (estado jun 2026)
 - Pendência de rotas: /faisca/c-level-as-a-service existe mas está fora do sitemap (decisão de indexação pendente); /en/about e /en/contact constam no sitemap mas não têm arquivo de rota, retornam 404, corrigir na fase EN/ES (FASE 2)
 - Branch ativo: rebuild-v2
-- Formulário Fillout: NEXT_PUBLIC_FILLOUT_URL não configurado na Vercel
+- Formulário Fillout: NEXT_PUBLIC_FILLOUT_URL está CONFIGURADA na Vercel (projeto pira-labs, ambientes Production and Preview, marcada Sensitive, confirmado por Celso no painel da Vercel, jun 2026). O iframe real do Fillout renderiza em produção em /contato. O bloco placeholder do FilloutEmbed (estado de env ausente, linhas ~16-22) é código que NÃO renderiza no estado atual; foi conformado ao v2 mesmo assim (hairline 12%, cantos retos, texto Sand) por higiene.
 - Foto home: /nos.png (aprovada, não substituir)
 - Fotos /sobre: placeholder intencional — não gerar nem substituir sem instrução do Celso
 - Playwright (`^1.59.1`): instalado como devDep, sem testes escritos até jun/2026

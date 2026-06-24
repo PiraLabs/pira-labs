@@ -67,8 +67,8 @@ export default function ContatoPage() {
         </p>
         <Suspense
           fallback={
-            <div className="border border-dashed border-off-white/20 rounded-lg p-10 text-center">
-              <p className="text-off-white/40 font-body text-sm">
+            <div className="p-10 text-center" style={{ border: "1px solid rgba(245,245,242,0.12)" }}>
+              <p className="font-body text-sm" style={{ color: "#e8e0d6" }}>
                 Carregando formulário...
               </p>
             </div>

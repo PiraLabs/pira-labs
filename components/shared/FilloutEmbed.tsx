@@ -13,11 +13,11 @@ export default function FilloutEmbed({ origin, title }: FilloutEmbedProps = {}) 
     : FILLOUT_URL_CONTATO;
   if (isPlaceholder) {
     return (
-      <div className="border border-dashed border-off-white/30 rounded-lg p-10 text-center">
-        <p className="text-off-white/60 font-body text-sm">
+      <div className="p-10 text-center" style={{ border: "1px solid rgba(245,245,242,0.12)" }}>
+        <p className="font-body text-sm" style={{ color: "#e8e0d6" }}>
           Formulário Fillout pendente de configuração.
           <br />
-          <code className="text-orange text-xs">NEXT_PUBLIC_FILLOUT_URL</code> não definido.
+          <code className="text-xs" style={{ color: "#e8e0d6" }}>NEXT_PUBLIC_FILLOUT_URL</code> não definido.
         </p>
       </div>
     );
