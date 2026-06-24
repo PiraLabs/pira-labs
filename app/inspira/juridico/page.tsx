@@ -117,12 +117,12 @@ export default function InspiraJuridicoPage() {
       {/* BREADCRUMB */}
       <nav aria-label="Breadcrumb" style={{ backgroundColor: '#e8e0d6' }}>
         <div className="container-site" style={{ paddingTop: '12px', paddingBottom: '12px' }}>
-        <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: 0, padding: 0, fontSize: '0.75rem', color: '#05262e' }}>
-          <li><a href="/" style={{ color: '#05262e', textDecoration: 'none' }}>Home</a></li>
-          <li style={{ opacity: 0.4 }}>/</li>
-          <li><a href="/inspira" style={{ color: '#05262e', textDecoration: 'none' }}>INSPIRA</a></li>
-          <li style={{ opacity: 0.4 }}>/</li>
-          <li style={{ opacity: 0.6 }}>Jurídico</li>
+        <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: 0, padding: 0, fontSize: '0.75rem', color: '#1A5568' }}>
+          <li><a href="/" style={{ color: '#1A5568', textDecoration: 'none' }}>Home</a></li>
+          <li className="select-none" aria-hidden="true">·</li>
+          <li><a href="/inspira" style={{ color: '#1A5568', textDecoration: 'none' }}>INSPIRA</a></li>
+          <li className="select-none" aria-hidden="true">·</li>
+          <li aria-current="page">Jurídico</li>
         </ol>
         </div>
       </nav>

@@ -124,7 +124,7 @@ export default function FaiscaJuridicaPage() {
               <span style={{ display: "block", fontSize: "clamp(1.125rem, 2.5vw, 1.5rem)", fontWeight: 400, color: "#e8e0d6", marginBottom: "20px", lineHeight: 1.4, fontStyle: "normal" }}>
                 &ldquo;O risco não está no futuro. Está no navegador aberto agora no computador do estagiário.&rdquo;
               </span>
-              <span style={{ display: "block", fontSize: "0.9375rem", fontWeight: 300, color: "#e8e0d6", opacity: 0.7, lineHeight: 1.6 }}>
+              <span style={{ display: "block", fontSize: "0.9375rem", fontWeight: 300, color: "#e8e0d6", lineHeight: 1.6 }}>
                 Antes de ensinar prompt para o time jurídico, vale saber o que não pode entrar na ferramenta.
               </span>
             </>
@@ -572,10 +572,9 @@ export default function FaiscaJuridicaPage() {
             color: "#e8e0d6",
             fontSize: "13px",
             fontWeight: 600,
-            letterSpacing: "0.10em",
+            letterSpacing: "0.14em",
             textTransform: "uppercase",
             textDecoration: "none",
-            opacity: 0.6,
           }}
         >
           Ver o INSPIRA Jurídico &#8594;

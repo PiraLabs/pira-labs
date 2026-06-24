@@ -114,10 +114,10 @@ export default function TranspiraPage() {
       {/* BREADCRUMB */}
       <nav aria-label="Breadcrumb" style={{ backgroundColor: '#e8e0d6', padding: '12px 0' }}>
         <div className="container-site">
-          <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: 0, padding: 0, fontSize: '0.75rem', color: '#05262e' }}>
-            <li><a href="/" style={{ color: '#05262e', textDecoration: 'none' }}>Home</a></li>
-            <li style={{ opacity: 0.4 }}>/</li>
-            <li style={{ opacity: 0.6 }}>TRANSPIRA</li>
+          <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: 0, padding: 0, fontSize: '0.75rem', color: '#1A5568' }}>
+            <li><a href="/" style={{ color: '#1A5568', textDecoration: 'none' }}>Home</a></li>
+            <li className="select-none" aria-hidden="true">·</li>
+            <li aria-current="page">TRANSPIRA</li>
           </ol>
         </div>
       </nav>
@@ -183,7 +183,6 @@ export default function TranspiraPage() {
               fontWeight: 300,
               fontSize: '0.75rem',
               color: '#05262e',
-              opacity: 0.6,
               marginTop: '12px',
             }}>
               Investimento sob consulta. Capacidade limitada a dois projetos simultâneos.
@@ -424,7 +423,6 @@ export default function TranspiraPage() {
                 fontWeight: 300,
                 fontSize: '0.8125rem',
                 color: '#05262e',
-                opacity: 0.6,
               }}>
                 Duração típica: 2 a 3 meses de imersão.
               </p>
@@ -467,7 +465,6 @@ export default function TranspiraPage() {
                 fontWeight: 300,
                 fontSize: '0.8125rem',
                 color: '#05262e',
-                opacity: 0.6,
               }}>
                 Duração típica: 45 a 60 dias de estruturação com acompanhamento.
               </p>
@@ -699,7 +696,6 @@ export default function TranspiraPage() {
                 fontSize: '0.8125rem',
                 color: '#e8e0d6',
                 marginBottom: '16px',
-                opacity: 0.7,
               }}>
                 0 a 3 meses
               </p>
@@ -719,7 +715,6 @@ export default function TranspiraPage() {
                 fontSize: '0.8125rem',
                 lineHeight: 1.6,
                 color: '#e8e0d6',
-                opacity: 0.7,
               }}>
                 Critério de saída: o recurso interno executa os processos definidos sem precisar dos fundadores do cliente em 5 casos consecutivos por processo.
               </p>
@@ -751,7 +746,6 @@ export default function TranspiraPage() {
                 fontSize: '0.8125rem',
                 color: '#e8e0d6',
                 marginBottom: '16px',
-                opacity: 0.7,
               }}>
                 3 a 12 meses
               </p>
@@ -771,7 +765,6 @@ export default function TranspiraPage() {
                 fontSize: '0.8125rem',
                 lineHeight: 1.6,
                 color: '#e8e0d6',
-                opacity: 0.7,
               }}>
                 Condição de entrada: Fase 1 concluída com critério verificável.
               </p>

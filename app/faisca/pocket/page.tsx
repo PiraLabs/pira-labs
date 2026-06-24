@@ -128,7 +128,7 @@ export default function PocketPage() {
           {/* Ficha técnica */}
           <div style={{ maxWidth: "480px", border: "1px solid rgba(5,38,46,0.15)", borderRadius: "2px", marginBottom: "32px", marginTop: "40px" }}>
             <div style={{ padding: "20px 24px", paddingBottom: "24px", borderBottom: "1px solid rgba(5,38,46,0.15)" }}>
-              <p className="font-body" style={{ fontSize: "10px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#05262e", opacity: 0.5, marginBottom: "8px" }}>
+              <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#05262e", marginBottom: "8px" }}>
                 INVESTIMENTO
               </p>
               <p className="font-display" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 600, lineHeight: 1, color: "#C4421A", letterSpacing: "-0.02em" }}>
@@ -136,19 +136,19 @@ export default function PocketPage() {
               </p>
             </div>
             <div style={{ padding: "14px 24px", borderBottom: "1px solid rgba(5,38,46,0.12)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span className="font-body" style={{ fontSize: "13px", fontWeight: 300, color: "#05262e", opacity: 0.5 }}>Formato</span>
+              <span className="font-body" style={{ fontSize: "13px", fontWeight: 300, color: "#05262e" }}>Formato</span>
               <span className="font-body" style={{ fontSize: "13px", fontWeight: 600, color: "#05262e" }}>1,5h online</span>
             </div>
             <div style={{ padding: "14px 24px", borderBottom: "1px solid rgba(5,38,46,0.12)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span className="font-body" style={{ fontSize: "13px", fontWeight: 300, color: "#05262e", opacity: 0.5 }}>Conduz a sessão</span>
+              <span className="font-body" style={{ fontSize: "13px", fontWeight: 300, color: "#05262e" }}>Conduz a sessão</span>
               <span className="font-body" style={{ fontSize: "13px", fontWeight: 600, color: "#05262e" }}>Gabriela Aguiar</span>
             </div>
             <div style={{ padding: "14px 24px", borderBottom: "1px solid rgba(5,38,46,0.12)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span className="font-body" style={{ fontSize: "13px", fontWeight: 300, color: "#05262e", opacity: 0.5 }}>Opera os agentes de IA</span>
+              <span className="font-body" style={{ fontSize: "13px", fontWeight: 300, color: "#05262e" }}>Opera os agentes de IA</span>
               <span className="font-body" style={{ fontSize: "13px", fontWeight: 600, color: "#05262e" }}>Celso Gama</span>
             </div>
             <div style={{ padding: "14px 24px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span className="font-body" style={{ fontSize: "13px", fontWeight: 300, color: "#05262e", opacity: 0.5 }}>Entrega</span>
+              <span className="font-body" style={{ fontSize: "13px", fontWeight: 300, color: "#05262e" }}>Entrega</span>
               <span className="font-body" style={{ fontSize: "13px", fontWeight: 600, color: "#05262e" }}>Síntese integrada na sessão</span>
             </div>
           </div>
@@ -159,7 +159,7 @@ export default function PocketPage() {
           >
             RESPIRE →
           </a>
-          <span className="font-body" style={{ display: "block", color: "#05262e", opacity: 0.5, fontSize: "12px", marginTop: "8px" }}>
+          <span className="font-body" style={{ display: "block", color: "#05262e", fontSize: "12px", marginTop: "8px" }}>
             Sessão de 1,5h online. Respondemos em até 2 dias úteis.
           </span>
         </div>

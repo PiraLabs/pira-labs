@@ -114,10 +114,10 @@ export default function InspiraPage() {
       {/* BREADCRUMB */}
       <nav aria-label="Breadcrumb" style={{ backgroundColor: '#e8e0d6', padding: '12px 0' }}>
         <div className="container-site">
-          <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: 0, padding: 0, fontSize: '0.75rem', color: '#05262e' }}>
-            <li><a href="/" style={{ color: '#05262e', textDecoration: 'none' }}>Home</a></li>
-            <li style={{ opacity: 0.4 }}>/</li>
-            <li style={{ opacity: 0.6 }}>INSPIRA</li>
+          <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: 0, padding: 0, fontSize: '0.75rem', color: '#1A5568' }}>
+            <li><a href="/" style={{ color: '#1A5568', textDecoration: 'none' }}>Home</a></li>
+            <li className="select-none" aria-hidden="true">·</li>
+            <li aria-current="page">INSPIRA</li>
           </ol>
         </div>
       </nav>
@@ -183,7 +183,6 @@ export default function InspiraPage() {
               fontWeight: 300,
               fontSize: '0.75rem',
               color: '#05262e',
-              opacity: 0.6,
               marginTop: '12px',
             }}>
               Investimento sob consulta. A conversa de calibragem vem antes da proposta.

@@ -24,7 +24,7 @@ export default function NotFound() {
       <div className="container-site max-w-2xl">
         {/* Breadcrumb simples */}
         <nav aria-label="Breadcrumb" className="mb-8">
-          <ol className="flex items-center gap-1 text-sm text-off-white/50 font-body">
+          <ol className="flex items-center gap-1 text-sm text-off-white font-body">
             <li>
               <Link href="/" className="hover:text-orange transition-colors">
                 Home
@@ -39,7 +39,7 @@ export default function NotFound() {
           Essa página não existe na Pira Labs
         </h1>
 
-        <p className="text-off-white/75 font-body leading-relaxed mb-10">
+        <p className="text-off-white font-body leading-relaxed mb-10">
           Talvez o link tenha mudado, ou talvez você esteja procurando algo que ainda não publicamos. Aqui estão os caminhos principais:
         </p>
 
@@ -48,7 +48,7 @@ export default function NotFound() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="flex items-center gap-2 text-off-white/80 hover:text-orange font-body transition-colors group"
+                className="flex items-center gap-2 text-off-white hover:text-orange font-body transition-colors group"
               >
                 <span className="text-orange group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
                 {link.label}

@@ -102,12 +102,12 @@ export default function OxigenioIASearchPage() {
             ].map(({ label, href }, i) => (
               <li key={i} className="flex items-center gap-2">
                 {i > 0 && (
-                  <span className="font-body" style={{ color: '#1A5568', fontSize: '0.75rem' }}>/</span>
+                  <span className="font-body select-none" aria-hidden="true" style={{ color: '#1A5568', fontSize: '0.75rem' }}>·</span>
                 )}
                 {href ? (
                   <a href={href} className="font-body hover:underline" style={{ color: '#1A5568', fontSize: '0.75rem' }}>{label}</a>
                 ) : (
-                  <span className="font-body" style={{ color: '#05262e', fontSize: '0.75rem' }} aria-current="page">{label}</span>
+                  <span className="font-body" style={{ color: '#1A5568', fontSize: '0.75rem' }} aria-current="page">{label}</span>
                 )}
               </li>
             ))}
