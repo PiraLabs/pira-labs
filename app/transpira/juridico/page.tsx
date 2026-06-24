@@ -68,7 +68,7 @@ export default function TranspiraJuridicoPage() {
             name: 'Vocês prestam consultoria jurídica?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Não. A Pira Labs não presta consultoria jurídica, não emite parecer e não substitui advogada ou advogado habilitados. Atuamos dentro da operação, não no lugar da equipe jurídica. Todo material produzido é insumo operacional para revisão e validação do advogado habilitado do próprio escritório.',
+              text: 'Não. A Pira Labs não presta consultoria jurídica, não emite parecer jurídico e não define estratégia de caso. Atuamos dentro da operação, não no lugar da equipe jurídica. Todo material produzido é insumo operacional para revisão e validação de advogadas e advogados regularmente inscritos na OAB do próprio escritório. Nenhum material é entregue como peça final nem enviado a destinatários externos sem essa revisão e autorização.',
             },
           },
           {
@@ -479,7 +479,7 @@ export default function TranspiraJuridicoPage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
               {[
                 { texto: <>Escritórios de advocacia com <strong style={{ fontWeight: 600 }}>trabalho mecânico que consome equipe qualificada</strong> em tarefas que não exigem formação jurídica para executar.</> },
-                { texto: <>Departamentos jurídicos em empresas B2B com <strong style={{ fontWeight: 600 }}>produção repetitiva de alto volume</strong> e pressão para reduzir custo sem reduzir qualidade.</> },
+                { texto: <>Equipes jurídicas internas e departamentos jurídicos com <strong style={{ fontWeight: 600 }}>alto volume de demandas repetitivas</strong> que precisam estruturar fluxos de legal operations, padronizar documentação, instalar governança de uso de IA e garantir que todo material produzido passe por revisão supervisionada da área jurídica responsável.</> },
                 { texto: <>Decisores que <strong style={{ fontWeight: 600 }}>sabem onde está o problema</strong> e têm autoridade para mudar como o trabalho é feito.</> },
                 { texto: <>Quem veio do INSPIRA Jurídico com <strong style={{ fontWeight: 600 }}>diagnóstico pronto</strong> e quer partir para execução.</> },
                 { texto: <>Quem não veio do INSPIRA Jurídico pode fazer o diagnóstico <strong style={{ fontWeight: 600 }}>como parte da abertura do projeto.</strong></> },
@@ -583,7 +583,7 @@ export default function TranspiraJuridicoPage() {
             </p>
             <div style={{ borderLeft: '2px solid rgba(232,224,214,0.3)', paddingLeft: '24px' }}>
               <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.9375rem', lineHeight: 1.7, color: '#e8e0d6' }}>
-                A Pira Labs só utiliza ferramentas de IA no projeto após validação prévia das condições de uso, tratamento de dados e restrições de treinamento aplicáveis ao cliente. O TRANSPIRA Jurídico opera com NDA assinado antes de qualquer acesso a documentos ou sistemas do escritório.
+                A Pira Labs só utiliza ferramentas de IA no projeto após validação prévia das condições de uso, tratamento de dados e restrições de treinamento aplicáveis ao cliente. O TRANSPIRA Jurídico opera com NDA ou instrumento equivalente de confidencialidade assinado antes de qualquer acesso a documentos, sistemas ou informações do escritório.
               </p>
             </div>
           </div>
@@ -617,7 +617,7 @@ export default function TranspiraJuridicoPage() {
             {[
               {
                 q: 'Vocês prestam consultoria jurídica?',
-                a: <><strong style={{ fontWeight: 600 }}>Não.</strong> A Pira Labs não presta consultoria jurídica, não emite parecer e não substitui advogada ou advogado habilitados. Atuamos dentro da operação, não no lugar da equipe jurídica. <strong style={{ fontWeight: 600 }}>Todo material produzido é insumo operacional para revisão e validação do advogado habilitado do próprio escritório.</strong> Nenhum material é entregue como peça final nem enviado a destinatário sem essa revisão.</>,
+                a: <><strong style={{ fontWeight: 600 }}>Não.</strong> A Pira Labs não presta consultoria jurídica, não emite parecer jurídico e não define estratégia de caso. Atuamos dentro da operação, não no lugar da equipe jurídica. <strong style={{ fontWeight: 600 }}>Todo material produzido é insumo operacional para revisão e validação de advogadas e advogados regularmente inscritos na OAB do próprio escritório.</strong> Nenhum material é entregue como peça final nem enviado a destinatários externos sem essa revisão e autorização.</>,
               },
               {
                 q: 'Como vocês protegem a confidencialidade?',
@@ -719,7 +719,7 @@ export default function TranspiraJuridicoPage() {
             maxWidth: '640px',
             margin: '0 auto',
           }}>
-            A Pira Labs não presta consultoria jurídica, não define estratégia de caso e não substitui advogados habilitados pela OAB. O TRANSPIRA Jurídico é operação de legal ops com supervisão obrigatória de advogado habilitado do contratante. Todo material produzido é insumo operacional para revisão da equipe jurídica do cliente.
+            A Pira Labs não presta consultoria jurídica, não emite parecer jurídico e não define estratégia de caso. O TRANSPIRA Jurídico é uma operação de legal operations e apoio técnico-operacional, executada com supervisão obrigatória da equipe jurídica do contratante ou de profissional externo indicado pelo cliente, regularmente inscrito na OAB. Todo material produzido é insumo operacional para revisão, validação e aprovação pela equipe jurídica do cliente. Nenhum material deve ser tratado como peça final, orientação jurídica, parecer jurídico ou estratégia de caso, nem enviado a destinatários externos sem a revisão e autorização do responsável jurídico do contratante.
           </p>
         </div>
       </section>

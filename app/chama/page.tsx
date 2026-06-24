@@ -414,8 +414,9 @@ export default function ChamaPage() {
                 </p>
                 <p className="font-body" style={{ fontSize: '0.8125rem', lineHeight: 1.5, fontWeight: 400, color: '#e8e0d6', marginTop: '0.75rem', fontStyle: 'italic' }}>
                   Celso Gama é bacharelando em Direito (Mackenzie). Este conteúdo é de natureza
-                  técnico-operacional e não substitui consultoria jurídica, orientação de
-                  advogada ou advogado habilitado ou estratégia de caso.
+                  técnico-operacional, não presta consultoria jurídica, não emite parecer jurídico,
+                  não define estratégia de caso e não substitui a atuação de advogadas e advogados
+                  regularmente inscritos na OAB.
                 </p>
               </div>
             </div>

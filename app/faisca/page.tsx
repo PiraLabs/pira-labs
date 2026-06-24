@@ -299,7 +299,7 @@ export default function FaiscaPage() {
                   Para quem: sócias e sócios de escritórios, heads jurídicos, professoras e professores, coordenadoras e coordenadores de cursos de Direito.
                 </p>
                 <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 400, color: TAUPE, lineHeight: 1.55, marginBottom: "8px" }}>
-                  Este produto não presta consultoria jurídica, não substitui advogadas e advogados habilitados e não define estratégia de caso.
+                  A Pira Labs não presta consultoria jurídica, não emite parecer jurídico e não define estratégia de caso. Não substitui a atuação de advogadas e advogados regularmente inscritos na OAB.
                 </p>
                 <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 600, color: SAND }}>
                   Sob consulta

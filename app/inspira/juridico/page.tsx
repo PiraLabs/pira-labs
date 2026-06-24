@@ -59,7 +59,7 @@ export default function InspiraJuridicoPage() {
             name: 'Isso é consultoria jurídica?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Não. O INSPIRA Jurídico é diagnóstico operacional de como o escritório usa IA e onde pode estar exposto. Não emite parecer. Não define estratégia de caso. Não substitui advogada ou advogado habilitados. A Pira Labs não presta consultoria jurídica. O que o INSPIRA Jurídico entrega é mapeamento, classificação de exposição por tipo de uso, minuta operacional de política mínima e plano de ação — tudo para ser validado e implementado com o suporte jurídico interno ou externo do escritório.',
+              text: 'Não. O INSPIRA Jurídico é diagnóstico operacional de como o escritório usa IA e onde pode estar exposto. Não emite parecer jurídico. Não define estratégia de caso. Não substitui a atuação de advogadas e advogados regularmente inscritos na OAB. A Pira Labs não presta consultoria jurídica. O que o INSPIRA Jurídico entrega é mapeamento, classificação de exposição por tipo de uso, minuta operacional de política mínima e plano de ação, tudo para ser validado e implementado com o suporte jurídico interno ou externo do escritório.',
             },
           },
           {
@@ -408,7 +408,7 @@ export default function InspiraJuridicoPage() {
                 {[
                   'Sócias e sócios e heads jurídicos que sabem que a equipe usa IA mas não têm clareza de onde podem estar expostos. O uso já acontece. O mapeamento ainda não.',
                   'Escritórios em crescimento que estão contratando novas advogadas e novos advogados e estagiárias e estagiários e querem estabelecer critérios claros antes de escalar o problema.',
-                  'Departamentos jurídicos de empresas com múltiplas áreas usando IA de forma descentralizada, sem política comum e sem critério de revisão.',
+                  'Equipes jurídicas internas e departamentos jurídicos que lidam com múltiplas áreas da organização utilizando IA de forma descentralizada, sem política comum, sem governança operacional definida e sem critério padronizado de revisão jurídica interna.',
                   'Escritórios que passaram pela Faísca Jurídica e querem ir além da educação para o diagnóstico estruturado da operação.',
                 ].map((texto, i) => (
                   <div key={i} style={{ display: 'flex', gap: '16px' }}>
@@ -583,7 +583,7 @@ export default function InspiraJuridicoPage() {
             {[
               {
                 pergunta: 'Isso é consultoria jurídica?',
-                resposta: 'Não. O INSPIRA Jurídico é diagnóstico operacional de como o escritório usa IA e onde pode estar exposto. Não emite parecer. Não define estratégia de caso. Não substitui advogada ou advogado habilitados. A Pira Labs não presta consultoria jurídica. O que o INSPIRA Jurídico entrega é mapeamento, classificação de exposição por tipo de uso, minuta operacional de política mínima e plano de ação — tudo para ser validado e implementado com o suporte jurídico interno ou externo do escritório.',
+                resposta: 'Não. O INSPIRA Jurídico é diagnóstico operacional de como o escritório usa IA e onde pode estar exposto. Não emite parecer jurídico. Não define estratégia de caso. Não substitui a atuação de advogadas e advogados regularmente inscritos na OAB. A Pira Labs não presta consultoria jurídica. O que o INSPIRA Jurídico entrega é mapeamento, classificação de exposição por tipo de uso, minuta operacional de política mínima e plano de ação, tudo para ser validado e implementado com o suporte jurídico interno ou externo do escritório.',
               },
               {
                 pergunta: 'Quanto tempo leva?',
@@ -681,7 +681,7 @@ export default function InspiraJuridicoPage() {
             maxWidth: '640px',
             margin: '0 auto',
           }}>
-            A Pira Labs não presta consultoria jurídica, não emite parecer e não substitui advogada ou advogado habilitados. NDA assinado antes de qualquer acesso a documentos, sistemas ou informações do escritório.
+            A Pira Labs não presta consultoria jurídica, não emite parecer jurídico e não define estratégia de caso. O INSPIRA Jurídico é um diagnóstico técnico-operacional sobre uso de IA, governança, exposição operacional e plano de ação, para validação e implementação com suporte jurídico interno ou externo do escritório. Não substitui a atuação de advogadas e advogados regularmente inscritos na OAB. Antes de qualquer acesso a documentos, sistemas ou informações do escritório, será exigido NDA ou instrumento equivalente de confidencialidade.
           </p>
         </div>
       </section>

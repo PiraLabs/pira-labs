@@ -37,7 +37,7 @@ const faqSchemaData = {
       name: "Vocês prestam consultoria jurídica?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Não. A Faísca Jurídica trata de fluxos de trabalho, produtividade, governança de uso de IA e operação jurídica. Não define estratégia de caso, não substitui a atuação de advogadas e advogados habilitados pela OAB e não é consultoria jurídica.",
+        text: "Não. A Faísca Jurídica trata de fluxos de trabalho, produtividade, governança de uso de IA e operação jurídica. Não define estratégia de caso, não emite parecer jurídico, não substitui a atuação de advogadas e advogados regularmente inscritos na OAB e não é consultoria jurídica.",
       },
     },
     {
@@ -356,7 +356,7 @@ export default function FaiscaJuridicaPage() {
       <section style={{ backgroundColor: "#E8E0D6", padding: "80px 0" }}>
         <div className="container-site">
           <p style={{ ...EYEBROW, color: "#1A5568", marginBottom: "32px" }}>
-            Para quem faz sentido
+            Escopo
           </p>
           <h2
             className="type-h1"
@@ -391,6 +391,17 @@ export default function FaiscaJuridicaPage() {
                 {text}
               </p>
             ))}
+          </div>
+          <div style={{ maxWidth: "720px", marginTop: "64px" }}>
+            <p style={{ ...EYEBROW, color: "#1A5568", marginBottom: "32px" }}>
+              Para quem não é
+            </p>
+            <p style={{ color: "#05262e", fontSize: "15px", fontWeight: 300, lineHeight: 1.75, marginBottom: "24px" }}>
+              A Faísca Jurídica não é indicada para quem busca consultoria jurídica individualizada, parecer jurídico, análise de caso concreto, definição de estratégia processual, validação jurídica de tese ou qualquer forma de substituição da atuação de advogadas e advogados regularmente inscritos na OAB.
+            </p>
+            <p style={{ color: "#05262e", fontSize: "15px", fontWeight: 300, lineHeight: 1.75 }}>
+              O escopo é educacional, informativo e técnico-operacional. Os temas são IA aplicada ao trabalho jurídico, produtividade, governança operacional e legal operations. A fronteira do produto é essa. Ela é clara porque precisa ser.
+            </p>
           </div>
         </div>
       </section>
@@ -483,7 +494,7 @@ export default function FaiscaJuridicaPage() {
             {[
               {
                 q: "Vocês prestam consultoria jurídica?",
-                a: "Não. A Faísca Jurídica trata de fluxos de trabalho, produtividade, governança de uso de IA e operação jurídica. Não define estratégia de caso, não substitui a atuação de advogadas e advogados habilitados pela OAB e não é consultoria jurídica.",
+                a: "Não. A Faísca Jurídica trata de fluxos de trabalho, produtividade, governança de uso de IA e operação jurídica. Não define estratégia de caso, não emite parecer jurídico, não substitui a atuação de advogadas e advogados regularmente inscritos na OAB e não é consultoria jurídica.",
               },
               {
                 q: "O workshop pode ser adaptado para o contexto do nosso escritório?",
@@ -538,7 +549,7 @@ export default function FaiscaJuridicaPage() {
             </p>
             <div style={{ borderLeft: "3px solid #eb5c2e", paddingLeft: "24px" }}>
               <p style={{ color: "#e8e0d6", fontSize: "15px", fontWeight: 300, lineHeight: 1.75, marginBottom: "12px" }}>
-                A Pira Labs não presta consultoria jurídica, não define estratégia de caso e não substitui advogadas e advogados habilitados pela OAB.
+                A Pira Labs não presta consultoria jurídica, não emite parecer jurídico e não define estratégia de caso. Não substitui a atuação de advogadas e advogados regularmente inscritos na OAB.
               </p>
               <p style={{ color: "#e8e0d6", fontSize: "15px", fontWeight: 300, lineHeight: 1.75, marginBottom: "12px" }}>
                 A Faísca Jurídica trata de fluxos de trabalho, governança operacional de IA e capacidade produtiva no setor jurídico. Essa é a fronteira do produto. Ela é clara porque precisa ser.
