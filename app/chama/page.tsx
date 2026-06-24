@@ -2,6 +2,7 @@ export const dynamic = 'force-static'
 
 import type { Metadata } from 'next'
 import { FinalCTA } from '@/components/shared/FinalCTA'
+import { ORIGINS } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Chama · Palestras, workshops, aulas e mentorias · Pira Labs',
@@ -175,7 +176,7 @@ export default function ChamaPage() {
               caso real e termina em próximo passo verificável.
             </p>
             <a
-              href="/contato?origem=chama"
+              href={`/contato?origem=${ORIGINS.CHAMA}`}
               className="font-body uppercase inline-flex items-center gap-2 group transition-transform hover:scale-[1.02]"
               style={{ ...EYEBROW, backgroundColor: '#eb5c2e', color: '#F5F5F2', padding: '1rem 2rem' }}
             >
@@ -312,7 +313,7 @@ export default function ChamaPage() {
             </div>
             <div style={{ marginTop: '3rem' }}>
               <a
-                href="/contato?origem=chama"
+                href={`/contato?origem=${ORIGINS.CHAMA}`}
                 className="font-body uppercase inline-flex items-center gap-2 group transition-colors hover:bg-[#05262e]/5"
                 style={{ ...EYEBROW, color: '#05262e', border: '1px solid #05262e', padding: '1rem 2rem' }}
               >
@@ -363,7 +364,7 @@ export default function ChamaPage() {
             </div>
             <div style={{ marginTop: '3rem' }}>
               <a
-                href="/contato?origem=chama"
+                href={`/contato?origem=${ORIGINS.CHAMA}`}
                 className="font-body uppercase inline-flex items-center gap-2 group transition-colors hover:bg-white/10"
                 style={{ ...EYEBROW, color: '#F5F5F2', border: '1px solid #F5F5F2', padding: '1rem 2rem' }}
               >
@@ -435,7 +436,7 @@ export default function ChamaPage() {
             </div>
             <div style={{ marginTop: '3rem' }}>
               <a
-                href="/contato?origem=chama"
+                href={`/contato?origem=${ORIGINS.CHAMA}`}
                 className="font-body uppercase inline-flex items-center gap-2 group transition-colors hover:bg-white/10"
                 style={{ ...EYEBROW, color: '#F5F5F2', border: '1px solid #F5F5F2', padding: '1rem 2rem' }}
               >
