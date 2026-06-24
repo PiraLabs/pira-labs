@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     "Falar com a Pira Labs sobre INSPIRA, TRANSPIRA, Oxigênio IA Search ou Faísca. Respondemos em até dois dias úteis.",
   alternates: {
     canonical: "https://piralabs.com.br/contato",
-    languages: { en: "https://piralabs.com.br/en/contact" },
   },
   openGraph: {
     title: "Contato · Pira Labs",
@@ -81,7 +80,7 @@ export default function ContatoPage() {
 
       {/* CONTATO-4 · Contato direto */}
       <Section variant="ink" paddingY="lg">
-        <h2 className="text-xl font-semibold text-off-white mb-8">
+        <h2 className="type-h3" style={{ color: '#F5F5F2', marginBottom: '2rem' }}>
           Contato direto
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl">
