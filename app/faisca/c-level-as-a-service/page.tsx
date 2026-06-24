@@ -72,14 +72,14 @@ export default function CLevelPage() {
       {/* C2 · O que é + o que não é (Teal) */}
       <section style={{ backgroundColor: TEAL }}>
         <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 py-16 md:py-24">
-          <h2 className="type-h1" style={{ fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: WHITE, marginBottom: "40px" }}>
+          <h2 className="type-h1" style={{ color: WHITE, marginBottom: "40px" }}>
             C-level fracionado com{" "}
             <span style={{ color: "#eb5c2e" }}>presença</span>{" "}
             no processo
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12" style={{ maxWidth: "960px" }}>
             <div>
-              <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: SAND, marginBottom: "16px" }}>
+              <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: SAND, marginBottom: "16px" }}>
                 O que é
               </p>
               <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: WHITE }}>
@@ -87,7 +87,7 @@ export default function CLevelPage() {
               </p>
             </div>
             <div>
-              <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: SAND, marginBottom: "16px" }}>
+              <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: SAND, marginBottom: "16px" }}>
                 O que não é
               </p>
               <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: WHITE }}>
@@ -103,10 +103,10 @@ export default function CLevelPage() {
         <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 py-16 md:py-24">
 
           {/* Eyebrow + H2 */}
-          <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(5,38,46,0.5)", marginBottom: "16px" }}>
+          <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1A5568", marginBottom: "16px" }}>
             Como funciona na prática
           </p>
-          <h2 className="type-h1" style={{ fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: INK, marginBottom: "48px" }}>
+          <h2 className="type-h1" style={{ color: INK, marginBottom: "48px" }}>
             Case Pipa
           </h2>
 
@@ -126,7 +126,7 @@ export default function CLevelPage() {
                 <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 600, color: INK, marginBottom: "2px" }}>
                   Kika Hernandes
                 </p>
-                <p className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 300, color: "rgba(5,38,46,0.6)" }}>
+                <p className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 300, color: "#b0a596" }}>
                   Fundadora e CEO da Pipa ·{" "}
                   <a
                     href="https://www.instagram.com/pausapipa"
@@ -144,7 +144,7 @@ export default function CLevelPage() {
           {/* Grid: contexto + o que foi feito */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12" style={{ maxWidth: "960px", marginBottom: "64px" }}>
             <div>
-              <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(5,38,46,0.5)", marginBottom: "20px" }}>
+              <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1A5568", marginBottom: "20px" }}>
                 O contexto
               </p>
               {/* Identidade resumida */}
@@ -156,13 +156,13 @@ export default function CLevelPage() {
                   São Paulo · Fevereiro a maio de 2025
                 </p>
               </div>
-              <p className="font-body" style={{ fontSize: "0.9375rem", fontWeight: 300, color: "rgba(5,38,46,0.8)", lineHeight: 1.75 }}>
+              <p className="font-body" style={{ fontSize: "0.9375rem", fontWeight: 300, color: "#05262e", lineHeight: 1.75 }}>
                 A Pipa chegou com um produto central forte e posicionamento ainda indefinido. O portfólio tinha escopo estreito, a precificação não refletia o valor percebido e a estrutura digital não sustentava o crescimento que o produto merecia.
               </p>
             </div>
 
             <div>
-              <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(5,38,46,0.5)", marginBottom: "20px" }}>
+              <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1A5568", marginBottom: "20px" }}>
                 O que foi feito
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0 }} className="space-y-3">
@@ -174,7 +174,7 @@ export default function CLevelPage() {
                   "Estratégia de lançamento dos workshops temáticos de Páscoa",
                   "Acompanhamento quinzenal pós-lançamento",
                 ].map((item) => (
-                  <li key={item} className="font-body flex items-start gap-3" style={{ fontSize: "0.875rem", fontWeight: 300, color: "rgba(5,38,46,0.8)", lineHeight: 1.6 }}>
+                  <li key={item} className="font-body flex items-start gap-3" style={{ fontSize: "0.875rem", fontWeight: 300, color: "#05262e", lineHeight: 1.6 }}>
                     <span style={{ color: INK, flexShrink: 0, marginTop: "2px" }}>·</span>
                     {item}
                   </li>
@@ -185,7 +185,7 @@ export default function CLevelPage() {
 
           {/* Resultados — escala de evidência */}
           <div style={{ marginBottom: "64px" }}>
-            <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "rgba(5,38,46,0.5)", marginBottom: "32px" }}>
+            <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1A5568", marginBottom: "32px" }}>
               Resultados verificados
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={{ maxWidth: "960px" }}>
@@ -193,7 +193,7 @@ export default function CLevelPage() {
                 <p className="font-display" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 600, color: INK, lineHeight: 1, marginBottom: "8px", letterSpacing: "-0.02em" }}>
                   2 → 4
                 </p>
-                <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 300, color: "rgba(5,38,46,0.7)", lineHeight: 1.5 }}>
+                <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 300, color: "#b0a596", lineHeight: 1.5 }}>
                   produtos no portfólio
                 </p>
               </div>
@@ -201,7 +201,7 @@ export default function CLevelPage() {
                 <p className="font-display" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 600, color: INK, lineHeight: 1, marginBottom: "8px", letterSpacing: "-0.02em" }}>
                   +90%
                 </p>
-                <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 300, color: "rgba(5,38,46,0.7)", lineHeight: 1.5 }}>
+                <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 300, color: "#b0a596", lineHeight: 1.5 }}>
                   ticket médio: de R$280 para R$530
                 </p>
               </div>
@@ -209,7 +209,7 @@ export default function CLevelPage() {
                 <p className="font-display" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 600, color: INK, lineHeight: 1, marginBottom: "8px", letterSpacing: "-0.02em" }}>
                   Oxigênio
                 </p>
-                <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 300, color: "rgba(5,38,46,0.7)", lineHeight: 1.5 }}>
+                <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 300, color: "#b0a596", lineHeight: 1.5 }}>
                   estruturação digital: Instagram e LinkedIn · site em breve
                 </p>
               </div>
@@ -218,10 +218,10 @@ export default function CLevelPage() {
 
           {/* Depoimento secundário */}
           <div style={{ maxWidth: "720px", borderLeft: "2px solid rgba(5,38,46,0.15)", paddingLeft: "32px" }}>
-            <blockquote className="font-display" style={{ fontSize: "clamp(1rem, 1.8vw, 1.25rem)", fontWeight: 300, lineHeight: 1.6, color: "rgba(5,38,46,0.7)", margin: 0, padding: 0 }}>
+            <blockquote className="font-display" style={{ fontSize: "clamp(1rem, 1.8vw, 1.25rem)", fontWeight: 300, lineHeight: 1.6, color: "#05262e", margin: 0, padding: 0 }}>
               &ldquo;Como se todo aquele medo de empreender aliviasse. A Pira Labs apresenta possibilidades para encarar os desafios reais. É como se apresentasse o mapa do caminho das pedras, e ficasse mais fácil caminhar nessa jornada.&rdquo;
             </blockquote>
-            <p className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 400, color: "rgba(5,38,46,0.5)", marginTop: "12px" }}>
+            <p className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 400, color: "#b0a596", marginTop: "12px" }}>
               Kika Hernandes, fundadora e CEO da Pipa
             </p>
           </div>
@@ -232,12 +232,12 @@ export default function CLevelPage() {
       {/* C4 · Para quem é (Ink) */}
       <section style={{ backgroundColor: INK }}>
         <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 py-16 md:py-24">
-          <h2 className="type-h1" style={{ fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: WHITE, marginBottom: "40px" }}>
+          <h2 className="type-h1" style={{ color: WHITE, marginBottom: "40px" }}>
             Para quem é este produto
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12" style={{ maxWidth: "960px" }}>
             <div>
-              <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(232,224,214,0.5)", marginBottom: "16px" }}>
+              <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: SAND, marginBottom: "16px" }}>
                 Para quem é
               </p>
               <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: WHITE }}>
@@ -245,7 +245,7 @@ export default function CLevelPage() {
               </p>
             </div>
             <div>
-              <p className="font-body" style={{ fontSize: "0.625rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(232,224,214,0.5)", marginBottom: "16px" }}>
+              <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: SAND, marginBottom: "16px" }}>
                 Para quem não é
               </p>
               <p className="font-body" style={{ fontSize: "1rem", lineHeight: 1.75, fontWeight: 300, color: WHITE }}>
@@ -259,7 +259,7 @@ export default function CLevelPage() {
       {/* C5 · Formato e dedicação (Teal) */}
       <section style={{ backgroundColor: TEAL }}>
         <div className="mx-auto w-full max-w-[1280px] px-6 md:px-20 py-16 md:py-24">
-          <h2 className="type-h1" style={{ fontWeight: 600, lineHeight: 1.1, letterSpacing: "-0.02em", color: WHITE, marginBottom: "32px" }}>
+          <h2 className="type-h1" style={{ color: WHITE, marginBottom: "32px" }}>
             Formato e dedicação
           </h2>
           <div style={{ maxWidth: "680px" }}>
