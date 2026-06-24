@@ -203,7 +203,7 @@ export function Footer() {
         {/* Links legais */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-6"
-          style={{ fontSize: '12px', color: '#e8e0d6', opacity: 0.5 }}
+          style={{ fontSize: '12px', color: '#e8e0d6' }}
         >
           <Link
             href="/politica-privacidade"
@@ -229,23 +229,23 @@ export function Footer() {
             onMouseEnter={e => (e.currentTarget.style.color = '#F5F5F2')}
             onMouseLeave={e => (e.currentTarget.style.color = '#e8e0d6')}
           >
-            Aviso de Cookies
+            Política de Cookies
           </Link>
         </div>
 
         {/* CNPJ e copyright */}
         <p
           className="text-center mb-1"
-          style={{ fontSize: '12px', color: '#e8e0d6', opacity: 0.4 }}
+          style={{ fontSize: '12px', color: '#b0a596' }}
         >
-          Pira Labs · CNPJ 46.954.891/0001-16 · São Paulo, Brasil
+          Pira Labs Consultoria Ltda. · CNPJ 46.954.891/0001-16 · São Paulo, Brasil
         </p>
         <p
           className="text-center mb-6"
-          style={{ fontSize: '12px', color: '#e8e0d6', opacity: 0.4 }}
+          style={{ fontSize: '12px', color: '#b0a596' }}
           suppressHydrationWarning
         >
-          © {new Date().getFullYear()} Pira Labs. Todos os direitos reservados.
+          © {new Date().getFullYear()} Pira Labs Consultoria Ltda. Todos os direitos reservados.
         </p>
       </div>
     </footer>
