@@ -12,6 +12,7 @@ const footerColumns = [
       { label: "Sobre", href: "/sobre" },
       { label: "Creative Business Turnaround", href: "/creative-business-turnaround" },
       { label: "Como pensamos", href: "/como-pensamos" },
+      { label: "Vocabulário", href: "/glossario" },
       { label: "Antes, Pira", href: "/antes-pira" },
       { label: "Contato", href: "/contato" },
     ],
