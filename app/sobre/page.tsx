@@ -446,6 +446,13 @@ export default function SobrePage() {
             <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#e8e0d6" }}>
               Cinco projetos entregues para cinco clientes nos primeiros seis meses: KZ Inteligência em Comunicação, Concordia DPS LLC, Pipa, Sordilli.com e German Accelerator.
             </p>
+            <p className="font-body" style={{ fontSize: "18px", lineHeight: 1.6, fontWeight: 400, color: "#e8e0d6" }}>
+              A Pira Labs é parceira do programa Notion for Startups, sinal de pertencimento ao ecossistema de ferramentas que usa e recomenda. E co-organiza o Turning Point, encontro para fundadoras e fundadores de empresas de serviços que operam no intervalo entre o modelo atual e o próximo nível. Saiba mais em{" "}
+              <a href="https://turningpoint.digital/" target="_blank" rel="noopener noreferrer" style={{ color: "#e8e0d6", textDecoration: "underline" }}>
+                turningpoint.digital
+              </a>
+              .
+            </p>
           </div>
           <div className="hr-on-dark seam-pt">
             <p className="font-body font-semibold uppercase mb-6" style={{ fontSize: "12px", letterSpacing: "0.14em", color: "#e8e0d6" }}>
