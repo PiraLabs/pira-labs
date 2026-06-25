@@ -40,7 +40,7 @@ export function ClientBenefits() {
             <img
               src="/notion-logo-white.png"
               alt="Notion"
-              style={{ height: '28px', width: 'auto', borderRadius: '0', marginTop: '32px', display: 'block' }}
+              style={{ height: '40px', width: 'auto', borderRadius: '0', marginTop: '40px', display: 'block' }}
             />
           </div>
 
