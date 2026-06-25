@@ -222,7 +222,7 @@ export default function SobrePage() {
 
             {/* COLUNA ESQUERDA — FOTO */}
             <div className="w-full md:w-[42%] shrink-0">
-              <div className="w-full overflow-hidden" style={{ aspectRatio: "4/5", borderRadius: "2px" }}>
+              <div className="w-full overflow-hidden" style={{ aspectRatio: "4/5", borderRadius: "0" }}>
                 <Image
                   src="/gabriela-aguiar.png"
                   alt="Gabriela Aguiar, CEO e cofundadora da Pira Labs"
@@ -310,7 +310,7 @@ export default function SobrePage() {
 
             {/* COLUNA DIREITA — FOTO (primeiro no DOM para mobile em cima) */}
             <div className="w-full md:w-[42%] shrink-0">
-              <div className="w-full overflow-hidden" style={{ aspectRatio: "4/5", borderRadius: "2px" }}>
+              <div className="w-full overflow-hidden" style={{ aspectRatio: "4/5", borderRadius: "0" }}>
                 <Image
                   src="/celso-gama.png"
                   alt="Celso Gama, COO e cofundador da Pira Labs"
@@ -399,7 +399,7 @@ export default function SobrePage() {
           <h2 className="font-display font-semibold mb-10" style={{ fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.1, color: "#05262e", letterSpacing: "-0.02em" }}>
             Não é divisão de trabalho.<br />É <span style={{ color: "#C4421A" }}>metodologia.</span>
           </h2>
-          <div className="max-w-3xl mb-10 overflow-hidden" style={{ aspectRatio: "16/9", borderRadius: "2px" }}>
+          <div className="max-w-3xl mb-10 overflow-hidden" style={{ aspectRatio: "16/9", borderRadius: "0" }}>
             <Image
               src="/nos2.png"
               alt="Gabriela Aguiar e Celso Gama, cofundadores da Pira Labs"

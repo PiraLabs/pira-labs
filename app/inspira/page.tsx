@@ -306,7 +306,7 @@ export default function InspiraPage() {
                 className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start"
                 style={{
                   padding: '48px 0',
-                  borderTop: i === 0 ? 'none' : '1px solid rgba(232,224,214,0.2)',
+                  borderTop: i === 0 ? 'none' : '1px solid rgba(232,224,214,0.12)',
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '20px' }}>
@@ -346,7 +346,7 @@ export default function InspiraPage() {
           </div>
 
           {/* Divisor interno */}
-          <div style={{ borderTop: '1px solid rgba(232,224,214,0.2)', marginBottom: '96px' }} />
+          <div style={{ borderTop: '1px solid rgba(232,224,214,0.12)', marginBottom: '96px' }} />
 
           {/* Sub-bloco: Propulsão */}
           <p style={{
@@ -414,7 +414,7 @@ export default function InspiraPage() {
               { titulo: 'Como a Pira Labs pode ajudar', texto: 'Produtos relevantes, sequenciados, com escopo e investimento declarados. A Pira Labs não entra como caminho automático. Se o decisor pode executar sozinho ou com quem já tem, isso é dito diretamente.' },
               { titulo: 'Próximo passo', texto: 'Uma ação. Um responsável. Um prazo. Acontece nos próximos sete dias.' },
             ].map((item) => (
-              <div key={item.titulo} style={{ borderTop: '1px solid rgba(5,38,46,0.15)', paddingTop: '32px' }}>
+              <div key={item.titulo} style={{ borderTop: '1px solid rgba(5,38,46,0.12)', paddingTop: '32px' }}>
                 <h3 style={{
                   fontFamily: 'AtypDisplay, sans-serif',
                   fontWeight: 600,
@@ -445,7 +445,7 @@ export default function InspiraPage() {
             maxWidth: '720px',
             marginTop: '48px',
             paddingTop: '40px',
-            borderTop: '1px solid rgba(5,38,46,0.15)',
+            borderTop: '1px solid rgba(5,38,46,0.12)',
           }}>
             O entregável final é apresentado em sessão presencial ou remota. O processo leva de 4 a 6 semanas, com síntese por camada e aprovação de quem decide em cada etapa. <strong style={{ fontWeight: 600 }}>O diagnóstico é de propriedade do cliente</strong> e pode ser usado independente de qualquer continuidade com a Pira Labs. O TRANSPIRA é natural e complementar. Nunca obrigatório.
           </p>
@@ -549,7 +549,7 @@ export default function InspiraPage() {
           </div>
 
           {/* CTA intermediário */}
-          <div style={{ marginTop: '64px', paddingTop: '48px', borderTop: '1px solid rgba(232,224,214,0.15)' }}>
+          <div style={{ marginTop: '64px', paddingTop: '48px', borderTop: '1px solid rgba(232,224,214,0.12)' }}>
             <a
               href="/contato?origem=inspira"
               style={{
@@ -687,7 +687,7 @@ export default function InspiraPage() {
               { pergunta: 'Posso começar com algo menor antes do INSPIRA completo?', resposta: 'Sim. O pocket do INSPIRA (R$ 3.900) é uma versão compacta para quem precisa de uma leitura inicial antes de assumir o diagnóstico completo. Combina três formulários prévios, uma sessão de 1h30 e uma síntese com leitura integrada e próximos passos prioritários. É a porta de entrada para quem quer sentir o método antes de contratar o diagnóstico completo.' },
               { pergunta: 'Como funciona a confidencialidade?', resposta: 'Todas as informações compartilhadas no processo ficam restritas à Pira Labs e não são usadas fora do escopo do projeto contratado. Quando há conteúdo sensível ou calibragem prévia que exige confidencialidade antes mesmo da conversa de calibragem, o NDA é assinado antes da conversa começar. Se esse é o seu caso, mencione no formulário de contato.' },
             ].map((item) => (
-              <details key={item.pergunta} style={{ borderBottom: '1px solid rgba(5,38,46,0.15)' }}>
+              <details key={item.pergunta} style={{ borderBottom: '1px solid rgba(5,38,46,0.12)' }}>
                 <summary style={{
                   fontFamily: 'AtypText, sans-serif',
                   fontWeight: 400,

@@ -149,7 +149,7 @@ export default function ImersaEmIaPage() {
           </div>
 
           {/* Ficha técnica */}
-          <div style={{ maxWidth: "480px", border: "1px solid rgba(5,38,46,0.12)", borderRadius: "2px", marginBottom: "32px" }}>
+          <div style={{ maxWidth: "480px", border: "1px solid rgba(5,38,46,0.12)", borderRadius: "0", marginBottom: "32px" }}>
             <div style={{ borderBottom: "1px solid rgba(5,38,46,0.12)", padding: "14px 20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <span className="font-body" style={{ fontSize: "0.875rem", fontWeight: 400, color: TEALMID }}>Formato</span>
               <span className="font-body" style={{ fontSize: "0.875rem", fontWeight: 600, color: INK }}>3 blocos de trabalho, online ou presenciais</span>
@@ -171,7 +171,7 @@ export default function ImersaEmIaPage() {
           <a
             href="/contato?origem=faisca_imersao"
             className="font-body"
-            style={{ display: "inline-block", border: `1px solid ${INK}`, color: INK, backgroundColor: "transparent", padding: "14px 32px", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textDecoration: "none", borderRadius: "2px", textTransform: "uppercase" as const }}
+            style={{ display: "inline-block", border: `1px solid ${INK}`, color: INK, backgroundColor: "transparent", padding: "14px 32px", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textDecoration: "none", borderRadius: "0", textTransform: "uppercase" as const }}
           >
             RESPIRE
           </a>

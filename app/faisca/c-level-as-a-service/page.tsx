@@ -120,7 +120,7 @@ export default function CLevelPage() {
               <img
                 src="/pipa-logo.png"
                 alt="Logo Pipa"
-                style={{ height: "48px", width: "auto", borderRadius: "4px" }}
+                style={{ height: "48px", width: "auto", borderRadius: "0" }}
               />
               <div>
                 <p className="font-body" style={{ fontSize: "0.875rem", fontWeight: 600, color: INK, marginBottom: "2px" }}>
@@ -152,7 +152,7 @@ export default function CLevelPage() {
                 <p className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 400, color: INK, marginBottom: "2px" }}>
                   Pipa: ateliê de confeitaria artesanal
                 </p>
-                <p className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 300, color: "rgba(5,38,46,0.6)", marginBottom: "2px" }}>
+                <p className="font-body" style={{ fontSize: "0.8125rem", fontWeight: 300, color: "#05262e", marginBottom: "2px" }}>
                   São Paulo · Fevereiro a maio de 2025
                 </p>
               </div>
@@ -217,7 +217,7 @@ export default function CLevelPage() {
           </div>
 
           {/* Depoimento secundário */}
-          <div style={{ maxWidth: "720px", borderLeft: "2px solid rgba(5,38,46,0.15)", paddingLeft: "32px" }}>
+          <div style={{ maxWidth: "720px", borderLeft: "2px solid rgba(5,38,46,0.12)", paddingLeft: "32px" }}>
             <blockquote className="font-display" style={{ fontSize: "clamp(1rem, 1.8vw, 1.25rem)", fontWeight: 300, lineHeight: 1.6, color: "#05262e", margin: 0, padding: 0 }}>
               &ldquo;Como se todo aquele medo de empreender aliviasse. A Pira Labs apresenta possibilidades para encarar os desafios reais. É como se apresentasse o mapa do caminho das pedras, e ficasse mais fácil caminhar nessa jornada.&rdquo;
             </blockquote>

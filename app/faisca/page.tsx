@@ -128,7 +128,7 @@ export default function FaiscaPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
 
             {/* Card Imersão em IA */}
-            <div style={{ border: "1px solid rgba(232,224,214,0.12)", borderRadius: "2px", padding: "32px", display: "flex", flexDirection: "column" }}>
+            <div style={{ border: "1px solid rgba(232,224,214,0.12)", borderRadius: "0", padding: "32px", display: "flex", flexDirection: "column" }}>
               <div style={{ flex: 1 }}>
                 <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: SAND, marginBottom: "16px" }}>
                   Celso Gama
@@ -160,7 +160,7 @@ export default function FaiscaPage() {
             </div>
 
             {/* Card Oxigênio IA Search */}
-            <div style={{ border: "1px solid rgba(232,224,214,0.12)", borderRadius: "2px", padding: "32px", display: "flex", flexDirection: "column" }}>
+            <div style={{ border: "1px solid rgba(232,224,214,0.12)", borderRadius: "0", padding: "32px", display: "flex", flexDirection: "column" }}>
               <div style={{ flex: 1 }}>
                 <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: SAND, marginBottom: "16px" }}>
                   Celso Gama
@@ -192,7 +192,7 @@ export default function FaiscaPage() {
             </div>
 
             {/* Card pocket do INSPIRA */}
-            <div style={{ border: "1px solid rgba(232,224,214,0.12)", borderRadius: "2px", padding: "32px", display: "flex", flexDirection: "column" }}>
+            <div style={{ border: "1px solid rgba(232,224,214,0.12)", borderRadius: "0", padding: "32px", display: "flex", flexDirection: "column" }}>
               <div style={{ flex: 1 }}>
                 <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: SAND, marginBottom: "16px" }}>
                   Gabriela Aguiar + Celso Gama
@@ -249,7 +249,7 @@ export default function FaiscaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
             {/* Card C-level as a Service */}
-            <div style={{ border: "1px solid rgba(245,245,242,0.12)", borderRadius: "2px", padding: "32px", display: "flex", flexDirection: "column" }}>
+            <div style={{ border: "1px solid rgba(245,245,242,0.12)", borderRadius: "0", padding: "32px", display: "flex", flexDirection: "column" }}>
               <div style={{ flex: 1 }}>
                 <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: SAND, marginBottom: "16px" }}>
                   Gabriela Aguiar
@@ -281,7 +281,7 @@ export default function FaiscaPage() {
             </div>
 
             {/* Card Faísca Jurídica */}
-            <div style={{ border: "1px solid rgba(245,245,242,0.12)", borderRadius: "2px", padding: "32px", display: "flex", flexDirection: "column" }}>
+            <div style={{ border: "1px solid rgba(245,245,242,0.12)", borderRadius: "0", padding: "32px", display: "flex", flexDirection: "column" }}>
               <div style={{ flex: 1 }}>
                 <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: SAND, marginBottom: "16px" }}>
                   Celso Gama

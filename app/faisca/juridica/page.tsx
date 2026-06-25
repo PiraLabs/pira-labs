@@ -239,7 +239,7 @@ export default function FaiscaJuridicaPage() {
             <div
               style={{
                 backgroundColor: "#1A5568",
-                borderRadius: "2px",
+                borderRadius: "0",
                 padding: "32px",
                 display: "flex",
                 flexDirection: "column",
@@ -259,7 +259,7 @@ export default function FaiscaJuridicaPage() {
               </p>
               <div
                 style={{
-                  borderTop: "1px solid rgba(245,245,242,0.15)",
+                  borderTop: "1px solid rgba(245,245,242,0.12)",
                   paddingTop: "24px",
                   marginTop: "auto",
                 }}
@@ -288,7 +288,7 @@ export default function FaiscaJuridicaPage() {
             <div
               style={{
                 backgroundColor: "#1A5568",
-                borderRadius: "2px",
+                borderRadius: "0",
                 padding: "32px",
                 display: "flex",
                 flexDirection: "column",
@@ -308,7 +308,7 @@ export default function FaiscaJuridicaPage() {
               </p>
               <div
                 style={{
-                  borderTop: "1px solid rgba(245,245,242,0.15)",
+                  borderTop: "1px solid rgba(245,245,242,0.12)",
                   paddingTop: "24px",
                   marginTop: "auto",
                 }}

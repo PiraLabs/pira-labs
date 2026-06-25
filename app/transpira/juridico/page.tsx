@@ -381,7 +381,7 @@ export default function TranspiraJuridicoPage() {
                   </li>
                 ))}
               </ul>
-              <div style={{ borderTop: '1px solid rgba(5,38,46,0.15)', paddingTop: '20px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <div style={{ borderTop: '1px solid rgba(5,38,46,0.12)', paddingTop: '20px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                 <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.8125rem', color: '#05262e' }}>
                   <strong style={{ fontWeight: 600 }}>Para quem:</strong> escritórios que querem construir capacidade interna.
                 </p>
@@ -435,7 +435,7 @@ export default function TranspiraJuridicoPage() {
                   </li>
                 ))}
               </ul>
-              <div style={{ borderTop: '1px solid rgba(5,38,46,0.15)', paddingTop: '20px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <div style={{ borderTop: '1px solid rgba(5,38,46,0.12)', paddingTop: '20px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                 <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.8125rem', color: '#05262e' }}>
                   <strong style={{ fontWeight: 600 }}>Para quem:</strong> escritórios com volume alto de atividade mecânica repetitiva.
                 </p>
@@ -581,7 +581,7 @@ export default function TranspiraJuridicoPage() {
             <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.9375rem', lineHeight: 1.7, color: '#e8e0d6', marginBottom: '40px' }}>
               O diferencial não é a ferramenta. <strong style={{ fontWeight: 600, color: '#F5F5F2' }}>É quem opera a ferramenta entendendo o que está em jogo em cada decisão jurídica.</strong>
             </p>
-            <div style={{ borderLeft: '2px solid rgba(232,224,214,0.3)', paddingLeft: '24px' }}>
+            <div style={{ borderLeft: '2px solid rgba(232,224,214,0.12)', paddingLeft: '24px' }}>
               <p style={{ fontFamily: 'AtypText, sans-serif', fontWeight: 300, fontSize: '0.9375rem', lineHeight: 1.7, color: '#e8e0d6' }}>
                 A Pira Labs só utiliza ferramentas de IA no projeto após validação prévia das condições de uso, tratamento de dados e restrições de treinamento aplicáveis ao cliente. O TRANSPIRA Jurídico opera com NDA ou instrumento equivalente de confidencialidade assinado antes de qualquer acesso a documentos, sistemas ou informações do escritório.
               </p>

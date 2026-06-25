@@ -320,7 +320,7 @@ export default function TranspiraPage() {
                 className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start"
                 style={{
                   padding: '48px 0',
-                  borderTop: i === 0 ? 'none' : '1px solid rgba(232,224,214,0.2)',
+                  borderTop: i === 0 ? 'none' : '1px solid rgba(232,224,214,0.12)',
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '20px' }}>
@@ -472,7 +472,7 @@ export default function TranspiraPage() {
           </div>
 
           {/* Parâmetros mínimos */}
-          <div style={{ borderTop: '1px solid rgba(5,38,46,0.15)', paddingTop: '48px', maxWidth: '800px' }}>
+          <div style={{ borderTop: '1px solid rgba(5,38,46,0.12)', paddingTop: '48px', maxWidth: '800px' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {[
                 'Duração mínima: 8 semanas.',
@@ -600,7 +600,7 @@ export default function TranspiraPage() {
           </div>
 
           {/* CTA intermediário */}
-          <div style={{ marginTop: '64px', paddingTop: '48px', borderTop: '1px solid rgba(232,224,214,0.15)' }}>
+          <div style={{ marginTop: '64px', paddingTop: '48px', borderTop: '1px solid rgba(232,224,214,0.12)' }}>
             <a
               href="/contato?origem=transpira"
               style={{
@@ -665,7 +665,7 @@ export default function TranspiraPage() {
           </div>
 
           {/* Divisor interno */}
-          <div style={{ borderTop: '1px solid rgba(232,224,214,0.2)', marginBottom: '64px' }} />
+          <div style={{ borderTop: '1px solid rgba(232,224,214,0.12)', marginBottom: '64px' }} />
 
           {/* Duas fases */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '64px', maxWidth: '1000px' }}>
@@ -823,7 +823,7 @@ export default function TranspiraPage() {
                 resposta: 'Quando há calibragem prévia ou conteúdo sensível antes da conversa de qualificação, o NDA é assinado antes de começar. O TRANSPIRA entra fundo na operação do cliente: processos internos, estrutura de custos, decisões de delegação. Confidencialidade não é protocolo. É condição de trabalho. Se o seu caso exige NDA antes mesmo da conversa inicial, mencione no formulário de contato.',
               },
             ].map((item) => (
-              <details key={item.pergunta} style={{ borderBottom: '1px solid rgba(5,38,46,0.15)' }}>
+              <details key={item.pergunta} style={{ borderBottom: '1px solid rgba(5,38,46,0.12)' }}>
                 <summary style={{
                   fontFamily: 'AtypText, sans-serif',
                   fontWeight: 400,

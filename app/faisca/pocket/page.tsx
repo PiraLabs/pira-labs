@@ -126,8 +126,8 @@ export default function PocketPage() {
           </p>
 
           {/* Ficha técnica */}
-          <div style={{ maxWidth: "480px", border: "1px solid rgba(5,38,46,0.15)", borderRadius: "2px", marginBottom: "32px", marginTop: "40px" }}>
-            <div style={{ padding: "20px 24px", paddingBottom: "24px", borderBottom: "1px solid rgba(5,38,46,0.15)" }}>
+          <div style={{ maxWidth: "480px", border: "1px solid rgba(5,38,46,0.12)", borderRadius: "0", marginBottom: "32px", marginTop: "40px" }}>
+            <div style={{ padding: "20px 24px", paddingBottom: "24px", borderBottom: "1px solid rgba(5,38,46,0.12)" }}>
               <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#05262e", marginBottom: "8px" }}>
                 INVESTIMENTO
               </p>

@@ -180,7 +180,7 @@ export default async function AntesPiraPage() {
                 letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#F5F5F2',
-                border: '1px solid rgba(245,245,242,0.3)',
+                border: '1px solid #F5F5F2',
                 padding: '14px 28px',
                 textDecoration: 'none',
               }}
@@ -389,7 +389,7 @@ export default async function AntesPiraPage() {
                 letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: '#F5F5F2',
-                border: '1px solid rgba(245,245,242,0.3)',
+                border: '1px solid #F5F5F2',
                 padding: '16px 40px',
                 textDecoration: 'none',
               }}
