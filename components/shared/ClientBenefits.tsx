@@ -28,11 +28,6 @@ export function ClientBenefits() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
           {/* Beneficio 1: Notion */}
           <div>
-            <img
-              src="/notion-logo-white.png"
-              alt="Notion"
-              style={{ height: '32px', width: 'auto', borderRadius: '0', marginBottom: '24px', display: 'block' }}
-            />
             <h3 className="type-h3" style={{ color: WHITE, marginBottom: '20px' }}>
               Até 6 meses de Notion Business com IA
             </h3>
@@ -42,6 +37,11 @@ export function ClientBenefits() {
             <p className="font-body" style={{ fontSize: '0.8125rem', lineHeight: 1.6, fontWeight: 300, color: TAUPE }}>
               Válido para empresas elegíveis, com menos de 100 pessoas, site público e domínio de e-mail próprio, sem histórico de plano pago no Notion. Uma utilização por empresa, sujeita à aprovação do Notion.
             </p>
+            <img
+              src="/notion-logo-white.png"
+              alt="Notion"
+              style={{ height: '28px', width: 'auto', borderRadius: '0', marginTop: '32px', display: 'block' }}
+            />
           </div>
 
           {/* Beneficio 2: Eventos */}
