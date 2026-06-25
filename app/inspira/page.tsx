@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { ClientBenefits } from '@/components/shared/ClientBenefits'
 
 export const dynamic = 'force-static'
 
@@ -719,6 +720,8 @@ export default function InspiraPage() {
           </div>
         </div>
       </section>
+
+      <ClientBenefits />
 
       {/* FINALCTA | Ink */}
       <section style={{ backgroundColor: '#05262e', padding: '120px 80px', textAlign: 'center' }}>
