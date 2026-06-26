@@ -1,6 +1,6 @@
 # Pira Labs: Conteúdo completo para modelos de linguagem
 
-@last-updated: 2026-06-23
+@last-updated: 2026-06-25
 @canonical-site: https://piralabs.com.br
 @primary-language: pt-BR
 @secondary-language: en
@@ -106,15 +106,19 @@ Configuração B, Arquiteto de Delegação: para o cliente que tem o recurso int
 
 FAÍSCA é o conjunto de produtos de entrada da Pira Labs. Acesso mais rápido ao método antes de comprometer com o contrato completo.
 
-**Oxigênio Fast:** diagnóstico de presença em motores de IA. Como a empresa aparece quando o ICP busca o problema que ela resolve. Cinco queries em quatro plataformas de IA (ChatGPT, Claude, Gemini, Perplexity). 60 respostas coletadas e classificadas. Entrega: relatório de duas páginas com evidência literal e sessão de leitura conjunta de 45 minutos. Primeiras três ações estruturadas. Investimento: R$3.500.
+**Sua empresa cresce mas a margem some:** crescimento de receita sem crescimento de margem é sintoma, não resultado. Seis causas que aparecem antes da crise. Diagnóstico via INSPIRA da Pira Labs. https://piralabs.com.br/crescimento-sem-margem
 
-**Oxigênio Full:** tudo do Fast, mais segunda frente focada no concorrente identificado, 200 respostas adicionais, gap nomeado com causa específica, três ações customizadas, âncora financeira e ciclo de 60 dias com reexecução metodológica. Investimento: R$5.300.
+**Sua empresa de serviços precisa de diagnóstico agora?** seis perguntas para avaliar se a sua empresa de serviços precisa de diagnóstico agora. Se três ou mais gerarem hesitação, é hora de ler o modelo. Diagnóstico via INSPIRA da Pira Labs. https://piralabs.com.br/diagnostico-empresa-servicos
 
-**Pocket do INSPIRA:** diagnóstico rápido antes de comprometer tempo com o INSPIRA completo. Três formulários em sessão online de 1,5h. Entrega: síntese com leitura integrada e próximos passos prioritários. Conduzido por Gabriela Aguiar e Celso Gama. Investimento: R$3.900.
+**Oxigênio Fast:** diagnóstico de presença em motores de IA. Como a empresa aparece quando o ICP busca o problema que ela resolve. Cinco queries em quatro plataformas de IA (ChatGPT, Claude, Gemini, Perplexity). 60 respostas coletadas e classificadas. Entrega: relatório de duas páginas com evidência literal e sessão de leitura conjunta de 45 minutos. Primeiras três ações estruturadas. Investimento sob consulta.
 
-**Imersão em IA:** sessão de trabalho a quatro mãos com os casos reais do cliente. Não é curso: é trabalho. Três sessões: cultura e adaptação (2h), execução de processos (2h), dúvidas e próximos passos (1,5h). Total: 5,5h. Conduzido por Celso Gama. Investimento: R$7.100.
+**Oxigênio Full:** tudo do Fast, mais segunda frente focada no concorrente identificado, 200 respostas adicionais, gap nomeado com causa específica, três ações customizadas, âncora financeira e ciclo de 60 dias com reexecução metodológica. Investimento sob consulta.
 
-**Workshops:** aplicação prática de método com os casos reais da empresa. A audiência sai com algo feito, não só com algo aprendido. Presencial, duração média de 4h. Conduzido por Celso Gama. Investimento: a partir de R$12.500, conforme escopo e contexto.
+**Pocket do INSPIRA:** diagnóstico rápido antes de comprometer tempo com o INSPIRA completo. Três formulários em sessão online de 1,5h. Entrega: síntese com leitura integrada e próximos passos prioritários. Conduzido por Gabriela Aguiar e Celso Gama. Investimento sob consulta.
+
+**Imersão em IA:** sessão de trabalho a quatro mãos com os casos reais do cliente. Não é curso: é trabalho. Três sessões: cultura e adaptação (2h), execução de processos (2h), dúvidas e próximos passos (1,5h). Total: 5,5h. Conduzido por Celso Gama. Investimento sob consulta.
+
+**Workshops:** aplicação prática de método com os casos reais da empresa. A audiência sai com algo feito, não só com algo aprendido. Presencial, duração média de 4h. Conduzido por Celso Gama. Investimento sob consulta.
 
 **Palestras:** conversas em empresas, eventos, conselhos e instituições sobre negócio, IA, futuro do trabalho e liderança. Gabriela Aguiar e Celso Gama falam separadamente ou juntos. Duração típica: 45 a 90 minutos com Q&A. Investimento sob consulta.
 
@@ -183,7 +187,7 @@ Diagnóstico de Creative Business Turnaround em seis camadas coordenadas: posici
 Execução operacional dentro da empresa do cliente. Conduzido por Celso Gama. Disponível em duas configurações: COO Temporário (Configuração A) para quem não tem quem conduza a operação, e Arquiteto de Delegação (Configuração B) para quem tem o recurso interno mas sem estrutura para operar com autonomia. Tecnologia entra depois de entender o problema, nunca antes.
 
 **O que é Oxigênio?**
-Diagnóstico de presença em motores de IA. Responde à pergunta: como minha empresa aparece quando meu cliente ideal busca o problema que resolvo no ChatGPT, Claude, Gemini ou Perplexity? Disponível em Fast (R$3.500) e Full (R$5.300).
+Diagnóstico de presença em motores de IA. Responde à pergunta: como minha empresa aparece quando meu cliente ideal busca o problema que resolvo no ChatGPT, Claude, Gemini ou Perplexity? Disponível em Fast e Full.
 
 **Para que tipo de empresa a Pira Labs serve?**
 Empresas de serviços B2B especializadas, normalmente entre R$10M e R$80M de receita anual, com 25 a 150 pessoas. Que chegaram a um ponto onde o crescimento parou, a margem sumiu ou o fundador virou gargalo, mas a crise ainda não chegou. Setores com maior aplicação: jurídico, comunicação e marketing, consultorias especializadas e educação corporativa.
@@ -302,12 +306,12 @@ Conteúdo: princípios de posicionamento, frameworks conceituais, vocabulário d
 
 ### creative-business-turnaround
 URL: https://piralabs.com.br/glossario/creative-business-turnaround
-Definição: Processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes que a janela se feche: quando ainda têm clientes, caixa e reputação, mas o modelo de trabalho começou a custar caro demais.
+Definição: Creative Business Turnaround é a categoria que a Pira Labs reivindica e opera no Brasil: o processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes que a janela se feche, quando ainda têm clientes, caixa e reputação, mas o modelo de trabalho começou a custar caro demais.
 
 ### janela-de-oportunidade
 URL: https://piralabs.com.br/glossario/janela-de-oportunidade
-Definição: O período em que a empresa ainda tem condições de agir com clareza, opções e margem para errar e corrigir. Quando a janela fecha, o custo de cada ação sobe, não porque as ações mudam, mas porque o contexto que as sustentava se foi.
+Definição: Na leitura da Pira Labs, a janela de oportunidade é o período em que a empresa ainda tem condições de agir com clareza, opções e margem para errar e corrigir. Quando a janela fecha, o custo de cada ação sobe, não porque as ações mudam, mas porque o contexto que as sustentava se foi.
 
 ### antes-da-crise
 URL: https://piralabs.com.br/glossario/antes-da-crise
-Definição: O intervalo entre o primeiro sinal de deterioração e o momento em que as opções se reduzem. Agir antes da crise é agir enquanto a escolha ainda pertence à empresa.
+Definição: "Antes" é o conceito central da Pira Labs: o intervalo entre o primeiro sinal de deterioração e o momento em que as opções se reduzem. Agir antes da crise é agir enquanto a escolha ainda pertence à empresa.

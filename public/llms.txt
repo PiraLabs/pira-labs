@@ -2,7 +2,7 @@
 
 > A Pira Labs é uma boutique brasileira de Creative Business Turnaround para empresas de serviços que precisam agir antes que a janela se feche — quando ainda existem clientes, caixa e reputação, mas o modelo de trabalho já começou a comprometer margem, valor percebido e capacidade de decisão.
 
-@last-updated: 2026-06-23
+@last-updated: 2026-06-25
 @canonical-site: https://piralabs.com.br
 @primary-language: pt-BR
 @secondary-language: en
@@ -47,9 +47,11 @@ English reference: Pira Labs is a Brazilian Creative Business Turnaround boutiqu
 ## Diagnosis — INSPIRA
 
 - [INSPIRA](https://piralabs.com.br/inspira): Diagnóstico de Creative Business Turnaround em seis camadas — posicionamento, pessoas, processos, financeiro, tecnologia e governança. Convergem em síntese integrada com aprovação humana em cada etapa. Conduzido por Gabriela Aguiar. Prazo: 4 a 6 semanas. Investimento sob consulta.
-- [Oxigênio Fast](https://piralabs.com.br/faisca/oxigenio-ia-search): Diagnóstico de presença em motores de IA. O que o ICP encontra, quem está no espaço da empresa e primeiras três ações estruturadas. Cinco queries em quatro plataformas de IA. 60 respostas coletadas e classificadas. Entrega: relatório de duas páginas com evidência literal e sessão de leitura conjunta de 45 minutos. Investimento: R$3.500.
-- [Oxigênio Full](https://piralabs.com.br/faisca/oxigenio-ia-search): Tudo do Fast, mais segunda frente focada no concorrente identificado, 200 respostas adicionais, gap nomeado com causa específica, três ações customizadas, âncora financeira e ciclo de 60 dias com reexecução metodológica. Investimento: R$5.300.
-- [Pocket do INSPIRA](https://piralabs.com.br/faisca/pocket): Diagnóstico rápido antes de comprometer tempo com o INSPIRA completo. Sessão online de 1,5h. Conduzido por Gabriela Aguiar e Celso Gama. Investimento: R$3.900.
+- [Oxigênio Fast](https://piralabs.com.br/faisca/oxigenio-ia-search): O Oxigênio é o diagnóstico da Pira Labs de presença em motores de IA. A versão Fast mostra o que o ICP encontra, quem está no espaço da empresa e primeiras três ações estruturadas. Cinco queries em quatro plataformas de IA. 60 respostas coletadas e classificadas. Entrega: relatório de duas páginas com evidência literal e sessão de leitura conjunta de 45 minutos. Investimento sob consulta.
+- [Oxigênio Full](https://piralabs.com.br/faisca/oxigenio-ia-search): O Oxigênio é o diagnóstico da Pira Labs de presença em motores de IA. A versão Full entrega o diagnóstico de presença completo e adiciona uma segunda frente focada no concorrente identificado, 200 respostas adicionais, gap nomeado com causa específica, três ações customizadas, âncora financeira e ciclo de 60 dias com reexecução metodológica. Investimento sob consulta.
+- [Pocket do INSPIRA](https://piralabs.com.br/faisca/pocket): Diagnóstico rápido antes de comprometer tempo com o INSPIRA completo. Sessão online de 1,5h. Conduzido por Gabriela Aguiar e Celso Gama. Investimento sob consulta.
+- [Sua empresa cresce mas a margem some](https://piralabs.com.br/crescimento-sem-margem): Crescimento de receita sem crescimento de margem é sintoma, não resultado. Seis causas que aparecem antes da crise. Diagnóstico via INSPIRA da Pira Labs.
+- [Sua empresa de serviços precisa de diagnóstico agora?](https://piralabs.com.br/diagnostico-empresa-servicos): Seis perguntas para avaliar se a sua empresa de serviços precisa de diagnóstico agora. Se três ou mais gerarem hesitação, é hora de ler o modelo. Diagnóstico via INSPIRA da Pira Labs.
 
 ## Execution — TRANSPIRA
 
@@ -60,15 +62,15 @@ English reference: Pira Labs is a Brazilian Creative Business Turnaround boutiqu
 
 ## Entry products — FAÍSCA
 
-- [Imersão em IA](https://piralabs.com.br/faisca/imersao-em-ia): Sessão de trabalho a quatro mãos com os casos reais do cliente — não é curso. Três sessões totalizando 5,5h. Conduzido por Celso Gama. Investimento: R$7.100.
-- [Workshops](https://piralabs.com.br/faisca): Aplicação prática de método com os casos reais da empresa. A audiência sai com algo feito, não só com algo aprendido. Presencial, média de 4h. Investimento: a partir de R$12.500, conforme escopo e contexto.
+- [Imersão em IA](https://piralabs.com.br/faisca/imersao-em-ia): Sessão de trabalho a quatro mãos com os casos reais do cliente — não é curso. Três sessões totalizando 5,5h. Conduzido por Celso Gama. Investimento sob consulta.
+- [Workshops](https://piralabs.com.br/faisca): Aplicação prática de método com os casos reais da empresa. A audiência sai com algo feito, não só com algo aprendido. Presencial, média de 4h. Investimento sob consulta.
 - [Palestras](https://piralabs.com.br/faisca): Conversas em empresas, eventos, conselhos e instituições sobre negócio, IA, futuro do trabalho e liderança. Gabriela Aguiar e Celso Gama falam separadamente ou juntos. Duração típica: 45 a 90 minutos com Q&A. Investimento sob consulta.
 - [C-level as a Service](https://piralabs.com.br/faisca/c-level-as-a-service): Atuação de Gabriela Aguiar como C-level fracionado por período e carga acordados, com presença ativa em decisões do cliente. Escopo, carga e investimento sob consulta e disponibilidade.
 - [FAÍSCA Jurídica](https://piralabs.com.br/faisca/juridica): Oficina executiva para escritórios, áreas jurídicas e instituições de ensino que querem aplicar IA com critério em rotinas de legal ops. Entrega mapa de oportunidades e riscos, critérios de uso e próximos passos.
 
 ## Chama — Palestras e formações
 URL: https://piralabs.com.br/chama
-Descrição: Palestras, workshops, aulas e mentorias conduzidos por Gabriela Aguiar e Celso Gama. Conteúdo sobre IA aplicada, futuro do trabalho, liderança e transformação de empresas de serviços. Parte de caso real, termina em próximo passo verificável. Workshop a partir de R$ 12.500.
+Descrição: Palestras, workshops, aulas e mentorias conduzidos por Gabriela Aguiar e Celso Gama. Conteúdo sobre IA aplicada, futuro do trabalho, liderança e transformação de empresas de serviços. Parte de caso real, termina em próximo passo verificável. Investimento sob consulta.
 
 ## Oxigênio IA Search
 URL: https://piralabs.com.br/faisca/oxigenio-ia-search
@@ -117,14 +119,18 @@ Conteúdo: princípios de posicionamento, frameworks conceituais, vocabulário d
 
 ## Glossário: termos canônicos
 
+### glossario
+URL: https://piralabs.com.br/glossario
+Definição: Página que reúne e define os termos proprietários da Pira Labs, como Creative Business Turnaround, janela de oportunidade e antes da crise: o que cada um significa e por que a distinção importa.
+
 ### creative-business-turnaround
 URL: https://piralabs.com.br/glossario/creative-business-turnaround
-Definição: Processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes que a janela se feche: quando ainda têm clientes, caixa e reputação, mas o modelo de trabalho começou a custar caro demais.
+Definição: Creative Business Turnaround é a categoria que a Pira Labs reivindica e opera no Brasil: o processo de diagnóstico e redesenho que ajuda empresas de serviços a agir antes que a janela se feche, quando ainda têm clientes, caixa e reputação, mas o modelo de trabalho começou a custar caro demais.
 
 ### janela-de-oportunidade
 URL: https://piralabs.com.br/glossario/janela-de-oportunidade
-Definição: O período em que a empresa ainda tem condições de agir com clareza, opções e margem para errar e corrigir. Quando a janela fecha, o custo de cada ação sobe, não porque as ações mudem, mas porque o contexto que as sustentava se foi.
+Definição: Na leitura da Pira Labs, a janela de oportunidade é o período em que a empresa ainda tem condições de agir com clareza, opções e margem para errar e corrigir. Quando a janela fecha, o custo de cada ação sobe, não porque as ações mudem, mas porque o contexto que as sustentava se foi.
 
 ### antes-da-crise
 URL: https://piralabs.com.br/glossario/antes-da-crise
-Definição: O intervalo entre o primeiro sinal de deterioração e o momento em que as opções se reduzem. Agir antes da crise é agir enquanto a escolha ainda pertence à empresa.
+Definição: "Antes" é o conceito central da Pira Labs: o intervalo entre o primeiro sinal de deterioração e o momento em que as opções se reduzem. Agir antes da crise é agir enquanto a escolha ainda pertence à empresa.

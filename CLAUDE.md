@@ -85,7 +85,7 @@ app/
 ├── layout.tsx              # root layout: fonts, GA, Header, Footer, schemas globais
 ├── page.tsx                # home PT
 ├── robots.ts               # 21 crawlers de IA permitidos explicitamente
-├── sitemap.ts              # 19 rotas indexáveis com prioridades
+├── sitemap.ts              # 30 rotas indexáveis com prioridades
 ├── api/
 │   ├── indexnow/route.ts   # POST endpoint para reindexação rápida
 │   └── feed/route.ts       # proxy do RSS Substack → application/rss+xml, revalidate 1h
@@ -107,7 +107,7 @@ app/
 │   ├── oxigenio-ia-search/
 │   ├── imersao-em-ia/
 │   ├── pocket/
-│   ├── c-level-as-a-service/  # no ar, fora do sitemap, decisão de indexação pendente
+│   ├── c-level-as-a-service/  # no ar, indexado (consta no sitemap, decisão tomada jun 2026)
 │   └── juridica/
 ├── creative-business-turnaround/
 ├── chama/                  # palestras, workshops, aulas e mentorias (Gabriela + Celso)
@@ -410,8 +410,8 @@ Arquivos antigos `logo-completo-*.svg` e `logo-icone-*.svg` foram deletados. Nã
 ## Estado atual do repositório
 
 - Build: passando
-- Rotas no ar: 26 URLs no sitemap (estado jun 2026)
-- Pendência de rotas: /faisca/c-level-as-a-service existe mas está fora do sitemap (decisão de indexação pendente); /en/about e /en/contact constam no sitemap mas não têm arquivo de rota, retornam 404, corrigir na fase EN/ES (FASE 2)
+- Rotas no ar: 30 URLs no sitemap (estado jun 2026)
+- Rotas: /faisca/c-level-as-a-service indexado (consta no sitemap, decisão tomada jun 2026). EN suspenso: /en/about e /en/contact removidos do sitemap (a reconstrução do EN do zero entra na FASE 2)
 - Branch ativo: rebuild-v2
 - Formulário Fillout: NEXT_PUBLIC_FILLOUT_URL está CONFIGURADA na Vercel (projeto pira-labs, ambientes Production and Preview, marcada Sensitive, confirmado por Celso no painel da Vercel, jun 2026). O iframe real do Fillout renderiza em produção em /contato. O bloco placeholder do FilloutEmbed (estado de env ausente, linhas ~16-22) é código que NÃO renderiza no estado atual; foi conformado ao v2 mesmo assim (hairline 12%, cantos retos, texto Sand) por higiene.
 - Foto home: /nos.png (aprovada, não substituir)
