@@ -87,9 +87,9 @@ const breadcrumbs = [
 ];
 
 const EYEBROW = {
-  fontSize: "10px",
+  fontSize: "0.75rem",
   fontWeight: 600,
-  letterSpacing: "0.18em",
+  letterSpacing: "0.14em",
   textTransform: "uppercase" as const,
 };
 
@@ -232,7 +232,7 @@ export default function PocketPage() {
               <a
                 href="/contato?origem=faisca_pocket"
                 className="font-body"
-                style={{ color: "#F5F5F2", fontSize: "13px", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", textDecoration: "none" }}
+                style={{ color: "#F5F5F2", fontSize: "13px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", textDecoration: "none" }}
               >
                 Reservar uma sessão &#8594;
               </a>
@@ -301,7 +301,7 @@ export default function PocketPage() {
             <a
               href="/contato?origem=faisca_pocket"
               className="font-body"
-              style={{ color: "#F5F5F2", fontSize: "13px", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", textDecoration: "none" }}
+              style={{ color: "#F5F5F2", fontSize: "13px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", textDecoration: "none" }}
             >
               Falar sobre o momento da empresa &#8594;
             </a>
@@ -329,7 +329,7 @@ export default function PocketPage() {
             <a
               href="/sobre#sobre-gabriela"
               className="font-body"
-              style={{ color: "#05262e", fontSize: "13px", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", textDecoration: "none", display: "inline-block" }}
+              style={{ color: "#05262e", fontSize: "13px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", textDecoration: "none", display: "inline-block" }}
             >
               Gabriela Aguiar &#8594;
             </a>
@@ -345,7 +345,7 @@ export default function PocketPage() {
             <a
               href="/sobre#sobre-celso"
               className="font-body"
-              style={{ color: "#05262e", fontSize: "13px", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", textDecoration: "none", display: "inline-block" }}
+              style={{ color: "#05262e", fontSize: "13px", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", textDecoration: "none", display: "inline-block" }}
             >
               Celso Gama &#8594;
             </a>

@@ -146,7 +146,7 @@ export default function CrescimentoSemMargemPage() {
       {/* S2 · Corpo + tabela de causas (Sand) */}
       <section style={{ backgroundColor: SAND }} className="py-16 md:py-24">
         <div className="container-site">
-          <p className="font-body" style={{ fontSize: "10px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A5568", marginBottom: "32px" }}>
+          <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "#1A5568", marginBottom: "32px" }}>
             O padrão
           </p>
           <div style={{ maxWidth: "720px", marginBottom: "48px" }}>
@@ -206,7 +206,7 @@ export default function CrescimentoSemMargemPage() {
       {/* S3 · FAQ (Teal) */}
       <section style={{ backgroundColor: TEAL }} className="py-16 md:py-24">
         <div className="container-site">
-          <p className="font-body" style={{ fontSize: "10px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: SAND, marginBottom: "32px" }}>
+          <p className="font-body" style={{ fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: SAND, marginBottom: "32px" }}>
             Perguntas frequentes
           </p>
           <h2 className="type-h1" style={{ color: WHITE, fontWeight: 600, marginBottom: "40px", lineHeight: 1.1 }}>

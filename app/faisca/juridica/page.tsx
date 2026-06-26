@@ -95,9 +95,9 @@ export const metadata: Metadata = {
 };
 
 const EYEBROW: React.CSSProperties = {
-  fontSize: "10px",
+  fontSize: "0.75rem",
   fontWeight: 600,
-  letterSpacing: "0.18em",
+  letterSpacing: "0.14em",
   textTransform: "uppercase" as const,
 };
 
@@ -205,7 +205,7 @@ export default function FaiscaJuridicaPage() {
                 color: "#F5F5F2",
                 fontSize: "13px",
                 fontWeight: 600,
-                letterSpacing: "0.10em",
+                letterSpacing: "0.14em",
                 textTransform: "uppercase",
                 textDecoration: "none",
               }}
@@ -341,7 +341,7 @@ export default function FaiscaJuridicaPage() {
                 color: "#F5F5F2",
                 fontSize: "13px",
                 fontWeight: 600,
-                letterSpacing: "0.10em",
+                letterSpacing: "0.14em",
                 textTransform: "uppercase",
                 textDecoration: "none",
               }}
@@ -437,7 +437,7 @@ export default function FaiscaJuridicaPage() {
                   color: "#e8e0d6",
                   fontSize: "13px",
                   fontWeight: 600,
-                  letterSpacing: "0.10em",
+                  letterSpacing: "0.14em",
                   textTransform: "uppercase",
                   textDecoration: "none",
                   display: "inline-block",
@@ -459,7 +459,7 @@ export default function FaiscaJuridicaPage() {
                   color: "#e8e0d6",
                   fontSize: "13px",
                   fontWeight: 600,
-                  letterSpacing: "0.10em",
+                  letterSpacing: "0.14em",
                   textTransform: "uppercase",
                   textDecoration: "none",
                   display: "inline-block",
