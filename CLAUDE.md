@@ -11,11 +11,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 1. `PiraLabs_ManualDeMarca_v3.md` — visual, grafia, paleta, tipografia, logo, sistema de nós, voz pública
 2. `PiraLabs_Documento_Mestre_v15.md` — estratégia, portfólio, ICP, fundadores, evidências, limites
-3. O wireframe v5 foi removido do KB e nao e mais fonte de nada. A estrutura do site vive no site implementado, no design-system-pira-labs-v2.md e no PiraLabs_Documento_Mestre_v15.md.
+3. `design-system-pira-labs-v2.md` — tokens, componentes, eixos de design (o wireframe v5 foi removido do KB e não é mais fonte de nada)
 4. Este CLAUDE.md — regras de execução desta sessão
 
 Em conflito entre qualquer arquivo e o Manual v3, o Manual v3 prevalece.
-Em conflito entre este CLAUDE.md e o wireframe v5, comunicar ao Celso antes de resolver.
 
 ---
 
@@ -32,12 +31,11 @@ Em conflito entre este CLAUDE.md e o wireframe v5, comunicar ao Celso antes de r
 
 O argumento `$1` e a mensagem do commit. Sem argumento, o commit fica sem mensagem e falha. Exemplo: `./deploy.sh "fix: ajuste hero mobile"`.
 
-**Diagnostico de build:** o build local segue quebrado pelo bug do Next 16, entao o Vercel CI e o unico criterio de pronto. Para capturar output no Ubuntu existe `npm run build 2>&1 | tee build.log`, mas dado o bug conhecido isso nao resolve o build local.
-
 Scripts npm de referencia:
 - `npm run dev` — servidor local (porta 3000), Turbopack desabilitado
-- `npm run build` — build de producao Next.js
-- `npm run lint` — ESLint com Next.js config
+- `npm run build` — build de producao Next.js (quebrado localmente pelo bug do Next 16 — usar só para diagnóstico; o Vercel CI é o critério de pronto)
+- `npm run lint` — ESLint com Next.js config; **rodar antes de commitar** para verificar erros de tipo e import
+- Testes: Playwright instalado como devDep (`^1.59.1`), mas sem testes escritos até jun/2026 — não há comando de teste disponível
 
 ---
 
@@ -446,6 +444,7 @@ Componentes shared que precisam de estado (ex: `CookieBanner.tsx`, `MobileMenu.t
 
 ## Armadilhas conhecidas
 
+- **Build local quebrado:** o Next 16 tem um bug conhecido que impede o build local de concluir. `npm run build` existe mas não é critério de pronto — o Vercel CI é. Para capturar o output mesmo assim: `npm run build 2>&1 | tee build.log`.
 - **CSP quebra embeds silenciosamente:** ao adicionar qualquer iframe/script externo novo, atualizar `next.config.js` antes do deploy. Não há erro de build — só falha no browser.
 - **`ScrollTrigger` no SSR:** nunca importar `gsap/ScrollTrigger` em componente sem `'use client'` e sem o double-RAF. O plugin acessa `window` e quebra o build estático.
 - **Fontes Atyp:** `AtypText-Regular` (400) não está disponível — usar `AtypText-Medium` (500) como substituto. Não criar fallback para peso 400 no CSS.
