@@ -35,8 +35,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/antes-pira`,                              changeFrequency: "weekly",  priority: 0.6 },
     { url: `${base}/antes-pira/arquivo`,                      changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/podcast`,                                 changeFrequency: "monthly", priority: 0.5 },
-    // Contato
+    // Contato e newsletter
     { url: `${base}/contato`,                                 changeFrequency: "yearly",  priority: 0.5 },
+    { url: `${base}/newsletter`,                              changeFrequency: "yearly",  priority: 0.5 },
     // Legais
     { url: `${base}/cookies`,                                 changeFrequency: "yearly",  priority: 0.3 },
     { url: `${base}/politica-privacidade`,                    changeFrequency: "yearly",  priority: 0.3 },
